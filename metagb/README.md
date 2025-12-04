@@ -1,68 +1,105 @@
-# Generalized gradient boosting library
-## Review of xgboost
-the Taylor expansion of the loss function at t step is:
-$$\sum_{i=1} ^n [g_if_t(x_i) + \frac{1}{2}h_i f_t^2(x_i)] + \Omega(f_t)$$.
-In most cases, we assume f_t(x_i) is a constant for both left and right trees,
-let w_j = f_t(x_i), so we have
-\begin{equation}
-L = & \sum_{i=1} ^n [g_if_t(x_i) + \frac{1}{2}h_i f_t^2(x_i)] + \Omega(f_t) \\
-  = & \sum_{i=1} ^n [(\sum_{i \in I_j} g_i) w_j + \frac{1}{2}(\sum_{i \in I_j} w_j^2)] + \Omega(f_t) \\    
-\end{equation}
-For a fixed structure, we can compute the optimal weight w_j^* of leaf j by:
+# Generalized Gradient Boosting Library
+
+## Review of XGBoost
+
+The Taylor expansion of the loss function at step $t$ is:
+
+$$\sum_{i=1}^n \left[g_i f_t(x_i) + \frac{1}{2}h_i f_t^2(x_i)\right] + \Omega(f_t)$$
+
+In most cases, we assume $f_t(x_i)$ is constant for both left and right subtrees. Let $w_j = f_t(x_i)$ for samples in leaf $j$, yielding:
+
 $$
-w_j^* = -\frac{\sum_{i \in I_j} g_i} {\sum_{i\in I_j}h_i + \lambda}
-$$
-In regression, h_i = 1 for non weight cases, g_i = y - \hat{y}^{t-1}, which is simply the residual
-of the y, so, the optimal weight for a given leaf is the mean of the residual of the y.
-
-## Conditional variable vs Predictive variable
-We can treat the original split of the tree node as using conditional variable and predictive variables.
-We use conditional variables to decide on the split, and use the predictive variable to evaluate the 
-the split. In the original gradient boosting, the predictive variable is simply a bias, i.e., w_j for a 
-given leaf j.
-
-In some cases, the conditional variables has no prediction power at all, using a bias as predictive variables
-seems too weak. 
-
-Consider the classical example below:
-y axis
-^
-| x o
-| o x
---------> x axis
-We want to classifiy x from o, neither the two axis, x and y, is informative. The loss will not reduce if we use
-either x or y as decision variables. so we will end up with a two level trees:
-   x <1
-  /  \
-y<1  y< 1
-/ \  /  \
-o  x x  o
-
-However, suppose we are able to use variables as predictive variables, we only need to build a one-level tree
-to classify the examples:
-   x <1
-  /  \
-y -1 1-y
-This make the decision much more efficient!
-
-## Generalized gradient boosting
-
-f_t(x_i) is a bias in xgboost, this gives us significant speed up in learing the tree algorithm. 
-We want to generalize it so that f_t(x_i) = \beta x_ij, (x_ij is feature j of sample x_i). Actually
-f_t(x_i) can be any functions, but we want to maintain the speed vs expressiveness trade off, more
-complex function will decrease the speed and be more likely to overfit.
-
-With this, we get: 
-\begin{equation}
-L = & \sum_{i=1} ^n [g_i \beta x_ij + \frac{1}{2}h_i  \beta^2 x_ij^2] + \Omega(f_t) \\
-  = & \sum_{i=1} ^n [(\sum_{i \in I_j} g_i) w_j + \frac{1}{2}(\sum_{i \in I_j} w_j^2)] + \Omega(f_t) \\    
-\end{equation}
-For a fixed structure, we can compute the optimal weight \beta of leaf j as
-$$
-\beta^* = -\frac{\sum_{i \in I_j} g_i x_ij} {\sum_{i\in I_j}h_i x_ij^2 + \lambda}
+\begin{align}
+L &= \sum_{i=1}^n \left[g_i f_t(x_i) + \frac{1}{2}h_i f_t^2(x_i)\right] + \Omega(f_t) \\
+&= \sum_{j=1}^T \left[\left(\sum_{i \in I_j} g_i\right) w_j + \frac{1}{2}\left(\sum_{i \in I_j} h_i\right) w_j^2\right] + \Omega(f_t)
+\end{align}
 $$
 
-For every dataset, we add a bias into the feature and use the bias as the predictive variable in every step of splitting,
-then we fall back to the original algorithm.
+where $I_j$ denotes the set of samples in leaf $j$.
 
+For a fixed tree structure, we can compute the optimal weight $w_j^*$ of leaf $j$ by:
 
+$$
+w_j^* = -\frac{\sum_{i \in I_j} g_i}{\sum_{i \in I_j} h_i + \lambda}
+$$
+
+In regression with unweighted samples, $h_i = 1$ and $g_i = y_i - \hat{y}_i^{(t-1)}$, which is simply the residual. Thus, the optimal weight for a given leaf is the mean of the residuals.
+
+## Conditional Variables vs. Predictive Variables
+
+We can conceptualize tree node splitting as using two types of variables:
+
+- **Conditional variables**: Used to decide on the split
+- **Predictive variables**: Used to evaluate and compute predictions at the leaves
+
+In standard gradient boosting, the predictive variable is simply a bias term (constant) $w_j$ for each leaf $j$.
+
+### Motivation: When Bias Terms Are Insufficient
+
+In some cases, conditional variables have no prediction power individually, making bias-only predictive variables too weak.
+
+Consider this classic XOR-like classification example:
+
+```
+y-axis
+  ^
+  | x o
+  | o x
+  +-------> x-axis
+```
+
+We want to classify `x` from `o`. Neither axis (x or y) alone is informative. The loss will not reduce significantly if we use either x or y as decision variables individually. Standard gradient boosting would produce a two-level tree:
+
+```
+      x < 1
+      /   \
+   y<1     y<1
+   / \     / \
+  o   x   x   o
+```
+
+However, if we could use variables as predictive functions, we would only need a one-level tree:
+
+```
+    x < 1
+    /   \
+   y    1-y
+```
+
+This makes the decision boundary much more efficient and expressive!
+
+## Generalized Gradient Boosting
+
+In XGBoost, $f_t(x_i)$ is a constant bias, which provides significant speedup in the tree learning algorithm. We propose generalizing this so that:
+
+$$f_t(x_i) = \beta \cdot x_{ij}$$
+
+where $x_{ij}$ is feature $j$ of sample $x_i$. Note that $f_t(x_i)$ can be any function, but we maintain a speed-versus-expressiveness trade-off—more complex functions decrease speed and increase overfitting risk.
+
+### Modified Objective
+
+With this generalization, the objective becomes:
+
+$$
+\begin{align}
+L &= \sum_{i=1}^n \left[g_i \beta x_{ij} + \frac{1}{2}h_i \beta^2 x_{ij}^2\right] + \Omega(f_t) \\
+&= \sum_{j=1}^T \left[\left(\sum_{i \in I_j} g_i x_{ij}\right) \beta_j + \frac{1}{2}\left(\sum_{i \in I_j} h_i x_{ij}^2\right) \beta_j^2\right] + \Omega(f_t)
+\end{align}
+$$
+
+For a fixed tree structure, we can compute the optimal coefficient $\beta^*$ for leaf $j$ as:
+
+$$
+\beta_j^* = -\frac{\sum_{i \in I_j} g_i x_{ij}}{\sum_{i \in I_j} h_i x_{ij}^2 + \lambda}
+$$
+
+### Backward Compatibility
+
+For every dataset, we can add a bias feature (constant 1) and use it as a predictive variable candidate at every split. When the bias is selected, the algorithm reduces to the original XGBoost formulation, ensuring backward compatibility.
+
+## Key Advantages
+
+- **Increased expressiveness**: Linear predictive functions can capture patterns that constant predictions cannot
+- **Efficiency**: Maintains computational efficiency comparable to standard gradient boosting
+- **Flexibility**: Naturally handles cases where individual features have weak marginal effects but strong interaction effects
+- **Backward compatible**: Subsumes standard gradient boosting as a special case
