@@ -1319,7 +1319,7 @@ int build_tree_double_custom(double *tree,
             best_split[ci*num_frac_features_pred + 0] = bin;
         }
         free(compare_array);
-    } if (score_agg == 13) {
+    } else if (score_agg == 13) {
         // random pred features, then take max across bin
         for (int ci = ci_start; ci < ci_end; ++ci) {
             int bin = rand() % max_bin;
@@ -2263,7 +2263,7 @@ int build_tree_double_memory(double *tree,
             best_split[ci*num_frac_features_pred + 0] = bin;
         }
         free(compare_array);
-    } if (score_agg == 13) {
+    } else if (score_agg == 13) {
         // random pred features, then take max across bin
         for (int ci = ci_start; ci < ci_end; ++ci) {
             int bin = rand() % max_bin;
