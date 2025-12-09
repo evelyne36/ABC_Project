@@ -1884,16 +1884,16 @@ void train_custom(const unsigned char *restrict x,
         for (int di = 0; di < num_samples; ++di) {
             yhat[di] += yi[di];
         }
-
-        free(yhat);
-        free(yi);
-        free(x_grad);
-        free(xx_hessian);
-        free(cond_active_idx);
-        free(pred_active_idx);
-        free(cond_feature_idx);
-        free(pred_feature_idx);
     }
+
+    free(yhat);
+    free(yi);
+    free(x_grad);
+    free(xx_hessian);
+    free(cond_active_idx);
+    free(pred_active_idx);
+    free(cond_feature_idx);
+    free(pred_feature_idx);
 }
 
 
