@@ -232,3 +232,73 @@ pred_feature_idx = [3, 5, bias]      (derived from cond features, excluding prio
 | `cond_pred_share` | Input | `0`: independent sampling, `1`: pred derived from cond |
 | `cond_shallow_use_prior_only` | Input | `0`: use all, `1`: only prior at shallow, `2`: exclusive (prior at shallow, others at deep) |
 | `pred_deep_use_prior_only` | Input | `0`: use all pred features, `1`: restrict features by depth |
+
+#### 4. Score Aggregation Parameter
+
+##### `score_agg`
+
+Controls **how to aggregate scores across predictive features and bins** when evaluating potential splits.
+
+For each potential split, the algorithm computes a 3D score array:
+
+```
+score_all[ci][pi][bin] = split gain for:
+  - conditioning feature ci
+  - predictive feature pi
+  - split threshold at bin
+```
+
+The `score_agg` parameter determines how to find the best `(ci, pi, bin)` combination:
+
+##### Deterministic Methods (Optimized Bin Selection)
+
+| Value | Method | Description |
+|-------|--------|-------------|
+| `0` | **Max across all** | Find the single best `(ci, pi, bin)` with maximum score. Most greedy. |
+| `1` | **Average across pred, max across bin** | For each `(ci, bin)`, average scores across all pred features, then find best bin. Reduces overfitting to a single pred feature. |
+| `2` | **Median across pred, max across bin** | For each `(ci, bin)`, take median score across pred features, then find best bin. More robust to outliers. |
+| `3` | **Random pred, max across bin** | For each `(ci, bin)`, randomly select one pred feature's score, then find best bin. Adds diversity. |
+
+##### Randomized Methods (Random Bin Selection)
+
+| Value | Method | Description |
+|-------|--------|-------------|
+| `10` | **Random bin** | For each `(ci, pi)`, randomly select a bin. Extreme randomization. |
+| `11` | **Average across pred, random bin** | Average across pred features, randomly select bin. |
+| `12` | **Median across pred, random bin** | Median across pred features, randomly select bin. |
+| `13` | **Random pred, random bin** | Randomly select both pred feature and bin. Maximum randomization. |
+
+##### Visual Illustration
+
+```
+score_all array for a single conditioning feature ci:
+
+           bin_0  bin_1  bin_2  ...  bin_k
+pred_0  [  s00    s01    s02   ...   s0k  ]
+pred_1  [  s10    s11    s12   ...   s1k  ]
+pred_2  [  s20    s21    s22   ...   s2k  ]
+  ...
+pred_m  [  sm0    sm1    sm2   ...   smk  ]
+
+score_agg=0:  max(all values)           → best (pi*, bin*)
+score_agg=1:  avg(columns) → max(row)   → best bin*
+score_agg=2:  median(columns) → max(row)→ best bin*
+score_agg=3:  random row → max(row)     → best bin*
+
+score_agg=10-13: Same logic but random bin instead of max
+```
+
+##### Trade-offs
+
+| Approach | Pros | Cons |
+|----------|------|------|
+| **Max (0)** | Finds globally optimal split | May overfit to specific pred feature |
+| **Average (1)** | More robust, considers all pred features | May miss strong individual signals |
+| **Median (2)** | Robust to outlier pred features | Similar to average |
+| **Random (3, 10-13)** | Adds diversity, reduces overfitting | May miss optimal splits |
+
+##### Recommendations
+
+- **`score_agg=0`** (default): Best for most cases, finds optimal split
+- **`score_agg=1` or `2`**: Use when you want splits that generalize well across multiple predictive features
+- **`score_agg=10-13`**: Use for extra randomization, similar to "extremely randomized trees"
