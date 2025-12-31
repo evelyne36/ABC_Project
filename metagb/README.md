@@ -111,7 +111,8 @@ For every dataset, we can add a bias feature (constant 1) and use it as a predic
 
 - **version=0**: Standard gradient boosting (equivalent to XGBoost). Produces similar results when using the same parameters.
 - **version=1**: Deprecated, can be ignored.
-- **version=2**: Core generalized gradient boosting algorithm. **This is the recommended version for experimentation.**
+- **version=2**: Full generalized gradient boosting algorithm with depth separation and prior feature support.
+- **version=3**: Simplified generalized gradient boosting. **Recommended for most use cases.**
 
 ### Core Algorithm
 
@@ -133,6 +134,84 @@ For each tree split, the algorithm:
 
 When the predictive variable set contains only the **bias term** (a constant feature of 1), the algorithm reduces to standard gradient boosting where each leaf predicts a constant value $w_j$. This is automatically handled by appending a bias feature to the input data.
 
+
+## Version 3: Simplified Generalized Gradient Boosting
+
+Version 3 (`train_simple`) is a streamlined implementation that removes the complexity of depth separation and prior features while maintaining the core generalized gradient boosting functionality.
+
+### When to Use Version 3
+
+- **Most use cases**: Version 3 is simpler and sufficient for most applications
+- **Quick experimentation**: Fewer parameters to tune
+- **No prior feature knowledge**: When you don't have domain-specific prior features
+
+### Key Differences from Version 2
+
+| Feature | Version 2 | Version 3 |
+|---------|-----------|-----------|
+| Prior features | Supported via `cond_prior_features` | Not supported |
+| Depth separation | `depth_sep`, `cond_depth_sep`, `pred_depth_sep` | Not supported (all features at all depths) |
+| Feature selection | Complex hierarchical selection | Simple random sampling |
+| Parameters | Many depth-related parameters | Minimal parameters |
+
+### Version 3 Parameters
+
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `feature_fraction` | Required | Fraction of features to sample for conditioning (same as `cond_feature_fraction`) |
+| `pred_feature_fraction` | Same as `feature_fraction` | Fraction of features to sample for prediction. Set to `0` to use only bias. |
+| `leaf_use_all_pred_feature` | `1` (True) | Whether to use all sampled pred features at leaves |
+| `leaf_only_use_bias` | `0` (False) | When `1`, leaf prediction uses only the bias feature (reduces to standard GB at leaves) |
+| `cond_pred_share` | `0` | `0`: independent sampling, `1`: pred features derived from cond features |
+
+### Example Usage
+
+```python
+from metagb_utils import MetaGB
+
+# Basic usage - uses feature_fraction for both cond and pred
+model = MetaGB(
+    learning_rate=0.1,
+    num_trees=150,
+    feature_fraction=0.8,
+    bagging_fraction=0.8,
+    min_data_in_leaf=20,
+    max_depth=5,
+    max_bin=64,
+    version=3,
+)
+model.fit(X_train, y_train)
+predictions = model.predict(X_test)
+
+# With separate pred_feature_fraction
+model = MetaGB(
+    learning_rate=0.1,
+    num_trees=150,
+    feature_fraction=0.8,        # cond features
+    pred_feature_fraction=0.4,   # pred features (can be different)
+    bagging_fraction=0.8,
+    min_data_in_leaf=20,
+    max_depth=5,
+    max_bin=64,
+    version=3,
+)
+
+# Bias-only prediction at leaves (similar to standard GB but with separate cond/pred sampling)
+model = MetaGB(
+    learning_rate=0.1,
+    num_trees=150,
+    feature_fraction=0.8,
+    pred_feature_fraction=0.0,   # No pred features sampled
+    leaf_only_use_bias=1,        # Use only bias at leaves
+    version=3,
+)
+```
+
+---
+
+## Version 2: Full Generalized Gradient Boosting
+
+Version 2 (`train_memory`) provides the complete feature set including depth separation and prior feature support.
 
 ### Parameters
 
