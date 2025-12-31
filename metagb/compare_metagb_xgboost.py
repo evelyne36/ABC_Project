@@ -71,6 +71,40 @@ def main():
     print("XGBoost RMSE:", round(xgb_rmse, 4))
 
 
+def main_v3():
+    """Version 3 example: vary pred_fraction from 0 to 0.8"""
+    x, y = generate_synthetic_regression()
+    x_train, x_test, y_train, y_test = train_test_split_np(
+        x, y, test_size=0.2, random_state=42
+    )
+
+    feature_fraction = 0.8
+    pred_fractions = [0.0, 0.2, 0.4, 0.6, 0.8]
+
+    print("\n=== Version 3: Varying pred_fraction ===")
+    print(f"feature_fraction (cond) = {feature_fraction}")
+    print("-" * 40)
+
+    for pred_frac in pred_fractions:
+        metagb = MetaGB(
+            learning_rate=0.1,
+            num_trees=150,
+            feature_fraction=feature_fraction,
+            pred_feature_fraction=pred_frac,
+            bagging_fraction=0.8,
+            min_data_in_leaf=20,
+            max_depth=5,
+            max_bin=64,
+            version=3,
+            seed=42,
+        )
+        metagb.fit(x_train, y_train)
+        metagb_pred = metagb.predict(x_test)
+        rmse = evaluate_rmse(y_test, metagb_pred)
+        print(f"pred_fraction={pred_frac:.1f}  RMSE: {rmse:.4f}")
+
+
 if __name__ == "__main__":
     main()
+    main_v3()
 

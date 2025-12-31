@@ -3309,7 +3309,7 @@ void train_simple(const unsigned char *restrict x,
     assert(num_features >= 1);
     assert(bagging_fraction > 0);
     assert(cond_feature_fraction > 0);
-    assert(pred_feature_fraction > 0);
+    assert(pred_feature_fraction >= 0);
     assert(learning_rate > 0);
     assert(max_depth > 0);
     if (debug) {
