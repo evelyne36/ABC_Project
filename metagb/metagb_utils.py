@@ -19,6 +19,7 @@ class MetaGB:
                  depth_sep=None,
                  use_random_depth_sep=0,
                  leaf_use_all_pred_feature=None,
+                 leaf_only_use_bias=0,
                  cond_prior_features=[],
                  cond_prior_feature_fractions=None,
                  cond_shallow_use_prior_only=1,
@@ -42,7 +43,12 @@ class MetaGB:
             self.pred_feature_fraction = pred_feature_fraction
         self.depth_sep = depth_sep
         self.use_random_depth_sep = use_random_depth_sep
-        self.leaf_use_all_pred_feature = leaf_use_all_pred_feature
+        if leaf_use_all_pred_feature is None:
+            # Default to True for version 3, keep None for other versions
+            self.leaf_use_all_pred_feature = 1 if version == 3 else leaf_use_all_pred_feature
+        else:
+            self.leaf_use_all_pred_feature = leaf_use_all_pred_feature
+        self.leaf_only_use_bias = leaf_only_use_bias
         self.cond_shallow_use_prior_only = cond_shallow_use_prior_only
         self.cond_prior_features = cond_prior_features
         self.cond_prior_feature_fractions = cond_prior_feature_fractions
@@ -83,6 +89,8 @@ class MetaGB:
             self.fit_custom(x, y)
         elif self.version == 2:
             self.fit_memory(x, y)
+        elif self.version == 3:
+            self.fit_simple(x, y)
 
     def fit_original(self, x, y):
         n,d = x.shape[0], x.shape[1]
@@ -230,7 +238,54 @@ class MetaGB:
                         self.use_delta,
                         self.score_agg,
                         self.min_gain_to_split,
-                        self.lambda_12,
+                        self.lambda_l2,
+                        self.normalize,
+                        self.split_sample,
+                        self.debug
+                        )
+        self.model = np.copy(tree)
+
+    def fit_simple(self, x, y):
+        """Version 3: Simplified training without depth_sep and cond_prior concepts."""
+        x = np.concatenate((x, np.ones((x.shape[0], 1))), axis=1)
+        n, d = x.shape[0], x.shape[1]
+
+        x = x.astype("double")
+        x_digit = self.convert_data_to_bin(x)
+        x_digit = x_digit.astype("int8")
+        bins = self.bins.astype("double")
+        y = y.astype("double")
+        tree = self.model.astype("double")
+
+        x_ptr = ffi.cast("unsigned char*", ffi.from_buffer(x_digit))
+        x_origin_ptr = ffi.cast("double *", ffi.from_buffer(x))
+        bin_ptr = ffi.cast("double *", ffi.from_buffer(bins))
+        y_ptr = ffi.cast("double *", ffi.from_buffer(y))
+        tree_ptr = ffi.cast("double *", ffi.from_buffer(tree))
+
+        lib.train_simple(x_ptr,
+                        x_origin_ptr,
+                        bin_ptr,
+                        y_ptr,
+                        tree_ptr,
+                        n,
+                        d,
+                        d-1,
+                        self.num_trees,
+                        self.max_depth,
+                        self.max_bin,
+                        self.min_data_in_leaf,
+                        self.bagging_fraction,
+                        self.feature_fraction,
+                        self.pred_feature_fraction,
+                        self.learning_rate,
+                        self.leaf_use_all_pred_feature,
+                        self.leaf_only_use_bias,
+                        self.cond_pred_share,
+                        self.use_delta,
+                        self.score_agg,
+                        self.min_gain_to_split,
+                        self.lambda_l2,
                         self.normalize,
                         self.split_sample,
                         self.debug
@@ -274,7 +329,7 @@ class MetaGB:
         if self.version == 0:
             return self.predict_original(
                 x, start_tree_idx, end_tree_idx)
-        elif self.version == 1 or self.version == 2:
+        elif self.version == 1 or self.version == 2 or self.version == 3:
             return self.predict_custom(
                 x, start_tree_idx, end_tree_idx)
 
