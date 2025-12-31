@@ -2820,3 +2820,695 @@ void train_memory(const unsigned char *restrict x,
     free(pred_feature_idx);
 
 }
+
+
+/* Version 3: Simplified build_tree without depth_sep and cond_prior concepts */
+int build_tree_double_simple(double *tree,
+                            const int node_id,
+                            const int depth,
+                            const unsigned char* x,
+                            const double *bins,
+                            const double *grad,
+                            const double *hessian,
+                            const bool *cond_active_idx,
+                            const bool *pred_active_idx,
+                            const int *cond_feature_idx,
+                            const int *pred_feature_idx,
+                            const int max_bin,
+                            const int num_samples,
+                            const int num_frac_features_cond,
+                            const int num_frac_features_pred,
+                            const int num_total_features,
+                            const int max_depth,
+                            const int min_data_in_leaf,
+                            const int leaf_use_all_pred_feature,
+                            const int leaf_only_use_bias,
+                            const int use_delta,
+                            const int score_agg,
+                            const double min_gain_to_split,
+                            const double lambda_l2,
+                            const int normalize,
+                            const int split_sample,
+                            const int debug
+    ) {
+    int num_active_samples = 0;
+    double* grad_sum = malloc(num_frac_features_pred*sizeof(double));
+    double* hessian_sum = malloc(num_frac_features_pred*sizeof(double));
+    memset(grad_sum, 0, num_frac_features_pred*sizeof(double));
+    memset(hessian_sum, 0, num_frac_features_pred*sizeof(double));
+
+    for (int di = 0; di < num_samples; ++di) {
+        if(pred_active_idx[di]) {
+            for (int pi = 0; pi < num_frac_features_pred; ++pi) {
+                long di_pi = (long)di*(long)num_total_features + (long)pred_feature_idx[pi];
+                int x_di_pi = x[di_pi];
+                double x_di_pi_real = bins[x_di_pi*num_total_features + pred_feature_idx[pi]];
+                grad_sum[pi] += x_di_pi_real * grad[di];
+                hessian_sum[pi] += x_di_pi_real*x_di_pi_real * hessian[di];
+            }
+            num_active_samples++;
+        }
+    }
+    if (debug)
+        printf("node_id %d depth %d %d \n",
+            node_id, depth, num_active_samples);
+    if (debug >= 2) {
+        printf("grad and hessian sum\n");
+        print_double(grad_sum, num_frac_features_pred, num_frac_features_pred);
+        print_double(hessian_sum, num_frac_features_pred, num_frac_features_pred);
+    }
+
+    double score = -INFINITY;
+    double leaf_weight = NAN;
+    int best_feature_idx_pred_leaf = num_frac_features_pred - 1;  // default to bias (last feature)
+    int pi_start = 0, pi_end = num_frac_features_pred;
+    if (leaf_only_use_bias) {
+        // Only use bias feature (last in pred_feature_idx)
+        pi_start = num_frac_features_pred - 1;
+        pi_end = num_frac_features_pred;
+    }
+    for (int pi = pi_start; pi < pi_end; ++pi) {
+        double score_pi = 0;
+        if (normalize)
+            score_pi = grad_sum[pi] * grad_sum[pi] / (hessian_sum[pi] * (lambda_l2 + 1) + 1e-8);
+        else
+            score_pi = grad_sum[pi] * grad_sum[pi] / (hessian_sum[pi] + lambda_l2 + 1e-8);
+        if (score_pi > score ) {
+            score = score_pi;
+            best_feature_idx_pred_leaf = pi;
+            if (normalize)
+                leaf_weight = -grad_sum[pi] / (hessian_sum[pi] * (lambda_l2 + 1) + 1e-8);
+            else
+                leaf_weight = -grad_sum[pi] / (hessian_sum[pi] + lambda_l2 + 1e-8);
+        }
+    }
+
+    free(grad_sum);
+    free(hessian_sum);
+
+    if ((num_active_samples <= min_data_in_leaf) || (depth >= max_depth)) {
+        tree[5*node_id] = pred_feature_idx[best_feature_idx_pred_leaf];
+        tree[5*node_id + 1] = NAN;
+        tree[5*node_id + 2] = leaf_weight;
+        tree[5*node_id + 3] = NAN;
+        tree[5*node_id + 4] = NAN;
+        if (debug)
+            printf("best pred feature %d leaf_weight %.3f\n",
+                pred_feature_idx[best_feature_idx_pred_leaf],
+                leaf_weight);
+
+        return node_id + 1;
+    }
+
+    /* grad_left and hessian_left:  num_frac_features x num_bins */
+    double *grad_left, *hessian_left;
+    grad_left = malloc(num_frac_features_cond*num_frac_features_pred*max_bin*sizeof(double));
+    hessian_left = malloc(num_frac_features_cond*num_frac_features_pred*max_bin*sizeof(double));
+    memset(grad_left, 0, num_frac_features_cond*num_frac_features_pred*max_bin*sizeof(double));
+    memset(hessian_left, 0, num_frac_features_cond*num_frac_features_pred*max_bin*sizeof(double));
+
+    int ci_start = 0, ci_end = num_frac_features_cond;
+    bool* active_idx = cond_active_idx;
+    pi_start = 0; pi_end = num_frac_features_pred;
+    /* No depth_sep logic in version 3 - use all features at all depths */
+
+    if (debug >= 2) {
+        printf("active_idx at depth %d \n", depth);
+        print_bool(cond_active_idx, num_samples);
+        print_bool(pred_active_idx, num_samples);
+        print_bool(active_idx, num_samples);
+    }
+
+    for (int di = 0; di < num_samples; ++di) {
+        if(active_idx[di]) {
+            for (int ci = ci_start; ci < ci_end; ++ci) {
+                for (int pi = pi_start; pi < pi_end; ++pi) {
+                    long di_ci = (long)di*(long)num_total_features + (long)cond_feature_idx[ci];
+                    long di_pi = (long)di*(long)num_total_features + (long)pred_feature_idx[pi];
+                    int x_di_ci = x[di_ci];
+                    int x_di_pi = x[di_pi];
+                    double x_di_pi_real = bins[x_di_pi*num_total_features + pred_feature_idx[pi]];
+
+                    grad_left[ci*num_frac_features_pred*max_bin + pi*max_bin
+                        + x_di_ci] \
+                        += grad[di] * x_di_pi_real;
+                    hessian_left[ci*num_frac_features_pred*max_bin + pi*max_bin
+                        + x_di_ci]    \
+                        += x_di_pi_real * x_di_pi_real * hessian[di];
+                }
+            }
+        }
+    }
+
+    // calculate cumsum
+    for (int ci = ci_start; ci < ci_end; ++ci) {
+        for (int pi = pi_start; pi < pi_end; ++pi) {
+            double grad_cumsum = 0., hessian_cumsum = 0.;
+            for (int bin = 0; bin < max_bin; ++bin) {
+                grad_cumsum += grad_left[ci*num_frac_features_pred*max_bin + pi*max_bin + bin];
+                grad_left[ci*num_frac_features_pred*max_bin + pi*max_bin + bin] = grad_cumsum;
+                hessian_cumsum += hessian_left[ci*num_frac_features_pred*max_bin + pi*max_bin + bin];
+                hessian_left[ci*num_frac_features_pred*max_bin + pi*max_bin + bin] = hessian_cumsum;
+            }
+        }
+    }
+
+    double* score_all = malloc(num_frac_features_cond * num_frac_features_pred * max_bin * sizeof(double));
+    double* best_score_across_split = malloc(num_frac_features_cond * num_frac_features_pred * sizeof(double));
+    int* best_split = malloc(num_frac_features_cond * num_frac_features_pred * sizeof(int));
+    memset(best_split, -1, num_frac_features_cond * num_frac_features_pred*sizeof(int));
+    for (int i = 0; i < num_frac_features_cond*num_frac_features_pred; ++i)
+        best_score_across_split[i] = -INFINITY;
+
+    for (int ci = ci_start; ci < ci_end; ++ci) {
+        for (int pi = pi_start; pi < pi_end; ++pi) {
+            int idx_end = ci*num_frac_features_pred*max_bin + pi*max_bin + max_bin - 1;
+            double score_base = 0.;
+            if (normalize)
+                score_base = grad_left[idx_end]*grad_left[idx_end]/(hessian_left[idx_end] * (lambda_l2 + 1) + 1e-8);
+            else
+                score_base = grad_left[idx_end]*grad_left[idx_end]/(hessian_left[idx_end] + lambda_l2 + 1e-8);
+            for (int bin = 0; bin < max_bin; ++bin) {
+                int idx_start = ci*num_frac_features_pred*max_bin + pi*max_bin + bin;
+                double grad_right = grad_left[idx_end] - grad_left[idx_start];
+                double hessian_right = hessian_left[idx_end]- hessian_left[idx_start];
+                double score = 0;
+                if (normalize)
+                    score = grad_left[idx_start]*grad_left[idx_start] / (hessian_left[idx_start] * (lambda_l2 + 1) + 1e-8) + grad_right * grad_right / (hessian_right * (lambda_l2 + 1) + 1e-8);
+                else
+                    score = grad_left[idx_start]*grad_left[idx_start] / (hessian_left[idx_start] + lambda_l2 + 1e-8) + grad_right * grad_right / (hessian_right + lambda_l2 + 1e-8);
+                if (use_delta)
+                    score -= score_base;
+
+                score_all[idx_start] = score;
+            }
+        }
+    }
+
+    if (score_agg == 0) {
+        // max across the bins
+        for (int ci = ci_start; ci < ci_end; ++ci)
+            for (int pi = pi_start; pi < pi_end; ++pi)
+                for (int bin = 0; bin < max_bin; ++bin) {
+                    int idx_start = ci*num_frac_features_pred*max_bin + pi*max_bin + bin;
+                    double score = score_all[idx_start];
+                    if (score > best_score_across_split[ci*num_frac_features_pred + pi]) {
+                        best_score_across_split[ci*num_frac_features_pred + pi] = score;
+                        best_split[ci*num_frac_features_pred + pi] = bin;
+                    }
+                }
+
+    } else if (score_agg == 1) {
+        // avg across pred features, then take max across bin
+        for (int ci = ci_start; ci < ci_end; ++ci) {
+            for (int bin = 0; bin < max_bin; ++bin) {
+                double score_total = 0;
+                for (int pi = pi_start; pi < pi_end; ++pi)
+                    score_total += score_all[ci*num_frac_features_pred*max_bin + pi*max_bin + bin]/(pi_end - pi_start + 1e-8);
+                if (score_total > best_score_across_split[ci*num_frac_features_pred + 0]) {
+                    best_score_across_split[ci*num_frac_features_pred + 0] = score_total;
+                    best_split[ci*num_frac_features_pred + 0] = bin;
+                }
+            }
+        }
+    } else if (score_agg == 2) {
+        double *compare_array = malloc(num_frac_features_pred*sizeof(double));
+        for (int ci = ci_start; ci < ci_end; ++ci) {
+            for (int bin = 0; bin < max_bin; ++bin) {
+                int pi_count = 0;
+                for (int pi = pi_start; pi < pi_end; ++pi) {
+                    compare_array[pi_count] = score_all[ci*num_frac_features_pred*max_bin + pi*max_bin + bin];
+                    pi_count += 1;
+                }
+                if (debug >= 2) {
+                    print_double(compare_array, pi_end-pi_start, pi_count);
+                }
+                double score_median = find_median(compare_array, pi_count);
+                if (debug >= 2) {
+                    print_double(compare_array, pi_end-pi_start, pi_count);
+                    printf("median %.3f \n", score_median);
+                }
+                if (score_median > best_score_across_split[ci*num_frac_features_pred + 0]) {
+                    best_score_across_split[ci*num_frac_features_pred + 0] = score_median;
+                    best_split[ci*num_frac_features_pred + 0] = bin;
+               }
+            }
+        }
+        free(compare_array);
+    } else if (score_agg == 3) {
+        // random pred features, then take max across bin
+        for (int ci = ci_start; ci < ci_end; ++ci) {
+            for (int bin = 0; bin < max_bin; ++bin) {
+                int pi = rand()%(pi_end - pi_start) + pi_start;
+                double score_pi_rand = score_all[ci*num_frac_features_pred*max_bin + pi*max_bin + bin];
+                if (score_pi_rand > best_score_across_split[ci*num_frac_features_pred + 0]) {
+                    best_score_across_split[ci*num_frac_features_pred + 0] = score_pi_rand;
+                    best_split[ci*num_frac_features_pred + 0] = bin;
+                }
+            }
+        }
+    } else if (score_agg == 10) {
+        // random select bin
+        for (int ci = ci_start; ci < ci_end; ++ci)
+            for (int pi = pi_start; pi < pi_end; ++pi) {
+                int bin = rand() % max_bin;
+                int idx_start = ci*num_frac_features_pred*max_bin + pi*max_bin + bin;
+                double score = score_all[idx_start];
+                best_score_across_split[ci*num_frac_features_pred + pi] = score;
+                best_split[ci*num_frac_features_pred + pi] = bin;
+            }
+    } else if (score_agg == 11) {
+        // avg across pred features, then take random across bin
+        for (int ci = ci_start; ci < ci_end; ++ci) {
+            int bin = rand() % max_bin;
+            double score_total = 0;
+            for (int pi = pi_start; pi < pi_end; ++pi)
+                score_total += score_all[ci*num_frac_features_pred*max_bin + pi*max_bin + bin]/(pi_end - pi_start + 1e-8);
+            best_score_across_split[ci*num_frac_features_pred + 0] = score_total;
+            best_split[ci*num_frac_features_pred + 0] = bin;
+        }
+    } else if (score_agg == 12) {
+        double *compare_array = malloc(num_frac_features_pred*sizeof(double));
+        for (int ci = ci_start; ci < ci_end; ++ci) {
+            int bin = rand() % max_bin;
+            int pi_count = 0;
+            for (int pi = pi_start; pi < pi_end; ++pi) {
+                compare_array[pi_count] = score_all[ci*num_frac_features_pred*max_bin + pi*max_bin + bin];
+                pi_count += 1;
+            }
+            double score_median = find_median(compare_array, pi_count);
+            best_score_across_split[ci*num_frac_features_pred + 0] = score_median;
+            best_split[ci*num_frac_features_pred + 0] = bin;
+        }
+        free(compare_array);
+    } else if (score_agg == 13) {
+        // random pred features, then take max across bin
+        for (int ci = ci_start; ci < ci_end; ++ci) {
+            int bin = rand() % max_bin;
+            int pi = rand()%(pi_end - pi_start) + pi_start;
+            double score_pi_bin_rand = score_all[ci*num_frac_features_pred*max_bin + pi*max_bin + bin];
+            best_score_across_split[ci*num_frac_features_pred + 0] = score_pi_bin_rand;
+            best_split[ci*num_frac_features_pred + 0] = bin;
+        }
+    }
+
+    if (debug >= 2) {
+        print_double(best_score_across_split,
+                    num_frac_features_cond*num_frac_features_pred,
+                    num_frac_features_pred);
+        print_int(best_split,
+                num_frac_features_cond*num_frac_features_pred,
+                num_frac_features_pred);
+    }
+
+    free(grad_left);
+    free(hessian_left);
+    double best_score_across_feature = -INFINITY;
+    int best_feature_idx_cond = 0, best_feature_idx_pred = 0, best_feature_cond = 0, best_feature_pred = 0, best_feature_cond_threshold = 0;
+    double best_feature_cond_threshold_real = NAN;
+    if ((score_agg == 0) || (score_agg == 10)) {
+        for (int ci = ci_start; ci < ci_end; ++ci) {
+            for (int pi = pi_start; pi < pi_end; ++pi) {
+                if (best_score_across_split[ci*num_frac_features_pred + pi] > best_score_across_feature) {
+                    best_score_across_feature = best_score_across_split[ci*num_frac_features_pred + pi];
+                    best_feature_idx_cond = ci;
+                    best_feature_idx_pred = pi;
+                }
+            }
+        }
+    } else if ((score_agg == 1) || (score_agg == 2) || (score_agg == 3) || (score_agg == 11) || (score_agg == 12) || (score_agg == 13) ) {
+        for (int ci = ci_start; ci < ci_end; ++ci) {
+            if (best_score_across_split[ci*num_frac_features_pred + 0] > best_score_across_feature) {
+                best_score_across_feature = best_score_across_split[ci*num_frac_features_pred + 0];
+                best_feature_idx_cond = ci;
+            }
+        }
+    }
+
+    best_feature_cond = cond_feature_idx[best_feature_idx_cond];
+    best_feature_pred = pred_feature_idx[best_feature_idx_pred];
+    best_feature_cond_threshold = best_split[best_feature_idx_cond*num_frac_features_pred + best_feature_idx_pred];
+    best_feature_cond_threshold_real = bins[best_feature_cond_threshold*num_total_features + best_feature_cond];
+    if (debug) {
+        printf("best_score_across_feature %.6f\n", best_score_across_feature);
+        printf("depth %d best_feature_idx_cond %d best_feature_cond %d best_feature_idx_pred %d best_feature_pred %d\n",
+            depth, best_feature_idx_cond, best_feature_cond,
+            best_feature_idx_pred, best_feature_pred);
+    }
+
+    // free array
+    free(score_all);
+    free(best_score_across_split);
+    free(best_split);
+
+    bool *cond_active_idx_left = malloc(num_samples * sizeof(bool)), *cond_active_idx_right = malloc(num_samples * sizeof(bool));
+    int num_cond_active_samples_left = 0, num_cond_active_samples_right = 0;
+    for(int di = 0; di < num_samples; ++di) {
+        long di_cond = (long)di*(long)num_total_features + (long)best_feature_cond;
+        cond_active_idx_left[di] = cond_active_idx[di] && (x[di_cond] <= best_feature_cond_threshold);
+        if (cond_active_idx_left[di]) num_cond_active_samples_left += 1;
+        cond_active_idx_right[di] = cond_active_idx[di] && (x[di_cond] > best_feature_cond_threshold);
+        if (cond_active_idx_right[di]) num_cond_active_samples_right +=1;
+    }
+
+    bool *pred_active_idx_left = malloc(num_samples * sizeof(bool)), *pred_active_idx_right = malloc(num_samples * sizeof(bool));
+    int num_pred_active_samples_left = 0, num_pred_active_samples_right = 0;
+    for(int di = 0; di < num_samples; ++di) {
+        long di_cond = (long)di*(long)num_total_features + (long)best_feature_cond;
+        pred_active_idx_left[di] = pred_active_idx[di] && (x[di_cond] <= best_feature_cond_threshold);
+        if (pred_active_idx_left[di]) num_pred_active_samples_left += 1;
+        pred_active_idx_right[di] = pred_active_idx[di] && (x[di_cond] > best_feature_cond_threshold);
+        if (pred_active_idx_right[di]) num_pred_active_samples_right += 1;
+    }
+
+    if (debug) {
+        printf("cond_active_left %d cond_active_right %d pred_active_left %d pred_active_right %d\n",
+            num_cond_active_samples_left,
+            num_cond_active_samples_right,
+            num_pred_active_samples_left,
+            num_pred_active_samples_right);
+    }
+
+    if ((best_score_across_feature < min_gain_to_split) || (num_cond_active_samples_left == 0) || (num_cond_active_samples_right == 0) \
+    || (num_pred_active_samples_left == 0) || (num_pred_active_samples_right == 0) ) {
+        tree[5*node_id] = pred_feature_idx[best_feature_idx_pred_leaf];
+        tree[5*node_id + 1] = NAN;
+        tree[5*node_id + 2] = leaf_weight;
+        tree[5*node_id + 3] = NAN;
+        tree[5*node_id + 4] = NAN;
+
+        free(cond_active_idx_left);
+        free(cond_active_idx_right);
+        free(pred_active_idx_left);
+        free(pred_active_idx_right);
+
+        return node_id + 1;
+    } else{
+        tree[5*node_id] = best_feature_cond;
+        tree[5*node_id + 1] = best_feature_cond_threshold_real;
+        tree[5*node_id + 2] = NAN;
+        tree[5*node_id + 3] = node_id + 1;
+        tree[5*node_id + 4] = NAN;
+        int node_id_right = build_tree_double_simple(tree,
+                                                    node_id + 1,
+                                                    depth + 1,
+                                                    x,
+                                                    bins,
+                                                    grad,
+                                                    hessian,
+                                                    cond_active_idx_left,
+                                                    pred_active_idx_left,
+                                                    cond_feature_idx,
+                                                    pred_feature_idx,
+                                                    max_bin,
+                                                    num_samples,
+                                                    num_frac_features_cond,
+                                                    num_frac_features_pred,
+                                                    num_total_features,
+                                                    max_depth,
+                                                    min_data_in_leaf,
+                                                    leaf_use_all_pred_feature,
+                                                    leaf_only_use_bias,
+                                                    use_delta,
+                                                    score_agg,
+                                                    min_gain_to_split,
+                                                    lambda_l2,
+                                                    normalize,
+                                                    split_sample,
+                                                    debug
+                                                    );
+        tree[5*node_id + 4] = node_id_right;
+        int node_id_next = build_tree_double_simple(tree,
+                                                    node_id_right,
+                                                    depth + 1,
+                                                    x,
+                                                    bins,
+                                                    grad,
+                                                    hessian,
+                                                    cond_active_idx_right,
+                                                    pred_active_idx_right,
+                                                    cond_feature_idx,
+                                                    pred_feature_idx,
+                                                    max_bin,
+                                                    num_samples,
+                                                    num_frac_features_cond,
+                                                    num_frac_features_pred,
+                                                    num_total_features,
+                                                    max_depth,
+                                                    min_data_in_leaf,
+                                                    leaf_use_all_pred_feature,
+                                                    leaf_only_use_bias,
+                                                    use_delta,
+                                                    score_agg,
+                                                    min_gain_to_split,
+                                                    lambda_l2,
+                                                    normalize,
+                                                    split_sample,
+                                                    debug
+                                                    );
+        free(cond_active_idx_left);
+        free(cond_active_idx_right);
+        free(pred_active_idx_left);
+        free(pred_active_idx_right);
+
+        return node_id_next;
+    }
+}
+
+
+/* Version 3: Simplified train without depth_sep and cond_prior concepts */
+void train_simple(const unsigned char *restrict x,
+    const double *restrict x_origin,
+    const double *restrict bins,
+    const double *restrict y,
+    double *restrict tree,
+    int num_samples,
+    int num_features,
+    int bias_feature_idx,
+    int num_trees,
+    int max_depth,
+    int max_bin,
+    int min_data_in_leaf,
+    double bagging_fraction,
+    double cond_feature_fraction,
+    double pred_feature_fraction,
+    double learning_rate,
+    int leaf_use_all_pred_feature,
+    int leaf_only_use_bias,
+    int cond_pred_share,
+    int use_delta,
+    int score_agg,
+    double min_gain_to_split,
+    double lambda_l2,
+    int normalize,
+    int split_sample,
+    int debug
+    ) {
+
+    assert(num_samples >= 1);
+    assert(num_features >= 1);
+    assert(bagging_fraction > 0);
+    assert(cond_feature_fraction > 0);
+    assert(pred_feature_fraction > 0);
+    assert(learning_rate > 0);
+    assert(max_depth > 0);
+    if (debug) {
+        printf("num_samples %d \n", num_samples);
+        printf("num_features %d \n", num_features);
+        printf("bagging_fraction %.3f \n", bagging_fraction);
+        printf("cond_feature_fraction %.3f \n", cond_feature_fraction);
+        printf("pred_feature_fraction %.3f \n", pred_feature_fraction);
+        printf("learning_rate %.4f \n", learning_rate);
+        printf("max_depth %d \n", max_depth);
+        printf("split_sample %d \n", split_sample);
+    }
+    int num_nodes_per_tree = (int)pow(2., max_depth + 1) - 1;
+    double *yhat = malloc(num_samples*sizeof(double));
+    double *yi = malloc(num_samples*sizeof(double));
+    double *grad = malloc(num_samples*sizeof(double));
+    double *hessian = malloc(num_samples*sizeof(double));
+    bool *cond_active_idx = malloc(num_samples*sizeof(bool));
+    bool *pred_active_idx = malloc(num_samples*sizeof(bool));
+    int *cond_feature_idx = malloc(num_features*sizeof(int));
+    int *pred_feature_idx = malloc(num_features*sizeof(int));
+    if (!(yhat && yi && grad && hessian && cond_active_idx && pred_active_idx
+        && cond_feature_idx && pred_feature_idx)) {
+        printf("malloc failure \n");
+        free(yhat);
+        free(yi);
+        free(grad);
+        free(hessian);
+        free(cond_active_idx);
+        free(pred_active_idx);
+        free(cond_feature_idx);
+        free(pred_feature_idx);
+        return;
+    }
+
+    memset(yhat, 0, num_samples*sizeof(double));
+    memset(yi, 0, num_samples*sizeof(double));
+    memset(grad, 0, num_samples*sizeof(double));
+    for (int di = 0; di < num_samples; ++di)
+        hessian[di] = 1;
+
+    for (int i = 0; i < num_trees * num_nodes_per_tree * 5; ++i)
+        tree[i] = NAN;
+
+    srand(1);
+
+    for (int tree_idx = 0; tree_idx < num_trees; ++tree_idx) {
+        if (debug)
+            printf("tree_idx %d \n", tree_idx);
+        for (int di = 0; di < num_samples; ++di) {
+            grad[di] = yhat[di] - y[di];
+        }
+
+        double *tree_i = tree + tree_idx * num_nodes_per_tree * 5;
+
+        // sample active
+        int num_active_samples = 0;
+        for (int di = 0; di < num_samples; ++di) {
+            double r = ((double)rand()/RAND_MAX);
+            if (r <= bagging_fraction) {
+                if (split_sample == 1) {
+                    double r_split = ((double)rand()/RAND_MAX);
+                    if (r_split <= 0.5) {
+                        cond_active_idx[di] = true;
+                        pred_active_idx[di] = false;
+                    } else {
+                        cond_active_idx[di] = false;
+                        pred_active_idx[di] = true;
+                    }
+                } else if (split_sample == 2) {
+                    if(di <= num_samples / 2) {
+                        cond_active_idx[di] = true;
+                        pred_active_idx[di] = false;
+                    } else {
+                        cond_active_idx[di] = false;
+                        pred_active_idx[di] = true;
+                    }
+                } else {
+                    cond_active_idx[di] = true;
+                    pred_active_idx[di] = true;
+                }
+                num_active_samples++;
+            }
+            else {
+                cond_active_idx[di] = false;
+                pred_active_idx[di] = false;
+            }
+        }
+
+        if (num_active_samples == 0) {
+            printf("bagging_fraction is too small, randomly select 1 sample");
+            cond_active_idx[rand()%num_samples] = true;
+            pred_active_idx[rand()%num_samples] = true;
+            num_active_samples = 1;
+        }
+
+        // Sample cond features (no prior feature logic)
+        int num_frac_features_cond = 0;
+        for (int fi = 0; fi < num_features; ++fi) {
+            if (fi != bias_feature_idx) {
+                double r = ((double)rand()/RAND_MAX);
+                if (r <= cond_feature_fraction) {
+                    cond_feature_idx[num_frac_features_cond] = fi;
+                    num_frac_features_cond++;
+                }
+            }
+        }
+
+        if (num_frac_features_cond == 0) {
+            printf("feature_fraction is too small, randomly select 1 feature");
+            cond_feature_idx[0] = rand() % num_features;
+            num_frac_features_cond = 1;
+        }
+
+        if (debug)
+            print_int(cond_feature_idx, num_frac_features_cond, num_frac_features_cond);
+
+        // Sample pred features
+        int num_frac_features_pred = 0;
+        if (!cond_pred_share) {
+            for (int fi = 0; fi < num_features; ++fi) {
+                if (fi != bias_feature_idx) {
+                    double r = ((double)rand()/RAND_MAX);
+                    if (r <= pred_feature_fraction) {
+                        pred_feature_idx[num_frac_features_pred] = fi;
+                        num_frac_features_pred++;
+                    }
+                } else {
+                    pred_feature_idx[num_frac_features_pred] = fi;
+                    num_frac_features_pred++;
+                }
+            }
+        } else {
+            // Share features between cond and pred
+            for (int fi = 0; fi < num_frac_features_cond; ++fi)
+                pred_feature_idx[fi] = cond_feature_idx[fi];
+            num_frac_features_pred = num_frac_features_cond;
+            pred_feature_idx[num_frac_features_pred] = bias_feature_idx;
+            num_frac_features_pred++;
+        }
+
+        if (debug)
+            print_int(pred_feature_idx, num_frac_features_pred, num_frac_features_pred);
+
+        build_tree_double_simple(tree_i,
+                                0,
+                                0,
+                                x,
+                                bins,
+                                grad,
+                                hessian,
+                                cond_active_idx,
+                                pred_active_idx,
+                                cond_feature_idx,
+                                pred_feature_idx,
+                                max_bin,
+                                num_samples,
+                                num_frac_features_cond,
+                                num_frac_features_pred,
+                                num_features,
+                                max_depth,
+                                min_data_in_leaf,
+                                leaf_use_all_pred_feature,
+                                leaf_only_use_bias,
+                                use_delta,
+                                score_agg,
+                                min_gain_to_split,
+                                lambda_l2,
+                                normalize,
+                                split_sample,
+                                debug
+                                );
+
+        // prediction
+        memset(yi, 0, num_samples*sizeof(double));
+        predict_custom(x_origin,
+                        tree_i,
+                        yi,
+                        num_samples,
+                        num_features,
+                        num_trees,
+                        num_nodes_per_tree,
+                        learning_rate,
+                        0,
+                        1
+                        );
+
+        for (int di = 0; di < num_samples; ++di) {
+            yhat[di] += yi[di];
+        }
+    }
+
+    free(yhat);
+    free(yi);
+    free(grad);
+    free(hessian);
+    free(cond_active_idx);
+    free(pred_active_idx);
+    free(cond_feature_idx);
+    free(pred_feature_idx);
+
+}
