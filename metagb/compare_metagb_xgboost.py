@@ -58,6 +58,7 @@ def main():
         max_depth=5,
         subsample=0.8,
         colsample_bytree=0.8,
+        min_child_weight=20,
         reg_lambda=0.0,
         tree_method="hist",
         objective="reg:squarederror",
