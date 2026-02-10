@@ -1,0 +1,511 @@
+[2026-02-11 05:12:13] INFO - ================================================================================
+[2026-02-11 05:12:13] INFO - Experiment 1: Real Datasets Performance Comparison
+[2026-02-11 05:12:13] INFO - MetaGB vs XGBoost on TabArena Regression Datasets
+[2026-02-11 05:12:13] INFO - ================================================================================
+[2026-02-11 05:12:13] INFO - Random seed: 42
+[2026-02-11 05:12:13] INFO - Train/Test split: 0.8/0.19999999999999996
+[2026-02-11 05:12:13] INFO - CV folds: 5
+[2026-02-11 05:12:13] INFO - Feature normalization: Z-Score (StandardScaler)
+[2026-02-11 05:12:13] INFO - Found 6 datasets
+[2026-02-11 05:12:13] INFO - 
+================================================================================
+[2026-02-11 05:12:13] INFO - Processing dataset: airfoil_self_noise
+[2026-02-11 05:12:13] INFO - ================================================================================
+[2026-02-11 05:12:13] INFO - Train samples: 1202, Test samples: 301
+[2026-02-11 05:12:13] INFO - Features: 5
+[2026-02-11 05:12:13] INFO - Applying Z-Score normalization...
+[2026-02-11 05:12:13] INFO - Z-Score normalization applied (fit on train, transform all)
+[2026-02-11 05:12:13] INFO - Applying target (y) normalization...
+[2026-02-11 05:12:13] INFO - Target normalization: mean=124.9456, std=6.8641
+[2026-02-11 05:12:13] INFO - 
+--- XGBoost Grid Search ---
+[2026-02-11 05:12:13] INFO - Parameter combinations: 108
+[2026-02-11 05:12:13] INFO - Starting GridSearchCV for xgboost
+[2026-02-11 05:12:13] INFO - Total parameter combinations: 108
+[2026-02-11 05:12:13] INFO - CV folds: 5
+[2026-02-11 05:12:15] INFO - [10/108] CV RMSE: 0.7142 (+/- 0.0228)
+[2026-02-11 05:12:16] INFO - [20/108] CV RMSE: 0.7594 (+/- 0.0225)
+[2026-02-11 05:12:18] INFO - [30/108] CV RMSE: 0.7206 (+/- 0.0215)
+[2026-02-11 05:12:20] INFO - [40/108] CV RMSE: 0.7140 (+/- 0.0258)
+[2026-02-11 05:12:21] INFO - [50/108] CV RMSE: 0.6131 (+/- 0.0226)
+[2026-02-11 05:12:22] INFO - [60/108] CV RMSE: 0.3569 (+/- 0.0114)
+[2026-02-11 05:12:24] INFO - [70/108] CV RMSE: 0.2797 (+/- 0.0172)
+[2026-02-11 05:12:26] INFO - [80/108] CV RMSE: 0.4593 (+/- 0.0298)
+[2026-02-11 05:12:27] INFO - [90/108] CV RMSE: 0.3474 (+/- 0.0236)
+[2026-02-11 05:12:28] INFO - [100/108] CV RMSE: 0.3823 (+/- 0.0247)
+[2026-02-11 05:12:30] INFO - Best CV RMSE: 0.2523
+[2026-02-11 05:12:30] INFO - Best params: {'learning_rate': 0.1, 'max_depth': 10, 'n_estimators': 100, 'subsample': 0.7, 'colsample_bytree': 1.0, 'max_bin': 64, 'min_child_weight': 10, 'reg_lambda': 0.0, 'random_state': 42}
+[2026-02-11 05:12:30] INFO - Best params: {'learning_rate': 0.1, 'max_depth': 10, 'n_estimators': 100, 'subsample': 0.7, 'colsample_bytree': 1.0, 'max_bin': 64, 'min_child_weight': 10, 'reg_lambda': 0.0, 'random_state': 42}
+[2026-02-11 05:12:30] INFO - Best CV RMSE: 0.2523
+[2026-02-11 05:12:30] INFO - Test RMSE: 0.2876
+[2026-02-11 05:12:30] INFO - Test MAE: 0.1833
+[2026-02-11 05:12:30] INFO - Test R²: 0.9206
+[2026-02-11 05:12:30] INFO - Total time: 17.1s
+[2026-02-11 05:12:30] INFO - 
+--- MetaGB Grid Search ---
+[2026-02-11 05:12:30] INFO - Parameter combinations: 324
+[2026-02-11 05:12:30] INFO - Starting GridSearchCV for metagb
+[2026-02-11 05:12:30] INFO - Total parameter combinations: 324
+[2026-02-11 05:12:30] INFO - CV folds: 5
+[2026-02-11 05:12:31] INFO - [10/324] CV RMSE: 0.9186 (+/- 0.0262)
+[2026-02-11 05:12:32] INFO - [20/324] CV RMSE: 0.8260 (+/- 0.0251)
+[2026-02-11 05:12:33] INFO - [30/324] CV RMSE: 0.6996 (+/- 0.0235)
+[2026-02-11 05:12:35] INFO - [40/324] CV RMSE: 0.8850 (+/- 0.0270)
+[2026-02-11 05:12:36] INFO - [50/324] CV RMSE: 0.7537 (+/- 0.0217)
+[2026-02-11 05:12:39] INFO - [60/324] CV RMSE: 0.7497 (+/- 0.0253)
+[2026-02-11 05:12:43] INFO - [70/324] CV RMSE: 0.5965 (+/- 0.0240)
+[2026-02-11 05:12:46] INFO - [80/324] CV RMSE: 0.8498 (+/- 0.0255)
+[2026-02-11 05:12:50] INFO - [90/324] CV RMSE: 0.6890 (+/- 0.0232)
+[2026-02-11 05:12:58] INFO - [100/324] CV RMSE: 0.5044 (+/- 0.0212)
+[2026-02-11 05:13:08] INFO - [110/324] CV RMSE: 0.7152 (+/- 0.0244)
+[2026-02-11 05:13:09] INFO - [120/324] CV RMSE: 0.7062 (+/- 0.0250)
+[2026-02-11 05:13:10] INFO - [130/324] CV RMSE: 0.5142 (+/- 0.0306)
+[2026-02-11 05:13:11] INFO - [140/324] CV RMSE: 0.4553 (+/- 0.0312)
+[2026-02-11 05:13:13] INFO - [150/324] CV RMSE: 0.5844 (+/- 0.0235)
+[2026-02-11 05:13:14] INFO - [160/324] CV RMSE: 0.3802 (+/- 0.0231)
+[2026-02-11 05:13:17] INFO - [170/324] CV RMSE: 0.3245 (+/- 0.0152)
+[2026-02-11 05:13:21] INFO - [180/324] CV RMSE: 0.2914 (+/- 0.0159)
+[2026-02-11 05:13:23] INFO - [190/324] CV RMSE: 0.4982 (+/- 0.0245)
+[2026-02-11 05:13:28] INFO - [200/324] CV RMSE: 0.3201 (+/- 0.0257)
+[2026-02-11 05:13:38] INFO - [210/324] CV RMSE: 0.2308 (+/- 0.0145)
+[2026-02-11 05:13:46] INFO - [220/324] CV RMSE: 0.5601 (+/- 0.0305)
+[2026-02-11 05:13:47] INFO - [230/324] CV RMSE: 0.4569 (+/- 0.0271)
+[2026-02-11 05:13:48] INFO - [240/324] CV RMSE: 0.4026 (+/- 0.0315)
+[2026-02-11 05:13:50] INFO - [250/324] CV RMSE: 0.3322 (+/- 0.0229)
+[2026-02-11 05:13:51] INFO - [260/324] CV RMSE: 0.4692 (+/- 0.0211)
+[2026-02-11 05:13:53] INFO - [270/324] CV RMSE: 0.2902 (+/- 0.0158)
+[2026-02-11 05:13:55] INFO - [280/324] CV RMSE: 0.2579 (+/- 0.0105)
+[2026-02-11 05:13:59] INFO - [290/324] CV RMSE: 0.3416 (+/- 0.0211)
+[2026-02-11 05:14:02] INFO - [300/324] CV RMSE: 0.3209 (+/- 0.0247)
+[2026-02-11 05:14:07] INFO - [310/324] CV RMSE: 0.2559 (+/- 0.0246)
+[2026-02-11 05:14:17] INFO - [320/324] CV RMSE: 0.2576 (+/- 0.0211)
+[2026-02-11 05:14:22] INFO - Best CV RMSE: 0.2229
+[2026-02-11 05:14:22] INFO - Best params: {'learning_rate': 0.1, 'max_depth': 10, 'n_estimators': 100, 'subsample': 0.7, 'pred_feature_fraction': 0.8, 'version': 3, 'max_bin': 64, 'min_data_in_leaf': 10, 'colsample_bytree': 1.0, 'random_state': 42}
+[2026-02-11 05:14:23] INFO - Best params: {'learning_rate': 0.1, 'max_depth': 10, 'n_estimators': 100, 'subsample': 0.7, 'pred_feature_fraction': 0.8, 'version': 3, 'max_bin': 64, 'min_data_in_leaf': 10, 'colsample_bytree': 1.0, 'random_state': 42}
+[2026-02-11 05:14:23] INFO - Best CV RMSE: 0.2229
+[2026-02-11 05:14:23] INFO - Test RMSE: 0.2290
+[2026-02-11 05:14:23] INFO - Test MAE: 0.1464
+[2026-02-11 05:14:23] INFO - Test R²: 0.9497
+[2026-02-11 05:14:23] INFO - Total time: 112.4s
+[2026-02-11 05:14:23] INFO - 
+================================================================================
+[2026-02-11 05:14:23] INFO - Processing dataset: Another-Dataset-on-used-Fiat-500
+[2026-02-11 05:14:23] INFO - ================================================================================
+[2026-02-11 05:14:23] INFO - Train samples: 1230, Test samples: 308
+[2026-02-11 05:14:23] INFO - Features: 6
+[2026-02-11 05:14:23] INFO - Applying Z-Score normalization...
+[2026-02-11 05:14:23] INFO - Z-Score normalization applied (fit on train, transform all)
+[2026-02-11 05:14:23] INFO - Applying target (y) normalization...
+[2026-02-11 05:14:23] INFO - Target normalization: mean=8584.0195, std=1915.8308
+[2026-02-11 05:14:23] INFO - 
+--- XGBoost Grid Search ---
+[2026-02-11 05:14:23] INFO - Parameter combinations: 108
+[2026-02-11 05:14:23] INFO - Starting GridSearchCV for xgboost
+[2026-02-11 05:14:23] INFO - Total parameter combinations: 108
+[2026-02-11 05:14:23] INFO - CV folds: 5
+[2026-02-11 05:14:24] INFO - [10/108] CV RMSE: 0.5305 (+/- 0.0393)
+[2026-02-11 05:14:25] INFO - [20/108] CV RMSE: 0.6842 (+/- 0.0339)
+[2026-02-11 05:14:27] INFO - [30/108] CV RMSE: 0.6819 (+/- 0.0347)
+[2026-02-11 05:14:29] INFO - [40/108] CV RMSE: 0.5278 (+/- 0.0395)
+[2026-02-11 05:14:31] INFO - [50/108] CV RMSE: 0.5186 (+/- 0.0374)
+[2026-02-11 05:14:32] INFO - [60/108] CV RMSE: 0.4038 (+/- 0.0282)
+[2026-02-11 05:14:34] INFO - [70/108] CV RMSE: 0.4017 (+/- 0.0264)
+[2026-02-11 05:14:36] INFO - [80/108] CV RMSE: 0.3975 (+/- 0.0323)
+[2026-02-11 05:14:37] INFO - [90/108] CV RMSE: 0.4027 (+/- 0.0284)
+[2026-02-11 05:14:39] INFO - [100/108] CV RMSE: 0.4183 (+/- 0.0358)
+[2026-02-11 05:14:41] INFO - Best CV RMSE: 0.3955
+[2026-02-11 05:14:41] INFO - Best params: {'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7, 'colsample_bytree': 1.0, 'max_bin': 64, 'min_child_weight': 10, 'reg_lambda': 0.0, 'random_state': 42}
+[2026-02-11 05:14:41] INFO - Best params: {'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 100, 'subsample': 0.7, 'colsample_bytree': 1.0, 'max_bin': 64, 'min_child_weight': 10, 'reg_lambda': 0.0, 'random_state': 42}
+[2026-02-11 05:14:41] INFO - Best CV RMSE: 0.3955
+[2026-02-11 05:14:41] INFO - Test RMSE: 0.4055
+[2026-02-11 05:14:41] INFO - Test MAE: 0.3168
+[2026-02-11 05:14:41] INFO - Test R²: 0.8536
+[2026-02-11 05:14:41] INFO - Total time: 18.0s
+[2026-02-11 05:14:41] INFO - 
+--- MetaGB Grid Search ---
+[2026-02-11 05:14:41] INFO - Parameter combinations: 324
+[2026-02-11 05:14:41] INFO - Starting GridSearchCV for metagb
+[2026-02-11 05:14:41] INFO - Total parameter combinations: 324
+[2026-02-11 05:14:41] INFO - CV folds: 5
+[2026-02-11 05:14:41] INFO - [10/324] CV RMSE: 0.8628 (+/- 0.0328)
+[2026-02-11 05:14:42] INFO - [20/324] CV RMSE: 0.6927 (+/- 0.0359)
+[2026-02-11 05:14:44] INFO - [30/324] CV RMSE: 0.5400 (+/- 0.0353)
+[2026-02-11 05:14:46] INFO - [40/324] CV RMSE: 0.8538 (+/- 0.0334)
+[2026-02-11 05:14:47] INFO - [50/324] CV RMSE: 0.6864 (+/- 0.0338)
+[2026-02-11 05:14:50] INFO - [60/324] CV RMSE: 0.6944 (+/- 0.0326)
+[2026-02-11 05:14:54] INFO - [70/324] CV RMSE: 0.5327 (+/- 0.0390)
+[2026-02-11 05:14:57] INFO - [80/324] CV RMSE: 0.8501 (+/- 0.0328)
+[2026-02-11 05:15:03] INFO - [90/324] CV RMSE: 0.6827 (+/- 0.0342)
+[2026-02-11 05:15:12] INFO - [100/324] CV RMSE: 0.5182 (+/- 0.0373)
+[2026-02-11 05:15:24] INFO - [110/324] CV RMSE: 0.5269 (+/- 0.0392)
+[2026-02-11 05:15:25] INFO - [120/324] CV RMSE: 0.5357 (+/- 0.0339)
+[2026-02-11 05:15:26] INFO - [130/324] CV RMSE: 0.4096 (+/- 0.0343)
+[2026-02-11 05:15:28] INFO - [140/324] CV RMSE: 0.4020 (+/- 0.0308)
+[2026-02-11 05:15:30] INFO - [150/324] CV RMSE: 0.5286 (+/- 0.0366)
+[2026-02-11 05:15:31] INFO - [160/324] CV RMSE: 0.4081 (+/- 0.0345)
+[2026-02-11 05:15:34] INFO - [170/324] CV RMSE: 0.4070 (+/- 0.0273)
+[2026-02-11 05:15:39] INFO - [180/324] CV RMSE: 0.4020 (+/- 0.0310)
+[2026-02-11 05:15:41] INFO - [190/324] CV RMSE: 0.5194 (+/- 0.0375)
+[2026-02-11 05:15:47] INFO - [200/324] CV RMSE: 0.4406 (+/- 0.0339)
+[2026-02-11 05:15:57] INFO - [210/324] CV RMSE: 0.4260 (+/- 0.0254)
+[2026-02-11 05:16:06] INFO - [220/324] CV RMSE: 0.4236 (+/- 0.0319)
+[2026-02-11 05:16:07] INFO - [230/324] CV RMSE: 0.4043 (+/- 0.0315)
+[2026-02-11 05:16:08] INFO - [240/324] CV RMSE: 0.4057 (+/- 0.0257)
+[2026-02-11 05:16:10] INFO - [250/324] CV RMSE: 0.3987 (+/- 0.0289)
+[2026-02-11 05:16:11] INFO - [260/324] CV RMSE: 0.4354 (+/- 0.0361)
+[2026-02-11 05:16:13] INFO - [270/324] CV RMSE: 0.4159 (+/- 0.0237)
+[2026-02-11 05:16:16] INFO - [280/324] CV RMSE: 0.4172 (+/- 0.0195)
+[2026-02-11 05:16:20] INFO - [290/324] CV RMSE: 0.4252 (+/- 0.0318)
+[2026-02-11 05:16:23] INFO - [300/324] CV RMSE: 0.4346 (+/- 0.0319)
+[2026-02-11 05:16:29] INFO - [310/324] CV RMSE: 0.4235 (+/- 0.0290)
+[2026-02-11 05:16:39] INFO - [320/324] CV RMSE: 0.4528 (+/- 0.0266)
+[2026-02-11 05:16:45] INFO - Best CV RMSE: 0.3970
+[2026-02-11 05:16:45] INFO - Best params: {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50, 'subsample': 0.7, 'pred_feature_fraction': 0.0, 'version': 3, 'max_bin': 64, 'min_data_in_leaf': 10, 'colsample_bytree': 0.7, 'random_state': 42}
+[2026-02-11 05:16:45] INFO - Best params: {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 50, 'subsample': 0.7, 'pred_feature_fraction': 0.0, 'version': 3, 'max_bin': 64, 'min_data_in_leaf': 10, 'colsample_bytree': 0.7, 'random_state': 42}
+[2026-02-11 05:16:45] INFO - Best CV RMSE: 0.3970
+[2026-02-11 05:16:45] INFO - Test RMSE: 0.4034
+[2026-02-11 05:16:45] INFO - Test MAE: 0.3135
+[2026-02-11 05:16:45] INFO - Test R²: 0.8551
+[2026-02-11 05:16:45] INFO - Total time: 124.5s
+[2026-02-11 05:16:45] INFO - 
+================================================================================
+[2026-02-11 05:16:45] INFO - Processing dataset: concrete_compressive_strength
+[2026-02-11 05:16:45] INFO - ================================================================================
+[2026-02-11 05:16:45] INFO - Train samples: 824, Test samples: 206
+[2026-02-11 05:16:45] INFO - Features: 8
+[2026-02-11 05:16:45] INFO - Applying Z-Score normalization...
+[2026-02-11 05:16:45] INFO - Z-Score normalization applied (fit on train, transform all)
+[2026-02-11 05:16:45] INFO - Applying target (y) normalization...
+[2026-02-11 05:16:45] INFO - Target normalization: mean=35.8257, std=16.7152
+[2026-02-11 05:16:45] INFO - 
+--- XGBoost Grid Search ---
+[2026-02-11 05:16:45] INFO - Parameter combinations: 108
+[2026-02-11 05:16:45] INFO - Starting GridSearchCV for xgboost
+[2026-02-11 05:16:45] INFO - Total parameter combinations: 108
+[2026-02-11 05:16:45] INFO - CV folds: 5
+[2026-02-11 05:16:46] INFO - [10/108] CV RMSE: 0.6292 (+/- 0.0306)
+[2026-02-11 05:16:48] INFO - [20/108] CV RMSE: 0.7081 (+/- 0.0265)
+[2026-02-11 05:16:50] INFO - [30/108] CV RMSE: 0.6957 (+/- 0.0261)
+[2026-02-11 05:16:52] INFO - [40/108] CV RMSE: 0.6318 (+/- 0.0298)
+[2026-02-11 05:16:53] INFO - [50/108] CV RMSE: 0.5396 (+/- 0.0199)
+[2026-02-11 05:16:55] INFO - [60/108] CV RMSE: 0.3180 (+/- 0.0178)
+[2026-02-11 05:16:57] INFO - [70/108] CV RMSE: 0.2931 (+/- 0.0232)
+[2026-02-11 05:16:59] INFO - [80/108] CV RMSE: 0.3671 (+/- 0.0142)
+[2026-02-11 05:17:00] INFO - [90/108] CV RMSE: 0.3141 (+/- 0.0136)
+[2026-02-11 05:17:02] INFO - [100/108] CV RMSE: 0.3745 (+/- 0.0131)
+[2026-02-11 05:17:04] INFO - Best CV RMSE: 0.2776
+[2026-02-11 05:17:04] INFO - Best params: {'learning_rate': 0.1, 'max_depth': 10, 'n_estimators': 100, 'subsample': 0.7, 'colsample_bytree': 0.7, 'max_bin': 64, 'min_child_weight': 10, 'reg_lambda': 0.0, 'random_state': 42}
+[2026-02-11 05:17:04] INFO - Best params: {'learning_rate': 0.1, 'max_depth': 10, 'n_estimators': 100, 'subsample': 0.7, 'colsample_bytree': 0.7, 'max_bin': 64, 'min_child_weight': 10, 'reg_lambda': 0.0, 'random_state': 42}
+[2026-02-11 05:17:04] INFO - Best CV RMSE: 0.2776
+[2026-02-11 05:17:04] INFO - Test RMSE: 0.2380
+[2026-02-11 05:17:04] INFO - Test MAE: 0.1730
+[2026-02-11 05:17:04] INFO - Test R²: 0.9427
+[2026-02-11 05:17:04] INFO - Total time: 18.7s
+[2026-02-11 05:17:04] INFO - 
+--- MetaGB Grid Search ---
+[2026-02-11 05:17:04] INFO - Parameter combinations: 324
+[2026-02-11 05:17:04] INFO - Starting GridSearchCV for metagb
+[2026-02-11 05:17:04] INFO - Total parameter combinations: 324
+[2026-02-11 05:17:04] INFO - CV folds: 5
+[2026-02-11 05:17:04] INFO - [10/324] CV RMSE: 0.8969 (+/- 0.0348)
+[2026-02-11 05:17:05] INFO - [20/324] CV RMSE: 0.7708 (+/- 0.0345)
+[2026-02-11 05:17:07] INFO - [30/324] CV RMSE: 0.6337 (+/- 0.0271)
+[2026-02-11 05:17:09] INFO - [40/324] CV RMSE: 0.8690 (+/- 0.0310)
+[2026-02-11 05:17:10] INFO - [50/324] CV RMSE: 0.7038 (+/- 0.0263)
+[2026-02-11 05:17:13] INFO - [60/324] CV RMSE: 0.7187 (+/- 0.0281)
+[2026-02-11 05:17:18] INFO - [70/324] CV RMSE: 0.5489 (+/- 0.0165)
+[2026-02-11 05:17:21] INFO - [80/324] CV RMSE: 0.8461 (+/- 0.0288)
+[2026-02-11 05:17:25] INFO - [90/324] CV RMSE: 0.6864 (+/- 0.0205)
+[2026-02-11 05:17:33] INFO - [100/324] CV RMSE: 0.5084 (+/- 0.0100)
+[2026-02-11 05:17:44] INFO - [110/324] CV RMSE: 0.6283 (+/- 0.0310)
+[2026-02-11 05:17:45] INFO - [120/324] CV RMSE: 0.6283 (+/- 0.0309)
+[2026-02-11 05:17:46] INFO - [130/324] CV RMSE: 0.4445 (+/- 0.0110)
+[2026-02-11 05:17:47] INFO - [140/324] CV RMSE: 0.3639 (+/- 0.0157)
+[2026-02-11 05:17:49] INFO - [150/324] CV RMSE: 0.5473 (+/- 0.0205)
+[2026-02-11 05:17:50] INFO - [160/324] CV RMSE: 0.3670 (+/- 0.0201)
+[2026-02-11 05:17:53] INFO - [170/324] CV RMSE: 0.3085 (+/- 0.0189)
+[2026-02-11 05:17:58] INFO - [180/324] CV RMSE: 0.3060 (+/- 0.0224)
+[2026-02-11 05:18:00] INFO - [190/324] CV RMSE: 0.4923 (+/- 0.0092)
+[2026-02-11 05:18:05] INFO - [200/324] CV RMSE: 0.3514 (+/- 0.0257)
+[2026-02-11 05:18:14] INFO - [210/324] CV RMSE: 0.3030 (+/- 0.0216)
+[2026-02-11 05:18:23] INFO - [220/324] CV RMSE: 0.4811 (+/- 0.0202)
+[2026-02-11 05:18:23] INFO - [230/324] CV RMSE: 0.3622 (+/- 0.0167)
+[2026-02-11 05:18:25] INFO - [240/324] CV RMSE: 0.3640 (+/- 0.0207)
+[2026-02-11 05:18:26] INFO - [250/324] CV RMSE: 0.3161 (+/- 0.0352)
+[2026-02-11 05:18:28] INFO - [260/324] CV RMSE: 0.3817 (+/- 0.0194)
+[2026-02-11 05:18:30] INFO - [270/324] CV RMSE: 0.3155 (+/- 0.0248)
+[2026-02-11 05:18:32] INFO - [280/324] CV RMSE: 0.3004 (+/- 0.0345)
+[2026-02-11 05:18:36] INFO - [290/324] CV RMSE: 0.3493 (+/- 0.0230)
+[2026-02-11 05:18:39] INFO - [300/324] CV RMSE: 0.3845 (+/- 0.0263)
+[2026-02-11 05:18:44] INFO - [310/324] CV RMSE: 0.3153 (+/- 0.0269)
+[2026-02-11 05:18:53] INFO - [320/324] CV RMSE: 0.3310 (+/- 0.0322)
+[2026-02-11 05:18:59] INFO - Best CV RMSE: 0.2753
+[2026-02-11 05:18:59] INFO - Best params: {'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 100, 'subsample': 0.7, 'pred_feature_fraction': 0.0, 'version': 3, 'max_bin': 64, 'min_data_in_leaf': 10, 'colsample_bytree': 0.7, 'random_state': 42}
+[2026-02-11 05:18:59] INFO - Best params: {'learning_rate': 0.1, 'max_depth': 5, 'n_estimators': 100, 'subsample': 0.7, 'pred_feature_fraction': 0.0, 'version': 3, 'max_bin': 64, 'min_data_in_leaf': 10, 'colsample_bytree': 0.7, 'random_state': 42}
+[2026-02-11 05:18:59] INFO - Best CV RMSE: 0.2753
+[2026-02-11 05:18:59] INFO - Test RMSE: 0.2327
+[2026-02-11 05:18:59] INFO - Test MAE: 0.1685
+[2026-02-11 05:18:59] INFO - Test R²: 0.9453
+[2026-02-11 05:18:59] INFO - Total time: 115.5s
+[2026-02-11 05:18:59] INFO - 
+================================================================================
+[2026-02-11 05:18:59] INFO - Processing dataset: healthcare_insurance_expenses
+[2026-02-11 05:18:59] INFO - ================================================================================
+[2026-02-11 05:18:59] INFO - Train samples: 1070, Test samples: 268
+[2026-02-11 05:18:59] INFO - Features: 3
+[2026-02-11 05:18:59] INFO - Applying Z-Score normalization...
+[2026-02-11 05:18:59] INFO - Z-Score normalization applied (fit on train, transform all)
+[2026-02-11 05:18:59] INFO - Applying target (y) normalization...
+[2026-02-11 05:18:59] INFO - Target normalization: mean=13643.1032, std=12499.0173
+[2026-02-11 05:18:59] INFO - 
+--- XGBoost Grid Search ---
+[2026-02-11 05:18:59] INFO - Parameter combinations: 108
+[2026-02-11 05:18:59] INFO - Starting GridSearchCV for xgboost
+[2026-02-11 05:18:59] INFO - Total parameter combinations: 108
+[2026-02-11 05:18:59] INFO - CV folds: 5
+[2026-02-11 05:19:01] INFO - [10/108] CV RMSE: 0.9511 (+/- 0.0393)
+[2026-02-11 05:19:02] INFO - [20/108] CV RMSE: 0.9672 (+/- 0.0403)
+[2026-02-11 05:19:03] INFO - [30/108] CV RMSE: 0.9633 (+/- 0.0429)
+[2026-02-11 05:19:05] INFO - [40/108] CV RMSE: 0.9523 (+/- 0.0396)
+[2026-02-11 05:19:06] INFO - [50/108] CV RMSE: 0.9544 (+/- 0.0392)
+[2026-02-11 05:19:08] INFO - [60/108] CV RMSE: 0.9779 (+/- 0.0389)
+[2026-02-11 05:19:10] INFO - [70/108] CV RMSE: 0.9986 (+/- 0.0382)
+[2026-02-11 05:19:11] INFO - [80/108] CV RMSE: 0.9576 (+/- 0.0407)
+[2026-02-11 05:19:12] INFO - [90/108] CV RMSE: 0.9780 (+/- 0.0428)
+[2026-02-11 05:19:13] INFO - [100/108] CV RMSE: 0.9766 (+/- 0.0330)
+[2026-02-11 05:19:15] INFO - Best CV RMSE: 0.9481
+[2026-02-11 05:19:15] INFO - Best params: {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 20, 'subsample': 0.7, 'colsample_bytree': 1.0, 'max_bin': 64, 'min_child_weight': 10, 'reg_lambda': 0.0, 'random_state': 42}
+[2026-02-11 05:19:15] INFO - Best params: {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 20, 'subsample': 0.7, 'colsample_bytree': 1.0, 'max_bin': 64, 'min_child_weight': 10, 'reg_lambda': 0.0, 'random_state': 42}
+[2026-02-11 05:19:15] INFO - Best CV RMSE: 0.9481
+[2026-02-11 05:19:15] INFO - Test RMSE: 0.8018
+[2026-02-11 05:19:15] INFO - Test MAE: 0.6651
+[2026-02-11 05:19:15] INFO - Test R²: 0.0446
+[2026-02-11 05:19:15] INFO - Total time: 15.8s
+[2026-02-11 05:19:15] INFO - 
+--- MetaGB Grid Search ---
+[2026-02-11 05:19:15] INFO - Parameter combinations: 324
+[2026-02-11 05:19:15] INFO - Starting GridSearchCV for metagb
+[2026-02-11 05:19:15] INFO - Total parameter combinations: 324
+[2026-02-11 05:19:15] INFO - CV folds: 5
+[2026-02-11 05:19:16] INFO - [10/324] CV RMSE: 0.9802 (+/- 0.0429)
+[2026-02-11 05:19:16] INFO - [20/324] CV RMSE: 0.9641 (+/- 0.0406)
+[2026-02-11 05:19:17] INFO - [30/324] CV RMSE: 0.9523 (+/- 0.0392)
+[2026-02-11 05:19:18] INFO - [40/324] CV RMSE: 0.9803 (+/- 0.0425)
+[2026-02-11 05:19:19] INFO - [50/324] CV RMSE: 0.9646 (+/- 0.0415)
+[2026-02-11 05:19:21] INFO - [60/324] CV RMSE: 0.9671 (+/- 0.0442)
+[2026-02-11 05:19:24] INFO - [70/324] CV RMSE: 0.9606 (+/- 0.0438)
+[2026-02-11 05:19:26] INFO - [80/324] CV RMSE: 0.9817 (+/- 0.0487)
+[2026-02-11 05:19:28] INFO - [90/324] CV RMSE: 0.9689 (+/- 0.0402)
+[2026-02-11 05:19:34] INFO - [100/324] CV RMSE: 0.9696 (+/- 0.0386)
+[2026-02-11 05:19:41] INFO - [110/324] CV RMSE: 0.9522 (+/- 0.0389)
+[2026-02-11 05:19:41] INFO - [120/324] CV RMSE: 0.9545 (+/- 0.0406)
+[2026-02-11 05:19:42] INFO - [130/324] CV RMSE: 0.9533 (+/- 0.0419)
+[2026-02-11 05:19:43] INFO - [140/324] CV RMSE: 0.9610 (+/- 0.0478)
+[2026-02-11 05:19:44] INFO - [150/324] CV RMSE: 0.9625 (+/- 0.0473)
+[2026-02-11 05:19:45] INFO - [160/324] CV RMSE: 0.9751 (+/- 0.0509)
+[2026-02-11 05:19:46] INFO - [170/324] CV RMSE: 0.9891 (+/- 0.0582)
+[2026-02-11 05:19:49] INFO - [180/324] CV RMSE: 1.0152 (+/- 0.0520)
+[2026-02-11 05:19:51] INFO - [190/324] CV RMSE: 1.0010 (+/- 0.0471)
+[2026-02-11 05:19:54] INFO - [200/324] CV RMSE: 1.0526 (+/- 0.0511)
+[2026-02-11 05:19:59] INFO - [210/324] CV RMSE: 1.0906 (+/- 0.0579)
+[2026-02-11 05:20:04] INFO - [220/324] CV RMSE: 0.9520 (+/- 0.0385)
+[2026-02-11 05:20:04] INFO - [230/324] CV RMSE: 0.9599 (+/- 0.0433)
+[2026-02-11 05:20:05] INFO - [240/324] CV RMSE: 0.9672 (+/- 0.0417)
+[2026-02-11 05:20:06] INFO - [250/324] CV RMSE: 0.9906 (+/- 0.0504)
+[2026-02-11 05:20:07] INFO - [260/324] CV RMSE: 0.9695 (+/- 0.0475)
+[2026-02-11 05:20:08] INFO - [270/324] CV RMSE: 1.0025 (+/- 0.0613)
+[2026-02-11 05:20:10] INFO - [280/324] CV RMSE: 1.0545 (+/- 0.0658)
+[2026-02-11 05:20:12] INFO - [290/324] CV RMSE: 1.0109 (+/- 0.0501)
+[2026-02-11 05:20:14] INFO - [300/324] CV RMSE: 1.0639 (+/- 0.0477)
+[2026-02-11 05:20:17] INFO - [310/324] CV RMSE: 1.1227 (+/- 0.0875)
+[2026-02-11 05:20:23] INFO - [320/324] CV RMSE: 1.1403 (+/- 0.0620)
+[2026-02-11 05:20:26] INFO - Best CV RMSE: 0.9464
+[2026-02-11 05:20:26] INFO - Best params: {'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 50, 'subsample': 0.7, 'pred_feature_fraction': 0.4, 'version': 3, 'max_bin': 64, 'min_data_in_leaf': 10, 'colsample_bytree': 0.7, 'random_state': 42}
+[2026-02-11 05:20:26] INFO - Best params: {'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 50, 'subsample': 0.7, 'pred_feature_fraction': 0.4, 'version': 3, 'max_bin': 64, 'min_data_in_leaf': 10, 'colsample_bytree': 0.7, 'random_state': 42}
+[2026-02-11 05:20:26] INFO - Best CV RMSE: 0.9464
+[2026-02-11 05:20:26] INFO - Test RMSE: 0.7971
+[2026-02-11 05:20:26] INFO - Test MAE: 0.6592
+[2026-02-11 05:20:26] INFO - Test R²: 0.0558
+[2026-02-11 05:20:26] INFO - Total time: 70.7s
+[2026-02-11 05:20:26] INFO - 
+================================================================================
+[2026-02-11 05:20:26] INFO - Processing dataset: QSAR_fish_toxicity
+[2026-02-11 05:20:26] INFO - ================================================================================
+[2026-02-11 05:20:26] INFO - Train samples: 725, Test samples: 182
+[2026-02-11 05:20:26] INFO - Features: 6
+[2026-02-11 05:20:26] INFO - Applying Z-Score normalization...
+[2026-02-11 05:20:26] INFO - Z-Score normalization applied (fit on train, transform all)
+[2026-02-11 05:20:26] INFO - Applying target (y) normalization...
+[2026-02-11 05:20:26] INFO - Target normalization: mean=4.0768, std=1.4218
+[2026-02-11 05:20:26] INFO - 
+--- XGBoost Grid Search ---
+[2026-02-11 05:20:26] INFO - Parameter combinations: 108
+[2026-02-11 05:20:26] INFO - Starting GridSearchCV for xgboost
+[2026-02-11 05:20:26] INFO - Total parameter combinations: 108
+[2026-02-11 05:20:26] INFO - CV folds: 5
+[2026-02-11 05:20:27] INFO - [10/108] CV RMSE: 0.7388 (+/- 0.0367)
+[2026-02-11 05:20:28] INFO - [20/108] CV RMSE: 0.8045 (+/- 0.0254)
+[2026-02-11 05:20:30] INFO - [30/108] CV RMSE: 0.8007 (+/- 0.0288)
+[2026-02-11 05:20:32] INFO - [40/108] CV RMSE: 0.7393 (+/- 0.0338)
+[2026-02-11 05:20:33] INFO - [50/108] CV RMSE: 0.7107 (+/- 0.0392)
+[2026-02-11 05:20:35] INFO - [60/108] CV RMSE: 0.6319 (+/- 0.0609)
+[2026-02-11 05:20:36] INFO - [70/108] CV RMSE: 0.6312 (+/- 0.0566)
+[2026-02-11 05:20:38] INFO - [80/108] CV RMSE: 0.6353 (+/- 0.0566)
+[2026-02-11 05:20:39] INFO - [90/108] CV RMSE: 0.6347 (+/- 0.0557)
+[2026-02-11 05:20:40] INFO - [100/108] CV RMSE: 0.6568 (+/- 0.0593)
+[2026-02-11 05:20:42] INFO - Best CV RMSE: 0.6214
+[2026-02-11 05:20:42] INFO - Best params: {'learning_rate': 0.05, 'max_depth': 5, 'n_estimators': 100, 'subsample': 0.7, 'colsample_bytree': 0.7, 'max_bin': 64, 'min_child_weight': 10, 'reg_lambda': 0.0, 'random_state': 42}
+[2026-02-11 05:20:42] INFO - Best params: {'learning_rate': 0.05, 'max_depth': 5, 'n_estimators': 100, 'subsample': 0.7, 'colsample_bytree': 0.7, 'max_bin': 64, 'min_child_weight': 10, 'reg_lambda': 0.0, 'random_state': 42}
+[2026-02-11 05:20:42] INFO - Best CV RMSE: 0.6214
+[2026-02-11 05:20:42] INFO - Test RMSE: 0.6490
+[2026-02-11 05:20:42] INFO - Test MAE: 0.4806
+[2026-02-11 05:20:42] INFO - Test R²: 0.6601
+[2026-02-11 05:20:42] INFO - Total time: 16.1s
+[2026-02-11 05:20:42] INFO - 
+--- MetaGB Grid Search ---
+[2026-02-11 05:20:42] INFO - Parameter combinations: 324
+[2026-02-11 05:20:42] INFO - Starting GridSearchCV for metagb
+[2026-02-11 05:20:42] INFO - Total parameter combinations: 324
+[2026-02-11 05:20:42] INFO - CV folds: 5
+[2026-02-11 05:20:42] INFO - [10/324] CV RMSE: 0.9234 (+/- 0.0086)
+[2026-02-11 05:20:43] INFO - [20/324] CV RMSE: 0.8287 (+/- 0.0195)
+[2026-02-11 05:20:44] INFO - [30/324] CV RMSE: 0.7448 (+/- 0.0398)
+[2026-02-11 05:20:46] INFO - [40/324] CV RMSE: 0.9057 (+/- 0.0095)
+[2026-02-11 05:20:46] INFO - [50/324] CV RMSE: 0.7973 (+/- 0.0241)
+[2026-02-11 05:20:48] INFO - [60/324] CV RMSE: 0.8124 (+/- 0.0259)
+[2026-02-11 05:20:51] INFO - [70/324] CV RMSE: 0.7104 (+/- 0.0372)
+[2026-02-11 05:20:53] INFO - [80/324] CV RMSE: 0.8936 (+/- 0.0153)
+[2026-02-11 05:20:56] INFO - [90/324] CV RMSE: 0.7892 (+/- 0.0240)
+[2026-02-11 05:21:01] INFO - [100/324] CV RMSE: 0.6864 (+/- 0.0453)
+[2026-02-11 05:21:09] INFO - [110/324] CV RMSE: 0.7344 (+/- 0.0363)
+[2026-02-11 05:21:09] INFO - [120/324] CV RMSE: 0.7468 (+/- 0.0366)
+[2026-02-11 05:21:10] INFO - [130/324] CV RMSE: 0.6541 (+/- 0.0558)
+[2026-02-11 05:21:11] INFO - [140/324] CV RMSE: 0.6350 (+/- 0.0530)
+[2026-02-11 05:21:12] INFO - [150/324] CV RMSE: 0.7077 (+/- 0.0392)
+[2026-02-11 05:21:13] INFO - [160/324] CV RMSE: 0.6355 (+/- 0.0431)
+[2026-02-11 05:21:15] INFO - [170/324] CV RMSE: 0.6354 (+/- 0.0549)
+[2026-02-11 05:21:18] INFO - [180/324] CV RMSE: 0.6331 (+/- 0.0443)
+[2026-02-11 05:21:20] INFO - [190/324] CV RMSE: 0.7205 (+/- 0.0716)
+[2026-02-11 05:21:23] INFO - [200/324] CV RMSE: 0.6799 (+/- 0.0486)
+[2026-02-11 05:21:29] INFO - [210/324] CV RMSE: 0.6370 (+/- 0.0340)
+[2026-02-11 05:21:34] INFO - [220/324] CV RMSE: 0.6726 (+/- 0.0490)
+[2026-02-11 05:21:35] INFO - [230/324] CV RMSE: 0.6363 (+/- 0.0568)
+[2026-02-11 05:21:35] INFO - [240/324] CV RMSE: 0.6526 (+/- 0.0418)
+[2026-02-11 05:21:37] INFO - [250/324] CV RMSE: 0.6282 (+/- 0.0488)
+[2026-02-11 05:21:38] INFO - [260/324] CV RMSE: 0.6463 (+/- 0.0449)
+[2026-02-11 05:21:39] INFO - [270/324] CV RMSE: 0.6320 (+/- 0.0286)
+[2026-02-11 05:21:41] INFO - [280/324] CV RMSE: 0.6474 (+/- 0.0326)
+[2026-02-11 05:21:43] INFO - [290/324] CV RMSE: 0.6463 (+/- 0.0571)
+[2026-02-11 05:21:45] INFO - [300/324] CV RMSE: 0.6793 (+/- 0.0580)
+[2026-02-11 05:21:48] INFO - [310/324] CV RMSE: 0.6758 (+/- 0.0513)
+[2026-02-11 05:21:54] INFO - [320/324] CV RMSE: 0.6899 (+/- 0.0446)
+[2026-02-11 05:21:58] INFO - Best CV RMSE: 0.6151
+[2026-02-11 05:21:58] INFO - Best params: {'learning_rate': 0.05, 'max_depth': 5, 'n_estimators': 100, 'subsample': 1.0, 'pred_feature_fraction': 0.4, 'version': 3, 'max_bin': 64, 'min_data_in_leaf': 10, 'colsample_bytree': 0.7, 'random_state': 42}
+[2026-02-11 05:21:58] INFO - Best params: {'learning_rate': 0.05, 'max_depth': 5, 'n_estimators': 100, 'subsample': 1.0, 'pred_feature_fraction': 0.4, 'version': 3, 'max_bin': 64, 'min_data_in_leaf': 10, 'colsample_bytree': 0.7, 'random_state': 42}
+[2026-02-11 05:21:58] INFO - Best CV RMSE: 0.6151
+[2026-02-11 05:21:58] INFO - Test RMSE: 0.6751
+[2026-02-11 05:21:58] INFO - Test MAE: 0.4911
+[2026-02-11 05:21:58] INFO - Test R²: 0.6322
+[2026-02-11 05:21:58] INFO - Total time: 76.0s
+[2026-02-11 05:21:58] INFO - 
+================================================================================
+[2026-02-11 05:21:58] INFO - Processing dataset: wine_quality
+[2026-02-11 05:21:58] INFO - ================================================================================
+[2026-02-11 05:21:58] INFO - Train samples: 5197, Test samples: 1300
+[2026-02-11 05:21:58] INFO - Features: 11
+[2026-02-11 05:21:58] INFO - Applying Z-Score normalization...
+[2026-02-11 05:21:58] INFO - Z-Score normalization applied (fit on train, transform all)
+[2026-02-11 05:21:58] INFO - Applying target (y) normalization...
+[2026-02-11 05:21:58] INFO - Target normalization: mean=5.8182, std=0.8752
+[2026-02-11 05:21:58] INFO - 
+--- XGBoost Grid Search ---
+[2026-02-11 05:21:58] INFO - Parameter combinations: 108
+[2026-02-11 05:21:58] INFO - Starting GridSearchCV for xgboost
+[2026-02-11 05:21:58] INFO - Total parameter combinations: 108
+[2026-02-11 05:21:58] INFO - CV folds: 5
+[2026-02-11 05:22:00] INFO - [10/108] CV RMSE: 0.8652 (+/- 0.0189)
+[2026-02-11 05:22:02] INFO - [20/108] CV RMSE: 0.8872 (+/- 0.0189)
+[2026-02-11 05:22:07] INFO - [30/108] CV RMSE: 0.8576 (+/- 0.0206)
+[2026-02-11 05:22:14] INFO - [40/108] CV RMSE: 0.8664 (+/- 0.0177)
+[2026-02-11 05:22:16] INFO - [50/108] CV RMSE: 0.8328 (+/- 0.0183)
+[2026-02-11 05:22:19] INFO - [60/108] CV RMSE: 0.7657 (+/- 0.0157)
+[2026-02-11 05:22:25] INFO - [70/108] CV RMSE: 0.7227 (+/- 0.0200)
+[2026-02-11 05:22:28] INFO - [80/108] CV RMSE: 0.7955 (+/- 0.0166)
+[2026-02-11 05:22:31] INFO - [90/108] CV RMSE: 0.7661 (+/- 0.0176)
+[2026-02-11 05:22:34] INFO - [100/108] CV RMSE: 0.7472 (+/- 0.0145)
+[2026-02-11 05:22:40] INFO - Best CV RMSE: 0.7179
+[2026-02-11 05:22:40] INFO - Best params: {'learning_rate': 0.1, 'max_depth': 10, 'n_estimators': 100, 'subsample': 1.0, 'colsample_bytree': 0.7, 'max_bin': 64, 'min_child_weight': 10, 'reg_lambda': 0.0, 'random_state': 42}
+[2026-02-11 05:22:40] INFO - Best params: {'learning_rate': 0.1, 'max_depth': 10, 'n_estimators': 100, 'subsample': 1.0, 'colsample_bytree': 0.7, 'max_bin': 64, 'min_child_weight': 10, 'reg_lambda': 0.0, 'random_state': 42}
+[2026-02-11 05:22:40] INFO - Best CV RMSE: 0.7179
+[2026-02-11 05:22:40] INFO - Test RMSE: 0.6935
+[2026-02-11 05:22:40] INFO - Test MAE: 0.4874
+[2026-02-11 05:22:40] INFO - Test R²: 0.5075
+[2026-02-11 05:22:40] INFO - Total time: 42.2s
+[2026-02-11 05:22:40] INFO - 
+--- MetaGB Grid Search ---
+[2026-02-11 05:22:40] INFO - Parameter combinations: 324
+[2026-02-11 05:22:40] INFO - Starting GridSearchCV for metagb
+[2026-02-11 05:22:40] INFO - Total parameter combinations: 324
+[2026-02-11 05:22:40] INFO - CV folds: 5
+[2026-02-11 05:22:43] INFO - [10/324] CV RMSE: 0.9593 (+/- 0.0200)
+[2026-02-11 05:22:48] INFO - [20/324] CV RMSE: 0.9092 (+/- 0.0200)
+[2026-02-11 05:22:58] INFO - [30/324] CV RMSE: 0.8671 (+/- 0.0202)
+[2026-02-11 05:23:08] INFO - [40/324] CV RMSE: 0.9495 (+/- 0.0196)
+[2026-02-11 05:23:15] INFO - [50/324] CV RMSE: 0.8864 (+/- 0.0189)
+[2026-02-11 05:23:29] INFO - [60/324] CV RMSE: 0.8951 (+/- 0.0201)
+[2026-02-11 05:23:53] INFO - [70/324] CV RMSE: 0.8392 (+/- 0.0186)
+[2026-02-11 05:24:17] INFO - [80/324] CV RMSE: 0.9252 (+/- 0.0215)
+[2026-02-11 05:25:01] INFO - [90/324] CV RMSE: 0.8552 (+/- 0.0207)
+[2026-02-11 05:26:13] INFO - [100/324] CV RMSE: 0.7761 (+/- 0.0188)
+[2026-02-11 05:28:01] INFO - [110/324] CV RMSE: 0.8649 (+/- 0.0184)
+[2026-02-11 05:28:05] INFO - [120/324] CV RMSE: 0.8676 (+/- 0.0213)
+[2026-02-11 05:28:10] INFO - [130/324] CV RMSE: 0.8140 (+/- 0.0169)
+[2026-02-11 05:28:21] INFO - [140/324] CV RMSE: 0.7957 (+/- 0.0167)
+[2026-02-11 05:28:30] INFO - [150/324] CV RMSE: 0.8395 (+/- 0.0172)
+[2026-02-11 05:28:37] INFO - [160/324] CV RMSE: 0.7876 (+/- 0.0266)
+[2026-02-11 05:28:52] INFO - [170/324] CV RMSE: 0.7606 (+/- 0.0177)
+[2026-02-11 05:29:19] INFO - [180/324] CV RMSE: 0.7591 (+/- 0.0185)
+[2026-02-11 05:29:39] INFO - [190/324] CV RMSE: 0.7803 (+/- 0.0189)
+[2026-02-11 05:30:23] INFO - [200/324] CV RMSE: 0.7320 (+/- 0.0224)
+[2026-02-11 05:31:48] INFO - [210/324] CV RMSE: 0.7321 (+/- 0.0170)
+[2026-02-11 05:33:00] INFO - [220/324] CV RMSE: 0.8240 (+/- 0.0173)
+[2026-02-11 05:33:04] INFO - [230/324] CV RMSE: 0.7966 (+/- 0.0178)
+[2026-02-11 05:33:11] INFO - [240/324] CV RMSE: 0.7869 (+/- 0.0196)
+[2026-02-11 05:33:22] INFO - [250/324] CV RMSE: 0.7802 (+/- 0.0184)
+[2026-02-11 05:33:30] INFO - [260/324] CV RMSE: 0.7927 (+/- 0.0176)
+[2026-02-11 05:33:40] INFO - [270/324] CV RMSE: 0.7725 (+/- 0.0194)
+[2026-02-11 05:33:56] INFO - [280/324] CV RMSE: 0.7564 (+/- 0.0133)
+[2026-02-11 05:34:21] INFO - [290/324] CV RMSE: 0.7448 (+/- 0.0183)
+[2026-02-11 05:34:46] INFO - [300/324] CV RMSE: 0.7560 (+/- 0.0266)
+[2026-02-11 05:35:30] INFO - [310/324] CV RMSE: 0.7211 (+/- 0.0171)
+[2026-02-11 05:36:46] INFO - [320/324] CV RMSE: 0.7211 (+/- 0.0251)
+[2026-02-11 05:37:37] INFO - Best CV RMSE: 0.7073
+[2026-02-11 05:37:37] INFO - Best params: {'learning_rate': 0.05, 'max_depth': 10, 'n_estimators': 100, 'subsample': 1.0, 'pred_feature_fraction': 0.0, 'version': 3, 'max_bin': 64, 'min_data_in_leaf': 10, 'colsample_bytree': 0.7, 'random_state': 42}
+[2026-02-11 05:37:39] INFO - Best params: {'learning_rate': 0.05, 'max_depth': 10, 'n_estimators': 100, 'subsample': 1.0, 'pred_feature_fraction': 0.0, 'version': 3, 'max_bin': 64, 'min_data_in_leaf': 10, 'colsample_bytree': 0.7, 'random_state': 42}
+[2026-02-11 05:37:39] INFO - Best CV RMSE: 0.7073
+[2026-02-11 05:37:39] INFO - Test RMSE: 0.6921
+[2026-02-11 05:37:39] INFO - Test MAE: 0.4884
+[2026-02-11 05:37:39] INFO - Test R²: 0.5095
+[2026-02-11 05:37:39] INFO - Total time: 898.7s
+[2026-02-11 05:37:39] INFO - 
+Summary saved to: /home/admin/MyProject/d_MetaGB_ExperimentV3_clean/Exp_New_Normalization/results/exp1/exp1_summary.csv
+[2026-02-11 05:37:39] INFO - 
+================================================================================
+[2026-02-11 05:37:39] INFO - EXPERIMENT 1 SUMMARY
+[2026-02-11 05:37:39] INFO - ================================================================================
+[2026-02-11 05:37:39] INFO - 
+--- Aggregate Statistics ---
+[2026-02-11 05:37:39] INFO - 
+XGBoost:
+[2026-02-11 05:37:39] INFO -   Avg Test RMSE: 0.5126
+[2026-02-11 05:37:39] INFO -   Avg Test MAE: 0.3844
+[2026-02-11 05:37:39] INFO -   Avg Test R²: 0.6549
+[2026-02-11 05:37:39] INFO -   Avg Train Time: 21.3s
+[2026-02-11 05:37:39] INFO - 
+MetaGB:
+[2026-02-11 05:37:39] INFO -   Avg Test RMSE: 0.5049
+[2026-02-11 05:37:39] INFO -   Avg Test MAE: 0.3779
+[2026-02-11 05:37:39] INFO -   Avg Test R²: 0.6579
+[2026-02-11 05:37:39] INFO -   Avg Train Time: 232.9s
+[2026-02-11 05:37:39] INFO - 
+Experiment 1 completed!
