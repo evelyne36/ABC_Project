@@ -1,0 +1,25 @@
+{
+  "dataset": "Food_Delivery_Time",
+  "model": "xgboost",
+  "inner_k": 4,
+  "best_params": {
+    "learning_rate": 0.05,
+    "max_depth": 4,
+    "n_estimators": 600,
+    "max_bin": 255,
+    "subsample": 0.8,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 1.0,
+    "min_child_weight": 10
+  },
+  "cv_rmse": 7.543091586745552,
+  "summary": {
+    "Dataset": "Food_Delivery_Time",
+    "Model": "XGBOOST",
+    "Inner_K": 4,
+    "Test_RMSE": 7.523119268210017,
+    "Test_MAE": 5.894885437885352,
+    "Test_R2": 0.3448670693463787,
+    "Train_Time": 372.98885583877563
+  }
+}

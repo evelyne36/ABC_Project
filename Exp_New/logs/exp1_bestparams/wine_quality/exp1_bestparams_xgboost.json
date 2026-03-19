@@ -1,0 +1,25 @@
+{
+  "dataset": "wine_quality",
+  "model": "xgboost",
+  "inner_k": 4,
+  "best_params": {
+    "learning_rate": 0.05,
+    "max_depth": 8,
+    "n_estimators": 600,
+    "max_bin": 255,
+    "subsample": 0.9,
+    "colsample_bytree": 0.7,
+    "reg_lambda": 0.0,
+    "min_child_weight": 10
+  },
+  "cv_rmse": 0.6248093939788308,
+  "summary": {
+    "Dataset": "wine_quality",
+    "Model": "XGBOOST",
+    "Inner_K": 4,
+    "Test_RMSE": 0.5996215837731806,
+    "Test_MAE": 0.41305076085604153,
+    "Test_R2": 0.5193824018524045,
+    "Train_Time": 176.297785282135
+  }
+}

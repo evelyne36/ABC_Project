@@ -1,0 +1,177 @@
+本组实验，是在参数设置如下的情况下，进行的11个数据集的超参遍历实验，即选择每个数据集的CV_Best（4折），再Train+Val重训（80%数据）；
+exp1_bestparams-main-20260318_005639记录了本次实验的训练过程以及在末尾展示了CV_Best参数在重训后的效果，具体选择的参数组合请见每个数据集文件夹中的.log
+
+
+
+
+超参空间位于hyperparams.py，如下所示
+# =============================================================================
+# Experiment 1: Dataset-Specific Parameter Grids
+# =============================================================================
+##实际##
+# Shared parameters for all Exp1 datasets
+EXP1_SHARED_PARAMS_GRID = {
+    'learning_rate': [0.01,0.05, 0.1],
+    'max_depth': [3, 4, 6, 8],
+    'n_estimators': [200, 400, 600, 800],
+    'max_bin': [255],
+}
+min_child = [10] #[1,10]; metagb和xgboost的min_child_weight/min_data_in_leaf都固定为10，减少组合数量；
+
+# Dataset-specific parameters (only parameters that vary by dataset)
+DATASET_SPECIFIC_COMMON_GRIDS = {
+    'airfoil_self_noise': {
+        'subsample': [ 0.7, 0.8, 0.9, 1.0],
+        'colsample_bytree': [ 0.7, 0.8, 0.9, 1.0],
+    },
+    'Another-Dataset-on-used-Fiat-500': {
+        'subsample': [0.7, 0.8, 0.9, 1.0],
+        'colsample_bytree': [0.7, 0.8, 0.9, 1.0],
+    },
+    'concrete_compressive_strength': {
+        'subsample': [0.7, 0.8, 0.9, 1.0],
+        'colsample_bytree': [0.7, 0.8, 0.9, 1.0],
+    },
+    'diamonds': {
+        'subsample': [0.7, 0.8, 0.9, 1.0],
+        'colsample_bytree': [0.7, 0.8, 0.9, 1.0],
+    },
+    'Food_Delivery_Time': {
+        'subsample': [0.7, 0.8, 0.9, 1.0],
+        'colsample_bytree': [0.7, 0.8, 0.9, 1.0],
+    },
+    'healthcare_insurance_expenses': {
+        'subsample': [0.7, 0.8, 0.9, 1.0],
+        'colsample_bytree': [0.7, 0.8, 0.9, 1.0],
+    },
+    'houses': {
+        'subsample': [0.7, 0.8, 0.9, 1.0],
+        'colsample_bytree': [0.7, 0.8, 0.9, 1.0],
+    },
+    'miami_housing': {
+        'subsample': [0.7, 0.8, 0.9, 1.0],
+        'colsample_bytree': [0.7, 0.8, 0.9, 1.0],
+    },
+    'physiochemical_protein': {
+        'subsample': [0.7, 0.8, 0.9, 1.0],
+        'colsample_bytree': [0.7, 0.8, 0.9, 1.0],
+    },
+    'QSAR_fish_toxicity': {
+        'subsample': [0.7, 0.8, 0.9, 1.0],
+        'colsample_bytree': [0.7, 0.8, 0.9, 1.0],
+    },
+    'wine_quality': {
+        'subsample': [0.7, 0.8, 0.9, 1.0],
+        'colsample_bytree': [0.7, 0.8, 0.9, 1.0],
+    },
+}
+
+
+# XGBoost-specific parameters (only parameters unique to XGBoost)
+
+DATASET_SPECIFIC_XGBOOST_GRIDS = {
+    'airfoil_self_noise': {
+        'reg_lambda': [0.0, 1.0],
+        'min_child_weight': min_child,
+        
+    },
+    'Another-Dataset-on-used-Fiat-500': {
+        'reg_lambda': [0.0, 1.0],
+        'min_child_weight': min_child,
+    },
+    'concrete_compressive_strength': {
+        'reg_lambda': [0.0, 1.0],
+        'min_child_weight': min_child,
+    },
+    'diamonds': {
+        'reg_lambda': [0.0, 1.0],
+        'min_child_weight': min_child,
+    },
+    'Food_Delivery_Time': {
+        'reg_lambda': [0.0, 1.0],
+        'min_child_weight': min_child,
+    },
+    'healthcare_insurance_expenses': {
+        'reg_lambda': [0.0, 1.0],
+        'min_child_weight': min_child,
+    },
+    'houses': {
+        'reg_lambda': [0.0, 1.0],
+        'min_child_weight': min_child,
+    },
+    'miami_housing': {
+        'reg_lambda': [0.0, 1.0],
+        'min_child_weight': min_child,
+    },
+    'physiochemical_protein': {
+        'reg_lambda': [0.0, 1.0],
+        'min_child_weight': min_child,
+    },
+    'QSAR_fish_toxicity': {
+        'reg_lambda': [0.0, 1.0],
+        'min_child_weight': min_child,
+    },
+    'wine_quality': {
+        'reg_lambda': [0.0, 1.0],
+        'min_child_weight': min_child,
+    },
+}
+
+# MetaGB-specific parameters (only parameters unique to MetaGB)
+DATASET_SPECIFIC_METAGB_GRIDS = {
+    'airfoil_self_noise': {
+        'version': [3],
+        'pred_feature_fraction': [0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+        'min_data_in_leaf': min_child,
+    },
+    'Another-Dataset-on-used-Fiat-500': {
+        'version': [3],
+        'pred_feature_fraction': [0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+        'min_data_in_leaf': min_child,
+    },
+    'concrete_compressive_strength': {
+        'version': [3],
+        'pred_feature_fraction': [0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+        'min_data_in_leaf': min_child,
+    },
+    'diamonds': {
+        'version': [3],
+        'pred_feature_fraction': [0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+        'min_data_in_leaf': min_child,
+    },
+    'Food_Delivery_Time': {
+        'version': [3],
+        'pred_feature_fraction': [0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+        'min_data_in_leaf': min_child,
+    },
+    'healthcare_insurance_expenses': {
+        'version': [3],
+        'pred_feature_fraction': [0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+        'min_data_in_leaf': min_child,
+    },
+    'houses': {
+        'version': [3],
+        'pred_feature_fraction': [0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+        'min_data_in_leaf': min_child,
+    },
+    'miami_housing': {
+        'version': [3],
+        'pred_feature_fraction': [0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+        'min_data_in_leaf': min_child,
+    },
+    'physiochemical_protein': {
+        'version': [3],
+        'pred_feature_fraction': [0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+        'min_data_in_leaf': min_child,
+    },
+    'QSAR_fish_toxicity': {
+        'version': [3],
+        'pred_feature_fraction': [0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+        'min_data_in_leaf': min_child,
+    },
+    'wine_quality': {
+        'version': [3],
+        'pred_feature_fraction': [0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+        'min_data_in_leaf': min_child,
+    },
+}
