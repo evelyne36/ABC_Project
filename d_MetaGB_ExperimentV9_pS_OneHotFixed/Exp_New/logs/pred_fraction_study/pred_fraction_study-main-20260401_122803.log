@@ -1,0 +1,176 @@
+[2026-04-01 12:28:03] INFO - ================================================================================
+[2026-04-01 12:28:03] INFO - Experiment: pred_feature_fraction Impact Study
+[2026-04-01 12:28:03] INFO - ================================================================================
+[2026-04-01 12:28:03] INFO - Fixed params (except n_estimators): {'learning_rate': [0.01, 0.1], 'max_depth': [4, 6, 8], 'subsample': [0.8, 1.0], 'colsample_bytree': [0.8, 1.0]}
+[2026-04-01 12:28:03] INFO - n_estimators search space: [200, 400, 600, 800]
+[2026-04-01 12:28:03] INFO - pred_feature_fraction values: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+[2026-04-01 12:28:03] INFO - 
+================================================================================
+[2026-04-01 12:28:03] INFO - Dataset: healthcare_insurance_expenses
+[2026-04-01 12:28:03] INFO - ================================================================================
+[2026-04-01 12:28:03] INFO - Total samples: 1338, Features: 8
+[2026-04-01 12:28:03] INFO - Train: 802, Val: 268, Test: 268
+[2026-04-01 12:28:03] INFO - Testing 24 hyperparameter combinations
+[2026-04-01 12:28:03] INFO - Each with 1 XGBoost + 11 MetaGB variants
+[2026-04-01 12:32:27] INFO - 
+Results saved to: /home/admin/MyProject5/d_MetaGB_ExperimentV9_pS_OneHotFixed/Exp_New/results/pred_fraction_study/healthcare_insurance_expenses_pred_fraction_study.csv
+[2026-04-01 12:32:27] INFO - Total experiments: 288
+[2026-04-01 12:32:27] INFO - 
+================================================================================
+[2026-04-01 12:32:27] INFO - Summary Statistics
+[2026-04-01 12:32:27] INFO - ================================================================================
+[2026-04-01 12:32:27] INFO - 
+XGBoost: Mean Test RMSE = 0.3621
+[2026-04-01 12:32:27] INFO - MetaGB (pred=0.0): Mean Test RMSE = 0.3616
+[2026-04-01 12:32:27] INFO - MetaGB (pred=0.1): Mean Test RMSE = 0.3587
+[2026-04-01 12:32:27] INFO - MetaGB (pred=0.2): Mean Test RMSE = 0.3605
+[2026-04-01 12:32:27] INFO - MetaGB (pred=0.3): Mean Test RMSE = 0.3586
+[2026-04-01 12:32:27] INFO - MetaGB (pred=0.4): Mean Test RMSE = 0.3600
+[2026-04-01 12:32:27] INFO - MetaGB (pred=0.5): Mean Test RMSE = 0.3591
+[2026-04-01 12:32:27] INFO - MetaGB (pred=0.6): Mean Test RMSE = 0.3608
+[2026-04-01 12:32:27] INFO - MetaGB (pred=0.7): Mean Test RMSE = 0.3604
+[2026-04-01 12:32:27] INFO - MetaGB (pred=0.8): Mean Test RMSE = 0.3611
+[2026-04-01 12:32:27] INFO - MetaGB (pred=0.9): Mean Test RMSE = 0.3609
+[2026-04-01 12:32:27] INFO - MetaGB (pred=1.0): Mean Test RMSE = 0.3630
+[2026-04-01 12:32:27] INFO - 
+================================================================================
+[2026-04-01 12:32:27] INFO - Dataset: houses
+[2026-04-01 12:32:27] INFO - ================================================================================
+[2026-04-01 12:32:27] INFO - Total samples: 20640, Features: 8
+[2026-04-01 12:32:27] INFO - Train: 12384, Val: 4128, Test: 4128
+[2026-04-01 12:32:27] INFO - Testing 24 hyperparameter combinations
+[2026-04-01 12:32:27] INFO - Each with 1 XGBoost + 11 MetaGB variants
+[2026-04-01 13:14:01] INFO - 
+Results saved to: /home/admin/MyProject5/d_MetaGB_ExperimentV9_pS_OneHotFixed/Exp_New/results/pred_fraction_study/houses_pred_fraction_study.csv
+[2026-04-01 13:14:01] INFO - Total experiments: 288
+[2026-04-01 13:14:01] INFO - 
+================================================================================
+[2026-04-01 13:14:01] INFO - Summary Statistics
+[2026-04-01 13:14:01] INFO - ================================================================================
+[2026-04-01 13:14:01] INFO - 
+XGBoost: Mean Test RMSE = 0.2222
+[2026-04-01 13:14:01] INFO - MetaGB (pred=0.0): Mean Test RMSE = 0.2218
+[2026-04-01 13:14:01] INFO - MetaGB (pred=0.1): Mean Test RMSE = 0.2314
+[2026-04-01 13:14:01] INFO - MetaGB (pred=0.2): Mean Test RMSE = 0.2486
+[2026-04-01 13:14:01] INFO - MetaGB (pred=0.3): Mean Test RMSE = 0.2507
+[2026-04-01 13:14:01] INFO - MetaGB (pred=0.4): Mean Test RMSE = 0.2696
+[2026-04-01 13:14:01] INFO - MetaGB (pred=0.5): Mean Test RMSE = 0.2685
+[2026-04-01 13:14:01] INFO - MetaGB (pred=0.6): Mean Test RMSE = 0.2746
+[2026-04-01 13:14:01] INFO - MetaGB (pred=0.7): Mean Test RMSE = 0.2564
+[2026-04-01 13:14:01] INFO - MetaGB (pred=0.8): Mean Test RMSE = 0.2582
+[2026-04-01 13:14:01] INFO - MetaGB (pred=0.9): Mean Test RMSE = 0.2599
+[2026-04-01 13:14:01] INFO - MetaGB (pred=1.0): Mean Test RMSE = 0.2624
+[2026-04-01 13:14:01] INFO - 
+================================================================================
+[2026-04-01 13:14:01] INFO - Dataset: miami_housing
+[2026-04-01 13:14:01] INFO - ================================================================================
+[2026-04-01 13:14:01] INFO - Total samples: 13776, Features: 15
+[2026-04-01 13:14:01] INFO - Train: 8265, Val: 2755, Test: 2756
+[2026-04-01 13:14:01] INFO - Testing 24 hyperparameter combinations
+[2026-04-01 13:14:01] INFO - Each with 1 XGBoost + 11 MetaGB variants
+[2026-04-01 14:22:43] INFO - 
+Results saved to: /home/admin/MyProject5/d_MetaGB_ExperimentV9_pS_OneHotFixed/Exp_New/results/pred_fraction_study/miami_housing_pred_fraction_study.csv
+[2026-04-01 14:22:43] INFO - Total experiments: 288
+[2026-04-01 14:22:43] INFO - 
+================================================================================
+[2026-04-01 14:22:43] INFO - Summary Statistics
+[2026-04-01 14:22:43] INFO - ================================================================================
+[2026-04-01 14:22:43] INFO - 
+XGBoost: Mean Test RMSE = 89148.9799
+[2026-04-01 14:22:43] INFO - MetaGB (pred=0.0): Mean Test RMSE = 91178.7519
+[2026-04-01 14:22:43] INFO - MetaGB (pred=0.1): Mean Test RMSE = 140333.3740
+[2026-04-01 14:22:43] INFO - MetaGB (pred=0.2): Mean Test RMSE = 101400.7151
+[2026-04-01 14:22:43] INFO - MetaGB (pred=0.3): Mean Test RMSE = 107938.8363
+[2026-04-01 14:22:43] INFO - MetaGB (pred=0.4): Mean Test RMSE = 135222.9745
+[2026-04-01 14:22:43] INFO - MetaGB (pred=0.5): Mean Test RMSE = 99686.6442
+[2026-04-01 14:22:43] INFO - MetaGB (pred=0.6): Mean Test RMSE = 103763.6699
+[2026-04-01 14:22:43] INFO - MetaGB (pred=0.7): Mean Test RMSE = 106575.5892
+[2026-04-01 14:22:43] INFO - MetaGB (pred=0.8): Mean Test RMSE = 143436.6372
+[2026-04-01 14:22:43] INFO - MetaGB (pred=0.9): Mean Test RMSE = 110811.3195
+[2026-04-01 14:22:43] INFO - MetaGB (pred=1.0): Mean Test RMSE = 112100.1320
+[2026-04-01 14:22:43] INFO - 
+================================================================================
+[2026-04-01 14:22:43] INFO - Dataset: physiochemical_protein
+[2026-04-01 14:22:43] INFO - ================================================================================
+[2026-04-01 14:22:43] INFO - Total samples: 45730, Features: 9
+[2026-04-01 14:22:43] INFO - Train: 27438, Val: 9146, Test: 9146
+[2026-04-01 14:22:43] INFO - Testing 24 hyperparameter combinations
+[2026-04-01 14:22:43] INFO - Each with 1 XGBoost + 11 MetaGB variants
+[2026-04-01 15:56:26] INFO - 
+Results saved to: /home/admin/MyProject5/d_MetaGB_ExperimentV9_pS_OneHotFixed/Exp_New/results/pred_fraction_study/physiochemical_protein_pred_fraction_study.csv
+[2026-04-01 15:56:26] INFO - Total experiments: 288
+[2026-04-01 15:56:26] INFO - 
+================================================================================
+[2026-04-01 15:56:26] INFO - Summary Statistics
+[2026-04-01 15:56:26] INFO - ================================================================================
+[2026-04-01 15:56:26] INFO - 
+XGBoost: Mean Test RMSE = 3.9523
+[2026-04-01 15:56:26] INFO - MetaGB (pred=0.0): Mean Test RMSE = 3.9473
+[2026-04-01 15:56:26] INFO - MetaGB (pred=0.1): Mean Test RMSE = 3.9342
+[2026-04-01 15:56:26] INFO - MetaGB (pred=0.2): Mean Test RMSE = 3.9254
+[2026-04-01 15:56:26] INFO - MetaGB (pred=0.3): Mean Test RMSE = 3.9216
+[2026-04-01 15:56:26] INFO - MetaGB (pred=0.4): Mean Test RMSE = 3.9225
+[2026-04-01 15:56:26] INFO - MetaGB (pred=0.5): Mean Test RMSE = 3.9172
+[2026-04-01 15:56:26] INFO - MetaGB (pred=0.6): Mean Test RMSE = 3.9188
+[2026-04-01 15:56:26] INFO - MetaGB (pred=0.7): Mean Test RMSE = 3.9169
+[2026-04-01 15:56:26] INFO - MetaGB (pred=0.8): Mean Test RMSE = 3.9202
+[2026-04-01 15:56:26] INFO - MetaGB (pred=0.9): Mean Test RMSE = 3.9192
+[2026-04-01 15:56:26] INFO - MetaGB (pred=1.0): Mean Test RMSE = 3.9260
+[2026-04-01 15:56:26] INFO - 
+================================================================================
+[2026-04-01 15:56:26] INFO - Dataset: QSAR_fish_toxicity
+[2026-04-01 15:56:26] INFO - ================================================================================
+[2026-04-01 15:56:26] INFO - Total samples: 907, Features: 6
+[2026-04-01 15:56:26] INFO - Train: 543, Val: 182, Test: 182
+[2026-04-01 15:56:26] INFO - Testing 24 hyperparameter combinations
+[2026-04-01 15:56:26] INFO - Each with 1 XGBoost + 11 MetaGB variants
+[2026-04-01 15:59:14] INFO - 
+Results saved to: /home/admin/MyProject5/d_MetaGB_ExperimentV9_pS_OneHotFixed/Exp_New/results/pred_fraction_study/QSAR_fish_toxicity_pred_fraction_study.csv
+[2026-04-01 15:59:14] INFO - Total experiments: 288
+[2026-04-01 15:59:14] INFO - 
+================================================================================
+[2026-04-01 15:59:14] INFO - Summary Statistics
+[2026-04-01 15:59:14] INFO - ================================================================================
+[2026-04-01 15:59:14] INFO - 
+XGBoost: Mean Test RMSE = 0.9492
+[2026-04-01 15:59:14] INFO - MetaGB (pred=0.0): Mean Test RMSE = 0.9754
+[2026-04-01 15:59:14] INFO - MetaGB (pred=0.1): Mean Test RMSE = 0.9577
+[2026-04-01 15:59:14] INFO - MetaGB (pred=0.2): Mean Test RMSE = 0.9542
+[2026-04-01 15:59:14] INFO - MetaGB (pred=0.3): Mean Test RMSE = 0.9500
+[2026-04-01 15:59:14] INFO - MetaGB (pred=0.4): Mean Test RMSE = 0.9441
+[2026-04-01 15:59:14] INFO - MetaGB (pred=0.5): Mean Test RMSE = 0.9393
+[2026-04-01 15:59:14] INFO - MetaGB (pred=0.6): Mean Test RMSE = 0.9393
+[2026-04-01 15:59:14] INFO - MetaGB (pred=0.7): Mean Test RMSE = 0.9339
+[2026-04-01 15:59:14] INFO - MetaGB (pred=0.8): Mean Test RMSE = 0.9532
+[2026-04-01 15:59:14] INFO - MetaGB (pred=0.9): Mean Test RMSE = 0.9782
+[2026-04-01 15:59:14] INFO - MetaGB (pred=1.0): Mean Test RMSE = 0.9932
+[2026-04-01 15:59:14] INFO - 
+================================================================================
+[2026-04-01 15:59:14] INFO - Dataset: wine_quality
+[2026-04-01 15:59:14] INFO - ================================================================================
+[2026-04-01 15:59:14] INFO - Total samples: 6497, Features: 12
+[2026-04-01 15:59:14] INFO - Train: 3897, Val: 1300, Test: 1300
+[2026-04-01 15:59:14] INFO - Testing 24 hyperparameter combinations
+[2026-04-01 15:59:14] INFO - Each with 1 XGBoost + 11 MetaGB variants
+[2026-04-01 16:25:10] INFO - 
+Results saved to: /home/admin/MyProject5/d_MetaGB_ExperimentV9_pS_OneHotFixed/Exp_New/results/pred_fraction_study/wine_quality_pred_fraction_study.csv
+[2026-04-01 16:25:10] INFO - Total experiments: 288
+[2026-04-01 16:25:10] INFO - 
+================================================================================
+[2026-04-01 16:25:10] INFO - Summary Statistics
+[2026-04-01 16:25:10] INFO - ================================================================================
+[2026-04-01 16:25:10] INFO - 
+XGBoost: Mean Test RMSE = 0.0772
+[2026-04-01 16:25:10] INFO - MetaGB (pred=0.0): Mean Test RMSE = 0.0800
+[2026-04-01 16:25:10] INFO - MetaGB (pred=0.1): Mean Test RMSE = 0.0750
+[2026-04-01 16:25:10] INFO - MetaGB (pred=0.2): Mean Test RMSE = 0.0736
+[2026-04-01 16:25:10] INFO - MetaGB (pred=0.3): Mean Test RMSE = 0.0739
+[2026-04-01 16:25:10] INFO - MetaGB (pred=0.4): Mean Test RMSE = 0.0739
+[2026-04-01 16:25:10] INFO - MetaGB (pred=0.5): Mean Test RMSE = 0.0758
+[2026-04-01 16:25:10] INFO - MetaGB (pred=0.6): Mean Test RMSE = 0.0774
+[2026-04-01 16:25:10] INFO - MetaGB (pred=0.7): Mean Test RMSE = 0.0788
+[2026-04-01 16:25:10] INFO - MetaGB (pred=0.8): Mean Test RMSE = 0.0802
+[2026-04-01 16:25:10] INFO - MetaGB (pred=0.9): Mean Test RMSE = 0.0830
+[2026-04-01 16:25:10] INFO - MetaGB (pred=1.0): Mean Test RMSE = 0.0855
+[2026-04-01 16:25:10] INFO - 
+Experiment completed!

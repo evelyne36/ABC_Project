@@ -1,0 +1,107 @@
+================================================================================
+Exp1 BestParams: XGBOOST - wine_quality - Fold 1/1
+================================================================================
+
+[2026-03-25 18:59:44] Configuration
+----------------------------------------
+Dataset: wine_quality
+Model: XGBOOST
+Outer Fold: 1/1
+Inner CV Folds: 4
+Train Samples: 5197
+Test Samples: 1300
+Features: 11
+Normalization: None
+
+[2026-03-25 18:59:44] Parameter Grid
+----------------------------------------
+  learning_rate: [0.01, 0.1]
+  max_depth: [3, 4, 6, 8]
+  n_estimators: [200, 400, 800]
+  max_bin: [255]
+  subsample: [0.7, 0.8, 0.9, 1.0]
+  colsample_bytree: [0.7, 0.8, 0.9, 1.0]
+  reg_lambda: [0.0, 1.0]
+  min_child_weight: [10]
+Total combinations: 768
+
+[2026-03-25 18:59:44] Best Parameters (Inner CV)
+----------------------------------------
+  learning_rate: 0.1
+  max_depth: 8
+  n_estimators: 400
+  max_bin: 255
+  subsample: 0.9
+  colsample_bytree: 0.7
+  reg_lambda: 1.0
+  min_child_weight: 10
+Best CV RMSE: 0.630228
+Avg Early Stop Rounds: 400
+
+[2026-03-25 18:59:44] Test Results (Outer Fold)
+----------------------------------------
+Test RMSE: 0.593326
+Test MAE: 0.398352
+Test R²: 0.529422
+
+[2026-03-25 18:59:44] Time Statistics
+----------------------------------------
+Inner CV Time: 100.13s
+Final Train Time: 0.46s
+Test Time: 0.0033s
+Total Time: 100.60s
+
+[2026-03-25 18:59:44] Top 10 Inner CV Results
+----------------------------------------
+
+#1 CV RMSE: 0.630228 (±0.022516)
+   Params: {'learning_rate': 0.1, 'max_depth': 8, 'n_estimators': 400, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.7, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 400
+   Train Time: 2.85s
+
+#2 CV RMSE: 0.630245 (±0.020656)
+   Params: {'learning_rate': 0.1, 'max_depth': 8, 'n_estimators': 400, 'max_bin': 255, 'subsample': 1.0, 'colsample_bytree': 0.7, 'reg_lambda': 0.0, 'min_child_weight': 10}
+   Avg Early Stop: 400
+   Train Time: 2.44s
+
+#3 CV RMSE: 0.630511 (±0.016826)
+   Params: {'learning_rate': 0.1, 'max_depth': 8, 'n_estimators': 400, 'max_bin': 255, 'subsample': 1.0, 'colsample_bytree': 0.8, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 400
+   Train Time: 2.62s
+
+#4 CV RMSE: 0.630643 (±0.022948)
+   Params: {'learning_rate': 0.01, 'max_depth': 8, 'n_estimators': 800, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.8, 'reg_lambda': 0.0, 'min_child_weight': 10}
+   Avg Early Stop: 800
+   Train Time: 6.28s
+
+#5 CV RMSE: 0.630647 (±0.024048)
+   Params: {'learning_rate': 0.1, 'max_depth': 8, 'n_estimators': 200, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.7, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 200
+   Train Time: 1.33s
+
+#6 CV RMSE: 0.630759 (±0.024943)
+   Params: {'learning_rate': 0.1, 'max_depth': 8, 'n_estimators': 400, 'max_bin': 255, 'subsample': 1.0, 'colsample_bytree': 0.9, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 400
+   Train Time: 2.87s
+
+#7 CV RMSE: 0.630818 (±0.023570)
+   Params: {'learning_rate': 0.01, 'max_depth': 8, 'n_estimators': 800, 'max_bin': 255, 'subsample': 0.8, 'colsample_bytree': 0.8, 'reg_lambda': 0.0, 'min_child_weight': 10}
+   Avg Early Stop: 800
+   Train Time: 6.35s
+
+#8 CV RMSE: 0.631045 (±0.022292)
+   Params: {'learning_rate': 0.1, 'max_depth': 8, 'n_estimators': 400, 'max_bin': 255, 'subsample': 0.8, 'colsample_bytree': 0.7, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 400
+   Train Time: 2.85s
+
+#9 CV RMSE: 0.631123 (±0.023101)
+   Params: {'learning_rate': 0.01, 'max_depth': 8, 'n_estimators': 800, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.8, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 800
+   Train Time: 6.40s
+
+#10 CV RMSE: 0.631154 (±0.023263)
+   Params: {'learning_rate': 0.01, 'max_depth': 8, 'n_estimators': 800, 'max_bin': 255, 'subsample': 0.8, 'colsample_bytree': 0.7, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 800
+   Train Time: 6.19s
+
+================================================================================

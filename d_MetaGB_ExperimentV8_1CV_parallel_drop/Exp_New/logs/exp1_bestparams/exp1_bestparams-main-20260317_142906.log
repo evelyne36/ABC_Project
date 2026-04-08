@@ -1,0 +1,1485 @@
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Experiment 1 - Best Params: Nested Cross-Validation
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Outer CV: 5 folds
+[2026-03-17 14:29:06] INFO - Inner CV: 4 folds
+[2026-03-17 14:29:06] INFO - Search method: grid
+[2026-03-17 14:29:06] INFO - No normalization applied
+[2026-03-17 14:29:06] INFO - 
+================================================================================
+[2026-03-17 14:29:06] INFO - Dataset: concrete_compressive_strength
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Total samples: 1030, Features: 8
+[2026-03-17 14:29:06] INFO - Train: 824, Test: 206
+[2026-03-17 14:29:06] INFO - 
+--- XGBOOST ---
+[2026-03-17 14:29:06] INFO -   Inner CV: 4 folds, 1296 param combinations
+[2026-03-17 14:29:06] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Experiment 1 - Best Params: Nested Cross-Validation
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Outer CV: 5 folds
+[2026-03-17 14:29:06] INFO - Inner CV: 4 folds
+[2026-03-17 14:29:06] INFO - Search method: grid
+[2026-03-17 14:29:06] INFO - No normalization applied
+[2026-03-17 14:29:06] INFO - 
+================================================================================
+[2026-03-17 14:29:06] INFO - Dataset: diamonds
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Total samples: 53940, Features: 6
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Train: 43152, Test: 10788
+[2026-03-17 14:29:06] INFO - 
+--- XGBOOST ---
+[2026-03-17 14:29:06] INFO - Experiment 1 - Best Params: Nested Cross-Validation
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Outer CV: 5 folds
+[2026-03-17 14:29:06] INFO - Inner CV: 4 folds
+[2026-03-17 14:29:06] INFO - Search method: grid
+[2026-03-17 14:29:06] INFO - No normalization applied
+[2026-03-17 14:29:06] INFO - 
+================================================================================
+[2026-03-17 14:29:06] INFO - Dataset: healthcare_insurance_expenses
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO -   Inner CV: 4 folds, 1296 param combinations
+[2026-03-17 14:29:06] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 14:29:06] INFO - Total samples: 1338, Features: 3
+[2026-03-17 14:29:06] INFO - Train: 1070, Test: 268
+[2026-03-17 14:29:06] INFO - 
+--- XGBOOST ---
+[2026-03-17 14:29:06] INFO -   Inner CV: 4 folds, 1296 param combinations
+[2026-03-17 14:29:06] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Experiment 1 - Best Params: Nested Cross-Validation
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Outer CV: 5 folds
+[2026-03-17 14:29:06] INFO - Inner CV: 4 folds
+[2026-03-17 14:29:06] INFO - Search method: grid
+[2026-03-17 14:29:06] INFO - No normalization applied
+[2026-03-17 14:29:06] INFO - 
+================================================================================
+[2026-03-17 14:29:06] INFO - Dataset: houses
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Experiment 1 - Best Params: Nested Cross-Validation
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Outer CV: 5 folds
+[2026-03-17 14:29:06] INFO - Inner CV: 4 folds
+[2026-03-17 14:29:06] INFO - Search method: grid
+[2026-03-17 14:29:06] INFO - No normalization applied
+[2026-03-17 14:29:06] INFO - 
+================================================================================
+[2026-03-17 14:29:06] INFO - Dataset: Food_Delivery_Time
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Experiment 1 - Best Params: Nested Cross-Validation
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Outer CV: 5 folds
+[2026-03-17 14:29:06] INFO - Inner CV: 4 folds
+[2026-03-17 14:29:06] INFO - Search method: grid
+[2026-03-17 14:29:06] INFO - No normalization applied
+[2026-03-17 14:29:06] INFO - 
+================================================================================
+[2026-03-17 14:29:06] INFO - Dataset: Another-Dataset-on-used-Fiat-500
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Total samples: 20640, Features: 8
+[2026-03-17 14:29:06] INFO - Train: 16512, Test: 4128
+[2026-03-17 14:29:06] INFO - 
+--- XGBOOST ---
+[2026-03-17 14:29:06] INFO -   Inner CV: 4 folds, 1296 param combinations
+[2026-03-17 14:29:06] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 14:29:06] INFO - Total samples: 1538, Features: 6
+[2026-03-17 14:29:06] INFO - Train: 1230, Test: 308
+[2026-03-17 14:29:06] INFO - 
+--- XGBOOST ---
+[2026-03-17 14:29:06] INFO -   Inner CV: 4 folds, 1296 param combinations
+[2026-03-17 14:29:06] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Experiment 1 - Best Params: Nested Cross-Validation
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Outer CV: 5 folds
+[2026-03-17 14:29:06] INFO - Inner CV: 4 folds
+[2026-03-17 14:29:06] INFO - Search method: grid
+[2026-03-17 14:29:06] INFO - No normalization applied
+[2026-03-17 14:29:06] INFO - 
+================================================================================
+[2026-03-17 14:29:06] INFO - Dataset: QSAR_fish_toxicity
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Experiment 1 - Best Params: Nested Cross-Validation
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Outer CV: 5 folds
+[2026-03-17 14:29:06] INFO - Inner CV: 4 folds
+[2026-03-17 14:29:06] INFO - Search method: grid
+[2026-03-17 14:29:06] INFO - No normalization applied
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Experiment 1 - Best Params: Nested Cross-Validation
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Outer CV: 5 folds
+[2026-03-17 14:29:06] INFO - Inner CV: 4 folds
+[2026-03-17 14:29:06] INFO - Search method: grid
+[2026-03-17 14:29:06] INFO - No normalization applied
+[2026-03-17 14:29:06] INFO - 
+================================================================================
+[2026-03-17 14:29:06] INFO - Dataset: wine_quality
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - 
+================================================================================
+[2026-03-17 14:29:06] INFO - Dataset: physiochemical_protein
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Total samples: 907, Features: 6
+[2026-03-17 14:29:06] INFO - Train: 725, Test: 182
+[2026-03-17 14:29:06] INFO - 
+--- XGBOOST ---
+[2026-03-17 14:29:06] INFO -   Inner CV: 4 folds, 1296 param combinations
+[2026-03-17 14:29:06] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Experiment 1 - Best Params: Nested Cross-Validation
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Outer CV: 5 folds
+[2026-03-17 14:29:06] INFO - Inner CV: 4 folds
+[2026-03-17 14:29:06] INFO - Search method: grid
+[2026-03-17 14:29:06] INFO - No normalization applied
+[2026-03-17 14:29:06] INFO - 
+================================================================================
+[2026-03-17 14:29:06] INFO - Dataset: airfoil_self_noise
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Experiment 1 - Best Params: Nested Cross-Validation
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Outer CV: 5 folds
+[2026-03-17 14:29:06] INFO - Inner CV: 4 folds
+[2026-03-17 14:29:06] INFO - Search method: grid
+[2026-03-17 14:29:06] INFO - No normalization applied
+[2026-03-17 14:29:06] INFO - 
+================================================================================
+[2026-03-17 14:29:06] INFO - Dataset: miami_housing
+[2026-03-17 14:29:06] INFO - ================================================================================
+[2026-03-17 14:29:06] INFO - Total samples: 1503, Features: 5
+[2026-03-17 14:29:06] INFO - Train: 1202, Test: 301
+[2026-03-17 14:29:06] INFO - 
+--- XGBOOST ---
+[2026-03-17 14:29:06] INFO -   Inner CV: 4 folds, 1296 param combinations
+[2026-03-17 14:29:06] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 14:29:06] INFO - Total samples: 6497, Features: 11
+[2026-03-17 14:29:06] INFO - Train: 5197, Test: 1300
+[2026-03-17 14:29:06] INFO - 
+--- XGBOOST ---
+[2026-03-17 14:29:06] INFO -   Inner CV: 4 folds, 1296 param combinations
+[2026-03-17 14:29:06] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 14:29:06] INFO - Total samples: 45451, Features: 6
+[2026-03-17 14:29:06] INFO - Train: 36360, Test: 9091
+[2026-03-17 14:29:06] INFO - 
+--- XGBOOST ---
+[2026-03-17 14:29:06] INFO -   Inner CV: 4 folds, 1296 param combinations
+[2026-03-17 14:29:06] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 14:29:06] INFO - Total samples: 13776, Features: 15
+[2026-03-17 14:29:06] INFO - Train: 11020, Test: 2756
+[2026-03-17 14:29:06] INFO - 
+--- XGBOOST ---
+[2026-03-17 14:29:06] INFO -   Inner CV: 4 folds, 1296 param combinations
+[2026-03-17 14:29:06] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 14:29:07] INFO - Total samples: 45730, Features: 9
+[2026-03-17 14:29:07] INFO - Train: 36584, Test: 9146
+[2026-03-17 14:29:07] INFO - 
+--- XGBOOST ---
+[2026-03-17 14:29:07] INFO -   Inner CV: 4 folds, 1296 param combinations
+[2026-03-17 14:29:07] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 14:30:02] ERROR - Failed on physiochemical_protein: [14:29:36] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x73bfaf45c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x73bfafc3f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x73bfaf6e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x73bfaf363522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x73bfcd884630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x73bfcd883fed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x73bfcb9ef84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x73bfcb9eff63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x63a997ed231f]
+
+
+[2026-03-17 14:30:02] ERROR - joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in <listcomp>
+    return [func(*args, **kwargs)
+  File "exp1_bestparams.py", line 170, in _evaluate_single_param
+    result = train_with_early_stopping(
+  File "exp1_bestparams.py", line 109, in train_with_early_stopping
+    model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1143, in fit
+    train_dmatrix, evals = _wrap_evaluation_matrices(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 603, in _wrap_evaluation_matrices
+    train_dmatrix = create_dmatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1065, in _create_dmatrix
+    return QuantileDMatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1573, in __init__
+    self._init(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1632, in _init
+    it.reraise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 569, in reraise
+    raise exc  # pylint: disable=raising-bad-type
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 550, in _handle_exception
+    return fn()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 637, in <lambda>
+    return self._handle_exception(lambda: self.next(input_data), 0)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1402, in next
+    input_data(**self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 626, in input_data
+    self.proxy.set_info(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 954, in set_info
+    self.set_label(label)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1092, in set_label
+    dispatch_meta_backend(self, label, "label", "float")
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1338, in dispatch_meta_backend
+    _meta_from_numpy(data, name, dtype, handle)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1279, in _meta_from_numpy
+    _check_call(_LIB.XGDMatrixSetInfoFromInterface(handle, c_str(field), interface_str))
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: [14:29:36] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x73bfaf45c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x73bfafc3f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x73bfaf6e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x73bfaf363522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x73bfcd884630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x73bfcd883fed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x73bfcb9ef84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x73bfcb9eff63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x63a997ed231f]
+
+
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "exp1_bestparams.py", line 459, in run_exp1_bestparams
+    results = run_nested_cv_for_dataset(
+  File "exp1_bestparams.py", line 336, in run_nested_cv_for_dataset
+    best_params, avg_early_stop, best_cv_rmse, all_cv_results = inner_cv_with_hyperparameter_search(
+  File "exp1_bestparams.py", line 218, in inner_cv_with_hyperparameter_search
+    all_cv_results = Parallel(n_jobs=N_JOBS, verbose=0)(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 745, in get_result
+    return self._return_or_raise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 763, in _return_or_raise
+    raise self._result
+xgboost.core.XGBoostError: [14:29:36] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x73bfaf45c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x73bfafc3f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x73bfaf6e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x73bfaf363522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x73bfcd884630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x73bfcd883fed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x73bfcb9ef84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x73bfcb9eff63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x63a997ed231f]
+
+
+
+[2026-03-17 14:30:02] INFO - 
+Experiment completed!
+[2026-03-17 14:30:02] ERROR - Failed on houses: [14:29:36] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x731bddc5c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x731bde43f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x731bddee3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x731bddb63522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x731bfbe8a630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x731bfbe89fed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x731bfbe9e84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x731bfbe9ef63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x5704c074f31f]
+
+
+[2026-03-17 14:30:02] ERROR - joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in <listcomp>
+    return [func(*args, **kwargs)
+  File "exp1_bestparams.py", line 170, in _evaluate_single_param
+    result = train_with_early_stopping(
+  File "exp1_bestparams.py", line 109, in train_with_early_stopping
+    model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1143, in fit
+    train_dmatrix, evals = _wrap_evaluation_matrices(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 603, in _wrap_evaluation_matrices
+    train_dmatrix = create_dmatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1065, in _create_dmatrix
+    return QuantileDMatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1573, in __init__
+    self._init(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1632, in _init
+    it.reraise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 569, in reraise
+    raise exc  # pylint: disable=raising-bad-type
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 550, in _handle_exception
+    return fn()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 637, in <lambda>
+    return self._handle_exception(lambda: self.next(input_data), 0)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1402, in next
+    input_data(**self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 626, in input_data
+    self.proxy.set_info(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 954, in set_info
+    self.set_label(label)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1092, in set_label
+    dispatch_meta_backend(self, label, "label", "float")
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1338, in dispatch_meta_backend
+    _meta_from_numpy(data, name, dtype, handle)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1279, in _meta_from_numpy
+    _check_call(_LIB.XGDMatrixSetInfoFromInterface(handle, c_str(field), interface_str))
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: [14:29:36] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x731bddc5c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x731bde43f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x731bddee3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x731bddb63522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x731bfbe8a630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x731bfbe89fed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x731bfbe9e84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x731bfbe9ef63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x5704c074f31f]
+
+
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "exp1_bestparams.py", line 459, in run_exp1_bestparams
+    results = run_nested_cv_for_dataset(
+  File "exp1_bestparams.py", line 336, in run_nested_cv_for_dataset
+    best_params, avg_early_stop, best_cv_rmse, all_cv_results = inner_cv_with_hyperparameter_search(
+  File "exp1_bestparams.py", line 218, in inner_cv_with_hyperparameter_search
+    all_cv_results = Parallel(n_jobs=N_JOBS, verbose=0)(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 745, in get_result
+    return self._return_or_raise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 763, in _return_or_raise
+    raise self._result
+xgboost.core.XGBoostError: [14:29:36] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x731bddc5c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x731bde43f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x731bddee3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x731bddb63522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x731bfbe8a630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x731bfbe89fed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x731bfbe9e84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x731bfbe9ef63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x5704c074f31f]
+
+
+
+[2026-03-17 14:30:02] INFO - 
+Experiment completed!
+[2026-03-17 14:30:05] ERROR - Failed on QSAR_fish_toxicity: [14:29:46] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x76c0c425c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x76c0c4a3f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x76c0c44e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x76c0c4163522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x76c0e228a630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x76c0e2289fed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x76c0e229e84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x76c0e229ef63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x6265a4dcd31f]
+
+
+[2026-03-17 14:30:05] ERROR - joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in <listcomp>
+    return [func(*args, **kwargs)
+  File "exp1_bestparams.py", line 170, in _evaluate_single_param
+    result = train_with_early_stopping(
+  File "exp1_bestparams.py", line 109, in train_with_early_stopping
+    model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1143, in fit
+    train_dmatrix, evals = _wrap_evaluation_matrices(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 603, in _wrap_evaluation_matrices
+    train_dmatrix = create_dmatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1065, in _create_dmatrix
+    return QuantileDMatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1573, in __init__
+    self._init(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1632, in _init
+    it.reraise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 569, in reraise
+    raise exc  # pylint: disable=raising-bad-type
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 550, in _handle_exception
+    return fn()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 637, in <lambda>
+    return self._handle_exception(lambda: self.next(input_data), 0)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1402, in next
+    input_data(**self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 626, in input_data
+    self.proxy.set_info(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 954, in set_info
+    self.set_label(label)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1092, in set_label
+    dispatch_meta_backend(self, label, "label", "float")
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1338, in dispatch_meta_backend
+    _meta_from_numpy(data, name, dtype, handle)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1279, in _meta_from_numpy
+    _check_call(_LIB.XGDMatrixSetInfoFromInterface(handle, c_str(field), interface_str))
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: [14:29:46] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x76c0c425c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x76c0c4a3f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x76c0c44e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x76c0c4163522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x76c0e228a630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x76c0e2289fed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x76c0e229e84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x76c0e229ef63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x6265a4dcd31f]
+
+
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "exp1_bestparams.py", line 459, in run_exp1_bestparams
+    results = run_nested_cv_for_dataset(
+  File "exp1_bestparams.py", line 336, in run_nested_cv_for_dataset
+    best_params, avg_early_stop, best_cv_rmse, all_cv_results = inner_cv_with_hyperparameter_search(
+  File "exp1_bestparams.py", line 218, in inner_cv_with_hyperparameter_search
+    all_cv_results = Parallel(n_jobs=N_JOBS, verbose=0)(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 745, in get_result
+    return self._return_or_raise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 763, in _return_or_raise
+    raise self._result
+xgboost.core.XGBoostError: [14:29:46] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x76c0c425c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x76c0c4a3f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x76c0c44e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x76c0c4163522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x76c0e228a630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x76c0e2289fed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x76c0e229e84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x76c0e229ef63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x6265a4dcd31f]
+
+
+
+[2026-03-17 14:30:05] INFO - 
+Experiment completed!
+[2026-03-17 14:30:05] ERROR - Failed on miami_housing: [14:29:47] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x71732b45c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x71732bc3f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x71732b6e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x71732b363522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x71734951b630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x71734951afed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x71734952f84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x71734952ff63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x61d2e574e31f]
+
+
+[2026-03-17 14:30:05] ERROR - joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in <listcomp>
+    return [func(*args, **kwargs)
+  File "exp1_bestparams.py", line 170, in _evaluate_single_param
+    result = train_with_early_stopping(
+  File "exp1_bestparams.py", line 109, in train_with_early_stopping
+    model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1143, in fit
+    train_dmatrix, evals = _wrap_evaluation_matrices(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 603, in _wrap_evaluation_matrices
+    train_dmatrix = create_dmatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1065, in _create_dmatrix
+    return QuantileDMatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1573, in __init__
+    self._init(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1632, in _init
+    it.reraise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 569, in reraise
+    raise exc  # pylint: disable=raising-bad-type
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 550, in _handle_exception
+    return fn()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 637, in <lambda>
+    return self._handle_exception(lambda: self.next(input_data), 0)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1402, in next
+    input_data(**self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 626, in input_data
+    self.proxy.set_info(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 954, in set_info
+    self.set_label(label)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1092, in set_label
+    dispatch_meta_backend(self, label, "label", "float")
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1338, in dispatch_meta_backend
+    _meta_from_numpy(data, name, dtype, handle)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1279, in _meta_from_numpy
+    _check_call(_LIB.XGDMatrixSetInfoFromInterface(handle, c_str(field), interface_str))
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: [14:29:47] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x71732b45c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x71732bc3f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x71732b6e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x71732b363522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x71734951b630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x71734951afed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x71734952f84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x71734952ff63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x61d2e574e31f]
+
+
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "exp1_bestparams.py", line 459, in run_exp1_bestparams
+    results = run_nested_cv_for_dataset(
+  File "exp1_bestparams.py", line 336, in run_nested_cv_for_dataset
+    best_params, avg_early_stop, best_cv_rmse, all_cv_results = inner_cv_with_hyperparameter_search(
+  File "exp1_bestparams.py", line 218, in inner_cv_with_hyperparameter_search
+    all_cv_results = Parallel(n_jobs=N_JOBS, verbose=0)(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 745, in get_result
+    return self._return_or_raise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 763, in _return_or_raise
+    raise self._result
+xgboost.core.XGBoostError: [14:29:47] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x71732b45c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x71732bc3f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x71732b6e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x71732b363522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x71734951b630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x71734951afed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x71734952f84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x71734952ff63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x61d2e574e31f]
+
+
+
+[2026-03-17 14:30:05] INFO - 
+Experiment completed!
+[2026-03-17 14:30:05] ERROR - Failed on diamonds: [14:29:48] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x7e5ceee5c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x7e5cef63f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x7e5cef0e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x7e5ceed63522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x7e5d0d7db630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x7e5d0d7dafed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x7e5d0d16f84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x7e5d0d16ff63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x613ea85e131f]
+
+
+[2026-03-17 14:30:05] ERROR - joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in <listcomp>
+    return [func(*args, **kwargs)
+  File "exp1_bestparams.py", line 170, in _evaluate_single_param
+    result = train_with_early_stopping(
+  File "exp1_bestparams.py", line 109, in train_with_early_stopping
+    model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1143, in fit
+    train_dmatrix, evals = _wrap_evaluation_matrices(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 603, in _wrap_evaluation_matrices
+    train_dmatrix = create_dmatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1065, in _create_dmatrix
+    return QuantileDMatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1573, in __init__
+    self._init(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1632, in _init
+    it.reraise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 569, in reraise
+    raise exc  # pylint: disable=raising-bad-type
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 550, in _handle_exception
+    return fn()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 637, in <lambda>
+    return self._handle_exception(lambda: self.next(input_data), 0)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1402, in next
+    input_data(**self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 626, in input_data
+    self.proxy.set_info(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 954, in set_info
+    self.set_label(label)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1092, in set_label
+    dispatch_meta_backend(self, label, "label", "float")
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1338, in dispatch_meta_backend
+    _meta_from_numpy(data, name, dtype, handle)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1279, in _meta_from_numpy
+    _check_call(_LIB.XGDMatrixSetInfoFromInterface(handle, c_str(field), interface_str))
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: [14:29:48] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x7e5ceee5c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x7e5cef63f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x7e5cef0e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x7e5ceed63522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x7e5d0d7db630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x7e5d0d7dafed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x7e5d0d16f84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x7e5d0d16ff63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x613ea85e131f]
+
+
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "exp1_bestparams.py", line 459, in run_exp1_bestparams
+    results = run_nested_cv_for_dataset(
+  File "exp1_bestparams.py", line 336, in run_nested_cv_for_dataset
+    best_params, avg_early_stop, best_cv_rmse, all_cv_results = inner_cv_with_hyperparameter_search(
+  File "exp1_bestparams.py", line 218, in inner_cv_with_hyperparameter_search
+    all_cv_results = Parallel(n_jobs=N_JOBS, verbose=0)(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 745, in get_result
+    return self._return_or_raise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 763, in _return_or_raise
+    raise self._result
+xgboost.core.XGBoostError: [14:29:48] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x7e5ceee5c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x7e5cef63f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x7e5cef0e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x7e5ceed63522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x7e5d0d7db630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x7e5d0d7dafed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x7e5d0d16f84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x7e5d0d16ff63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x613ea85e131f]
+
+
+
+[2026-03-17 14:30:05] INFO - 
+Experiment completed!
+[2026-03-17 14:30:05] ERROR - Failed on concrete_compressive_strength: [14:29:49] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x7e7ea865c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x7e7ea8e3f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x7e7ea88e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x7e7ea8563522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x7e7ec6bcf630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x7e7ec6bcefed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x7e7ec64b784a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x7e7ec64b7f63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x5fff9e19f31f]
+
+
+[2026-03-17 14:30:05] ERROR - joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in <listcomp>
+    return [func(*args, **kwargs)
+  File "exp1_bestparams.py", line 170, in _evaluate_single_param
+    result = train_with_early_stopping(
+  File "exp1_bestparams.py", line 109, in train_with_early_stopping
+    model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1143, in fit
+    train_dmatrix, evals = _wrap_evaluation_matrices(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 603, in _wrap_evaluation_matrices
+    train_dmatrix = create_dmatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1065, in _create_dmatrix
+    return QuantileDMatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1573, in __init__
+    self._init(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1632, in _init
+    it.reraise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 569, in reraise
+    raise exc  # pylint: disable=raising-bad-type
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 550, in _handle_exception
+    return fn()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 637, in <lambda>
+    return self._handle_exception(lambda: self.next(input_data), 0)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1402, in next
+    input_data(**self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 626, in input_data
+    self.proxy.set_info(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 954, in set_info
+    self.set_label(label)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1092, in set_label
+    dispatch_meta_backend(self, label, "label", "float")
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1338, in dispatch_meta_backend
+    _meta_from_numpy(data, name, dtype, handle)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1279, in _meta_from_numpy
+    _check_call(_LIB.XGDMatrixSetInfoFromInterface(handle, c_str(field), interface_str))
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: [14:29:49] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x7e7ea865c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x7e7ea8e3f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x7e7ea88e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x7e7ea8563522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x7e7ec6bcf630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x7e7ec6bcefed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x7e7ec64b784a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x7e7ec64b7f63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x5fff9e19f31f]
+
+
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "exp1_bestparams.py", line 459, in run_exp1_bestparams
+    results = run_nested_cv_for_dataset(
+  File "exp1_bestparams.py", line 336, in run_nested_cv_for_dataset
+    best_params, avg_early_stop, best_cv_rmse, all_cv_results = inner_cv_with_hyperparameter_search(
+  File "exp1_bestparams.py", line 218, in inner_cv_with_hyperparameter_search
+    all_cv_results = Parallel(n_jobs=N_JOBS, verbose=0)(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 745, in get_result
+    return self._return_or_raise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 763, in _return_or_raise
+    raise self._result
+xgboost.core.XGBoostError: [14:29:49] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x7e7ea865c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x7e7ea8e3f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x7e7ea88e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x7e7ea8563522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x7e7ec6bcf630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x7e7ec6bcefed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x7e7ec64b784a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x7e7ec64b7f63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x5fff9e19f31f]
+
+
+
+[2026-03-17 14:30:05] INFO - 
+Experiment completed!
+[2026-03-17 14:30:05] ERROR - Failed on Another-Dataset-on-used-Fiat-500: [14:29:49] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x758cf1c5c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x758cf243f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x758cf1ee3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x758cf1b63522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x758d101d6630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x758d101d5fed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x758d0fa9e84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x758d0fa9ef63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x616303efc31f]
+
+
+[2026-03-17 14:30:05] ERROR - joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in <listcomp>
+    return [func(*args, **kwargs)
+  File "exp1_bestparams.py", line 170, in _evaluate_single_param
+    result = train_with_early_stopping(
+  File "exp1_bestparams.py", line 109, in train_with_early_stopping
+    model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1143, in fit
+    train_dmatrix, evals = _wrap_evaluation_matrices(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 603, in _wrap_evaluation_matrices
+    train_dmatrix = create_dmatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1065, in _create_dmatrix
+    return QuantileDMatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1573, in __init__
+    self._init(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1632, in _init
+    it.reraise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 569, in reraise
+    raise exc  # pylint: disable=raising-bad-type
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 550, in _handle_exception
+    return fn()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 637, in <lambda>
+    return self._handle_exception(lambda: self.next(input_data), 0)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1402, in next
+    input_data(**self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 626, in input_data
+    self.proxy.set_info(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 954, in set_info
+    self.set_label(label)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1092, in set_label
+    dispatch_meta_backend(self, label, "label", "float")
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1338, in dispatch_meta_backend
+    _meta_from_numpy(data, name, dtype, handle)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1279, in _meta_from_numpy
+    _check_call(_LIB.XGDMatrixSetInfoFromInterface(handle, c_str(field), interface_str))
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: [14:29:49] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x758cf1c5c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x758cf243f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x758cf1ee3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x758cf1b63522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x758d101d6630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x758d101d5fed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x758d0fa9e84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x758d0fa9ef63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x616303efc31f]
+
+
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "exp1_bestparams.py", line 459, in run_exp1_bestparams
+    results = run_nested_cv_for_dataset(
+  File "exp1_bestparams.py", line 336, in run_nested_cv_for_dataset
+    best_params, avg_early_stop, best_cv_rmse, all_cv_results = inner_cv_with_hyperparameter_search(
+  File "exp1_bestparams.py", line 218, in inner_cv_with_hyperparameter_search
+    all_cv_results = Parallel(n_jobs=N_JOBS, verbose=0)(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 745, in get_result
+    return self._return_or_raise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 763, in _return_or_raise
+    raise self._result
+xgboost.core.XGBoostError: [14:29:49] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x758cf1c5c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x758cf243f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x758cf1ee3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x758cf1b63522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x758d101d6630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x758d101d5fed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x758d0fa9e84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x758d0fa9ef63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x616303efc31f]
+
+
+
+[2026-03-17 14:30:05] INFO - 
+Experiment completed!
+[2026-03-17 14:30:05] ERROR - Failed on airfoil_self_noise: [14:29:51] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x7085bae5c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x7085bb63f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x7085bb0e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x7085bad63522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x7085d93cf630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x7085d93cefed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x7085d8d2f84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x7085d8d2ff63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x5edddfe4631f]
+
+
+[2026-03-17 14:30:05] ERROR - joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in <listcomp>
+    return [func(*args, **kwargs)
+  File "exp1_bestparams.py", line 170, in _evaluate_single_param
+    result = train_with_early_stopping(
+  File "exp1_bestparams.py", line 109, in train_with_early_stopping
+    model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1143, in fit
+    train_dmatrix, evals = _wrap_evaluation_matrices(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 603, in _wrap_evaluation_matrices
+    train_dmatrix = create_dmatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1065, in _create_dmatrix
+    return QuantileDMatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1573, in __init__
+    self._init(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1632, in _init
+    it.reraise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 569, in reraise
+    raise exc  # pylint: disable=raising-bad-type
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 550, in _handle_exception
+    return fn()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 637, in <lambda>
+    return self._handle_exception(lambda: self.next(input_data), 0)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1402, in next
+    input_data(**self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 626, in input_data
+    self.proxy.set_info(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 954, in set_info
+    self.set_label(label)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1092, in set_label
+    dispatch_meta_backend(self, label, "label", "float")
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1338, in dispatch_meta_backend
+    _meta_from_numpy(data, name, dtype, handle)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1279, in _meta_from_numpy
+    _check_call(_LIB.XGDMatrixSetInfoFromInterface(handle, c_str(field), interface_str))
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: [14:29:51] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x7085bae5c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x7085bb63f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x7085bb0e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x7085bad63522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x7085d93cf630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x7085d93cefed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x7085d8d2f84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x7085d8d2ff63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x5edddfe4631f]
+
+
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "exp1_bestparams.py", line 459, in run_exp1_bestparams
+    results = run_nested_cv_for_dataset(
+  File "exp1_bestparams.py", line 336, in run_nested_cv_for_dataset
+    best_params, avg_early_stop, best_cv_rmse, all_cv_results = inner_cv_with_hyperparameter_search(
+  File "exp1_bestparams.py", line 218, in inner_cv_with_hyperparameter_search
+    all_cv_results = Parallel(n_jobs=N_JOBS, verbose=0)(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 745, in get_result
+    return self._return_or_raise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 763, in _return_or_raise
+    raise self._result
+xgboost.core.XGBoostError: [14:29:51] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x7085bae5c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x7085bb63f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x7085bb0e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x7085bad63522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x7085d93cf630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x7085d93cefed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x7085d8d2f84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x7085d8d2ff63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x5edddfe4631f]
+
+
+
+[2026-03-17 14:30:05] INFO - 
+Experiment completed!
+[2026-03-17 14:30:05] ERROR - Failed on Food_Delivery_Time: [14:29:51] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x7f8caf05c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x7f8caf83f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x7f8caf2e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x7f8caef63522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x7f8ccd284630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x7f8ccd283fed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x7f8ccb36f84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x7f8ccb36ff63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x60f030dff31f]
+
+
+[2026-03-17 14:30:05] ERROR - joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in <listcomp>
+    return [func(*args, **kwargs)
+  File "exp1_bestparams.py", line 170, in _evaluate_single_param
+    result = train_with_early_stopping(
+  File "exp1_bestparams.py", line 109, in train_with_early_stopping
+    model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1143, in fit
+    train_dmatrix, evals = _wrap_evaluation_matrices(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 603, in _wrap_evaluation_matrices
+    train_dmatrix = create_dmatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1065, in _create_dmatrix
+    return QuantileDMatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1573, in __init__
+    self._init(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1632, in _init
+    it.reraise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 569, in reraise
+    raise exc  # pylint: disable=raising-bad-type
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 550, in _handle_exception
+    return fn()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 637, in <lambda>
+    return self._handle_exception(lambda: self.next(input_data), 0)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1402, in next
+    input_data(**self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 626, in input_data
+    self.proxy.set_info(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 954, in set_info
+    self.set_label(label)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1092, in set_label
+    dispatch_meta_backend(self, label, "label", "float")
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1338, in dispatch_meta_backend
+    _meta_from_numpy(data, name, dtype, handle)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1279, in _meta_from_numpy
+    _check_call(_LIB.XGDMatrixSetInfoFromInterface(handle, c_str(field), interface_str))
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: [14:29:51] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x7f8caf05c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x7f8caf83f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x7f8caf2e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x7f8caef63522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x7f8ccd284630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x7f8ccd283fed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x7f8ccb36f84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x7f8ccb36ff63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x60f030dff31f]
+
+
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "exp1_bestparams.py", line 459, in run_exp1_bestparams
+    results = run_nested_cv_for_dataset(
+  File "exp1_bestparams.py", line 336, in run_nested_cv_for_dataset
+    best_params, avg_early_stop, best_cv_rmse, all_cv_results = inner_cv_with_hyperparameter_search(
+  File "exp1_bestparams.py", line 218, in inner_cv_with_hyperparameter_search
+    all_cv_results = Parallel(n_jobs=N_JOBS, verbose=0)(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 745, in get_result
+    return self._return_or_raise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 763, in _return_or_raise
+    raise self._result
+xgboost.core.XGBoostError: [14:29:51] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x7f8caf05c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x7f8caf83f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x7f8caf2e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x7f8caef63522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x7f8ccd284630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x7f8ccd283fed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x7f8ccb36f84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x7f8ccb36ff63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x60f030dff31f]
+
+
+
+[2026-03-17 14:30:05] INFO - 
+Experiment completed!
+[2026-03-17 14:30:06] ERROR - Failed on healthcare_insurance_expenses: [14:29:48] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x74443485c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x74443503f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x744434ae3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x744434763522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x74445288a630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x744452889fed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x74445289e84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x74445289ef63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x649ab919a31f]
+
+
+[2026-03-17 14:30:06] ERROR - joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in <listcomp>
+    return [func(*args, **kwargs)
+  File "exp1_bestparams.py", line 170, in _evaluate_single_param
+    result = train_with_early_stopping(
+  File "exp1_bestparams.py", line 109, in train_with_early_stopping
+    model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1143, in fit
+    train_dmatrix, evals = _wrap_evaluation_matrices(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 603, in _wrap_evaluation_matrices
+    train_dmatrix = create_dmatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1065, in _create_dmatrix
+    return QuantileDMatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1573, in __init__
+    self._init(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1632, in _init
+    it.reraise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 569, in reraise
+    raise exc  # pylint: disable=raising-bad-type
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 550, in _handle_exception
+    return fn()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 637, in <lambda>
+    return self._handle_exception(lambda: self.next(input_data), 0)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1402, in next
+    input_data(**self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 626, in input_data
+    self.proxy.set_info(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 954, in set_info
+    self.set_label(label)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1092, in set_label
+    dispatch_meta_backend(self, label, "label", "float")
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1338, in dispatch_meta_backend
+    _meta_from_numpy(data, name, dtype, handle)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1279, in _meta_from_numpy
+    _check_call(_LIB.XGDMatrixSetInfoFromInterface(handle, c_str(field), interface_str))
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: [14:29:48] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x74443485c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x74443503f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x744434ae3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x744434763522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x74445288a630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x744452889fed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x74445289e84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x74445289ef63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x649ab919a31f]
+
+
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "exp1_bestparams.py", line 459, in run_exp1_bestparams
+    results = run_nested_cv_for_dataset(
+  File "exp1_bestparams.py", line 336, in run_nested_cv_for_dataset
+    best_params, avg_early_stop, best_cv_rmse, all_cv_results = inner_cv_with_hyperparameter_search(
+  File "exp1_bestparams.py", line 218, in inner_cv_with_hyperparameter_search
+    all_cv_results = Parallel(n_jobs=N_JOBS, verbose=0)(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 745, in get_result
+    return self._return_or_raise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 763, in _return_or_raise
+    raise self._result
+xgboost.core.XGBoostError: [14:29:48] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x74443485c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x74443503f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x744434ae3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x744434763522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x74445288a630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x744452889fed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x74445289e84a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x74445289ef63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x649ab919a31f]
+
+
+
+[2026-03-17 14:30:06] INFO - 
+Experiment completed!
+[2026-03-17 14:30:06] ERROR - Failed on wine_quality: [14:30:01] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x7bfc4f45c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x7bfc4fc3f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x7bfc4f6e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x7bfc4f363522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x7bfc6d48b630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x7bfc6d48afed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x7bfc6b50884a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x7bfc6b508f63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x57e84069331f]
+
+
+[2026-03-17 14:30:06] ERROR - joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in <listcomp>
+    return [func(*args, **kwargs)
+  File "exp1_bestparams.py", line 170, in _evaluate_single_param
+    result = train_with_early_stopping(
+  File "exp1_bestparams.py", line 109, in train_with_early_stopping
+    model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1143, in fit
+    train_dmatrix, evals = _wrap_evaluation_matrices(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 603, in _wrap_evaluation_matrices
+    train_dmatrix = create_dmatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/sklearn.py", line 1065, in _create_dmatrix
+    return QuantileDMatrix(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1573, in __init__
+    self._init(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1632, in _init
+    it.reraise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 569, in reraise
+    raise exc  # pylint: disable=raising-bad-type
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 550, in _handle_exception
+    return fn()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 637, in <lambda>
+    return self._handle_exception(lambda: self.next(input_data), 0)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1402, in next
+    input_data(**self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 626, in input_data
+    self.proxy.set_info(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 726, in inner_f
+    return func(**kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 954, in set_info
+    self.set_label(label)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 1092, in set_label
+    dispatch_meta_backend(self, label, "label", "float")
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1338, in dispatch_meta_backend
+    _meta_from_numpy(data, name, dtype, handle)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/data.py", line 1279, in _meta_from_numpy
+    _check_call(_LIB.XGDMatrixSetInfoFromInterface(handle, c_str(field), interface_str))
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/core.py", line 284, in _check_call
+    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+xgboost.core.XGBoostError: [14:30:01] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x7bfc4f45c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x7bfc4fc3f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x7bfc4f6e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x7bfc4f363522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x7bfc6d48b630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x7bfc6d48afed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x7bfc6b50884a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x7bfc6b508f63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x57e84069331f]
+
+
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "exp1_bestparams.py", line 459, in run_exp1_bestparams
+    results = run_nested_cv_for_dataset(
+  File "exp1_bestparams.py", line 336, in run_nested_cv_for_dataset
+    best_params, avg_early_stop, best_cv_rmse, all_cv_results = inner_cv_with_hyperparameter_search(
+  File "exp1_bestparams.py", line 218, in inner_cv_with_hyperparameter_search
+    all_cv_results = Parallel(n_jobs=N_JOBS, verbose=0)(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 745, in get_result
+    return self._return_or_raise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 763, in _return_or_raise
+    raise self._result
+xgboost.core.XGBoostError: [14:30:01] /workspace/src/data/array_interface.cu:44: Check failed: err == cudaGetLastError() (0 vs. 2) : 
+Stack trace:
+  [bt] (0) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x25c1ac) [0x7bfc4f45c1ac]
+  [bt] (1) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0xa3f4bc) [0x7bfc4fc3f4bc]
+  [bt] (2) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(+0x4e3a2e) [0x7bfc4f6e3a2e]
+  [bt] (3) /home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/xgboost/lib/libxgboost.so(XGDMatrixSetInfoFromInterface+0xb2) [0x7bfc4f363522]
+  [bt] (4) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call_unix64+0x4c) [0x7bfc6d48b630]
+  [bt] (5) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/../../libffi.so.6(ffi_call+0x22d) [0x7bfc6d48afed]
+  [bt] (6) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x1084a) [0x7bfc6b50884a]
+  [bt] (7) /home/admin/anaconda3/envs/llm/lib/python3.8/lib-dynload/_ctypes.cpython-38-x86_64-linux-gnu.so(+0x10f63) [0x7bfc6b508f63]
+  [bt] (8) /home/admin/anaconda3/envs/llm/bin/python(_PyObject_MakeTpCall+0x22f) [0x57e84069331f]
+
+
+
+[2026-03-17 14:30:06] INFO - 
+Experiment completed!

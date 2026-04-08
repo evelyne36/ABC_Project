@@ -1,0 +1,109 @@
+================================================================================
+Exp1 BestParams: METAGB_PFF0.8 - concrete_compressive_strength - Fold 1/1
+================================================================================
+
+[2026-03-25 02:13:25] Configuration
+----------------------------------------
+Dataset: concrete_compressive_strength
+Model: METAGB_PFF0.8
+Outer Fold: 1/1
+Inner CV Folds: 4
+Train Samples: 824
+Test Samples: 206
+Features: 8
+Normalization: None
+
+[2026-03-25 02:13:25] Parameter Grid
+----------------------------------------
+  learning_rate: [0.01, 0.1]
+  max_depth: [3, 4, 6, 8]
+  n_estimators: [200, 400, 800]
+  max_bin: [255]
+  subsample: [0.7, 0.8, 0.9, 1.0]
+  colsample_bytree: [0.7, 0.8, 0.9, 1.0]
+  version: [3]
+  min_data_in_leaf: [10]
+  pred_feature_fraction: [0.8]
+Total combinations: 384
+
+[2026-03-25 02:13:25] Best Parameters (Inner CV)
+----------------------------------------
+  learning_rate: 0.1
+  max_depth: 4
+  n_estimators: 200
+  max_bin: 255
+  subsample: 1.0
+  colsample_bytree: 0.9
+  version: 3
+  min_data_in_leaf: 10
+  pred_feature_fraction: 0.8
+Best CV RMSE: 4.730071
+Avg Early Stop Rounds: 200
+
+[2026-03-25 02:13:25] Test Results (Outer Fold)
+----------------------------------------
+Test RMSE: 3.672904
+Test MAE: 2.799586
+Test R²: 0.951202
+
+[2026-03-25 02:13:25] Time Statistics
+----------------------------------------
+Inner CV Time: 109.86s
+Final Train Time: 0.31s
+Test Time: 0.0017s
+Total Time: 110.17s
+
+[2026-03-25 02:13:25] Top 10 Inner CV Results
+----------------------------------------
+
+#1 CV RMSE: 4.730071 (±0.243751)
+   Params: {'learning_rate': 0.1, 'max_depth': 4, 'n_estimators': 200, 'max_bin': 255, 'subsample': 1.0, 'colsample_bytree': 0.9, 'version': 3, 'min_data_in_leaf': 10, 'pred_feature_fraction': 0.8}
+   Avg Early Stop: 200
+   Train Time: 1.12s
+
+#2 CV RMSE: 4.747124 (±0.302892)
+   Params: {'learning_rate': 0.1, 'max_depth': 4, 'n_estimators': 400, 'max_bin': 255, 'subsample': 1.0, 'colsample_bytree': 0.9, 'version': 3, 'min_data_in_leaf': 10, 'pred_feature_fraction': 0.8}
+   Avg Early Stop: 400
+   Train Time: 2.25s
+
+#3 CV RMSE: 4.753006 (±0.440439)
+   Params: {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 800, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.8, 'version': 3, 'min_data_in_leaf': 10, 'pred_feature_fraction': 0.8}
+   Avg Early Stop: 800
+   Train Time: 2.36s
+
+#4 CV RMSE: 4.765412 (±0.399742)
+   Params: {'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 400, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.8, 'version': 3, 'min_data_in_leaf': 10, 'pred_feature_fraction': 0.8}
+   Avg Early Stop: 400
+   Train Time: 1.18s
+
+#5 CV RMSE: 4.794262 (±0.327303)
+   Params: {'learning_rate': 0.1, 'max_depth': 4, 'n_estimators': 200, 'max_bin': 255, 'subsample': 1.0, 'colsample_bytree': 0.7, 'version': 3, 'min_data_in_leaf': 10, 'pred_feature_fraction': 0.8}
+   Avg Early Stop: 200
+   Train Time: 0.91s
+
+#6 CV RMSE: 4.816215 (±0.526267)
+   Params: {'learning_rate': 0.1, 'max_depth': 6, 'n_estimators': 200, 'max_bin': 255, 'subsample': 1.0, 'colsample_bytree': 0.7, 'version': 3, 'min_data_in_leaf': 10, 'pred_feature_fraction': 0.8}
+   Avg Early Stop: 200
+   Train Time: 1.85s
+
+#7 CV RMSE: 4.817973 (±0.355714)
+   Params: {'learning_rate': 0.1, 'max_depth': 4, 'n_estimators': 400, 'max_bin': 255, 'subsample': 1.0, 'colsample_bytree': 0.7, 'version': 3, 'min_data_in_leaf': 10, 'pred_feature_fraction': 0.8}
+   Avg Early Stop: 400
+   Train Time: 1.74s
+
+#8 CV RMSE: 4.832522 (±0.549847)
+   Params: {'learning_rate': 0.1, 'max_depth': 6, 'n_estimators': 400, 'max_bin': 255, 'subsample': 1.0, 'colsample_bytree': 0.7, 'version': 3, 'min_data_in_leaf': 10, 'pred_feature_fraction': 0.8}
+   Avg Early Stop: 400
+   Train Time: 3.54s
+
+#9 CV RMSE: 4.846541 (±0.559973)
+   Params: {'learning_rate': 0.1, 'max_depth': 6, 'n_estimators': 800, 'max_bin': 255, 'subsample': 1.0, 'colsample_bytree': 0.7, 'version': 3, 'min_data_in_leaf': 10, 'pred_feature_fraction': 0.8}
+   Avg Early Stop: 800
+   Train Time: 6.35s
+
+#10 CV RMSE: 4.873462 (±0.400089)
+   Params: {'learning_rate': 0.1, 'max_depth': 4, 'n_estimators': 800, 'max_bin': 255, 'subsample': 1.0, 'colsample_bytree': 0.7, 'version': 3, 'min_data_in_leaf': 10, 'pred_feature_fraction': 0.8}
+   Avg Early Stop: 800
+   Train Time: 3.61s
+
+================================================================================

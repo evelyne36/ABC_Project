@@ -1,0 +1,28 @@
+{
+  "dataset": "Food_Delivery_Time",
+  "model": "metagb",
+  "pred_feature_fraction": 0.6,
+  "inner_k": 4,
+  "best_params": {
+    "learning_rate": 0.1,
+    "max_depth": 3,
+    "n_estimators": 800,
+    "max_bin": 255,
+    "subsample": 0.9,
+    "colsample_bytree": 0.9,
+    "version": 3,
+    "min_data_in_leaf": 10,
+    "pred_feature_fraction": 0.6
+  },
+  "cv_rmse": 7.562984856550005,
+  "summary": {
+    "Dataset": "Food_Delivery_Time",
+    "Model": "METAGB",
+    "pred_feature_fraction": 0.6,
+    "Inner_K": 4,
+    "Test_RMSE": 7.524930096847702,
+    "Test_MAE": 5.919295030523743,
+    "Test_R2": 0.3445516479882047,
+    "Train_Time": 1033.9901580810547
+  }
+}

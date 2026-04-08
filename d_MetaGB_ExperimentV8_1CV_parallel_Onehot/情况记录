@@ -1,0 +1,12 @@
+本文件夹是OneHot条件下，metagb方法(所有pred)与XGBoost在11个数据集下的超参遍历寻优；
+无预处理和无早停，通过200间隔的estimators保证公平；
+
+发现：
+小数据metagb集占优，尝试小数据集
+ToyBenchmark测试：2A2B（非线性噪声or高维稀疏）
+
+
+后续实验建议
+大数据集减少超参空间
+分pred_frac测试，而非所有pred取最优
+实验方法：外split/CV + 内inner4Fold不变

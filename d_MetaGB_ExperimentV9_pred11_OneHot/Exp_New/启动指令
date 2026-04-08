@@ -1,0 +1,5 @@
+nohup python exp1_bestparams.py > logs/exp1_bestparams_$(date +%Y%m%d_%H%M%S).log 2>&1 &
+
+nohup python exp1_bestparams_noEarly.py > logs/exp1_bestparams_$(date +%Y%m%d_%H%M%S).log 2>&1 &
+
+nohup python exp1_bestparams_noEarly.py > logs/exp1_bestparams_$(date +%Y%m%d_%H%M%S).log 2>&1 &

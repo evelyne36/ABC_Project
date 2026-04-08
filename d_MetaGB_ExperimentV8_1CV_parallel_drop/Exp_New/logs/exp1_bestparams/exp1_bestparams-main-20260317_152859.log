@@ -1,0 +1,755 @@
+[2026-03-17 15:28:59] INFO - ================================================================================
+[2026-03-17 15:28:59] INFO - Experiment 1 - Best Params: Nested Cross-Validation
+[2026-03-17 15:28:59] INFO - ================================================================================
+[2026-03-17 15:28:59] INFO - Outer CV: 5 folds
+[2026-03-17 15:28:59] INFO - Inner CV: 4 folds
+[2026-03-17 15:28:59] INFO - Search method: grid
+[2026-03-17 15:28:59] INFO - No normalization applied
+[2026-03-17 15:28:59] INFO - 
+================================================================================
+[2026-03-17 15:28:59] INFO - Dataset: airfoil_self_noise
+[2026-03-17 15:28:59] INFO - ================================================================================
+[2026-03-17 15:28:59] INFO - Total samples: 1503, Features: 5
+[2026-03-17 15:28:59] INFO - Train: 1202, Test: 301
+[2026-03-17 15:28:59] INFO - 
+--- XGBOOST ---
+[2026-03-17 15:28:59] INFO -   Inner CV: 4 folds, 540 param combinations
+[2026-03-17 15:28:59] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 15:29:19] INFO -     [1/540] CV RMSE: 4.4840 (±0.0687)
+[2026-03-17 15:29:19] INFO -     [2/540] CV RMSE: 4.5123 (±0.0684)
+[2026-03-17 15:29:19] INFO -     [3/540] CV RMSE: 4.1920 (±0.0734)
+[2026-03-17 15:29:19] INFO -     [10/540] CV RMSE: 4.2267 (±0.0969)
+[2026-03-17 15:29:19] INFO -     [20/540] CV RMSE: 3.0836 (±0.1482)
+[2026-03-17 15:29:19] INFO -     [30/540] CV RMSE: 2.7324 (±0.1629)
+[2026-03-17 15:29:19] INFO -     [40/540] CV RMSE: 3.7938 (±0.0706)
+[2026-03-17 15:29:19] INFO -     [50/540] CV RMSE: 4.1407 (±0.0921)
+[2026-03-17 15:29:19] INFO -     [60/540] CV RMSE: 2.3315 (±0.1425)
+[2026-03-17 15:29:19] INFO -     [70/540] CV RMSE: 2.4871 (±0.1252)
+[2026-03-17 15:29:19] INFO -     [80/540] CV RMSE: 3.8488 (±0.0722)
+[2026-03-17 15:29:19] INFO -     [90/540] CV RMSE: 3.3096 (±0.0692)
+[2026-03-17 15:29:19] INFO -     [100/540] CV RMSE: 2.1512 (±0.1275)
+[2026-03-17 15:29:19] INFO -     [110/540] CV RMSE: 3.7553 (±0.0805)
+[2026-03-17 15:29:19] INFO -     [120/540] CV RMSE: 3.0581 (±0.0568)
+[2026-03-17 15:29:19] INFO -     [130/540] CV RMSE: 2.0365 (±0.1324)
+[2026-03-17 15:29:19] INFO -     [140/540] CV RMSE: 2.2550 (±0.1294)
+[2026-03-17 15:29:19] INFO -     [150/540] CV RMSE: 3.0006 (±0.0802)
+[2026-03-17 15:29:19] INFO -     [160/540] CV RMSE: 3.0700 (±0.0726)
+[2026-03-17 15:29:19] INFO -     [170/540] CV RMSE: 2.1498 (±0.1310)
+[2026-03-17 15:29:19] INFO -     [180/540] CV RMSE: 2.0603 (±0.1159)
+[2026-03-17 15:29:19] INFO -     [190/540] CV RMSE: 2.6370 (±0.1478)
+[2026-03-17 15:29:19] INFO -     [200/540] CV RMSE: 2.2082 (±0.1613)
+[2026-03-17 15:29:19] INFO -     [210/540] CV RMSE: 2.0186 (±0.1337)
+[2026-03-17 15:29:19] INFO -     [220/540] CV RMSE: 2.2517 (±0.1522)
+[2026-03-17 15:29:19] INFO -     [230/540] CV RMSE: 2.6005 (±0.0987)
+[2026-03-17 15:29:19] INFO -     [240/540] CV RMSE: 1.8944 (±0.1054)
+[2026-03-17 15:29:19] INFO -     [250/540] CV RMSE: 1.9848 (±0.1537)
+[2026-03-17 15:29:19] INFO -     [260/540] CV RMSE: 2.2514 (±0.1433)
+[2026-03-17 15:29:19] INFO -     [270/540] CV RMSE: 2.1612 (±0.0939)
+[2026-03-17 15:29:19] INFO -     [280/540] CV RMSE: 1.8283 (±0.1287)
+[2026-03-17 15:29:19] INFO -     [290/540] CV RMSE: 2.1909 (±0.1040)
+[2026-03-17 15:29:19] INFO -     [300/540] CV RMSE: 1.9174 (±0.1201)
+[2026-03-17 15:29:19] INFO -     [310/540] CV RMSE: 1.7910 (±0.0789)
+[2026-03-17 15:29:19] INFO -     [320/540] CV RMSE: 1.8494 (±0.1567)
+[2026-03-17 15:29:19] INFO -     [330/540] CV RMSE: 1.8930 (±0.1070)
+[2026-03-17 15:29:19] INFO -     [340/540] CV RMSE: 1.9414 (±0.0957)
+[2026-03-17 15:29:19] INFO -     [350/540] CV RMSE: 1.7972 (±0.1176)
+[2026-03-17 15:29:19] INFO -     [360/540] CV RMSE: 1.7902 (±0.1318)
+[2026-03-17 15:29:19] INFO -     [370/540] CV RMSE: 2.2784 (±0.1524)
+[2026-03-17 15:29:19] INFO -     [380/540] CV RMSE: 2.2082 (±0.1167)
+[2026-03-17 15:29:19] INFO -     [390/540] CV RMSE: 2.0003 (±0.1056)
+[2026-03-17 15:29:19] INFO -     [400/540] CV RMSE: 2.0276 (±0.0963)
+[2026-03-17 15:29:19] INFO -     [410/540] CV RMSE: 2.3130 (±0.1496)
+[2026-03-17 15:29:19] INFO -     [420/540] CV RMSE: 1.9031 (±0.0820)
+[2026-03-17 15:29:19] INFO -     [430/540] CV RMSE: 1.8469 (±0.1436)
+[2026-03-17 15:29:19] INFO -     [440/540] CV RMSE: 2.0081 (±0.1244)
+[2026-03-17 15:29:19] INFO -     [450/540] CV RMSE: 1.9986 (±0.0954)
+[2026-03-17 15:29:19] INFO -     [460/540] CV RMSE: 1.7709 (±0.0744)
+[2026-03-17 15:29:19] INFO -     [470/540] CV RMSE: 1.9745 (±0.1205)
+[2026-03-17 15:29:19] INFO -     [480/540] CV RMSE: 1.7824 (±0.0933)
+[2026-03-17 15:29:19] INFO -     [490/540] CV RMSE: 1.7798 (±0.1024)
+[2026-03-17 15:29:19] INFO -     [500/540] CV RMSE: 1.8453 (±0.1667)
+[2026-03-17 15:29:19] INFO -     [510/540] CV RMSE: 1.7759 (±0.0932)
+[2026-03-17 15:29:19] INFO -     [520/540] CV RMSE: 1.8116 (±0.1194)
+[2026-03-17 15:29:19] INFO -     [530/540] CV RMSE: 1.7630 (±0.1534)
+[2026-03-17 15:29:19] INFO -     [540/540] CV RMSE: 1.7264 (±0.1338)
+[2026-03-17 15:29:19] INFO -   Best params: {'learning_rate': 0.05, 'max_depth': 7, 'n_estimators': 800, 'max_bin': 255, 'subsample': 0.8, 'colsample_bytree': 1.0, 'reg_lambda': 1.0, 'min_child_weight': 10}
+[2026-03-17 15:29:19] INFO -   Best CV RMSE: 1.6787
+[2026-03-17 15:29:19] INFO -   Avg early stop rounds: 606
+[2026-03-17 15:29:19] INFO -   Retraining on full train set (n_estimators=606)...
+[2026-03-17 15:29:20] INFO -   Test RMSE: 1.7909, R²: 0.9347
+[2026-03-17 15:29:20] INFO -   Time - Inner CV: 20.2s, Final train: 0.4s, Test: 0.002s
+[2026-03-17 15:29:20] INFO - 
+XGBOOST Summary:
+[2026-03-17 15:29:20] INFO -   Test RMSE: 1.7909
+[2026-03-17 15:29:20] INFO -   Test R²: 0.9347
+[2026-03-17 15:29:20] INFO - 
+--- METAGB ---
+[2026-03-17 15:29:20] INFO -   Inner CV: 4 folds, 1620 param combinations
+[2026-03-17 15:29:20] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 15:29:20] ERROR - Failed on airfoil_self_noise: No module named 'metagb'
+[2026-03-17 15:29:20] ERROR - joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in <listcomp>
+    return [func(*args, **kwargs)
+  File "exp1_bestparams.py", line 170, in _evaluate_single_param
+    result = train_with_early_stopping(
+  File "exp1_bestparams.py", line 114, in train_with_early_stopping
+    from metagb import MetaGBRegressor
+ModuleNotFoundError: No module named 'metagb'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "exp1_bestparams.py", line 459, in run_exp1_bestparams
+    results = run_nested_cv_for_dataset(
+  File "exp1_bestparams.py", line 336, in run_nested_cv_for_dataset
+    best_params, avg_early_stop, best_cv_rmse, all_cv_results = inner_cv_with_hyperparameter_search(
+  File "exp1_bestparams.py", line 218, in inner_cv_with_hyperparameter_search
+    all_cv_results = Parallel(n_jobs=N_JOBS, verbose=0)(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 745, in get_result
+    return self._return_or_raise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 763, in _return_or_raise
+    raise self._result
+ModuleNotFoundError: No module named 'metagb'
+
+[2026-03-17 15:29:20] INFO - 
+================================================================================
+[2026-03-17 15:29:20] INFO - Dataset: Another-Dataset-on-used-Fiat-500
+[2026-03-17 15:29:20] INFO - ================================================================================
+[2026-03-17 15:29:20] INFO - Total samples: 1538, Features: 6
+[2026-03-17 15:29:20] INFO - Train: 1230, Test: 308
+[2026-03-17 15:29:20] INFO - 
+--- XGBOOST ---
+[2026-03-17 15:29:20] INFO -   Inner CV: 4 folds, 540 param combinations
+[2026-03-17 15:29:20] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 15:29:33] INFO -     [1/540] CV RMSE: 863.1290 (±15.0110)
+[2026-03-17 15:29:33] INFO -     [2/540] CV RMSE: 868.0253 (±14.9236)
+[2026-03-17 15:29:33] INFO -     [3/540] CV RMSE: 822.6080 (±17.0364)
+[2026-03-17 15:29:33] INFO -     [10/540] CV RMSE: 828.8134 (±16.0074)
+[2026-03-17 15:29:33] INFO -     [20/540] CV RMSE: 758.9037 (±10.4523)
+[2026-03-17 15:29:33] INFO -     [30/540] CV RMSE: 760.4213 (±13.8064)
+[2026-03-17 15:29:33] INFO -     [40/540] CV RMSE: 822.5495 (±14.7024)
+[2026-03-17 15:29:33] INFO -     [50/540] CV RMSE: 866.1418 (±10.5534)
+[2026-03-17 15:29:33] INFO -     [60/540] CV RMSE: 760.8143 (±12.9304)
+[2026-03-17 15:29:33] INFO -     [70/540] CV RMSE: 767.0696 (±11.7673)
+[2026-03-17 15:29:33] INFO -     [80/540] CV RMSE: 863.9018 (±9.8515)
+[2026-03-17 15:29:33] INFO -     [90/540] CV RMSE: 814.3637 (±18.3013)
+[2026-03-17 15:29:33] INFO -     [100/540] CV RMSE: 761.9877 (±8.1492)
+[2026-03-17 15:29:33] INFO -     [110/540] CV RMSE: 862.3913 (±11.3657)
+[2026-03-17 15:29:33] INFO -     [120/540] CV RMSE: 805.0496 (±17.7683)
+[2026-03-17 15:29:33] INFO -     [130/540] CV RMSE: 753.7922 (±6.1359)
+[2026-03-17 15:29:33] INFO -     [140/540] CV RMSE: 768.2364 (±3.5214)
+[2026-03-17 15:29:33] INFO -     [150/540] CV RMSE: 801.0711 (±15.9258)
+[2026-03-17 15:29:33] INFO -     [160/540] CV RMSE: 826.5272 (±9.8835)
+[2026-03-17 15:29:33] INFO -     [170/540] CV RMSE: 761.2683 (±2.6175)
+[2026-03-17 15:29:33] INFO -     [180/540] CV RMSE: 777.6907 (±8.9903)
+[2026-03-17 15:29:33] INFO -     [190/540] CV RMSE: 762.9289 (±12.1095)
+[2026-03-17 15:29:33] INFO -     [200/540] CV RMSE: 759.6073 (±12.0003)
+[2026-03-17 15:29:33] INFO -     [210/540] CV RMSE: 759.1103 (±14.7097)
+[2026-03-17 15:29:33] INFO -     [220/540] CV RMSE: 759.0456 (±13.3719)
+[2026-03-17 15:29:33] INFO -     [230/540] CV RMSE: 766.0428 (±7.4424)
+[2026-03-17 15:29:33] INFO -     [240/540] CV RMSE: 762.5471 (±10.5889)
+[2026-03-17 15:29:33] INFO -     [250/540] CV RMSE: 767.4298 (±11.0950)
+[2026-03-17 15:29:33] INFO -     [260/540] CV RMSE: 765.6755 (±4.4452)
+[2026-03-17 15:29:33] INFO -     [270/540] CV RMSE: 776.0923 (±16.0649)
+[2026-03-17 15:29:33] INFO -     [280/540] CV RMSE: 764.6283 (±8.3949)
+[2026-03-17 15:29:33] INFO -     [290/540] CV RMSE: 755.4548 (±10.0938)
+[2026-03-17 15:29:33] INFO -     [300/540] CV RMSE: 767.9240 (±8.8009)
+[2026-03-17 15:29:33] INFO -     [310/540] CV RMSE: 761.4310 (±7.1070)
+[2026-03-17 15:29:33] INFO -     [320/540] CV RMSE: 770.2531 (±5.1778)
+[2026-03-17 15:29:33] INFO -     [330/540] CV RMSE: 764.6964 (±5.5227)
+[2026-03-17 15:29:33] INFO -     [340/540] CV RMSE: 770.5265 (±9.5933)
+[2026-03-17 15:29:33] INFO -     [350/540] CV RMSE: 762.7817 (±6.2720)
+[2026-03-17 15:29:33] INFO -     [360/540] CV RMSE: 780.1907 (±12.7468)
+[2026-03-17 15:29:33] INFO -     [370/540] CV RMSE: 766.1708 (±14.0268)
+[2026-03-17 15:29:33] INFO -     [380/540] CV RMSE: 758.9957 (±8.9005)
+[2026-03-17 15:29:33] INFO -     [390/540] CV RMSE: 759.6833 (±12.8174)
+[2026-03-17 15:29:33] INFO -     [400/540] CV RMSE: 765.5418 (±11.2918)
+[2026-03-17 15:29:33] INFO -     [410/540] CV RMSE: 767.0709 (±6.7242)
+[2026-03-17 15:29:33] INFO -     [420/540] CV RMSE: 763.5753 (±10.3078)
+[2026-03-17 15:29:33] INFO -     [430/540] CV RMSE: 767.3839 (±12.6056)
+[2026-03-17 15:29:33] INFO -     [440/540] CV RMSE: 767.2054 (±5.2669)
+[2026-03-17 15:29:33] INFO -     [450/540] CV RMSE: 773.1463 (±13.7323)
+[2026-03-17 15:29:33] INFO -     [460/540] CV RMSE: 775.8955 (±6.0072)
+[2026-03-17 15:29:33] INFO -     [470/540] CV RMSE: 762.3291 (±7.6961)
+[2026-03-17 15:29:33] INFO -     [480/540] CV RMSE: 766.6934 (±14.3370)
+[2026-03-17 15:29:33] INFO -     [490/540] CV RMSE: 767.0670 (±7.0807)
+[2026-03-17 15:29:33] INFO -     [500/540] CV RMSE: 771.0177 (±8.7728)
+[2026-03-17 15:29:33] INFO -     [510/540] CV RMSE: 758.8176 (±5.6589)
+[2026-03-17 15:29:33] INFO -     [520/540] CV RMSE: 773.6623 (±15.7786)
+[2026-03-17 15:29:33] INFO -     [530/540] CV RMSE: 770.8382 (±6.0162)
+[2026-03-17 15:29:33] INFO -     [540/540] CV RMSE: 778.3656 (±8.5220)
+[2026-03-17 15:29:33] INFO -   Best params: {'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 800, 'max_bin': 255, 'subsample': 0.6, 'colsample_bytree': 0.8, 'reg_lambda': 1.0, 'min_child_weight': 10}
+[2026-03-17 15:29:33] INFO -   Best CV RMSE: 752.8603
+[2026-03-17 15:29:33] INFO -   Avg early stop rounds: 449
+[2026-03-17 15:29:33] INFO -   Retraining on full train set (n_estimators=449)...
+[2026-03-17 15:29:33] INFO -   Test RMSE: 774.1522, R²: 0.8546
+[2026-03-17 15:29:33] INFO -   Time - Inner CV: 12.7s, Final train: 0.3s, Test: 0.002s
+[2026-03-17 15:29:33] INFO - 
+XGBOOST Summary:
+[2026-03-17 15:29:33] INFO -   Test RMSE: 774.1522
+[2026-03-17 15:29:33] INFO -   Test R²: 0.8546
+[2026-03-17 15:29:33] INFO - 
+--- METAGB ---
+[2026-03-17 15:29:33] INFO -   Inner CV: 4 folds, 1620 param combinations
+[2026-03-17 15:29:33] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 15:29:34] ERROR - Failed on Another-Dataset-on-used-Fiat-500: No module named 'metagb'
+[2026-03-17 15:29:34] ERROR - joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in <listcomp>
+    return [func(*args, **kwargs)
+  File "exp1_bestparams.py", line 170, in _evaluate_single_param
+    result = train_with_early_stopping(
+  File "exp1_bestparams.py", line 114, in train_with_early_stopping
+    from metagb import MetaGBRegressor
+ModuleNotFoundError: No module named 'metagb'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "exp1_bestparams.py", line 459, in run_exp1_bestparams
+    results = run_nested_cv_for_dataset(
+  File "exp1_bestparams.py", line 336, in run_nested_cv_for_dataset
+    best_params, avg_early_stop, best_cv_rmse, all_cv_results = inner_cv_with_hyperparameter_search(
+  File "exp1_bestparams.py", line 218, in inner_cv_with_hyperparameter_search
+    all_cv_results = Parallel(n_jobs=N_JOBS, verbose=0)(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 745, in get_result
+    return self._return_or_raise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 763, in _return_or_raise
+    raise self._result
+ModuleNotFoundError: No module named 'metagb'
+
+[2026-03-17 15:29:34] INFO - 
+================================================================================
+[2026-03-17 15:29:34] INFO - Dataset: concrete_compressive_strength
+[2026-03-17 15:29:34] INFO - ================================================================================
+[2026-03-17 15:29:34] INFO - Total samples: 1030, Features: 8
+[2026-03-17 15:29:34] INFO - Train: 824, Test: 206
+[2026-03-17 15:29:34] INFO - 
+--- XGBOOST ---
+[2026-03-17 15:29:34] INFO -   Inner CV: 4 folds, 540 param combinations
+[2026-03-17 15:29:34] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 15:30:01] INFO -     [1/540] CV RMSE: 8.8297 (±0.5286)
+[2026-03-17 15:30:01] INFO -     [2/540] CV RMSE: 8.9277 (±0.5379)
+[2026-03-17 15:30:01] INFO -     [3/540] CV RMSE: 8.2104 (±0.4205)
+[2026-03-17 15:30:01] INFO -     [10/540] CV RMSE: 8.3150 (±0.4379)
+[2026-03-17 15:30:01] INFO -     [20/540] CV RMSE: 5.5372 (±0.3762)
+[2026-03-17 15:30:01] INFO -     [30/540] CV RMSE: 5.5093 (±0.3431)
+[2026-03-17 15:30:01] INFO -     [40/540] CV RMSE: 7.5112 (±0.3596)
+[2026-03-17 15:30:01] INFO -     [50/540] CV RMSE: 8.2296 (±0.4274)
+[2026-03-17 15:30:01] INFO -     [60/540] CV RMSE: 5.0965 (±0.3640)
+[2026-03-17 15:30:01] INFO -     [70/540] CV RMSE: 5.1629 (±0.3528)
+[2026-03-17 15:30:01] INFO -     [80/540] CV RMSE: 7.9863 (±0.4275)
+[2026-03-17 15:30:01] INFO -     [90/540] CV RMSE: 6.8018 (±0.1982)
+[2026-03-17 15:30:01] INFO -     [100/540] CV RMSE: 4.8767 (±0.4037)
+[2026-03-17 15:30:01] INFO -     [110/540] CV RMSE: 8.0696 (±0.4449)
+[2026-03-17 15:30:01] INFO -     [120/540] CV RMSE: 6.4969 (±0.2242)
+[2026-03-17 15:30:01] INFO -     [130/540] CV RMSE: 4.7539 (±0.4083)
+[2026-03-17 15:30:01] INFO -     [140/540] CV RMSE: 4.8922 (±0.4886)
+[2026-03-17 15:30:01] INFO -     [150/540] CV RMSE: 6.5648 (±0.2680)
+[2026-03-17 15:30:01] INFO -     [160/540] CV RMSE: 6.6138 (±0.2625)
+[2026-03-17 15:30:01] INFO -     [170/540] CV RMSE: 4.8009 (±0.4896)
+[2026-03-17 15:30:01] INFO -     [180/540] CV RMSE: 5.0681 (±0.2850)
+[2026-03-17 15:30:01] INFO -     [190/540] CV RMSE: 5.3663 (±0.3596)
+[2026-03-17 15:30:01] INFO -     [200/540] CV RMSE: 4.8819 (±0.3974)
+[2026-03-17 15:30:01] INFO -     [210/540] CV RMSE: 4.7953 (±0.2655)
+[2026-03-17 15:30:01] INFO -     [220/540] CV RMSE: 5.0170 (±0.3593)
+[2026-03-17 15:30:01] INFO -     [230/540] CV RMSE: 5.0053 (±0.4537)
+[2026-03-17 15:30:01] INFO -     [240/540] CV RMSE: 4.7050 (±0.3437)
+[2026-03-17 15:30:01] INFO -     [250/540] CV RMSE: 4.8248 (±0.2143)
+[2026-03-17 15:30:01] INFO -     [260/540] CV RMSE: 4.8218 (±0.4262)
+[2026-03-17 15:30:01] INFO -     [270/540] CV RMSE: 5.0285 (±0.2496)
+[2026-03-17 15:30:01] INFO -     [280/540] CV RMSE: 4.6242 (±0.3791)
+[2026-03-17 15:30:01] INFO -     [290/540] CV RMSE: 4.8314 (±0.4436)
+[2026-03-17 15:30:01] INFO -     [300/540] CV RMSE: 4.7606 (±0.3142)
+[2026-03-17 15:30:01] INFO -     [310/540] CV RMSE: 4.6056 (±0.2955)
+[2026-03-17 15:30:01] INFO -     [320/540] CV RMSE: 4.7143 (±0.3960)
+[2026-03-17 15:30:01] INFO -     [330/540] CV RMSE: 4.7607 (±0.3172)
+[2026-03-17 15:30:01] INFO -     [340/540] CV RMSE: 4.7790 (±0.3546)
+[2026-03-17 15:30:01] INFO -     [350/540] CV RMSE: 4.5325 (±0.4246)
+[2026-03-17 15:30:01] INFO -     [360/540] CV RMSE: 4.8699 (±0.2496)
+[2026-03-17 15:30:01] INFO -     [370/540] CV RMSE: 4.9540 (±0.3056)
+[2026-03-17 15:30:01] INFO -     [380/540] CV RMSE: 4.8469 (±0.3202)
+[2026-03-17 15:30:01] INFO -     [390/540] CV RMSE: 4.8353 (±0.3398)
+[2026-03-17 15:30:01] INFO -     [400/540] CV RMSE: 4.8065 (±0.3096)
+[2026-03-17 15:30:01] INFO -     [410/540] CV RMSE: 4.8096 (±0.3944)
+[2026-03-17 15:30:01] INFO -     [420/540] CV RMSE: 4.8758 (±0.3778)
+[2026-03-17 15:30:01] INFO -     [430/540] CV RMSE: 4.7209 (±0.3742)
+[2026-03-17 15:30:01] INFO -     [440/540] CV RMSE: 4.7251 (±0.3867)
+[2026-03-17 15:30:01] INFO -     [450/540] CV RMSE: 4.7698 (±0.2277)
+[2026-03-17 15:30:01] INFO -     [460/540] CV RMSE: 4.5650 (±0.4286)
+[2026-03-17 15:30:01] INFO -     [470/540] CV RMSE: 4.6612 (±0.3655)
+[2026-03-17 15:30:01] INFO -     [480/540] CV RMSE: 4.7507 (±0.2605)
+[2026-03-17 15:30:01] INFO -     [490/540] CV RMSE: 4.6387 (±0.3631)
+[2026-03-17 15:30:01] INFO -     [500/540] CV RMSE: 4.7721 (±0.4061)
+[2026-03-17 15:30:01] INFO -     [510/540] CV RMSE: 4.5883 (±0.2902)
+[2026-03-17 15:30:01] INFO -     [520/540] CV RMSE: 4.7594 (±0.3225)
+[2026-03-17 15:30:01] INFO -     [530/540] CV RMSE: 4.6637 (±0.3773)
+[2026-03-17 15:30:01] INFO -     [540/540] CV RMSE: 4.8258 (±0.3320)
+[2026-03-17 15:30:01] INFO -   Best params: {'learning_rate': 0.05, 'max_depth': 7, 'n_estimators': 800, 'max_bin': 255, 'subsample': 0.8, 'colsample_bytree': 0.8, 'reg_lambda': 1.0, 'min_child_weight': 10}
+[2026-03-17 15:30:01] INFO -   Best CV RMSE: 4.5252
+[2026-03-17 15:30:01] INFO -   Avg early stop rounds: 398
+[2026-03-17 15:30:01] INFO -   Retraining on full train set (n_estimators=398)...
+[2026-03-17 15:30:01] INFO -   Test RMSE: 3.6039, R²: 0.9530
+[2026-03-17 15:30:01] INFO -   Time - Inner CV: 26.6s, Final train: 0.3s, Test: 0.002s
+[2026-03-17 15:30:01] INFO - 
+XGBOOST Summary:
+[2026-03-17 15:30:01] INFO -   Test RMSE: 3.6039
+[2026-03-17 15:30:01] INFO -   Test R²: 0.9530
+[2026-03-17 15:30:01] INFO - 
+--- METAGB ---
+[2026-03-17 15:30:01] INFO -   Inner CV: 4 folds, 1620 param combinations
+[2026-03-17 15:30:01] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 15:30:02] ERROR - Failed on concrete_compressive_strength: No module named 'metagb'
+[2026-03-17 15:30:02] ERROR - joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in <listcomp>
+    return [func(*args, **kwargs)
+  File "exp1_bestparams.py", line 170, in _evaluate_single_param
+    result = train_with_early_stopping(
+  File "exp1_bestparams.py", line 114, in train_with_early_stopping
+    from metagb import MetaGBRegressor
+ModuleNotFoundError: No module named 'metagb'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "exp1_bestparams.py", line 459, in run_exp1_bestparams
+    results = run_nested_cv_for_dataset(
+  File "exp1_bestparams.py", line 336, in run_nested_cv_for_dataset
+    best_params, avg_early_stop, best_cv_rmse, all_cv_results = inner_cv_with_hyperparameter_search(
+  File "exp1_bestparams.py", line 218, in inner_cv_with_hyperparameter_search
+    all_cv_results = Parallel(n_jobs=N_JOBS, verbose=0)(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 745, in get_result
+    return self._return_or_raise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 763, in _return_or_raise
+    raise self._result
+ModuleNotFoundError: No module named 'metagb'
+
+[2026-03-17 15:30:02] INFO - 
+================================================================================
+[2026-03-17 15:30:02] INFO - Dataset: diamonds
+[2026-03-17 15:30:02] INFO - ================================================================================
+[2026-03-17 15:30:02] INFO - Total samples: 53940, Features: 6
+[2026-03-17 15:30:02] INFO - Train: 43152, Test: 10788
+[2026-03-17 15:30:02] INFO - 
+--- XGBOOST ---
+[2026-03-17 15:30:02] INFO -   Inner CV: 4 folds, 540 param combinations
+[2026-03-17 15:30:02] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 15:31:52] INFO -     [1/540] CV RMSE: 1495.7814 (±4.7874)
+[2026-03-17 15:31:52] INFO -     [2/540] CV RMSE: 1495.9677 (±4.8805)
+[2026-03-17 15:31:52] INFO -     [3/540] CV RMSE: 1492.8754 (±5.6229)
+[2026-03-17 15:31:52] INFO -     [10/540] CV RMSE: 1493.6167 (±5.2368)
+[2026-03-17 15:31:52] INFO -     [20/540] CV RMSE: 1370.5170 (±5.6949)
+[2026-03-17 15:31:52] INFO -     [30/540] CV RMSE: 1366.3452 (±7.1154)
+[2026-03-17 15:31:52] INFO -     [40/540] CV RMSE: 1474.3852 (±6.7102)
+[2026-03-17 15:31:52] INFO -     [50/540] CV RMSE: 1478.0972 (±5.8397)
+[2026-03-17 15:31:52] INFO -     [60/540] CV RMSE: 1359.9642 (±7.7474)
+[2026-03-17 15:31:52] INFO -     [70/540] CV RMSE: 1362.1836 (±9.0519)
+[2026-03-17 15:31:52] INFO -     [80/540] CV RMSE: 1466.8728 (±6.6988)
+[2026-03-17 15:31:52] INFO -     [90/540] CV RMSE: 1463.0598 (±8.1014)
+[2026-03-17 15:31:52] INFO -     [100/540] CV RMSE: 1357.0922 (±8.0717)
+[2026-03-17 15:31:52] INFO -     [110/540] CV RMSE: 1460.5979 (±6.8197)
+[2026-03-17 15:31:52] INFO -     [120/540] CV RMSE: 1455.7170 (±8.7680)
+[2026-03-17 15:31:52] INFO -     [130/540] CV RMSE: 1356.0738 (±7.9974)
+[2026-03-17 15:31:52] INFO -     [140/540] CV RMSE: 1357.6370 (±8.0852)
+[2026-03-17 15:31:52] INFO -     [150/540] CV RMSE: 1452.0208 (±8.4618)
+[2026-03-17 15:31:52] INFO -     [160/540] CV RMSE: 1453.0430 (±8.6546)
+[2026-03-17 15:31:52] INFO -     [170/540] CV RMSE: 1355.4865 (±7.8120)
+[2026-03-17 15:31:52] INFO -     [180/540] CV RMSE: 1356.8527 (±7.7523)
+[2026-03-17 15:31:52] INFO -     [190/540] CV RMSE: 1365.9150 (±7.0714)
+[2026-03-17 15:31:52] INFO -     [200/540] CV RMSE: 1365.3661 (±8.5072)
+[2026-03-17 15:31:52] INFO -     [210/540] CV RMSE: 1359.0144 (±9.5689)
+[2026-03-17 15:31:52] INFO -     [220/540] CV RMSE: 1361.7235 (±7.6029)
+[2026-03-17 15:31:52] INFO -     [230/540] CV RMSE: 1363.0885 (±7.8402)
+[2026-03-17 15:31:52] INFO -     [240/540] CV RMSE: 1358.1723 (±8.9478)
+[2026-03-17 15:31:52] INFO -     [250/540] CV RMSE: 1359.6887 (±10.0769)
+[2026-03-17 15:31:52] INFO -     [260/540] CV RMSE: 1359.7772 (±7.0775)
+[2026-03-17 15:31:52] INFO -     [270/540] CV RMSE: 1358.6415 (±7.9385)
+[2026-03-17 15:31:52] INFO -     [280/540] CV RMSE: 1357.5506 (±8.7071)
+[2026-03-17 15:31:52] INFO -     [290/540] CV RMSE: 1359.1362 (±6.9173)
+[2026-03-17 15:31:52] INFO -     [300/540] CV RMSE: 1355.1784 (±8.3809)
+[2026-03-17 15:31:52] INFO -     [310/540] CV RMSE: 1355.9692 (±7.9144)
+[2026-03-17 15:31:52] INFO -     [320/540] CV RMSE: 1358.3332 (±7.8236)
+[2026-03-17 15:31:52] INFO -     [330/540] CV RMSE: 1353.9311 (±7.9029)
+[2026-03-17 15:31:52] INFO -     [340/540] CV RMSE: 1355.2619 (±7.9081)
+[2026-03-17 15:31:52] INFO -     [350/540] CV RMSE: 1357.2366 (±8.1138)
+[2026-03-17 15:31:52] INFO -     [360/540] CV RMSE: 1356.2832 (±8.6692)
+[2026-03-17 15:31:52] INFO -     [370/540] CV RMSE: 1362.2088 (±7.3365)
+[2026-03-17 15:31:52] INFO -     [380/540] CV RMSE: 1364.3172 (±7.1054)
+[2026-03-17 15:31:52] INFO -     [390/540] CV RMSE: 1360.1092 (±9.6735)
+[2026-03-17 15:31:52] INFO -     [400/540] CV RMSE: 1361.7976 (±9.7566)
+[2026-03-17 15:31:52] INFO -     [410/540] CV RMSE: 1360.0438 (±9.5892)
+[2026-03-17 15:31:52] INFO -     [420/540] CV RMSE: 1360.6262 (±7.5054)
+[2026-03-17 15:31:52] INFO -     [430/540] CV RMSE: 1357.7744 (±9.8966)
+[2026-03-17 15:31:52] INFO -     [440/540] CV RMSE: 1360.6758 (±7.6170)
+[2026-03-17 15:31:52] INFO -     [450/540] CV RMSE: 1357.6461 (±9.9244)
+[2026-03-17 15:31:52] INFO -     [460/540] CV RMSE: 1357.9061 (±7.8764)
+[2026-03-17 15:31:52] INFO -     [470/540] CV RMSE: 1360.5056 (±8.4997)
+[2026-03-17 15:31:52] INFO -     [480/540] CV RMSE: 1356.2949 (±8.4773)
+[2026-03-17 15:31:52] INFO -     [490/540] CV RMSE: 1358.8525 (±7.6082)
+[2026-03-17 15:31:52] INFO -     [500/540] CV RMSE: 1359.3077 (±9.0258)
+[2026-03-17 15:31:52] INFO -     [510/540] CV RMSE: 1357.3767 (±8.1105)
+[2026-03-17 15:31:52] INFO -     [520/540] CV RMSE: 1357.1469 (±8.4241)
+[2026-03-17 15:31:52] INFO -     [530/540] CV RMSE: 1359.2152 (±7.7317)
+[2026-03-17 15:31:52] INFO -     [540/540] CV RMSE: 1355.7006 (±8.4255)
+[2026-03-17 15:31:52] INFO -   Best params: {'learning_rate': 0.01, 'max_depth': 7, 'n_estimators': 800, 'max_bin': 255, 'subsample': 0.8, 'colsample_bytree': 1.0, 'reg_lambda': 1.0, 'min_child_weight': 10}
+[2026-03-17 15:31:52] INFO -   Best CV RMSE: 1352.8840
+[2026-03-17 15:31:52] INFO -   Avg early stop rounds: 588
+[2026-03-17 15:31:52] INFO -   Retraining on full train set (n_estimators=588)...
+[2026-03-17 15:31:53] INFO -   Test RMSE: 1297.3077, R²: 0.8918
+[2026-03-17 15:31:53] INFO -   Time - Inner CV: 110.1s, Final train: 0.9s, Test: 0.012s
+[2026-03-17 15:31:53] INFO - 
+XGBOOST Summary:
+[2026-03-17 15:31:53] INFO -   Test RMSE: 1297.3077
+[2026-03-17 15:31:53] INFO -   Test R²: 0.8918
+[2026-03-17 15:31:53] INFO - 
+--- METAGB ---
+[2026-03-17 15:31:53] INFO -   Inner CV: 4 folds, 1620 param combinations
+[2026-03-17 15:31:53] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 15:31:53] ERROR - Failed on diamonds: No module named 'metagb'
+[2026-03-17 15:31:53] ERROR - joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in <listcomp>
+    return [func(*args, **kwargs)
+  File "exp1_bestparams.py", line 170, in _evaluate_single_param
+    result = train_with_early_stopping(
+  File "exp1_bestparams.py", line 114, in train_with_early_stopping
+    from metagb import MetaGBRegressor
+ModuleNotFoundError: No module named 'metagb'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "exp1_bestparams.py", line 459, in run_exp1_bestparams
+    results = run_nested_cv_for_dataset(
+  File "exp1_bestparams.py", line 336, in run_nested_cv_for_dataset
+    best_params, avg_early_stop, best_cv_rmse, all_cv_results = inner_cv_with_hyperparameter_search(
+  File "exp1_bestparams.py", line 218, in inner_cv_with_hyperparameter_search
+    all_cv_results = Parallel(n_jobs=N_JOBS, verbose=0)(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 745, in get_result
+    return self._return_or_raise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 763, in _return_or_raise
+    raise self._result
+ModuleNotFoundError: No module named 'metagb'
+
+[2026-03-17 15:31:53] INFO - 
+================================================================================
+[2026-03-17 15:31:53] INFO - Dataset: Food_Delivery_Time
+[2026-03-17 15:31:53] INFO - ================================================================================
+[2026-03-17 15:31:53] INFO - Total samples: 45451, Features: 6
+[2026-03-17 15:31:53] INFO - Train: 36360, Test: 9091
+[2026-03-17 15:31:53] INFO - 
+--- XGBOOST ---
+[2026-03-17 15:31:53] INFO -   Inner CV: 4 folds, 540 param combinations
+[2026-03-17 15:31:53] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 15:34:00] INFO -     [1/540] CV RMSE: 8.1859 (±0.0790)
+[2026-03-17 15:34:00] INFO -     [2/540] CV RMSE: 8.1865 (±0.0789)
+[2026-03-17 15:34:00] INFO -     [3/540] CV RMSE: 8.1233 (±0.0813)
+[2026-03-17 15:34:00] INFO -     [10/540] CV RMSE: 8.1249 (±0.0809)
+[2026-03-17 15:34:00] INFO -     [20/540] CV RMSE: 7.8609 (±0.0798)
+[2026-03-17 15:34:00] INFO -     [30/540] CV RMSE: 7.8325 (±0.0788)
+[2026-03-17 15:34:00] INFO -     [40/540] CV RMSE: 8.0664 (±0.0800)
+[2026-03-17 15:34:00] INFO -     [50/540] CV RMSE: 8.1358 (±0.0792)
+[2026-03-17 15:34:00] INFO -     [60/540] CV RMSE: 7.7085 (±0.0741)
+[2026-03-17 15:34:00] INFO -     [70/540] CV RMSE: 7.7410 (±0.0722)
+[2026-03-17 15:34:00] INFO -     [80/540] CV RMSE: 8.0957 (±0.0791)
+[2026-03-17 15:34:00] INFO -     [90/540] CV RMSE: 7.9744 (±0.0798)
+[2026-03-17 15:34:00] INFO -     [100/540] CV RMSE: 7.6552 (±0.0711)
+[2026-03-17 15:34:00] INFO -     [110/540] CV RMSE: 8.0551 (±0.0762)
+[2026-03-17 15:34:00] INFO -     [120/540] CV RMSE: 7.9225 (±0.0802)
+[2026-03-17 15:34:00] INFO -     [130/540] CV RMSE: 7.6094 (±0.0677)
+[2026-03-17 15:34:00] INFO -     [140/540] CV RMSE: 7.6335 (±0.0683)
+[2026-03-17 15:34:00] INFO -     [150/540] CV RMSE: 7.8682 (±0.0803)
+[2026-03-17 15:34:00] INFO -     [160/540] CV RMSE: 7.9421 (±0.0823)
+[2026-03-17 15:34:00] INFO -     [170/540] CV RMSE: 7.5980 (±0.0687)
+[2026-03-17 15:34:00] INFO -     [180/540] CV RMSE: 7.6170 (±0.0693)
+[2026-03-17 15:34:00] INFO -     [190/540] CV RMSE: 7.7992 (±0.0765)
+[2026-03-17 15:34:00] INFO -     [200/540] CV RMSE: 7.5945 (±0.0633)
+[2026-03-17 15:34:00] INFO -     [210/540] CV RMSE: 7.5610 (±0.0623)
+[2026-03-17 15:34:00] INFO -     [220/540] CV RMSE: 7.6820 (±0.0740)
+[2026-03-17 15:34:00] INFO -     [230/540] CV RMSE: 7.6971 (±0.0735)
+[2026-03-17 15:34:00] INFO -     [240/540] CV RMSE: 7.5576 (±0.0616)
+[2026-03-17 15:34:00] INFO -     [250/540] CV RMSE: 7.5508 (±0.0605)
+[2026-03-17 15:34:00] INFO -     [260/540] CV RMSE: 7.6366 (±0.0736)
+[2026-03-17 15:34:00] INFO -     [270/540] CV RMSE: 7.6258 (±0.0694)
+[2026-03-17 15:34:00] INFO -     [280/540] CV RMSE: 7.5517 (±0.0658)
+[2026-03-17 15:34:00] INFO -     [290/540] CV RMSE: 7.5999 (±0.0676)
+[2026-03-17 15:34:00] INFO -     [300/540] CV RMSE: 7.5772 (±0.0693)
+[2026-03-17 15:34:00] INFO -     [310/540] CV RMSE: 7.5622 (±0.0599)
+[2026-03-17 15:34:00] INFO -     [320/540] CV RMSE: 7.5621 (±0.0625)
+[2026-03-17 15:34:00] INFO -     [330/540] CV RMSE: 7.5801 (±0.0647)
+[2026-03-17 15:34:00] INFO -     [340/540] CV RMSE: 7.5848 (±0.0661)
+[2026-03-17 15:34:00] INFO -     [350/540] CV RMSE: 7.5761 (±0.0656)
+[2026-03-17 15:34:00] INFO -     [360/540] CV RMSE: 7.5988 (±0.0661)
+[2026-03-17 15:34:00] INFO -     [370/540] CV RMSE: 7.6612 (±0.0668)
+[2026-03-17 15:34:00] INFO -     [380/540] CV RMSE: 7.5743 (±0.0616)
+[2026-03-17 15:34:00] INFO -     [390/540] CV RMSE: 7.5480 (±0.0596)
+[2026-03-17 15:34:00] INFO -     [400/540] CV RMSE: 7.5885 (±0.0676)
+[2026-03-17 15:34:00] INFO -     [410/540] CV RMSE: 7.5917 (±0.0635)
+[2026-03-17 15:34:00] INFO -     [420/540] CV RMSE: 7.5602 (±0.0628)
+[2026-03-17 15:34:00] INFO -     [430/540] CV RMSE: 7.5506 (±0.0581)
+[2026-03-17 15:34:00] INFO -     [440/540] CV RMSE: 7.5632 (±0.0622)
+[2026-03-17 15:34:00] INFO -     [450/540] CV RMSE: 7.5683 (±0.0690)
+[2026-03-17 15:34:00] INFO -     [460/540] CV RMSE: 7.5579 (±0.0609)
+[2026-03-17 15:34:00] INFO -     [470/540] CV RMSE: 7.5810 (±0.0625)
+[2026-03-17 15:34:00] INFO -     [480/540] CV RMSE: 7.5705 (±0.0635)
+[2026-03-17 15:34:00] INFO -     [490/540] CV RMSE: 7.5769 (±0.0707)
+[2026-03-17 15:34:00] INFO -     [500/540] CV RMSE: 7.5650 (±0.0574)
+[2026-03-17 15:34:00] INFO -     [510/540] CV RMSE: 7.5904 (±0.0616)
+[2026-03-17 15:34:00] INFO -     [520/540] CV RMSE: 7.5859 (±0.0675)
+[2026-03-17 15:34:00] INFO -     [530/540] CV RMSE: 7.5844 (±0.0652)
+[2026-03-17 15:34:00] INFO -     [540/540] CV RMSE: 7.6007 (±0.0640)
+[2026-03-17 15:34:00] INFO -   Best params: {'learning_rate': 0.05, 'max_depth': 4, 'n_estimators': 800, 'max_bin': 255, 'subsample': 0.8, 'colsample_bytree': 1.0, 'reg_lambda': 1.0, 'min_child_weight': 10}
+[2026-03-17 15:34:00] INFO -   Best CV RMSE: 7.5417
+[2026-03-17 15:34:00] INFO -   Avg early stop rounds: 614
+[2026-03-17 15:34:00] INFO -   Retraining on full train set (n_estimators=614)...
+[2026-03-17 15:34:01] INFO -   Test RMSE: 7.5217, R²: 0.3451
+[2026-03-17 15:34:01] INFO -   Time - Inner CV: 126.7s, Final train: 0.5s, Test: 0.005s
+[2026-03-17 15:34:01] INFO - 
+XGBOOST Summary:
+[2026-03-17 15:34:01] INFO -   Test RMSE: 7.5217
+[2026-03-17 15:34:01] INFO -   Test R²: 0.3451
+[2026-03-17 15:34:01] INFO - 
+--- METAGB ---
+[2026-03-17 15:34:01] INFO -   Inner CV: 4 folds, 1620 param combinations
+[2026-03-17 15:34:01] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 15:34:01] ERROR - Failed on Food_Delivery_Time: No module named 'metagb'
+[2026-03-17 15:34:01] ERROR - joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in <listcomp>
+    return [func(*args, **kwargs)
+  File "exp1_bestparams.py", line 170, in _evaluate_single_param
+    result = train_with_early_stopping(
+  File "exp1_bestparams.py", line 114, in train_with_early_stopping
+    from metagb import MetaGBRegressor
+ModuleNotFoundError: No module named 'metagb'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "exp1_bestparams.py", line 459, in run_exp1_bestparams
+    results = run_nested_cv_for_dataset(
+  File "exp1_bestparams.py", line 336, in run_nested_cv_for_dataset
+    best_params, avg_early_stop, best_cv_rmse, all_cv_results = inner_cv_with_hyperparameter_search(
+  File "exp1_bestparams.py", line 218, in inner_cv_with_hyperparameter_search
+    all_cv_results = Parallel(n_jobs=N_JOBS, verbose=0)(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 745, in get_result
+    return self._return_or_raise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 763, in _return_or_raise
+    raise self._result
+ModuleNotFoundError: No module named 'metagb'
+
+[2026-03-17 15:34:01] INFO - 
+================================================================================
+[2026-03-17 15:34:01] INFO - Dataset: healthcare_insurance_expenses
+[2026-03-17 15:34:01] INFO - ================================================================================
+[2026-03-17 15:34:01] INFO - Total samples: 1338, Features: 3
+[2026-03-17 15:34:01] INFO - Train: 1070, Test: 268
+[2026-03-17 15:34:01] INFO - 
+--- XGBOOST ---
+[2026-03-17 15:34:01] INFO -   Inner CV: 4 folds, 540 param combinations
+[2026-03-17 15:34:01] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 15:34:08] INFO -     [1/540] CV RMSE: 11895.7192 (±120.7588)
+[2026-03-17 15:34:08] INFO -     [2/540] CV RMSE: 11900.5759 (±122.9414)
+[2026-03-17 15:34:08] INFO -     [3/540] CV RMSE: 11787.5664 (±109.8873)
+[2026-03-17 15:34:08] INFO -     [10/540] CV RMSE: 11809.7998 (±81.5580)
+[2026-03-17 15:34:08] INFO -     [20/540] CV RMSE: 11787.9088 (±120.4027)
+[2026-03-17 15:34:08] INFO -     [30/540] CV RMSE: 11795.8054 (±73.8481)
+[2026-03-17 15:34:08] INFO -     [40/540] CV RMSE: 11804.8123 (±119.2518)
+[2026-03-17 15:34:08] INFO -     [50/540] CV RMSE: 11972.7306 (±75.2059)
+[2026-03-17 15:34:08] INFO -     [60/540] CV RMSE: 11803.6283 (±83.8198)
+[2026-03-17 15:34:08] INFO -     [70/540] CV RMSE: 11882.8630 (±76.7673)
+[2026-03-17 15:34:08] INFO -     [80/540] CV RMSE: 11945.5286 (±87.3404)
+[2026-03-17 15:34:08] INFO -     [90/540] CV RMSE: 11944.2474 (±144.1169)
+[2026-03-17 15:34:08] INFO -     [100/540] CV RMSE: 11846.5468 (±85.0291)
+[2026-03-17 15:34:08] INFO -     [110/540] CV RMSE: 11925.1977 (±107.2513)
+[2026-03-17 15:34:08] INFO -     [120/540] CV RMSE: 11863.4258 (±96.1705)
+[2026-03-17 15:34:08] INFO -     [130/540] CV RMSE: 11823.1967 (±111.5503)
+[2026-03-17 15:34:08] INFO -     [140/540] CV RMSE: 12005.1779 (±82.7601)
+[2026-03-17 15:34:08] INFO -     [150/540] CV RMSE: 11833.5038 (±84.1777)
+[2026-03-17 15:34:08] INFO -     [160/540] CV RMSE: 11929.8611 (±69.5778)
+[2026-03-17 15:34:08] INFO -     [170/540] CV RMSE: 11961.2794 (±96.2112)
+[2026-03-17 15:34:08] INFO -     [180/540] CV RMSE: 11980.8942 (±114.2531)
+[2026-03-17 15:34:08] INFO -     [190/540] CV RMSE: 11777.1527 (±107.8336)
+[2026-03-17 15:34:08] INFO -     [200/540] CV RMSE: 11747.9067 (±132.3522)
+[2026-03-17 15:34:08] INFO -     [210/540] CV RMSE: 11783.0051 (±104.9874)
+[2026-03-17 15:34:08] INFO -     [220/540] CV RMSE: 11740.4098 (±128.6202)
+[2026-03-17 15:34:08] INFO -     [230/540] CV RMSE: 11898.9925 (±88.5128)
+[2026-03-17 15:34:08] INFO -     [240/540] CV RMSE: 11794.2414 (±102.4241)
+[2026-03-17 15:34:08] INFO -     [250/540] CV RMSE: 11904.1422 (±119.4416)
+[2026-03-17 15:34:08] INFO -     [260/540] CV RMSE: 11892.9279 (±90.5464)
+[2026-03-17 15:34:08] INFO -     [270/540] CV RMSE: 11908.0655 (±101.6923)
+[2026-03-17 15:34:08] INFO -     [280/540] CV RMSE: 11812.2398 (±96.4724)
+[2026-03-17 15:34:08] INFO -     [290/540] CV RMSE: 11866.1062 (±99.1938)
+[2026-03-17 15:34:08] INFO -     [300/540] CV RMSE: 11849.7547 (±126.6439)
+[2026-03-17 15:34:08] INFO -     [310/540] CV RMSE: 11798.3127 (±150.1225)
+[2026-03-17 15:34:08] INFO -     [320/540] CV RMSE: 12007.7632 (±87.6788)
+[2026-03-17 15:34:08] INFO -     [330/540] CV RMSE: 11805.5833 (±95.7053)
+[2026-03-17 15:34:08] INFO -     [340/540] CV RMSE: 11929.8914 (±49.5431)
+[2026-03-17 15:34:08] INFO -     [350/540] CV RMSE: 11959.2706 (±97.4352)
+[2026-03-17 15:34:08] INFO -     [360/540] CV RMSE: 11983.0719 (±106.5547)
+[2026-03-17 15:34:08] INFO -     [370/540] CV RMSE: 11790.8369 (±118.4156)
+[2026-03-17 15:34:08] INFO -     [380/540] CV RMSE: 11763.5821 (±104.0840)
+[2026-03-17 15:34:08] INFO -     [390/540] CV RMSE: 11774.1940 (±105.0614)
+[2026-03-17 15:34:08] INFO -     [400/540] CV RMSE: 11786.7049 (±124.1852)
+[2026-03-17 15:34:08] INFO -     [410/540] CV RMSE: 11908.3613 (±103.6567)
+[2026-03-17 15:34:08] INFO -     [420/540] CV RMSE: 11797.7102 (±102.4179)
+[2026-03-17 15:34:08] INFO -     [430/540] CV RMSE: 11890.6985 (±82.0162)
+[2026-03-17 15:34:08] INFO -     [440/540] CV RMSE: 11885.1121 (±101.2334)
+[2026-03-17 15:34:08] INFO -     [450/540] CV RMSE: 11903.8462 (±105.4392)
+[2026-03-17 15:34:08] INFO -     [460/540] CV RMSE: 11859.3549 (±137.8780)
+[2026-03-17 15:34:08] INFO -     [470/540] CV RMSE: 11892.3292 (±118.8823)
+[2026-03-17 15:34:08] INFO -     [480/540] CV RMSE: 11877.2156 (±98.8868)
+[2026-03-17 15:34:08] INFO -     [490/540] CV RMSE: 11812.8356 (±136.9856)
+[2026-03-17 15:34:08] INFO -     [500/540] CV RMSE: 12021.1348 (±108.6015)
+[2026-03-17 15:34:08] INFO -     [510/540] CV RMSE: 11838.5844 (±96.0833)
+[2026-03-17 15:34:08] INFO -     [520/540] CV RMSE: 11962.3505 (±79.2495)
+[2026-03-17 15:34:08] INFO -     [530/540] CV RMSE: 11970.7414 (±93.2942)
+[2026-03-17 15:34:08] INFO -     [540/540] CV RMSE: 11949.3044 (±88.1647)
+[2026-03-17 15:34:08] INFO -   Best params: {'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 200, 'max_bin': 255, 'subsample': 0.6, 'colsample_bytree': 0.8, 'reg_lambda': 0.0, 'min_child_weight': 10}
+[2026-03-17 15:34:08] INFO -   Best CV RMSE: 11715.5117
+[2026-03-17 15:34:08] INFO -   Avg early stop rounds: 56
+[2026-03-17 15:34:08] INFO -   Retraining on full train set (n_estimators=56)...
+[2026-03-17 15:34:08] INFO -   Test RMSE: 9979.9571, R²: 0.0525
+[2026-03-17 15:34:08] INFO -   Time - Inner CV: 6.6s, Final train: 0.0s, Test: 0.001s
+[2026-03-17 15:34:08] INFO - 
+XGBOOST Summary:
+[2026-03-17 15:34:08] INFO -   Test RMSE: 9979.9571
+[2026-03-17 15:34:08] INFO -   Test R²: 0.0525
+[2026-03-17 15:34:08] INFO - 
+--- METAGB ---
+[2026-03-17 15:34:08] INFO -   Inner CV: 4 folds, 1620 param combinations
+[2026-03-17 15:34:08] INFO -   Starting hyperparameter search (n_jobs=-1)...
+[2026-03-17 15:34:09] ERROR - Failed on healthcare_insurance_expenses: No module named 'metagb'
+[2026-03-17 15:34:09] ERROR - joblib.externals.loky.process_executor._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 463, in _process_worker
+    r = call_item()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/externals/loky/process_executor.py", line 291, in __call__
+    return self.fn(*self.args, **self.kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in __call__
+    return [func(*args, **kwargs)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 598, in <listcomp>
+    return [func(*args, **kwargs)
+  File "exp1_bestparams.py", line 170, in _evaluate_single_param
+    result = train_with_early_stopping(
+  File "exp1_bestparams.py", line 114, in train_with_early_stopping
+    from metagb import MetaGBRegressor
+ModuleNotFoundError: No module named 'metagb'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "exp1_bestparams.py", line 459, in run_exp1_bestparams
+    results = run_nested_cv_for_dataset(
+  File "exp1_bestparams.py", line 336, in run_nested_cv_for_dataset
+    best_params, avg_early_stop, best_cv_rmse, all_cv_results = inner_cv_with_hyperparameter_search(
+  File "exp1_bestparams.py", line 218, in inner_cv_with_hyperparameter_search
+    all_cv_results = Parallel(n_jobs=N_JOBS, verbose=0)(
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 2007, in __call__
+    return output if self.return_generator else list(output)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1650, in _get_outputs
+    yield from self._retrieve()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1754, in _retrieve
+    self._raise_error_fast()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 1789, in _raise_error_fast
+    error_job.get_result(self.timeout)
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 745, in get_result
+    return self._return_or_raise()
+  File "/home/admin/anaconda3/envs/llm/lib/python3.8/site-packages/joblib/parallel.py", line 763, in _return_or_raise
+    raise self._result
+ModuleNotFoundError: No module named 'metagb'
+
+[2026-03-17 15:34:09] INFO - 
+================================================================================
+[2026-03-17 15:34:09] INFO - Dataset: houses
+[2026-03-17 15:34:09] INFO - ================================================================================
+[2026-03-17 15:34:09] INFO - Total samples: 20640, Features: 8
+[2026-03-17 15:34:09] INFO - Train: 16512, Test: 4128
+[2026-03-17 15:34:09] INFO - 
+--- XGBOOST ---
+[2026-03-17 15:34:09] INFO -   Inner CV: 4 folds, 540 param combinations
+[2026-03-17 15:34:09] INFO -   Starting hyperparameter search (n_jobs=-1)...

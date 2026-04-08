@@ -1,0 +1,107 @@
+================================================================================
+Exp1 BestParams: XGBOOST - wine_quality - Fold 1/1
+================================================================================
+
+[2026-03-18 21:32:12] Configuration
+----------------------------------------
+Dataset: wine_quality
+Model: XGBOOST
+Outer Fold: 1/1
+Inner CV Folds: 4
+Train Samples: 5197
+Test Samples: 1300
+Features: 11
+Normalization: None
+
+[2026-03-18 21:32:12] Parameter Grid
+----------------------------------------
+  learning_rate: [0.01, 0.05, 0.1]
+  max_depth: [3, 4, 6, 8]
+  n_estimators: [200, 400, 600, 800]
+  max_bin: [255]
+  subsample: [0.7, 0.8, 0.9, 1.0]
+  colsample_bytree: [0.7, 0.8, 0.9, 1.0]
+  reg_lambda: [0.0, 1.0]
+  min_child_weight: [10]
+Total combinations: 1536
+
+[2026-03-18 21:32:12] Best Parameters (Inner CV)
+----------------------------------------
+  learning_rate: 0.05
+  max_depth: 8
+  n_estimators: 600
+  max_bin: 255
+  subsample: 0.9
+  colsample_bytree: 0.7
+  reg_lambda: 0.0
+  min_child_weight: 10
+Best CV RMSE: 0.624809
+Avg Early Stop Rounds: 600
+
+[2026-03-18 21:32:12] Test Results (Outer Fold)
+----------------------------------------
+Test RMSE: 0.599622
+Test MAE: 0.413051
+Test R²: 0.519382
+
+[2026-03-18 21:32:12] Time Statistics
+----------------------------------------
+Inner CV Time: 175.57s
+Final Train Time: 0.73s
+Test Time: 0.0040s
+Total Time: 176.30s
+
+[2026-03-18 21:32:12] Top 10 Inner CV Results
+----------------------------------------
+
+#1 CV RMSE: 0.624809 (±0.026127)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 600, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.7, 'reg_lambda': 0.0, 'min_child_weight': 10}
+   Avg Early Stop: 600
+   Train Time: 3.51s
+
+#2 CV RMSE: 0.624861 (±0.024359)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 600, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.8, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 600
+   Train Time: 3.27s
+
+#3 CV RMSE: 0.624960 (±0.026796)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 400, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.7, 'reg_lambda': 0.0, 'min_child_weight': 10}
+   Avg Early Stop: 400
+   Train Time: 2.31s
+
+#4 CV RMSE: 0.625064 (±0.024367)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 800, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.8, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 800
+   Train Time: 5.27s
+
+#5 CV RMSE: 0.625155 (±0.026020)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 800, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.7, 'reg_lambda': 0.0, 'min_child_weight': 10}
+   Avg Early Stop: 800
+   Train Time: 4.01s
+
+#6 CV RMSE: 0.625376 (±0.026598)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 600, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.7, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 600
+   Train Time: 3.53s
+
+#7 CV RMSE: 0.625676 (±0.023789)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 600, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.9, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 600
+   Train Time: 3.55s
+
+#8 CV RMSE: 0.625815 (±0.021686)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 600, 'max_bin': 255, 'subsample': 1.0, 'colsample_bytree': 0.7, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 600
+   Train Time: 3.22s
+
+#9 CV RMSE: 0.625949 (±0.023903)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 600, 'max_bin': 255, 'subsample': 1.0, 'colsample_bytree': 0.7, 'reg_lambda': 0.0, 'min_child_weight': 10}
+   Avg Early Stop: 600
+   Train Time: 3.20s
+
+#10 CV RMSE: 0.626030 (±0.024806)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 400, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.8, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 400
+   Train Time: 2.26s
+
+================================================================================

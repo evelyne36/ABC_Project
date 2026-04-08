@@ -1,0 +1,28 @@
+{
+  "dataset": "diamonds",
+  "model": "metagb",
+  "pred_feature_fraction": 0.2,
+  "inner_k": 4,
+  "best_params": {
+    "learning_rate": 0.01,
+    "max_depth": 6,
+    "n_estimators": 800,
+    "max_bin": 255,
+    "subsample": 0.7,
+    "colsample_bytree": 0.8,
+    "version": 3,
+    "min_data_in_leaf": 10,
+    "pred_feature_fraction": 0.2
+  },
+  "cv_rmse": 1355.541211159175,
+  "summary": {
+    "Dataset": "diamonds",
+    "Model": "METAGB",
+    "pred_feature_fraction": 0.2,
+    "Inner_K": 4,
+    "Test_RMSE": 1302.3236853134038,
+    "Test_MAE": 747.9348612200513,
+    "Test_R2": 0.891008566644511,
+    "Train_Time": 878.9923799037933
+  }
+}

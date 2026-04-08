@@ -1,0 +1,28 @@
+{
+  "dataset": "Another-Dataset-on-used-Fiat-500",
+  "model": "metagb",
+  "pred_feature_fraction": 0.2,
+  "inner_k": 4,
+  "best_params": {
+    "learning_rate": 0.01,
+    "max_depth": 4,
+    "n_estimators": 800,
+    "max_bin": 255,
+    "subsample": 1.0,
+    "colsample_bytree": 0.7,
+    "version": 3,
+    "min_data_in_leaf": 10,
+    "pred_feature_fraction": 0.2
+  },
+  "cv_rmse": 759.2890141945602,
+  "summary": {
+    "Dataset": "Another-Dataset-on-used-Fiat-500",
+    "Model": "METAGB",
+    "pred_feature_fraction": 0.2,
+    "Inner_K": 4,
+    "Test_RMSE": 771.7430023486818,
+    "Test_MAE": 590.9219963185734,
+    "Test_R2": 0.855491313763722,
+    "Train_Time": 43.19595789909363
+  }
+}

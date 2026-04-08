@@ -1,0 +1,25 @@
+{
+  "dataset": "healthcare_insurance_expenses",
+  "model": "xgboost",
+  "inner_k": 4,
+  "best_params": {
+    "learning_rate": 0.01,
+    "max_depth": 6,
+    "n_estimators": 200,
+    "max_bin": 255,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 0.0,
+    "min_child_weight": 10
+  },
+  "cv_rmse": 0.3264891803264618,
+  "summary": {
+    "Dataset": "healthcare_insurance_expenses",
+    "Model": "XGBOOST",
+    "Inner_K": 4,
+    "Test_RMSE": 0.3497742712497711,
+    "Test_MAE": 0.2539002001285553,
+    "Test_R2": 0.2693859153310486,
+    "Train_Time": 67.95852208137512
+  }
+}

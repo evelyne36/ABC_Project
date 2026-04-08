@@ -1,0 +1,25 @@
+{
+  "dataset": "concrete_compressive_strength",
+  "model": "xgboost",
+  "inner_k": 4,
+  "best_params": {
+    "learning_rate": 0.05,
+    "max_depth": 6,
+    "n_estimators": 800,
+    "max_bin": 255,
+    "subsample": 0.7,
+    "colsample_bytree": 0.9,
+    "reg_lambda": 0.0,
+    "min_child_weight": 10
+  },
+  "cv_rmse": 4.464391372438956,
+  "summary": {
+    "Dataset": "concrete_compressive_strength",
+    "Model": "XGBOOST",
+    "Inner_K": 4,
+    "Test_RMSE": 3.3972857295930563,
+    "Test_MAE": 2.3884853640335084,
+    "Test_R2": 0.9582513191626656,
+    "Train_Time": 80.14071559906006
+  }
+}

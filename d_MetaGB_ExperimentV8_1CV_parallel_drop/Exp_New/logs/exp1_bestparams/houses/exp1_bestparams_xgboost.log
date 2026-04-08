@@ -1,0 +1,107 @@
+================================================================================
+Exp1 BestParams: XGBOOST - houses - Fold 1/1
+================================================================================
+
+[2026-03-18 09:56:41] Configuration
+----------------------------------------
+Dataset: houses
+Model: XGBOOST
+Outer Fold: 1/1
+Inner CV Folds: 4
+Train Samples: 16512
+Test Samples: 4128
+Features: 8
+Normalization: None
+
+[2026-03-18 09:56:41] Parameter Grid
+----------------------------------------
+  learning_rate: [0.01, 0.05, 0.1]
+  max_depth: [3, 4, 6, 8]
+  n_estimators: [200, 400, 600, 800]
+  max_bin: [255]
+  subsample: [0.7, 0.8, 0.9, 1.0]
+  colsample_bytree: [0.7, 0.8, 0.9, 1.0]
+  reg_lambda: [0.0, 1.0]
+  min_child_weight: [10]
+Total combinations: 1536
+
+[2026-03-18 09:56:41] Best Parameters (Inner CV)
+----------------------------------------
+  learning_rate: 0.05
+  max_depth: 8
+  n_estimators: 600
+  max_bin: 255
+  subsample: 0.9
+  colsample_bytree: 0.8
+  reg_lambda: 1.0
+  min_child_weight: 10
+Best CV RMSE: 0.221781
+Avg Early Stop Rounds: 600
+
+[2026-03-18 09:56:41] Test Results (Outer Fold)
+----------------------------------------
+Test RMSE: 0.205337
+Test MAE: 0.141744
+Test R²: 0.869905
+
+[2026-03-18 09:56:41] Time Statistics
+----------------------------------------
+Inner CV Time: 355.80s
+Final Train Time: 0.89s
+Test Time: 0.0073s
+Total Time: 356.69s
+
+[2026-03-18 09:56:41] Top 10 Inner CV Results
+----------------------------------------
+
+#1 CV RMSE: 0.221781 (±0.003752)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 600, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.8, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 600
+   Train Time: 7.62s
+
+#2 CV RMSE: 0.221888 (±0.003207)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 600, 'max_bin': 255, 'subsample': 0.8, 'colsample_bytree': 0.8, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 600
+   Train Time: 7.55s
+
+#3 CV RMSE: 0.221913 (±0.002837)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 800, 'max_bin': 255, 'subsample': 0.8, 'colsample_bytree': 0.8, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 800
+   Train Time: 9.94s
+
+#4 CV RMSE: 0.221930 (±0.003060)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 600, 'max_bin': 255, 'subsample': 0.8, 'colsample_bytree': 0.8, 'reg_lambda': 0.0, 'min_child_weight': 10}
+   Avg Early Stop: 600
+   Train Time: 7.50s
+
+#5 CV RMSE: 0.222049 (±0.003665)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 800, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.8, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 800
+   Train Time: 10.40s
+
+#6 CV RMSE: 0.222085 (±0.003774)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 800, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.7, 'reg_lambda': 0.0, 'min_child_weight': 10}
+   Avg Early Stop: 800
+   Train Time: 9.19s
+
+#7 CV RMSE: 0.222138 (±0.003857)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 600, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.7, 'reg_lambda': 0.0, 'min_child_weight': 10}
+   Avg Early Stop: 600
+   Train Time: 6.19s
+
+#8 CV RMSE: 0.222164 (±0.003384)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 600, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.7, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 600
+   Train Time: 7.23s
+
+#9 CV RMSE: 0.222190 (±0.002911)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 800, 'max_bin': 255, 'subsample': 0.8, 'colsample_bytree': 0.8, 'reg_lambda': 0.0, 'min_child_weight': 10}
+   Avg Early Stop: 800
+   Train Time: 9.92s
+
+#10 CV RMSE: 0.222196 (±0.003190)
+   Params: {'learning_rate': 0.05, 'max_depth': 8, 'n_estimators': 800, 'max_bin': 255, 'subsample': 0.9, 'colsample_bytree': 0.7, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 800
+   Train Time: 9.41s
+
+================================================================================

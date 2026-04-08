@@ -1,0 +1,28 @@
+{
+  "dataset": "wine_quality",
+  "model": "metagb",
+  "pred_feature_fraction": 0.2,
+  "inner_k": 4,
+  "best_params": {
+    "learning_rate": 0.01,
+    "max_depth": 8,
+    "n_estimators": 800,
+    "max_bin": 255,
+    "subsample": 0.7,
+    "colsample_bytree": 0.8,
+    "version": 3,
+    "min_data_in_leaf": 10,
+    "pred_feature_fraction": 0.2
+  },
+  "cv_rmse": 0.07790450216492248,
+  "summary": {
+    "Dataset": "wine_quality",
+    "Model": "METAGB",
+    "pred_feature_fraction": 0.2,
+    "Inner_K": 4,
+    "Test_RMSE": 0.063642341472897,
+    "Test_MAE": 0.018142176927251546,
+    "Test_R2": 0.9779861084581845,
+    "Train_Time": 775.8896415233612
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "dataset": "miami_housing",
+  "model": "metagb",
+  "pred_feature_fraction": 0.2,
+  "inner_k": 4,
+  "best_params": {
+    "learning_rate": 0.01,
+    "max_depth": 6,
+    "n_estimators": 800,
+    "max_bin": 255,
+    "subsample": 0.7,
+    "colsample_bytree": 1.0,
+    "version": 3,
+    "min_data_in_leaf": 10,
+    "pred_feature_fraction": 0.2
+  },
+  "cv_rmse": 88681.04108451877,
+  "summary": {
+    "Dataset": "miami_housing",
+    "Model": "METAGB",
+    "pred_feature_fraction": 0.2,
+    "Inner_K": 4,
+    "Test_RMSE": 84950.92056280805,
+    "Test_MAE": 43269.30659989714,
+    "Test_R2": 0.932382411730855,
+    "Train_Time": 1777.5679714679718
+  }
+}

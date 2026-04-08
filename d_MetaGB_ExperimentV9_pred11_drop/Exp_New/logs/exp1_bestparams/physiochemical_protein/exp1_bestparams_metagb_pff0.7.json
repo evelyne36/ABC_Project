@@ -1,0 +1,28 @@
+{
+  "dataset": "physiochemical_protein",
+  "model": "metagb",
+  "pred_feature_fraction": 0.7,
+  "inner_k": 4,
+  "best_params": {
+    "learning_rate": 0.1,
+    "max_depth": 8,
+    "n_estimators": 800,
+    "max_bin": 255,
+    "subsample": 0.9,
+    "colsample_bytree": 1.0,
+    "version": 3,
+    "min_data_in_leaf": 10,
+    "pred_feature_fraction": 0.7
+  },
+  "cv_rmse": 3.5821132754871616,
+  "summary": {
+    "Dataset": "physiochemical_protein",
+    "Model": "METAGB",
+    "pred_feature_fraction": 0.7,
+    "Inner_K": 4,
+    "Test_RMSE": 3.429933503408015,
+    "Test_MAE": 2.29532884906615,
+    "Test_R2": 0.6862567559162813,
+    "Train_Time": 1807.7930145263672
+  }
+}

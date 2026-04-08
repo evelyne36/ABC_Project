@@ -1,0 +1,26 @@
+{
+  "dataset": "houses",
+  "model": "xgboost",
+  "inner_k": 4,
+  "best_params": {
+    "learning_rate": 0.1,
+    "max_depth": 8,
+    "n_estimators": 400,
+    "max_bin": 255,
+    "subsample": 0.9,
+    "colsample_bytree": 0.8,
+    "reg_lambda": 1.0,
+    "min_child_weight": 10
+  },
+  "cv_rmse": 0.2230542781715743,
+  "summary": {
+    "Dataset": "houses",
+    "Model": "XGBOOST",
+    "pred_feature_fraction": null,
+    "Inner_K": 4,
+    "Test_RMSE": 0.20597097448145185,
+    "Test_MAE": 0.14230593573135636,
+    "Test_R2": 0.8691012369866411,
+    "Train_Time": 800.52299284935
+  }
+}

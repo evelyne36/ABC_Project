@@ -1,0 +1,126 @@
+[2026-03-31 19:06:33] INFO - ================================================================================
+[2026-03-31 19:06:33] INFO - Experiment: pred_feature_fraction Impact Study
+[2026-03-31 19:06:33] INFO - ================================================================================
+[2026-03-31 19:06:33] INFO - Fixed params (except n_estimators): {'learning_rate': [0.01, 0.1], 'max_depth': [4, 6, 8], 'subsample': [0.8, 1.0], 'colsample_bytree': [0.8, 1.0]}
+[2026-03-31 19:06:33] INFO - n_estimators search space: [200, 400, 600, 800]
+[2026-03-31 19:06:33] INFO - pred_feature_fraction values: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+[2026-03-31 19:06:33] INFO - 
+================================================================================
+[2026-03-31 19:06:33] INFO - Dataset: airfoil_self_noise
+[2026-03-31 19:06:33] INFO - ================================================================================
+[2026-03-31 19:06:33] INFO - Total samples: 1503, Features: 5
+[2026-03-31 19:06:33] INFO - Train: 901, Val: 301, Test: 301
+[2026-03-31 19:06:33] INFO - Testing 24 hyperparameter combinations
+[2026-03-31 19:06:33] INFO - Each with 1 XGBoost + 11 MetaGB variants
+[2026-03-31 19:10:06] INFO - 
+Results saved to: /home/admin/MyProject5/d_MetaGB_ExperimentV9_pS_OneHotFixed/Exp_New/results/pred_fraction_study/airfoil_self_noise_pred_fraction_study.csv
+[2026-03-31 19:10:06] INFO - Total experiments: 288
+[2026-03-31 19:10:06] INFO - 
+================================================================================
+[2026-03-31 19:10:06] INFO - Summary Statistics
+[2026-03-31 19:10:06] INFO - ================================================================================
+[2026-03-31 19:10:06] INFO - 
+XGBoost: Mean Test RMSE = 2.1285
+[2026-03-31 19:10:06] INFO - MetaGB (pred=0.0): Mean Test RMSE = 2.0491
+[2026-03-31 19:10:06] INFO - MetaGB (pred=0.1): Mean Test RMSE = 2.0227
+[2026-03-31 19:10:06] INFO - MetaGB (pred=0.2): Mean Test RMSE = 2.0103
+[2026-03-31 19:10:06] INFO - MetaGB (pred=0.3): Mean Test RMSE = 1.9943
+[2026-03-31 19:10:06] INFO - MetaGB (pred=0.4): Mean Test RMSE = 1.9547
+[2026-03-31 19:10:06] INFO - MetaGB (pred=0.5): Mean Test RMSE = 1.9216
+[2026-03-31 19:10:06] INFO - MetaGB (pred=0.6): Mean Test RMSE = 1.9020
+[2026-03-31 19:10:06] INFO - MetaGB (pred=0.7): Mean Test RMSE = 1.9285
+[2026-03-31 19:10:06] INFO - MetaGB (pred=0.8): Mean Test RMSE = 1.9997
+[2026-03-31 19:10:06] INFO - MetaGB (pred=0.9): Mean Test RMSE = 2.0026
+[2026-03-31 19:10:06] INFO - MetaGB (pred=1.0): Mean Test RMSE = 2.0855
+[2026-03-31 19:10:06] INFO - 
+================================================================================
+[2026-03-31 19:10:06] INFO - Dataset: Another-Dataset-on-used-Fiat-500
+[2026-03-31 19:10:06] INFO - ================================================================================
+[2026-03-31 19:10:06] INFO - Total samples: 1538, Features: 8
+[2026-03-31 19:10:06] INFO - Train: 922, Val: 308, Test: 308
+[2026-03-31 19:10:06] INFO - Testing 24 hyperparameter combinations
+[2026-03-31 19:10:06] INFO - Each with 1 XGBoost + 11 MetaGB variants
+[2026-03-31 19:13:25] INFO - 
+Results saved to: /home/admin/MyProject5/d_MetaGB_ExperimentV9_pS_OneHotFixed/Exp_New/results/pred_fraction_study/Another-Dataset-on-used-Fiat-500_pred_fraction_study.csv
+[2026-03-31 19:13:25] INFO - Total experiments: 288
+[2026-03-31 19:13:25] INFO - 
+================================================================================
+[2026-03-31 19:13:25] INFO - Summary Statistics
+[2026-03-31 19:13:25] INFO - ================================================================================
+[2026-03-31 19:13:25] INFO - 
+XGBoost: Mean Test RMSE = 0.2055
+[2026-03-31 19:13:25] INFO - MetaGB (pred=0.0): Mean Test RMSE = 0.2027
+[2026-03-31 19:13:25] INFO - MetaGB (pred=0.1): Mean Test RMSE = 0.2025
+[2026-03-31 19:13:25] INFO - MetaGB (pred=0.2): Mean Test RMSE = 0.2016
+[2026-03-31 19:13:25] INFO - MetaGB (pred=0.3): Mean Test RMSE = 0.2009
+[2026-03-31 19:13:25] INFO - MetaGB (pred=0.4): Mean Test RMSE = 0.2019
+[2026-03-31 19:13:25] INFO - MetaGB (pred=0.5): Mean Test RMSE = 0.2001
+[2026-03-31 19:13:25] INFO - MetaGB (pred=0.6): Mean Test RMSE = 0.2001
+[2026-03-31 19:13:25] INFO - MetaGB (pred=0.7): Mean Test RMSE = 0.2012
+[2026-03-31 19:13:25] INFO - MetaGB (pred=0.8): Mean Test RMSE = 0.2006
+[2026-03-31 19:13:25] INFO - MetaGB (pred=0.9): Mean Test RMSE = 0.2009
+[2026-03-31 19:13:25] INFO - MetaGB (pred=1.0): Mean Test RMSE = 0.2013
+[2026-03-31 19:13:25] INFO - 
+================================================================================
+[2026-03-31 19:13:25] INFO - Dataset: concrete_compressive_strength
+[2026-03-31 19:13:25] INFO - ================================================================================
+[2026-03-31 19:13:25] INFO - Total samples: 1030, Features: 8
+[2026-03-31 19:13:25] INFO - Train: 618, Val: 206, Test: 206
+[2026-03-31 19:13:25] INFO - Testing 24 hyperparameter combinations
+[2026-03-31 19:13:25] INFO - Each with 1 XGBoost + 11 MetaGB variants
+[2026-03-31 19:17:33] INFO - 
+Results saved to: /home/admin/MyProject5/d_MetaGB_ExperimentV9_pS_OneHotFixed/Exp_New/results/pred_fraction_study/concrete_compressive_strength_pred_fraction_study.csv
+[2026-03-31 19:17:33] INFO - Total experiments: 288
+[2026-03-31 19:17:33] INFO - 
+================================================================================
+[2026-03-31 19:17:33] INFO - Summary Statistics
+[2026-03-31 19:17:33] INFO - ================================================================================
+[2026-03-31 19:17:33] INFO - 
+XGBoost: Mean Test RMSE = 4.1284
+[2026-03-31 19:17:33] INFO - MetaGB (pred=0.0): Mean Test RMSE = 4.0531
+[2026-03-31 19:17:33] INFO - MetaGB (pred=0.1): Mean Test RMSE = 3.9721
+[2026-03-31 19:17:33] INFO - MetaGB (pred=0.2): Mean Test RMSE = 3.9333
+[2026-03-31 19:17:33] INFO - MetaGB (pred=0.3): Mean Test RMSE = 3.9297
+[2026-03-31 19:17:33] INFO - MetaGB (pred=0.4): Mean Test RMSE = 3.8800
+[2026-03-31 19:17:33] INFO - MetaGB (pred=0.5): Mean Test RMSE = 3.9028
+[2026-03-31 19:17:33] INFO - MetaGB (pred=0.6): Mean Test RMSE = 4.0678
+[2026-03-31 19:17:33] INFO - MetaGB (pred=0.7): Mean Test RMSE = 4.1567
+[2026-03-31 19:17:33] INFO - MetaGB (pred=0.8): Mean Test RMSE = 4.3428
+[2026-03-31 19:17:33] INFO - MetaGB (pred=0.9): Mean Test RMSE = 4.4884
+[2026-03-31 19:17:33] INFO - MetaGB (pred=1.0): Mean Test RMSE = 4.8476
+[2026-03-31 19:17:33] INFO - 
+================================================================================
+[2026-03-31 19:17:33] INFO - Dataset: diamonds
+[2026-03-31 19:17:33] INFO - ================================================================================
+[2026-03-31 19:17:33] INFO - Total samples: 53940, Features: 23
+[2026-03-31 19:17:33] INFO - Train: 32364, Val: 10788, Test: 10788
+[2026-03-31 19:17:33] INFO - Testing 24 hyperparameter combinations
+[2026-03-31 19:17:33] INFO - Each with 1 XGBoost + 11 MetaGB variants
+[2026-04-01 01:12:28] INFO - 
+Results saved to: /home/admin/MyProject5/d_MetaGB_ExperimentV9_pS_OneHotFixed/Exp_New/results/pred_fraction_study/diamonds_pred_fraction_study.csv
+[2026-04-01 01:12:28] INFO - Total experiments: 288
+[2026-04-01 01:12:28] INFO - 
+================================================================================
+[2026-04-01 01:12:28] INFO - Summary Statistics
+[2026-04-01 01:12:28] INFO - ================================================================================
+[2026-04-01 01:12:28] INFO - 
+XGBoost: Mean Test RMSE = 0.0557
+[2026-04-01 01:12:28] INFO - MetaGB (pred=0.0): Mean Test RMSE = 0.0549
+[2026-04-01 01:12:28] INFO - MetaGB (pred=0.1): Mean Test RMSE = 0.0539
+[2026-04-01 01:12:28] INFO - MetaGB (pred=0.2): Mean Test RMSE = 0.0539
+[2026-04-01 01:12:28] INFO - MetaGB (pred=0.3): Mean Test RMSE = 0.0542
+[2026-04-01 01:12:28] INFO - MetaGB (pred=0.4): Mean Test RMSE = 0.0542
+[2026-04-01 01:12:28] INFO - MetaGB (pred=0.5): Mean Test RMSE = 0.0545
+[2026-04-01 01:12:28] INFO - MetaGB (pred=0.6): Mean Test RMSE = 0.0547
+[2026-04-01 01:12:28] INFO - MetaGB (pred=0.7): Mean Test RMSE = 0.0550
+[2026-04-01 01:12:28] INFO - MetaGB (pred=0.8): Mean Test RMSE = 0.0550
+[2026-04-01 01:12:28] INFO - MetaGB (pred=0.9): Mean Test RMSE = 0.0556
+[2026-04-01 01:12:28] INFO - MetaGB (pred=1.0): Mean Test RMSE = 0.0554
+[2026-04-01 01:12:28] INFO - 
+================================================================================
+[2026-04-01 01:12:28] INFO - Dataset: Food_Delivery_Time
+[2026-04-01 01:12:28] INFO - ================================================================================
+[2026-04-01 01:12:30] INFO - Total samples: 45451, Features: 1331
+[2026-04-01 01:12:54] INFO - Train: 27270, Val: 9090, Test: 9091
+[2026-04-01 01:12:54] INFO - Testing 24 hyperparameter combinations
+[2026-04-01 01:12:54] INFO - Each with 1 XGBoost + 11 MetaGB variants

@@ -1,0 +1,28 @@
+{
+  "dataset": "healthcare_insurance_expenses",
+  "model": "metagb",
+  "pred_feature_fraction": 0.2,
+  "inner_k": 4,
+  "best_params": {
+    "learning_rate": 0.01,
+    "max_depth": 6,
+    "n_estimators": 400,
+    "max_bin": 255,
+    "subsample": 0.8,
+    "colsample_bytree": 1.0,
+    "version": 3,
+    "min_data_in_leaf": 10,
+    "pred_feature_fraction": 0.2
+  },
+  "cv_rmse": 0.3268599944498688,
+  "summary": {
+    "Dataset": "healthcare_insurance_expenses",
+    "Model": "METAGB",
+    "pred_feature_fraction": 0.2,
+    "Inner_K": 4,
+    "Test_RMSE": 0.3521142395592503,
+    "Test_MAE": 0.24640030083877812,
+    "Test_R2": 0.2595777622522034,
+    "Train_Time": 168.2301471233368
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "dataset": "QSAR_fish_toxicity",
+  "model": "metagb",
+  "pred_feature_fraction": 0.1,
+  "inner_k": 4,
+  "best_params": {
+    "learning_rate": 0.01,
+    "max_depth": 4,
+    "n_estimators": 800,
+    "max_bin": 255,
+    "subsample": 0.7,
+    "colsample_bytree": 1.0,
+    "version": 3,
+    "min_data_in_leaf": 10,
+    "pred_feature_fraction": 0.1
+  },
+  "cv_rmse": 0.8756482501415405,
+  "summary": {
+    "Dataset": "QSAR_fish_toxicity",
+    "Model": "METAGB",
+    "pred_feature_fraction": 0.1,
+    "Inner_K": 4,
+    "Test_RMSE": 0.9585899550540434,
+    "Test_MAE": 0.6816807989221537,
+    "Test_R2": 0.6331477058436791,
+    "Train_Time": 86.69385623931885
+  }
+}

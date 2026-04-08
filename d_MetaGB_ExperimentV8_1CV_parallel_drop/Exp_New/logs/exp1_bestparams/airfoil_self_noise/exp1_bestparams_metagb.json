@@ -1,0 +1,26 @@
+{
+  "dataset": "airfoil_self_noise",
+  "model": "metagb",
+  "inner_k": 4,
+  "best_params": {
+    "learning_rate": 0.05,
+    "max_depth": 6,
+    "n_estimators": 800,
+    "max_bin": 255,
+    "subsample": 0.8,
+    "colsample_bytree": 0.9,
+    "version": 3,
+    "pred_feature_fraction": 0.8,
+    "min_data_in_leaf": 10
+  },
+  "cv_rmse": 1.5228991979682542,
+  "summary": {
+    "Dataset": "airfoil_self_noise",
+    "Model": "METAGB",
+    "Inner_K": 4,
+    "Test_RMSE": 1.428481510917836,
+    "Test_MAE": 0.8611734849836148,
+    "Test_R2": 0.9584342298750262,
+    "Train_Time": 780.2257096767426
+  }
+}

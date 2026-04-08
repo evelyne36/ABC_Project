@@ -1,0 +1,26 @@
+{
+  "dataset": "QSAR_fish_toxicity",
+  "model": "xgboost",
+  "inner_k": 4,
+  "best_params": {
+    "learning_rate": 0.01,
+    "max_depth": 6,
+    "n_estimators": 800,
+    "max_bin": 255,
+    "subsample": 1.0,
+    "colsample_bytree": 0.7,
+    "reg_lambda": 0.0,
+    "min_child_weight": 10
+  },
+  "cv_rmse": 0.8639416205382521,
+  "summary": {
+    "Dataset": "QSAR_fish_toxicity",
+    "Model": "XGBOOST",
+    "pred_feature_fraction": null,
+    "Inner_K": 4,
+    "Test_RMSE": 0.9389311263579598,
+    "Test_MAE": 0.6836586539771531,
+    "Test_R2": 0.6480402789169482,
+    "Train_Time": 31.8757586479187
+  }
+}

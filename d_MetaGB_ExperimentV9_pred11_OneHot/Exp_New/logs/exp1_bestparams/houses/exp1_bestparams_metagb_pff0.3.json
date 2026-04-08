@@ -1,0 +1,28 @@
+{
+  "dataset": "houses",
+  "model": "metagb",
+  "pred_feature_fraction": 0.3,
+  "inner_k": 4,
+  "best_params": {
+    "learning_rate": 0.1,
+    "max_depth": 4,
+    "n_estimators": 800,
+    "max_bin": 255,
+    "subsample": 1.0,
+    "colsample_bytree": 0.9,
+    "version": 3,
+    "min_data_in_leaf": 10,
+    "pred_feature_fraction": 0.3
+  },
+  "cv_rmse": 0.2454090607948271,
+  "summary": {
+    "Dataset": "houses",
+    "Model": "METAGB",
+    "pred_feature_fraction": 0.3,
+    "Inner_K": 4,
+    "Test_RMSE": 0.22209764456052267,
+    "Test_MAE": 0.1513072404360851,
+    "Test_R2": 0.8478011396575149,
+    "Train_Time": 1753.5153558254242
+  }
+}

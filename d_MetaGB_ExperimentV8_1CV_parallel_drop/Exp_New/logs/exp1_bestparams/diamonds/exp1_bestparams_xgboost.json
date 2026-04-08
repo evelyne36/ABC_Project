@@ -1,0 +1,25 @@
+{
+  "dataset": "diamonds",
+  "model": "xgboost",
+  "inner_k": 4,
+  "best_params": {
+    "learning_rate": 0.01,
+    "max_depth": 6,
+    "n_estimators": 800,
+    "max_bin": 255,
+    "subsample": 0.8,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 0.0,
+    "min_child_weight": 10
+  },
+  "cv_rmse": 1353.0157969906659,
+  "summary": {
+    "Dataset": "diamonds",
+    "Model": "XGBOOST",
+    "Inner_K": 4,
+    "Test_RMSE": 1297.972023168515,
+    "Test_MAE": 746.2270938221242,
+    "Test_R2": 0.8917357306867784,
+    "Train_Time": 385.0255889892578
+  }
+}

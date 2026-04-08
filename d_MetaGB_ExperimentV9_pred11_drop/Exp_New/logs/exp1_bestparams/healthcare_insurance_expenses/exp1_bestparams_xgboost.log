@@ -1,0 +1,107 @@
+================================================================================
+Exp1 BestParams: XGBOOST - healthcare_insurance_expenses - Fold 1/1
+================================================================================
+
+[2026-03-25 08:38:37] Configuration
+----------------------------------------
+Dataset: healthcare_insurance_expenses
+Model: XGBOOST
+Outer Fold: 1/1
+Inner CV Folds: 4
+Train Samples: 1070
+Test Samples: 268
+Features: 3
+Normalization: None
+
+[2026-03-25 08:38:37] Parameter Grid
+----------------------------------------
+  learning_rate: [0.01, 0.1]
+  max_depth: [3, 4, 6, 8]
+  n_estimators: [200, 400, 800]
+  max_bin: [255]
+  subsample: [0.7, 0.8, 0.9, 1.0]
+  colsample_bytree: [0.7, 0.8, 0.9, 1.0]
+  reg_lambda: [0.0, 1.0]
+  min_child_weight: [10]
+Total combinations: 768
+
+[2026-03-25 08:38:37] Best Parameters (Inner CV)
+----------------------------------------
+  learning_rate: 0.01
+  max_depth: 3
+  n_estimators: 200
+  max_bin: 255
+  subsample: 0.7
+  colsample_bytree: 1.0
+  reg_lambda: 0.0
+  min_child_weight: 10
+Best CV RMSE: 11795.501264
+Avg Early Stop Rounds: 200
+
+[2026-03-25 08:38:37] Test Results (Outer Fold)
+----------------------------------------
+Test RMSE: 9954.840662
+Test MAE: 8292.731317
+Test R²: 0.057242
+
+[2026-03-25 08:38:37] Time Statistics
+----------------------------------------
+Inner CV Time: 19.65s
+Final Train Time: 0.06s
+Test Time: 0.0013s
+Total Time: 19.71s
+
+[2026-03-25 08:38:37] Top 10 Inner CV Results
+----------------------------------------
+
+#1 CV RMSE: 11795.501264 (±82.172018)
+   Params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'max_bin': 255, 'subsample': 0.7, 'colsample_bytree': 1.0, 'reg_lambda': 0.0, 'min_child_weight': 10}
+   Avg Early Stop: 200
+   Train Time: 0.13s
+
+#2 CV RMSE: 11800.075604 (±83.983004)
+   Params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'max_bin': 255, 'subsample': 0.7, 'colsample_bytree': 1.0, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 200
+   Train Time: 0.13s
+
+#3 CV RMSE: 11804.759408 (±75.659687)
+   Params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'max_bin': 255, 'subsample': 0.8, 'colsample_bytree': 1.0, 'reg_lambda': 0.0, 'min_child_weight': 10}
+   Avg Early Stop: 200
+   Train Time: 0.13s
+
+#4 CV RMSE: 11806.038459 (±88.154356)
+   Params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'max_bin': 255, 'subsample': 0.7, 'colsample_bytree': 0.7, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 200
+   Train Time: 0.12s
+
+#5 CV RMSE: 11806.038459 (±88.154356)
+   Params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'max_bin': 255, 'subsample': 0.7, 'colsample_bytree': 0.8, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 200
+   Train Time: 0.13s
+
+#6 CV RMSE: 11806.038459 (±88.154356)
+   Params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'max_bin': 255, 'subsample': 0.7, 'colsample_bytree': 0.9, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 200
+   Train Time: 0.12s
+
+#7 CV RMSE: 11806.594984 (±89.047152)
+   Params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'max_bin': 255, 'subsample': 0.7, 'colsample_bytree': 0.7, 'reg_lambda': 0.0, 'min_child_weight': 10}
+   Avg Early Stop: 200
+   Train Time: 0.12s
+
+#8 CV RMSE: 11806.594984 (±89.047152)
+   Params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'max_bin': 255, 'subsample': 0.7, 'colsample_bytree': 0.8, 'reg_lambda': 0.0, 'min_child_weight': 10}
+   Avg Early Stop: 200
+   Train Time: 0.12s
+
+#9 CV RMSE: 11806.594984 (±89.047152)
+   Params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'max_bin': 255, 'subsample': 0.7, 'colsample_bytree': 0.9, 'reg_lambda': 0.0, 'min_child_weight': 10}
+   Avg Early Stop: 200
+   Train Time: 0.12s
+
+#10 CV RMSE: 11808.765328 (±77.748606)
+   Params: {'learning_rate': 0.01, 'max_depth': 3, 'n_estimators': 200, 'max_bin': 255, 'subsample': 0.8, 'colsample_bytree': 1.0, 'reg_lambda': 1.0, 'min_child_weight': 10}
+   Avg Early Stop: 200
+   Train Time: 0.14s
+
+================================================================================

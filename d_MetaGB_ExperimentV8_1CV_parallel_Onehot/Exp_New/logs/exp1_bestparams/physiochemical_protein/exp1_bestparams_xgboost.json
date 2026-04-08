@@ -1,0 +1,25 @@
+{
+  "dataset": "physiochemical_protein",
+  "model": "xgboost",
+  "inner_k": 4,
+  "best_params": {
+    "learning_rate": 0.05,
+    "max_depth": 8,
+    "n_estimators": 800,
+    "max_bin": 255,
+    "subsample": 0.8,
+    "colsample_bytree": 1.0,
+    "reg_lambda": 0.0,
+    "min_child_weight": 10
+  },
+  "cv_rmse": 3.588730719316138,
+  "summary": {
+    "Dataset": "physiochemical_protein",
+    "Model": "XGBOOST",
+    "Inner_K": 4,
+    "Test_RMSE": 3.509769367219972,
+    "Test_MAE": 2.41634373572647,
+    "Test_R2": 0.6714812661028386,
+    "Train_Time": 566.7888369560242
+  }
+}
