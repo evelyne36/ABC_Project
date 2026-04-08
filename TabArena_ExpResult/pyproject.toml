@@ -1,0 +1,6 @@
+[tool.uv.workspace]
+members = ["tabarena", "bencheval"]
+
+[tool.uv.sources]
+tabarena = { workspace = true }
+bencheval = { workspace = true }

@@ -1,0 +1,7 @@
+cd /home/admin/MyProject5/TabArena/tabarena && source ~/.venvs/tabarena/bin/activate  # Linux/macOS
+nohup python run_xgboost_nestedCV.py > logs/run_xgboost_nestedCV_$(date +%Y%m%d_%H%M%S).log 2>&1 &
+python run_xgboost_nestedCV.py
+
+cd /home/admin/MyProject6/TabArena/tabarena && source ~/.venvs/tabarena/bin/activate  # Linux/macOS
+nohup python fast_run_XGB_nestedCV.py > logs/fast_run_XGB_nestedCV_$(date +%Y%m%d_%H%M%S).log 2>&1 &
+python fast_run_XGB_nestedCV.py
