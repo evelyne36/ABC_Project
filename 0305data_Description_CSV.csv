@@ -1,0 +1,15 @@
+dataset_id,dataset_name,openml_dataset_name,problem_type,num_features,discrete_features,num_instances,domain,data_source,year,licence,original_data_url
+,,,,,1+x：第一列no.;其余列feature,,,,,,
+46904,airfoil_self_noise,airfoil_self_noise,regression,6,0,1503,physics & astronomy,UCI,2014,CC BY 4.0,https://doi.org/10.24432/C5VW2C
+46907,Another-Dataset-on-used-Fiat-500,Another-Dataset-on-used-Fiat-500,regression,8,1,1538,technology & internet,Kaggle,2020,CC0: Public Domain,https://www.kaggle.com/datasets/paolocons/another-fiat-500-dataset-1538-rows
+46917,concrete_compressive_strength,concrete_compressive_strength,regression,9,0,1030,chemistry & material science,UCI,1998,CC BY 4.0,https://doi.org/10.24432/C5PK67
+46923,diamonds,diamonds,regression,10,3,53940,business & marketing,Other,2015,MIT License,https://github.com/tidyverse/ggplot2/blob/main/data-raw/diamonds.csv
+46928,Food_Delivery_Time,Food_Delivery_Time,regression,10,1+2,45451,business & marketing,Kaggle,2023,Database Contents License (DbCL) v1.0,https://www.kaggle.com/datasets/rajatkumar30/food-delivery-time
+46931,healthcare_insurance_expenses,healthcare_insurance_expenses,regression,7,3,1338,medical & healthcare,Kaggle,2023,Database Contents License (DbCL) v1.0,https://www.kaggle.com/datasets/arunjangir245/healthcare-insurance-expenses/
+46934,houses,houses,regression,9,0,20640,business & marketing,Other,1990,Public,https://lib.stat.cmu.edu/datasets/
+46942,miami_housing,miami_housing,regression,16,0,13776,business & marketing,OpenML,2016,CC BY-NC-SA,https://www.openml.org/d/43093
+46949,physiochemical_protein,physiochemical_protein,regression,10,0,45730,chemistry & material science,UCI,2013,CC BY 4.0,https://doi.org/10.24432/C5QW3H
+去除，过大,QSAR_TID,11M,,80+,,5w+,,,,,
+46954,QSAR_fish_toxicity,QSAR_fish_toxicity,regression,7,0,907,biology & life sciences,UCI,2015,CC BY 4.0,https://doi.org/10.24432/C5JG7B
+去除，过大,super,22M,,1000+,,4000+,,,,,
+46964,wine_quality,wine_quality,regression,13,1,6497,chemistry & material science,UCI,2009,CC BY 4.0,https://doi.org/10.24432/C56S3T
