@@ -1,0 +1,19 @@
+{
+  "mode": "full",
+  "datasets": [
+    "airfoil_self_noise.csv"
+  ],
+  "models": [
+    "current_metagb",
+    "xgb_cpu"
+  ],
+  "outer_folds": 5,
+  "inner_folds": 4,
+  "run_all_outer_folds": true,
+  "max_candidates": 200,
+  "categorical_handling": "ordinal",
+  "xgboost_python_package": "/Users/ancd/VSCodeProject/MyProject_MGBexplore/xgboost-master/python-package",
+  "candidate_csv": "/Users/ancd/VSCodeProject/MyProject_MGBexplore/results_current_metagb_vs_xgbcpu/current_metagb_vs_xgbcpu_nested_candidates.csv",
+  "summary_csv": "/Users/ancd/VSCodeProject/MyProject_MGBexplore/results_current_metagb_vs_xgbcpu/current_metagb_vs_xgbcpu_nested_summary.csv",
+  "aggregate_csv": "/Users/ancd/VSCodeProject/MyProject_MGBexplore/results_current_metagb_vs_xgbcpu/current_metagb_vs_xgbcpu_nested_aggregate.csv"
+}
