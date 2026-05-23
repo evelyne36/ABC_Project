@@ -1,0 +1,4 @@
+当前已经实现了multiclass（class wise scalar tree）和binary
+拟替换指标auc和logloss
+
+同时扩展metagb在multiclass的优化

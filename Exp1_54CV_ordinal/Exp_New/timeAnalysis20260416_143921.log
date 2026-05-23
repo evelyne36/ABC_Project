@@ -1,0 +1,53 @@
+[资源限制] 未设置 cpu_affinity（忽略）：No module named 'psutil'
+[资源限制] threadpoolctl 已限制为 1 线程
+[环境] 线程限制: OMP_NUM_THREADS=1, OPENBLAS_NUM_THREADS=1, MKL_NUM_THREADS=1, VECLIB_MAXIMUM_THREADS=1, NUMEXPR_NUM_THREADS=1, BLIS_NUM_THREADS=1
+[发现] exp 文件: ['exp1_200params_ordinal.py']
+[任务] 共 22 个单次拟合任务
+[1/22] exp1_200params_ordinal.py | airfoil_self_noise.csv | xgboost
+  -> samples=1503, features=5, SingleTime=0.272549s, TotalTime=1090.19s
+[2/22] exp1_200params_ordinal.py | airfoil_self_noise.csv | metagb
+  -> samples=1503, features=5, SingleTime=0.809748s, TotalTime=3238.99s
+[3/22] exp1_200params_ordinal.py | Another-Dataset-on-used-Fiat-500.csv | xgboost
+  -> samples=1538, features=7, SingleTime=0.278527s, TotalTime=1114.11s
+[4/22] exp1_200params_ordinal.py | Another-Dataset-on-used-Fiat-500.csv | metagb
+  -> samples=1538, features=7, SingleTime=0.851608s, TotalTime=3406.43s
+[5/22] exp1_200params_ordinal.py | concrete_compressive_strength.csv | xgboost
+  -> samples=1030, features=8, SingleTime=0.415611s, TotalTime=1662.44s
+[6/22] exp1_200params_ordinal.py | concrete_compressive_strength.csv | metagb
+  -> samples=1030, features=8, SingleTime=0.710667s, TotalTime=2842.67s
+[7/22] exp1_200params_ordinal.py | diamonds.csv | xgboost
+  -> samples=53940, features=9, SingleTime=1.329347s, TotalTime=5317.39s
+[8/22] exp1_200params_ordinal.py | diamonds.csv | metagb
+  -> samples=53940, features=9, SingleTime=31.695213s, TotalTime=126780.85s
+[9/22] exp1_200params_ordinal.py | Food_Delivery_Time.csv | xgboost
+  -> samples=45451, features=9, SingleTime=1.179832s, TotalTime=4719.33s
+[10/22] exp1_200params_ordinal.py | Food_Delivery_Time.csv | metagb
+  -> samples=45451, features=9, SingleTime=23.345678s, TotalTime=93382.71s
+[11/22] exp1_200params_ordinal.py | healthcare_insurance_expenses.csv | xgboost
+  -> samples=1338, features=6, SingleTime=0.170161s, TotalTime=680.65s
+[12/22] exp1_200params_ordinal.py | healthcare_insurance_expenses.csv | metagb
+  -> samples=1338, features=6, SingleTime=0.729810s, TotalTime=2919.24s
+[13/22] exp1_200params_ordinal.py | houses.csv | xgboost
+  -> samples=20640, features=8, SingleTime=1.167756s, TotalTime=4671.03s
+[14/22] exp1_200params_ordinal.py | houses.csv | metagb
+  -> samples=20640, features=8, SingleTime=11.498325s, TotalTime=45993.30s
+[15/22] exp1_200params_ordinal.py | miami_housing.csv | xgboost
+  -> samples=13776, features=15, SingleTime=1.505302s, TotalTime=6021.21s
+[16/22] exp1_200params_ordinal.py | miami_housing.csv | metagb
+  -> samples=13776, features=15, SingleTime=7.740942s, TotalTime=30963.77s
+[17/22] exp1_200params_ordinal.py | physiochemical_protein.csv | xgboost
+  -> samples=45730, features=9, SingleTime=1.532461s, TotalTime=6129.84s
+[18/22] exp1_200params_ordinal.py | physiochemical_protein.csv | metagb
+  -> samples=45730, features=9, SingleTime=26.873385s, TotalTime=107493.54s
+[19/22] exp1_200params_ordinal.py | QSAR_fish_toxicity.csv | xgboost
+  -> samples=907, features=6, SingleTime=0.261630s, TotalTime=1046.52s
+[20/22] exp1_200params_ordinal.py | QSAR_fish_toxicity.csv | metagb
+  -> samples=907, features=6, SingleTime=0.471337s, TotalTime=1885.35s
+[21/22] exp1_200params_ordinal.py | wine_quality.csv | xgboost
+  -> samples=6497, features=12, SingleTime=0.692257s, TotalTime=2769.03s
+[22/22] exp1_200params_ordinal.py | wine_quality.csv | metagb
+  -> samples=6497, features=12, SingleTime=3.796427s, TotalTime=15185.71s
+
+[完成] 成功 22/22
+[输出] 分析文档: /home/admin/MyProject_54full/d_MetaGB_Exp1_54CV_ordinal/Exp_New/运行时间计算分析.md
+[输出] 运行日志: /home/admin/MyProject_54full/d_MetaGB_Exp1_54CV_ordinal/Exp_New/timeAnalysis20260416_143921.log
