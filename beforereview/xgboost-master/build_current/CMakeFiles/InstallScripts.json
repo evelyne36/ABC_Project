@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/ancd/VSCodeProject/check_codereview0604cc/beforereview/xgboost-master/build_current/cmake_install.cmake",
+		"/Users/ancd/VSCodeProject/check_codereview0604cc/beforereview/xgboost-master/build_current/dmlc-core/cmake_install.cmake",
+		"/Users/ancd/VSCodeProject/check_codereview0604cc/beforereview/xgboost-master/build_current/src/cmake_install.cmake",
+		"/Users/ancd/VSCodeProject/check_codereview0604cc/beforereview/xgboost-master/build_current/plugin/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
