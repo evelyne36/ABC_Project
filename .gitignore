@@ -1,0 +1,42 @@
+# macOS and editor-local files
+.DS_Store
+**/.DS_Store
+.vscode/
+
+# Local agent/runtime configuration and state
+.claude/
+.codex/
+.omx/
+
+# Python caches and test state
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Native build products
+*.o
+*.so
+*.dylib
+*.dll
+*.a
+**/build/
+**/build_*/
+
+# Local datasets are too large for normal Git history
+dataset/
+
+# Generated benchmark logs and historical result directories
+beforereview/exp12/logs/
+beforereview/exp12/results/
+beforereview/results_current_metagb_vs_xgbcpu/
+random300/logs/
+random300/results/
+random600/logs/
+random600/nohup_logs/
+random600/results/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
