@@ -161,3 +161,17 @@ SCENARIOS: Dict[str, Scenario] = {
 def scenario_names() -> List[str]:
     return list(SCENARIOS)
 
+
+def generate_instance(
+    base_scenario: str,
+    data_seed: int,
+    n_samples: int,
+    noise: float,
+    extra_nuisance_features: int = 0,
+) -> Tuple[np.ndarray, np.ndarray]:
+    rng = np.random.default_rng(data_seed)
+    X, y = SCENARIOS[base_scenario].generator(rng, n_samples, noise)
+    if extra_nuisance_features > 0:
+        nuisance = rng.normal(size=(n_samples, extra_nuisance_features)).astype(np.float32)
+        X = np.column_stack([X, nuisance]).astype(np.float32)
+    return X, y

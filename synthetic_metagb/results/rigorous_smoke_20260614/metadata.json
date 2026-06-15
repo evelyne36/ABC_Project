@@ -1,0 +1,15 @@
+{
+  "run_id": "rigorous_smoke_20260614",
+  "protocol": "smoke",
+  "confirmatory": false,
+  "config_hash": "e40c7f9ec21ea0d34a37080efc7589d065e322213041a29560347adb1efacc50",
+  "candidate_config_hash": "cf78df72c40791aa27a8757018bfe604894285c63a2355a1112600b2937d9232",
+  "split_manifest_hash": "95423d77bdf8b1cf65cab47b9dbf84734b3c5af43c085a8c08acf0b8453cda65",
+  "task_count": 132,
+  "candidate_row_count": 3960,
+  "elapsed_this_invocation_sec": 0.14381429203785956,
+  "elapsed_cumulative_sec": 1502.8088318749797,
+  "requested_task_workers": 4,
+  "execution_mode": "no_pending_tasks",
+  "completed": true
+}

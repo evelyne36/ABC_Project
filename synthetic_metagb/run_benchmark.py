@@ -1,10 +1,13 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import math
+import os
 import sys
 import time
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 from typing import Any, Dict, List, Sequence, Tuple
 
@@ -17,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from random300.utils.candidates import candidate_config_payload, candidate_sets, load_search_space  # noqa: E402
 from random300.utils.metrics import (  # noqa: E402
     classification_metrics,
     primary_metric_direction,
@@ -24,86 +28,155 @@ from random300.utils.metrics import (  # noqa: E402
     primary_metric_value,
     regression_metrics,
 )
+from random300.utils.parameter_audit import build_parameter_audit  # noqa: E402
 from random300.utils.runner import build_estimator, import_local_xgboost  # noqa: E402
-from synthetic_metagb.scenarios import SCENARIOS, scenario_names  # noqa: E402
+from synthetic_metagb.protocols import Protocol, ScenarioInstance, protocol_by_name  # noqa: E402
+from synthetic_metagb.scenarios import SCENARIOS, generate_instance  # noqa: E402
+from synthetic_metagb.statistics import mark_confirmatory, paired_statistics, seed_level_results  # noqa: E402
 
 
 MODELS = ["xgb_cpu", "current_metagb_pred0", "current_metagb"]
 
 
+def canonical_hash(payload: Any) -> str:
+    raw = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(raw).hexdigest()
+
+
+def index_hash(indices: Sequence[int]) -> str:
+    return hashlib.sha256(np.asarray(indices, dtype=np.int64).tobytes()).hexdigest()
+
+
+def write_json(path: Path, payload: Any) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    tmp.replace(path)
+
+
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Random300-style nested-CV benchmark on MetaGB synthetic scenarios.")
-    parser.add_argument("--mode", choices=["smoke", "quick", "full"], default="quick")
-    parser.add_argument("--scenarios", nargs="+", choices=scenario_names(), default=scenario_names())
-    parser.add_argument("--models", nargs="+", choices=MODELS, default=MODELS)
-    parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--n-samples", type=int, default=0)
-    parser.add_argument("--outer-folds", type=int, default=0)
-    parser.add_argument("--inner-folds", type=int, default=0)
+    parser = argparse.ArgumentParser(description="Rigorous resumable nested-CV MetaGB synthetic benchmark.")
+    parser.add_argument(
+        "--protocol",
+        choices=["smoke", "random300_confirmatory", "random600_confirmatory"],
+        default="smoke",
+    )
+    parser.add_argument("--search-seed", type=int, default=42)
+    parser.add_argument("--data-seeds", nargs="+", type=int, default=None)
+    parser.add_argument("--cv-seed", type=int, default=314159)
+    parser.add_argument("--model-seed", type=int, default=271828)
+    parser.add_argument("--task-workers", type=int, default=max(1, min(4, os.cpu_count() or 1)))
     parser.add_argument("--n-jobs", type=int, default=1)
+    parser.add_argument("--run-id", default=None)
+    parser.add_argument("--resume", action="store_true")
+    parser.add_argument("--output-dir", default=str(ROOT / "synthetic_metagb" / "results"))
     parser.add_argument(
         "--xgboost-python-package",
         default=str(ROOT / "beforereview" / "xgboost-master" / "python-package"),
     )
-    parser.add_argument("--output-dir", default=str(ROOT / "synthetic_metagb" / "results"))
-    parser.add_argument("--run-id", default=None)
+    parser.add_argument(
+        "--search-space-json",
+        default=str(ROOT / "random300" / "configs" / "default_search_space.json"),
+    )
     return parser
 
 
-def normalize_args(args: argparse.Namespace) -> argparse.Namespace:
-    defaults = {
-        "smoke": (400, 2, 2),
-        "quick": (1000, 3, 2),
-        "full": (3000, 5, 3),
+def runtime_args(args: argparse.Namespace, model_seed: int) -> argparse.Namespace:
+    return argparse.Namespace(
+        binary_objective="binary:logistic",
+        multiclass_objective="multi:softprob",
+        seed=model_seed,
+        n_jobs=args.n_jobs,
+        xgb_reg_lambda=1.0,
+        metagb_lambda_l2=1.0,
+        metagb_hist_subtract=False,
+        metagb_score_agg=0,
+        metagb_pred_value_type="raw",
+        categorical_handling="not_applicable_synthetic",
+    )
+
+
+def protocol_payload(args: argparse.Namespace, protocol: Protocol) -> Dict[str, Any]:
+    return {
+        "protocol": protocol.to_dict(),
+        "models": MODELS,
+        "search_seed": args.search_seed,
+        "cv_seed": args.cv_seed,
+        "model_seed": args.model_seed,
+        "n_jobs": args.n_jobs,
+        "xgboost_python_package": str(Path(args.xgboost_python_package).resolve()),
+        "search_space_json": str(Path(args.search_space_json).resolve()),
     }
-    n_samples, outer_folds, inner_folds = defaults[args.mode]
-    args.n_samples = args.n_samples or n_samples
-    args.outer_folds = args.outer_folds or outer_folds
-    args.inner_folds = args.inner_folds or inner_folds
-    args.run_id = args.run_id or f"synthetic_{args.mode}_{time.strftime('%Y%m%d_%H%M%S')}"
-    args.results_dir = str(Path(args.output_dir).expanduser().resolve() / args.run_id)
-    Path(args.results_dir).mkdir(parents=True, exist_ok=True)
-    args.binary_objective = "binary:logistic"
-    args.multiclass_objective = "multi:softprob"
-    args.xgb_reg_lambda = 1.0
-    args.metagb_lambda_l2 = 1.0
-    args.metagb_hist_subtract = False
-    args.metagb_score_agg = 0
-    args.metagb_pred_value_type = "raw"
-    return args
 
 
-def paired_backbones(mode: str) -> List[Dict[str, Any]]:
-    configs = [
-        (0.10, 1, 30, 1.0),
-        (0.05, 2, 60, 1.0),
-        (0.05, 3, 100, 1.0),
-        (0.03, 4, 160, 0.8),
-        (0.02, 5, 240, 0.8),
-    ]
-    limit = {"smoke": 2, "quick": 3, "full": 5}[mode]
-    return [
-        {
-            "candidate_id": f"paired_{index:02d}",
-            "learning_rate": learning_rate,
-            "max_depth": max_depth,
-            "n_estimators": n_estimators,
-            "subsample": subsample,
-            "colsample_bytree": 1.0,
-            "max_bin": 255,
-            "reg_lambda": 1.0,
-            "metagb_lambda_l2": 1.0,
-            "pred_feature_fraction": 1.0,
-            "metagb_score_agg": 0,
-        }
-        for index, (learning_rate, max_depth, n_estimators, subsample) in enumerate(configs[:limit], start=1)
-    ]
+def splits_for(
+    task_type: str, X: np.ndarray, y: np.ndarray, outer_folds: int, inner_folds: int, cv_seed: int
+) -> Tuple[List[Tuple[np.ndarray, np.ndarray]], Dict[int, List[Tuple[np.ndarray, np.ndarray]]]]:
+    outer_splitter = (
+        KFold(n_splits=outer_folds, shuffle=True, random_state=cv_seed)
+        if task_type == "regression"
+        else StratifiedKFold(n_splits=outer_folds, shuffle=True, random_state=cv_seed)
+    )
+    outer = list(outer_splitter.split(X, None if task_type == "regression" else y))
+    inner: Dict[int, List[Tuple[np.ndarray, np.ndarray]]] = {}
+    for outer_index, (train_idx, _) in enumerate(outer):
+        inner_splitter = (
+            KFold(n_splits=inner_folds, shuffle=True, random_state=cv_seed + outer_index + 1)
+            if task_type == "regression"
+            else StratifiedKFold(
+                n_splits=inner_folds, shuffle=True, random_state=cv_seed + outer_index + 1
+            )
+        )
+        inner[outer_index] = list(
+            inner_splitter.split(
+                X[train_idx], None if task_type == "regression" else y[train_idx]
+            )
+        )
+    return outer, inner
 
 
-def split_indices(task_type: str, X: np.ndarray, y: np.ndarray, folds: int, seed: int):
-    if task_type == "regression":
-        return list(KFold(n_splits=folds, shuffle=True, random_state=seed).split(X))
-    return list(StratifiedKFold(n_splits=folds, shuffle=True, random_state=seed).split(X, y))
+def build_split_manifest(protocol: Protocol, cv_seed: int) -> Dict[str, Any]:
+    entries: List[Dict[str, Any]] = []
+    for scenario in protocol.scenarios:
+        task_type = SCENARIOS[scenario.base_scenario].task_type
+        for data_seed in protocol.data_seeds:
+            X, y = generate_instance(
+                scenario.base_scenario,
+                data_seed,
+                scenario.n_samples,
+                scenario.noise,
+                scenario.extra_nuisance_features,
+            )
+            outer, inner = splits_for(
+                task_type, X, y, protocol.outer_folds, protocol.inner_folds, cv_seed
+            )
+            for outer_index, (train_idx, test_idx) in enumerate(outer):
+                inner_rows = []
+                for inner_index, (inner_train, inner_val) in enumerate(inner[outer_index]):
+                    absolute_train = train_idx[inner_train]
+                    absolute_val = train_idx[inner_val]
+                    if set(absolute_train) & set(absolute_val):
+                        raise AssertionError("Inner train/validation overlap")
+                    if set(test_idx) & (set(absolute_train) | set(absolute_val)):
+                        raise AssertionError("Outer test leakage into inner CV")
+                    inner_rows.append(
+                        {
+                            "inner_fold": inner_index + 1,
+                            "train_hash": index_hash(absolute_train),
+                            "validation_hash": index_hash(absolute_val),
+                        }
+                    )
+                entries.append(
+                    {
+                        "scenario": scenario.name,
+                        "data_seed": data_seed,
+                        "outer_fold": outer_index + 1,
+                        "train_hash": index_hash(train_idx),
+                        "test_hash": index_hash(test_idx),
+                        "inner": inner_rows,
+                    }
+                )
+    return {"cv_seed": cv_seed, "entries": entries, "manifest_hash": canonical_hash(entries)}
 
 
 def metrics_for(task_type: str, y_true: np.ndarray, pred: np.ndarray, proba: Any) -> Dict[str, float]:
@@ -112,16 +185,15 @@ def metrics_for(task_type: str, y_true: np.ndarray, pred: np.ndarray, proba: Any
     return classification_metrics(y_true, pred, proba, task_type, 2)
 
 
-def fit_predict(model: Any, X_train: np.ndarray, y_train: np.ndarray, X_test: np.ndarray, task_type: str):
+def fit_predict(model: Any, X_train: np.ndarray, y_train: np.ndarray, X_eval: np.ndarray, task_type: str):
     start = time.perf_counter()
     model.fit(X_train, y_train, verbose=False)
     fit_sec = time.perf_counter() - start
     start = time.perf_counter()
     if task_type == "regression":
-        pred = model.predict(X_test)
-        proba = None
+        pred, proba = model.predict(X_eval), None
     else:
-        proba = np.asarray(model.predict_proba(X_test))
+        proba = np.asarray(model.predict_proba(X_eval))
         pred = proba.argmax(axis=1)
     predict_sec = time.perf_counter() - start
     return pred, proba, fit_sec, predict_sec
@@ -135,204 +207,310 @@ def candidate_for_model(candidate: Dict[str, Any], model_name: str) -> Dict[str,
     out = dict(candidate)
     if model_name == "current_metagb_pred0":
         out["pred_feature_fraction"] = 0.0
+        out["metagb_score_agg"] = 0
     return out
 
 
-def run_one(
-    xgb: Any,
-    args: argparse.Namespace,
-    scenario_name: str,
-    model_name: str,
-    X: np.ndarray,
-    y: np.ndarray,
-    candidates: Sequence[Dict[str, Any]],
-) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
-    scenario = SCENARIOS[scenario_name]
-    direction = primary_metric_direction(scenario.task_type)
-    metric_name = primary_metric_name(scenario.task_type)
-    outer_splits = split_indices(scenario.task_type, X, y, args.outer_folds, args.seed)
+def candidate_fairness_audit(candidates_by_model: Dict[str, List[Dict[str, Any]]]) -> Dict[str, Any]:
+    counts = {model: len(values) for model, values in candidates_by_model.items()}
+    if len(set(counts.values())) != 1:
+        raise AssertionError(f"Unequal model candidate budgets: {counts}")
+    mismatches = []
+    shared_keys = [
+        "learning_rate",
+        "max_depth",
+        "subsample",
+        "colsample_bytree",
+        "n_estimators",
+        "max_bin",
+    ]
+    for xgb, metagb, pred0 in zip(
+        candidates_by_model["xgb_cpu"],
+        candidates_by_model["current_metagb"],
+        candidates_by_model["current_metagb_pred0"],
+    ):
+        for key in shared_keys:
+            if not (xgb[key] == metagb[key] == pred0[key]):
+                mismatches.append({"backbone_id": xgb.get("backbone_id"), "key": key})
+        if xgb["reg_lambda"] != metagb["metagb_lambda_l2"]:
+            mismatches.append({"backbone_id": xgb.get("backbone_id"), "key": "lambda_l2"})
+    combinations = {
+        (item["pred_feature_fraction"], item["metagb_score_agg"])
+        for item in candidates_by_model["current_metagb"]
+    }
+    if mismatches:
+        raise AssertionError(f"Candidate fairness mismatches: {mismatches[:5]}")
+    return {
+        "passed": True,
+        "candidate_counts": counts,
+        "shared_backbone_keys": shared_keys,
+        "metagb_joint_combination_count": len(combinations),
+        "metagb_joint_combinations": sorted([list(item) for item in combinations]),
+    }
+
+
+def run_task(task: Dict[str, Any]) -> Dict[str, Any]:
+    args = argparse.Namespace(**task["args"])
+    scenario = ScenarioInstance(**task["scenario"])
+    task_type = SCENARIOS[scenario.base_scenario].task_type
+    X, y = generate_instance(
+        scenario.base_scenario,
+        task["data_seed"],
+        scenario.n_samples,
+        scenario.noise,
+        scenario.extra_nuisance_features,
+    )
+    outer, inner = splits_for(
+        task_type, X, y, args.outer_folds, args.inner_folds, args.cv_seed
+    )
+    train_idx, test_idx = outer[task["outer_index"]]
+    xgb = import_local_xgboost(Path(args.xgboost_python_package))
+    model_args = runtime_args(args, args.model_seed + task["data_seed"] + task["outer_index"])
+    metric_name = primary_metric_name(task_type)
+    direction = primary_metric_direction(task_type)
+    candidate_rows: List[Dict[str, Any]] = []
+    best_params: Dict[str, Any] | None = None
+    best_value = -math.inf if direction == "maximize" else math.inf
+
+    for candidate_index, params in enumerate(task["candidates"], start=1):
+        values: List[float] = []
+        inner_fit = 0.0
+        inner_predict = 0.0
+        for inner_train, inner_val in inner[task["outer_index"]]:
+            estimator = build_estimator(xgb, task["model"], params, model_args, task_type, 2)
+            pred, proba, fit_sec, predict_sec = fit_predict(
+                estimator,
+                X[train_idx[inner_train]],
+                y[train_idx[inner_train]],
+                X[train_idx[inner_val]],
+                task_type,
+            )
+            values.append(primary_metric_value(task_type, metrics_for(task_type, y[train_idx[inner_val]], pred, proba)))
+            inner_fit += fit_sec
+            inner_predict += predict_sec
+        mean_value = float(np.mean(values))
+        candidate_rows.append(
+            {
+                "task_id": task["task_id"],
+                "scenario": scenario.name,
+                "data_seed": task["data_seed"],
+                "outer_fold": task["outer_index"] + 1,
+                "model": task["model"],
+                "candidate_index": candidate_index,
+                "candidate_id": params["candidate_id"],
+                "backbone_id": params.get("backbone_id", ""),
+                "val_primary_metric": mean_value,
+                "inner_fit_sec": inner_fit,
+                "inner_predict_sec": inner_predict,
+                "params_json": json.dumps(params, sort_keys=True),
+            }
+        )
+        if best_params is None or better(mean_value, best_value, direction):
+            best_params, best_value = params, mean_value
+
+    assert best_params is not None
+    estimator = build_estimator(xgb, task["model"], best_params, model_args, task_type, 2)
+    pred, proba, fit_sec, predict_sec = fit_predict(estimator, X[train_idx], y[train_idx], X[test_idx], task_type)
+    metrics = metrics_for(task_type, y[test_idx], pred, proba)
+    fold_row = {
+        "task_id": task["task_id"],
+        "scenario": scenario.name,
+        "base_scenario": scenario.base_scenario,
+        "variant": scenario.variant,
+        "task_type": task_type,
+        "data_seed": task["data_seed"],
+        "outer_fold": task["outer_index"] + 1,
+        "model": task["model"],
+        "primary_metric": metric_name,
+        "selected_candidate_id": best_params["candidate_id"],
+        "selected_backbone_id": best_params.get("backbone_id", ""),
+        "test_primary_metric": primary_metric_value(task_type, metrics),
+        "test_rmse": metrics.get("rmse", float("nan")),
+        "test_auc": metrics.get("auc", float("nan")),
+        "test_logloss": metrics.get("logloss", float("nan")),
+        "fit_sec": fit_sec,
+        "predict_sec": predict_sec,
+        "params_json": json.dumps(best_params, sort_keys=True),
+    }
+    return {"candidate_rows": candidate_rows, "fold_row": fold_row}
+
+
+def create_tasks(
+    args: argparse.Namespace, protocol: Protocol, candidates_by_model: Dict[str, List[Dict[str, Any]]]
+) -> List[Dict[str, Any]]:
+    task_args = {
+        "outer_folds": protocol.outer_folds,
+        "inner_folds": protocol.inner_folds,
+        "cv_seed": args.cv_seed,
+        "model_seed": args.model_seed,
+        "n_jobs": args.n_jobs,
+        "xgboost_python_package": str(Path(args.xgboost_python_package).resolve()),
+    }
+    tasks = []
+    for scenario in protocol.scenarios:
+        for data_seed in protocol.data_seeds:
+            for outer_index in range(protocol.outer_folds):
+                for model in MODELS:
+                    task_id = f"{scenario.name}__seed{data_seed}__out{outer_index + 1}__{model}"
+                    tasks.append(
+                        {
+                            "task_id": task_id,
+                            "scenario": scenario.__dict__,
+                            "data_seed": data_seed,
+                            "outer_index": outer_index,
+                            "model": model,
+                            "candidates": candidates_by_model[model],
+                            "args": task_args,
+                        }
+                    )
+    return tasks
+
+
+def collect_shards(shard_dir: Path) -> Tuple[pd.DataFrame, pd.DataFrame]:
     candidate_rows: List[Dict[str, Any]] = []
     fold_rows: List[Dict[str, Any]] = []
-
-    for outer_fold, (train_idx, test_idx) in enumerate(outer_splits, start=1):
-        X_train, X_test = X[train_idx], X[test_idx]
-        y_train, y_test = y[train_idx], y[test_idx]
-        inner_splits = split_indices(scenario.task_type, X_train, y_train, args.inner_folds, args.seed + outer_fold)
-        best_candidate = None
-        best_value = -math.inf if direction == "maximize" else math.inf
-
-        for base_candidate in candidates:
-            candidate = candidate_for_model(base_candidate, model_name)
-            values = []
-            fit_total = 0.0
-            predict_total = 0.0
-            for inner_train_idx, val_idx in inner_splits:
-                estimator = build_estimator(xgb, model_name, candidate, args, scenario.task_type, 2)
-                pred, proba, fit_sec, predict_sec = fit_predict(
-                    estimator,
-                    X_train[inner_train_idx],
-                    y_train[inner_train_idx],
-                    X_train[val_idx],
-                    scenario.task_type,
-                )
-                metrics = metrics_for(scenario.task_type, y_train[val_idx], pred, proba)
-                values.append(primary_metric_value(scenario.task_type, metrics))
-                fit_total += fit_sec
-                predict_total += predict_sec
-            mean_value = float(np.mean(values))
-            candidate_rows.append(
-                {
-                    "scenario": scenario_name,
-                    "task_type": scenario.task_type,
-                    "model": model_name,
-                    "outer_fold": outer_fold,
-                    "candidate_id": candidate["candidate_id"],
-                    "val_primary_metric": mean_value,
-                    "primary_metric": metric_name,
-                    "inner_fit_sec": fit_total,
-                    "inner_predict_sec": predict_total,
-                    "params_json": json.dumps(candidate, sort_keys=True),
-                }
-            )
-            if best_candidate is None or better(mean_value, best_value, direction):
-                best_candidate = candidate
-                best_value = mean_value
-
-        assert best_candidate is not None
-        estimator = build_estimator(xgb, model_name, best_candidate, args, scenario.task_type, 2)
-        pred, proba, fit_sec, predict_sec = fit_predict(estimator, X_train, y_train, X_test, scenario.task_type)
-        metrics = metrics_for(scenario.task_type, y_test, pred, proba)
-        fold_rows.append(
-            {
-                "scenario": scenario_name,
-                "task_type": scenario.task_type,
-                "hypothesis": scenario.hypothesis,
-                "expected_winner": scenario.expected_winner,
-                "model": model_name,
-                "outer_fold": outer_fold,
-                "selected_candidate_id": best_candidate["candidate_id"],
-                "primary_metric": metric_name,
-                "test_primary_metric": primary_metric_value(scenario.task_type, metrics),
-                "test_rmse": metrics.get("rmse", float("nan")),
-                "test_auc": metrics.get("auc", float("nan")),
-                "test_logloss": metrics.get("logloss", float("nan")),
-                "fit_sec": fit_sec,
-                "predict_sec": predict_sec,
-                "params_json": json.dumps(best_candidate, sort_keys=True),
-            }
-        )
-    return candidate_rows, fold_rows
+    for path in sorted(shard_dir.glob("*.json")):
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        candidate_rows.extend(payload["candidate_rows"])
+        fold_rows.append(payload["fold_row"])
+    return pd.DataFrame(candidate_rows), pd.DataFrame(fold_rows)
 
 
-def aggregate(folds: pd.DataFrame) -> pd.DataFrame:
-    grouped = (
-        folds.groupby(["scenario", "task_type", "hypothesis", "expected_winner", "model", "primary_metric"], as_index=False)
-        .agg(
-            mean_test_primary_metric=("test_primary_metric", "mean"),
-            std_test_primary_metric=("test_primary_metric", "std"),
-            mean_fit_sec=("fit_sec", "mean"),
-        )
-    )
-    pivot = grouped.pivot(index="scenario", columns="model", values="mean_test_primary_metric")
-    rows = []
-    for _, row in grouped.iterrows():
-        scenario = row["scenario"]
-        xgb_value = float(pivot.loc[scenario, "xgb_cpu"]) if "xgb_cpu" in pivot.columns else float("nan")
-        metagb_value = float(pivot.loc[scenario, "current_metagb"]) if "current_metagb" in pivot.columns else float("nan")
-        direction = primary_metric_direction(row["task_type"])
-        if math.isfinite(xgb_value) and math.isfinite(metagb_value):
-            signed_advantage = xgb_value - metagb_value if direction == "minimize" else metagb_value - xgb_value
-        else:
-            signed_advantage = float("nan")
-        item = row.to_dict()
-        item["metagb_signed_advantage_vs_xgb"] = signed_advantage
-        rows.append(item)
-    return pd.DataFrame(rows)
-
-
-def comparison_table(aggregate_df: pd.DataFrame) -> pd.DataFrame:
-    values = aggregate_df.pivot(index="scenario", columns="model", values="mean_test_primary_metric")
-    details = aggregate_df.drop_duplicates("scenario").set_index("scenario")
-    rows = []
-    for scenario in values.index:
-        task_type = str(details.loc[scenario, "task_type"])
-        direction = primary_metric_direction(task_type)
-        xgb_value = float(values.loc[scenario, "xgb_cpu"]) if "xgb_cpu" in values.columns else float("nan")
-        pred0_value = (
-            float(values.loc[scenario, "current_metagb_pred0"])
-            if "current_metagb_pred0" in values.columns
-            else float("nan")
-        )
-        metagb_value = (
-            float(values.loc[scenario, "current_metagb"])
-            if "current_metagb" in values.columns
-            else float("nan")
-        )
-
-        def signed_advantage(reference: float) -> float:
-            if not math.isfinite(reference) or not math.isfinite(metagb_value):
-                return float("nan")
-            return reference - metagb_value if direction == "minimize" else metagb_value - reference
-
-        rows.append(
-            {
-                "scenario": scenario,
-                "task_type": task_type,
-                "primary_metric": details.loc[scenario, "primary_metric"],
-                "hypothesis": details.loc[scenario, "hypothesis"],
-                "expected_winner": details.loc[scenario, "expected_winner"],
-                "xgb_cpu": xgb_value,
-                "current_metagb_pred0": pred0_value,
-                "current_metagb": metagb_value,
-                "metagb_signed_advantage_vs_xgb": signed_advantage(xgb_value),
-                "metagb_signed_advantage_vs_pred0": signed_advantage(pred0_value),
-            }
-        )
-    return pd.DataFrame(rows)
+def pending_tasks(tasks: Sequence[Dict[str, Any]], shard_dir: Path) -> List[Dict[str, Any]]:
+    return [task for task in tasks if not (shard_dir / f"{task['task_id']}.json").exists()]
 
 
 def main() -> int:
-    args = normalize_args(build_parser().parse_args())
-    xgb = import_local_xgboost(Path(args.xgboost_python_package))
-    candidates = paired_backbones(args.mode)
-    candidate_rows: List[Dict[str, Any]] = []
-    fold_rows: List[Dict[str, Any]] = []
+    args = build_parser().parse_args()
+    protocol = protocol_by_name(args.protocol)
+    if args.data_seeds:
+        protocol = Protocol(
+            name=protocol.name,
+            scenarios=protocol.scenarios,
+            data_seeds=args.data_seeds,
+            outer_folds=protocol.outer_folds,
+            inner_folds=protocol.inner_folds,
+            max_candidates=protocol.max_candidates,
+            confirmatory=protocol.confirmatory,
+        )
+    args.run_id = args.run_id or f"{protocol.name}_{time.strftime('%Y%m%d_%H%M%S')}"
+    results_dir = Path(args.output_dir).resolve() / args.run_id
+    shard_dir = results_dir / "tasks"
+    results_dir.mkdir(parents=True, exist_ok=True)
+    shard_dir.mkdir(parents=True, exist_ok=True)
+
+    payload = protocol_payload(args, protocol)
+    payload["config_hash"] = canonical_hash(payload)
+    config_path = results_dir / "protocol.json"
+    if config_path.exists():
+        existing = json.loads(config_path.read_text(encoding="utf-8"))
+        if existing["config_hash"] != payload["config_hash"]:
+            raise ValueError("Existing run-id has a different protocol config hash")
+        if not args.resume:
+            raise ValueError("Run directory already exists; use --resume or a new --run-id")
+    else:
+        write_json(config_path, payload)
+
+    search_space = load_search_space(Path(args.search_space_json))
+    candidates_by_model, warnings = candidate_sets(
+        search_space, protocol.max_candidates, args.search_seed, None, MODELS
+    )
+    write_json(results_dir / "candidate_configs.json", candidate_config_payload(candidates_by_model))
+    fairness = candidate_fairness_audit(candidates_by_model)
+    write_json(results_dir / "candidate_fairness_audit.json", fairness)
+    audit_args = runtime_args(args, args.model_seed)
+    audit = build_parameter_audit(audit_args, search_space, warnings)
+    audit["candidate_counts"] = {model: len(values) for model, values in candidates_by_model.items()}
+    audit["candidate_config_hash"] = canonical_hash(candidates_by_model)
+    write_json(results_dir / "parameter_audit.json", audit)
+    write_json(results_dir / "split_manifest.json", build_split_manifest(protocol, args.cv_seed))
+
+    tasks = create_tasks(args, protocol, candidates_by_model)
+    pending = pending_tasks(tasks, shard_dir)
+    print(f"run_id={args.run_id} total_tasks={len(tasks)} pending_tasks={len(pending)}", flush=True)
     start = time.perf_counter()
+    execution_mode = "serial"
+    if not pending:
+        execution_mode = "no_pending_tasks"
+    elif args.task_workers <= 1:
+        for index, task in enumerate(pending, start=1):
+            write_json(shard_dir / f"{task['task_id']}.json", run_task(task))
+            print(f"[{index}/{len(pending)}] {task['task_id']}", flush=True)
+    else:
+        execution_mode = f"process_pool:{args.task_workers}"
+        try:
+            with ProcessPoolExecutor(max_workers=min(args.task_workers, len(pending) or 1)) as executor:
+                future_map = {executor.submit(run_task, task): task for task in pending}
+                for index, future in enumerate(as_completed(future_map), start=1):
+                    task = future_map[future]
+                    write_json(shard_dir / f"{task['task_id']}.json", future.result())
+                    print(f"[{index}/{len(pending)}] {task['task_id']}", flush=True)
+        except PermissionError as exc:
+            execution_mode = "serial_fallback"
+            print(
+                "WARNING: process pool unavailable; falling back to serial execution "
+                f"({exc}).",
+                flush=True,
+            )
+            remaining = [task for task in pending if not (shard_dir / f"{task['task_id']}.json").exists()]
+            for index, task in enumerate(remaining, start=1):
+                write_json(shard_dir / f"{task['task_id']}.json", run_task(task))
+                print(f"[fallback {index}/{len(remaining)}] {task['task_id']}", flush=True)
 
-    for scenario_index, scenario_name in enumerate(args.scenarios):
-        scenario = SCENARIOS[scenario_name]
-        noise = 0.15 if scenario.task_type == "regression" else 0.05
-        X, y = scenario.generator(np.random.default_rng(args.seed + scenario_index * 1000), args.n_samples, noise)
-        print(f"scenario={scenario_name} task={scenario.task_type} rows={len(y)} features={X.shape[1]}", flush=True)
-        for model_name in args.models:
-            print(f"  model={model_name}", flush=True)
-            candidates_out, folds_out = run_one(xgb, args, scenario_name, model_name, X, y, candidates)
-            candidate_rows.extend(candidates_out)
-            fold_rows.extend(folds_out)
-
-    results_dir = Path(args.results_dir)
-    candidates_df = pd.DataFrame(candidate_rows)
-    folds_df = pd.DataFrame(fold_rows)
-    aggregate_df = aggregate(folds_df)
-    comparison_df = comparison_table(aggregate_df)
+    candidates_df, folds_df = collect_shards(shard_dir)
+    if len(folds_df) != len(tasks):
+        raise AssertionError(f"Expected {len(tasks)} fold rows, found {len(folds_df)}")
+    expected_candidates = len(tasks) * protocol.max_candidates
+    if len(candidates_df) != expected_candidates:
+        raise AssertionError(f"Expected {expected_candidates} candidate rows, found {len(candidates_df)}")
+    seed_df = seed_level_results(folds_df)
+    stats_df = mark_confirmatory(paired_statistics(seed_df), protocol.confirmatory)
     candidates_df.to_csv(results_dir / "candidates.csv", index=False)
     folds_df.to_csv(results_dir / "folds.csv", index=False)
-    aggregate_df.to_csv(results_dir / "aggregate.csv", index=False)
-    comparison_df.to_csv(results_dir / "comparison.csv", index=False)
+    seed_df.to_csv(results_dir / "seed_results.csv", index=False)
+    stats_df.to_csv(results_dir / "paired_statistics.csv", index=False)
+    elapsed_this_invocation = time.perf_counter() - start
+    metadata_path = results_dir / "metadata.json"
+    previous_elapsed = 0.0
+    if metadata_path.exists():
+        previous_metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+        previous_elapsed = float(
+            previous_metadata.get(
+                "elapsed_cumulative_sec",
+                previous_metadata.get("elapsed_this_invocation_sec", 0.0),
+            )
+        )
     metadata = {
         "run_id": args.run_id,
-        "mode": args.mode,
-        "scenarios": args.scenarios,
-        "models": args.models,
-        "n_samples": args.n_samples,
-        "outer_folds": args.outer_folds,
-        "inner_folds": args.inner_folds,
-        "candidate_count_per_model": len(candidates),
-        "elapsed_sec": time.perf_counter() - start,
-        "results_dir": str(results_dir),
+        "protocol": protocol.name,
+        "confirmatory": protocol.confirmatory,
+        "config_hash": payload["config_hash"],
+        "candidate_config_hash": audit["candidate_config_hash"],
+        "split_manifest_hash": json.loads((results_dir / "split_manifest.json").read_text())["manifest_hash"],
+        "task_count": len(tasks),
+        "candidate_row_count": len(candidates_df),
+        "elapsed_this_invocation_sec": elapsed_this_invocation,
+        "elapsed_cumulative_sec": previous_elapsed + elapsed_this_invocation,
+        "requested_task_workers": args.task_workers,
+        "execution_mode": execution_mode,
+        "completed": True,
     }
-    (results_dir / "metadata.json").write_text(json.dumps(metadata, indent=2), encoding="utf-8")
-    print(comparison_df.to_string(index=False))
+    write_json(metadata_path, metadata)
+    write_json(
+        results_dir / "completeness_audit.json",
+        {
+            "passed": True,
+            "expected_task_count": len(tasks),
+            "actual_task_count": len(folds_df),
+            "expected_candidate_row_count": expected_candidates,
+            "actual_candidate_row_count": len(candidates_df),
+            "unique_task_ids": int(folds_df["task_id"].nunique()),
+            "models": sorted(folds_df["model"].unique().tolist()),
+            "scenario_count": int(folds_df["scenario"].nunique()),
+            "data_seed_count": int(folds_df["data_seed"].nunique()),
+        },
+    )
+    print(stats_df.to_string(index=False))
     print(f"results_dir={results_dir}")
     return 0
 

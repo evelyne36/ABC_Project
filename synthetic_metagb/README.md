@@ -23,13 +23,19 @@ Scenarios:
   `feature_switch`, `multiplicative`, `xor_classification`, `regime_logit`
 - Negative controls: `pure_step_control`, `curved_control`
 
-Run:
+Rigorous protocols:
 
 ```bash
-python3.13 synthetic_metagb/run_benchmark.py --mode quick
+python3.13 synthetic_metagb/run_benchmark.py --protocol smoke
+python3.13 synthetic_metagb/run_benchmark.py --protocol random300_confirmatory
+python3.13 synthetic_metagb/run_benchmark.py --protocol random600_confirmatory
 ```
 
-The key output is `comparison.csv`. A positive
-`metagb_signed_advantage_vs_xgb` always means MetaGB beat XGBoost on the
-scenario's primary metric. `metagb_signed_advantage_vs_pred0` isolates the
-benefit of non-bias predictive features from other MetaGB updater differences.
+The rigorous runner uses the actual Random300/Random600 candidate generator,
+resumable task shards, audited shared nested-CV splits, and independent data
+seeds as the statistical pairing unit.
+
+See `SMOKE_REPORT.md` for the completed framework validation and
+`LINUX_RUN_GUIDE.md` for formal server commands and output checks.
+`SYNTHETIC_DATA_AND_RUNTIME_ZH.md` provides the Chinese synthetic-data design,
+exact computation counts, and 15-task parallel runtime estimate.
