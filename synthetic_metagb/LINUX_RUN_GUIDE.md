@@ -1,303 +1,202 @@
-# Synthetic MetaGB Linux Server Run Guide
+# Synthetic MetaGB Linux 主实验运行指南
 
-## 1. Environment Verification
+## 1. 当前主实验
 
-Run from the repository root. Use the modified local XGBoost checkout, not the
-PyPI `xgboost` package.
+当前冻结主实验见：
+
+- `EXPERIMENT_DESIGN_ZH.md`
+- `EXECUTION_PLAN_ZH.md`
+
+主实验配置：
+
+```text
+57 cells
+data_seed = 42
+models = xgb_cpu, current_metagb
+5 outer folds x 4 inner folds
+300 candidates/model
+task_workers = 15
+n_jobs = 1
+```
+
+`current_metagb_pred0` 不进入主实验；它属于后续独立 ablation。
+
+## 2. 环境验证
+
+在仓库根目录执行：
 
 ```bash
 python3 -m pip install -r requirements.txt
+
 PYTHONPATH=beforereview/xgboost-master/python-package python3 -c \
   "import xgboost; print(xgboost.__version__, xgboost.__file__)"
+
 PYTHONPATH=beforereview/xgboost-master/python-package python3 -m pytest \
-  synthetic_metagb/test_scenarios.py synthetic_metagb/test_protocol.py \
+  synthetic_metagb/test_scenarios.py \
+  synthetic_metagb/test_protocol.py \
   tests/test_random_search_contract.py \
   beforereview/xgboost-master/tests/python/test_metagb.py -q
 ```
 
-The printed XGBoost path must point inside this repository.
+打印的 XGBoost 路径必须位于本仓库内。
 
-## 2. Protocols
+## 3. 16 核并行策略
 
-All protocols use three models with equal candidate budgets:
+使用 15 个独立单线程任务：
 
-- `xgb_cpu`
-- `current_metagb_pred0`
-- `current_metagb`
-
-Randomness is separated into `search_seed`, `data_seed`, `cv_seed`, and
-`model_seed`. Statistics use independent data seeds as the pairing unit.
-
-### Smoke
-
-The smoke high-dimensional scenario uses 10 nuisance features so that it
-validates the high-dimensional code path without turning the framework check
-into a formal-scale run. Random300 keeps the required 50 nuisance features.
-
-```bash
-env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
-  NUMEXPR_NUM_THREADS=1 \
-  PYTHONPATH=beforereview/xgboost-master/python-package python3 \
-  synthetic_metagb/run_benchmark.py \
-  --protocol smoke \
-  --search-seed 42 \
-  --task-workers 15 \
-  --n-jobs 1 \
-  --run-id smoke_server
+```text
+task_workers = 15
+n_jobs = 1
 ```
 
-### Random300 Confirmatory
+第 16 核留给操作系统和主调度进程。限制底层库线程，避免每个 worker
+再次创建线程：
+
+```bash
+OMP_NUM_THREADS=1
+OPENBLAS_NUM_THREADS=1
+MKL_NUM_THREADS=1
+NUMEXPR_NUM_THREADS=1
+```
+
+## 4. 已完成 Framework Smoke
+
+本地已完成每个基础 case 的 `dim10` 代表 smoke：
+
+```text
+protocol = synthetic_main_framework_smoke
+19 cells
+76 / 76 tasks
+2,280 / 2,280 candidate rows
+models = xgb_cpu, current_metagb
+elapsed = 1,144.8 seconds
+```
+
+结果目录：
+
+```text
+synthetic_metagb/results/synthetic_main_framework_smoke_dim10_20260615/
+```
+
+三种维度 `10/50/100` 的准确性通过生成器契约测试验证；完整 57 cells
+仅在 Linux Random300 主实验中运行。
+
+## 5. 单 Seed Random300 主实验
+
+计算量：
+
+```text
+57 cells x 1 seed x 5 outer folds x 2 models = 570 tasks
+570 x 300 candidates = 171,000 candidate evaluations
+171,000 x 4 inner folds + 570 final fits = 684,570 model fits
+```
+
+后台运行：
 
 ```bash
 nohup env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   NUMEXPR_NUM_THREADS=1 \
   PYTHONPATH=beforereview/xgboost-master/python-package python3 \
   synthetic_metagb/run_benchmark.py \
-  --protocol random300_confirmatory \
+  --protocol synthetic_main_random300_single_seed \
   --search-seed 42 \
   --task-workers 15 \
   --n-jobs 1 \
-  --run-id random300_confirmatory_v1 \
-  > synthetic_metagb/random300_confirmatory_v1.log 2>&1 &
+  --run-id synthetic_main_random300_seed42 \
+  > synthetic_metagb/synthetic_main_random300_seed42.log 2>&1 &
 ```
 
-### Random600 Confirmatory
+## 6. 监控与恢复
+
+监控日志和已完成任务数：
 
 ```bash
-nohup env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
-  NUMEXPR_NUM_THREADS=1 \
-  PYTHONPATH=beforereview/xgboost-master/python-package python3 \
-  synthetic_metagb/run_benchmark.py \
-  --protocol random600_confirmatory \
-  --search-seed 42 \
-  --task-workers 15 \
-  --n-jobs 1 \
-  --run-id random600_confirmatory_v1 \
-  > synthetic_metagb/random600_confirmatory_v1.log 2>&1 &
+tail -f synthetic_metagb/synthetic_main_random300_seed42.log
+
+find synthetic_metagb/results/synthetic_main_random300_seed42/tasks \
+  -name '*.json' | wc -l
 ```
 
-For the requested 16-core configuration, use exactly `task_workers=15` and
-`n_jobs=1`. Fifteen independent resumable tasks run concurrently, while each
-XGBoost fit stays single-threaded. One core remains available for the
-operating system and orchestration process. Do not run Random300 and Random600
-concurrently.
+完整运行应产生 570 个 task shards。
 
-## 3. Computation Units and Exact Fit Counts
-
-The smallest resumable task is:
-
-```text
-scenario x data_seed x outer_fold x model
-```
-
-For one task, all candidates are selected using the inner folds, followed by
-one final fit on the complete outer-training fold:
-
-```text
-fits_per_task = candidates_per_model x inner_folds + 1 final fit
-```
-
-| Protocol | Scenarios | Data seeds | Outer x inner | Candidates/model | Tasks | Candidate rows | Inner fits | Final fits | Total fits |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Smoke | 11 | 2 | 2 x 2 | 30 | 132 | 3,960 | 7,920 | 132 | 8,052 |
-| Random300 | 17 | 10 | 5 x 4 | 300 | 2,550 | 765,000 | 3,060,000 | 2,550 | 3,062,550 |
-| Random600 | 6 | 10 | 5 x 4 | 600 | 900 | 540,000 | 2,160,000 | 900 | 2,160,900 |
-
-The model-level and data-level decomposition is:
-
-| Unit | Random300 | Random600 |
-| --- | ---: | ---: |
-| One resumable task | 300 candidate rows, 1,201 fits | 600 candidate rows, 2,401 fits |
-| One scenario x data seed, all models/folds | 15 tasks, 4,500 candidate rows, 18,015 fits | 15 tasks, 9,000 candidate rows, 36,015 fits |
-| One complete scenario, 10 seeds | 150 tasks, 45,000 candidate rows, 180,150 fits | 150 tasks, 90,000 candidate rows, 360,150 fits |
-| One model over the complete protocol | 850 tasks, 255,000 candidate rows, 1,020,850 fits | 300 tasks, 180,000 candidate rows, 720,300 fits |
-
-The three models have equal candidate budgets. Random300 therefore evaluates
-`300 candidates x 3 models x 17 scenarios x 10 seeds x 5 outer folds =
-765,000` candidate rows. Every row requires 4 inner-fold fits.
-
-Because a shard is written only after a complete task, interruption can lose
-at most the currently running task: 1,201 fits for Random300 or 2,401 fits for
-Random600. Completed task shards are preserved by `--resume`.
-
-## 4. Measured Minimum-Unit Runtime
-
-The completed local smoke used `n_jobs=1`. Its measurements provide
-smoke-scale lower bounds for a single inner-fold model fit:
-
-| Model | Normal scenarios mean | Normal median | Smoke high-dim mean | Smoke high-dim median |
-| --- | ---: | ---: | ---: | ---: |
-| `xgb_cpu` | 0.138 s | 0.109 s | 0.105 s | 0.098 s |
-| `current_metagb_pred0` | 0.245 s | 0.186 s | 0.463 s | 0.395 s |
-| `current_metagb` | 1.176 s | 0.710 s | 7.436 s | 4.109 s |
-
-The table below reports the measured mean time of the smallest resumable task
-for each smoke dataset and model. One smoke task contains 30 candidates x 2
-inner folds plus one final fit. Times include fit and prediction work and were
-measured with `n_jobs=1`.
-
-| Scenario | `xgb_cpu` | `current_metagb_pred0` | `current_metagb` |
-| --- | ---: | ---: | ---: |
-| `global_linear` | 10.6 s | 18.1 s | 73.0 s |
-| `regime_slope` | 9.8 s | 15.2 s | 72.4 s |
-| `feature_switch` | 11.0 s | 19.0 s | 77.1 s |
-| `multiplicative` | 9.5 s | 14.7 s | 69.2 s |
-| `pure_step_control` | 9.6 s | 16.3 s | 77.4 s |
-| `curved_control` | 10.1 s | 16.2 s | 70.6 s |
-| `xor_classification` | 3.5 s | 11.7 s | 66.9 s |
-| `regime_logit` | 4.0 s | 14.8 s | 77.9 s |
-| `regime_slope__small_n` | 8.2 s | 13.7 s | 63.9 s |
-| `multiplicative__high_noise` | 9.5 s | 14.0 s | 65.9 s |
-| `regime_logit__high_dim` | 6.6 s | 29.1 s | 449.0 s |
-
-This shows that `current_metagb`, especially high-dimensional MetaGB,
-dominates wall time. A smoke high-dimensional MetaGB task is already about
-6.2x slower than an ordinary MetaGB task.
-
-One smoke task contains 61 fits. Random300 and Random600 tasks contain 1,201
-and 2,401 fits, respectively. Holding dataset size and per-candidate
-complexity fixed, candidate-count-only `n_jobs=1` task lower bounds are:
-
-| Model/task type | Random300 task | Random600 task |
-| --- | ---: | ---: |
-| Ordinary `xgb_cpu` | 2.8 min | 5.6 min |
-| Ordinary `current_metagb_pred0` | 5.0 min | 10.1 min |
-| Ordinary `current_metagb` | 23.4 min | 46.8 min |
-| Smoke-scale high-dimensional `current_metagb` | 2.46 h | not in Random600 |
-
-The formal protocols use 3,000 samples instead of smoke's 600 samples.
-Random300 high-dimensional variants also use 50 nuisance features instead of
-the smoke variant's 10. Therefore the table above is a minimum-unit lower
-bound, not a formal-runtime prediction.
-
-## 5. Sixteen-Core, Fifteen-Task Parallel Runtime Planning
-
-With `task_workers=15, n_jobs=1`, up to 15 independent tasks execute at once.
-This avoids nested thread oversubscription and dynamically balances ordinary
-tasks against slower high-dimensional MetaGB tasks.
-
-Use:
-
-```text
-T_task ~= (candidate_count x inner_folds x t_inner_fit_1) + t_final_fit_1
-T_protocol_wall ~= total_single_thread_task_work / effective_parallel_workers
-```
-
-The measured smoke contains 5,717 CPU-seconds of serial fit work. A
-fit-count-only extrapolation, before accounting for larger formal datasets,
-gives:
-
-| Effective parallel workers | Random300 lower bound | Random600 lower bound |
-| ---: | ---: | ---: |
-| 9 workers, 60% utilization | 2.8 days | 2.0 days |
-| 12 workers, 80% utilization | 2.1 days | 1.5 days |
-| 15 workers, ideal balance | 1.7 days | 1.2 days |
-
-These remain optimistic lower bounds. Random300's 50-feature high-dimensional
-tasks can be substantially slower than the table suggests.
-
-Measure the target server before the formal runs:
-
-```bash
-time env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
-  NUMEXPR_NUM_THREADS=1 \
-  PYTHONPATH=beforereview/xgboost-master/python-package python3 \
-  synthetic_metagb/run_benchmark.py \
-  --protocol smoke \
-  --data-seeds 999 \
-  --search-seed 42 \
-  --task-workers 15 \
-  --n-jobs 1 \
-  --run-id smoke_15tasks_capacity
-```
-
-Compare its `metadata.json` elapsed time with the local one-seed preflight
-reference: 951.6 seconds using 4 task workers with `n_jobs=1`. Then run a
-formal-scale one-seed Random300 pilot; it is exactly 10% of the complete
-Random300 protocol:
-
-```bash
-time env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
-  NUMEXPR_NUM_THREADS=1 \
-  PYTHONPATH=beforereview/xgboost-master/python-package python3 \
-  synthetic_metagb/run_benchmark.py \
-  --protocol random300_confirmatory \
-  --data-seeds 1001 \
-  --search-seed 42 \
-  --task-workers 15 \
-  --n-jobs 1 \
-  --run-id random300_15tasks_capacity
-```
-
-The pilot contains 255 tasks, 76,500 candidate rows, and 306,255 fits. Its
-elapsed time multiplied by approximately 10 is the best initial full
-Random300 estimate on the target server.
-
-## 6. Monitoring and Resume
-
-```bash
-tail -f synthetic_metagb/random300_confirmatory_v1.log
-find synthetic_metagb/results/random300_confirmatory_v1/tasks -name '*.json' | wc -l
-```
-
-Resume after interruption with the exact same protocol and seeds:
+中断后使用完全相同配置恢复：
 
 ```bash
 env OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 \
   NUMEXPR_NUM_THREADS=1 \
   PYTHONPATH=beforereview/xgboost-master/python-package python3 \
   synthetic_metagb/run_benchmark.py \
-  --protocol random300_confirmatory \
+  --protocol synthetic_main_random300_single_seed \
   --search-seed 42 \
   --task-workers 15 \
   --n-jobs 1 \
-  --run-id random300_confirmatory_v1 \
+  --run-id synthetic_main_random300_seed42 \
   --resume
 ```
 
-Resume refuses to continue if the protocol configuration hash differs.
+恢复时会校验协议配置哈希，并跳过已完成 task。
 
-## 7. Outputs and Integrity Checks
+## 7. 时间预估
 
-Each run directory contains:
+Framework smoke 使用 15 个独立 worker，完成 76 个低维任务耗时约
+19.1 分钟。
 
-- `protocol.json`: frozen protocol and config hash.
-- `candidate_configs.json`: complete model candidate universes.
-- `candidate_fairness_audit.json`: equal-budget and paired-backbone audit.
-- `parameter_audit.json`: searched, fixed, and default parameters.
-- `split_manifest.json`: shared split hashes and leakage checks.
-- `tasks/*.json`: resumable task shards.
-- `candidates.csv`: all inner-CV candidate evaluations.
-- `folds.csv`: selected-candidate outer-test results.
-- `seed_results.csv`: outer-fold results averaged by independent data seed.
-- `paired_statistics.csv`: bootstrap CI, Wilcoxon, Holm correction, win rate,
-  relative improvement, and rank-biserial effect size.
-- `completeness_audit.json`: expected versus actual task and candidate counts.
-- `metadata.json`: final run hashes and completion status.
+完整主实验包含：
 
-Check completion:
+- 570 个任务；
+- 每任务候选数从 30 增加到 300；
+- inner folds 从 2 增加到 4；
+- 样本数从 180 增加到 3,000；
+- 38 个 `dim50/dim100` cells，其中高维 MetaGB 是主要长尾。
+
+因此不能用 smoke 时间简单线性外推。建议将服务器运行的前 30–60 个
+已完成任务作为容量校准，并重点观察 `dim100 current_metagb` task。
+单 seed 主实验预期以天为单位，而非小时。
+
+## 8. 输出文件
+
+运行目录包含：
+
+- `protocol.json`：冻结协议与配置哈希。
+- `candidate_configs.json`：两模型完整候选。
+- `candidate_fairness_audit.json`：候选预算与 paired backbone 审计。
+- `split_manifest.json`：共享 nested-CV split 与泄漏审计。
+- `tasks/*.json`：可恢复任务分片。
+- `candidates.csv`：inner-CV 候选评估。
+- `folds.csv`：outer-test 结果。
+- `seed_results.csv`：seed 级结果。
+- `paired_statistics.csv`：MetaGB vs XGB cell 级比较。
+- `case_summary.csv`：case 级维度汇总。
+- `type_summary.csv`：A-E/type 级汇总。
+- `selected_complexity.csv`：最佳深度、树数、预测特征比例和时间。
+- `completeness_audit.json`：结果完整性。
+- `metadata.json`：最终哈希、耗时和执行模式。
+
+完成后检查：
 
 ```bash
-python3 -m json.tool synthetic_metagb/results/random300_confirmatory_v1/completeness_audit.json
-python3 -m json.tool synthetic_metagb/results/random300_confirmatory_v1/metadata.json
+python3 -m json.tool \
+  synthetic_metagb/results/synthetic_main_random300_seed42/completeness_audit.json
+
+python3 -m json.tool \
+  synthetic_metagb/results/synthetic_main_random300_seed42/metadata.json
 ```
 
-Both must report successful completion and matching expected/actual counts.
-
-## 8. Results to Return
-
-After each formal run, return these files:
+预期：
 
 ```text
-protocol.json
-candidate_fairness_audit.json
-parameter_audit.json
-split_manifest.json
-completeness_audit.json
-metadata.json
-seed_results.csv
-paired_statistics.csv
+task_count = 570
+candidate_row_count = 171000
+models = current_metagb, xgb_cpu
+completed = true
 ```
 
-Smoke output is explicitly non-confirmatory. Only the Random300 and Random600
-protocols are intended for formal advantage claims.
+## 9. Legacy 与 Ablation 协议
+
+以下旧协议仍保留用于历史复现或后续 pred0 ablation，不属于当前主实验：
+
+- `smoke`
+- `random300_confirmatory`
+- `random600_confirmatory`
+
+不要使用这些协议替代 `synthetic_main_random300_single_seed`。

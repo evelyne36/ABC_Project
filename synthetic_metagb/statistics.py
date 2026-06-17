@@ -53,6 +53,9 @@ def paired_statistics(seed_rows: pd.DataFrame, bootstrap_seed: int = 42) -> pd.D
     for scenario, scenario_df in seed_rows.groupby("scenario"):
         task_type = str(scenario_df["task_type"].iloc[0])
         metric = str(scenario_df["primary_metric"].iloc[0])
+        family = str(scenario_df["family"].iloc[0]) if "family" in scenario_df else "legacy"
+        case = str(scenario_df["case"].iloc[0]) if "case" in scenario_df else scenario
+        dimension = int(scenario_df["dimension"].iloc[0]) if "dimension" in scenario_df else 0
         direction = primary_metric_direction(task_type)
         pivot = scenario_df.pivot(index="data_seed", columns="model", values="seed_primary_metric")
         for reference in ["xgb_cpu", "current_metagb_pred0"]:
@@ -81,6 +84,9 @@ def paired_statistics(seed_rows: pd.DataFrame, bootstrap_seed: int = 42) -> pd.D
             rows.append(
                 {
                     "scenario": scenario,
+                    "family": family,
+                    "case": case,
+                    "dimension": dimension,
                     "task_type": task_type,
                     "primary_metric": metric,
                     "reference_model": reference,
@@ -104,9 +110,23 @@ def paired_statistics(seed_rows: pd.DataFrame, bootstrap_seed: int = 42) -> pd.D
 
 
 def seed_level_results(fold_rows: pd.DataFrame) -> pd.DataFrame:
+    metadata_columns = [
+        column
+        for column in ["family", "case", "dimension"]
+        if column in fold_rows.columns
+    ]
     return (
         fold_rows.groupby(
-            ["scenario", "base_scenario", "variant", "task_type", "primary_metric", "data_seed", "model"],
+            [
+                "scenario",
+                "base_scenario",
+                "variant",
+                *metadata_columns,
+                "task_type",
+                "primary_metric",
+                "data_seed",
+                "model",
+            ],
             as_index=False,
         )
         .agg(
@@ -127,3 +147,25 @@ def mark_confirmatory(stats: pd.DataFrame, confirmatory: bool) -> pd.DataFrame:
         else "smoke_only_non_confirmatory_do_not_claim_significance"
     )
     return out
+
+
+def case_type_summary(stats: pd.DataFrame) -> Tuple[pd.DataFrame, pd.DataFrame]:
+    if stats.empty or "family" not in stats.columns:
+        return pd.DataFrame(), pd.DataFrame()
+    xgb = stats[stats["reference_model"] == "xgb_cpu"].copy()
+    aggregations = {
+        "cell_count": ("scenario", "count"),
+        "positive_cell_rate": ("mean_signed_advantage", lambda values: float(np.mean(values > 0.0))),
+        "mean_signed_advantage": ("mean_signed_advantage", "mean"),
+        "mean_relative_improvement": ("mean_relative_improvement", "mean"),
+        "mean_win_rate": ("win_rate", "mean"),
+    }
+    case_summary = (
+        xgb.groupby(["family", "case", "task_type", "primary_metric"], as_index=False)
+        .agg(**aggregations)
+    )
+    type_summary = (
+        xgb.groupby(["family", "task_type", "primary_metric"], as_index=False)
+        .agg(**aggregations)
+    )
+    return case_summary, type_summary

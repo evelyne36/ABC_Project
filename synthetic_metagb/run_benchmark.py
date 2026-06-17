@@ -32,7 +32,12 @@ from random300.utils.parameter_audit import build_parameter_audit  # noqa: E402
 from random300.utils.runner import build_estimator, import_local_xgboost  # noqa: E402
 from synthetic_metagb.protocols import Protocol, ScenarioInstance, protocol_by_name  # noqa: E402
 from synthetic_metagb.scenarios import SCENARIOS, generate_instance  # noqa: E402
-from synthetic_metagb.statistics import mark_confirmatory, paired_statistics, seed_level_results  # noqa: E402
+from synthetic_metagb.statistics import (  # noqa: E402
+    case_type_summary,
+    mark_confirmatory,
+    paired_statistics,
+    seed_level_results,
+)
 
 
 MODELS = ["xgb_cpu", "current_metagb_pred0", "current_metagb"]
@@ -58,7 +63,13 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Rigorous resumable nested-CV MetaGB synthetic benchmark.")
     parser.add_argument(
         "--protocol",
-        choices=["smoke", "random300_confirmatory", "random600_confirmatory"],
+        choices=[
+            "smoke",
+            "random300_confirmatory",
+            "random600_confirmatory",
+            "synthetic_main_random300_single_seed",
+            "synthetic_main_framework_smoke",
+        ],
         default="smoke",
     )
     parser.add_argument("--search-seed", type=int, default=42)
@@ -99,7 +110,7 @@ def runtime_args(args: argparse.Namespace, model_seed: int) -> argparse.Namespac
 def protocol_payload(args: argparse.Namespace, protocol: Protocol) -> Dict[str, Any]:
     return {
         "protocol": protocol.to_dict(),
-        "models": MODELS,
+        "models": protocol.models,
         "search_seed": args.search_seed,
         "cv_seed": args.cv_seed,
         "model_seed": args.model_seed,
@@ -146,6 +157,7 @@ def build_split_manifest(protocol: Protocol, cv_seed: int) -> Dict[str, Any]:
                 scenario.n_samples,
                 scenario.noise,
                 scenario.extra_nuisance_features,
+                scenario.target_features,
             )
             outer, inner = splits_for(
                 task_type, X, y, protocol.outer_folds, protocol.inner_folds, cv_seed
@@ -224,13 +236,15 @@ def candidate_fairness_audit(candidates_by_model: Dict[str, List[Dict[str, Any]]
         "n_estimators",
         "max_bin",
     ]
-    for xgb, metagb, pred0 in zip(
-        candidates_by_model["xgb_cpu"],
-        candidates_by_model["current_metagb"],
-        candidates_by_model["current_metagb_pred0"],
+    pred0_candidates = candidates_by_model.get("current_metagb_pred0")
+    for index, (xgb, metagb) in enumerate(
+        zip(candidates_by_model["xgb_cpu"], candidates_by_model["current_metagb"])
     ):
         for key in shared_keys:
-            if not (xgb[key] == metagb[key] == pred0[key]):
+            values = [xgb[key], metagb[key]]
+            if pred0_candidates is not None:
+                values.append(pred0_candidates[index][key])
+            if len(set(values)) != 1:
                 mismatches.append({"backbone_id": xgb.get("backbone_id"), "key": key})
         if xgb["reg_lambda"] != metagb["metagb_lambda_l2"]:
             mismatches.append({"backbone_id": xgb.get("backbone_id"), "key": "lambda_l2"})
@@ -259,6 +273,7 @@ def run_task(task: Dict[str, Any]) -> Dict[str, Any]:
         scenario.n_samples,
         scenario.noise,
         scenario.extra_nuisance_features,
+        scenario.target_features,
     )
     outer, inner = splits_for(
         task_type, X, y, args.outer_folds, args.inner_folds, args.cv_seed
@@ -317,6 +332,9 @@ def run_task(task: Dict[str, Any]) -> Dict[str, Any]:
         "scenario": scenario.name,
         "base_scenario": scenario.base_scenario,
         "variant": scenario.variant,
+        "family": scenario.family,
+        "case": scenario.case or scenario.base_scenario,
+        "dimension": scenario.dimension or X.shape[1],
         "task_type": task_type,
         "data_seed": task["data_seed"],
         "outer_fold": task["outer_index"] + 1,
@@ -350,7 +368,7 @@ def create_tasks(
     for scenario in protocol.scenarios:
         for data_seed in protocol.data_seeds:
             for outer_index in range(protocol.outer_folds):
-                for model in MODELS:
+                for model in protocol.models:
                     task_id = f"{scenario.name}__seed{data_seed}__out{outer_index + 1}__{model}"
                     tasks.append(
                         {
@@ -392,6 +410,7 @@ def main() -> int:
             inner_folds=protocol.inner_folds,
             max_candidates=protocol.max_candidates,
             confirmatory=protocol.confirmatory,
+            models=protocol.models,
         )
     args.run_id = args.run_id or f"{protocol.name}_{time.strftime('%Y%m%d_%H%M%S')}"
     results_dir = Path(args.output_dir).resolve() / args.run_id
@@ -413,7 +432,7 @@ def main() -> int:
 
     search_space = load_search_space(Path(args.search_space_json))
     candidates_by_model, warnings = candidate_sets(
-        search_space, protocol.max_candidates, args.search_seed, None, MODELS
+        search_space, protocol.max_candidates, args.search_seed, None, protocol.models
     )
     write_json(results_dir / "candidate_configs.json", candidate_config_payload(candidates_by_model))
     fairness = candidate_fairness_audit(candidates_by_model)
@@ -465,10 +484,36 @@ def main() -> int:
         raise AssertionError(f"Expected {expected_candidates} candidate rows, found {len(candidates_df)}")
     seed_df = seed_level_results(folds_df)
     stats_df = mark_confirmatory(paired_statistics(seed_df), protocol.confirmatory)
+    case_summary_df, type_summary_df = case_type_summary(stats_df)
+    complexity_rows = []
+    for row in folds_df.to_dict(orient="records"):
+        params = json.loads(row["params_json"])
+        complexity_rows.append(
+            {
+                "scenario": row["scenario"],
+                "family": row.get("family", "legacy"),
+                "case": row.get("case", row["base_scenario"]),
+                "dimension": row.get("dimension", 0),
+                "data_seed": row["data_seed"],
+                "outer_fold": row["outer_fold"],
+                "model": row["model"],
+                "max_depth": params.get("max_depth"),
+                "n_estimators": params.get("n_estimators"),
+                "pred_feature_fraction": params.get("pred_feature_fraction"),
+                "metagb_score_agg": params.get("metagb_score_agg"),
+                "fit_sec": row["fit_sec"],
+                "predict_sec": row["predict_sec"],
+                "test_primary_metric": row["test_primary_metric"],
+            }
+        )
+    complexity_df = pd.DataFrame(complexity_rows)
     candidates_df.to_csv(results_dir / "candidates.csv", index=False)
     folds_df.to_csv(results_dir / "folds.csv", index=False)
     seed_df.to_csv(results_dir / "seed_results.csv", index=False)
     stats_df.to_csv(results_dir / "paired_statistics.csv", index=False)
+    case_summary_df.to_csv(results_dir / "case_summary.csv", index=False)
+    type_summary_df.to_csv(results_dir / "type_summary.csv", index=False)
+    complexity_df.to_csv(results_dir / "selected_complexity.csv", index=False)
     elapsed_this_invocation = time.perf_counter() - start
     metadata_path = results_dir / "metadata.json"
     previous_elapsed = 0.0

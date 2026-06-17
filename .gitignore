@@ -24,7 +24,7 @@ __pycache__/
 **/build_*/
 
 # Local datasets are too large for normal Git history
-dataset/
+# dataset/
 
 # Generated benchmark logs and historical result directories
 beforereview/exp12/logs/

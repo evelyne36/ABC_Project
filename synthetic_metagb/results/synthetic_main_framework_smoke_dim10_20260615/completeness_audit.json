@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "expected_task_count": 76,
+  "actual_task_count": 76,
+  "expected_candidate_row_count": 2280,
+  "actual_candidate_row_count": 2280,
+  "unique_task_ids": 76,
+  "models": [
+    "current_metagb",
+    "xgb_cpu"
+  ],
+  "scenario_count": 19,
+  "data_seed_count": 1
+}

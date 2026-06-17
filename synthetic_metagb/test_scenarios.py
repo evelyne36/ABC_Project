@@ -3,7 +3,8 @@ from __future__ import annotations
 import numpy as np
 
 from synthetic_metagb.run_benchmark import candidate_for_model
-from synthetic_metagb.scenarios import SCENARIOS
+from synthetic_metagb.protocols import main_experiment_instances
+from synthetic_metagb.scenarios import SCENARIOS, generate_instance
 
 
 def test_all_scenarios_are_reproducible_and_finite() -> None:
@@ -35,3 +36,33 @@ def test_pred0_candidate_disables_predictive_features() -> None:
     assert pred0["pred_feature_fraction"] == 0.0
     assert metagb["pred_feature_fraction"] == 1.0
     assert base["pred_feature_fraction"] == 1.0
+
+
+def test_main_experiment_instances_have_exact_dimensions_and_reproduce() -> None:
+    for instance in main_experiment_instances(n_samples=80):
+        first_X, first_y = generate_instance(
+            instance.base_scenario,
+            42,
+            instance.n_samples,
+            instance.noise,
+            target_features=instance.target_features,
+        )
+        second_X, second_y = generate_instance(
+            instance.base_scenario,
+            42,
+            instance.n_samples,
+            instance.noise,
+            target_features=instance.target_features,
+        )
+        assert first_X.shape == (80, instance.dimension)
+        assert np.array_equal(first_X, second_X)
+        assert np.array_equal(first_y, second_y)
+
+
+def test_noise_case_uses_stronger_gaussian_target_noise() -> None:
+    clean_X, clean_y = generate_instance("regime_slope", 42, 5000, 0.0, target_features=10)
+    default_X, default_y = generate_instance("regime_slope", 42, 5000, 0.15, target_features=10)
+    noisy_X, noisy_y = generate_instance("regime_slope", 42, 5000, 0.75, target_features=10)
+    assert np.array_equal(clean_X, default_X)
+    assert np.array_equal(clean_X, noisy_X)
+    assert np.std(noisy_y - clean_y) > 4.5 * np.std(default_y - clean_y)
