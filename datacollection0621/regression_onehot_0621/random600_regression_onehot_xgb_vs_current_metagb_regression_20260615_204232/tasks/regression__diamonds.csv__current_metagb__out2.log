@@ -1,0 +1,15 @@
+[2026-06-15 22:56:47] start task_id=regression__diamonds.csv__current_metagb__out2
+[2026-06-15 22:56:48] config task_type=regression dataset=diamonds.csv model=current_metagb outer_fold=2/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=53940 features=26 classes=0
+[2026-06-15 22:56:48] split train_rows=43152 test_rows=10788 inner_splits=4
+[2026-06-15 23:03:04] candidate 1/600 rmse=563.312 status=ok
+[2026-06-16 12:51:18] candidate 50/600 rmse=620.757 status=ok
+[2026-06-17 00:53:42] candidate 100/600 rmse=636.038 status=ok
+[2026-06-17 17:52:33] candidate 150/600 rmse=1388.9 status=ok
+[2026-06-18 04:35:03] candidate 200/600 rmse=793.574 status=ok
+[2026-06-18 16:31:26] candidate 250/600 rmse=575.076 status=ok
+[2026-06-19 06:17:27] candidate 300/600 rmse=566.111 status=ok
+[2026-06-19 17:35:06] candidate 350/600 rmse=701.608 status=ok
+[2026-06-20 07:50:57] candidate 400/600 rmse=575.395 status=ok
+[2026-06-20 22:43:19] candidate 450/600 rmse=2185.08 status=ok
+[2026-06-21 08:14:38] candidate 500/600 rmse=951.893 status=ok
+[2026-06-21 21:46:31] candidate 550/600 rmse=561.553 status=ok

@@ -1,0 +1,7 @@
+[2026-06-21 15:57:54] start task_id=binary__seismic-bumps.csv__current_metagb__out5
+[2026-06-21 15:57:54] config task_type=binary dataset=seismic-bumps.csv model=current_metagb outer_fold=5/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=2584 features=21 classes=2
+[2026-06-21 15:57:54] split train_rows=2068 test_rows=516 inner_splits=4
+[2026-06-21 15:58:52] candidate 1/300 auc=0.750183 status=ok
+[2026-06-21 18:11:30] candidate 50/300 auc=0.717041 status=ok
+[2026-06-21 20:05:12] candidate 100/300 auc=0.761707 status=ok
+[2026-06-21 22:55:28] candidate 150/300 auc=0.772074 status=ok

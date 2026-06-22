@@ -1,0 +1,18 @@
+[2026-06-19 01:07:10] start task_id=regression__physiochemical_protein.csv__xgb_cpu__out1
+[2026-06-19 01:07:10] config task_type=regression dataset=physiochemical_protein.csv model=xgb_cpu outer_fold=1/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=45730 features=9 classes=0
+[2026-06-19 01:07:10] split train_rows=36584 test_rows=9146 inner_splits=4
+[2026-06-19 01:07:24] candidate 1/600 rmse=4.03963 status=ok
+[2026-06-19 01:18:49] candidate 50/600 rmse=4.51742 status=ok
+[2026-06-19 01:29:26] candidate 100/600 rmse=4.52759 status=ok
+[2026-06-19 01:42:30] candidate 150/600 rmse=4.91579 status=ok
+[2026-06-19 01:52:38] candidate 200/600 rmse=4.73776 status=ok
+[2026-06-19 02:02:25] candidate 250/600 rmse=4.23645 status=ok
+[2026-06-19 02:13:10] candidate 300/600 rmse=3.85314 status=ok
+[2026-06-19 02:22:46] candidate 350/600 rmse=4.39037 status=ok
+[2026-06-19 02:33:15] candidate 400/600 rmse=4.30577 status=ok
+[2026-06-19 02:45:14] candidate 450/600 rmse=5.26366 status=ok
+[2026-06-19 02:54:22] candidate 500/600 rmse=4.73866 status=ok
+[2026-06-19 03:05:56] candidate 550/600 rmse=3.6792 status=ok
+[2026-06-19 03:16:44] candidate 600/600 rmse=3.96298 status=ok
+[2026-06-19 03:16:44] selected candidate_index=329 candidate_id=xgb_0329 val_rmse=3.52338 val_std=0.0479711
+[2026-06-19 03:17:00] finish best=329 test_rmse=3.41884 final_train_sec=15.2392 final_predict_sec=1.01121 elapsed_sec=7790.31 status=ok

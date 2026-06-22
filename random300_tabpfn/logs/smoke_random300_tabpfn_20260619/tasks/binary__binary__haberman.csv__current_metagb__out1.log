@@ -1,0 +1,7 @@
+[2026-06-19 12:05:02] start task_id=binary__binary__haberman.csv__current_metagb__out1
+[2026-06-19 12:05:02] config task_type=binary dataset=binary__haberman.csv model=current_metagb outer_fold=1/2 inner_folds=2 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=306 features=3 classes=2
+[2026-06-19 12:05:02] split train_rows=153 test_rows=153 inner_splits=2
+[2026-06-19 12:05:02] candidate 1/30 auc=0.611905 status=ok
+[2026-06-19 12:05:09] candidate 30/30 auc=0.59983 status=ok
+[2026-06-19 12:05:09] selected candidate_index=17 candidate_id=metagb_pf06_sa1_001 val_auc=0.647491 val_std=0.0114371
+[2026-06-19 12:05:09] finish best=17 test_auc=0.612942 final_train_sec=0.0546197 final_predict_sec=0.00131038 elapsed_sec=7.83175 status=ok

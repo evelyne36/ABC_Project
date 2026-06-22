@@ -1,0 +1,118 @@
+{
+  "protocol": {
+    "name": "smoke",
+    "scenarios": [
+      {
+        "name": "global_linear",
+        "base_scenario": "global_linear",
+        "n_samples": 600,
+        "noise": 0.15,
+        "extra_nuisance_features": 0,
+        "variant": "core"
+      },
+      {
+        "name": "regime_slope",
+        "base_scenario": "regime_slope",
+        "n_samples": 600,
+        "noise": 0.15,
+        "extra_nuisance_features": 0,
+        "variant": "core"
+      },
+      {
+        "name": "feature_switch",
+        "base_scenario": "feature_switch",
+        "n_samples": 600,
+        "noise": 0.15,
+        "extra_nuisance_features": 0,
+        "variant": "core"
+      },
+      {
+        "name": "multiplicative",
+        "base_scenario": "multiplicative",
+        "n_samples": 600,
+        "noise": 0.15,
+        "extra_nuisance_features": 0,
+        "variant": "core"
+      },
+      {
+        "name": "pure_step_control",
+        "base_scenario": "pure_step_control",
+        "n_samples": 600,
+        "noise": 0.15,
+        "extra_nuisance_features": 0,
+        "variant": "core"
+      },
+      {
+        "name": "curved_control",
+        "base_scenario": "curved_control",
+        "n_samples": 600,
+        "noise": 0.15,
+        "extra_nuisance_features": 0,
+        "variant": "core"
+      },
+      {
+        "name": "xor_classification",
+        "base_scenario": "xor_classification",
+        "n_samples": 600,
+        "noise": 0.05,
+        "extra_nuisance_features": 0,
+        "variant": "core"
+      },
+      {
+        "name": "regime_logit",
+        "base_scenario": "regime_logit",
+        "n_samples": 600,
+        "noise": 0.05,
+        "extra_nuisance_features": 0,
+        "variant": "core"
+      },
+      {
+        "name": "regime_slope__small_n",
+        "base_scenario": "regime_slope",
+        "n_samples": 500,
+        "noise": 0.15,
+        "extra_nuisance_features": 0,
+        "variant": "small_n"
+      },
+      {
+        "name": "multiplicative__high_noise",
+        "base_scenario": "multiplicative",
+        "n_samples": 600,
+        "noise": 0.75,
+        "extra_nuisance_features": 0,
+        "variant": "high_noise"
+      },
+      {
+        "name": "regime_logit__high_dim",
+        "base_scenario": "regime_logit",
+        "n_samples": 600,
+        "noise": 0.05,
+        "extra_nuisance_features": 10,
+        "variant": "high_dim"
+      }
+    ],
+    "data_seeds": [
+      101,
+      202
+    ],
+    "outer_folds": 2,
+    "inner_folds": 2,
+    "max_candidates": 30,
+    "confirmatory": false,
+    "scenario_count": 11,
+    "expected_task_count": 132,
+    "expected_candidate_row_count": 3960
+  },
+  "models": [
+    "xgb_cpu",
+    "current_metagb_pred0",
+    "current_metagb"
+  ],
+  "search_seed": 42,
+  "cv_seed": 314159,
+  "model_seed": 271828,
+  "n_jobs": 1,
+  "xgboost_python_package": "/Users/ancd/VSCodeProject/check_codereview0611/beforereview/xgboost-master/python-package",
+  "search_space_json": "/Users/ancd/VSCodeProject/check_codereview0611/random300/configs/default_search_space.json",
+  "config_hash": "e40c7f9ec21ea0d34a37080efc7589d065e322213041a29560347adb1efacc50"
+}

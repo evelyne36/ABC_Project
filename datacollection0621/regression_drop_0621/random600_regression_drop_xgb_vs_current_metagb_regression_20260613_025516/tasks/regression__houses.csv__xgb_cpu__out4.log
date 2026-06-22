@@ -1,0 +1,18 @@
+[2026-06-13 10:56:15] start task_id=regression__houses.csv__xgb_cpu__out4
+[2026-06-13 10:56:15] config task_type=regression dataset=houses.csv model=xgb_cpu outer_fold=4/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=20640 features=8 classes=0
+[2026-06-13 10:56:15] split train_rows=16512 test_rows=4128 inner_splits=4
+[2026-06-13 10:56:26] candidate 1/600 rmse=0.226731 status=ok
+[2026-06-13 11:04:57] candidate 50/600 rmse=0.253797 status=ok
+[2026-06-13 11:12:19] candidate 100/600 rmse=0.248504 status=ok
+[2026-06-13 11:21:27] candidate 150/600 rmse=0.337943 status=ok
+[2026-06-13 11:28:21] candidate 200/600 rmse=0.279687 status=ok
+[2026-06-13 11:35:04] candidate 250/600 rmse=0.23211 status=ok
+[2026-06-13 11:42:20] candidate 300/600 rmse=0.218385 status=ok
+[2026-06-13 11:48:47] candidate 350/600 rmse=0.251184 status=ok
+[2026-06-13 11:55:56] candidate 400/600 rmse=0.236149 status=ok
+[2026-06-13 12:04:22] candidate 450/600 rmse=0.385782 status=ok
+[2026-06-13 12:10:42] candidate 500/600 rmse=0.289429 status=ok
+[2026-06-13 12:18:59] candidate 550/600 rmse=0.21742 status=ok
+[2026-06-13 12:26:36] candidate 600/600 rmse=0.231163 status=ok
+[2026-06-13 12:26:36] selected candidate_index=156 candidate_id=xgb_0156 val_rmse=0.215507 val_std=0.00261231
+[2026-06-13 12:26:42] finish best=156 test_rmse=0.218472 final_train_sec=5.8481 final_predict_sec=0.196669 elapsed_sec=5426.81 status=ok

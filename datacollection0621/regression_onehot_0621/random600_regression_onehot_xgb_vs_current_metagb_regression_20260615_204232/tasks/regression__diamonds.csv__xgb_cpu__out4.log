@@ -1,0 +1,18 @@
+[2026-06-16 00:48:53] start task_id=regression__diamonds.csv__xgb_cpu__out4
+[2026-06-16 00:48:53] config task_type=regression dataset=diamonds.csv model=xgb_cpu outer_fold=4/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=53940 features=26 classes=0
+[2026-06-16 00:48:53] split train_rows=43152 test_rows=10788 inner_splits=4
+[2026-06-16 00:49:06] candidate 1/600 rmse=551.165 status=ok
+[2026-06-16 00:57:53] candidate 50/600 rmse=638.827 status=ok
+[2026-06-16 01:05:57] candidate 100/600 rmse=650.146 status=ok
+[2026-06-16 01:15:35] candidate 150/600 rmse=1179.63 status=ok
+[2026-06-16 01:23:53] candidate 200/600 rmse=808.35 status=ok
+[2026-06-16 01:32:08] candidate 250/600 rmse=570.65 status=ok
+[2026-06-16 01:41:35] candidate 300/600 rmse=551.369 status=ok
+[2026-06-16 01:50:42] candidate 350/600 rmse=666.826 status=ok
+[2026-06-16 02:00:08] candidate 400/600 rmse=583.282 status=ok
+[2026-06-16 02:10:47] candidate 450/600 rmse=1734.49 status=ok
+[2026-06-16 02:19:19] candidate 500/600 rmse=887.989 status=ok
+[2026-06-16 02:30:01] candidate 550/600 rmse=537.185 status=ok
+[2026-06-16 02:40:52] candidate 600/600 rmse=551.229 status=ok
+[2026-06-16 02:40:52] selected candidate_index=597 candidate_id=xgb_0597 val_rmse=534.382 val_std=5.00744
+[2026-06-16 02:40:59] finish best=597 test_rmse=545.577 final_train_sec=7.16335 final_predict_sec=0.535047 elapsed_sec=6726.01 status=ok

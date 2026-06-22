@@ -1,0 +1,9 @@
+family,task_type,primary_metric,cell_count,positive_cell_rate,mean_signed_advantage,mean_relative_improvement,mean_win_rate
+A_interaction,binary,auc,2,1.0,0.2026131413340178,0.2026131413340178,1.0
+A_interaction,regression,rmse,2,1.0,0.8749211642348659,0.3090307814195971,1.0
+B_linear_in_leaves,binary,auc,1,1.0,0.21651709401709396,0.21651709401709396,1.0
+B_linear_in_leaves,regression,rmse,4,0.75,0.5671367399342956,0.11884861237594027,0.75
+C_conditional_predictive,regression,rmse,3,1.0,0.7901491321169095,0.30498555084538065,1.0
+D_sparse_interaction,regression,rmse,3,1.0,1.1464733198262675,0.4338575925281866,1.0
+E_negative_control,regression,rmse,3,0.3333333333333333,-0.12049299304560163,-0.2984516233683865,0.3333333333333333
+F_gaussian_noise,regression,rmse,1,1.0,1.1782240780105515,0.3966155907359177,1.0

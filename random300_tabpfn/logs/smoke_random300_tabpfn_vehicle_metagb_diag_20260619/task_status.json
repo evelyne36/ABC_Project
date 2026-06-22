@@ -1,0 +1,10 @@
+{
+  "run_id": "smoke_random300_tabpfn_vehicle_metagb_diag_20260619",
+  "total": 1,
+  "completed": 1,
+  "failed": 0,
+  "tasks": {
+    "multiclass__multiclass__vehicle.csv__current_metagb__out1": "ok"
+  },
+  "updated_at": "2026-06-19T20:25:53"
+}

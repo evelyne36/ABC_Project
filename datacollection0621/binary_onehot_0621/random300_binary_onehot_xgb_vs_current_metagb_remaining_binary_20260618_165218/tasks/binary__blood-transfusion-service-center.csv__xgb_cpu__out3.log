@@ -1,0 +1,12 @@
+[2026-06-18 16:52:19] start task_id=binary__blood-transfusion-service-center.csv__xgb_cpu__out3
+[2026-06-18 16:52:19] config task_type=binary dataset=blood-transfusion-service-center.csv model=xgb_cpu outer_fold=3/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=748 features=4 classes=2
+[2026-06-18 16:52:19] split train_rows=598 test_rows=150 inner_splits=4
+[2026-06-18 16:52:20] candidate 1/300 auc=0.679134 status=ok
+[2026-06-18 16:52:59] candidate 50/300 auc=0.685309 status=ok
+[2026-06-18 16:53:39] candidate 100/300 auc=0.69315 status=ok
+[2026-06-18 16:54:18] candidate 150/300 auc=0.684683 status=ok
+[2026-06-18 16:54:55] candidate 200/300 auc=0.697214 status=ok
+[2026-06-18 16:55:33] candidate 250/300 auc=0.669218 status=ok
+[2026-06-18 16:56:12] candidate 300/300 auc=0.632737 status=ok
+[2026-06-18 16:56:12] selected candidate_index=76 candidate_id=xgb_0076 val_auc=0.729284 val_std=0.0326673
+[2026-06-18 16:56:12] finish best=76 test_auc=0.777778 final_train_sec=0.135169 final_predict_sec=0.00421187 elapsed_sec=233.059 status=ok

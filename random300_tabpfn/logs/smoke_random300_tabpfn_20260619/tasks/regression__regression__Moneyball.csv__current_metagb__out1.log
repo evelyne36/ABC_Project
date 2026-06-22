@@ -1,0 +1,7 @@
+[2026-06-19 12:04:17] start task_id=regression__regression__Moneyball.csv__current_metagb__out1
+[2026-06-19 12:04:17] config task_type=regression dataset=regression__Moneyball.csv model=current_metagb outer_fold=1/2 inner_folds=2 candidates=30 objective=reg:squarederror primary_metric=rmse direction=minimize rows=114 features=14 classes=0
+[2026-06-19 12:04:17] split train_rows=57 test_rows=57 inner_splits=2
+[2026-06-19 12:04:17] candidate 1/30 rmse=48.0475 status=ok
+[2026-06-19 12:04:59] candidate 30/30 rmse=31.6363 status=ok
+[2026-06-19 12:04:59] selected candidate_index=24 candidate_id=metagb_pf08_sa2_001 val_rmse=30.7061 val_std=2.538
+[2026-06-19 12:05:01] finish best=24 test_rmse=23.5756 final_train_sec=1.27257 final_predict_sec=0.00100312 elapsed_sec=43.7383 status=ok

@@ -1,0 +1,18 @@
+[2026-06-13 02:55:17] start task_id=regression__airfoil_self_noise.csv__xgb_cpu__out1
+[2026-06-13 02:55:18] config task_type=regression dataset=airfoil_self_noise.csv model=xgb_cpu outer_fold=1/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=1503 features=5 classes=0
+[2026-06-13 02:55:18] split train_rows=1202 test_rows=301 inner_splits=4
+[2026-06-13 02:55:19] candidate 1/600 rmse=1.78423 status=ok
+[2026-06-13 02:56:08] candidate 50/600 rmse=2.38715 status=ok
+[2026-06-13 02:56:51] candidate 100/600 rmse=2.23774 status=ok
+[2026-06-13 02:57:39] candidate 150/600 rmse=3.90559 status=ok
+[2026-06-13 02:58:21] candidate 200/600 rmse=3.05151 status=ok
+[2026-06-13 02:59:02] candidate 250/600 rmse=1.9357 status=ok
+[2026-06-13 02:59:47] candidate 300/600 rmse=1.65406 status=ok
+[2026-06-13 03:00:30] candidate 350/600 rmse=2.22853 status=ok
+[2026-06-13 03:01:17] candidate 400/600 rmse=2.0915 status=ok
+[2026-06-13 03:02:07] candidate 450/600 rmse=4.88924 status=ok
+[2026-06-13 03:02:48] candidate 500/600 rmse=3.37198 status=ok
+[2026-06-13 03:03:36] candidate 550/600 rmse=1.59199 status=ok
+[2026-06-13 03:04:23] candidate 600/600 rmse=2.0923 status=ok
+[2026-06-13 03:04:23] selected candidate_index=169 candidate_id=xgb_0169 val_rmse=1.54825 val_std=0.140382
+[2026-06-13 03:04:23] finish best=169 test_rmse=1.52365 final_train_sec=0.280342 final_predict_sec=0.00881536 elapsed_sec=545.898 status=ok

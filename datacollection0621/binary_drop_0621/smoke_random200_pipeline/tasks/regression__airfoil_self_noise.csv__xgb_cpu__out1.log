@@ -1,0 +1,8 @@
+[2026-06-08 00:54:09] start task_id=regression__airfoil_self_noise.csv__xgb_cpu__out1
+[2026-06-08 00:54:09] config task_type=regression dataset=airfoil_self_noise.csv model=xgb_cpu outer_fold=1/2 inner_folds=2 candidates=10 objective=reg:squarederror primary_metric=rmse direction=minimize rows=1503 features=5 classes=0
+[2026-06-08 00:54:09] split train_rows=751 test_rows=752 inner_splits=2
+[2026-06-08 00:54:10] candidate 1/10 rmse=2.47809 status=ok
+[2026-06-08 00:54:10] candidate 5/10 rmse=3.57719 status=ok
+[2026-06-08 00:54:10] candidate 10/10 rmse=2.22392 status=ok
+[2026-06-08 00:54:10] selected candidate_index=10 candidate_id=xgb_0010 val_rmse=2.22392 val_std=0.0407306
+[2026-06-08 00:54:10] finish best=10 test_rmse=1.99422 final_train_sec=0.0389297 final_predict_sec=0.00266238 elapsed_sec=0.948289 status=ok

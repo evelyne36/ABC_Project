@@ -1,0 +1,4 @@
+
+现版本支持，而原版本不支持score_agg（因为默认选择第一个pred_feature作prediction），
+但语法上符合score_agg=0，因为有FindBestSplit->BestLeaf的函数作用。
+修改了超参空间问题，现在公共部分统一，xgb私有部分固定，mgb—pred等可选，mgb包含xgb的参数。

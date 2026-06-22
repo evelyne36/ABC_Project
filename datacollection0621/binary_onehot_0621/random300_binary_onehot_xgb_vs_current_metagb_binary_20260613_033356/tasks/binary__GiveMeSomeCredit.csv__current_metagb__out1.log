@@ -1,0 +1,12 @@
+[2026-06-15 12:11:05] start task_id=binary__GiveMeSomeCredit.csv__current_metagb__out1
+[2026-06-15 12:11:05] config task_type=binary dataset=GiveMeSomeCredit.csv model=current_metagb outer_fold=1/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=120269 features=10 classes=2
+[2026-06-15 12:11:05] split train_rows=96215 test_rows=24054 inner_splits=4
+[2026-06-15 12:16:36] candidate 1/300 auc=0.853135 status=ok
+[2026-06-15 20:36:22] candidate 50/300 auc=0.636882 status=ok
+[2026-06-16 04:17:48] candidate 100/300 auc=0.856011 status=ok
+[2026-06-16 14:19:22] candidate 150/300 auc=0.849232 status=ok
+[2026-06-16 22:09:02] candidate 200/300 auc=0.854246 status=ok
+[2026-06-17 04:52:42] candidate 250/300 auc=0.853642 status=ok
+[2026-06-17 12:17:38] candidate 300/300 auc=0.729299 status=ok
+[2026-06-17 12:17:38] selected candidate_index=211 candidate_id=metagb_pf01_sa0_008 val_auc=0.856603 val_std=0.00293908
+[2026-06-17 12:17:56] finish best=211 test_auc=0.852002 final_train_sec=18.0552 final_predict_sec=0.128379 elapsed_sec=173210 status=ok
