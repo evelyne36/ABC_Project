@@ -1,0 +1,12 @@
+[2026-06-15 20:46:12] start task_id=binary__Marketing_Campaign.csv__current_metagb__out5
+[2026-06-15 20:46:12] config task_type=binary dataset=Marketing_Campaign.csv model=current_metagb outer_fold=5/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=2216 features=22 classes=2
+[2026-06-15 20:46:12] split train_rows=1773 test_rows=443 inner_splits=4
+[2026-06-15 20:47:23] candidate 1/300 auc=0.866235 status=ok
+[2026-06-15 23:25:10] candidate 50/300 auc=0.87407 status=ok
+[2026-06-16 01:53:05] candidate 100/300 auc=0.86936 status=ok
+[2026-06-16 05:24:52] candidate 150/300 auc=0.863168 status=ok
+[2026-06-16 07:32:57] candidate 200/300 auc=0.86663 status=ok
+[2026-06-16 09:57:05] candidate 250/300 auc=0.864312 status=ok
+[2026-06-16 12:52:04] candidate 300/300 auc=0.851667 status=ok
+[2026-06-16 12:52:04] selected candidate_index=59 candidate_id=metagb_pf10_sa1_002 val_auc=0.87429 val_std=0.028759
+[2026-06-16 12:52:30] finish best=59 test_auc=0.88931 final_train_sec=26.231 final_predict_sec=0.010298 elapsed_sec=57977.6 status=ok

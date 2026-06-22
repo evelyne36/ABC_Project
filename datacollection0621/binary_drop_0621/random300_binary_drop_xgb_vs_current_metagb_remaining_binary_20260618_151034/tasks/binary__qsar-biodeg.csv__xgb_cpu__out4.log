@@ -1,0 +1,12 @@
+[2026-06-18 15:55:07] start task_id=binary__qsar-biodeg.csv__xgb_cpu__out4
+[2026-06-18 15:55:07] config task_type=binary dataset=qsar-biodeg.csv model=xgb_cpu outer_fold=4/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=1054 features=41 classes=2
+[2026-06-18 15:55:07] split train_rows=843 test_rows=211 inner_splits=4
+[2026-06-18 15:55:11] candidate 1/300 auc=0.929167 status=ok
+[2026-06-18 15:57:07] candidate 50/300 auc=0.93204 status=ok
+[2026-06-18 15:59:03] candidate 100/300 auc=0.928778 status=ok
+[2026-06-18 16:01:04] candidate 150/300 auc=0.923787 status=ok
+[2026-06-18 16:02:47] candidate 200/300 auc=0.927744 status=ok
+[2026-06-18 16:04:36] candidate 250/300 auc=0.931131 status=ok
+[2026-06-18 16:06:25] candidate 300/300 auc=0.923583 status=ok
+[2026-06-18 16:06:25] selected candidate_index=17 candidate_id=xgb_0017 val_auc=0.932785 val_std=0.0144467
+[2026-06-18 16:06:25] finish best=17 test_auc=0.927666 final_train_sec=0.323935 final_predict_sec=0.00212983 elapsed_sec=677.701 status=ok

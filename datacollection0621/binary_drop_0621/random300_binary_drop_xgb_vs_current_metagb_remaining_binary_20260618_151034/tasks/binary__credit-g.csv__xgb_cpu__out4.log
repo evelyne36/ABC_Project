@@ -1,0 +1,12 @@
+[2026-06-18 15:21:09] start task_id=binary__credit-g.csv__xgb_cpu__out4
+[2026-06-18 15:21:09] config task_type=binary dataset=credit-g.csv model=xgb_cpu outer_fold=4/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=1000 features=7 classes=2
+[2026-06-18 15:21:09] split train_rows=800 test_rows=200 inner_splits=4
+[2026-06-18 15:21:10] candidate 1/300 auc=0.649375 status=ok
+[2026-06-18 15:21:54] candidate 50/300 auc=0.656071 status=ok
+[2026-06-18 15:22:38] candidate 100/300 auc=0.652827 status=ok
+[2026-06-18 15:23:27] candidate 150/300 auc=0.667143 status=ok
+[2026-06-18 15:24:11] candidate 200/300 auc=0.665238 status=ok
+[2026-06-18 15:24:51] candidate 250/300 auc=0.646815 status=ok
+[2026-06-18 15:25:31] candidate 300/300 auc=0.630268 status=ok
+[2026-06-18 15:25:31] selected candidate_index=87 candidate_id=xgb_0087 val_auc=0.675417 val_std=0.0258897
+[2026-06-18 15:25:31] finish best=87 test_auc=0.673333 final_train_sec=0.0961565 final_predict_sec=0.00190364 elapsed_sec=262.812 status=ok

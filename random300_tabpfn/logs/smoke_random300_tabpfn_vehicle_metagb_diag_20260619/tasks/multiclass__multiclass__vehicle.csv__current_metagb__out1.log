@@ -1,0 +1,35 @@
+[2026-06-19 12:15:13] start task_id=multiclass__multiclass__vehicle.csv__current_metagb__out1
+[2026-06-19 12:15:13] config task_type=multiclass dataset=multiclass__vehicle.csv model=current_metagb outer_fold=1/2 inner_folds=2 candidates=30 objective=multi:softprob primary_metric=logloss direction=minimize rows=846 features=18 classes=4
+[2026-06-19 12:15:13] split train_rows=423 test_rows=423 inner_splits=2
+[2026-06-19 12:15:24] candidate 1/30 logloss=0.78648 status=ok
+[2026-06-19 12:15:29] candidate 2/30 logloss=0.807646 status=ok
+[2026-06-19 12:15:43] candidate 3/30 logloss=1.27362 status=ok
+[2026-06-19 12:15:56] candidate 4/30 logloss=1.33112 status=ok
+[2026-06-19 12:16:03] candidate 5/30 logloss=0.718434 status=ok
+[2026-06-19 12:16:17] candidate 6/30 logloss=0.650651 status=ok
+[2026-06-19 12:16:39] candidate 7/30 logloss=2.21218 status=ok
+[2026-06-19 12:16:45] candidate 8/30 logloss=0.91663 status=ok
+[2026-06-19 12:17:44] candidate 9/30 logloss=0.796726 status=ok
+[2026-06-19 12:17:55] candidate 10/30 logloss=0.714701 status=ok
+[2026-06-19 12:27:41] candidate 11/30 logloss=0.843008 status=ok
+[2026-06-19 12:28:01] candidate 12/30 logloss=0.820375 status=ok
+[2026-06-19 12:44:35] candidate 13/30 logloss=1.25416 status=ok
+[2026-06-19 12:51:01] candidate 14/30 logloss=1.78847 status=ok
+[2026-06-19 12:51:21] candidate 15/30 logloss=1.3069 status=ok
+[2026-06-19 12:51:36] candidate 16/30 logloss=1.41168 status=ok
+[2026-06-19 12:51:46] candidate 17/30 logloss=0.619689 status=ok
+[2026-06-19 12:52:09] candidate 18/30 logloss=0.680255 status=ok
+[2026-06-19 12:53:24] candidate 19/30 logloss=0.66783 status=ok
+[2026-06-19 12:53:29] candidate 20/30 logloss=0.77155 status=ok
+[2026-06-19 12:53:48] candidate 21/30 logloss=0.713036 status=ok
+[2026-06-19 12:54:54] candidate 22/30 logloss=1.11247 status=ok
+[2026-06-19 12:56:14] candidate 23/30 logloss=1.08485 status=ok
+[2026-06-19 13:27:50] candidate 24/30 logloss=0.695719 status=ok
+[2026-06-19 14:16:22] candidate 25/30 logloss=0.645481 status=ok
+[2026-06-19 16:30:55] candidate 26/30 logloss=1.97226 status=ok
+[2026-06-19 18:33:58] candidate 27/30 logloss=0.759953 status=ok
+[2026-06-19 18:34:57] candidate 28/30 logloss=0.791509 status=ok
+[2026-06-19 18:35:11] candidate 29/30 logloss=0.796484 status=ok
+[2026-06-19 20:18:59] candidate 30/30 logloss=1.42331 status=ok
+[2026-06-19 20:18:59] selected candidate_index=17 candidate_id=metagb_pf06_sa1_001 val_logloss=0.619689 val_std=0.0122398
+[2026-06-19 20:25:53] finish best=17 test_logloss=0.583806 final_train_sec=8.55161 final_predict_sec=0.0191122 elapsed_sec=1024.16 status=ok

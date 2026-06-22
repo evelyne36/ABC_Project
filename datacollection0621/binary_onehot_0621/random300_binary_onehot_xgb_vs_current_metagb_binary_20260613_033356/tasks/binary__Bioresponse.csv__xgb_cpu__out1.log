@@ -1,0 +1,12 @@
+[2026-06-13 13:26:45] start task_id=binary__Bioresponse.csv__xgb_cpu__out1
+[2026-06-13 13:26:47] config task_type=binary dataset=Bioresponse.csv model=xgb_cpu outer_fold=1/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=3751 features=1776 classes=2
+[2026-06-13 13:26:47] split train_rows=3000 test_rows=751 inner_splits=4
+[2026-06-13 13:28:53] candidate 1/300 auc=0.868788 status=ok
+[2026-06-13 14:42:45] candidate 50/300 auc=0.862798 status=ok
+[2026-06-13 15:57:54] candidate 100/300 auc=0.858971 status=ok
+[2026-06-13 17:21:06] candidate 150/300 auc=0.851797 status=ok
+[2026-06-13 18:38:35] candidate 200/300 auc=0.852105 status=ok
+[2026-06-13 19:49:25] candidate 250/300 auc=0.863839 status=ok
+[2026-06-13 21:11:12] candidate 300/300 auc=0.864139 status=ok
+[2026-06-13 21:11:12] selected candidate_index=178 candidate_id=xgb_0178 val_auc=0.872816 val_std=0.0106074
+[2026-06-13 21:11:58] finish best=178 test_auc=0.892656 final_train_sec=46.3085 final_predict_sec=0.0414414 elapsed_sec=27911.5 status=ok

@@ -94,6 +94,60 @@ DEFAULT_TASK_DATASETS = {
     ],
 }
 
+DATASET_INSTANCE_COUNTS: Dict[Tuple[str, str], int] = {
+    ("binary", "blood-transfusion-service-center.csv"): 748,
+    ("binary", "diabetes.csv"): 768,
+    ("binary", "credit-g.csv"): 1000,
+    ("binary", "qsar-biodeg.csv"): 1054,
+    ("binary", "Fitness_Club.csv"): 1500,
+    ("binary", "Is-this-a-good-customer.csv"): 1723,
+    ("binary", "Marketing_Campaign.csv"): 2240,
+    ("binary", "hazelnut-spread-contaminant-detection.csv"): 2400,
+    ("binary", "seismic-bumps.csv"): 2584,
+    ("binary", "Bioresponse.csv"): 3751,
+    ("binary", "churn.csv"): 5000,
+    ("binary", "polish_companies_bankruptcy.csv"): 5910,
+    ("binary", "taiwanese_bankruptcy_prediction.csv"): 6819,
+    ("binary", "NATICUSdroid.csv"): 7491,
+    ("binary", "coil2000_insurance_policies.csv"): 9822,
+    ("binary", "Bank_Customer_Churn.csv"): 10000,
+    ("binary", "heloc.csv"): 10459,
+    ("binary", "jm1.csv"): 10885,
+    ("binary", "E-CommereShippingData.csv"): 10999,
+    ("binary", "online_shoppers_intention.csv"): 12330,
+    ("binary", "in_vehicle_coupon_recommendation.csv"): 12684,
+    ("binary", "HR_Analytics_Job_Change_of_Data_Scientists.csv"): 19158,
+    ("binary", "credit_card_clients_default.csv"): 30000,
+    ("binary", "Amazon_employee_access.csv"): 32769,
+    ("binary", "bank-marketing.csv"): 45211,
+    ("binary", "kddcup09_appetency.csv"): 50000,
+    ("binary", "Diabetes130US.csv"): 71518,
+    ("binary", "APSFailure.csv"): 76000,
+    ("binary", "customer_satisfaction_in_airline.csv"): 129880,
+    ("binary", "GiveMeSomeCredit.csv"): 150000,
+    ("multiclass", "anneal.csv"): 898,
+    ("multiclass", "maternal_health_risk.csv"): 1014,
+    ("multiclass", "website_phishing.csv"): 1353,
+    ("multiclass", "MIC.csv"): 1699,
+    ("multiclass", "splice.csv"): 3190,
+    ("multiclass", "hiva_agnostic.csv"): 3845,
+    ("multiclass", "students_dropout_and_academic_success.csv"): 4424,
+    ("multiclass", "SDSS17.csv"): 78053,
+    ("regression", "QSAR_fish_toxicity.csv"): 907,
+    ("regression", "concrete_compressive_strength.csv"): 1030,
+    ("regression", "healthcare_insurance_expenses.csv"): 1338,
+    ("regression", "airfoil_self_noise.csv"): 1503,
+    ("regression", "Another-Dataset-on-used-Fiat-500.csv"): 1538,
+    ("regression", "QSAR-TID-11.csv"): 5742,
+    ("regression", "wine_quality.csv"): 6497,
+    ("regression", "miami_housing.csv"): 13776,
+    ("regression", "houses.csv"): 20640,
+    ("regression", "superconductivity.csv"): 21263,
+    ("regression", "Food_Delivery_Time.csv"): 45451,
+    ("regression", "physiochemical_protein.csv"): 45730,
+    ("regression", "diamonds.csv"): 53940,
+}
+
 
 @dataclass
 class LoadedDataset:
@@ -663,6 +717,30 @@ def build_pred_fraction_analysis(candidate_rows: Sequence[Dict[str, Any]]) -> Li
     return grouped.to_dict(orient="records")
 
 
+def sort_tasks_for_dataset_completion(tasks: List[Dict[str, Any]], args: argparse.Namespace) -> List[Dict[str, Any]]:
+    model_order = {model: index for index, model in enumerate(args.models)}
+    dataset_first_position: Dict[Tuple[str, str], int] = {}
+    for position, task in enumerate(tasks):
+        dataset_key = (task["task_type"], task["dataset"])
+        dataset_first_position.setdefault(dataset_key, position)
+
+    def task_sort_key(position_and_task: Tuple[int, Dict[str, Any]]) -> Tuple[Any, ...]:
+        position, task = position_and_task
+        dataset_key = (task["task_type"], task["dataset"])
+        instance_count = DATASET_INSTANCE_COUNTS.get(dataset_key)
+        is_unknown_dataset = instance_count is None
+        return (
+            is_unknown_dataset,
+            instance_count if instance_count is not None else sys.maxsize,
+            dataset_first_position[dataset_key],
+            int(task["outer_index"]),
+            model_order.get(task["model"], sys.maxsize),
+            position,
+        )
+
+    return [task for _, task in sorted(enumerate(tasks), key=task_sort_key)]
+
+
 def create_tasks(args: argparse.Namespace, candidates_by_model: Dict[str, List[Dict[str, Any]]]) -> List[Dict[str, Any]]:
     tasks: List[Dict[str, Any]] = []
     for task_type in args.task_types:
@@ -687,7 +765,7 @@ def create_tasks(args: argparse.Namespace, candidates_by_model: Dict[str, List[D
                             "args": vars(args),
                         }
                     )
-    return tasks
+    return sort_tasks_for_dataset_completion(tasks, args)
 
 
 def run_all(args: argparse.Namespace) -> Dict[str, Any]:

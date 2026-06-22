@@ -1,0 +1,25 @@
+launch_time: 2026-06-19T12:04:13
+run_id: smoke_random300_tabpfn_20260619
+task_types: regression binary multiclass
+models: xgb_cpu current_metagb
+max_candidates: 30
+outer_folds: 2
+inner_folds: 2
+task_workers: 1
+n_jobs: 1
+tabpfn_dir: /Users/ancd/VSCodeProject/check_codereview0618_ckpt_pfn/dataset/TabPFN
+regression_datasets: regression__Moneyball.csv
+binary_datasets: binary__haberman.csv
+multiclass_datasets: multiclass__vehicle.csv
+skip_datasets: 
+skip_regression_datasets: 
+skip_binary_datasets: 
+skip_multiclass_datasets: 
+delegated_command:
+/opt/anaconda3/bin/python3 /Users/ancd/VSCodeProject/check_codereview0618_ckpt_pfn/random300_tabpfn/scripts/exp1_random300_all.py --mode quick --task-types regression binary multiclass --models xgb_cpu current_metagb --max-candidates 30 --outer-folds 2 --inner-folds 2 --task-workers 1 --n-jobs 1 --progress-every 50 --seed 42 --categorical-handling ordinal --run-id smoke_random300_tabpfn_20260619 --output-root /Users/ancd/VSCodeProject/check_codereview0618_ckpt_pfn/random300_tabpfn --xgboost-python-package /Users/ancd/VSCodeProject/check_codereview0618_ckpt_pfn/beforereview/xgboost-master/python-package --search-space-json /Users/ancd/VSCodeProject/check_codereview0618_ckpt_pfn/random300_tabpfn/configs/default_search_space.json --tabpfn-dir /Users/ancd/VSCodeProject/check_codereview0618_ckpt_pfn/dataset/TabPFN --regression-dir /Users/ancd/VSCodeProject/check_codereview0618_ckpt_pfn/dataset/TabPFN --binary-dir /Users/ancd/VSCodeProject/check_codereview0618_ckpt_pfn/dataset/TabPFN --multiclass-dir /Users/ancd/VSCodeProject/check_codereview0618_ckpt_pfn/dataset/TabPFN --binary-objective binary:logistic --multiclass-objective multi:softprob --xgb-reg-lambda 1.0 --metagb-lambda-l2 1.0 --metagb-score-agg 0 --metagb-pred-value-type raw --outer-fold-index 0 --regression-datasets regression__Moneyball.csv --binary-datasets binary__haberman.csv --multiclass-datasets multiclass__vehicle.csv
+
+[1/6] regression__regression__Moneyball.csv__xgb_cpu__out1 status=ok
+[2/6] regression__regression__Moneyball.csv__current_metagb__out1 status=ok
+[3/6] binary__binary__haberman.csv__xgb_cpu__out1 status=ok
+[4/6] binary__binary__haberman.csv__current_metagb__out1 status=ok
+[5/6] multiclass__multiclass__vehicle.csv__xgb_cpu__out1 status=ok

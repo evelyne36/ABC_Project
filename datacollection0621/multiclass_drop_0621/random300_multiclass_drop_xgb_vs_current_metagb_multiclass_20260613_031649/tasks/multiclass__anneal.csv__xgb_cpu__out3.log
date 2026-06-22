@@ -1,0 +1,12 @@
+[2026-06-13 03:16:50] start task_id=multiclass__anneal.csv__xgb_cpu__out3
+[2026-06-13 03:16:50] config task_type=multiclass dataset=anneal.csv model=xgb_cpu outer_fold=3/5 inner_folds=4 candidates=300 objective=multi:softprob primary_metric=logloss direction=minimize rows=898 features=7 classes=5
+[2026-06-13 03:16:50] split train_rows=718 test_rows=180 inner_splits=4
+[2026-06-13 03:16:52] candidate 1/300 logloss=0.244132 status=ok
+[2026-06-13 03:18:11] candidate 50/300 logloss=0.249441 status=ok
+[2026-06-13 03:19:29] candidate 100/300 logloss=0.251732 status=ok
+[2026-06-13 03:20:49] candidate 150/300 logloss=0.411933 status=ok
+[2026-06-13 03:22:08] candidate 200/300 logloss=0.310107 status=ok
+[2026-06-13 03:23:29] candidate 250/300 logloss=0.242777 status=ok
+[2026-06-13 03:24:55] candidate 300/300 logloss=0.286228 status=ok
+[2026-06-13 03:24:55] selected candidate_index=163 candidate_id=xgb_0163 val_logloss=0.237638 val_std=0.0226697
+[2026-06-13 03:24:55] finish best=163 test_logloss=0.296302 final_train_sec=0.31228 final_predict_sec=0.0068057 elapsed_sec=485.343 status=ok

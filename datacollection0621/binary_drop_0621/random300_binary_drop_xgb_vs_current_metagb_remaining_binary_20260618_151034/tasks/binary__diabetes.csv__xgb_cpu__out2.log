@@ -1,0 +1,12 @@
+[2026-06-18 15:10:35] start task_id=binary__diabetes.csv__xgb_cpu__out2
+[2026-06-18 15:10:35] config task_type=binary dataset=diabetes.csv model=xgb_cpu outer_fold=2/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=768 features=8 classes=2
+[2026-06-18 15:10:35] split train_rows=614 test_rows=154 inner_splits=4
+[2026-06-18 15:10:37] candidate 1/300 auc=0.81923 status=ok
+[2026-06-18 15:11:42] candidate 50/300 auc=0.819308 status=ok
+[2026-06-18 15:12:44] candidate 100/300 auc=0.818412 status=ok
+[2026-06-18 15:13:47] candidate 150/300 auc=0.824322 status=ok
+[2026-06-18 15:14:44] candidate 200/300 auc=0.827897 status=ok
+[2026-06-18 15:15:38] candidate 250/300 auc=0.811541 status=ok
+[2026-06-18 15:16:31] candidate 300/300 auc=0.791865 status=ok
+[2026-06-18 15:16:31] selected candidate_index=98 candidate_id=xgb_0098 val_auc=0.834106 val_std=0.011226
+[2026-06-18 15:16:31] finish best=98 test_auc=0.864074 final_train_sec=0.0945169 final_predict_sec=0.00150128 elapsed_sec=355.773 status=ok
