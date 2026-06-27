@@ -1,8 +1,0 @@
-[2026-06-08 00:54:10] start task_id=regression__airfoil_self_noise.csv__current_metagb__out1
-[2026-06-08 00:54:10] config task_type=regression dataset=airfoil_self_noise.csv model=current_metagb outer_fold=1/2 inner_folds=2 candidates=10 objective=reg:squarederror primary_metric=rmse direction=minimize rows=1503 features=5 classes=0
-[2026-06-08 00:54:10] split train_rows=751 test_rows=752 inner_splits=2
-[2026-06-08 00:54:11] candidate 1/10 rmse=6.50705 status=ok
-[2026-06-08 00:54:14] candidate 5/10 rmse=9.34097 status=ok
-[2026-06-08 00:54:17] candidate 10/10 rmse=7.252 status=ok
-[2026-06-08 00:54:17] selected candidate_index=7 candidate_id=metagb_pf07_001 val_rmse=3.94275 val_std=0.800732
-[2026-06-08 00:54:18] finish best=7 test_rmse=2.30832 final_train_sec=0.294366 final_predict_sec=0.0127088 elapsed_sec=7.13629 status=ok

@@ -1,0 +1,12 @@
+[2026-06-23 00:55:40] start task_id=binary__polish_companies_bankruptcy.csv__xgb_cpu__out2
+[2026-06-23 00:55:40] config task_type=binary dataset=polish_companies_bankruptcy.csv model=xgb_cpu outer_fold=2/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=3031 features=64 classes=2
+[2026-06-23 00:55:40] split train_rows=2425 test_rows=606 inner_splits=4
+[2026-06-23 00:55:52] candidate 1/300 auc=0.923621 status=ok
+[2026-06-23 01:01:16] candidate 50/300 auc=0.920197 status=ok
+[2026-06-23 01:06:40] candidate 100/300 auc=0.919669 status=ok
+[2026-06-23 01:12:42] candidate 150/300 auc=0.914509 status=ok
+[2026-06-23 01:18:06] candidate 200/300 auc=0.924515 status=ok
+[2026-06-23 01:23:32] candidate 250/300 auc=0.915161 status=ok
+[2026-06-23 01:29:26] candidate 300/300 auc=0.917127 status=ok
+[2026-06-23 01:29:26] selected candidate_index=53 candidate_id=xgb_0053 val_auc=0.929585 val_std=0.0142184
+[2026-06-23 01:29:29] finish best=53 test_auc=0.915358 final_train_sec=2.52897 final_predict_sec=0.00710571 elapsed_sec=2029.23 status=ok

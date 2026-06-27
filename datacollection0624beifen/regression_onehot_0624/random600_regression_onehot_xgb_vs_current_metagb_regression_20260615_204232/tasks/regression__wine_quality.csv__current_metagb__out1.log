@@ -1,0 +1,18 @@
+[2026-06-20 06:14:55] start task_id=regression__wine_quality.csv__current_metagb__out1
+[2026-06-20 06:14:55] config task_type=regression dataset=wine_quality.csv model=current_metagb outer_fold=1/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=6497 features=13 classes=0
+[2026-06-20 06:14:55] split train_rows=5197 test_rows=1300 inner_splits=4
+[2026-06-20 06:15:41] candidate 1/600 rmse=0.635319 status=ok
+[2026-06-20 07:54:11] candidate 50/600 rmse=0.668379 status=ok
+[2026-06-20 09:17:18] candidate 100/600 rmse=0.670045 status=ok
+[2026-06-20 11:26:52] candidate 150/600 rmse=1.22256 status=ok
+[2026-06-20 12:40:58] candidate 200/600 rmse=0.684297 status=ok
+[2026-06-20 14:04:37] candidate 250/600 rmse=0.658132 status=ok
+[2026-06-20 15:38:53] candidate 300/600 rmse=0.657267 status=ok
+[2026-06-20 16:50:56] candidate 350/600 rmse=0.68464 status=ok
+[2026-06-20 18:23:09] candidate 400/600 rmse=0.661806 status=ok
+[2026-06-20 20:20:08] candidate 450/600 rmse=2.07935 status=ok
+[2026-06-20 21:29:14] candidate 500/600 rmse=0.806447 status=ok
+[2026-06-20 23:17:44] candidate 550/600 rmse=0.631367 status=ok
+[2026-06-21 00:59:49] candidate 600/600 rmse=0.648041 status=ok
+[2026-06-21 00:59:49] selected candidate_index=572 candidate_id=metagb_pf01_sa1_020 val_rmse=0.62358 val_std=0.0118908
+[2026-06-21 01:00:32] finish best=572 test_rmse=0.588474 final_train_sec=42.422 final_predict_sec=0.277014 elapsed_sec=67536.6 status=ok

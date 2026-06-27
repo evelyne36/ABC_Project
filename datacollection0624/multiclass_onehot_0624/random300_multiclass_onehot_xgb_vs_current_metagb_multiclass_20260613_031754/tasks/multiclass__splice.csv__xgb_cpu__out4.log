@@ -1,0 +1,12 @@
+[2026-06-17 02:33:33] start task_id=multiclass__splice.csv__xgb_cpu__out4
+[2026-06-17 02:33:33] config task_type=multiclass dataset=splice.csv model=xgb_cpu outer_fold=4/5 inner_folds=4 candidates=300 objective=multi:softprob primary_metric=logloss direction=minimize rows=3190 features=287 classes=3
+[2026-06-17 02:33:34] split train_rows=2552 test_rows=638 inner_splits=4
+[2026-06-17 02:33:48] candidate 1/300 logloss=0.120464 status=ok
+[2026-06-17 02:42:09] candidate 50/300 logloss=0.117201 status=ok
+[2026-06-17 02:50:15] candidate 100/300 logloss=0.120114 status=ok
+[2026-06-17 02:58:41] candidate 150/300 logloss=0.295601 status=ok
+[2026-06-17 03:06:53] candidate 200/300 logloss=0.152022 status=ok
+[2026-06-17 03:15:06] candidate 250/300 logloss=0.120878 status=ok
+[2026-06-17 03:23:41] candidate 300/300 logloss=0.13982 status=ok
+[2026-06-17 03:23:41] selected candidate_index=94 candidate_id=xgb_0094 val_logloss=0.112102 val_std=0.0200745
+[2026-06-17 03:23:46] finish best=94 test_logloss=0.107107 final_train_sec=4.58577 final_predict_sec=0.0403308 elapsed_sec=3012.45 status=ok

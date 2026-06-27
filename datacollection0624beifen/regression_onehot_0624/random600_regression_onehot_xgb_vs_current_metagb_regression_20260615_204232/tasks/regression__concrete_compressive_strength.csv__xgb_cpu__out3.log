@@ -1,0 +1,18 @@
+[2026-06-15 21:10:46] start task_id=regression__concrete_compressive_strength.csv__xgb_cpu__out3
+[2026-06-15 21:10:46] config task_type=regression dataset=concrete_compressive_strength.csv model=xgb_cpu outer_fold=3/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=1030 features=8 classes=0
+[2026-06-15 21:10:46] split train_rows=824 test_rows=206 inner_splits=4
+[2026-06-15 21:10:50] candidate 1/600 rmse=5.22777 status=ok
+[2026-06-15 21:13:09] candidate 50/600 rmse=5.08795 status=ok
+[2026-06-15 21:15:23] candidate 100/600 rmse=4.97348 status=ok
+[2026-06-15 21:17:53] candidate 150/600 rmse=8.35537 status=ok
+[2026-06-15 21:20:02] candidate 200/600 rmse=5.68335 status=ok
+[2026-06-15 21:22:01] candidate 250/600 rmse=5.01451 status=ok
+[2026-06-15 21:24:08] candidate 300/600 rmse=4.98735 status=ok
+[2026-06-15 21:25:57] candidate 350/600 rmse=5.44069 status=ok
+[2026-06-15 21:27:49] candidate 400/600 rmse=4.68963 status=ok
+[2026-06-15 21:29:49] candidate 450/600 rmse=9.96369 status=ok
+[2026-06-15 21:31:25] candidate 500/600 rmse=6.47261 status=ok
+[2026-06-15 21:33:27] candidate 550/600 rmse=5.00163 status=ok
+[2026-06-15 21:35:22] candidate 600/600 rmse=5.69946 status=ok
+[2026-06-15 21:35:22] selected candidate_index=312 candidate_id=xgb_0312 val_rmse=4.57892 val_std=0.891912
+[2026-06-15 21:35:22] finish best=312 test_rmse=3.66876 final_train_sec=0.303475 final_predict_sec=0.00396619 elapsed_sec=1476.61 status=ok

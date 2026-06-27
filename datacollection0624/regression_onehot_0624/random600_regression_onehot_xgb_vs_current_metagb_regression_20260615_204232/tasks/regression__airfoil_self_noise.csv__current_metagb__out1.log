@@ -1,0 +1,18 @@
+[2026-06-15 20:42:34] start task_id=regression__airfoil_self_noise.csv__current_metagb__out1
+[2026-06-15 20:42:34] config task_type=regression dataset=airfoil_self_noise.csv model=current_metagb outer_fold=1/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=1503 features=5 classes=0
+[2026-06-15 20:42:34] split train_rows=1202 test_rows=301 inner_splits=4
+[2026-06-15 20:42:43] candidate 1/600 rmse=1.76959 status=ok
+[2026-06-15 20:53:57] candidate 50/600 rmse=2.24697 status=ok
+[2026-06-15 21:03:35] candidate 100/600 rmse=2.17975 status=ok
+[2026-06-15 21:17:18] candidate 150/600 rmse=21.9277 status=ok
+[2026-06-15 21:26:02] candidate 200/600 rmse=3.22184 status=ok
+[2026-06-15 21:34:44] candidate 250/600 rmse=1.90093 status=ok
+[2026-06-15 21:45:39] candidate 300/600 rmse=1.82049 status=ok
+[2026-06-15 21:54:07] candidate 350/600 rmse=5.25848 status=ok
+[2026-06-15 22:06:42] candidate 400/600 rmse=2.0021 status=ok
+[2026-06-15 22:21:46] candidate 450/600 rmse=42.0286 status=ok
+[2026-06-15 22:30:33] candidate 500/600 rmse=12.2226 status=ok
+[2026-06-15 22:44:20] candidate 550/600 rmse=2.03222 status=ok
+[2026-06-15 22:56:50] candidate 600/600 rmse=4.10511 status=ok
+[2026-06-15 22:56:50] selected candidate_index=232 candidate_id=metagb_pf08_sa0_008 val_rmse=1.58853 val_std=0.136755
+[2026-06-15 22:56:52] finish best=232 test_rmse=1.63128 final_train_sec=1.38799 final_predict_sec=0.00790206 elapsed_sec=8057.47 status=ok

@@ -1,0 +1,18 @@
+[2026-06-13 06:17:55] start task_id=regression__Food_Delivery_Time.csv__current_metagb__out1
+[2026-06-13 06:17:56] config task_type=regression dataset=Food_Delivery_Time.csv model=current_metagb outer_fold=1/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=45451 features=6 classes=0
+[2026-06-13 06:17:56] split train_rows=36360 test_rows=9091 inner_splits=4
+[2026-06-13 06:18:54] candidate 1/600 rmse=7.61645 status=ok
+[2026-06-13 07:19:36] candidate 50/600 rmse=7.69882 status=ok
+[2026-06-13 08:13:08] candidate 100/600 rmse=7.69563 status=ok
+[2026-06-13 09:23:28] candidate 150/600 rmse=9.21278 status=ok
+[2026-06-13 10:14:31] candidate 200/600 rmse=7.89491 status=ok
+[2026-06-13 11:13:08] candidate 250/600 rmse=7.60189 status=ok
+[2026-06-13 12:19:47] candidate 300/600 rmse=7.90299 status=ok
+[2026-06-13 13:21:49] candidate 350/600 rmse=7.80539 status=ok
+[2026-06-13 14:30:40] candidate 400/600 rmse=7.58059 status=ok
+[2026-06-13 15:46:26] candidate 450/600 rmse=12.0649 status=ok
+[2026-06-13 16:34:27] candidate 500/600 rmse=8.15555 status=ok
+[2026-06-13 17:38:22] candidate 550/600 rmse=7.78608 status=ok
+[2026-06-13 18:39:46] candidate 600/600 rmse=7.61129 status=ok
+[2026-06-13 18:39:46] selected candidate_index=179 candidate_id=metagb_pf10_sa1_006 val_rmse=7.54852 val_std=0.0670453
+[2026-06-13 18:40:02] finish best=179 test_rmse=7.51181 final_train_sec=15.9462 final_predict_sec=0.12042 elapsed_sec=44526.6 status=ok

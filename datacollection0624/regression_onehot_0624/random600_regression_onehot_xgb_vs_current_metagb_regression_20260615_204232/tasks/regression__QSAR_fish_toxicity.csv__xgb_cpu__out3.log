@@ -1,0 +1,18 @@
+[2026-06-20 02:20:18] start task_id=regression__QSAR_fish_toxicity.csv__xgb_cpu__out3
+[2026-06-20 02:20:18] config task_type=regression dataset=QSAR_fish_toxicity.csv model=xgb_cpu outer_fold=3/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=907 features=6 classes=0
+[2026-06-20 02:20:18] split train_rows=726 test_rows=181 inner_splits=4
+[2026-06-20 02:20:20] candidate 1/600 rmse=0.901895 status=ok
+[2026-06-20 02:21:54] candidate 50/600 rmse=0.888207 status=ok
+[2026-06-20 02:23:18] candidate 100/600 rmse=0.891102 status=ok
+[2026-06-20 02:24:56] candidate 150/600 rmse=0.959495 status=ok
+[2026-06-20 02:26:18] candidate 200/600 rmse=0.890347 status=ok
+[2026-06-20 02:27:40] candidate 250/600 rmse=0.90538 status=ok
+[2026-06-20 02:29:07] candidate 300/600 rmse=0.947196 status=ok
+[2026-06-20 02:30:28] candidate 350/600 rmse=0.879065 status=ok
+[2026-06-20 02:32:02] candidate 400/600 rmse=0.901255 status=ok
+[2026-06-20 02:33:39] candidate 450/600 rmse=1.01737 status=ok
+[2026-06-20 02:34:52] candidate 500/600 rmse=0.912417 status=ok
+[2026-06-20 02:36:32] candidate 550/600 rmse=0.917887 status=ok
+[2026-06-20 02:38:04] candidate 600/600 rmse=0.899447 status=ok
+[2026-06-20 02:38:04] selected candidate_index=350 candidate_id=xgb_0350 val_rmse=0.879065 val_std=0.0354306
+[2026-06-20 02:38:05] finish best=350 test_rmse=0.922922 final_train_sec=0.372185 final_predict_sec=0.00509736 elapsed_sec=1066.55 status=ok

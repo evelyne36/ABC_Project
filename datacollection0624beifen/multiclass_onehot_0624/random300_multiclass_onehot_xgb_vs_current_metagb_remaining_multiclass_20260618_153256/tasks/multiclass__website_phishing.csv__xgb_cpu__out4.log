@@ -1,0 +1,12 @@
+[2026-06-18 15:32:57] start task_id=multiclass__website_phishing.csv__xgb_cpu__out4
+[2026-06-18 15:32:57] config task_type=multiclass dataset=website_phishing.csv model=xgb_cpu outer_fold=4/5 inner_folds=4 candidates=300 objective=multi:softprob primary_metric=logloss direction=minimize rows=1353 features=25 classes=3
+[2026-06-18 15:32:57] split train_rows=1083 test_rows=270 inner_splits=4
+[2026-06-18 15:33:00] candidate 1/300 logloss=0.289824 status=ok
+[2026-06-18 15:34:32] candidate 50/300 logloss=0.262423 status=ok
+[2026-06-18 15:36:02] candidate 100/300 logloss=0.260275 status=ok
+[2026-06-18 15:37:34] candidate 150/300 logloss=0.361703 status=ok
+[2026-06-18 15:39:05] candidate 200/300 logloss=0.276816 status=ok
+[2026-06-18 15:40:32] candidate 250/300 logloss=0.280928 status=ok
+[2026-06-18 15:42:09] candidate 300/300 logloss=0.417385 status=ok
+[2026-06-18 15:42:09] selected candidate_index=231 candidate_id=xgb_0231 val_logloss=0.258417 val_std=0.025185
+[2026-06-18 15:42:09] finish best=231 test_logloss=0.20663 final_train_sec=0.42369 final_predict_sec=0.00889594 elapsed_sec=551.99 status=ok

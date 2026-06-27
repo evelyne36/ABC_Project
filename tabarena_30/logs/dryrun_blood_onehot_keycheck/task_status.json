@@ -1,0 +1,9 @@
+{
+  "run_id": "dryrun_blood_onehot_keycheck",
+  "total": 1,
+  "completed": 0,
+  "failed": 0,
+  "tasks": {
+    "binary__blood-transfusion-service-center.csv__current_metagb__out1": "pending"
+  }
+}

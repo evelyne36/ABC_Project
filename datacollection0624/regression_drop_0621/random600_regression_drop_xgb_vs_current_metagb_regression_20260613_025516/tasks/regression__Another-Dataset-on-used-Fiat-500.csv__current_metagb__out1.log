@@ -1,0 +1,18 @@
+[2026-06-13 02:55:17] start task_id=regression__Another-Dataset-on-used-Fiat-500.csv__current_metagb__out1
+[2026-06-13 02:55:18] config task_type=regression dataset=Another-Dataset-on-used-Fiat-500.csv model=current_metagb outer_fold=1/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=1538 features=6 classes=0
+[2026-06-13 02:55:18] split train_rows=1230 test_rows=308 inner_splits=4
+[2026-06-13 02:55:28] candidate 1/600 rmse=759.455 status=ok
+[2026-06-13 03:09:18] candidate 50/600 rmse=761.396 status=ok
+[2026-06-13 03:21:31] candidate 100/600 rmse=750.777 status=ok
+[2026-06-13 03:38:27] candidate 150/600 rmse=1698.99 status=ok
+[2026-06-13 03:49:19] candidate 200/600 rmse=767.616 status=ok
+[2026-06-13 04:01:00] candidate 250/600 rmse=762.473 status=ok
+[2026-06-13 04:14:26] candidate 300/600 rmse=830.805 status=ok
+[2026-06-13 04:24:39] candidate 350/600 rmse=816.381 status=ok
+[2026-06-13 04:37:50] candidate 400/600 rmse=784.642 status=ok
+[2026-06-13 04:52:50] candidate 450/600 rmse=3028.76 status=ok
+[2026-06-13 05:02:54] candidate 500/600 rmse=1009.8 status=ok
+[2026-06-13 05:17:37] candidate 550/600 rmse=782.555 status=ok
+[2026-06-13 05:31:31] candidate 600/600 rmse=912.174 status=ok
+[2026-06-13 05:31:31] selected candidate_index=91 candidate_id=metagb_pf01_sa0_004 val_rmse=745.631 val_std=14.398
+[2026-06-13 05:31:32] finish best=91 test_rmse=779.817 final_train_sec=0.922449 final_predict_sec=0.00981419 elapsed_sec=9373.93 status=ok

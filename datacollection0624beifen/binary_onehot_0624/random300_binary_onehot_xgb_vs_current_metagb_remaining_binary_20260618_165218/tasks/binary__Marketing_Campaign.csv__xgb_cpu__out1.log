@@ -1,0 +1,12 @@
+[2026-06-20 08:00:41] start task_id=binary__Marketing_Campaign.csv__xgb_cpu__out1
+[2026-06-20 08:00:41] config task_type=binary dataset=Marketing_Campaign.csv model=xgb_cpu outer_fold=1/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=2216 features=697 classes=2
+[2026-06-20 08:00:41] split train_rows=1772 test_rows=444 inner_splits=4
+[2026-06-20 08:00:50] candidate 1/300 auc=0.882428 status=ok
+[2026-06-20 08:05:40] candidate 50/300 auc=0.888653 status=ok
+[2026-06-20 08:10:22] candidate 100/300 auc=0.888872 status=ok
+[2026-06-20 08:15:25] candidate 150/300 auc=0.866815 status=ok
+[2026-06-20 08:20:09] candidate 200/300 auc=0.880047 status=ok
+[2026-06-20 08:24:51] candidate 250/300 auc=0.884927 status=ok
+[2026-06-20 08:29:54] candidate 300/300 auc=0.880012 status=ok
+[2026-06-20 08:29:54] selected candidate_index=175 candidate_id=xgb_0175 val_auc=0.890287 val_std=0.0219033
+[2026-06-20 08:29:56] finish best=175 test_auc=0.900788 final_train_sec=2.05675 final_predict_sec=0.00683798 elapsed_sec=1755.17 status=ok

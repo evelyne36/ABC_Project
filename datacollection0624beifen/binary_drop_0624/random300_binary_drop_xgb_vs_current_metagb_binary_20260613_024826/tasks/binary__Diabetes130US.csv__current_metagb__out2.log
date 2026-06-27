@@ -1,0 +1,12 @@
+[2026-06-13 13:18:01] start task_id=binary__Diabetes130US.csv__current_metagb__out2
+[2026-06-13 13:18:02] config task_type=binary dataset=Diabetes130US.csv model=current_metagb outer_fold=2/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=71518 features=8 classes=2
+[2026-06-13 13:18:02] split train_rows=57214 test_rows=14304 inner_splits=4
+[2026-06-13 13:20:00] candidate 1/300 auc=0.591478 status=ok
+[2026-06-13 15:41:12] candidate 50/300 auc=0.596948 status=ok
+[2026-06-13 17:38:16] candidate 100/300 auc=0.595474 status=ok
+[2026-06-13 20:21:23] candidate 150/300 auc=0.597037 status=ok
+[2026-06-13 22:16:07] candidate 200/300 auc=0.59723 status=ok
+[2026-06-14 00:29:42] candidate 250/300 auc=0.592987 status=ok
+[2026-06-14 03:07:52] candidate 300/300 auc=0.565013 status=ok
+[2026-06-14 03:07:52] selected candidate_index=64 candidate_id=metagb_pf02_sa0_003 val_auc=0.599159 val_std=0.00384586
+[2026-06-14 03:08:03] finish best=64 test_auc=0.598902 final_train_sec=10.8153 final_predict_sec=0.114106 elapsed_sec=49801.8 status=ok

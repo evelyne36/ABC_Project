@@ -1,0 +1,12 @@
+[2026-06-13 05:01:55] start task_id=binary__Bank_Customer_Churn.csv__current_metagb__out3
+[2026-06-13 05:01:55] config task_type=binary dataset=Bank_Customer_Churn.csv model=current_metagb outer_fold=3/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=10000 features=13 classes=2
+[2026-06-13 05:01:55] split train_rows=8000 test_rows=2000 inner_splits=4
+[2026-06-13 05:02:46] candidate 1/300 auc=0.863783 status=ok
+[2026-06-13 07:03:20] candidate 50/300 auc=0.868897 status=ok
+[2026-06-13 08:39:00] candidate 100/300 auc=0.870666 status=ok
+[2026-06-13 11:03:48] candidate 150/300 auc=0.868789 status=ok
+[2026-06-13 12:24:33] candidate 200/300 auc=0.870328 status=ok
+[2026-06-13 14:08:43] candidate 250/300 auc=0.863433 status=ok
+[2026-06-13 16:14:59] candidate 300/300 auc=0.842998 status=ok
+[2026-06-13 16:14:59] selected candidate_index=187 candidate_id=metagb_pf03_sa0_007 val_auc=0.871645 val_std=0.00587168
+[2026-06-13 16:15:14] finish best=187 test_auc=0.865949 final_train_sec=14.5996 final_predict_sec=0.0923271 elapsed_sec=40399 status=ok

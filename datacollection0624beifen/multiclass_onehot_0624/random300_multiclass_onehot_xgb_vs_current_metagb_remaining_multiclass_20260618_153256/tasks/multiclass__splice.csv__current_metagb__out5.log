@@ -1,0 +1,4 @@
+[2026-06-18 15:42:09] start task_id=multiclass__splice.csv__current_metagb__out5
+[2026-06-18 15:42:09] config task_type=multiclass dataset=splice.csv model=current_metagb outer_fold=5/5 inner_folds=4 candidates=300 objective=multi:softprob primary_metric=logloss direction=minimize rows=3190 features=287 classes=3
+[2026-06-18 15:42:09] split train_rows=2552 test_rows=638 inner_splits=4
+[2026-06-18 21:29:06] candidate 1/300 logloss=0.127086 status=ok

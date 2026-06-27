@@ -1,0 +1,18 @@
+[2026-06-13 22:11:20] start task_id=regression__physiochemical_protein.csv__current_metagb__out4
+[2026-06-13 22:11:20] config task_type=regression dataset=physiochemical_protein.csv model=current_metagb outer_fold=4/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=45730 features=9 classes=0
+[2026-06-13 22:11:20] split train_rows=36584 test_rows=9146 inner_splits=4
+[2026-06-13 22:12:37] candidate 1/600 rmse=3.99426 status=ok
+[2026-06-13 23:57:48] candidate 50/600 rmse=4.46211 status=ok
+[2026-06-14 01:30:04] candidate 100/600 rmse=4.47569 status=ok
+[2026-06-14 03:37:08] candidate 150/600 rmse=4.99103 status=ok
+[2026-06-14 05:05:31] candidate 200/600 rmse=4.67159 status=ok
+[2026-06-14 06:39:25] candidate 250/600 rmse=4.19528 status=ok
+[2026-06-14 08:21:44] candidate 300/600 rmse=3.81279 status=ok
+[2026-06-14 09:47:18] candidate 350/600 rmse=4.34143 status=ok
+[2026-06-14 11:28:03] candidate 400/600 rmse=4.24692 status=ok
+[2026-06-14 13:22:50] candidate 450/600 rmse=5.76732 status=ok
+[2026-06-14 14:44:51] candidate 500/600 rmse=4.6823 status=ok
+[2026-06-14 16:35:47] candidate 550/600 rmse=3.60757 status=ok
+[2026-06-14 18:12:00] candidate 600/600 rmse=3.90188 status=ok
+[2026-06-14 18:12:00] selected candidate_index=412 candidate_id=metagb_pf08_sa0_014 val_rmse=3.47577 val_std=0.0466179
+[2026-06-14 18:14:09] finish best=412 test_rmse=3.48262 final_train_sec=128.279 final_predict_sec=0.646741 elapsed_sec=72168.5 status=ok

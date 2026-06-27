@@ -1,0 +1,18 @@
+[2026-06-15 21:02:38] start task_id=regression__concrete_compressive_strength.csv__current_metagb__out1
+[2026-06-15 21:02:38] config task_type=regression dataset=concrete_compressive_strength.csv model=current_metagb outer_fold=1/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=1030 features=8 classes=0
+[2026-06-15 21:02:38] split train_rows=824 test_rows=206 inner_splits=4
+[2026-06-15 21:02:52] candidate 1/600 rmse=5.30924 status=ok
+[2026-06-15 21:25:43] candidate 50/600 rmse=4.9125 status=ok
+[2026-06-15 21:45:29] candidate 100/600 rmse=4.95178 status=ok
+[2026-06-15 22:14:28] candidate 150/600 rmse=9.48016 status=ok
+[2026-06-15 22:33:31] candidate 200/600 rmse=5.51321 status=ok
+[2026-06-15 22:54:19] candidate 250/600 rmse=4.93697 status=ok
+[2026-06-15 23:19:20] candidate 300/600 rmse=5.0231 status=ok
+[2026-06-15 23:36:58] candidate 350/600 rmse=5.55766 status=ok
+[2026-06-16 00:01:23] candidate 400/600 rmse=4.99297 status=ok
+[2026-06-16 00:28:11] candidate 450/600 rmse=15.228 status=ok
+[2026-06-16 00:46:32] candidate 500/600 rmse=6.42392 status=ok
+[2026-06-16 01:12:50] candidate 550/600 rmse=5.1549 status=ok
+[2026-06-16 01:38:01] candidate 600/600 rmse=5.33193 status=ok
+[2026-06-16 01:38:01] selected candidate_index=201 candidate_id=metagb_pf07_sa2_007 val_rmse=4.66735 val_std=0.349026
+[2026-06-16 01:38:04] finish best=201 test_rmse=3.55685 final_train_sec=2.64105 final_predict_sec=0.00609619 elapsed_sec=16525.9 status=ok

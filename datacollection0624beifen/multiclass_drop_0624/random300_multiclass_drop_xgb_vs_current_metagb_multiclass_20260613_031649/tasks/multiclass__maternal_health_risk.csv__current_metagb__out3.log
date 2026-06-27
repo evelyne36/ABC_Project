@@ -1,0 +1,12 @@
+[2026-06-13 13:14:08] start task_id=multiclass__maternal_health_risk.csv__current_metagb__out3
+[2026-06-13 13:14:08] config task_type=multiclass dataset=maternal_health_risk.csv model=current_metagb outer_fold=3/5 inner_folds=4 candidates=300 objective=multi:softprob primary_metric=logloss direction=minimize rows=1014 features=6 classes=3
+[2026-06-13 13:14:08] split train_rows=811 test_rows=203 inner_splits=4
+[2026-06-13 13:14:43] candidate 1/300 logloss=0.50054 status=ok
+[2026-06-13 13:51:50] candidate 50/300 logloss=0.522132 status=ok
+[2026-06-13 14:29:18] candidate 100/300 logloss=0.519071 status=ok
+[2026-06-13 15:17:56] candidate 150/300 logloss=0.669347 status=ok
+[2026-06-13 15:50:46] candidate 200/300 logloss=0.578129 status=ok
+[2026-06-13 16:21:49] candidate 250/300 logloss=0.501874 status=ok
+[2026-06-13 17:03:19] candidate 300/300 logloss=0.893763 status=ok
+[2026-06-13 17:03:19] selected candidate_index=125 candidate_id=metagb_pf02_sa1_005 val_logloss=0.484382 val_std=0.0471715
+[2026-06-13 17:03:22] finish best=125 test_logloss=0.296766 final_train_sec=3.89229 final_predict_sec=0.0202145 elapsed_sec=13754.2 status=ok

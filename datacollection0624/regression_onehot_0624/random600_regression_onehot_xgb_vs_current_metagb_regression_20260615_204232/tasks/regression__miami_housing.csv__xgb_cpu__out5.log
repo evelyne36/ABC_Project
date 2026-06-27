@@ -1,0 +1,18 @@
+[2026-06-18 03:30:36] start task_id=regression__miami_housing.csv__xgb_cpu__out5
+[2026-06-18 03:30:37] config task_type=regression dataset=miami_housing.csv model=xgb_cpu outer_fold=5/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=13776 features=15 classes=0
+[2026-06-18 03:30:37] split train_rows=11021 test_rows=2755 inner_splits=4
+[2026-06-18 03:30:51] candidate 1/600 rmse=88597.3 status=ok
+[2026-06-18 03:43:10] candidate 50/600 rmse=91998.1 status=ok
+[2026-06-18 03:54:12] candidate 100/600 rmse=94921.6 status=ok
+[2026-06-18 04:06:52] candidate 150/600 rmse=129217 status=ok
+[2026-06-18 04:17:08] candidate 200/600 rmse=101591 status=ok
+[2026-06-18 04:26:42] candidate 250/600 rmse=89520.5 status=ok
+[2026-06-18 04:37:04] candidate 300/600 rmse=86125.9 status=ok
+[2026-06-18 04:46:20] candidate 350/600 rmse=94893.1 status=ok
+[2026-06-18 04:57:01] candidate 400/600 rmse=88038.3 status=ok
+[2026-06-18 05:09:23] candidate 450/600 rmse=172818 status=ok
+[2026-06-18 05:18:12] candidate 500/600 rmse=109548 status=ok
+[2026-06-18 05:30:15] candidate 550/600 rmse=86841.1 status=ok
+[2026-06-18 05:41:43] candidate 600/600 rmse=86899.6 status=ok
+[2026-06-18 05:41:43] selected candidate_index=476 candidate_id=xgb_0476 val_rmse=84131.5 val_std=3989.64
+[2026-06-18 05:41:47] finish best=476 test_rmse=86928.1 final_train_sec=3.89131 final_predict_sec=0.0697269 elapsed_sec=7870.37 status=ok

@@ -1,0 +1,18 @@
+[2026-06-17 01:14:24] start task_id=regression__healthcare_insurance_expenses.csv__xgb_cpu__out3
+[2026-06-17 01:14:24] config task_type=regression dataset=healthcare_insurance_expenses.csv model=xgb_cpu outer_fold=3/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=1338 features=11 classes=0
+[2026-06-17 01:14:24] split train_rows=1070 test_rows=268 inner_splits=4
+[2026-06-17 01:14:25] candidate 1/600 rmse=4857.14 status=ok
+[2026-06-17 01:15:25] candidate 50/600 rmse=4548.32 status=ok
+[2026-06-17 01:16:18] candidate 100/600 rmse=4512.9 status=ok
+[2026-06-17 01:17:17] candidate 150/600 rmse=5667 status=ok
+[2026-06-17 01:18:10] candidate 200/600 rmse=4467.24 status=ok
+[2026-06-17 01:19:01] candidate 250/600 rmse=4767.47 status=ok
+[2026-06-17 01:19:58] candidate 300/600 rmse=5060.18 status=ok
+[2026-06-17 01:20:53] candidate 350/600 rmse=4616.57 status=ok
+[2026-06-17 01:21:52] candidate 400/600 rmse=4697.32 status=ok
+[2026-06-17 01:22:53] candidate 450/600 rmse=6473.34 status=ok
+[2026-06-17 01:23:43] candidate 500/600 rmse=4704.73 status=ok
+[2026-06-17 01:24:42] candidate 550/600 rmse=4939.35 status=ok
+[2026-06-17 01:25:38] candidate 600/600 rmse=4946.47 status=ok
+[2026-06-17 01:25:38] selected candidate_index=303 candidate_id=xgb_0303 val_rmse=4386.75 val_std=301.23
+[2026-06-17 01:25:39] finish best=303 test_rmse=5200.98 final_train_sec=0.0974421 final_predict_sec=0.00336478 elapsed_sec=674.737 status=ok
