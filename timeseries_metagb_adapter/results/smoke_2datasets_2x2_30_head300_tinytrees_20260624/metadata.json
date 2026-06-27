@@ -1,0 +1,21 @@
+{
+  "run_id": "smoke_2datasets_2x2_30_head300_tinytrees_20260624",
+  "mode": "smoke",
+  "datasets": [
+    "ETTh1",
+    "exchange_rate"
+  ],
+  "models": [
+    "xgb_cpu",
+    "current_metagb"
+  ],
+  "seq_len": 24,
+  "pred_len": 1,
+  "max_raw_rows": 300,
+  "outer_folds": 2,
+  "inner_folds": 2,
+  "max_candidates": 30,
+  "results_dir": "/Users/ancd/VSCodeProject/check_codereview0623-adapter/timeseries_metagb_adapter/results/smoke_2datasets_2x2_30_head300_tinytrees_20260624",
+  "summary_rows": 8,
+  "candidate_rows": 240
+}

@@ -1,7 +1,7 @@
 # datacollection0621: current_metagb vs xgb_cpu 实验结果分析
 
-更新时间：2026-06-22  
-数据来源：`datacollection0621/` 当前日志、`task_status.json`、synthetic task JSON  
+更新时间：2026-06-24  
+数据来源：`datacollection0621/` 当前日志、`task_status.json`、synthetic task JSON、可用 `candidates.csv` / `pred_fraction_analysis.csv`  
 比较对象：`current_metagb` vs `xgb_cpu`
 
 ## 摘要结论
@@ -214,6 +214,105 @@ Synthetic takeaway:
 - The completed synthetic subset aligns with the structural hypothesis: conditional interaction tasks favor MetaGB.
 - However, the current file set contains many `dim50/dim100` XGB-only tasks. These must not be used for final full synthetic claims until MetaGB counterparts complete.
 
+## Dataset-level Diagnostics Extension
+
+本节把每个可比 dataset/case 的 CV 方向、test 方向、差多少、MetaGB 最优参数对应的 `pred_feature_fraction`/`metagb_score_agg`、以及 pred 敏感性补进结果表。`CV dir` 使用 5 个 outer folds 的 selected inner-CV 主指标均值比较；`Test dir` 使用 5 个 outer folds 的 outer-test 主指标均值比较。`Test delta` 为 MetaGB 相对 XGB 的 test improvement，括号内为主指标绝对改变量：AUC 越大越好，RMSE/Logloss 越小越好。`MetaGB best pred/score_agg` 统计 5 个 outer folds 被 CV 选中的 MetaGB 参数组合。
+
+`Pred sensitivity` 有两种证据强度：
+
+- `CV pred spread`: 有完整候选级数据时，按 fold 计算不同 `pred_feature_fraction` 分组最优 CV 分数的相对跨度，再对 5 folds 平均；数值越大，说明 pred 选错的潜在损失越大。
+- `sel pf span ... (proxy)`: 只有最终日志时，只能记录 5 folds 被选中 pred 的范围和唯一值个数，这是弱代理，不能等同完整 pred sweep。
+
+### Regression Drop Diagnostics
+
+| Dataset | Metric | CV dir | Test dir | Test delta | MetaGB best pred/score_agg | Pred sensitivity | Why / note |
+|---|---|---|---|---:|---|---|---|
+| Another-Dataset-on-used-Fiat-500.csv | RMSE | Loss | Loss | -1.39% (-10.444) | 0.1/sa0x2; 0.1/sa2x1; 0.3/sa0x1; 0.3/sa2x1 | CV pred spread 2.08%; sel pf span 0.2, uniq 2 | CV/test 同负，当前搜索下劣势稳定 |
+| Food_Delivery_Time.csv | RMSE | Loss | Loss | -0.13% (-0.009928) | 0.3/sa1x1; 0.5/sa2x1; 1.0/sa1x3 | CV pred spread 0.26%; sel pf span 0.7, uniq 3 | CV/test 同负，当前搜索下劣势稳定 |
+| QSAR_fish_toxicity.csv | RMSE | Win | Win | +1.31% (0.011794) | 0.2/sa2x1; 0.3/sa0x1; 0.3/sa2x1; 0.6/sa2x2 | CV pred spread 1.68%; sel pf span 0.4, uniq 3 | CV/test 同正，收益较可信 |
+| airfoil_self_noise.csv | RMSE | Loss | Loss | -8.12% (-0.114218) | 0.1/sa0x1; 0.7/sa1x3; 0.8/sa0x1 | CV pred spread 12.38%; sel pf span 0.7, uniq 3 | CV/test 同负；大负例；pred 敏感性最高 |
+| concrete_compressive_strength.csv | RMSE | Win | Loss | -0.26% (-0.010188) | 0.3/sa1x2; 0.4/sa0x1; 0.4/sa2x1; 0.7/sa2x1 | CV pred spread 4.67%; sel pf span 0.4, uniq 3 | CV 未预警，外推/选择不稳 |
+| diamonds.csv | RMSE | Loss | Loss | -1.30% (-17.444) | 0.1/sa0x2; 0.1/sa1x1; 0.1/sa2x1; 0.8/sa2x1 | CV pred spread 0.27%; sel pf span 0.7, uniq 2 | CV/test 同负，但 pred 本身不是主要波动源 |
+| healthcare_insurance_expenses.csv | RMSE | Loss | Loss | -0.87% (-100.466) | 0.3/sa1x1; 0.4/sa2x3; 0.5/sa2x1 | CV pred spread 2.66%; sel pf span 0.2, uniq 3 | CV/test 同负，当前搜索下劣势稳定 |
+| houses.csv | RMSE | Loss | Loss | -20.37% (-0.043317) | 0.1/sa2x4; 0.9/sa2x1 | CV pred spread 6.64%; sel pf span 0.8, uniq 2 | 最大负例；CV/test 同负，非纯 CV 噪声 |
+| miami_housing.csv | RMSE | Win | Win | +0.46% (385.800) | 0.5/sa0x1; 0.7/sa2x1; 0.9/sa1x2; 1.0/sa0x1 | CV pred spread 4.77%; sel pf span 0.5, uniq 4 | CV/test 同正，但 pred 选择较分散 |
+| physiochemical_protein.csv | RMSE | Win | Win | +0.72% (0.024622) | 0.8/sa0x5 | CV pred spread 1.35%; sel pf span 0.0, uniq 1 | 最优 pred 极稳定，收益较可信 |
+| wine_quality.csv | RMSE | Loss | Loss | -0.86% (-0.005078) | 0.1/sa1x3; 0.1/sa2x1; 0.3/sa0x1 | CV pred spread 2.40%; sel pf span 0.2, uniq 2 | CV/test 同负，当前搜索下劣势稳定 |
+
+### Regression OneHot Diagnostics
+
+| Dataset | Metric | CV dir | Test dir | Test delta | MetaGB best pred/score_agg | Pred sensitivity | Why / note |
+|---|---|---|---|---:|---|---|---|
+| Another-Dataset-on-used-Fiat-500.csv | RMSE | Loss | Loss | -1.09% (-8.057) | 0.1/sa0x2; 0.4/sa0x2; 0.4/sa1x1 | sel pf span 0.3, uniq 2 (proxy) | CV/test 同负 |
+| QSAR_fish_toxicity.csv | RMSE | Win | Win | +1.31% (0.011794) | 0.2/sa2x1; 0.3/sa0x1; 0.3/sa2x1; 0.6/sa2x2 | sel pf span 0.4, uniq 3 (proxy) | CV/test 同正 |
+| airfoil_self_noise.csv | RMSE | Loss | Loss | -8.12% (-0.114218) | 0.1/sa0x1; 0.7/sa1x3; 0.8/sa0x1 | sel pf span 0.7, uniq 3 (proxy) | 大负例，drop/onehot 均差 |
+| concrete_compressive_strength.csv | RMSE | Win | Loss | -0.26% (-0.010188) | 0.3/sa1x2; 0.4/sa0x1; 0.4/sa2x1; 0.7/sa2x1 | sel pf span 0.4, uniq 3 (proxy) | CV 未预警，外推/选择不稳 |
+| healthcare_insurance_expenses.csv | RMSE | Win | Win | +1.16% (52.956) | 0.1/sa2x2; 0.2/sa2x3 | sel pf span 0.1, uniq 2 (proxy) | onehot 后转为稳定正例 |
+| houses.csv | RMSE | Loss | Loss | -20.37% (-0.043317) | 0.1/sa2x4; 0.9/sa2x1 | sel pf span 0.8, uniq 2 (proxy) | 最大负例，drop/onehot 均差 |
+| miami_housing.csv | RMSE | Win | Win | +0.46% (385.800) | 0.5/sa0x1; 0.7/sa2x1; 0.9/sa1x2; 1.0/sa0x1 | sel pf span 0.5, uniq 4 (proxy) | CV/test 同正，但 pred 选择较分散 |
+| physiochemical_protein.csv | RMSE | Win | Win | +0.72% (0.024622) | 0.8/sa0x5 | sel pf span 0.0, uniq 1 (proxy) | 最优 pred 极稳定 |
+| wine_quality.csv | RMSE | Loss | Win | +0.21% (0.001257) | 0.1/sa0x1; 0.1/sa1x3; 0.3/sa0x1 | sel pf span 0.2, uniq 2 (proxy) | test 小幅转正，CV 选择偏保守或噪声较大 |
+
+### Binary Drop Diagnostics
+
+| Dataset | Metric | CV dir | Test dir | Test delta | MetaGB best pred/score_agg | Pred sensitivity | Why / note |
+|---|---|---|---|---:|---|---|---|
+| Amazon_employee_access.csv | AUC | Loss | Loss | -0.14% (-0.001180) | 0.2/sa0x3; 0.6/sa0x2 | sel pf span 0.4, uniq 2 (proxy) | CV/test 同负，小幅差 |
+| Bank_Customer_Churn.csv | AUC | Loss | Loss | -0.18% (-0.001532) | 0.1/sa1x1; 0.4/sa2x1; 0.5/sa2x1; 0.9/sa0x1; 0.9/sa2x1 | sel pf span 0.8, uniq 4 (proxy) | CV/test 同负，pred 选择分散 |
+| Diabetes130US.csv | AUC | Loss | Loss | -0.16% (-0.000970) | 0.2/sa0x1; 0.3/sa0x3; 0.5/sa0x1 | sel pf span 0.3, uniq 3 (proxy) | CV/test 同负，小幅差 |
+| E-CommereShippingData.csv | AUC | Win | Win | +0.14% (0.001034) | 0.2/sa1x1; 0.3/sa1x1; 0.6/sa0x1; 1.0/sa0x2 | sel pf span 0.8, uniq 4 (proxy) | CV/test 同正，但 pred 分散 |
+| Fitness_Club.csv | AUC | Win | Win | +0.13% (0.001071) | 0.3/sa1x2; 0.4/sa2x1; 0.9/sa0x2 | sel pf span 0.6, uniq 3 (proxy) | CV/test 同正，小幅收益 |
+| GiveMeSomeCredit.csv | AUC | Loss | Loss | -0.06% (-0.000526) | 0.1/sa0x2; 0.1/sa1x2; 0.6/sa0x1 | sel pf span 0.5, uniq 2 (proxy) | 近似持平偏负 |
+| HR_Analytics_Job_Change_of_Data_Scientists.csv | AUC | Loss | Win | +0.11% (0.000765) | 0.3/sa0x3; 0.3/sa1x2 | sel pf span 0.0, uniq 1 (proxy) | pred 稳定，但 CV/test 方向不一致 |
+| Is-this-a-good-customer.csv | AUC | Loss | Loss | -0.40% (-0.002475) | 0.2/sa2x1; 0.5/sa2x1; 0.7/sa0x1; 0.8/sa0x1; 0.8/sa1x1 | sel pf span 0.6, uniq 4 (proxy) | CV/test 同负，pred 选择分散 |
+| Marketing_Campaign.csv | AUC | Loss | Win | +0.43% (0.003757) | 0.3/sa0x1; 0.3/sa2x1; 0.7/sa2x1; 0.8/sa1x1; 1.0/sa1x1 | sel pf span 0.7, uniq 4 (proxy) | test 转正，CV 低估 MetaGB |
+| blood-transfusion-service-center.csv | AUC | Loss | Win | +0.40% (0.002895) | 0.4/sa2x1; 0.8/sa1x2; 0.9/sa0x2 | sel pf span 0.5, uniq 3 (proxy) | test 转正，CV 低估 MetaGB |
+| churn.csv | AUC | Loss | Win | +0.04% (0.000413) | 0.2/sa0x2; 0.3/sa1x1; 0.7/sa1x1; 1.0/sa0x1 | sel pf span 0.8, uniq 4 (proxy) | 近似持平，方向不稳 |
+| credit-g.csv | AUC | Win | Win | +1.30% (0.008762) | 0.3/sa1x1; 0.8/sa1x2; 0.9/sa0x2 | sel pf span 0.6, uniq 3 (proxy) | binary 最大正例 |
+| diabetes.csv | AUC | Win | Loss | -0.12% (-0.001030) | 0.3/sa0x1; 0.4/sa2x3; 0.9/sa0x1 | sel pf span 0.6, uniq 3 (proxy) | CV 未预警，外推/选择不稳 |
+| hazelnut-spread-contaminant-detection.csv | AUC | Win | Win | +0.38% (0.003729) | 0.1/sa0x1; 0.8/sa2x4 | sel pf span 0.7, uniq 2 (proxy) | test 正例，但多选高 pred |
+| qsar-biodeg.csv | AUC | Win | Loss | -0.09% (-0.000857) | 0.2/sa2x1; 0.7/sa2x2; 1.0/sa0x1; 1.0/sa1x1 | sel pf span 0.8, uniq 3 (proxy) | CV 未预警，且运行开销大 |
+| seismic-bumps.csv | AUC | Loss | Loss | -2.50% (-0.019540) | 0.3/sa1x1; 0.4/sa2x2; 0.9/sa0x1; 0.9/sa2x1 | sel pf span 0.6, uniq 3 (proxy) | binary 最大负例，CV/test 同负 |
+
+### Binary OneHot Diagnostics
+
+| Dataset | Metric | CV dir | Test dir | Test delta | MetaGB best pred/score_agg | Pred sensitivity | Why / note |
+|---|---|---|---|---:|---|---|---|
+| Amazon_employee_access.csv | AUC | Loss | Loss | -0.14% (-0.001180) | 0.2/sa0x3; 0.6/sa0x2 | sel pf span 0.4, uniq 2 (proxy) | CV/test 同负 |
+| Bank_Customer_Churn.csv | AUC | Win | Win | +0.26% (0.002258) | 0.3/sa0x4; 0.5/sa0x1 | sel pf span 0.2, uniq 2 (proxy) | onehot 后转正 |
+| E-CommereShippingData.csv | AUC | Loss | Loss | -0.05% (-0.000385) | 0.2/sa1x1; 0.8/sa1x4 | sel pf span 0.6, uniq 2 (proxy) | 近似持平偏负 |
+| Fitness_Club.csv | AUC | Loss | Loss | -0.28% (-0.002230) | 0.2/sa2x1; 0.3/sa1x2; 0.5/sa2x2 | sel pf span 0.3, uniq 3 (proxy) | CV/test 同负 |
+| GiveMeSomeCredit.csv | AUC | Loss | Loss | -0.06% (-0.000526) | 0.1/sa0x2; 0.1/sa1x2; 0.6/sa0x1 | sel pf span 0.5, uniq 2 (proxy) | 近似持平偏负 |
+| Is-this-a-good-customer.csv | AUC | Loss | Loss | -0.83% (-0.006092) | 0.2/sa2x1; 0.5/sa0x1; 0.5/sa2x1; 0.7/sa0x1; 0.8/sa0x1 | sel pf span 0.6, uniq 4 (proxy) | onehot 后仍负，pred 选择分散 |
+| blood-transfusion-service-center.csv | AUC | Loss | Win | +0.40% (0.002895) | 0.4/sa2x1; 0.8/sa1x2; 0.9/sa0x2 | sel pf span 0.5, uniq 3 (proxy) | test 转正，CV 低估 MetaGB |
+| diabetes.csv | AUC | Win | Loss | -0.12% (-0.001030) | 0.3/sa0x1; 0.4/sa2x3; 0.9/sa0x1 | sel pf span 0.6, uniq 3 (proxy) | CV 未预警 |
+| hazelnut-spread-contaminant-detection.csv | AUC | Win | Win | +0.38% (0.003729) | 0.1/sa0x1; 0.8/sa2x4 | sel pf span 0.7, uniq 2 (proxy) | test 正例，但多选高 pred |
+| qsar-biodeg.csv | AUC | Win | Loss | -0.09% (-0.000857) | 0.2/sa2x1; 0.7/sa2x2; 1.0/sa0x1; 1.0/sa1x1 | sel pf span 0.8, uniq 3 (proxy) | CV 未预警，且运行开销大 |
+
+### Multiclass Drop Diagnostics
+
+| Dataset | Metric | CV dir | Test dir | Test delta | MetaGB best pred/score_agg | Pred sensitivity | Why / note |
+|---|---|---|---|---:|---|---|---|
+| SDSS17.csv | Logloss | Loss | Loss | -0.25% (-0.000178) | 0.1/sa2x1; 0.3/sa2x3; 0.6/sa1x1 | sel pf span 0.5, uniq 3 (proxy) | 小幅但稳定负例 |
+| anneal.csv | Logloss | Win | Win | +3.84% (0.008709) | 0.1/sa1x3; 0.3/sa2x1; 0.7/sa1x1 | sel pf span 0.6, uniq 3 (proxy) | multiclass 最大正例 |
+| maternal_health_risk.csv | Logloss | Win | Win | +1.77% (0.007075) | 0.1/sa2x2; 0.2/sa1x3 | sel pf span 0.1, uniq 2 (proxy) | pred 选择较稳定，收益可信 |
+| students_dropout_and_academic_success.csv | Logloss | Win | Loss | -0.03% (-0.000178) | 0.4/sa1x1; 0.7/sa1x1; 0.7/sa2x3 | sel pf span 0.3, uniq 2 (proxy) | 近似持平，CV/test 轻微翻转 |
+
+### Multiclass OneHot Diagnostics
+
+| Dataset | Metric | CV dir | Test dir | Test delta | MetaGB best pred/score_agg | Pred sensitivity | Why / note |
+|---|---|---|---|---:|---|---|---|
+| SDSS17.csv | Logloss | Loss | Loss | -0.25% (-0.000178) | 0.1/sa2x1; 0.3/sa2x3; 0.6/sa1x1 | sel pf span 0.5, uniq 3 (proxy) | drop/onehot 均小幅负 |
+| maternal_health_risk.csv | Logloss | Win | Win | +1.77% (0.007075) | 0.1/sa2x2; 0.2/sa1x3 | sel pf span 0.1, uniq 2 (proxy) | pred 选择较稳定，收益可信 |
+| website_phishing.csv | Logloss | Win | Win | +2.56% (0.006295) | 0.1/sa1x1; 0.3/sa0x4 | sel pf span 0.2, uniq 2 (proxy) | onehot multiclass 清晰正例 |
+
+### Synthetic Diagnostics
+
+| Scenario | Metric | CV dir | Test dir | Test delta | MetaGB best pred/score_agg | Pred sensitivity | Why / note |
+|---|---|---|---|---:|---|---|---|
+| xor_3way__dim10 | AUC | Win | Win | +0.20% (0.001944) | 0.7/sa0x1; 0.8/sa0x1; 0.9/sa0x2; 1.0/sa0x1 | CV pred spread 0.18%; sel pf span 0.3, uniq 4 | 高 pred/sa0 被稳定选中，符合 interaction 机制假设 |
+| xor_classification__dim10 | AUC | Win | Win | +0.02% (0.000168) | 0.3/sa0x1; 0.6/sa0x1; 0.7/sa0x2; 0.9/sa0x1 | CV pred spread 0.05%; sel pf span 0.6, uniq 4 | 收益很小但方向一致，pred 真实敏感性低 |
+
 ## Positive and Negative Cases
 
 ### Strongest positive cases
@@ -304,4 +403,3 @@ Interpretation:
 The current `datacollection0621` evidence is strongest for a nuanced, top-conference-safe conclusion:
 
 > MetaGB is not a uniformly better replacement for XGBoost on general tabular benchmarks. Its current empirical value appears in selected multiclass tasks and synthetic interaction mechanisms, while regression and binary results reveal clear applicability boundaries and non-trivial runtime cost. A credible final paper should foreground win/tie/loss, relative improvement distributions, runtime-quality tradeoffs, and positive/negative case analysis rather than only average scores.
-

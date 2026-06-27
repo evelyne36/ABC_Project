@@ -1,0 +1,7 @@
+variant,removed_component,auc,mean_score
+full,,1.0,0.6313670217582994
+remove_linear_leaf_advantage,component_linear_leaf_advantage,1.0,0.5406771219801634
+remove_cond_pred_decoupling,component_cond_pred_decoupling,1.0,0.7854771636377562
+remove_local_heterogeneity,component_local_heterogeneity,1.0,0.5947643327534298
+remove_predictive_concentration,component_predictive_concentration,1.0,0.6230148410788446
+remove_signal_support,component_signal_support,1.0,0.6093280687156339

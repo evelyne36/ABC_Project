@@ -26,7 +26,7 @@ RANDOM600_SCENARIOS = [
 ]
 MAIN_MODELS = ["xgb_cpu", "current_metagb"]
 ABLATION_MODELS = ["xgb_cpu", "current_metagb_pred0", "current_metagb"]
-DIMENSIONS = [10, 50, 100]
+DIMENSIONS = [10, 20, 50]
 FAMILY_CASES = {
     "A_interaction": [
         "xor_classification",
@@ -148,9 +148,9 @@ def pressure_instances(n_samples: int = 3000) -> List[ScenarioInstance]:
 def main_experiment_instances(n_samples: int = 3000) -> List[ScenarioInstance]:
     out: List[ScenarioInstance] = []
     classification_cases = {"xor_classification", "xor_3way", "regime_logit"}
-    for family, cases in FAMILY_CASES.items():
-        for case in cases:
-            for dimension in DIMENSIONS:
+    for dimension in DIMENSIONS:
+        for family, cases in FAMILY_CASES.items():
+            for case in cases:
                 out.append(
                     ScenarioInstance(
                         name=f"{case}__dim{dimension}",
@@ -164,7 +164,6 @@ def main_experiment_instances(n_samples: int = 3000) -> List[ScenarioInstance]:
                         variant="dimension",
                     )
                 )
-    for dimension in DIMENSIONS:
         out.append(
             ScenarioInstance(
                 name=f"noise_regime_slope__dim{dimension}",

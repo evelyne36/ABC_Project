@@ -1,0 +1,12 @@
+[2026-06-13 02:48:27] start task_id=binary__APSFailure.csv__xgb_cpu__out4
+[2026-06-13 02:48:29] config task_type=binary dataset=APSFailure.csv model=xgb_cpu outer_fold=4/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=756 features=170 classes=2
+[2026-06-13 02:48:29] split train_rows=605 test_rows=151 inner_splits=4
+[2026-06-13 02:48:41] candidate 1/300 auc=0.983783 status=ok
+[2026-06-13 02:53:25] candidate 50/300 auc=0.985706 status=ok
+[2026-06-13 02:58:08] candidate 100/300 auc=0.986414 status=ok
+[2026-06-13 03:03:36] candidate 150/300 auc=0.974167 status=ok
+[2026-06-13 03:08:30] candidate 200/300 auc=0.981764 status=ok
+[2026-06-13 03:13:28] candidate 250/300 auc=0.983337 status=ok
+[2026-06-13 03:18:51] candidate 300/300 auc=0.985714 status=ok
+[2026-06-13 03:18:51] selected candidate_index=54 candidate_id=xgb_0054 val_auc=0.990351 val_std=0.00321016
+[2026-06-13 03:18:52] finish best=54 test_auc=1 final_train_sec=0.907156 final_predict_sec=0.00362692 elapsed_sec=1823.34 status=ok

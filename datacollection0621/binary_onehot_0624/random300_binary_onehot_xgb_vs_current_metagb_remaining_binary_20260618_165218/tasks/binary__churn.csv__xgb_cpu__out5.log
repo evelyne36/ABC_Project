@@ -1,0 +1,12 @@
+[2026-06-22 10:26:05] start task_id=binary__churn.csv__xgb_cpu__out5
+[2026-06-22 10:26:05] config task_type=binary dataset=churn.csv model=xgb_cpu outer_fold=5/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=5000 features=19 classes=2
+[2026-06-22 10:26:05] split train_rows=4000 test_rows=1000 inner_splits=4
+[2026-06-22 10:26:10] candidate 1/300 auc=0.918349 status=ok
+[2026-06-22 10:29:06] candidate 50/300 auc=0.921219 status=ok
+[2026-06-22 10:31:58] candidate 100/300 auc=0.919591 status=ok
+[2026-06-22 10:35:06] candidate 150/300 auc=0.920455 status=ok
+[2026-06-22 10:37:50] candidate 200/300 auc=0.921043 status=ok
+[2026-06-22 10:40:26] candidate 250/300 auc=0.916205 status=ok
+[2026-06-22 10:43:21] candidate 300/300 auc=0.911591 status=ok
+[2026-06-22 10:43:21] selected candidate_index=177 candidate_id=xgb_0177 val_auc=0.922768 val_std=0.0082807
+[2026-06-22 10:43:22] finish best=177 test_auc=0.919145 final_train_sec=0.558583 final_predict_sec=0.0104237 elapsed_sec=1036.87 status=ok

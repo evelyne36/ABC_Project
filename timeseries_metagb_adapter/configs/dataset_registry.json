@@ -1,0 +1,95 @@
+{
+  "ETTh1": {
+    "family": "ETDataset",
+    "source_repo": "https://github.com/zhouhaoyi/ETDataset",
+    "paper_repo": "https://github.com/zhouhaoyi/Informer2020",
+    "url": "https://raw.githubusercontent.com/zhouhaoyi/ETDataset/main/ETT-small/ETTh1.csv",
+    "raw_path": "ETTh1.csv",
+    "format": "csv_with_date",
+    "date_column": "date",
+    "target_column": "OT",
+    "frequency": "h",
+    "notes": "Informer/Autoformer/PatchTST standard ETT hourly benchmark."
+  },
+  "ETTh2": {
+    "family": "ETDataset",
+    "source_repo": "https://github.com/zhouhaoyi/ETDataset",
+    "paper_repo": "https://github.com/zhouhaoyi/Informer2020",
+    "url": "https://raw.githubusercontent.com/zhouhaoyi/ETDataset/main/ETT-small/ETTh2.csv",
+    "raw_path": "ETTh2.csv",
+    "format": "csv_with_date",
+    "date_column": "date",
+    "target_column": "OT",
+    "frequency": "h",
+    "notes": "Informer/Autoformer/PatchTST standard ETT hourly benchmark."
+  },
+  "ETTm1": {
+    "family": "ETDataset",
+    "source_repo": "https://github.com/zhouhaoyi/ETDataset",
+    "paper_repo": "https://github.com/zhouhaoyi/Informer2020",
+    "url": "https://raw.githubusercontent.com/zhouhaoyi/ETDataset/main/ETT-small/ETTm1.csv",
+    "raw_path": "ETTm1.csv",
+    "format": "csv_with_date",
+    "date_column": "date",
+    "target_column": "OT",
+    "frequency": "15min",
+    "notes": "Informer/Autoformer/PatchTST standard ETT minute benchmark."
+  },
+  "ETTm2": {
+    "family": "ETDataset",
+    "source_repo": "https://github.com/zhouhaoyi/ETDataset",
+    "paper_repo": "https://github.com/zhouhaoyi/Informer2020",
+    "url": "https://raw.githubusercontent.com/zhouhaoyi/ETDataset/main/ETT-small/ETTm2.csv",
+    "raw_path": "ETTm2.csv",
+    "format": "csv_with_date",
+    "date_column": "date",
+    "target_column": "OT",
+    "frequency": "15min",
+    "notes": "Informer/Autoformer/PatchTST standard ETT minute benchmark."
+  },
+  "exchange_rate": {
+    "family": "LSTNet multivariate time-series",
+    "source_repo": "https://github.com/laiguokun/multivariate-time-series-data",
+    "paper_repo": "https://github.com/laiguokun/multivariate-time-series-data",
+    "url": "https://raw.githubusercontent.com/laiguokun/multivariate-time-series-data/master/exchange_rate/exchange_rate.txt.gz",
+    "raw_path": "exchange_rate.txt",
+    "format": "plain_numeric_csv",
+    "target_column": -1,
+    "frequency": "d",
+    "notes": "Daily exchange rates of eight countries from 1990 to 2016."
+  },
+  "electricity": {
+    "family": "LSTNet multivariate time-series",
+    "source_repo": "https://github.com/laiguokun/multivariate-time-series-data",
+    "paper_repo": "https://github.com/laiguokun/multivariate-time-series-data",
+    "url": "https://raw.githubusercontent.com/laiguokun/multivariate-time-series-data/master/electricity/electricity.txt.gz",
+    "raw_path": "electricity.txt",
+    "format": "plain_numeric_csv",
+    "target_column": -1,
+    "frequency": "h",
+    "notes": "Hourly electricity consumption benchmark, retained for later expansion."
+  },
+  "traffic": {
+    "family": "LSTNet multivariate time-series",
+    "source_repo": "https://github.com/laiguokun/multivariate-time-series-data",
+    "paper_repo": "https://github.com/laiguokun/multivariate-time-series-data",
+    "url": "https://raw.githubusercontent.com/laiguokun/multivariate-time-series-data/master/traffic/traffic.txt.gz",
+    "raw_path": "traffic.txt",
+    "format": "plain_numeric_csv",
+    "target_column": -1,
+    "frequency": "h",
+    "notes": "Traffic occupancy benchmark, retained for later expansion."
+  },
+  "solar": {
+    "family": "LSTNet multivariate time-series",
+    "source_repo": "https://github.com/laiguokun/multivariate-time-series-data",
+    "paper_repo": "https://github.com/laiguokun/multivariate-time-series-data",
+    "url": "https://raw.githubusercontent.com/laiguokun/multivariate-time-series-data/master/solar-energy/solar_AL.txt.gz",
+    "raw_path": "solar_AL.txt",
+    "format": "plain_numeric_csv",
+    "target_column": -1,
+    "frequency": "10min",
+    "notes": "Solar power production benchmark, retained for later expansion."
+  }
+}
+

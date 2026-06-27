@@ -85,7 +85,8 @@ def test_main_random300_protocol_is_frozen_and_excludes_pred0() -> None:
         "E_negative_control": 9,
         "F_gaussian_noise": 3,
     }
-    assert {item.dimension for item in protocol.scenarios} == {10, 50, 100}
+    assert {item.dimension for item in protocol.scenarios} == {10, 20, 50}
+    assert [item.dimension for item in protocol.scenarios] == [10] * 19 + [20] * 19 + [50] * 19
 
 
 def test_main_framework_smoke_covers_every_base_case_at_dim10() -> None:

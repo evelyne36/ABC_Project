@@ -1,0 +1,18 @@
+[2026-06-15 22:55:11] start task_id=regression__diamonds.csv__current_metagb__out1
+[2026-06-15 22:55:12] config task_type=regression dataset=diamonds.csv model=current_metagb outer_fold=1/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=53940 features=26 classes=0
+[2026-06-15 22:55:12] split train_rows=43152 test_rows=10788 inner_splits=4
+[2026-06-15 23:01:18] candidate 1/600 rmse=568.948 status=ok
+[2026-06-16 13:02:45] candidate 50/600 rmse=649.385 status=ok
+[2026-06-17 01:43:03] candidate 100/600 rmse=646.496 status=ok
+[2026-06-17 18:39:05] candidate 150/600 rmse=1405.76 status=ok
+[2026-06-18 07:16:43] candidate 200/600 rmse=815.32 status=ok
+[2026-06-18 20:25:45] candidate 250/600 rmse=581.713 status=ok
+[2026-06-19 11:03:21] candidate 300/600 rmse=593.998 status=ok
+[2026-06-19 22:23:08] candidate 350/600 rmse=717.12 status=ok
+[2026-06-20 12:10:26] candidate 400/600 rmse=591.171 status=ok
+[2026-06-21 04:23:54] candidate 450/600 rmse=2190.93 status=ok
+[2026-06-21 14:22:48] candidate 500/600 rmse=965.748 status=ok
+[2026-06-22 04:35:36] candidate 550/600 rmse=581.791 status=ok
+[2026-06-22 17:16:20] candidate 600/600 rmse=617.275 status=ok
+[2026-06-22 17:16:20] selected candidate_index=396 candidate_id=metagb_pf02_sa2_014 val_rmse=551.741 val_std=13.1158
+[2026-06-22 17:22:55] finish best=396 test_rmse=509.468 final_train_sec=393.609 final_predict_sec=1.14107 elapsed_sec=584863 status=ok

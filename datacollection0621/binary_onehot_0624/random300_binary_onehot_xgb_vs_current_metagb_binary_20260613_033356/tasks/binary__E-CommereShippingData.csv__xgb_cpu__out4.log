@@ -1,0 +1,12 @@
+[2026-06-13 23:58:49] start task_id=binary__E-CommereShippingData.csv__xgb_cpu__out4
+[2026-06-13 23:58:49] config task_type=binary dataset=E-CommereShippingData.csv model=xgb_cpu outer_fold=4/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=10999 features=19 classes=2
+[2026-06-13 23:58:49] split train_rows=8799 test_rows=2200 inner_splits=4
+[2026-06-13 23:58:54] candidate 1/300 auc=0.73626 status=ok
+[2026-06-14 00:02:58] candidate 50/300 auc=0.737373 status=ok
+[2026-06-14 00:06:44] candidate 100/300 auc=0.739574 status=ok
+[2026-06-14 00:11:07] candidate 150/300 auc=0.739406 status=ok
+[2026-06-14 00:15:00] candidate 200/300 auc=0.739483 status=ok
+[2026-06-14 00:18:50] candidate 250/300 auc=0.736977 status=ok
+[2026-06-14 00:22:50] candidate 300/300 auc=0.736385 status=ok
+[2026-06-14 00:22:50] selected candidate_index=36 candidate_id=xgb_0036 val_auc=0.742266 val_std=0.00785207
+[2026-06-14 00:22:51] finish best=36 test_auc=0.736815 final_train_sec=0.628729 final_predict_sec=0.0208504 elapsed_sec=1441.84 status=ok
