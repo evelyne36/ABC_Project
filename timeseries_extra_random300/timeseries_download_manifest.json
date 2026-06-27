@@ -1,0 +1,142 @@
+[
+  {
+    "dataset": "ETTh1",
+    "status": "existing",
+    "file": "timeseries_extra_random300/data/raw/ETTh1.csv",
+    "format": "csv_with_date",
+    "rows_or_timesteps": 17420,
+    "bytes": 2589657
+  },
+  {
+    "dataset": "ETTh2",
+    "status": "downloaded",
+    "file": "timeseries_extra_random300/data/raw/ETTh2.csv",
+    "format": "csv_with_date",
+    "rows_or_timesteps": 17420,
+    "bytes": 2417960
+  },
+  {
+    "dataset": "ETTm1",
+    "status": "downloaded",
+    "file": "timeseries_extra_random300/data/raw/ETTm1.csv",
+    "format": "csv_with_date",
+    "rows_or_timesteps": 69680,
+    "bytes": 10360719
+  },
+  {
+    "dataset": "ETTm2",
+    "status": "downloaded",
+    "file": "timeseries_extra_random300/data/raw/ETTm2.csv",
+    "format": "csv_with_date",
+    "rows_or_timesteps": 69680,
+    "bytes": 9677236
+  },
+  {
+    "dataset": "exchange_rate",
+    "status": "existing",
+    "file": "timeseries_extra_random300/data/raw/exchange_rate.txt",
+    "format": "plain_numeric_csv",
+    "rows_or_timesteps": 7588,
+    "bytes": 546336
+  },
+  {
+    "dataset": "electricity",
+    "status": "downloaded",
+    "file": "timeseries_extra_random300/data/raw/electricity.txt",
+    "format": "plain_numeric_csv",
+    "rows_or_timesteps": 26304,
+    "bytes": 95028199
+  },
+  {
+    "dataset": "traffic",
+    "status": "downloaded",
+    "file": "timeseries_extra_random300/data/raw/traffic.txt",
+    "format": "plain_numeric_csv",
+    "rows_or_timesteps": 17544,
+    "bytes": 136106352
+  },
+  {
+    "dataset": "solar",
+    "status": "downloaded",
+    "file": "timeseries_extra_random300/data/raw/solar_AL.txt",
+    "format": "plain_numeric_csv",
+    "rows_or_timesteps": 52560,
+    "bytes": 180018000
+  },
+  {
+    "dataset": "Weather",
+    "status": "downloaded",
+    "file": "timeseries_extra_random300/data/raw/weather.csv",
+    "format": "csv_with_date",
+    "rows_or_timesteps": 52696,
+    "channels": 21,
+    "bytes": 7235425,
+    "source": "https://huggingface.co/datasets/thuml/Time-Series-Library/resolve/main/weather/weather.csv"
+  },
+  {
+    "dataset": "ILI",
+    "status": "downloaded",
+    "file": "timeseries_extra_random300/data/raw/national_illness.csv",
+    "format": "csv_with_date",
+    "rows_or_timesteps": 966,
+    "channels": 7,
+    "bytes": 67620,
+    "source": "https://huggingface.co/datasets/thuml/Time-Series-Library/resolve/main/illness/national_illness.csv"
+  },
+  {
+    "dataset": "PEMS03",
+    "status": "downloaded",
+    "file": "timeseries_extra_random300/data/raw/PEMS03.npz",
+    "format": "npz",
+    "arrays": {
+      "data": [
+        26208,
+        358,
+        1
+      ]
+    },
+    "bytes": 15800415
+  },
+  {
+    "dataset": "PEMS04",
+    "status": "downloaded",
+    "file": "timeseries_extra_random300/data/raw/PEMS04.npz",
+    "format": "npz",
+    "arrays": {
+      "data": [
+        16992,
+        307,
+        3
+      ]
+    },
+    "bytes": 32956284
+  },
+  {
+    "dataset": "PEMS07",
+    "status": "downloaded",
+    "file": "timeseries_extra_random300/data/raw/PEMS07.npz",
+    "format": "npz",
+    "arrays": {
+      "data": [
+        28224,
+        883,
+        1
+      ]
+    },
+    "bytes": 43705518
+  },
+  {
+    "dataset": "PEMS08",
+    "status": "downloaded",
+    "file": "timeseries_extra_random300/data/raw/PEMS08.npz",
+    "format": "npz",
+    "arrays": {
+      "data": [
+        17856,
+        170,
+        3
+      ]
+    },
+    "bytes": 18525419
+  }
+]

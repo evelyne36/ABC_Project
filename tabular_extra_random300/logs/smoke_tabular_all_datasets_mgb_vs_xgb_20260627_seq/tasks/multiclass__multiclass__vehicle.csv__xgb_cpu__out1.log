@@ -1,0 +1,7 @@
+[2026-06-27 22:43:34] start task_id=multiclass__multiclass__vehicle.csv__xgb_cpu__out1
+[2026-06-27 22:43:34] config task_type=multiclass dataset=multiclass__vehicle.csv model=xgb_cpu outer_fold=1/2 inner_folds=2 candidates=30 objective=multi:softprob primary_metric=logloss direction=minimize rows=240 original_rows=846 max_rows_per_dataset=240 features=18 classes=4
+[2026-06-27 22:43:34] split train_rows=120 test_rows=120 inner_splits=2
+[2026-06-27 22:43:34] candidate 1/30 logloss=0.897487 status=ok
+[2026-06-27 22:43:38] candidate 30/30 logloss=0.944632 status=ok
+[2026-06-27 22:43:38] selected candidate_index=17 candidate_id=xgb_0017 val_logloss=0.835209 val_std=0.01152
+[2026-06-27 22:43:38] finish best=17 test_logloss=0.667361 final_train_sec=0.0486582 final_predict_sec=0.000848875 elapsed_sec=3.31867 status=ok

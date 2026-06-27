@@ -1,0 +1,7 @@
+[2026-06-28 01:19:00] start task_id=regression__regression__energy_efficiency.csv__current_metagb__out1
+[2026-06-28 01:19:00] config task_type=regression dataset=regression__energy_efficiency.csv model=current_metagb outer_fold=1/2 inner_folds=2 candidates=30 objective=reg:squarederror primary_metric=rmse direction=minimize rows=160 original_rows=768 max_rows_per_dataset=160 features=8 classes=0
+[2026-06-28 01:19:00] split train_rows=80 test_rows=80 inner_splits=2
+[2026-06-28 01:19:00] candidate 1/30 rmse=19.2628 status=ok
+[2026-06-28 01:19:00] candidate 30/30 rmse=20.6413 status=ok
+[2026-06-28 01:19:00] selected candidate_index=10 candidate_id=metagb_pf04_sa0_001 val_rmse=8.7023 val_std=0.470751
+[2026-06-28 01:19:00] finish best=10 test_rmse=9.68084 final_train_sec=0.00124946 final_predict_sec=0.000171541 elapsed_sec=0.0742526 status=ok

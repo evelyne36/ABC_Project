@@ -1,0 +1,7 @@
+[2026-06-27 23:06:32] start task_id=binary__binary__phoneme.csv__xgb_cpu__out1
+[2026-06-27 23:06:32] config task_type=binary dataset=binary__phoneme.csv model=xgb_cpu outer_fold=1/2 inner_folds=2 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=240 original_rows=5404 max_rows_per_dataset=240 features=5 classes=2
+[2026-06-27 23:06:32] split train_rows=120 test_rows=120 inner_splits=2
+[2026-06-27 23:06:32] candidate 1/30 auc=0.784439 status=ok
+[2026-06-27 23:06:32] candidate 30/30 auc=0.74414 status=ok
+[2026-06-27 23:06:32] selected candidate_index=7 candidate_id=xgb_0007 val_auc=0.835396 val_std=0.00933752
+[2026-06-27 23:06:32] finish best=7 test_auc=0.825714 final_train_sec=0.000961458 final_predict_sec=0.000180333 elapsed_sec=0.133123 status=ok

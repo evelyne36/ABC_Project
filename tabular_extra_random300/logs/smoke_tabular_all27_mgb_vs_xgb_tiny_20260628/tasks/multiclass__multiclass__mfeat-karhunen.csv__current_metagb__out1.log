@@ -1,0 +1,7 @@
+[2026-06-28 01:19:07] start task_id=multiclass__multiclass__mfeat-karhunen.csv__current_metagb__out1
+[2026-06-28 01:19:07] config task_type=multiclass dataset=multiclass__mfeat-karhunen.csv model=current_metagb outer_fold=1/2 inner_folds=2 candidates=30 objective=multi:softprob primary_metric=logloss direction=minimize rows=160 original_rows=2000 max_rows_per_dataset=160 features=64 classes=10
+[2026-06-28 01:19:07] split train_rows=80 test_rows=80 inner_splits=2
+[2026-06-28 01:19:07] candidate 1/30 logloss=2.21424 status=ok
+[2026-06-28 01:19:16] candidate 30/30 logloss=2.16981 status=ok
+[2026-06-28 01:19:16] selected candidate_index=19 candidate_id=metagb_pf07_sa0_001 val_logloss=1.75117 val_std=0.0806832
+[2026-06-28 01:19:17] finish best=19 test_logloss=1.62813 final_train_sec=0.3528 final_predict_sec=0.000447041 elapsed_sec=10.1902 status=ok

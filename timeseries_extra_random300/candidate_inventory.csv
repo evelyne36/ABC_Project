@@ -1,15 +1,15 @@
 family,dataset,file_status,source_hint,rows_or_timesteps,channels,default_seq_len,window_feature_count,pressure_proxy_approx,priority,inventory_note
-ETDataset,ETTh1,raw_available,timeseries_metagb_adapter/configs/dataset_registry.json,17420,7,24,168,491720320,high,"Informer/Autoformer/PatchTST-style hourly ETT benchmark; existing local raw file"
-ETDataset,ETTh2,registered_not_downloaded,timeseries_metagb_adapter/configs/dataset_registry.json,17420,7,24,168,491720320,high,"same ETT hourly protocol; good follow-up after ETTh1"
-ETDataset,ETTm1,registered_not_downloaded,timeseries_metagb_adapter/configs/dataset_registry.json,69680,7,24,168,1966881280,medium,"15-minute ETT; more rows than ETTh"
-ETDataset,ETTm2,registered_not_downloaded,timeseries_metagb_adapter/configs/dataset_registry.json,69680,7,24,168,1966881280,medium,"15-minute ETT; more rows than ETTh"
-LSTNet,exchange_rate,raw_available,timeseries_metagb_adapter/configs/dataset_registry.json,7588,8,24,192,279724032,high,"daily exchange rates; existing local raw file; low channel count"
-LSTNet,electricity,registered_not_downloaded,timeseries_metagb_adapter/configs/dataset_registry.json,26304,321,24,7704,1562019262464,low,"standard benchmark but very wide after windowing; use only with channel subset or shorter seq_len"
-LSTNet,traffic,registered_not_downloaded,timeseries_metagb_adapter/configs/dataset_registry.json,17544,862,24,20688,7508616470016,low,"standard traffic benchmark but extremely wide after windowing"
-LSTNet,solar,registered_not_downloaded,timeseries_metagb_adapter/configs/dataset_registry.json,52560,137,24,3288,568269158400,low,"solar benchmark; moderately high channel count"
-LSTF_common,Weather,candidate_unverified,Informer/Autoformer/PatchTST common benchmark,52696,21,24,504,13384433664,medium,"common LSTF weather benchmark; feasible only after smoke"
-LSTF_common,ILI,candidate_unverified,Informer/Autoformer/PatchTST common benchmark,966,7,24,168,27264384,medium,"small disease-like benchmark; few rows, use careful splits"
-PEMS,PEMS03,candidate_unverified,traffic forecasting common benchmark,26208,358,12,4296,483607652352,low,"traffic benchmark; only feasible with subset or short seq_len"
-PEMS,PEMS04,candidate_unverified,traffic forecasting common benchmark,16992,307,12,3684,230701687488,low,"traffic benchmark; only feasible with subset or short seq_len"
-PEMS,PEMS07,candidate_unverified,traffic forecasting common benchmark,28224,883,12,10596,3169267490304,low,"traffic benchmark; very wide"
-PEMS,PEMS08,candidate_unverified,traffic forecasting common benchmark,17856,170,12,2040,74290176000,low,"smallest PEMS pressure among listed PEMS candidates"
+LSTF_common,ILI,raw_downloaded,timeseries_extra_random300/data/raw/national_illness.csv,966,7,24,168,27264384,medium,"downloaded from official thuml/Time-Series-Library Hugging Face mirror; 966 rows, 7 numeric channels"
+LSTNet,exchange_rate,raw_available,timeseries_metagb_adapter/configs/dataset_registry.json,7588,8,24,192,279724032,high,daily exchange rates; existing local raw file; low channel count
+ETDataset,ETTh1,raw_available,timeseries_metagb_adapter/configs/dataset_registry.json,17420,7,24,168,491720320,high,Informer/Autoformer/PatchTST-style hourly ETT benchmark; existing local raw file
+ETDataset,ETTh2,raw_downloaded,timeseries_extra_random300/data/raw/ETTh2.csv,17420,7,24,168,491720320,high,same ETT hourly protocol; good follow-up after ETTh1
+ETDataset,ETTm1,raw_downloaded,timeseries_extra_random300/data/raw/ETTm1.csv,69680,7,24,168,1966881280,medium,15-minute ETT; more rows than ETTh
+ETDataset,ETTm2,raw_downloaded,timeseries_extra_random300/data/raw/ETTm2.csv,69680,7,24,168,1966881280,medium,15-minute ETT; more rows than ETTh
+LSTF_common,Weather,raw_downloaded,timeseries_extra_random300/data/raw/weather.csv,52696,21,24,504,13384433664,medium,"downloaded from official thuml/Time-Series-Library Hugging Face mirror; 52696 rows, 21 numeric channels"
+PEMS,PEMS08,raw_downloaded,timeseries_extra_random300/data/raw/PEMS08.npz,17856,170,12,2040,74290176000,low,smallest PEMS pressure among listed PEMS candidates; npz downloaded and validated
+PEMS,PEMS04,raw_downloaded,timeseries_extra_random300/data/raw/PEMS04.npz,16992,307,12,3684,230701687488,low,traffic benchmark; npz downloaded and validated; runner supports npz but use short-window/channel subset first
+PEMS,PEMS03,raw_downloaded,timeseries_extra_random300/data/raw/PEMS03.npz,26208,358,12,4296,483607652352,low,traffic benchmark; npz downloaded and validated; runner supports npz but use short-window/channel subset first
+LSTNet,solar,raw_downloaded,timeseries_extra_random300/data/raw/solar_AL.txt,52560,137,24,3288,568269158400,low,solar benchmark; moderately high channel count
+LSTNet,electricity,raw_downloaded,timeseries_extra_random300/data/raw/electricity.txt,26304,321,24,7704,1562019262464,low,standard benchmark but very wide after windowing; use only with channel subset or shorter seq_len
+PEMS,PEMS07,raw_downloaded,timeseries_extra_random300/data/raw/PEMS07.npz,28224,883,12,10596,3169267490304,low,traffic benchmark; npz downloaded and validated; runner supports npz but use short-window/channel subset first
+LSTNet,traffic,raw_downloaded,timeseries_extra_random300/data/raw/traffic.txt,17544,862,24,20688,7508616470016,low,standard traffic benchmark but extremely wide after windowing

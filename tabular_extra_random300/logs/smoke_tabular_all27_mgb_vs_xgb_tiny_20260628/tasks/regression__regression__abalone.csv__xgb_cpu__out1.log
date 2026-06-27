@@ -1,0 +1,7 @@
+[2026-06-28 01:19:03] start task_id=regression__regression__abalone.csv__xgb_cpu__out1
+[2026-06-28 01:19:03] config task_type=regression dataset=regression__abalone.csv model=xgb_cpu outer_fold=1/2 inner_folds=2 candidates=30 objective=reg:squarederror primary_metric=rmse direction=minimize rows=160 original_rows=4177 max_rows_per_dataset=160 features=8 classes=0
+[2026-06-28 01:19:03] split train_rows=80 test_rows=80 inner_splits=2
+[2026-06-28 01:19:03] candidate 1/30 rmse=3.87017 status=ok
+[2026-06-28 01:19:03] candidate 30/30 rmse=3.91556 status=ok
+[2026-06-28 01:19:03] selected candidate_index=20 candidate_id=xgb_0020 val_rmse=2.95001 val_std=0.299871
+[2026-06-28 01:19:03] finish best=20 test_rmse=3.10996 final_train_sec=0.00114996 final_predict_sec=0.00021925 elapsed_sec=0.0684104 status=ok

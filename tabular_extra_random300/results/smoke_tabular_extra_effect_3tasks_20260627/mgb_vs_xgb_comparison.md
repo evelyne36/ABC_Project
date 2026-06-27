@@ -1,0 +1,9 @@
+# smoke_tabular_extra_effect_3tasks_20260627 comparison
+
+| task_type   | dataset                           | metric   | direction     |   xgb_cpu_test_metric |   current_metagb_test_metric | winner         |   relative_gain_vs_xgb |   xgb_cpu_elapsed_sec |   current_metagb_elapsed_sec | xgb_cpu_selected   | current_metagb_selected   |
+|:------------|:----------------------------------|:---------|:--------------|----------------------:|-----------------------------:|:---------------|-----------------------:|----------------------:|-----------------------------:|:-------------------|:--------------------------|
+| binary      | binary__credit-approval.csv       | auc      | higher_better |              0.931036 |                     0.923713 | xgb_cpu        |             -0.0078654 |               1.47939 |                     132.692  | xgb_0012           | metagb_pf10_sa0_001       |
+| multiclass  | multiclass__vehicle.csv           | logloss  | lower_better  |              0.587305 |                     0.583806 | current_metagb |              0.0059572 |               7.15627 |                     881.01   | xgb_0012           | metagb_pf06_sa1_001       |
+| regression  | regression__energy_efficiency.csv | rmse     | lower_better  |              0.439723 |                     0.455555 | xgb_cpu        |             -0.0360053 |               2.6687  |                      64.8578 | xgb_0008           | metagb_pf03_sa1_001       |
+
+Note: this is a quick smoke using outer_folds=2, inner_folds=2, outer_fold_index=0, max_candidates=30. It is only a feasibility and early signal check, not a final nested-CV conclusion.

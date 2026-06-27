@@ -1,0 +1,104 @@
+{
+  "explicitly_set": {
+    "common": [
+      "learning_rate",
+      "n_estimators",
+      "max_depth",
+      "subsample",
+      "colsample_bytree",
+      "min_child_weight",
+      "max_bin",
+      "tree_method",
+      "device",
+      "objective",
+      "random_state",
+      "n_jobs",
+      "verbosity"
+    ],
+    "xgb_cpu": [
+      "reg_lambda",
+      "min_child_weight",
+      "reg_alpha",
+      "grow_policy",
+      "colsample_bylevel",
+      "colsample_bynode"
+    ],
+    "current_metagb": [
+      "enable_metagb",
+      "metagb_pred_colsample_bytree",
+      "metagb_lambda_l2",
+      "metagb_score_agg",
+      "metagb_hist_subtract",
+      "metagb_min_data_in_leaf",
+      "metagb_cond_pred_share",
+      "metagb_leaf_only_use_bias"
+    ],
+    "classification_extra": [
+      "eval_metric",
+      "num_class for multiclass"
+    ]
+  },
+  "searched_parameters": {
+    "shared": [
+      "colsample_bytree",
+      "lambda_l2",
+      "learning_rate",
+      "max_bin",
+      "max_depth",
+      "n_estimators",
+      "subsample"
+    ],
+    "xgb_cpu": [],
+    "current_metagb": [
+      "pred_feature_fraction",
+      "metagb_score_agg"
+    ]
+  },
+  "kept_as_xgboost_defaults": [
+    "gamma/min_split_loss",
+    "max_delta_step",
+    "max_leaves",
+    "sampling_method",
+    "scale_pos_weight",
+    "base_score",
+    "max_cat_to_onehot",
+    "max_cat_threshold"
+  ],
+  "kept_as_metagb_defaults_or_fixed": [
+    "metagb_split_sample",
+    "metagb_min_gain_to_split"
+  ],
+  "fixed_values": {
+    "tree_method": "hist",
+    "device": "cpu",
+    "regression_objective": "reg:squarederror",
+    "binary_objective": "binary:logistic",
+    "multiclass_objective": "multi:softprob",
+    "categorical_handling": "drop",
+    "metagb_hist_subtract": false,
+    "xgb_min_child_weight": 1.0,
+    "xgb_reg_alpha": 0.0,
+    "xgb_grow_policy": "depthwise",
+    "xgb_colsample_bylevel": 1.0,
+    "xgb_colsample_bynode": 1.0,
+    "metagb_min_data_in_leaf": 1,
+    "metagb_cond_pred_share": false,
+    "metagb_leaf_only_use_bias": false
+  },
+  "parameter_mapping": {
+    "shared_lambda_l2": {
+      "xgb_cpu": "reg_lambda",
+      "current_metagb": "metagb_lambda_l2"
+    },
+    "shared_colsample_bytree": "condition-feature sampling once per tree",
+    "metagb_joint_search": "10 pred_feature_fraction values x 3 score_agg values"
+  },
+  "discussion_notes": [
+    "scale_pos_weight is not searched for binary classification; consider it if class imbalance becomes a paper concern.",
+    "reg_alpha, grow_policy, colsample_bylevel, and colsample_bynode are fixed for XGBoost to match the agreed comparison contract.",
+    "metagb_min_data_in_leaf=1 is a permissive fixed row-count constraint; it is not claimed to be semantically equivalent to classification min_child_weight.",
+    "MetaGB internal defaults are recorded but not expanded into the random search budget in this run.",
+    "score_agg values 0, 1, and 2 are searched jointly and evenly with pred_feature_fraction."
+  ],
+  "warnings": []
+}

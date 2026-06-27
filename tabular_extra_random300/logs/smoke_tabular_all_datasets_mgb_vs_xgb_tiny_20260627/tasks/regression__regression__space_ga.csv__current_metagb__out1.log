@@ -1,0 +1,7 @@
+[2026-06-27 23:06:29] start task_id=regression__regression__space_ga.csv__current_metagb__out1
+[2026-06-27 23:06:29] config task_type=regression dataset=regression__space_ga.csv model=current_metagb outer_fold=1/2 inner_folds=2 candidates=30 objective=reg:squarederror primary_metric=rmse direction=minimize rows=240 original_rows=3107 max_rows_per_dataset=240 features=6 classes=0
+[2026-06-27 23:06:29] split train_rows=120 test_rows=120 inner_splits=2
+[2026-06-27 23:06:29] candidate 1/30 rmse=0.494891 status=ok
+[2026-06-27 23:06:29] candidate 30/30 rmse=0.497897 status=ok
+[2026-06-27 23:06:29] selected candidate_index=25 candidate_id=metagb_pf09_sa0_001 val_rmse=0.233918 val_std=0.0253904
+[2026-06-27 23:06:29] finish best=25 test_rmse=0.24307 final_train_sec=0.00161063 final_predict_sec=0.000224041 elapsed_sec=0.0733922 status=ok

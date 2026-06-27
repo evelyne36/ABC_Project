@@ -1,0 +1,9 @@
+{
+  "run_id": "dryrun_source_binary_onehot_20260628",
+  "total": 1,
+  "completed": 0,
+  "failed": 0,
+  "tasks": {
+    "binary__jm1.csv__xgb_cpu__out1": "pending"
+  }
+}

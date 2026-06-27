@@ -138,7 +138,7 @@ def resolve_run_id(args: argparse.Namespace) -> str:
 def build_command(args: argparse.Namespace, run_id: str) -> List[str]:
     cmd = [
         sys.executable,
-        str(ROOT / "tabarena_30" / "scripts" / "exp1_tabarena_30_all.py"),
+        str(ROOT / "tabarena_30" / "scripts" / "exp1_tabarena30_all.py"),
         "--mode",
         args.mode,
         "--task-types",

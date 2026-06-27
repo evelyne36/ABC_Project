@@ -1,0 +1,11 @@
+bank-marketing.csv
+online_shoppers_intention.csv
+jm1.csv
+heloc.csv
+credit_card_clients_default.csv
+APSFailure.csv
+customer_satisfaction_in_airline.csv
+coil2000_insurance_policies.csv
+NATICUSdroid.csv
+taiwanese_bankruptcy_prediction.csv
+Bioresponse.csv
