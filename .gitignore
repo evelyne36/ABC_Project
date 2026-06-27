@@ -37,9 +37,7 @@ random600/nohup_logs/
 random600/results/
 
 #generated data for time series experiments
-timeseries_extra_random300/data/raw/solar_AL.txt
-timeseries_extra_random300/data/raw/traffic.txt 
-timeseries_extra_random300/data/raw/electricity.txt
+timeseries_extra_random300/data/
 
 # Temporary files
 *.tmp
