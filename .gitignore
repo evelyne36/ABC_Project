@@ -38,6 +38,7 @@ random600/results/
 
 #generated data for time series experiments
 timeseries_extra_random300/data/
+timeseries_extra_random300beifen/data
 
 # Temporary files
 *.tmp
