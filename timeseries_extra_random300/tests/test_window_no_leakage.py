@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import numpy as np
+from sklearn.preprocessing import StandardScaler
 
 from timeseries_extra_random300.utils.data import DatasetSpec, RawTimeSeries, make_fold_arrays
 
@@ -49,3 +50,44 @@ def test_window_targets_follow_input_window() -> None:
     assert fold.eval_target_start == 4
     assert fold.X_train.shape[1] == 6
 
+
+def test_sequence_target_uses_future_horizon_for_single_target() -> None:
+    series = make_series()
+    fold = make_fold_arrays(
+        series,
+        [0],
+        [1],
+        seq_len=3,
+        pred_len=2,
+        include_time_features=False,
+        target_mode="sequence",
+        output_scope="target",
+    )
+    scaler = StandardScaler().fit(series.values[:5])
+    scaled = scaler.transform(series.values)
+
+    assert fold.y_train.shape == (1, 2)
+    assert fold.train_target_start == 3
+    assert fold.train_target_end == 5
+    np.testing.assert_allclose(fold.y_train[0], scaled[3:5, 1])
+
+
+def test_sequence_target_supports_multivariate_features_m_output() -> None:
+    series = make_series()
+    fold = make_fold_arrays(
+        series,
+        [0],
+        [1],
+        seq_len=3,
+        pred_len=2,
+        include_time_features=False,
+        target_mode="sequence",
+        output_scope="all",
+    )
+    scaler = StandardScaler().fit(series.values[:5])
+    scaled = scaler.transform(series.values)
+
+    assert fold.y_train.shape == (1, 4)
+    assert fold.train_target_start == 3
+    assert fold.train_target_end == 5
+    np.testing.assert_allclose(fold.y_train[0], scaled[3:5, :].reshape(-1))

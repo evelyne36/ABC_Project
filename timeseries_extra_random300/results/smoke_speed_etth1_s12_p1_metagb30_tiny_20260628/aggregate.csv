@@ -1,0 +1,2 @@
+dataset,model,test_rmse_mean,test_rmse_std,test_mae_mean,total_train_time_sec_mean,total_predict_time_sec_mean,folds
+ETTh1,current_metagb,0.7367770498595885,,0.5842305421829224,3.56979616638273,0.0007383762858808,1

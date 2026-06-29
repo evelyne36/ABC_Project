@@ -1,0 +1,20 @@
+{
+  "run_id": "smoke_timeseries_linux_check_20260627",
+  "mode": "smoke",
+  "datasets": [
+    "ILI"
+  ],
+  "models": [
+    "xgb_cpu",
+    "current_metagb"
+  ],
+  "seq_len": 12,
+  "pred_len": 1,
+  "max_raw_rows": 180,
+  "outer_folds": 2,
+  "inner_folds": 2,
+  "max_candidates": 30,
+  "results_dir": "/Users/ancd/VSCodeProject/check_codereview0623-adapter/timeseries_extra_random300/results/smoke_timeseries_linux_check_20260627",
+  "summary_rows": 2,
+  "candidate_rows": 60
+}

@@ -10,6 +10,12 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
 
+DATASET_ALIASES = {
+    "solar_AL": "solar",
+    "solar_AL.txt": "solar",
+}
+
+
 @dataclass(frozen=True)
 class DatasetSpec:
     name: str
@@ -62,6 +68,16 @@ def load_registry(path: Path) -> dict[str, DatasetSpec]:
     with path.open("r", encoding="utf-8") as handle:
         payload: Dict[str, Dict[str, Any]] = json.load(handle)
     return {name: DatasetSpec(name=name, **item) for name, item in payload.items()}
+
+
+def resolve_dataset_name(registry: dict[str, DatasetSpec], name: str) -> str:
+    if name in registry:
+        return name
+    alias = DATASET_ALIASES.get(name)
+    if alias in registry:
+        return alias
+    available = sorted(set(registry) | set(DATASET_ALIASES))
+    raise KeyError(f"Unknown dataset {name}. Available: {', '.join(available)}")
 
 
 def raw_path_for(root: Path, spec: DatasetSpec) -> Path:
@@ -143,6 +159,22 @@ def target_positions(row_indices: Sequence[int], seq_len: int, pred_len: int) ->
     return rows + seq_len + pred_len - 1
 
 
+def target_bounds(
+    row_indices: Sequence[int],
+    seq_len: int,
+    pred_len: int,
+    target_mode: str = "direct",
+) -> tuple[np.ndarray, np.ndarray]:
+    rows = np.asarray(row_indices, dtype=np.int64)
+    if target_mode == "direct":
+        positions = target_positions(rows, seq_len, pred_len)
+        return positions, positions + 1
+    if target_mode == "sequence":
+        starts = rows + seq_len
+        return starts, starts + pred_len
+    raise ValueError(f"Unsupported target_mode: {target_mode}")
+
+
 def _calendar_features(timestamps: list[str], positions: np.ndarray) -> np.ndarray:
     sample = [str(timestamps[int(pos)]) for pos in positions[: min(len(positions), 8)]]
     if sample and all(item.isdigit() for item in sample):
@@ -170,16 +202,32 @@ def _make_xy(
     seq_len: int,
     pred_len: int,
     include_time_features: bool,
+    target_mode: str,
+    output_scope: str,
 ) -> tuple[np.ndarray, np.ndarray]:
     rows = np.asarray(row_indices, dtype=np.int64)
     X = np.empty((len(rows), seq_len * scaled_values.shape[1]), dtype=np.float32)
-    y = np.empty(len(rows), dtype=np.float32)
+    if output_scope == "target":
+        output_indices = np.asarray([target_index], dtype=np.int64)
+    elif output_scope == "all":
+        output_indices = np.arange(scaled_values.shape[1], dtype=np.int64)
+    else:
+        raise ValueError(f"Unsupported output_scope: {output_scope}")
+    if target_mode == "direct":
+        y = np.empty(len(rows), dtype=np.float32)
+    elif target_mode == "sequence":
+        y = np.empty((len(rows), pred_len * len(output_indices)), dtype=np.float32)
+    else:
+        raise ValueError(f"Unsupported target_mode: {target_mode}")
     for out_idx, row in enumerate(rows):
         start = int(row)
         stop = start + seq_len
         target_pos = stop + pred_len - 1
         X[out_idx, :] = scaled_values[start:stop].reshape(-1)
-        y[out_idx] = scaled_values[target_pos, target_index]
+        if target_mode == "direct":
+            y[out_idx] = scaled_values[target_pos, target_index]
+        else:
+            y[out_idx, :] = scaled_values[stop : stop + pred_len, output_indices].reshape(-1)
     if include_time_features:
         cal = _calendar_features(timestamps, target_positions(rows, seq_len, pred_len))
         if cal.shape[1] > 0:
@@ -195,15 +243,17 @@ def make_fold_arrays(
     seq_len: int,
     pred_len: int,
     include_time_features: bool = True,
+    target_mode: str = "direct",
+    output_scope: str = "target",
 ) -> FoldArrays:
     train_rows_arr = np.asarray(train_rows, dtype=np.int64)
     eval_rows_arr = np.asarray(eval_rows, dtype=np.int64)
     if len(train_rows_arr) == 0 or len(eval_rows_arr) == 0:
         raise ValueError("train_rows and eval_rows must be non-empty")
-    train_target = target_positions(train_rows_arr, seq_len, pred_len)
-    eval_target = target_positions(eval_rows_arr, seq_len, pred_len)
+    train_target_start, train_target_end = target_bounds(train_rows_arr, seq_len, pred_len, target_mode)
+    eval_target_start, eval_target_end = target_bounds(eval_rows_arr, seq_len, pred_len, target_mode)
     scaler_fit_start = 0
-    scaler_fit_end = int(train_target.max()) + 1
+    scaler_fit_end = int(train_target_end.max())
     scaler = StandardScaler()
     scaler.fit(series.values[scaler_fit_start:scaler_fit_end])
     scaled_values = scaler.transform(series.values).astype(np.float32, copy=False)
@@ -215,6 +265,8 @@ def make_fold_arrays(
         seq_len,
         pred_len,
         include_time_features,
+        target_mode,
+        output_scope,
     )
     X_eval, y_eval = _make_xy(
         scaled_values,
@@ -224,6 +276,8 @@ def make_fold_arrays(
         seq_len,
         pred_len,
         include_time_features,
+        target_mode,
+        output_scope,
     )
     return FoldArrays(
         X_train=X_train,
@@ -232,8 +286,8 @@ def make_fold_arrays(
         y_eval=y_eval,
         scaler_fit_start=scaler_fit_start,
         scaler_fit_end=scaler_fit_end,
-        train_target_start=int(train_target.min()),
-        train_target_end=int(train_target.max()) + 1,
-        eval_target_start=int(eval_target.min()),
-        eval_target_end=int(eval_target.max()) + 1,
+        train_target_start=int(train_target_start.min()),
+        train_target_end=int(train_target_end.max()),
+        eval_target_start=int(eval_target_start.min()),
+        eval_target_end=int(eval_target_end.max()),
     )

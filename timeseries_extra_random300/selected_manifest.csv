@@ -5,5 +5,5 @@ ILI,reserve_candidate,raw_downloaded,24,7,168,27264384,"small disease benchmark;
 ETTh2,selected_second_batch,raw_downloaded,24,7,168,491720320,"same family as ETTh1; good replication candidate","run after ETTh1/exchange smoke"
 Weather,selected_second_batch,raw_downloaded,24,21,504,13384433664,"standard LSTF benchmark; downloaded from official TSLib Hugging Face mirror","use smoke first and consider shorter seq_len"
 ETTm1,reserve_candidate,raw_downloaded,24,7,168,1966881280,"standard ETT minute data but more rows","run only if hourly ETT result is promising"
-solar,reserve_candidate,raw_downloaded,24,137,3288,568269158400,"registered but channel count makes full window expensive","consider channel subset or shorter seq_len"
+solar,reserve_candidate,raw_downloaded,24,137,3288,568269158400,"registered as solar; raw filename solar_AL.txt","alias solar_AL resolves to solar; consider channel subset or shorter seq_len"
 PEMS08,reserve_candidate,raw_downloaded,12,170,2040,74290176000,"least expensive PEMS candidate listed, still traffic-wide; npz validated","subset or short smoke only; runner supports npz but default full excludes wide PEMS"

@@ -1,0 +1,48 @@
+{
+  "run_id": "smoke_ts14_fixed_622_xgb_mgb10agg0_20260628",
+  "mode": "smoke",
+  "datasets": [
+    "ETTh1",
+    "ETTh2",
+    "ETTm1",
+    "ETTm2",
+    "exchange_rate",
+    "electricity",
+    "traffic",
+    "solar",
+    "Weather",
+    "ILI",
+    "PEMS03",
+    "PEMS04",
+    "PEMS07",
+    "PEMS08"
+  ],
+  "models": [
+    "xgb_cpu",
+    "current_metagb"
+  ],
+  "split_protocol": "fixed",
+  "seq_len": 6,
+  "seq_lens": [
+    6
+  ],
+  "pred_len": 1,
+  "pred_lens": [
+    1
+  ],
+  "seed": 0,
+  "seeds": [
+    0
+  ],
+  "max_raw_rows": 120,
+  "max_features": 16,
+  "outer_folds": 5,
+  "inner_folds": 4,
+  "max_candidates": 10,
+  "task_workers": 2,
+  "effective_task_workers": 2,
+  "task_executor": "thread",
+  "results_dir": "/Users/ancd/VSCodeProject/check_codereview0623-adapter/timeseries_extra_random300/results/smoke_ts14_fixed_622_xgb_mgb10agg0_20260628",
+  "summary_rows": 28,
+  "candidate_rows": 280
+}

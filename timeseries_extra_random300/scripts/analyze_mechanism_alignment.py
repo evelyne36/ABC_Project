@@ -20,6 +20,7 @@ from timeseries_extra_random300.utils.data import (  # noqa: E402
     load_raw_series,
     load_registry,
     make_fold_arrays,
+    resolve_dataset_name,
     supervised_row_count,
 )
 from timeseries_extra_random300.utils.splits import expanding_window_splits  # noqa: E402
@@ -228,6 +229,7 @@ def build_rows(args: argparse.Namespace) -> pd.DataFrame:
     registry = load_registry(Path(args.registry))
     rows: list[dict[str, Any]] = []
     for dataset_name in args.datasets:
+        dataset_name = resolve_dataset_name(registry, dataset_name)
         spec = registry[dataset_name]
         series = load_raw_series(ADAPTER_ROOT, spec)
         if args.max_raw_rows and series.n_rows > args.max_raw_rows:
@@ -348,4 +350,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -166,4 +166,4 @@ tail -f <log-path>
 cat tabular_extra_random300/logs/<run_id>/task_status.json
 ```
 
-TS 当前 runner 是顺序执行，`--task-workers` 仅用于接口一致；tabular runner 支持任务级并行。若 TS full 太慢，下一步再移植 tabular 的任务级并行。
+TS 与 tabular runner 都支持任务级并行。默认脚本使用 `TASK_WORKERS=15`、`N_JOBS=1`：外层任务并行，单个 XGBoost 任务内部单线程，避免 CPU 过度订阅。TS 的任务粒度为 `dataset × outer_fold × model`，tabular 的任务粒度为 `task_type × dataset × outer_fold × model`。

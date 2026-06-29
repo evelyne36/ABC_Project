@@ -15,8 +15,11 @@ fi
 DATASETS="${DATASETS:-ILI exchange_rate ETTh1 ETTh2 solar ETTm1 ETTm2 Weather PEMS08 PEMS04 PEMS03 electricity PEMS07 traffic}"
 TASK_WORKERS="${TASK_WORKERS:-15}"
 N_JOBS="${N_JOBS:-1}"
-SEQ_LEN="${SEQ_LEN:-24}"
-PRED_LEN="${PRED_LEN:-1}"
+SEEDS="${SEEDS:-42}"
+SEQ_LENS="${SEQ_LENS:-48}"
+PRED_LENS="${PRED_LENS:-96 192 336 720}"
+TARGET_MODE="${TARGET_MODE:-sequence}"
+OUTPUT_SCOPE="${OUTPUT_SCOPE:-all}"
 MAX_CANDIDATES="${MAX_CANDIDATES:-300}"
 MAX_RAW_ROWS="${MAX_RAW_ROWS:-0}"
 MAX_FEATURES="${MAX_FEATURES:-0}"
@@ -27,13 +30,15 @@ mkdir -p timeseries_extra_random300/nohup_logs
 
 nohup "${PYTHON_BIN}" timeseries_extra_random300/scripts/run_timeseries_benchmark.py \
   --mode full \
+  --split-protocol fixed \
+  --target-mode "${TARGET_MODE}" \
+  --output-scope "${OUTPUT_SCOPE}" \
   --datasets ${DATASETS} \
   --models xgb_cpu current_metagb \
-  --outer-folds 5 \
-  --inner-folds 4 \
   --max-candidates "${MAX_CANDIDATES}" \
-  --seq-len "${SEQ_LEN}" \
-  --pred-len "${PRED_LEN}" \
+  --seeds ${SEEDS} \
+  --seq-lens ${SEQ_LENS} \
+  --pred-lens ${PRED_LENS} \
   --max-raw-rows "${MAX_RAW_ROWS}" \
   --max-features "${MAX_FEATURES}" \
   --task-workers "${TASK_WORKERS}" \

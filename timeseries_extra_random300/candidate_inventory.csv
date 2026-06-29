@@ -9,7 +9,7 @@ LSTF_common,Weather,raw_downloaded,timeseries_extra_random300/data/raw/weather.c
 PEMS,PEMS08,raw_downloaded,timeseries_extra_random300/data/raw/PEMS08.npz,17856,170,12,2040,74290176000,low,smallest PEMS pressure among listed PEMS candidates; npz downloaded and validated
 PEMS,PEMS04,raw_downloaded,timeseries_extra_random300/data/raw/PEMS04.npz,16992,307,12,3684,230701687488,low,traffic benchmark; npz downloaded and validated; runner supports npz but use short-window/channel subset first
 PEMS,PEMS03,raw_downloaded,timeseries_extra_random300/data/raw/PEMS03.npz,26208,358,12,4296,483607652352,low,traffic benchmark; npz downloaded and validated; runner supports npz but use short-window/channel subset first
-LSTNet,solar,raw_downloaded,timeseries_extra_random300/data/raw/solar_AL.txt,52560,137,24,3288,568269158400,low,solar benchmark; moderately high channel count
+LSTNet,solar,raw_downloaded,timeseries_extra_random300/data/raw/solar_AL.txt,52560,137,24,3288,568269158400,low,solar benchmark; raw filename solar_AL.txt; alias solar_AL resolves to solar
 LSTNet,electricity,raw_downloaded,timeseries_extra_random300/data/raw/electricity.txt,26304,321,24,7704,1562019262464,low,standard benchmark but very wide after windowing; use only with channel subset or shorter seq_len
 PEMS,PEMS07,raw_downloaded,timeseries_extra_random300/data/raw/PEMS07.npz,28224,883,12,10596,3169267490304,low,traffic benchmark; npz downloaded and validated; runner supports npz but use short-window/channel subset first
 LSTNet,traffic,raw_downloaded,timeseries_extra_random300/data/raw/traffic.txt,17544,862,24,20688,7508616470016,low,standard traffic benchmark but extremely wide after windowing

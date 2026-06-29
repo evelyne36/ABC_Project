@@ -1,0 +1,15 @@
+dataset,family,file_status,rows_or_timesteps,channels,default_seq_len,window_feature_count,pressure_proxy_approx
+ILI,LSTF_common,raw_downloaded,966,7,24,168,27264384
+exchange_rate,LSTNet,raw_available,7588,8,24,192,279724032
+ETTh1,ETDataset,raw_available,17420,7,24,168,491720320
+ETTh2,ETDataset,raw_downloaded,17420,7,24,168,491720320
+ETTm1,ETDataset,raw_downloaded,69680,7,24,168,1966881280
+ETTm2,ETDataset,raw_downloaded,69680,7,24,168,1966881280
+Weather,LSTF_common,raw_downloaded,52696,21,24,504,13384433664
+PEMS08,PEMS,raw_downloaded,17856,170,12,2040,74290176000
+PEMS04,PEMS,raw_downloaded,16992,307,12,3684,230701687488
+PEMS03,PEMS,raw_downloaded,26208,358,12,4296,483607652352
+solar,LSTNet,raw_downloaded,52560,137,24,3288,568269158400
+electricity,LSTNet,raw_downloaded,26304,321,24,7704,1562019262464
+PEMS07,PEMS,raw_downloaded,28224,883,12,10596,3169267490304
+traffic,LSTNet,raw_downloaded,17544,862,24,20688,7508616470016

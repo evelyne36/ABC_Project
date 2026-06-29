@@ -1,0 +1,23 @@
+{
+  "run_id": "smoke_solar_alias_20260628",
+  "mode": "smoke",
+  "datasets": [
+    "solar"
+  ],
+  "models": [
+    "xgb_cpu"
+  ],
+  "seq_len": 4,
+  "pred_len": 1,
+  "max_raw_rows": 80,
+  "max_features": 4,
+  "outer_folds": 2,
+  "inner_folds": 2,
+  "max_candidates": 1,
+  "task_workers": 1,
+  "effective_task_workers": 1,
+  "task_executor": "sequential",
+  "results_dir": "/Users/ancd/VSCodeProject/check_codereview0623-adapter/timeseries_extra_random300/results/smoke_solar_alias_20260628",
+  "summary_rows": 1,
+  "candidate_rows": 1
+}

@@ -38,7 +38,7 @@ SLOW_NOTES = {
     ("multiclass", "onehot", "anneal.csv"): "USER_SLOW: 50epoch/46h",
     ("multiclass", "onehot", "splice.csv"): "USER_SLOW: 1epoch/6h",
     ("multiclass", "onehot", "hiva_agnostic.csv"): "USER_SLOW: unknown, likely very high",
-    ("multiclass", "onehot", "students_dropout_and_academic_success.csv"): "USER_RUNNING: student ing",
+    ("multiclass", "onehot", "students_dropout_and_academic_success.csv"): "USER_SLOW: 1epoch/2h under 3-core parallel",
 }
 
 

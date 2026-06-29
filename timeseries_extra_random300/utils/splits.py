@@ -19,6 +19,52 @@ class OrderedSplit:
         return asdict(self)
 
 
+@dataclass(frozen=True)
+class FixedChronologicalSplit:
+    train_start: int
+    train_end: int
+    val_start: int
+    val_end: int
+    test_start: int
+    test_end: int
+
+    def to_dict(self) -> dict[str, int]:
+        return asdict(self)
+
+
+def fixed_chronological_split(
+    n_samples: int,
+    *,
+    train_fraction: float = 0.6,
+    val_fraction: float = 0.2,
+) -> Tuple[np.ndarray, np.ndarray, np.ndarray, FixedChronologicalSplit]:
+    if n_samples < 3:
+        raise ValueError(f"Not enough samples for fixed chronological split: {n_samples}")
+    if not 0.0 < train_fraction < 1.0:
+        raise ValueError("train_fraction must be in (0, 1)")
+    if not 0.0 < val_fraction < 1.0:
+        raise ValueError("val_fraction must be in (0, 1)")
+    if train_fraction + val_fraction >= 1.0:
+        raise ValueError("train_fraction + val_fraction must be less than 1")
+
+    train_end = int(n_samples * train_fraction)
+    val_end = train_end + int(n_samples * val_fraction)
+    train_end = max(1, min(train_end, n_samples - 2))
+    val_end = max(train_end + 1, min(val_end, n_samples - 1))
+    split = FixedChronologicalSplit(
+        train_start=0,
+        train_end=train_end,
+        val_start=train_end,
+        val_end=val_end,
+        test_start=val_end,
+        test_end=n_samples,
+    )
+    train_idx = np.arange(split.train_start, split.train_end, dtype=np.int64)
+    val_idx = np.arange(split.val_start, split.val_end, dtype=np.int64)
+    test_idx = np.arange(split.test_start, split.test_end, dtype=np.int64)
+    return train_idx, val_idx, test_idx, split
+
+
 def expanding_window_splits(
     n_samples: int,
     n_splits: int,
@@ -77,4 +123,3 @@ def assert_time_ordered(train_idx: np.ndarray, eval_idx: np.ndarray) -> None:
         raise ValueError("train/eval indices must be non-empty")
     if int(train_idx.max()) >= int(eval_idx.min()):
         raise ValueError("Ordered split violation: train index reaches eval period")
-

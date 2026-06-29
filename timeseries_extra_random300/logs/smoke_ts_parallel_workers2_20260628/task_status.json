@@ -1,0 +1,12 @@
+{
+  "run_id": "smoke_ts_parallel_workers2_20260628",
+  "total": 4,
+  "completed": 0,
+  "failed": 0,
+  "tasks": {
+    "ILI__xgb_cpu__out1": "pending",
+    "ILI__current_metagb__out1": "pending",
+    "exchange_rate__xgb_cpu__out1": "pending",
+    "exchange_rate__current_metagb__out1": "pending"
+  }
+}

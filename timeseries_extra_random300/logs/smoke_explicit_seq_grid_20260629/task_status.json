@@ -1,0 +1,12 @@
+{
+  "run_id": "smoke_explicit_seq_grid_20260629",
+  "total": 4,
+  "completed": 4,
+  "failed": 0,
+  "tasks": {
+    "ETTh1__xgb_cpu__seed42__s3__p2": "ok",
+    "ETTh1__xgb_cpu__seed42__s3__p3": "ok",
+    "ETTh1__xgb_cpu__seed42__s6__p2": "ok",
+    "ETTh1__xgb_cpu__seed42__s6__p3": "ok"
+  }
+}

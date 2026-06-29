@@ -91,4 +91,4 @@ runner 的任务键为 `(task_type, handling, dataset, outer_fold)`，旧 backbo
 - `in_vehicle_coupon_recommendation.csv` 已排除：严格缺失行删除后只剩 108 行。
 - `kddcup09_appetency.csv` 没有放入实际启动列表：当前严格预处理后可用行数为 0。
 - TabArena regression onehot 只剩 `Food_Delivery_Time.csv`，计算太慢，按当前要求放弃，不提供启动入口。
-- 用户标记慢任务已放在各自队尾，例如 binary drop 的 `NATICUSdroid / taiwanese / Bioresponse`，multiclass drop 的 `hiva_agnostic`，multiclass onehot 的 `hiva_agnostic`。
+- 用户标记慢任务已放在各自队尾，例如 binary drop 的 `NATICUSdroid / taiwanese / Bioresponse`，multiclass drop 的 `hiva_agnostic`。multiclass onehot 中 `students_dropout_and_academic_success.csv` 已加入队列，当前记录速度为三核并行下 `1epoch/2h`；`hiva_agnostic` 仍建议最后跑。

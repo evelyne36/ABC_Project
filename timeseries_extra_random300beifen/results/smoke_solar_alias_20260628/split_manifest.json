@@ -1,0 +1,33 @@
+{
+  "splits": [
+    {
+      "dataset": "solar",
+      "model": "xgb_cpu",
+      "outer_fold": 1,
+      "outer_split": {
+        "fold": 1,
+        "train_start": 0,
+        "train_end": 38,
+        "eval_start": 38,
+        "eval_end": 57,
+        "gap": 0
+      },
+      "seq_len": 4,
+      "pred_len": 1,
+      "train_row_min": 0,
+      "train_row_max": 37,
+      "test_row_min": 38,
+      "test_row_max": 56,
+      "scaler_fit_start": 0,
+      "scaler_fit_end": 42,
+      "train_target_start": 4,
+      "train_target_end": 42,
+      "test_target_start": 42,
+      "test_target_end": 61,
+      "train_target_start_time": "4",
+      "train_target_end_time": "41",
+      "test_target_start_time": "42",
+      "test_target_end_time": "60"
+    }
+  ]
+}
