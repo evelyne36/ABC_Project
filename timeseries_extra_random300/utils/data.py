@@ -235,6 +235,86 @@ def _make_xy(
     return X, y
 
 
+def _tabpfn_ts_features(
+    *,
+    positions: list[int],
+    horizons: list[int],
+    channels: list[int],
+    target_index: int,
+    n_rows: int,
+    n_channels: int,
+    pred_len: int,
+) -> np.ndarray:
+    pos_arr = np.asarray(positions, dtype=np.float32)
+    horizon_arr = np.asarray(horizons, dtype=np.float32)
+    channel_arr = np.asarray(channels, dtype=np.float32)
+    pos_denom = float(max(1, n_rows - 1))
+    horizon_denom = float(max(1, pred_len - 1))
+    channel_denom = float(max(1, n_channels - 1))
+    pos_norm = pos_arr / pos_denom
+    return np.column_stack(
+        [
+            pos_norm,
+            horizon_arr / horizon_denom,
+            channel_arr / channel_denom,
+            (channel_arr == float(target_index)).astype(np.float32),
+            np.sin(2.0 * np.pi * pos_norm),
+            np.cos(2.0 * np.pi * pos_norm),
+        ]
+    ).astype(np.float32, copy=False)
+
+
+def _make_tabpfn_ts_xy(
+    scaled_values: np.ndarray,
+    row_indices: Sequence[int],
+    target_index: int,
+    seq_len: int,
+    pred_len: int,
+    target_mode: str,
+    output_scope: str,
+) -> tuple[np.ndarray, np.ndarray]:
+    rows = np.asarray(row_indices, dtype=np.int64)
+    if output_scope == "target":
+        output_indices = np.asarray([target_index], dtype=np.int64)
+    elif output_scope == "all":
+        output_indices = np.arange(scaled_values.shape[1], dtype=np.int64)
+    else:
+        raise ValueError(f"Unsupported output_scope: {output_scope}")
+
+    positions: list[int] = []
+    horizons: list[int] = []
+    channels: list[int] = []
+    values: list[float] = []
+    for row in rows:
+        start = int(row)
+        if target_mode == "direct":
+            horizon_items = [pred_len - 1]
+        elif target_mode == "sequence":
+            horizon_items = list(range(pred_len))
+        else:
+            raise ValueError(f"Unsupported target_mode: {target_mode}")
+        for horizon in horizon_items:
+            position = start + seq_len + horizon
+            for channel in output_indices:
+                channel_int = int(channel)
+                positions.append(position)
+                horizons.append(horizon)
+                channels.append(channel_int)
+                values.append(float(scaled_values[position, channel_int]))
+
+    X = _tabpfn_ts_features(
+        positions=positions,
+        horizons=horizons,
+        channels=channels,
+        target_index=target_index,
+        n_rows=scaled_values.shape[0],
+        n_channels=scaled_values.shape[1],
+        pred_len=pred_len,
+    )
+    y = np.asarray(values, dtype=np.float32)
+    return X, y
+
+
 def make_fold_arrays(
     series: RawTimeSeries,
     train_rows: Sequence[int],
@@ -245,6 +325,7 @@ def make_fold_arrays(
     include_time_features: bool = True,
     target_mode: str = "direct",
     output_scope: str = "target",
+    feature_mode: str = "window",
 ) -> FoldArrays:
     train_rows_arr = np.asarray(train_rows, dtype=np.int64)
     eval_rows_arr = np.asarray(eval_rows, dtype=np.int64)
@@ -257,28 +338,50 @@ def make_fold_arrays(
     scaler = StandardScaler()
     scaler.fit(series.values[scaler_fit_start:scaler_fit_end])
     scaled_values = scaler.transform(series.values).astype(np.float32, copy=False)
-    X_train, y_train = _make_xy(
-        scaled_values,
-        series.timestamps,
-        train_rows_arr,
-        series.target_index,
-        seq_len,
-        pred_len,
-        include_time_features,
-        target_mode,
-        output_scope,
-    )
-    X_eval, y_eval = _make_xy(
-        scaled_values,
-        series.timestamps,
-        eval_rows_arr,
-        series.target_index,
-        seq_len,
-        pred_len,
-        include_time_features,
-        target_mode,
-        output_scope,
-    )
+    if feature_mode == "window":
+        X_train, y_train = _make_xy(
+            scaled_values,
+            series.timestamps,
+            train_rows_arr,
+            series.target_index,
+            seq_len,
+            pred_len,
+            include_time_features,
+            target_mode,
+            output_scope,
+        )
+        X_eval, y_eval = _make_xy(
+            scaled_values,
+            series.timestamps,
+            eval_rows_arr,
+            series.target_index,
+            seq_len,
+            pred_len,
+            include_time_features,
+            target_mode,
+            output_scope,
+        )
+    elif feature_mode == "tabpfn_ts":
+        X_train, y_train = _make_tabpfn_ts_xy(
+            scaled_values,
+            train_rows_arr,
+            series.target_index,
+            seq_len,
+            pred_len,
+            target_mode,
+            output_scope,
+        )
+        X_eval, y_eval = _make_tabpfn_ts_xy(
+            scaled_values,
+            eval_rows_arr,
+            series.target_index,
+            seq_len,
+            pred_len,
+            target_mode,
+            output_scope,
+        )
+    else:
+        raise ValueError(f"Unsupported feature_mode: {feature_mode}")
     return FoldArrays(
         X_train=X_train,
         y_train=y_train,

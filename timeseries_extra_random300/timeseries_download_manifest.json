@@ -1,7 +1,7 @@
 [
   {
     "dataset": "ETTh1",
-    "status": "existing",
+    "status": "downloaded",
     "file": "timeseries_extra_random300/data/raw/ETTh1.csv",
     "format": "csv_with_date",
     "rows_or_timesteps": 17420,
@@ -33,7 +33,7 @@
   },
   {
     "dataset": "exchange_rate",
-    "status": "existing",
+    "status": "downloaded",
     "file": "timeseries_extra_random300/data/raw/exchange_rate.txt",
     "format": "plain_numeric_csv",
     "rows_or_timesteps": 7588,
@@ -88,7 +88,7 @@
     "dataset": "PEMS03",
     "status": "downloaded",
     "file": "timeseries_extra_random300/data/raw/PEMS03.npz",
-    "format": "npz",
+    "format": "npz_array",
     "arrays": {
       "data": [
         26208,
@@ -102,7 +102,7 @@
     "dataset": "PEMS04",
     "status": "downloaded",
     "file": "timeseries_extra_random300/data/raw/PEMS04.npz",
-    "format": "npz",
+    "format": "npz_array",
     "arrays": {
       "data": [
         16992,
@@ -116,7 +116,7 @@
     "dataset": "PEMS07",
     "status": "downloaded",
     "file": "timeseries_extra_random300/data/raw/PEMS07.npz",
-    "format": "npz",
+    "format": "npz_array",
     "arrays": {
       "data": [
         28224,
@@ -130,7 +130,7 @@
     "dataset": "PEMS08",
     "status": "downloaded",
     "file": "timeseries_extra_random300/data/raw/PEMS08.npz",
-    "format": "npz",
+    "format": "npz_array",
     "arrays": {
       "data": [
         17856,

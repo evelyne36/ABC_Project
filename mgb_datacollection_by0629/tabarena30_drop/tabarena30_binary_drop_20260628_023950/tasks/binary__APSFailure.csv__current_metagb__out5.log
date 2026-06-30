@@ -1,0 +1,5 @@
+[2026-06-29 12:29:52] start task_id=binary__APSFailure.csv__current_metagb__out5
+[2026-06-29 12:29:58] config task_type=binary dataset=APSFailure.csv model=current_metagb outer_fold=5/5 inner_folds=4 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=756 features=170 classes=2
+[2026-06-29 12:29:58] split train_rows=605 test_rows=151 inner_splits=4
+[2026-06-29 12:40:44] candidate 1/30 auc=0.937689 status=ok
+[2026-06-29 16:06:41] candidate 10/30 auc=0.906814 status=ok

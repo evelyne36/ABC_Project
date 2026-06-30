@@ -6,6 +6,7 @@ from timeseries_extra_random300.scripts.run_timeseries_benchmark import (
     ADAPTER_ROOT,
     build_parser,
     create_tasks,
+    horizon_gap,
     normalize_args,
 )
 from timeseries_extra_random300.utils.data import load_registry
@@ -65,6 +66,28 @@ def test_ltsf_sequence_features_m_arguments_are_recorded() -> None:
     assert args.target_mode == "sequence"
     assert args.output_scope == "all"
     assert args.pred_lens == [96, 192]
+
+
+def test_tabpfn_ts_feature_mode_uses_sequence_horizon_gap() -> None:
+    args = parse_args(
+        "--split-protocol",
+        "fixed",
+        "--feature-mode",
+        "tabpfn_ts",
+        "--target-mode",
+        "sequence",
+        "--output-scope",
+        "all",
+        "--pred-len",
+        "24",
+        "--models",
+        "xgb_cpu",
+        "--max-candidates",
+        "1",
+    )
+
+    assert args.feature_mode == "tabpfn_ts"
+    assert horizon_gap(args) == 23
 
 
 def test_fixed_protocol_expands_tasks_by_seed_seq_len_pred_len_dataset_and_model() -> None:

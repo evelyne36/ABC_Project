@@ -1,0 +1,36 @@
+[2026-06-28 20:25:07] start task_id=binary__Bioresponse.csv__xgb_cpu__out5
+[2026-06-28 20:25:08] config task_type=binary dataset=Bioresponse.csv model=xgb_cpu outer_fold=5/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=3751 features=1776 classes=2
+[2026-06-28 20:25:08] split train_rows=3001 test_rows=750 inner_splits=4
+[2026-06-28 20:26:51] candidate 1/300 auc=0.869345 status=ok
+[2026-06-28 20:37:29] candidate 10/300 auc=0.863896 status=ok
+[2026-06-28 20:46:51] candidate 20/300 auc=0.868207 status=ok
+[2026-06-28 20:58:11] candidate 30/300 auc=0.872961 status=ok
+[2026-06-28 21:11:01] candidate 40/300 auc=0.869456 status=ok
+[2026-06-28 21:20:31] candidate 50/300 auc=0.866709 status=ok
+[2026-06-28 21:30:38] candidate 60/300 auc=0.8725 status=ok
+[2026-06-28 21:43:44] candidate 70/300 auc=0.87033 status=ok
+[2026-06-28 21:53:27] candidate 80/300 auc=0.872697 status=ok
+[2026-06-28 22:04:40] candidate 90/300 auc=0.873272 status=ok
+[2026-06-28 22:17:15] candidate 100/300 auc=0.862568 status=ok
+[2026-06-28 22:30:53] candidate 110/300 auc=0.872313 status=ok
+[2026-06-28 22:44:56] candidate 120/300 auc=0.872444 status=ok
+[2026-06-28 22:53:51] candidate 130/300 auc=0.862734 status=ok
+[2026-06-28 23:08:46] candidate 140/300 auc=0.872293 status=ok
+[2026-06-28 23:22:17] candidate 150/300 auc=0.851695 status=ok
+[2026-06-28 23:35:51] candidate 160/300 auc=0.857035 status=ok
+[2026-06-28 23:45:59] candidate 170/300 auc=0.873014 status=ok
+[2026-06-28 23:57:11] candidate 180/300 auc=0.869473 status=ok
+[2026-06-29 00:09:23] candidate 190/300 auc=0.874498 status=ok
+[2026-06-29 00:19:46] candidate 200/300 auc=0.853875 status=ok
+[2026-06-29 00:32:52] candidate 210/300 auc=0.867049 status=ok
+[2026-06-29 00:43:45] candidate 220/300 auc=0.872154 status=ok
+[2026-06-29 00:54:28] candidate 230/300 auc=0.869736 status=ok
+[2026-06-29 01:02:34] candidate 240/300 auc=0.871762 status=ok
+[2026-06-29 01:14:46] candidate 250/300 auc=0.865903 status=ok
+[2026-06-29 01:29:50] candidate 260/300 auc=0.863859 status=ok
+[2026-06-29 01:43:43] candidate 270/300 auc=0.868608 status=ok
+[2026-06-29 01:55:52] candidate 280/300 auc=0.873276 status=ok
+[2026-06-29 02:06:48] candidate 290/300 auc=0.869662 status=ok
+[2026-06-29 02:16:02] candidate 300/300 auc=0.869927 status=ok
+[2026-06-29 02:16:02] selected candidate_index=204 candidate_id=xgb_0204 val_auc=0.875839 val_std=0.00978269
+[2026-06-29 02:16:47] finish best=204 test_auc=0.886993 final_train_sec=45.3903 final_predict_sec=0.0292398 elapsed_sec=21099.5 status=ok

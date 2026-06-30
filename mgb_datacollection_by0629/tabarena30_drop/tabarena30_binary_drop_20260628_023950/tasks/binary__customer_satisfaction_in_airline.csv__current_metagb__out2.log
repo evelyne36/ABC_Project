@@ -1,0 +1,4 @@
+[2026-06-29 18:34:02] start task_id=binary__customer_satisfaction_in_airline.csv__current_metagb__out2
+[2026-06-29 18:34:03] config task_type=binary dataset=customer_satisfaction_in_airline.csv model=current_metagb outer_fold=2/5 inner_folds=4 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=129487 features=18 classes=2
+[2026-06-29 18:34:03] split train_rows=103589 test_rows=25898 inner_splits=4
+[2026-06-29 19:02:33] candidate 1/30 auc=0.991581 status=ok

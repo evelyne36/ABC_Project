@@ -1,0 +1,12 @@
+[2026-06-28 03:05:11] start task_id=multiclass__multiclass__balance-scale.csv__current_metagb__out2
+[2026-06-28 03:05:12] config task_type=multiclass dataset=multiclass__balance-scale.csv model=current_metagb outer_fold=2/5 inner_folds=4 candidates=300 objective=multi:softprob primary_metric=logloss direction=minimize rows=625 original_rows=625 max_rows_per_dataset=0 features=4 classes=3
+[2026-06-28 03:05:12] split train_rows=500 test_rows=125 inner_splits=4
+[2026-06-28 03:05:34] candidate 1/300 logloss=0.584327 status=ok
+[2026-06-28 03:23:09] candidate 50/300 logloss=0.389944 status=ok
+[2026-06-28 03:40:03] candidate 100/300 logloss=0.413115 status=ok
+[2026-06-28 04:00:47] candidate 150/300 logloss=0.556559 status=ok
+[2026-06-28 04:15:56] candidate 200/300 logloss=0.438326 status=ok
+[2026-06-28 04:32:57] candidate 250/300 logloss=0.501888 status=ok
+[2026-06-28 04:53:35] candidate 300/300 logloss=1.02062 status=ok
+[2026-06-28 04:53:35] selected candidate_index=211 candidate_id=metagb_pf01_sa0_008 val_logloss=0.374668 val_std=0.0250346
+[2026-06-28 04:53:35] finish best=211 test_logloss=0.332404 final_train_sec=0.438486 final_predict_sec=0.0034824 elapsed_sec=6503.66 status=ok

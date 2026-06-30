@@ -50,6 +50,7 @@ class CandidateRow:
     outer_fold: int
     seq_len: int
     pred_len: int
+    feature_mode: str
     candidate_index: int
     candidate_id: str
     backbone_id: str
@@ -116,6 +117,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--search-space-json", default=str(ADAPTER_ROOT / "configs" / "timeseries_search_space.json"))
     parser.add_argument("--xgboost-python-package", default=str(PROJECT_ROOT / "beforereview" / "xgboost-master" / "python-package"))
     parser.add_argument("--split-protocol", choices=["nested", "fixed"], default="nested")
+    parser.add_argument("--feature-mode", choices=["window", "tabpfn_ts"], default="window")
     parser.add_argument("--target-mode", choices=["direct", "sequence"], default="direct")
     parser.add_argument("--output-scope", choices=["target", "all"], default="target")
     parser.add_argument("--seq-len", type=int, default=24)
@@ -240,6 +242,10 @@ def selected_outer_indices(args: argparse.Namespace) -> list[int]:
     return [args.outer_fold_index]
 
 
+def horizon_gap(args: argparse.Namespace) -> int:
+    return max(0, int(args.pred_len) - 1) if args.target_mode == "sequence" else 0
+
+
 def limit_series_features(series: Any, max_features: int) -> Any:
     if max_features <= 0 or series.n_features <= max_features:
         return series
@@ -278,7 +284,7 @@ def build_timeseries_estimator(
     def factory() -> Any:
         return build_estimator(xgb, model_name, params, args, "regression", 0)
 
-    if args.target_mode == "sequence":
+    if args.target_mode == "sequence" and args.feature_mode == "window":
         return ColumnwiseMultiOutputRegressor(factory)
     return factory()
 
@@ -288,6 +294,12 @@ def output_dim_from_fold(fold: FoldArrays | None) -> int:
         return 0
     y = np.asarray(fold.y_train)
     return 1 if y.ndim == 1 else int(y.shape[1])
+
+
+def input_dim_from_fold(fold: FoldArrays | None) -> int:
+    if fold is None:
+        return 0
+    return int(np.asarray(fold.X_train).shape[1])
 
 
 def split_timestamp(series_timestamps: list[str], position: int) -> str:
@@ -315,6 +327,7 @@ def evaluate_task(
         len(outer_train_rows),
         args.inner_folds,
         initial_train_fraction=0.5,
+        gap=horizon_gap(args),
     )
     inner_splits = []
     for inner_train_rel, inner_val_rel, inner_split in inner_splits_relative:
@@ -344,6 +357,7 @@ def evaluate_task(
                     include_time_features=args.include_time_features,
                     target_mode=args.target_mode,
                     output_scope=args.output_scope,
+                    feature_mode=args.feature_mode,
                 )
                 estimator = build_timeseries_estimator(xgb, model_name, params, args)
                 pred, train_time, predict_time = fit_predict(estimator, fold)
@@ -375,6 +389,7 @@ def evaluate_task(
                 outer_fold=outer_index + 1,
                 seq_len=args.seq_len,
                 pred_len=args.pred_len,
+                feature_mode=args.feature_mode,
                 candidate_index=candidate_index,
                 candidate_id=str(params.get("candidate_id", candidate_index)),
                 backbone_id=str(params.get("backbone_id", "")),
@@ -425,6 +440,7 @@ def evaluate_task(
             include_time_features=args.include_time_features,
             target_mode=args.target_mode,
             output_scope=args.output_scope,
+            feature_mode=args.feature_mode,
         )
         final_estimator = build_timeseries_estimator(xgb, model_name, best_params, args)
         test_pred, final_train_time, final_predict_time = fit_predict(final_estimator, final_fold)
@@ -456,8 +472,10 @@ def evaluate_task(
         "outer_split": outer_split.to_dict(),
         "seq_len": args.seq_len,
         "pred_len": args.pred_len,
+        "feature_mode": args.feature_mode,
         "target_mode": args.target_mode,
         "output_scope": args.output_scope,
+        "input_features": input_dim_from_fold(final_fold),
         "output_dim": output_dim_from_fold(final_fold),
         "train_row_min": int(outer_train_rows.min()),
         "train_row_max": int(outer_train_rows.max()),
@@ -493,8 +511,10 @@ def evaluate_task(
         "inner_folds": args.inner_folds,
         "seq_len": args.seq_len,
         "pred_len": args.pred_len,
+        "feature_mode": args.feature_mode,
         "target_mode": args.target_mode,
         "output_scope": args.output_scope,
+        "input_features": input_dim_from_fold(final_fold),
         "output_dim": output_dim_from_fold(final_fold),
         "rows_raw": series.n_rows,
         "rows_supervised": supervised_row_count(series, args.seq_len, args.pred_len),
@@ -563,6 +583,7 @@ def evaluate_fixed_task(
                     include_time_features=args.include_time_features,
                     target_mode=args.target_mode,
                     output_scope=args.output_scope,
+                    feature_mode=args.feature_mode,
                 )
                 estimator = build_timeseries_estimator(xgb, model_name, params, args)
                 pred, train_time, predict_time = fit_predict(estimator, val_fold)
@@ -593,6 +614,7 @@ def evaluate_fixed_task(
                     outer_fold=1,
                     seq_len=seq_len,
                     pred_len=args.pred_len,
+                    feature_mode=args.feature_mode,
                     candidate_index=candidate_index,
                     candidate_id=str(params.get("candidate_id", base_candidate_index)),
                     backbone_id=str(params.get("backbone_id", "")),
@@ -661,6 +683,7 @@ def evaluate_fixed_task(
             include_time_features=args.include_time_features,
             target_mode=args.target_mode,
             output_scope=args.output_scope,
+            feature_mode=args.feature_mode,
         )
         final_estimator = build_timeseries_estimator(xgb, model_name, best_params, args)
         test_pred, final_train_time, final_predict_time = fit_predict(final_estimator, final_fold)
@@ -693,8 +716,10 @@ def evaluate_fixed_task(
         "fixed_split": selected_fixed_split.to_dict(),
         "seq_len": selected_seq_len,
         "pred_len": args.pred_len,
+        "feature_mode": args.feature_mode,
         "target_mode": args.target_mode,
         "output_scope": args.output_scope,
+        "input_features": input_dim_from_fold(final_fold),
         "output_dim": output_dim_from_fold(final_fold),
         "train_row_min": int(selected_train_rows.min()),
         "train_row_max": int(selected_train_rows.max()),
@@ -733,8 +758,10 @@ def evaluate_fixed_task(
         "inner_folds": 1,
         "seq_len": selected_seq_len,
         "pred_len": args.pred_len,
+        "feature_mode": args.feature_mode,
         "target_mode": args.target_mode,
         "output_scope": args.output_scope,
+        "input_features": input_dim_from_fold(final_fold),
         "output_dim": output_dim_from_fold(final_fold),
         "rows_raw": series.n_rows,
         "rows_supervised": supervised_row_count(series, selected_seq_len, args.pred_len),
@@ -791,11 +818,12 @@ def create_tasks(
                         dataset_name = resolve_dataset_name(registry, dataset_name)
                         series = series_by_dataset[dataset_name]
                         n_rows = supervised_row_count(series, seq_len, pred_len)
-                        train_rows, val_rows, test_rows, fixed_split = fixed_chronological_split(n_rows)
+                        task_args = dict(vars(args))
+                        task_args.update({"seed": seed, "seq_len": seq_len, "pred_len": pred_len})
+                        split_gap = horizon_gap(argparse.Namespace(**task_args))
+                        train_rows, val_rows, test_rows, fixed_split = fixed_chronological_split(n_rows, gap=split_gap)
                         fixed_splits_by_seq_len = {seq_len: (train_rows, val_rows, test_rows, fixed_split)}
                         for model_name in args.models:
-                            task_args = dict(vars(args))
-                            task_args.update({"seed": seed, "seq_len": seq_len, "pred_len": pred_len})
                             task_id = (
                                 f"{safe_name(dataset_name)}__{safe_name(model_name)}"
                                 f"__seed{seed}__s{seq_len}__p{pred_len}"
@@ -826,11 +854,18 @@ def create_tasks(
                 for seq_len in args.seq_lens:
                     for pred_len in args.pred_lens:
                         n_rows = supervised_row_count(series, seq_len, pred_len)
-                        outer_splits = expanding_window_splits(n_rows, args.outer_folds, initial_train_fraction=0.5)
+                        task_args_base = dict(vars(args))
+                        task_args_base.update({"seed": seed, "seq_len": seq_len, "pred_len": pred_len})
+                        split_gap = horizon_gap(argparse.Namespace(**task_args_base))
+                        outer_splits = expanding_window_splits(
+                            n_rows,
+                            args.outer_folds,
+                            initial_train_fraction=0.5,
+                            gap=split_gap,
+                        )
                         for outer_index in selected_outer_indices(args):
                             for model_name in args.models:
-                                task_args = dict(vars(args))
-                                task_args.update({"seed": seed, "seq_len": seq_len, "pred_len": pred_len})
+                                task_args = dict(task_args_base)
                                 task_id = (
                                     f"{safe_name(dataset_name)}__{safe_name(model_name)}"
                                     f"__seed{seed}__s{seq_len}__p{pred_len}__out{outer_index + 1}"
@@ -1052,6 +1087,7 @@ def run_all(args: argparse.Namespace) -> Dict[str, Any]:
             "datasets": args.datasets,
             "models": args.models,
             "split_protocol": args.split_protocol,
+            "feature_mode": args.feature_mode,
             "target_mode": args.target_mode,
             "output_scope": args.output_scope,
             "seq_len": args.seq_len,

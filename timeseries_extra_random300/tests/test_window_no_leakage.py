@@ -91,3 +91,43 @@ def test_sequence_target_supports_multivariate_features_m_output() -> None:
     assert fold.train_target_start == 3
     assert fold.train_target_end == 5
     np.testing.assert_allclose(fold.y_train[0], scaled[3:5, :].reshape(-1))
+
+
+def test_tabpfn_ts_mode_rolls_sequence_targets_into_scalar_rows() -> None:
+    series = make_series()
+    fold = make_fold_arrays(
+        series,
+        [0],
+        [1],
+        seq_len=3,
+        pred_len=2,
+        include_time_features=True,
+        target_mode="sequence",
+        output_scope="all",
+        feature_mode="tabpfn_ts",
+    )
+    scaler = StandardScaler().fit(series.values[:5])
+    scaled = scaler.transform(series.values)
+
+    assert fold.X_train.shape == (4, 6)
+    assert fold.X_eval.shape == (4, 6)
+    assert fold.y_train.shape == (4,)
+    np.testing.assert_allclose(fold.y_train, scaled[3:5, :].reshape(-1))
+
+
+def test_sequence_target_with_horizon_gap_does_not_overlap_eval_targets() -> None:
+    series = make_series()
+    train_rows = np.arange(0, 10)
+    eval_rows = np.arange(12, 15)
+    fold = make_fold_arrays(
+        series,
+        train_rows,
+        eval_rows,
+        seq_len=4,
+        pred_len=3,
+        include_time_features=False,
+        target_mode="sequence",
+        output_scope="target",
+    )
+
+    assert fold.train_target_end <= fold.eval_target_start

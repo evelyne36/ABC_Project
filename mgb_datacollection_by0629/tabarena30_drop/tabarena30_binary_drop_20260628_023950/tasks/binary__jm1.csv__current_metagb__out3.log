@@ -1,0 +1,9 @@
+[2026-06-29 03:54:08] start task_id=binary__jm1.csv__current_metagb__out3
+[2026-06-29 03:54:08] config task_type=binary dataset=jm1.csv model=current_metagb outer_fold=3/5 inner_folds=4 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=10880 features=21 classes=2
+[2026-06-29 03:54:08] split train_rows=8704 test_rows=2176 inner_splits=4
+[2026-06-29 03:56:28] candidate 1/30 auc=0.754579 status=ok
+[2026-06-29 04:31:53] candidate 10/30 auc=0.754793 status=ok
+[2026-06-29 05:44:42] candidate 20/30 auc=0.751845 status=ok
+[2026-06-29 07:27:05] candidate 30/30 auc=0.754044 status=ok
+[2026-06-29 07:27:05] selected candidate_index=2 candidate_id=xgb_0248_pf01_sa1 val_auc=0.756142 val_std=0.00769444
+[2026-06-29 07:27:41] finish best=2 test_auc=0.746778 final_train_sec=35.665 final_predict_sec=0.150262 elapsed_sec=12812.7 status=ok

@@ -1,0 +1,146 @@
+# Dataset-Level MGB vs XGB
+
+| family | protocol | encoding | task_type | dataset | paired_folds | rows | features | primary_metric | xgb_test_mean | mgb_test_mean | test_improvement | dataset_winner | runtime_ratio_mean |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | binary | regime_logit__dim10 | 5 | 3,000.0 | 10.000 | auc | 0.909938 | 0.919589 | 0.00965113 | mgb_win | 28.796 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | binary | regime_logit__dim20 | 5 | 3,000.0 | 20.000 | auc | 0.898555 | 0.918898 | 0.0203423 | mgb_win | 60.501 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | binary | xor_3way__dim10 | 5 | 3,000.0 | 10.000 | auc | 0.995231 | 0.997176 | 0.00194446 | mgb_win | 26.287 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | binary | xor_3way__dim20 | 5 | 3,000.0 | 20.000 | auc | 0.893339 | 0.996293 | 0.102954 | mgb_win | 56.328 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | binary | xor_classification__dim10 | 5 | 3,000.0 | 10.000 | auc | 0.997988 | 0.998156 | 0.000167866 | mgb_win | 35.774 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | binary | xor_classification__dim20 | 5 | 3,000.0 | 20.000 | auc | 0.998043 | 0.99831 | 0.000266798 | mgb_win | 70.943 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | additive_nonlinear_control__dim10 | 5 | 3,000.0 | 10.000 | rmse | 0.181412 | 0.191317 | -0.0546014 | xgb_win | 10.726 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | categorical_feature_switch__dim10 | 5 | 3,000.0 | 10.000 | rmse | 0.176697 | 0.152464 | 0.137145 | mgb_win | 13.387 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | categorical_feature_switch__dim20 | 5 | 3,000.0 | 20.000 | rmse | 0.171655 | 0.154817 | 0.0980909 | mgb_win | 18.874 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | categorical_regime_slope__dim10 | 5 | 3,000.0 | 10.000 | rmse | 0.244807 | 0.156543 | 0.360544 | mgb_win | 18.621 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | categorical_regime_slope__dim20 | 5 | 3,000.0 | 20.000 | rmse | 0.300775 | 0.158547 | 0.472873 | mgb_win | 26.327 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | conditional_multiplicative__dim10 | 5 | 3,000.0 | 10.000 | rmse | 1.55038 | 0.374759 | 0.758279 | mgb_win | 11.766 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | conditional_multiplicative__dim20 | 5 | 3,000.0 | 20.000 | rmse | 2.15226 | 0.355077 | 0.835021 | mgb_win | 18.810 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | curved_control__dim10 | 5 | 3,000.0 | 10.000 | rmse | 0.163092 | 0.162995 | 0.000592132 | tie | 10.955 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | feature_switch__dim10 | 5 | 3,000.0 | 10.000 | rmse | 0.230355 | 0.215787 | 0.0632436 | mgb_win | 10.266 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | feature_switch__dim20 | 5 | 3,000.0 | 20.000 | rmse | 0.225065 | 0.229497 | -0.0196882 | xgb_win | 16.474 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | global_linear__dim10 | 5 | 3,000.0 | 10.000 | rmse | 0.160306 | 0.15365 | 0.041519 | mgb_win | 10.096 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | global_linear__dim20 | 5 | 3,000.0 | 20.000 | rmse | 0.158596 | 0.153725 | 0.0307157 | mgb_win | 16.854 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | mixed_gate_regime__dim10 | 5 | 3,000.0 | 10.000 | rmse | 0.301406 | 0.191892 | 0.363345 | mgb_win | 15.334 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | mixed_gate_regime__dim20 | 5 | 3,000.0 | 20.000 | rmse | 0.466074 | 0.195465 | 0.580614 | mgb_win | 23.319 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | multiplicative__dim10 | 5 | 3,000.0 | 10.000 | rmse | 0.261358 | 0.180162 | 0.310672 | mgb_win | 12.131 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | multiplicative__dim20 | 5 | 3,000.0 | 20.000 | rmse | 0.3028 | 0.180397 | 0.404238 | mgb_win | 20.189 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | noise_regime_slope__dim10 | 5 | 3,000.0 | 10.000 | rmse | 0.887003 | 0.799527 | 0.0986192 | mgb_win | 11.803 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | pure_step_control__dim10 | 5 | 3,000.0 | 10.000 | rmse | 0.246518 | 0.254638 | -0.0329375 | xgb_win | 13.622 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | pure_step_control__dim20 | 5 | 3,000.0 | 20.000 | rmse | 0.245322 | 0.256371 | -0.0450405 | xgb_win | 24.218 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | regime_slope__dim10 | 5 | 3,000.0 | 10.000 | rmse | 0.33993 | 0.237478 | 0.301389 | mgb_win | 12.313 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | regime_slope__dim20 | 5 | 3,000.0 | 20.000 | rmse | 0.46974 | 0.252839 | 0.461747 | mgb_win | 20.344 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | regime_slope_multi__dim10 | 5 | 3,000.0 | 10.000 | rmse | 0.341803 | 0.242916 | 0.289312 | mgb_win | 11.899 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | regime_slope_multi__dim20 | 5 | 3,000.0 | 20.000 | rmse | 0.378035 | 0.225753 | 0.402826 | mgb_win | 19.551 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | sparse_feature_switch__dim10 | 5 | 3,000.0 | 10.000 | rmse | 0.315887 | 0.241028 | 0.236981 | mgb_win | 10.522 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | sparse_feature_switch__dim20 | 5 | 3,000.0 | 20.000 | rmse | 0.302762 | 0.252162 | 0.167128 | mgb_win | 16.353 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | sparse_multiplicative__dim10 | 5 | 3,000.0 | 10.000 | rmse | 0.501428 | 0.235519 | 0.530304 | mgb_win | 12.494 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | sparse_multiplicative__dim20 | 5 | 3,000.0 | 20.000 | rmse | 0.557822 | 0.2494 | 0.552904 | mgb_win | 20.189 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | sparse_regime_slope__dim10 | 5 | 3,000.0 | 10.000 | rmse | 0.479326 | 0.249939 | 0.478562 | mgb_win | 12.718 |
+| synthetic_0629 | synthetic_random300_single_seed | synthetic | regression | sparse_regime_slope__dim20 | 5 | 3,000.0 | 20.000 | rmse | 0.56243 | 0.297849 | 0.470424 | mgb_win | 20.784 |
+| tabarena30_0629 | xgb_best_mgb30 | drop | binary | APSFailure.csv | 2 | 756.000 | 170.000 | auc | 0.985356 | 0.96745 | -0.0179065 | xgb_win | 12.616 |
+| tabarena30_0629 | xgb_best_mgb30 | drop | binary | NATICUSdroid.csv | 3 | 7,491.0 | 86.000 | auc | 0.985974 | 0.986235 | 0.000260667 | mgb_win | 30.609 |
+| tabarena30_0629 | xgb_best_mgb30 | drop | binary | bank-marketing.csv | 5 | 45,211.0 | 5 | auc | 0.707328 | 0.706994 | -0.0003334 | xgb_win | 0.446334 |
+| tabarena30_0629 | xgb_best_mgb30 | drop | binary | coil2000_insurance_policies.csv | 5 | 9,822.0 | 80.000 | auc | 0.762398 | 0.761193 | -0.0012048 | xgb_win | 17.836 |
+| tabarena30_0629 | xgb_best_mgb30 | drop | binary | credit_card_clients_default.csv | 5 | 30,000.0 | 23.000 | auc | 0.78529 | 0.782138 | -0.0031522 | xgb_win | 2.2761 |
+| tabarena30_0629 | xgb_best_mgb30 | drop | binary | heloc.csv | 5 | 10,459.0 | 23.000 | auc | 0.799162 | 0.798763 | -0.0003986 | xgb_win | 1.41264 |
+| tabarena30_0629 | xgb_best_mgb30 | drop | binary | jm1.csv | 5 | 10,880.0 | 21.000 | auc | 0.752656 | 0.755191 | 0.0025352 | mgb_win | 5.40606 |
+| tabarena30_0629 | xgb_best_mgb30 | drop | binary | online_shoppers_intention.csv | 5 | 12,330.0 | 14.000 | auc | 0.915138 | 0.915564 | 0.0004258 | mgb_win | 1.0348 |
+| tabarena30_0629 | xgb_best_mgb30 | drop | binary | taiwanese_bankruptcy_prediction.csv | 3 | 6,819.0 | 94.000 | auc | 0.940043 | 0.912614 | -0.0274287 | xgb_win | 13.066 |
+| tabarena30_0629 | xgb_best_mgb30 | onehot | binary | Fitness_Club.csv | 5 | 1,480.0 | 18.000 | auc | 0.810823 | 0.810722 | -0.0001008 | xgb_win | 1.58996 |
+| tabarena30_0629 | xgb_best_mgb30 | onehot | binary | Is-this-a-good-customer.csv | 5 | 1,723.0 | 42.000 | auc | 0.734754 | 0.733887 | -0.0008668 | xgb_win | 8.52482 |
+| tabarena30_0629 | xgb_best_mgb30 | onehot | binary | blood-transfusion-service-center.csv | 5 | 748.000 | 4 | auc | 0.717556 | 0.698976 | -0.0185796 | xgb_win | 0.416488 |
+| tabarena30_0629 | xgb_best_mgb30 | onehot | binary | credit-g.csv | 5 | 1,000.0 | 61.000 | auc | 0.787786 | 0.795429 | 0.0076428 | mgb_win | 46.105 |
+| tabarena30_0629 | xgb_best_mgb30 | onehot | binary | diabetes.csv | 5 | 768.000 | 8 | auc | 0.828799 | 0.828854 | 5.52e-05 | tie | 0.364654 |
+| tabarena30_0629 | xgb_best_mgb30 | onehot | binary | hazelnut-spread-contaminant-detection.csv | 5 | 2,400.0 | 30.000 | auc | 0.97949 | 0.981687 | 0.0021978 | mgb_win | 2.36687 |
+| tabarena30_0629 | xgb_best_mgb30 | onehot | binary | qsar-biodeg.csv | 5 | 1,054.0 | 41.000 | auc | 0.932492 | 0.933143 | 0.0006512 | mgb_win | 5.78613 |
+| tabarena30_0629 | xgb_best_mgb30 | onehot | binary | seismic-bumps.csv | 5 | 2,584.0 | 21.000 | auc | 0.783599 | 0.780425 | -0.0031736 | xgb_win | 0.852555 |
+| tabarena30_0629 | xgb_best_mgb30 | onehot | multiclass | anneal.csv | 1 | 898.000 | 82.000 | logloss | 0.0275059 | 0.0183298 | 0.333605 | mgb_win | 46.844 |
+| tabarena30_0629 | xgb_best_mgb30 | onehot | multiclass | maternal_health_risk.csv | 5 | 1,014.0 | 6 | logloss | 0.40045 | 0.376641 | 0.0594551 | mgb_win | 4.30017 |
+| tabarena30_0629 | xgb_best_mgb30 | onehot | multiclass | website_phishing.csv | 5 | 1,353.0 | 25.000 | logloss | 0.245462 | 0.238708 | 0.027517 | mgb_win | 4.3519 |
+| tabarena_main_0624 | random300 | drop | binary | Amazon_employee_access.csv | 5 | 32,769.0 | 9 | auc | 0.859789 | 0.858608 | -0.0011802 | xgb_win | 17.324 |
+| tabarena_main_0624 | random300 | drop | binary | Bank_Customer_Churn.csv | 5 | 10,000.0 | 8 | auc | 0.850385 | 0.848853 | -0.0015324 | xgb_win | 20.403 |
+| tabarena_main_0624 | random300 | drop | binary | Diabetes130US.csv | 5 | 71,518.0 | 8 | auc | 0.599449 | 0.598479 | -0.0009698 | xgb_win | 20.226 |
+| tabarena_main_0624 | random300 | drop | binary | E-CommereShippingData.csv | 5 | 10,999.0 | 6 | auc | 0.744538 | 0.745572 | 0.001034 | mgb_win | 14.040 |
+| tabarena_main_0624 | random300 | drop | binary | Fitness_Club.csv | 5 | 1,480.0 | 3 | auc | 0.810147 | 0.811218 | 0.0010708 | mgb_win | 6.14392 |
+| tabarena_main_0624 | random300 | drop | binary | GiveMeSomeCredit.csv | 5 | 120,269.0 | 10.000 | auc | 0.856136 | 0.85561 | -0.0005264 | xgb_win | 18.137 |
+| tabarena_main_0624 | random300 | drop | binary | HR_Analytics_Job_Change_of_Data_Scientists.csv | 5 | 19,158.0 | 2 | auc | 0.724459 | 0.725224 | 0.0007652 | mgb_win | 6.90997 |
+| tabarena_main_0624 | random300 | drop | binary | Is-this-a-good-customer.csv | 5 | 1,723.0 | 9 | auc | 0.626316 | 0.623842 | -0.0024748 | xgb_win | 41.220 |
+| tabarena_main_0624 | random300 | drop | binary | Marketing_Campaign.csv | 5 | 2,216.0 | 22.000 | auc | 0.873715 | 0.877472 | 0.0037566 | mgb_win | 129.713 |
+| tabarena_main_0624 | random300 | drop | binary | blood-transfusion-service-center.csv | 5 | 748.000 | 4 | auc | 0.717556 | 0.72045 | 0.0028948 | mgb_win | 7.58502 |
+| tabarena_main_0624 | random300 | drop | binary | churn.csv | 5 | 5,000.0 | 19.000 | auc | 0.922337 | 0.92275 | 0.0004134 | mgb_win | 56.770 |
+| tabarena_main_0624 | random300 | drop | binary | credit-g.csv | 5 | 1,000.0 | 7 | auc | 0.675262 | 0.684024 | 0.0087618 | mgb_win | 21.072 |
+| tabarena_main_0624 | random300 | drop | binary | diabetes.csv | 5 | 768.000 | 8 | auc | 0.828799 | 0.827769 | -0.00103 | xgb_win | 23.679 |
+| tabarena_main_0624 | random300 | drop | binary | hazelnut-spread-contaminant-detection.csv | 5 | 2,400.0 | 30.000 | auc | 0.97949 | 0.983219 | 0.003729 | mgb_win | 55.807 |
+| tabarena_main_0624 | random300 | drop | binary | polish_companies_bankruptcy.csv | 5 | 3,031.0 | 64.000 | auc | 0.919304 | 0.831711 | -0.087593 | xgb_win | 127.068 |
+| tabarena_main_0624 | random300 | drop | binary | qsar-biodeg.csv | 5 | 1,054.0 | 41.000 | auc | 0.932492 | 0.931635 | -0.0008572 | xgb_win | 223.326 |
+| tabarena_main_0624 | random300 | drop | binary | seismic-bumps.csv | 5 | 2,584.0 | 11.000 | auc | 0.781116 | 0.761576 | -0.0195404 | xgb_win | 39.272 |
+| tabarena_main_0624 | random300 | drop | multiclass | SDSS17.csv | 5 | 78,053.0 | 11.000 | logloss | 0.0726283 | 0.0728067 | -0.00245689 | xgb_win | 21.692 |
+| tabarena_main_0624 | random300 | drop | multiclass | anneal.csv | 5 | 898.000 | 7 | logloss | 0.226567 | 0.217858 | 0.038439 | mgb_win | 37.750 |
+| tabarena_main_0624 | random300 | drop | multiclass | maternal_health_risk.csv | 5 | 1,014.0 | 6 | logloss | 0.40045 | 0.393375 | 0.0176666 | mgb_win | 19.894 |
+| tabarena_main_0624 | random300 | drop | multiclass | students_dropout_and_academic_success.csv | 5 | 4,424.0 | 19.000 | logloss | 0.602868 | 0.603046 | -0.000294923 | tie | 62.533 |
+| tabarena_main_0624 | random600 | drop | regression | Another-Dataset-on-used-Fiat-500.csv | 5 |  |  | rmse | 750.622 | 761.066 | -0.0139137 | xgb_win | 8.97792 |
+| tabarena_main_0624 | random600 | drop | regression | Food_Delivery_Time.csv | 5 |  |  | rmse | 7.52504 | 7.53497 | -0.00131953 | xgb_win | 10.524 |
+| tabarena_main_0624 | random600 | drop | regression | QSAR_fish_toxicity.csv | 5 |  |  | rmse | 0.90294 | 0.891145 | 0.0130623 | mgb_win | 8.93715 |
+| tabarena_main_0624 | random600 | drop | regression | airfoil_self_noise.csv | 5 |  |  | rmse | 1.40665 | 1.52087 | -0.081196 | xgb_win | 13.878 |
+| tabarena_main_0624 | random600 | drop | regression | concrete_compressive_strength.csv | 5 |  |  | rmse | 3.89667 | 3.90686 | -0.00261404 | xgb_win | 11.787 |
+| tabarena_main_0624 | random600 | drop | regression | diamonds.csv | 5 |  |  | rmse | 1,338.3 | 1,355.7 | -0.0130364 | xgb_win | 10.102 |
+| tabarena_main_0624 | random600 | drop | regression | healthcare_insurance_expenses.csv | 5 |  |  | rmse | 11,508.0 | 11,608.5 | -0.00873052 | xgb_win | 6.316 |
+| tabarena_main_0624 | random600 | drop | regression | houses.csv | 5 |  |  | rmse | 0.212653 | 0.25597 | -0.203699 | xgb_win | 8.03045 |
+| tabarena_main_0624 | random600 | drop | regression | miami_housing.csv | 5 |  |  | rmse | 83,836.7 | 83,450.9 | 0.00460172 | mgb_win | 14.064 |
+| tabarena_main_0624 | random600 | drop | regression | physiochemical_protein.csv | 5 |  |  | rmse | 3.43548 | 3.41086 | 0.00716682 | mgb_win | 9.80042 |
+| tabarena_main_0624 | random600 | drop | regression | wine_quality.csv | 5 |  |  | rmse | 0.588047 | 0.593125 | -0.00863573 | xgb_win | 16.756 |
+| tabarena_main_0624 | random300 | onehot | binary | Amazon_employee_access.csv | 5 | 32,769.0 | 9 | auc | 0.859789 | 0.858608 | -0.0011802 | xgb_win | 13.384 |
+| tabarena_main_0624 | random300 | onehot | binary | Bank_Customer_Churn.csv | 5 | 10,000.0 | 13.000 | auc | 0.868422 | 0.870679 | 0.0022578 | mgb_win | 29.800 |
+| tabarena_main_0624 | random300 | onehot | binary | E-CommereShippingData.csv | 5 | 10,999.0 | 19.000 | auc | 0.745365 | 0.74498 | -0.0003852 | xgb_win | 62.004 |
+| tabarena_main_0624 | random300 | onehot | binary | Fitness_Club.csv | 5 | 1,480.0 | 18.000 | auc | 0.810823 | 0.808593 | -0.0022304 | xgb_win | 89.569 |
+| tabarena_main_0624 | random300 | onehot | binary | GiveMeSomeCredit.csv | 5 | 120,269.0 | 10.000 | auc | 0.856136 | 0.85561 | -0.0005264 | xgb_win | 18.137 |
+| tabarena_main_0624 | random300 | onehot | binary | Is-this-a-good-customer.csv | 5 | 1,723.0 | 42.000 | auc | 0.734754 | 0.728662 | -0.0060918 | xgb_win | 503.589 |
+| tabarena_main_0624 | random300 | onehot | binary | blood-transfusion-service-center.csv | 5 | 748.000 | 4 | auc | 0.717556 | 0.72045 | 0.0028948 | mgb_win | 7.81461 |
+| tabarena_main_0624 | random300 | onehot | binary | churn.csv | 5 | 5,000.0 | 19.000 | auc | 0.922337 | 0.92275 | 0.0004134 | mgb_win | 56.504 |
+| tabarena_main_0624 | random300 | onehot | binary | credit-g.csv | 5 | 1,000.0 | 61.000 | auc | 0.787786 | 0.793047 | 0.0052616 | mgb_win | 1,114.7 |
+| tabarena_main_0624 | random300 | onehot | binary | diabetes.csv | 5 | 768.000 | 8 | auc | 0.828799 | 0.827769 | -0.00103 | xgb_win | 24.989 |
+| tabarena_main_0624 | random300 | onehot | binary | hazelnut-spread-contaminant-detection.csv | 5 | 2,400.0 | 30.000 | auc | 0.97949 | 0.983219 | 0.003729 | mgb_win | 57.382 |
+| tabarena_main_0624 | random300 | onehot | binary | qsar-biodeg.csv | 5 | 1,054.0 | 41.000 | auc | 0.932492 | 0.931635 | -0.0008572 | xgb_win | 246.313 |
+| tabarena_main_0624 | random300 | onehot | binary | seismic-bumps.csv | 5 | 2,584.0 | 21.000 | auc | 0.783599 | 0.775025 | -0.0085736 | xgb_win | 114.457 |
+| tabarena_main_0624 | random300 | onehot | multiclass | SDSS17.csv | 5 | 78,053.0 | 11.000 | logloss | 0.0726283 | 0.0728067 | -0.00245689 | xgb_win | 21.001 |
+| tabarena_main_0624 | random300 | onehot | multiclass | maternal_health_risk.csv | 5 | 1,014.0 | 6 | logloss | 0.40045 | 0.393375 | 0.0176666 | mgb_win | 21.181 |
+| tabarena_main_0624 | random300 | onehot | multiclass | website_phishing.csv | 5 | 1,353.0 | 25.000 | logloss | 0.245462 | 0.239167 | 0.0256471 | mgb_win | 245.190 |
+| tabarena_main_0624 | random600 | onehot | regression | Another-Dataset-on-used-Fiat-500.csv | 5 | 1,538.0 | 9 | rmse | 740.777 | 748.834 | -0.0108759 | xgb_win | 17.186 |
+| tabarena_main_0624 | random600 | onehot | regression | QSAR_fish_toxicity.csv | 5 | 907.000 | 6 | rmse | 0.90294 | 0.891145 | 0.0130622 | mgb_win | 8.27573 |
+| tabarena_main_0624 | random600 | onehot | regression | airfoil_self_noise.csv | 5 | 1,503.0 | 5 | rmse | 1.40665 | 1.52087 | -0.0811986 | xgb_win | 14.679 |
+| tabarena_main_0624 | random600 | onehot | regression | concrete_compressive_strength.csv | 5 | 1,030.0 | 8 | rmse | 3.89667 | 3.90686 | -0.00261454 | xgb_win | 11.499 |
+| tabarena_main_0624 | random600 | onehot | regression | diamonds.csv | 5 | 53,940.0 | 26.000 | rmse | 530.343 | 533.093 | -0.0051857 | xgb_win | 80.921 |
+| tabarena_main_0624 | random600 | onehot | regression | healthcare_insurance_expenses.csv | 5 | 1,338.0 | 11.000 | rmse | 4,546.9 | 4,494.0 | 0.0116465 | mgb_win | 38.104 |
+| tabarena_main_0624 | random600 | onehot | regression | houses.csv | 5 | 20,640.0 | 8 | rmse | 0.212653 | 0.25597 | -0.203699 | xgb_win | 8.0938 |
+| tabarena_main_0624 | random600 | onehot | regression | miami_housing.csv | 5 | 13,776.0 | 15.000 | rmse | 83,836.7 | 83,450.9 | 0.0046018 | mgb_win | 12.633 |
+| tabarena_main_0624 | random600 | onehot | regression | physiochemical_protein.csv | 5 | 45,730.0 | 9 | rmse | 3.43548 | 3.41086 | 0.00716698 | mgb_win | 9.78153 |
+| tabarena_main_0624 | random600 | onehot | regression | wine_quality.csv | 5 | 6,497.0 | 13.000 | rmse | 0.590158 | 0.5889 | 0.00213062 | mgb_win | 18.010 |
+| tabular_otherdata_0629 | random300 | drop | binary | banknote-authentication.csv | 5 | 1,372.0 | 4 | auc | 0.999989 | 0.999968 | -2.16e-05 | tie | 10.674 |
+| tabular_otherdata_0629 | random300 | drop | binary | breast-w.csv | 5 | 683.000 | 9 | auc | 0.994144 | 0.994137 | -6.2e-06 | tie | 37.619 |
+| tabular_otherdata_0629 | random300 | drop | binary | credit-approval.csv | 5 | 653.000 | 6 | auc | 0.865395 | 0.858539 | -0.0068568 | xgb_win | 16.532 |
+| tabular_otherdata_0629 | random300 | drop | binary | haberman.csv | 5 | 306.000 | 3 | auc | 0.674657 | 0.658448 | -0.0162092 | xgb_win | 5.67014 |
+| tabular_otherdata_0629 | random300 | drop | binary | ilpd.csv | 5 | 583.000 | 9 | auc | 0.739726 | 0.759708 | 0.0199818 | mgb_win | 31.921 |
+| tabular_otherdata_0629 | random300 | drop | binary | mozilla4.csv | 5 | 15,545.0 | 5 | auc | 0.982735 | 0.981277 | -0.0014576 | xgb_win | 11.506 |
+| tabular_otherdata_0629 | random300 | drop | binary | pc1.csv | 5 | 1,109.0 | 21.000 | auc | 0.847202 | 0.843418 | -0.0037844 | xgb_win | 96.807 |
+| tabular_otherdata_0629 | random300 | drop | binary | phoneme.csv | 5 | 5,404.0 | 5 | auc | 0.959221 | 0.965649 | 0.0064284 | mgb_win | 9.52791 |
+| tabular_otherdata_0629 | random300 | drop | multiclass | balance-scale.csv | 5 | 625.000 | 4 | logloss | 0.233793 | 0.342915 | -0.46675 | xgb_win | 14.177 |
+| tabular_otherdata_0629 | random300 | drop | multiclass | vowel.csv | 5 | 990.000 | 10.000 | logloss | 0.228168 | 0.132048 | 0.42127 | mgb_win | 37.095 |
+| tabular_otherdata_0629 | random300 | drop | regression | Moneyball.csv | 5 | 114.000 | 12.000 | rmse | 24.016 | 22.945 | 0.0445929 | mgb_win | 31.804 |
+| tabular_otherdata_0629 | random300 | drop | regression | abalone.csv | 5 | 4,177.0 | 7 | rmse | 2.1594 | 2.14412 | 0.00707419 | mgb_win | 8.91441 |
+| tabular_otherdata_0629 | random300 | drop | regression | boston.csv | 5 | 506.000 | 13.000 | rmse | 3.04923 | 3.4493 | -0.131201 | xgb_win | 20.309 |
+| tabular_otherdata_0629 | random300 | drop | regression | energy_efficiency.csv | 5 | 768.000 | 8 | rmse | 0.346123 | 0.357401 | -0.0325849 | xgb_win | 32.017 |
+| tabular_otherdata_0629 | random300 | drop | regression | friedman1.csv | 5 | 2,000.0 | 10.000 | rmse | 1.23855 | 1.24674 | -0.00661743 | xgb_win | 8.46953 |
+| tabular_otherdata_0629 | random300 | drop | regression | kin8nm.csv | 5 | 8,192.0 | 8 | rmse | 0.112534 | 0.100273 | 0.108954 | mgb_win | 10.061 |
+| tabular_otherdata_0629 | random300 | drop | regression | space_ga.csv | 5 | 3,107.0 | 6 | rmse | 0.108362 | 0.110058 | -0.0156538 | xgb_win | 6.54929 |
+| tabular_otherdata_0629 | random300 | onehot | binary | banknote-authentication.csv | 5 | 1,372.0 | 4 | auc | 0.999989 | 0.999968 | -2.16e-05 | tie | 10.137 |
+| tabular_otherdata_0629 | random300 | onehot | binary | breast-w.csv | 5 | 683.000 | 9 | auc | 0.994144 | 0.994137 | -6.2e-06 | tie | 43.722 |
+| tabular_otherdata_0629 | random300 | onehot | binary | haberman.csv | 5 | 306.000 | 3 | auc | 0.674657 | 0.658448 | -0.0162092 | xgb_win | 5.70968 |
+| tabular_otherdata_0629 | random300 | onehot | binary | ilpd.csv | 5 | 583.000 | 11.000 | auc | 0.751779 | 0.769598 | 0.0178194 | mgb_win | 52.378 |
+| tabular_otherdata_0629 | random300 | onehot | binary | phoneme.csv | 5 | 5,404.0 | 5 | auc | 0.959221 | 0.965649 | 0.0064284 | mgb_win | 10.233 |
+| tabular_otherdata_0629 | random300 | onehot | multiclass | balance-scale.csv | 5 | 625.000 | 4 | logloss | 0.233793 | 0.342915 | -0.46675 | xgb_win | 13.625 |
+| tabular_otherdata_0629 | random300 | onehot | regression | Moneyball.csv | 5 | 114.000 | 42.000 | rmse | 23.338 | 22.262 | 0.0461205 | mgb_win | 289.436 |
+| tabular_otherdata_0629 | random300 | onehot | regression | abalone.csv | 5 | 4,177.0 | 10.000 | rmse | 2.14617 | 2.12685 | 0.00900116 | mgb_win | 19.646 |
+| tabular_otherdata_0629 | random300 | onehot | regression | boston.csv | 5 | 506.000 | 13.000 | rmse | 3.04923 | 3.4493 | -0.131201 | xgb_win | 25.008 |
+| tabular_otherdata_0629 | random300 | onehot | regression | energy_efficiency.csv | 5 | 768.000 | 8 | rmse | 0.346123 | 0.357401 | -0.0325849 | xgb_win | 40.692 |
+| tabular_otherdata_0629 | random300 | onehot | regression | friedman1.csv | 5 | 2,000.0 | 10.000 | rmse | 1.23855 | 1.24674 | -0.00661743 | xgb_win | 10.210 |
+| tabular_otherdata_0629 | random300 | onehot | regression | space_ga.csv | 5 | 3,107.0 | 6 | rmse | 0.108362 | 0.110058 | -0.0156538 | xgb_win | 7.86251 |

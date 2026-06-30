@@ -1,0 +1,37 @@
+{
+  "run_id": "smoke_tabpfn_ts_contract_20260629",
+  "mode": "smoke",
+  "datasets": [
+    "solar"
+  ],
+  "models": [
+    "xgb_cpu"
+  ],
+  "split_protocol": "fixed",
+  "feature_mode": "tabpfn_ts",
+  "target_mode": "sequence",
+  "output_scope": "all",
+  "seq_len": 6,
+  "seq_lens": [
+    6
+  ],
+  "pred_len": 3,
+  "pred_lens": [
+    3
+  ],
+  "seed": 42,
+  "seeds": [
+    42
+  ],
+  "max_raw_rows": 80,
+  "max_features": 2,
+  "outer_folds": 5,
+  "inner_folds": 4,
+  "max_candidates": 1,
+  "task_workers": 1,
+  "effective_task_workers": 1,
+  "task_executor": "sequential",
+  "results_dir": "/Users/ancd/VSCodeProject/check_codereview0623-adapter/timeseries_extra_random300/results/smoke_tabpfn_ts_contract_20260629",
+  "summary_rows": 1,
+  "candidate_rows": 1
+}

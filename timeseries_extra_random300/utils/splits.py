@@ -37,6 +37,7 @@ def fixed_chronological_split(
     *,
     train_fraction: float = 0.6,
     val_fraction: float = 0.2,
+    gap: int = 0,
 ) -> Tuple[np.ndarray, np.ndarray, np.ndarray, FixedChronologicalSplit]:
     if n_samples < 3:
         raise ValueError(f"Not enough samples for fixed chronological split: {n_samples}")
@@ -46,17 +47,26 @@ def fixed_chronological_split(
         raise ValueError("val_fraction must be in (0, 1)")
     if train_fraction + val_fraction >= 1.0:
         raise ValueError("train_fraction + val_fraction must be less than 1")
+    if gap < 0:
+        raise ValueError("gap must be non-negative")
 
-    train_end = int(n_samples * train_fraction)
+    train_end = max(1, min(int(n_samples * train_fraction), n_samples - 2 - 2 * gap))
+    val_start = train_end + gap
     val_end = train_end + int(n_samples * val_fraction)
-    train_end = max(1, min(train_end, n_samples - 2))
-    val_end = max(train_end + 1, min(val_end, n_samples - 1))
+    val_end = max(val_start + 1, min(val_end, n_samples - 1 - gap))
+    test_start = val_end + gap
+    if not (0 < train_end <= val_start < val_end <= test_start < n_samples):
+        raise ValueError(
+            f"Not enough samples for fixed chronological split with gap={gap}: "
+            f"n_samples={n_samples}, train_end={train_end}, val_start={val_start}, "
+            f"val_end={val_end}, test_start={test_start}"
+        )
     split = FixedChronologicalSplit(
         train_start=0,
         train_end=train_end,
-        val_start=train_end,
+        val_start=val_start,
         val_end=val_end,
-        test_start=val_end,
+        test_start=test_start,
         test_end=n_samples,
     )
     train_idx = np.arange(split.train_start, split.train_end, dtype=np.int64)

@@ -1,0 +1,6 @@
+[2026-06-29 07:16:10] start task_id=multiclass__anneal.csv__current_metagb__out5
+[2026-06-29 07:16:10] config task_type=multiclass dataset=anneal.csv model=current_metagb outer_fold=5/5 inner_folds=4 candidates=30 objective=multi:softprob primary_metric=logloss direction=minimize rows=898 features=82 classes=5
+[2026-06-29 07:16:10] split train_rows=719 test_rows=179 inner_splits=4
+[2026-06-29 07:21:12] candidate 1/30 logloss=0.0534484 status=ok
+[2026-06-29 08:53:36] candidate 10/30 logloss=0.0767245 status=ok
+[2026-06-29 13:22:04] candidate 20/30 logloss=0.0897691 status=ok

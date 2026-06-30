@@ -1,0 +1,9 @@
+[2026-06-29 07:55:34] start task_id=binary__qsar-biodeg.csv__current_metagb__out2
+[2026-06-29 07:55:34] config task_type=binary dataset=qsar-biodeg.csv model=current_metagb outer_fold=2/5 inner_folds=4 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=1054 features=41 classes=2
+[2026-06-29 07:55:34] split train_rows=843 test_rows=211 inner_splits=4
+[2026-06-29 07:55:54] candidate 1/30 auc=0.93289 status=ok
+[2026-06-29 08:02:36] candidate 10/30 auc=0.933015 status=ok
+[2026-06-29 08:19:11] candidate 20/30 auc=0.932738 status=ok
+[2026-06-29 08:45:44] candidate 30/30 auc=0.932193 status=ok
+[2026-06-29 08:45:44] selected candidate_index=13 candidate_id=xgb_0279_pf05_sa0 val_auc=0.935251 val_std=0.0121666
+[2026-06-29 08:46:06] finish best=13 test_auc=0.936117 final_train_sec=22.186 final_predict_sec=0.00380524 elapsed_sec=3032.02 status=ok
