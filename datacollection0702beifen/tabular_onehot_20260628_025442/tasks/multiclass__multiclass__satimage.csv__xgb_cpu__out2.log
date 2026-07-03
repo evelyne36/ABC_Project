@@ -1,0 +1,12 @@
+[2026-07-01 10:40:49] start task_id=multiclass__multiclass__satimage.csv__xgb_cpu__out2
+[2026-07-01 10:40:49] config task_type=multiclass dataset=multiclass__satimage.csv model=xgb_cpu outer_fold=2/5 inner_folds=4 candidates=300 objective=multi:softprob primary_metric=logloss direction=minimize rows=6430 original_rows=6430 max_rows_per_dataset=0 features=36 classes=6
+[2026-07-01 10:40:49] split train_rows=5144 test_rows=1286 inner_splits=4
+[2026-07-01 10:41:10] candidate 1/300 logloss=0.249472 status=ok
+[2026-07-01 10:51:22] candidate 50/300 logloss=0.241625 status=ok
+[2026-07-01 11:01:28] candidate 100/300 logloss=0.249802 status=ok
+[2026-07-01 11:12:10] candidate 150/300 logloss=0.51262 status=ok
+[2026-07-01 11:22:11] candidate 200/300 logloss=0.309047 status=ok
+[2026-07-01 11:32:10] candidate 250/300 logloss=0.241721 status=ok
+[2026-07-01 11:42:55] candidate 300/300 logloss=0.288997 status=ok
+[2026-07-01 11:42:55] selected candidate_index=224 candidate_id=xgb_0224 val_logloss=0.233631 val_std=0.0131325
+[2026-07-01 11:43:01] finish best=224 test_logloss=0.213313 final_train_sec=5.10234 final_predict_sec=0.0989373 elapsed_sec=3731.12 status=ok

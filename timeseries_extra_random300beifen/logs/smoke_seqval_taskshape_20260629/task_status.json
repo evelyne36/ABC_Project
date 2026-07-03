@@ -1,0 +1,12 @@
+{
+  "run_id": "smoke_seqval_taskshape_20260629",
+  "total": 4,
+  "completed": 4,
+  "failed": 0,
+  "tasks": {
+    "ETTh1__xgb_cpu__seed0__p1": "ok",
+    "ETTh1__xgb_cpu__seed0__p24": "ok",
+    "ETTh1__current_metagb__seed0__p1": "ok",
+    "ETTh1__current_metagb__seed0__p24": "ok"
+  }
+}

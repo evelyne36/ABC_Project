@@ -90,6 +90,49 @@ def test_tabpfn_ts_feature_mode_uses_sequence_horizon_gap() -> None:
     assert horizon_gap(args) == 23
 
 
+def test_window_summary_feature_mode_is_accepted_for_gbdt_smoke() -> None:
+    args = parse_args(
+        "--split-protocol",
+        "fixed",
+        "--feature-mode",
+        "window_summary",
+        "--target-mode",
+        "sequence",
+        "--output-scope",
+        "all",
+        "--models",
+        "xgb_cpu",
+        "--max-candidates",
+        "1",
+    )
+
+    assert args.feature_mode == "window_summary"
+    assert args.target_mode == "sequence"
+
+
+def test_origin_state_feature_mode_accepts_channel_budget() -> None:
+    args = parse_args(
+        "--split-protocol",
+        "fixed",
+        "--feature-mode",
+        "origin_state",
+        "--origin-state-channel-budget",
+        "8",
+        "--target-mode",
+        "sequence",
+        "--output-scope",
+        "all",
+        "--models",
+        "xgb_cpu",
+        "--max-candidates",
+        "1",
+    )
+
+    assert args.feature_mode == "origin_state"
+    assert args.origin_state_channel_budget == 8
+    assert args.target_mode == "sequence"
+
+
 def test_fixed_protocol_expands_tasks_by_seed_seq_len_pred_len_dataset_and_model() -> None:
     args = parse_args(
         "--split-protocol",

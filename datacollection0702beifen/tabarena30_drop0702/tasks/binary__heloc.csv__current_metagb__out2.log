@@ -1,0 +1,9 @@
+[2026-06-28 21:25:10] start task_id=binary__heloc.csv__current_metagb__out2
+[2026-06-28 21:25:10] config task_type=binary dataset=heloc.csv model=current_metagb outer_fold=2/5 inner_folds=4 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=10459 features=23 classes=2
+[2026-06-28 21:25:10] split train_rows=8367 test_rows=2092 inner_splits=4
+[2026-06-28 21:25:33] candidate 1/30 auc=0.795163 status=ok
+[2026-06-28 21:31:18] candidate 10/30 auc=0.794964 status=ok
+[2026-06-28 21:43:08] candidate 20/30 auc=0.79506 status=ok
+[2026-06-28 22:03:47] candidate 30/30 auc=0.795408 status=ok
+[2026-06-28 22:03:47] selected candidate_index=9 candidate_id=xgb_0217_pf03_sa2 val_auc=0.795716 val_std=0.0063626
+[2026-06-28 22:04:02] finish best=9 test_auc=0.810625 final_train_sec=15.1029 final_predict_sec=0.0453765 elapsed_sec=2332.54 status=ok

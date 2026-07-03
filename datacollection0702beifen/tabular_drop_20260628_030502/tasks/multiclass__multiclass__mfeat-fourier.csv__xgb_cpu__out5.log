@@ -1,0 +1,12 @@
+[2026-07-02 18:05:16] start task_id=multiclass__multiclass__mfeat-fourier.csv__xgb_cpu__out5
+[2026-07-02 18:05:16] config task_type=multiclass dataset=multiclass__mfeat-fourier.csv model=xgb_cpu outer_fold=5/5 inner_folds=4 candidates=300 objective=multi:softprob primary_metric=logloss direction=minimize rows=2000 original_rows=2000 max_rows_per_dataset=0 features=76 classes=10
+[2026-07-02 18:05:16] split train_rows=1600 test_rows=400 inner_splits=4
+[2026-07-02 18:07:05] candidate 1/300 logloss=0.476975 status=ok
+[2026-07-02 18:49:45] candidate 50/300 logloss=0.448435 status=ok
+[2026-07-02 19:33:04] candidate 100/300 logloss=0.463661 status=ok
+[2026-07-02 20:20:19] candidate 150/300 logloss=0.828792 status=ok
+[2026-07-02 21:03:29] candidate 200/300 logloss=0.516233 status=ok
+[2026-07-02 21:46:27] candidate 250/300 logloss=0.469508 status=ok
+[2026-07-02 22:34:13] candidate 300/300 logloss=0.526129 status=ok
+[2026-07-02 22:34:13] selected candidate_index=231 candidate_id=xgb_0231 val_logloss=0.448105 val_std=0.0449423
+[2026-07-02 22:34:27] finish best=231 test_logloss=0.369201 final_train_sec=13.7528 final_predict_sec=0.0361264 elapsed_sec=16151.3 status=ok

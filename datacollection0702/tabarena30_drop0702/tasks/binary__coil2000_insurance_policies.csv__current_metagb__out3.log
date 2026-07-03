@@ -1,0 +1,9 @@
+[2026-06-28 18:23:07] start task_id=binary__coil2000_insurance_policies.csv__current_metagb__out3
+[2026-06-28 18:23:07] config task_type=binary dataset=coil2000_insurance_policies.csv model=current_metagb outer_fold=3/5 inner_folds=4 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=9822 features=80 classes=2
+[2026-06-28 18:23:07] split train_rows=7858 test_rows=1964 inner_splits=4
+[2026-06-28 18:27:09] candidate 1/30 auc=0.754743 status=ok
+[2026-06-28 19:43:23] candidate 10/30 auc=0.750357 status=ok
+[2026-06-28 23:30:26] candidate 20/30 auc=0.75723 status=ok
+[2026-06-29 06:31:50] candidate 30/30 auc=0.760256 status=ok
+[2026-06-29 06:31:50] selected candidate_index=6 candidate_id=xgb_0036_pf02_sa2 val_auc=0.76159 val_std=0.0129379
+[2026-06-29 06:33:48] finish best=6 test_auc=0.743847 final_train_sec=117.914 final_predict_sec=0.0370906 elapsed_sec=43840.5 status=ok

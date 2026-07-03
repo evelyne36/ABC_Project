@@ -1,0 +1,12 @@
+[2026-06-29 05:39:14] start task_id=regression__regression__kin8nm.csv__current_metagb__out1
+[2026-06-29 05:39:14] config task_type=regression dataset=regression__kin8nm.csv model=current_metagb outer_fold=1/5 inner_folds=4 candidates=300 objective=reg:squarederror primary_metric=rmse direction=minimize rows=8192 original_rows=8192 max_rows_per_dataset=0 features=8 classes=0
+[2026-06-29 05:39:14] split train_rows=6553 test_rows=1639 inner_splits=4
+[2026-06-29 05:39:44] candidate 1/300 rmse=0.129649 status=ok
+[2026-06-29 06:34:08] candidate 50/300 rmse=0.133086 status=ok
+[2026-06-29 07:20:49] candidate 100/300 rmse=0.133734 status=ok
+[2026-06-29 08:29:43] candidate 150/300 rmse=0.228749 status=ok
+[2026-06-29 09:11:34] candidate 200/300 rmse=0.158138 status=ok
+[2026-06-29 10:00:15] candidate 250/300 rmse=0.11942 status=ok
+[2026-06-29 10:50:13] candidate 300/300 rmse=0.107671 status=ok
+[2026-06-29 10:50:13] selected candidate_index=204 candidate_id=metagb_pf08_sa2_007 val_rmse=0.104267 val_std=0.00221944
+[2026-06-29 10:51:13] finish best=204 test_rmse=0.103492 final_train_sec=60.0395 final_predict_sec=0.106753 elapsed_sec=18719.7 status=ok

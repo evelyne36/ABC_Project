@@ -1,0 +1,36 @@
+[2026-06-28 20:52:50] start task_id=multiclass__students_dropout_and_academic_success.csv__xgb_cpu__out4
+[2026-06-28 20:52:50] config task_type=multiclass dataset=students_dropout_and_academic_success.csv model=xgb_cpu outer_fold=4/5 inner_folds=4 candidates=300 objective=multi:softprob primary_metric=logloss direction=minimize rows=4424 features=255 classes=3
+[2026-06-28 20:52:50] split train_rows=3539 test_rows=885 inner_splits=4
+[2026-06-28 20:53:14] candidate 1/300 logloss=0.556381 status=ok
+[2026-06-28 20:55:55] candidate 10/300 logloss=0.571286 status=ok
+[2026-06-28 20:58:16] candidate 20/300 logloss=0.556904 status=ok
+[2026-06-28 21:01:14] candidate 30/300 logloss=0.766953 status=ok
+[2026-06-28 21:04:20] candidate 40/300 logloss=0.557756 status=ok
+[2026-06-28 21:06:46] candidate 50/300 logloss=0.549273 status=ok
+[2026-06-28 21:09:13] candidate 60/300 logloss=0.575357 status=ok
+[2026-06-28 21:12:25] candidate 70/300 logloss=0.555731 status=ok
+[2026-06-28 21:14:32] candidate 80/300 logloss=0.548536 status=ok
+[2026-06-28 21:17:07] candidate 90/300 logloss=0.571598 status=ok
+[2026-06-28 21:20:28] candidate 100/300 logloss=0.55068 status=ok
+[2026-06-28 21:23:42] candidate 110/300 logloss=0.554642 status=ok
+[2026-06-28 21:27:02] candidate 120/300 logloss=0.57865 status=ok
+[2026-06-28 21:29:13] candidate 130/300 logloss=0.582618 status=ok
+[2026-06-28 21:32:49] candidate 140/300 logloss=0.630589 status=ok
+[2026-06-28 21:35:58] candidate 150/300 logloss=0.637866 status=ok
+[2026-06-28 21:39:01] candidate 160/300 logloss=0.610004 status=ok
+[2026-06-28 21:41:21] candidate 170/300 logloss=0.646359 status=ok
+[2026-06-28 21:43:52] candidate 180/300 logloss=0.563701 status=ok
+[2026-06-28 21:46:55] candidate 190/300 logloss=0.549692 status=ok
+[2026-06-28 21:49:54] candidate 200/300 logloss=0.572794 status=ok
+[2026-06-28 21:53:00] candidate 210/300 logloss=0.549951 status=ok
+[2026-06-28 21:56:17] candidate 220/300 logloss=0.559164 status=ok
+[2026-06-28 21:58:52] candidate 230/300 logloss=0.552125 status=ok
+[2026-06-28 22:01:25] candidate 240/300 logloss=0.726687 status=ok
+[2026-06-28 22:04:25] candidate 250/300 logloss=0.551774 status=ok
+[2026-06-28 22:07:49] candidate 260/300 logloss=0.554152 status=ok
+[2026-06-28 22:11:45] candidate 270/300 logloss=0.61213 status=ok
+[2026-06-28 22:14:58] candidate 280/300 logloss=0.607044 status=ok
+[2026-06-28 22:17:47] candidate 290/300 logloss=0.551411 status=ok
+[2026-06-28 22:20:21] candidate 300/300 logloss=0.678547 status=ok
+[2026-06-28 22:20:21] selected candidate_index=24 candidate_id=xgb_0024 val_logloss=0.545968 val_std=0.0281519
+[2026-06-28 22:20:25] finish best=24 test_logloss=0.546197 final_train_sec=3.6083 final_predict_sec=0.0412249 elapsed_sec=5255.03 status=ok

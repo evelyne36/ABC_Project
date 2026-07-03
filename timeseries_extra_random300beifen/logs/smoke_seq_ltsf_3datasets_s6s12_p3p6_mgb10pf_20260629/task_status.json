@@ -1,0 +1,20 @@
+{
+  "run_id": "smoke_seq_ltsf_3datasets_s6s12_p3p6_mgb10pf_20260629",
+  "total": 12,
+  "completed": 12,
+  "failed": 0,
+  "tasks": {
+    "ETTh1__xgb_cpu__seed0__p3": "ok",
+    "ETTh1__xgb_cpu__seed0__p6": "ok",
+    "ETTh1__current_metagb__seed0__p3": "ok",
+    "ETTh1__current_metagb__seed0__p6": "ok",
+    "exchange_rate__xgb_cpu__seed0__p3": "ok",
+    "exchange_rate__xgb_cpu__seed0__p6": "ok",
+    "exchange_rate__current_metagb__seed0__p3": "ok",
+    "exchange_rate__current_metagb__seed0__p6": "ok",
+    "Weather__xgb_cpu__seed0__p3": "ok",
+    "Weather__xgb_cpu__seed0__p6": "ok",
+    "Weather__current_metagb__seed0__p3": "ok",
+    "Weather__current_metagb__seed0__p6": "ok"
+  }
+}

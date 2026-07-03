@@ -1,0 +1,12 @@
+[2026-06-30 00:31:37] start task_id=binary__binary__electricity.csv__xgb_cpu__out4
+[2026-06-30 00:31:37] config task_type=binary dataset=binary__electricity.csv model=xgb_cpu outer_fold=4/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=38474 original_rows=38474 max_rows_per_dataset=0 features=7 classes=2
+[2026-06-30 00:31:37] split train_rows=30779 test_rows=7695 inner_splits=4
+[2026-06-30 00:31:45] candidate 1/300 auc=0.935258 status=ok
+[2026-06-30 00:36:40] candidate 50/300 auc=0.910669 status=ok
+[2026-06-30 00:41:23] candidate 100/300 auc=0.911951 status=ok
+[2026-06-30 00:46:32] candidate 150/300 auc=0.888491 status=ok
+[2026-06-30 00:51:08] candidate 200/300 auc=0.893849 status=ok
+[2026-06-30 00:55:39] candidate 250/300 auc=0.928436 status=ok
+[2026-06-30 01:00:39] candidate 300/300 auc=0.952332 status=ok
+[2026-06-30 01:00:39] selected candidate_index=272 candidate_id=xgb_0272 val_auc=0.960434 val_std=0.000863796
+[2026-06-30 01:00:42] finish best=272 test_auc=0.96618 final_train_sec=3.30769 final_predict_sec=0.180978 elapsed_sec=1745.02 status=ok

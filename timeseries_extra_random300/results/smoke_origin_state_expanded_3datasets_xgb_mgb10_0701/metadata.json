@@ -1,0 +1,41 @@
+{
+  "run_id": "smoke_origin_state_expanded_3datasets_xgb_mgb10_0701",
+  "mode": "smoke",
+  "datasets": [
+    "ETTh1",
+    "electricity",
+    "traffic"
+  ],
+  "models": [
+    "xgb_cpu",
+    "current_metagb"
+  ],
+  "split_protocol": "fixed",
+  "feature_mode": "origin_state",
+  "origin_state_channel_budget": 32,
+  "target_mode": "direct",
+  "output_scope": "target",
+  "seq_len": 6,
+  "seq_lens": [
+    6
+  ],
+  "pred_len": 2,
+  "pred_lens": [
+    2
+  ],
+  "seed": 42,
+  "seeds": [
+    42
+  ],
+  "max_raw_rows": 160,
+  "max_features": 0,
+  "outer_folds": 5,
+  "inner_folds": 4,
+  "max_candidates": 10,
+  "task_workers": 1,
+  "effective_task_workers": 1,
+  "task_executor": "sequential",
+  "results_dir": "/Users/ancd/VSCodeProject/check_codereview0623-adapter/timeseries_extra_random300/results/smoke_origin_state_expanded_3datasets_xgb_mgb10_0701",
+  "summary_rows": 6,
+  "candidate_rows": 60
+}

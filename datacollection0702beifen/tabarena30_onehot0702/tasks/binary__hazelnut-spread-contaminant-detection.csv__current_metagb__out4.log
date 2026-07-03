@@ -1,0 +1,9 @@
+[2026-06-29 12:55:37] start task_id=binary__hazelnut-spread-contaminant-detection.csv__current_metagb__out4
+[2026-06-29 12:55:37] config task_type=binary dataset=hazelnut-spread-contaminant-detection.csv model=current_metagb outer_fold=4/5 inner_folds=4 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=2400 features=30 classes=2
+[2026-06-29 12:55:37] split train_rows=1920 test_rows=480 inner_splits=4
+[2026-06-29 12:56:09] candidate 1/30 auc=0.975369 status=ok
+[2026-06-29 13:06:04] candidate 10/30 auc=0.975779 status=ok
+[2026-06-29 13:29:22] candidate 20/30 auc=0.976938 status=ok
+[2026-06-29 14:07:06] candidate 30/30 auc=0.975744 status=ok
+[2026-06-29 14:07:06] selected candidate_index=20 candidate_id=xgb_0294_pf07_sa1 val_auc=0.976938 val_std=0.00526663
+[2026-06-29 14:07:49] finish best=20 test_auc=0.981701 final_train_sec=42.1651 final_predict_sec=0.0149013 elapsed_sec=4331.54 status=ok

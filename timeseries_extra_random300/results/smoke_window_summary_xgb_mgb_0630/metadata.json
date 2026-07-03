@@ -1,0 +1,38 @@
+{
+  "run_id": "smoke_window_summary_xgb_mgb_0630",
+  "mode": "smoke",
+  "datasets": [
+    "ETTh1"
+  ],
+  "models": [
+    "xgb_cpu",
+    "current_metagb"
+  ],
+  "split_protocol": "fixed",
+  "feature_mode": "window_summary",
+  "target_mode": "sequence",
+  "output_scope": "all",
+  "seq_len": 6,
+  "seq_lens": [
+    6
+  ],
+  "pred_len": 2,
+  "pred_lens": [
+    2
+  ],
+  "seed": 42,
+  "seeds": [
+    42
+  ],
+  "max_raw_rows": 120,
+  "max_features": 2,
+  "outer_folds": 5,
+  "inner_folds": 4,
+  "max_candidates": 10,
+  "task_workers": 1,
+  "effective_task_workers": 1,
+  "task_executor": "sequential",
+  "results_dir": "/Users/ancd/VSCodeProject/check_codereview0623-adapter/timeseries_extra_random300/results/smoke_window_summary_xgb_mgb_0630",
+  "summary_rows": 2,
+  "candidate_rows": 20
+}

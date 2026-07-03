@@ -1,0 +1,9 @@
+[2026-06-29 09:48:15] start task_id=binary__Fitness_Club.csv__current_metagb__out2
+[2026-06-29 09:48:15] config task_type=binary dataset=Fitness_Club.csv model=current_metagb outer_fold=2/5 inner_folds=4 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=1480 features=18 classes=2
+[2026-06-29 09:48:15] split train_rows=1184 test_rows=296 inner_splits=4
+[2026-06-29 09:48:18] candidate 1/30 auc=0.808799 status=ok
+[2026-06-29 09:49:06] candidate 10/30 auc=0.807038 status=ok
+[2026-06-29 09:50:50] candidate 20/30 auc=0.807722 status=ok
+[2026-06-29 09:53:33] candidate 30/30 auc=0.808347 status=ok
+[2026-06-29 09:53:33] selected candidate_index=6 candidate_id=xgb_0203_pf02_sa2 val_auc=0.811639 val_std=0.0186985
+[2026-06-29 09:53:34] finish best=6 test_auc=0.828425 final_train_sec=1.42289 final_predict_sec=0.00296402 elapsed_sec=318.944 status=ok

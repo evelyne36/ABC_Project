@@ -1,0 +1,152 @@
+{
+  "splits": [
+    {
+      "dataset": "ETTh1",
+      "model": "current_metagb",
+      "split_protocol": "fixed",
+      "seed": 0,
+      "outer_fold": 1,
+      "fixed_split": {
+        "train_start": 0,
+        "train_end": 92,
+        "val_start": 92,
+        "val_end": 122,
+        "test_start": 122,
+        "test_end": 154
+      },
+      "seq_len": 6,
+      "seq_lens": [
+        6,
+        12
+      ],
+      "pred_len": 1,
+      "train_row_min": 0,
+      "train_row_max": 91,
+      "val_row_min": 92,
+      "val_row_max": 121,
+      "test_row_min": 122,
+      "test_row_max": 153,
+      "scaler_fit_start": 0,
+      "scaler_fit_end": 128,
+      "train_val_target_start": 6,
+      "train_val_target_end": 128,
+      "test_target_start": 128,
+      "test_target_end": 160,
+      "train_val_target_start_time": "2016-07-01 06:00:00",
+      "train_val_target_end_time": "2016-07-06 07:00:00",
+      "test_target_start_time": "2016-07-06 08:00:00",
+      "test_target_end_time": "2016-07-07 15:00:00"
+    },
+    {
+      "dataset": "ETTh1",
+      "model": "current_metagb",
+      "split_protocol": "fixed",
+      "seed": 0,
+      "outer_fold": 1,
+      "fixed_split": {
+        "train_start": 0,
+        "train_end": 75,
+        "val_start": 75,
+        "val_end": 100,
+        "test_start": 100,
+        "test_end": 125
+      },
+      "seq_len": 12,
+      "seq_lens": [
+        6,
+        12
+      ],
+      "pred_len": 24,
+      "train_row_min": 0,
+      "train_row_max": 74,
+      "val_row_min": 75,
+      "val_row_max": 99,
+      "test_row_min": 100,
+      "test_row_max": 124,
+      "scaler_fit_start": 0,
+      "scaler_fit_end": 135,
+      "train_val_target_start": 35,
+      "train_val_target_end": 135,
+      "test_target_start": 135,
+      "test_target_end": 160,
+      "train_val_target_start_time": "2016-07-02 11:00:00",
+      "train_val_target_end_time": "2016-07-06 14:00:00",
+      "test_target_start_time": "2016-07-06 15:00:00",
+      "test_target_end_time": "2016-07-07 15:00:00"
+    },
+    {
+      "dataset": "ETTh1",
+      "model": "xgb_cpu",
+      "split_protocol": "fixed",
+      "seed": 0,
+      "outer_fold": 1,
+      "fixed_split": {
+        "train_start": 0,
+        "train_end": 78,
+        "val_start": 78,
+        "val_end": 104,
+        "test_start": 104,
+        "test_end": 131
+      },
+      "seq_len": 6,
+      "seq_lens": [
+        6,
+        12
+      ],
+      "pred_len": 24,
+      "train_row_min": 0,
+      "train_row_max": 77,
+      "val_row_min": 78,
+      "val_row_max": 103,
+      "test_row_min": 104,
+      "test_row_max": 130,
+      "scaler_fit_start": 0,
+      "scaler_fit_end": 133,
+      "train_val_target_start": 29,
+      "train_val_target_end": 133,
+      "test_target_start": 133,
+      "test_target_end": 160,
+      "train_val_target_start_time": "2016-07-02 05:00:00",
+      "train_val_target_end_time": "2016-07-06 12:00:00",
+      "test_target_start_time": "2016-07-06 13:00:00",
+      "test_target_end_time": "2016-07-07 15:00:00"
+    },
+    {
+      "dataset": "ETTh1",
+      "model": "xgb_cpu",
+      "split_protocol": "fixed",
+      "seed": 0,
+      "outer_fold": 1,
+      "fixed_split": {
+        "train_start": 0,
+        "train_end": 88,
+        "val_start": 88,
+        "val_end": 117,
+        "test_start": 117,
+        "test_end": 148
+      },
+      "seq_len": 12,
+      "seq_lens": [
+        6,
+        12
+      ],
+      "pred_len": 1,
+      "train_row_min": 0,
+      "train_row_max": 87,
+      "val_row_min": 88,
+      "val_row_max": 116,
+      "test_row_min": 117,
+      "test_row_max": 147,
+      "scaler_fit_start": 0,
+      "scaler_fit_end": 129,
+      "train_val_target_start": 12,
+      "train_val_target_end": 129,
+      "test_target_start": 129,
+      "test_target_end": 160,
+      "train_val_target_start_time": "2016-07-01 12:00:00",
+      "train_val_target_end_time": "2016-07-06 08:00:00",
+      "test_target_start_time": "2016-07-06 09:00:00",
+      "test_target_end_time": "2016-07-07 15:00:00"
+    }
+  ]
+}

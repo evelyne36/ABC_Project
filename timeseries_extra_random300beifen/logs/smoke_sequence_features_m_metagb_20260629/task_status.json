@@ -1,0 +1,9 @@
+{
+  "run_id": "smoke_sequence_features_m_metagb_20260629",
+  "total": 1,
+  "completed": 1,
+  "failed": 0,
+  "tasks": {
+    "ETTh1__current_metagb__seed0__p2": "ok"
+  }
+}

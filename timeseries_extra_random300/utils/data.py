@@ -235,6 +235,211 @@ def _make_xy(
     return X, y
 
 
+def _window_summary_features(window: np.ndarray) -> np.ndarray:
+    recent_len = max(1, window.shape[0] // 2)
+    recent = window[-recent_len:]
+    latest = window[-1]
+    return np.concatenate(
+        [
+            window.mean(axis=0),
+            window.std(axis=0),
+            window.min(axis=0),
+            window.max(axis=0),
+            latest,
+            latest - window[0],
+            recent.mean(axis=0),
+            recent.std(axis=0),
+            recent[-1],
+            np.asarray(
+                [
+                    latest.mean(),
+                    latest.std(),
+                    latest.min(),
+                    latest.max(),
+                    window.mean(),
+                    window.std(),
+                ],
+                dtype=np.float32,
+            ),
+        ]
+    ).astype(np.float32, copy=False)
+
+
+def _make_window_summary_xy(
+    scaled_values: np.ndarray,
+    timestamps: list[str],
+    row_indices: Sequence[int],
+    target_index: int,
+    seq_len: int,
+    pred_len: int,
+    include_time_features: bool,
+    target_mode: str,
+    output_scope: str,
+) -> tuple[np.ndarray, np.ndarray]:
+    X_base, y = _make_xy(
+        scaled_values,
+        timestamps,
+        row_indices,
+        target_index,
+        seq_len,
+        pred_len,
+        include_time_features=False,
+        target_mode=target_mode,
+        output_scope=output_scope,
+    )
+    rows = np.asarray(row_indices, dtype=np.int64)
+    summary_dim = scaled_values.shape[1] * 9 + 6
+    summaries = np.empty((len(rows), summary_dim), dtype=np.float32)
+    for out_idx, row in enumerate(rows):
+        start = int(row)
+        stop = start + seq_len
+        summaries[out_idx, :] = _window_summary_features(scaled_values[start:stop])
+    X = np.concatenate([X_base, summaries], axis=1)
+    if include_time_features:
+        cal = _calendar_features(timestamps, target_positions(rows, seq_len, pred_len))
+        if cal.shape[1] > 0:
+            X = np.concatenate([X, cal], axis=1)
+    return X, y
+
+
+def _origin_state_channel_indices(
+    values_for_selection: np.ndarray,
+    target_index: int,
+    channel_budget: int,
+) -> np.ndarray:
+    n_channels = int(values_for_selection.shape[1])
+    if channel_budget <= 0 or channel_budget >= n_channels:
+        return np.arange(n_channels, dtype=np.int64)
+    target = values_for_selection[:, target_index].astype(np.float64, copy=False)
+    target_centered = target - target.mean()
+    target_norm = float(np.linalg.norm(target_centered))
+    scores: list[tuple[float, int]] = []
+    for channel in range(n_channels):
+        if channel == target_index:
+            continue
+        series = values_for_selection[:, channel].astype(np.float64, copy=False)
+        centered = series - series.mean()
+        denom = float(np.linalg.norm(centered)) * target_norm
+        if denom == 0.0:
+            score = 0.0
+        else:
+            score = abs(float(np.dot(centered, target_centered)) / denom)
+        scores.append((score, channel))
+    scores.sort(key=lambda item: (-item[0], item[1]))
+    selected = [channel for _score, channel in scores[: max(0, channel_budget - 1)]]
+    selected.append(int(target_index))
+    return np.asarray(selected, dtype=np.int64)
+
+
+def _origin_state_temporal_summary(selected_window: np.ndarray) -> np.ndarray:
+    recent_len = max(1, (selected_window.shape[0] + 1) // 2)
+    recent = selected_window[-recent_len:]
+    latest = selected_window[-1]
+    return np.concatenate(
+        [
+            selected_window.mean(axis=0),
+            selected_window.std(axis=0),
+            selected_window.min(axis=0),
+            selected_window.max(axis=0),
+            latest,
+            latest - selected_window[0],
+            recent.mean(axis=0),
+            recent.std(axis=0),
+            recent[-1],
+        ]
+    ).astype(np.float32, copy=False)
+
+
+def _origin_state_relational_summary(full_window: np.ndarray) -> np.ndarray:
+    recent_len = max(1, (full_window.shape[0] + 1) // 2)
+    recent = full_window[-recent_len:]
+    latest = full_window[-1]
+    return np.asarray(
+        [
+            latest.mean(),
+            latest.std(),
+            latest.min(),
+            latest.max(),
+            full_window.mean(),
+            full_window.std(),
+            recent.mean(),
+            recent.std(),
+        ],
+        dtype=np.float32,
+    )
+
+
+def _origin_state_lag_relational_summary(full_window: np.ndarray) -> np.ndarray:
+    return np.column_stack(
+        [
+            full_window.mean(axis=1),
+            full_window.std(axis=1),
+        ]
+    ).reshape(-1).astype(np.float32, copy=False)
+
+
+def _make_origin_state_xy(
+    scaled_values: np.ndarray,
+    timestamps: list[str],
+    row_indices: Sequence[int],
+    target_index: int,
+    seq_len: int,
+    pred_len: int,
+    include_time_features: bool,
+    target_mode: str,
+    output_scope: str,
+    origin_state_channel_budget: int,
+    selection_values: np.ndarray,
+) -> tuple[np.ndarray, np.ndarray]:
+    rows = np.asarray(row_indices, dtype=np.int64)
+    selected_channels = _origin_state_channel_indices(
+        selection_values,
+        target_index,
+        origin_state_channel_budget,
+    )
+    selected_count = int(len(selected_channels))
+    feature_dim = seq_len * selected_count + 9 * selected_count + 2 * seq_len + 8
+    X = np.empty((len(rows), feature_dim), dtype=np.float32)
+
+    if output_scope == "target":
+        output_indices = np.asarray([target_index], dtype=np.int64)
+    elif output_scope == "all":
+        output_indices = np.arange(scaled_values.shape[1], dtype=np.int64)
+    else:
+        raise ValueError(f"Unsupported output_scope: {output_scope}")
+    if target_mode == "direct":
+        y = np.empty(len(rows), dtype=np.float32)
+    elif target_mode == "sequence":
+        y = np.empty((len(rows), pred_len * len(output_indices)), dtype=np.float32)
+    else:
+        raise ValueError(f"Unsupported target_mode: {target_mode}")
+
+    for out_idx, row in enumerate(rows):
+        start = int(row)
+        stop = start + seq_len
+        full_window = scaled_values[start:stop]
+        selected_window = full_window[:, selected_channels]
+        target_pos = stop + pred_len - 1
+        X[out_idx, :] = np.concatenate(
+            [
+                selected_window.reshape(-1),
+                _origin_state_temporal_summary(selected_window),
+                _origin_state_lag_relational_summary(full_window),
+                _origin_state_relational_summary(full_window),
+            ]
+        )
+        if target_mode == "direct":
+            y[out_idx] = scaled_values[target_pos, target_index]
+        else:
+            y[out_idx, :] = scaled_values[stop : stop + pred_len, output_indices].reshape(-1)
+
+    if include_time_features:
+        cal = _calendar_features(timestamps, target_positions(rows, seq_len, pred_len))
+        if cal.shape[1] > 0:
+            X = np.concatenate([X, cal], axis=1)
+    return X, y
+
+
 def _tabpfn_ts_features(
     *,
     positions: list[int],
@@ -326,6 +531,7 @@ def make_fold_arrays(
     target_mode: str = "direct",
     output_scope: str = "target",
     feature_mode: str = "window",
+    origin_state_channel_budget: int = 32,
 ) -> FoldArrays:
     train_rows_arr = np.asarray(train_rows, dtype=np.int64)
     eval_rows_arr = np.asarray(eval_rows, dtype=np.int64)
@@ -338,6 +544,7 @@ def make_fold_arrays(
     scaler = StandardScaler()
     scaler.fit(series.values[scaler_fit_start:scaler_fit_end])
     scaled_values = scaler.transform(series.values).astype(np.float32, copy=False)
+    selection_values = scaled_values[scaler_fit_start:scaler_fit_end]
     if feature_mode == "window":
         X_train, y_train = _make_xy(
             scaled_values,
@@ -360,6 +567,56 @@ def make_fold_arrays(
             include_time_features,
             target_mode,
             output_scope,
+        )
+    elif feature_mode == "window_summary":
+        X_train, y_train = _make_window_summary_xy(
+            scaled_values,
+            series.timestamps,
+            train_rows_arr,
+            series.target_index,
+            seq_len,
+            pred_len,
+            include_time_features,
+            target_mode,
+            output_scope,
+        )
+        X_eval, y_eval = _make_window_summary_xy(
+            scaled_values,
+            series.timestamps,
+            eval_rows_arr,
+            series.target_index,
+            seq_len,
+            pred_len,
+            include_time_features,
+            target_mode,
+            output_scope,
+        )
+    elif feature_mode == "origin_state":
+        X_train, y_train = _make_origin_state_xy(
+            scaled_values,
+            series.timestamps,
+            train_rows_arr,
+            series.target_index,
+            seq_len,
+            pred_len,
+            include_time_features,
+            target_mode,
+            output_scope,
+            origin_state_channel_budget,
+            selection_values,
+        )
+        X_eval, y_eval = _make_origin_state_xy(
+            scaled_values,
+            series.timestamps,
+            eval_rows_arr,
+            series.target_index,
+            seq_len,
+            pred_len,
+            include_time_features,
+            target_mode,
+            output_scope,
+            origin_state_channel_budget,
+            selection_values,
         )
     elif feature_mode == "tabpfn_ts":
         X_train, y_train = _make_tabpfn_ts_xy(

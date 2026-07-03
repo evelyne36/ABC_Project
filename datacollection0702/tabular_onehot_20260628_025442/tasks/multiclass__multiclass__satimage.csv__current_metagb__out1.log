@@ -1,0 +1,5 @@
+[2026-07-01 09:51:18] start task_id=multiclass__multiclass__satimage.csv__current_metagb__out1
+[2026-07-01 09:51:18] config task_type=multiclass dataset=multiclass__satimage.csv model=current_metagb outer_fold=1/5 inner_folds=4 candidates=300 objective=multi:softprob primary_metric=logloss direction=minimize rows=6430 original_rows=6430 max_rows_per_dataset=0 features=36 classes=6
+[2026-07-01 09:51:18] split train_rows=5144 test_rows=1286 inner_splits=4
+[2026-07-01 10:11:56] candidate 1/300 logloss=0.251176 status=ok
+[2026-07-03 10:24:17] candidate 50/300 logloss=0.240304 status=ok

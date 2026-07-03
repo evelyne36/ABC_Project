@@ -1,0 +1,12 @@
+[2026-06-28 08:49:28] start task_id=regression__regression__space_ga.csv__xgb_cpu__out5
+[2026-06-28 08:49:28] config task_type=regression dataset=regression__space_ga.csv model=xgb_cpu outer_fold=5/5 inner_folds=4 candidates=300 objective=reg:squarederror primary_metric=rmse direction=minimize rows=3107 original_rows=3107 max_rows_per_dataset=0 features=6 classes=0
+[2026-06-28 08:49:28] split train_rows=2486 test_rows=621 inner_splits=4
+[2026-06-28 08:49:31] candidate 1/300 rmse=0.115161 status=ok
+[2026-06-28 08:51:27] candidate 50/300 rmse=0.11976 status=ok
+[2026-06-28 08:53:14] candidate 100/300 rmse=0.117473 status=ok
+[2026-06-28 08:55:12] candidate 150/300 rmse=0.136853 status=ok
+[2026-06-28 08:56:57] candidate 200/300 rmse=0.124115 status=ok
+[2026-06-28 08:58:38] candidate 250/300 rmse=0.116585 status=ok
+[2026-06-28 09:00:25] candidate 300/300 rmse=0.1119 status=ok
+[2026-06-28 09:00:25] selected candidate_index=126 candidate_id=xgb_0126 val_rmse=0.110743 val_std=0.0114559
+[2026-06-28 09:00:25] finish best=126 test_rmse=0.0995498 final_train_sec=0.349791 final_predict_sec=0.00658155 elapsed_sec=657.533 status=ok

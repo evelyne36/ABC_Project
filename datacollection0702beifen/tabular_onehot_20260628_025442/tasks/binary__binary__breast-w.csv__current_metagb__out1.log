@@ -1,0 +1,12 @@
+[2026-06-28 04:21:49] start task_id=binary__binary__breast-w.csv__current_metagb__out1
+[2026-06-28 04:21:49] config task_type=binary dataset=binary__breast-w.csv model=current_metagb outer_fold=1/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=683 original_rows=683 max_rows_per_dataset=0 features=9 classes=2
+[2026-06-28 04:21:49] split train_rows=546 test_rows=137 inner_splits=4
+[2026-06-28 04:21:59] candidate 1/300 auc=0.994646 status=ok
+[2026-06-28 04:36:17] candidate 50/300 auc=0.996536 status=ok
+[2026-06-28 04:49:44] candidate 100/300 auc=0.995772 status=ok
+[2026-06-28 05:07:03] candidate 150/300 auc=0.995056 status=ok
+[2026-06-28 05:19:15] candidate 200/300 auc=0.995943 status=ok
+[2026-06-28 05:32:32] candidate 250/300 auc=0.995592 status=ok
+[2026-06-28 05:50:03] candidate 300/300 auc=0.9963 status=ok
+[2026-06-28 05:50:03] selected candidate_index=38 candidate_id=metagb_pf03_sa1_002 val_auc=0.996885 val_std=0.00290753
+[2026-06-28 05:50:03] finish best=38 test_auc=0.993446 final_train_sec=0.590642 final_predict_sec=0.0017338 elapsed_sec=5294.28 status=ok

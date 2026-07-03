@@ -117,7 +117,13 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--search-space-json", default=str(ADAPTER_ROOT / "configs" / "timeseries_search_space.json"))
     parser.add_argument("--xgboost-python-package", default=str(PROJECT_ROOT / "beforereview" / "xgboost-master" / "python-package"))
     parser.add_argument("--split-protocol", choices=["nested", "fixed"], default="nested")
-    parser.add_argument("--feature-mode", choices=["window", "tabpfn_ts"], default="window")
+    parser.add_argument("--feature-mode", choices=["window", "window_summary", "origin_state", "tabpfn_ts"], default="window")
+    parser.add_argument(
+        "--origin-state-channel-budget",
+        type=int,
+        default=32,
+        help="Maximum exact-lag channels kept by --feature-mode origin_state; <=0 keeps all channels.",
+    )
     parser.add_argument("--target-mode", choices=["direct", "sequence"], default="direct")
     parser.add_argument("--output-scope", choices=["target", "all"], default="target")
     parser.add_argument("--seq-len", type=int, default=24)
@@ -181,6 +187,8 @@ def normalize_args(args: argparse.Namespace) -> argparse.Namespace:
         raise ValueError("--max-raw-rows must be non-negative")
     if args.max_features < 0:
         raise ValueError("--max-features must be non-negative")
+    if args.origin_state_channel_budget < 0:
+        raise ValueError("--origin-state-channel-budget must be non-negative")
     if args.outer_folds < 1 or args.inner_folds < 1:
         raise ValueError("--outer-folds and --inner-folds must be positive")
     if args.progress_every <= 0:
@@ -284,7 +292,7 @@ def build_timeseries_estimator(
     def factory() -> Any:
         return build_estimator(xgb, model_name, params, args, "regression", 0)
 
-    if args.target_mode == "sequence" and args.feature_mode == "window":
+    if args.target_mode == "sequence" and args.feature_mode in {"window", "window_summary", "origin_state"}:
         return ColumnwiseMultiOutputRegressor(factory)
     return factory()
 
@@ -358,6 +366,7 @@ def evaluate_task(
                     target_mode=args.target_mode,
                     output_scope=args.output_scope,
                     feature_mode=args.feature_mode,
+                    origin_state_channel_budget=args.origin_state_channel_budget,
                 )
                 estimator = build_timeseries_estimator(xgb, model_name, params, args)
                 pred, train_time, predict_time = fit_predict(estimator, fold)
@@ -441,6 +450,7 @@ def evaluate_task(
             target_mode=args.target_mode,
             output_scope=args.output_scope,
             feature_mode=args.feature_mode,
+            origin_state_channel_budget=args.origin_state_channel_budget,
         )
         final_estimator = build_timeseries_estimator(xgb, model_name, best_params, args)
         test_pred, final_train_time, final_predict_time = fit_predict(final_estimator, final_fold)
@@ -473,6 +483,7 @@ def evaluate_task(
         "seq_len": args.seq_len,
         "pred_len": args.pred_len,
         "feature_mode": args.feature_mode,
+        "origin_state_channel_budget": args.origin_state_channel_budget,
         "target_mode": args.target_mode,
         "output_scope": args.output_scope,
         "input_features": input_dim_from_fold(final_fold),
@@ -512,6 +523,7 @@ def evaluate_task(
         "seq_len": args.seq_len,
         "pred_len": args.pred_len,
         "feature_mode": args.feature_mode,
+        "origin_state_channel_budget": args.origin_state_channel_budget,
         "target_mode": args.target_mode,
         "output_scope": args.output_scope,
         "input_features": input_dim_from_fold(final_fold),
@@ -584,6 +596,7 @@ def evaluate_fixed_task(
                     target_mode=args.target_mode,
                     output_scope=args.output_scope,
                     feature_mode=args.feature_mode,
+                    origin_state_channel_budget=args.origin_state_channel_budget,
                 )
                 estimator = build_timeseries_estimator(xgb, model_name, params, args)
                 pred, train_time, predict_time = fit_predict(estimator, val_fold)
@@ -684,6 +697,7 @@ def evaluate_fixed_task(
             target_mode=args.target_mode,
             output_scope=args.output_scope,
             feature_mode=args.feature_mode,
+            origin_state_channel_budget=args.origin_state_channel_budget,
         )
         final_estimator = build_timeseries_estimator(xgb, model_name, best_params, args)
         test_pred, final_train_time, final_predict_time = fit_predict(final_estimator, final_fold)
@@ -717,6 +731,7 @@ def evaluate_fixed_task(
         "seq_len": selected_seq_len,
         "pred_len": args.pred_len,
         "feature_mode": args.feature_mode,
+        "origin_state_channel_budget": args.origin_state_channel_budget,
         "target_mode": args.target_mode,
         "output_scope": args.output_scope,
         "input_features": input_dim_from_fold(final_fold),
@@ -759,6 +774,7 @@ def evaluate_fixed_task(
         "seq_len": selected_seq_len,
         "pred_len": args.pred_len,
         "feature_mode": args.feature_mode,
+        "origin_state_channel_budget": args.origin_state_channel_budget,
         "target_mode": args.target_mode,
         "output_scope": args.output_scope,
         "input_features": input_dim_from_fold(final_fold),
@@ -1088,6 +1104,7 @@ def run_all(args: argparse.Namespace) -> Dict[str, Any]:
             "models": args.models,
             "split_protocol": args.split_protocol,
             "feature_mode": args.feature_mode,
+            "origin_state_channel_budget": args.origin_state_channel_budget,
             "target_mode": args.target_mode,
             "output_scope": args.output_scope,
             "seq_len": args.seq_len,

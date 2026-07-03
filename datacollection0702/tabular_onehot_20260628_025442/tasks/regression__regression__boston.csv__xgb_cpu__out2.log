@@ -1,0 +1,12 @@
+[2026-06-28 05:52:02] start task_id=regression__regression__boston.csv__xgb_cpu__out2
+[2026-06-28 05:52:02] config task_type=regression dataset=regression__boston.csv model=xgb_cpu outer_fold=2/5 inner_folds=4 candidates=300 objective=reg:squarederror primary_metric=rmse direction=minimize rows=506 original_rows=506 max_rows_per_dataset=0 features=13 classes=0
+[2026-06-28 05:52:02] split train_rows=405 test_rows=101 inner_splits=4
+[2026-06-28 05:52:05] candidate 1/300 rmse=3.40729 status=ok
+[2026-06-28 05:53:32] candidate 50/300 rmse=3.30173 status=ok
+[2026-06-28 05:54:57] candidate 100/300 rmse=3.25911 status=ok
+[2026-06-28 05:56:25] candidate 150/300 rmse=4.05279 status=ok
+[2026-06-28 05:57:45] candidate 200/300 rmse=3.34869 status=ok
+[2026-06-28 05:59:03] candidate 250/300 rmse=3.41541 status=ok
+[2026-06-28 06:00:26] candidate 300/300 rmse=3.35351 status=ok
+[2026-06-28 06:00:26] selected candidate_index=207 candidate_id=xgb_0207 val_rmse=3.11891 val_std=0.248927
+[2026-06-28 06:00:26] finish best=207 test_rmse=3.06168 final_train_sec=0.740995 final_predict_sec=0.00285957 elapsed_sec=504.035 status=ok

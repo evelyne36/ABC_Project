@@ -1,0 +1,9 @@
+[2026-06-29 09:55:18] start task_id=binary__bank-marketing.csv__current_metagb__out2
+[2026-06-29 09:55:18] config task_type=binary dataset=bank-marketing.csv model=current_metagb outer_fold=2/5 inner_folds=4 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=45211 features=5 classes=2
+[2026-06-29 09:55:18] split train_rows=36169 test_rows=9042 inner_splits=4
+[2026-06-29 09:55:41] candidate 1/30 auc=0.706643 status=ok
+[2026-06-29 09:59:20] candidate 10/30 auc=0.706578 status=ok
+[2026-06-29 10:04:01] candidate 20/30 auc=0.704848 status=ok
+[2026-06-29 10:09:21] candidate 30/30 auc=0.706304 status=ok
+[2026-06-29 10:09:21] selected candidate_index=3 candidate_id=xgb_0099_pf01_sa2 val_auc=0.70694 val_std=0.0103576
+[2026-06-29 10:09:29] finish best=3 test_auc=0.709309 final_train_sec=7.41528 final_predict_sec=0.136316 elapsed_sec=850.067 status=ok

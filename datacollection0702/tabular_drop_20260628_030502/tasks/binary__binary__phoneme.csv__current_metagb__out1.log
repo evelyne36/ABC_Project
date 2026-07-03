@@ -1,0 +1,12 @@
+[2026-06-28 09:01:19] start task_id=binary__binary__phoneme.csv__current_metagb__out1
+[2026-06-28 09:01:19] config task_type=binary dataset=binary__phoneme.csv model=current_metagb outer_fold=1/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=5404 original_rows=5404 max_rows_per_dataset=0 features=5 classes=2
+[2026-06-28 09:01:19] split train_rows=4323 test_rows=1081 inner_splits=4
+[2026-06-28 09:01:33] candidate 1/300 auc=0.951648 status=ok
+[2026-06-28 09:21:36] candidate 50/300 auc=0.93875 status=ok
+[2026-06-28 09:39:06] candidate 100/300 auc=0.940568 status=ok
+[2026-06-28 10:03:58] candidate 150/300 auc=0.927452 status=ok
+[2026-06-28 10:20:37] candidate 200/300 auc=0.931658 status=ok
+[2026-06-28 10:38:02] candidate 250/300 auc=0.947772 status=ok
+[2026-06-28 10:58:13] candidate 300/300 auc=0.952856 status=ok
+[2026-06-28 10:58:13] selected candidate_index=265 candidate_id=metagb_pf09_sa0_009 val_auc=0.960396 val_std=0.00384076
+[2026-06-28 10:58:41] finish best=265 test_auc=0.964804 final_train_sec=27.8193 final_predict_sec=0.0831142 elapsed_sec=7041.6 status=ok

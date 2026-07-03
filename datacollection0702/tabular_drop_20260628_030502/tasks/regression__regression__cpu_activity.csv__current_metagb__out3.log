@@ -1,0 +1,12 @@
+[2026-06-30 06:34:17] start task_id=regression__regression__cpu_activity.csv__current_metagb__out3
+[2026-06-30 06:34:17] config task_type=regression dataset=regression__cpu_activity.csv model=current_metagb outer_fold=3/5 inner_folds=4 candidates=300 objective=reg:squarederror primary_metric=rmse direction=minimize rows=8192 original_rows=8192 max_rows_per_dataset=0 features=21 classes=0
+[2026-06-30 06:34:17] split train_rows=6554 test_rows=1638 inner_splits=4
+[2026-06-30 06:35:34] candidate 1/300 rmse=861.914 status=ok
+[2026-06-30 09:47:08] candidate 50/300 rmse=1494.56 status=ok
+[2026-06-30 12:34:27] candidate 100/300 rmse=845.925 status=ok
+[2026-06-30 16:41:40] candidate 150/300 rmse=1229.19 status=ok
+[2026-06-30 19:04:18] candidate 200/300 rmse=1063.22 status=ok
+[2026-06-30 21:50:09] candidate 250/300 rmse=1861.6 status=ok
+[2026-07-01 00:55:32] candidate 300/300 rmse=2542.43 status=ok
+[2026-07-01 00:55:32] selected candidate_index=58 candidate_id=metagb_pf10_sa0_002 val_rmse=4.1362 val_std=0.257686
+[2026-07-01 00:57:00] finish best=58 test_rmse=3.6084 final_train_sec=88.6566 final_predict_sec=0.0216194 elapsed_sec=66163.1 status=ok

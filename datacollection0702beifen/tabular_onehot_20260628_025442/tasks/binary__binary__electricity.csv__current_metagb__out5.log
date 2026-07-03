@@ -1,0 +1,12 @@
+[2026-06-30 08:50:53] start task_id=binary__binary__electricity.csv__current_metagb__out5
+[2026-06-30 08:50:53] config task_type=binary dataset=binary__electricity.csv model=current_metagb outer_fold=5/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=38474 original_rows=38474 max_rows_per_dataset=0 features=7 classes=2
+[2026-06-30 08:50:53] split train_rows=30780 test_rows=7694 inner_splits=4
+[2026-06-30 08:51:42] candidate 1/300 auc=0.935194 status=ok
+[2026-06-30 09:45:33] candidate 50/300 auc=0.912432 status=ok
+[2026-06-30 10:34:19] candidate 100/300 auc=0.913036 status=ok
+[2026-06-30 11:42:06] candidate 150/300 auc=0.892717 status=ok
+[2026-06-30 12:30:31] candidate 200/300 auc=0.897682 status=ok
+[2026-06-30 13:21:47] candidate 250/300 auc=0.928898 status=ok
+[2026-06-30 14:19:05] candidate 300/300 auc=0.953759 status=ok
+[2026-06-30 14:19:05] selected candidate_index=272 candidate_id=metagb_pf01_sa1_010 val_auc=0.960513 val_std=0.0021579
+[2026-06-30 14:19:35] finish best=272 test_auc=0.965105 final_train_sec=30.1227 final_predict_sec=0.398848 elapsed_sec=19722.2 status=ok

@@ -1,0 +1,14 @@
+{
+  "run_id": "smoke_origin_state_expanded_3datasets_xgb_mgb10_0701",
+  "total": 6,
+  "completed": 6,
+  "failed": 0,
+  "tasks": {
+    "ETTh1__xgb_cpu__seed42__s6__p2": "ok",
+    "ETTh1__current_metagb__seed42__s6__p2": "ok",
+    "electricity__xgb_cpu__seed42__s6__p2": "ok",
+    "electricity__current_metagb__seed42__s6__p2": "ok",
+    "traffic__xgb_cpu__seed42__s6__p2": "ok",
+    "traffic__current_metagb__seed42__s6__p2": "ok"
+  }
+}
