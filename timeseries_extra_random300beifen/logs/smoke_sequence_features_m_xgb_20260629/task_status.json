@@ -1,9 +1,0 @@
-{
-  "run_id": "smoke_sequence_features_m_xgb_20260629",
-  "total": 1,
-  "completed": 1,
-  "failed": 0,
-  "tasks": {
-    "ETTh1__xgb_cpu__seed0__p3": "ok"
-  }
-}

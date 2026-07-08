@@ -1,9 +1,0 @@
-{
-  "run_id": "smoke_tabpfn_ts_contract_20260629b",
-  "total": 1,
-  "completed": 1,
-  "failed": 0,
-  "tasks": {
-    "solar__xgb_cpu__seed42__s6__p3": "ok"
-  }
-}

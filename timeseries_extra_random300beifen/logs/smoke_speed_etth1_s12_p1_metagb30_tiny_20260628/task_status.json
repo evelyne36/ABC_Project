@@ -1,9 +1,0 @@
-{
-  "run_id": "smoke_speed_etth1_s12_p1_metagb30_tiny_20260628",
-  "total": 1,
-  "completed": 1,
-  "failed": 0,
-  "tasks": {
-    "ETTh1__current_metagb__out1": "ok"
-  }
-}
