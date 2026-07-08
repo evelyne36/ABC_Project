@@ -1,0 +1,4 @@
+[2026-07-08 01:10:19] start task_id=lightgbm__onehot__regression__regression__Moneyball.csv__out1
+[2026-07-08 01:10:19] config model=lightgbm categorical=onehot task_type=regression dataset=regression__Moneyball.csv outer_fold=1/2 inner_folds=2 candidates=1 rows=114 original_rows=114 features=42 classes=0 primary_metric=rmse direction=minimize
+[2026-07-08 01:10:19] candidate 1/1 rmse=82.0173 status=ok
+[2026-07-08 01:10:20] finish best=1 test_rmse=34.0119 status=ok

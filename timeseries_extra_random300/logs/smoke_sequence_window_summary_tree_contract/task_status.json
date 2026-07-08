@@ -1,0 +1,10 @@
+{
+  "run_id": "smoke_sequence_window_summary_tree_contract",
+  "total": 2,
+  "completed": 2,
+  "failed": 0,
+  "tasks": {
+    "ETTh1__xgb_cpu__seed0__s12__p1": "ok",
+    "ETTh1__current_metagb__seed0__s12__p1": "ok"
+  }
+}

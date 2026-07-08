@@ -1,0 +1,42 @@
+{
+  "run_id": "smoke_metagb_advantage_exchange_s12_p1p6_c30_tree4",
+  "mode": "smoke",
+  "datasets": [
+    "exchange_rate"
+  ],
+  "models": [
+    "current_metagb",
+    "xgb_cpu",
+    "lgbm_cpu",
+    "catboost_cpu"
+  ],
+  "split_protocol": "fixed",
+  "feature_mode": "window_summary",
+  "origin_state_channel_budget": 32,
+  "target_mode": "sequence",
+  "output_scope": "target",
+  "seq_len": 12,
+  "seq_lens": [
+    12
+  ],
+  "pred_len": 1,
+  "pred_lens": [
+    1,
+    6
+  ],
+  "seed": 0,
+  "seeds": [
+    0
+  ],
+  "max_raw_rows": 360,
+  "max_features": 0,
+  "outer_folds": 5,
+  "inner_folds": 4,
+  "max_candidates": 30,
+  "task_workers": 1,
+  "effective_task_workers": 1,
+  "task_executor": "sequential",
+  "results_dir": "/Users/ancd/VSCodeProject/check_codereview0701/timeseries_extra_random300/results/smoke_metagb_advantage_exchange_s12_p1p6_c30_tree4",
+  "summary_rows": 8,
+  "candidate_rows": 240
+}

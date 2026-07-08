@@ -1,0 +1,4 @@
+[2026-07-08 01:09:07] start task_id=linear__drop__multiclass__multiclass__balance-scale.csv__out1
+[2026-07-08 01:09:07] config model=linear categorical=drop task_type=multiclass dataset=multiclass__balance-scale.csv outer_fold=1/2 inner_folds=2 candidates=1 rows=625 original_rows=625 features=4 classes=3 primary_metric=logloss direction=minimize
+[2026-07-08 01:09:07] candidate 1/1 logloss=0.325446 status=ok
+[2026-07-08 01:09:07] finish best=1 test_logloss=0.28245 status=ok

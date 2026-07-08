@@ -79,11 +79,20 @@ class ColumnwiseMultiOutputRegressor:
         self.estimators_: list[Any] = []
         self.return_1d_ = True
 
+    @staticmethod
+    def _fit_estimator(estimator: Any, X: Any, y: Any, verbose: bool) -> None:
+        try:
+            estimator.fit(X, y, verbose=verbose)
+        except TypeError as exc:
+            if "verbose" not in str(exc):
+                raise
+            estimator.fit(X, y)
+
     def fit(self, X: Any, y: Any, verbose: bool = False) -> "ColumnwiseMultiOutputRegressor":
         y_arr = np.asarray(y, dtype=np.float32)
         if y_arr.ndim == 1:
             estimator = self.estimator_factory()
-            estimator.fit(X, y_arr, verbose=verbose)
+            self._fit_estimator(estimator, X, y_arr, verbose)
             self.estimators_ = [estimator]
             self.return_1d_ = True
             return self
@@ -93,7 +102,7 @@ class ColumnwiseMultiOutputRegressor:
         self.estimators_ = []
         for output_index in range(y_arr.shape[1]):
             estimator = self.estimator_factory()
-            estimator.fit(X, y_arr[:, output_index], verbose=verbose)
+            self._fit_estimator(estimator, X, y_arr[:, output_index], verbose)
             self.estimators_.append(estimator)
         return self
 
@@ -112,7 +121,12 @@ def build_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--mode", choices=["smoke", "full"], default="smoke")
     parser.add_argument("--datasets", nargs="+", default=["ETTh1", "exchange_rate"])
-    parser.add_argument("--models", nargs="+", choices=["xgb_cpu", "current_metagb"], default=["xgb_cpu", "current_metagb"])
+    parser.add_argument(
+        "--models",
+        nargs="+",
+        choices=["xgb_cpu", "current_metagb", "lgbm_cpu", "catboost_cpu"],
+        default=["xgb_cpu", "current_metagb"],
+    )
     parser.add_argument("--registry", default=str(ADAPTER_ROOT / "configs" / "dataset_registry.json"))
     parser.add_argument("--search-space-json", default=str(ADAPTER_ROOT / "configs" / "timeseries_search_space.json"))
     parser.add_argument("--xgboost-python-package", default=str(PROJECT_ROOT / "beforereview" / "xgboost-master" / "python-package"))
@@ -275,7 +289,12 @@ def limit_series_features(series: Any, max_features: int) -> Any:
 
 def fit_predict(estimator: Any, fold: FoldArrays) -> tuple[np.ndarray, float, float]:
     start = time.perf_counter()
-    estimator.fit(fold.X_train, fold.y_train, verbose=False)
+    try:
+        estimator.fit(fold.X_train, fold.y_train, verbose=False)
+    except TypeError as exc:
+        if "verbose" not in str(exc):
+            raise
+        estimator.fit(fold.X_train, fold.y_train)
     train_time = time.perf_counter() - start
     start = time.perf_counter()
     pred = np.asarray(estimator.predict(fold.X_eval), dtype=np.float32)
@@ -290,6 +309,49 @@ def build_timeseries_estimator(
     args: argparse.Namespace,
 ) -> Any:
     def factory() -> Any:
+        if model_name == "lgbm_cpu":
+            try:
+                from lightgbm import LGBMRegressor
+            except ImportError as exc:
+                raise ImportError(
+                    "Model lgbm_cpu requires the lightgbm package. Install lightgbm on the run host."
+                ) from exc
+            return LGBMRegressor(
+                objective="regression",
+                learning_rate=float(params["learning_rate"]),
+                n_estimators=int(params["n_estimators"]),
+                max_depth=int(params["max_depth"]),
+                subsample=float(params["subsample"]),
+                colsample_bytree=float(params["colsample_bytree"]),
+                reg_lambda=float(params.get("reg_lambda", args.xgb_reg_lambda)),
+                max_bin=int(params.get("max_bin", 255)),
+                min_child_samples=1,
+                random_state=int(args.seed),
+                n_jobs=int(args.n_jobs),
+                verbosity=-1,
+            )
+        if model_name == "catboost_cpu":
+            try:
+                from catboost import CatBoostRegressor
+            except ImportError as exc:
+                raise ImportError(
+                    "Model catboost_cpu requires the catboost package. Install catboost on the run host."
+                ) from exc
+            return CatBoostRegressor(
+                loss_function="RMSE",
+                iterations=int(params["n_estimators"]),
+                learning_rate=float(params["learning_rate"]),
+                depth=int(params["max_depth"]),
+                subsample=float(params["subsample"]),
+                rsm=float(params["colsample_bytree"]),
+                l2_leaf_reg=float(params.get("l2_leaf_reg", args.xgb_reg_lambda)),
+                max_bin=int(params.get("max_bin", 255)),
+                random_seed=int(args.seed),
+                thread_count=int(args.n_jobs),
+                bootstrap_type="Bernoulli",
+                allow_writing_files=False,
+                verbose=False,
+            )
         return build_estimator(xgb, model_name, params, args, "regression", 0)
 
     if args.target_mode == "sequence" and args.feature_mode in {"window", "window_summary", "origin_state"}:
@@ -432,10 +494,47 @@ def evaluate_task(
     if best_index < 0:
         return [asdict(row) for row in rows], {
             "run_id": args.run_id,
+            "split_protocol": args.split_protocol,
+            "seed": args.seed,
             "dataset": series.name,
+            "family": series.spec.family,
             "model": model_name,
             "outer_fold": outer_index + 1,
+            "outer_folds": args.outer_folds,
+            "inner_folds": args.inner_folds,
+            "seq_len": args.seq_len,
+            "pred_len": args.pred_len,
+            "feature_mode": args.feature_mode,
+            "origin_state_channel_budget": args.origin_state_channel_budget,
+            "target_mode": args.target_mode,
+            "output_scope": args.output_scope,
+            "input_features": 0,
+            "output_dim": 0,
+            "rows_raw": series.n_rows,
+            "rows_supervised": supervised_row_count(series, args.seq_len, args.pred_len),
+            "features_raw": series.n_features,
+            "max_raw_rows": args.max_raw_rows,
+            "max_features": args.max_features,
+            "candidate_count": len(candidates),
+            "selected_candidate_index": -1,
+            "selected_candidate_id": "",
+            "selected_backbone_id": "",
+            "selected_pred_feature_fraction": float("nan"),
+            "selected_metagb_score_agg": float("nan"),
+            "val_rmse_mean": float("nan"),
+            "val_rmse_std": float("nan"),
+            "test_rmse": float("nan"),
+            "test_mae": float("nan"),
+            "test_mse": float("nan"),
+            "inner_train_time_sec": float("nan"),
+            "inner_predict_time_sec": float("nan"),
+            "final_train_time_sec": float("nan"),
+            "final_predict_time_sec": float("nan"),
+            "total_train_time_sec": float("nan"),
+            "total_predict_time_sec": float("nan"),
+            "task_elapsed_sec": time.perf_counter() - task_start,
             "status": "no_valid_candidate",
+            "params_json": "{}",
         }
 
     best_params = candidates[best_index - 1]
@@ -669,11 +768,49 @@ def evaluate_fixed_task(
             "split_protocol": args.split_protocol,
             "seed": args.seed,
             "dataset": series.name,
+            "family": series.spec.family,
             "model": model_name,
             "outer_fold": 1,
+            "outer_folds": 1,
+            "inner_folds": 1,
             "seq_lens": args.seq_lens,
+            "seq_len": args.seq_len,
             "pred_len": args.pred_len,
+            "feature_mode": args.feature_mode,
+            "origin_state_channel_budget": args.origin_state_channel_budget,
+            "target_mode": args.target_mode,
+            "output_scope": args.output_scope,
+            "input_features": 0,
+            "output_dim": 0,
+            "rows_raw": series.n_rows,
+            "rows_supervised": supervised_row_count(series, args.seq_len, args.pred_len),
+            "features_raw": series.n_features,
+            "window_features": args.seq_len * series.n_features,
+            "max_raw_rows": args.max_raw_rows,
+            "max_features": args.max_features,
+            "candidate_count": len(candidates),
+            "seq_len_candidate_count": 1,
+            "evaluated_candidate_count": len(rows),
+            "selected_candidate_index": -1,
+            "selected_base_candidate_index": -1,
+            "selected_candidate_id": "",
+            "selected_backbone_id": "",
+            "selected_pred_feature_fraction": float("nan"),
+            "selected_metagb_score_agg": float("nan"),
+            "val_rmse_mean": float("nan"),
+            "val_rmse_std": float("nan"),
+            "test_rmse": float("nan"),
+            "test_mae": float("nan"),
+            "test_mse": float("nan"),
+            "inner_train_time_sec": float("nan"),
+            "inner_predict_time_sec": float("nan"),
+            "final_train_time_sec": float("nan"),
+            "final_predict_time_sec": float("nan"),
+            "total_train_time_sec": float("nan"),
+            "total_predict_time_sec": float("nan"),
+            "task_elapsed_sec": time.perf_counter() - task_start,
             "status": "no_valid_candidate",
+            "params_json": "{}",
         }
 
     (

@@ -1,0 +1,17 @@
+{
+  "run_id": "smoke_llm_all_models_binary_cpu_fixed",
+  "total": 8,
+  "completed": 8,
+  "failed": 0,
+  "tasks": {
+    "linear__drop__binary__binary__haberman.csv__out1": "ok",
+    "extra_trees__drop__binary__binary__haberman.csv__out1": "ok",
+    "random_forest__drop__binary__binary__haberman.csv__out1": "ok",
+    "lightgbm__drop__binary__binary__haberman.csv__out1": "ok",
+    "catboost__drop__binary__binary__haberman.csv__out1": "ok",
+    "torchmlp__drop__binary__binary__haberman.csv__out1": "ok",
+    "realmlp__drop__binary__binary__haberman.csv__out1": "ok",
+    "tabm__drop__binary__binary__haberman.csv__out1": "ok"
+  },
+  "updated_at": "2026-07-08T01:08:56"
+}

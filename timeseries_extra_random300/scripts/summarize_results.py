@@ -32,6 +32,10 @@ def summarize(results_dir: Path) -> str:
     )
     aggregate_path = results_dir / "aggregate.csv"
     grouped.to_csv(aggregate_path, index=False)
+    try:
+        aggregate_table = grouped.to_markdown(index=False)
+    except ImportError:
+        aggregate_table = grouped.to_string(index=False)
 
     lines = [
         "# Time-Series Smoke Report",
@@ -40,7 +44,7 @@ def summarize(results_dir: Path) -> str:
         "",
         "## Aggregate",
         "",
-        grouped.to_markdown(index=False),
+        aggregate_table,
         "",
         "## Winner By Dataset",
         "",
@@ -77,4 +81,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

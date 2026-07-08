@@ -1,0 +1,3 @@
+dataset,model,test_rmse_mean,test_rmse_std,test_mae_mean,total_train_time_sec_mean,total_predict_time_sec_mean,folds
+ETTh1,catboost_cpu,,,,,,1
+ETTh1,lgbm_cpu,,,,,,1

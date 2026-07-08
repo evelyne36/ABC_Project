@@ -74,6 +74,8 @@ def normalize_candidate(params: Dict[str, Any]) -> Dict[str, Any]:
         out["reg_lambda"] = float(out["reg_lambda"])
     if "metagb_lambda_l2" in out:
         out["metagb_lambda_l2"] = float(out["metagb_lambda_l2"])
+    if "l2_leaf_reg" in out:
+        out["l2_leaf_reg"] = float(out["l2_leaf_reg"])
     return out
 
 
@@ -118,6 +120,36 @@ def generate_xgb_candidates(
         params["source"] = "generated_shared_backbone"
         candidates.append(normalize_candidate(params))
     return candidates, messages
+
+
+def generate_lgbm_candidates(
+    search_space: Dict[str, Any],
+    max_candidates: int,
+    seed: int,
+) -> List[Dict[str, Any]]:
+    candidates: List[Dict[str, Any]] = []
+    for index, backbone in enumerate(_generate_shared_backbones(search_space, max_candidates, seed), start=1):
+        params = {key: value for key, value in backbone.items() if key != "lambda_l2"}
+        params["reg_lambda"] = float(backbone["lambda_l2"])
+        params["candidate_id"] = f"lgbm_{index:04d}"
+        params["source"] = "generated_shared_backbone"
+        candidates.append(normalize_candidate(params))
+    return candidates
+
+
+def generate_catboost_candidates(
+    search_space: Dict[str, Any],
+    max_candidates: int,
+    seed: int,
+) -> List[Dict[str, Any]]:
+    candidates: List[Dict[str, Any]] = []
+    for index, backbone in enumerate(_generate_shared_backbones(search_space, max_candidates, seed), start=1):
+        params = {key: value for key, value in backbone.items() if key != "lambda_l2"}
+        params["l2_leaf_reg"] = float(backbone["lambda_l2"])
+        params["candidate_id"] = f"catboost_{index:04d}"
+        params["source"] = "generated_shared_backbone"
+        candidates.append(normalize_candidate(params))
+    return candidates
 
 
 def generate_metagb_candidates(
@@ -185,6 +217,10 @@ def candidate_sets(
         out["xgb_cpu"] = xgb_candidates
     if "current_metagb" in selected:
         out["current_metagb"] = generate_metagb_candidates(search_space, max_candidates, seed)
+    if "lgbm_cpu" in selected:
+        out["lgbm_cpu"] = generate_lgbm_candidates(search_space, max_candidates, seed)
+    if "catboost_cpu" in selected:
+        out["catboost_cpu"] = generate_catboost_candidates(search_space, max_candidates, seed)
     if "current_metagb_pred0" in selected:
         out["current_metagb_pred0"] = generate_pred0_candidates(xgb_candidates)
     return out, messages
