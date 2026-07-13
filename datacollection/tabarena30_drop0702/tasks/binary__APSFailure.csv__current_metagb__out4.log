@@ -1,0 +1,9 @@
+[2026-06-29 11:49:55] start task_id=binary__APSFailure.csv__current_metagb__out4
+[2026-06-29 11:49:59] config task_type=binary dataset=APSFailure.csv model=current_metagb outer_fold=4/5 inner_folds=4 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=756 features=170 classes=2
+[2026-06-29 11:49:59] split train_rows=605 test_rows=151 inner_splits=4
+[2026-06-29 12:07:42] candidate 1/30 auc=0.880286 status=ok
+[2026-06-29 18:14:48] candidate 10/30 auc=0.959336 status=ok
+[2026-06-30 10:41:44] candidate 20/30 auc=0.934873 status=ok
+[2026-07-01 15:38:52] candidate 30/30 auc=0.830032 status=ok
+[2026-07-01 15:38:52] selected candidate_index=15 candidate_id=xgb_0054_pf05_sa2 val_auc=0.978809 val_std=0.00471877
+[2026-07-01 16:02:05] finish best=15 test_auc=0.960073 final_train_sec=1393.31 final_predict_sec=0.0115446 elapsed_sec=187926 status=ok

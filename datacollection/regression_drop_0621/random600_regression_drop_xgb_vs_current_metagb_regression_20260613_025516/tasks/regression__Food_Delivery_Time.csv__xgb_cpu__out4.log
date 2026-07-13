@@ -1,0 +1,18 @@
+[2026-06-13 07:25:35] start task_id=regression__Food_Delivery_Time.csv__xgb_cpu__out4
+[2026-06-13 07:25:35] config task_type=regression dataset=Food_Delivery_Time.csv model=xgb_cpu outer_fold=4/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=45451 features=6 classes=0
+[2026-06-13 07:25:35] split train_rows=36361 test_rows=9090 inner_splits=4
+[2026-06-13 07:25:43] candidate 1/600 rmse=7.59333 status=ok
+[2026-06-13 07:31:43] candidate 50/600 rmse=7.68301 status=ok
+[2026-06-13 07:37:03] candidate 100/600 rmse=7.67324 status=ok
+[2026-06-13 07:43:48] candidate 150/600 rmse=8.12806 status=ok
+[2026-06-13 07:49:15] candidate 200/600 rmse=7.85751 status=ok
+[2026-06-13 07:54:45] candidate 250/600 rmse=7.57491 status=ok
+[2026-06-13 08:00:56] candidate 300/600 rmse=7.59573 status=ok
+[2026-06-13 08:06:36] candidate 350/600 rmse=7.75399 status=ok
+[2026-06-13 08:12:09] candidate 400/600 rmse=7.57577 status=ok
+[2026-06-13 08:18:32] candidate 450/600 rmse=8.27118 status=ok
+[2026-06-13 08:23:23] candidate 500/600 rmse=7.9387 status=ok
+[2026-06-13 08:29:42] candidate 550/600 rmse=7.66014 status=ok
+[2026-06-13 08:35:31] candidate 600/600 rmse=7.60367 status=ok
+[2026-06-13 08:35:31] selected candidate_index=492 candidate_id=xgb_0492 val_rmse=7.52187 val_std=0.0264859
+[2026-06-13 08:35:32] finish best=492 test_rmse=7.60729 final_train_sec=1.26348 final_predict_sec=0.0938206 elapsed_sec=4197.18 status=ok

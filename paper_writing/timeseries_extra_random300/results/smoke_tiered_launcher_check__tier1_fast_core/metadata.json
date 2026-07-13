@@ -1,0 +1,46 @@
+{
+  "run_id": "smoke_tiered_launcher_check__tier1_fast_core",
+  "mode": "smoke",
+  "datasets": [
+    "exchange_rate",
+    "ETTm1",
+    "ETTm2",
+    "ETTh2",
+    "ETTh1",
+    "ILI"
+  ],
+  "models": [
+    "current_metagb",
+    "xgb_cpu",
+    "lgbm_cpu",
+    "catboost_cpu"
+  ],
+  "split_protocol": "fixed",
+  "feature_mode": "window_summary",
+  "origin_state_channel_budget": 32,
+  "target_mode": "sequence",
+  "output_scope": "target",
+  "seq_len": 12,
+  "seq_lens": [
+    12
+  ],
+  "pred_len": 1,
+  "pred_lens": [
+    1
+  ],
+  "seed": 0,
+  "seeds": [
+    0
+  ],
+  "max_raw_rows": 90,
+  "max_features": 32,
+  "outer_folds": 5,
+  "inner_folds": 4,
+  "max_candidates": 30,
+  "task_workers": 1,
+  "effective_task_workers": 1,
+  "task_executor": "sequential",
+  "results_dir": "/Users/ancd/VSCodeProject/check_codereview0701/timeseries_extra_random300/results/smoke_tiered_launcher_check__tier1_fast_core",
+  "summary_rows": 24,
+  "candidate_rows": 720
+}

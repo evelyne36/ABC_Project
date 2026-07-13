@@ -1,0 +1,2 @@
+dataset,model,test_rmse_mean,test_rmse_std,test_mae_mean,total_train_time_sec_mean,total_predict_time_sec_mean,folds
+ETTh1,xgb_cpu,0.285189718085263,,0.2325159013271331,0.213979790918529,0.001921999733895,1

@@ -1,0 +1,12 @@
+[2026-06-15 14:41:26] start task_id=binary__HR_Analytics_Job_Change_of_Data_Scientists.csv__current_metagb__out3
+[2026-06-15 14:41:26] config task_type=binary dataset=HR_Analytics_Job_Change_of_Data_Scientists.csv model=current_metagb outer_fold=3/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=19158 features=2 classes=2
+[2026-06-15 14:41:26] split train_rows=15326 test_rows=3832 inner_splits=4
+[2026-06-15 14:41:41] candidate 1/300 auc=0.707755 status=ok
+[2026-06-15 14:52:49] candidate 50/300 auc=0.718501 status=ok
+[2026-06-15 15:02:34] candidate 100/300 auc=0.717514 status=ok
+[2026-06-15 15:14:09] candidate 150/300 auc=0.719639 status=ok
+[2026-06-15 15:24:20] candidate 200/300 auc=0.719514 status=ok
+[2026-06-15 15:34:28] candidate 250/300 auc=0.713112 status=ok
+[2026-06-15 15:45:21] candidate 300/300 auc=0.689758 status=ok
+[2026-06-15 15:45:21] selected candidate_index=217 candidate_id=metagb_pf03_sa0_008 val_auc=0.72073 val_std=0.010464
+[2026-06-15 15:45:23] finish best=217 test_auc=0.733072 final_train_sec=2.41921 final_predict_sec=0.05868 elapsed_sec=3837.09 status=ok

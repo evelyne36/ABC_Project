@@ -1,0 +1,12 @@
+[2026-06-28 09:27:12] start task_id=multiclass__multiclass__vowel.csv__xgb_cpu__out2
+[2026-06-28 09:27:12] config task_type=multiclass dataset=multiclass__vowel.csv model=xgb_cpu outer_fold=2/5 inner_folds=4 candidates=300 objective=multi:softprob primary_metric=logloss direction=minimize rows=990 original_rows=990 max_rows_per_dataset=0 features=12 classes=11
+[2026-06-28 09:27:12] split train_rows=792 test_rows=198 inner_splits=4
+[2026-06-28 09:27:25] candidate 1/300 logloss=0.401719 status=ok
+[2026-06-28 09:32:54] candidate 50/300 logloss=0.380204 status=ok
+[2026-06-28 09:38:37] candidate 100/300 logloss=0.389478 status=ok
+[2026-06-28 09:44:42] candidate 150/300 logloss=0.989417 status=ok
+[2026-06-28 09:50:20] candidate 200/300 logloss=0.569499 status=ok
+[2026-06-28 09:56:05] candidate 250/300 logloss=0.356473 status=ok
+[2026-06-28 10:02:30] candidate 300/300 logloss=0.345472 status=ok
+[2026-06-28 10:02:30] selected candidate_index=181 candidate_id=xgb_0181 val_logloss=0.326733 val_std=0.0512548
+[2026-06-28 10:02:31] finish best=181 test_logloss=0.257504 final_train_sec=0.988487 final_predict_sec=0.0161355 elapsed_sec=2118.31 status=ok

@@ -1,0 +1,45 @@
+{
+  "run_id": "smoke_random200_pipeline",
+  "created_at": "2026-06-08T00:54:18",
+  "elapsed_sec": 8.147604499943554,
+  "task_types": [
+    "regression"
+  ],
+  "models": [
+    "xgb_cpu",
+    "current_metagb"
+  ],
+  "max_candidates": 10,
+  "outer_folds": 2,
+  "inner_folds": 2,
+  "run_all_outer_folds": false,
+  "n_jobs": 1,
+  "task_workers": 1,
+  "xgb_config": "/Users/ancd/VSCodeProject/check_codereview0604cc/beforereview/exp12/configs_xgboost.json",
+  "candidate_warnings": [
+    "loaded 10 candidates from /Users/ancd/VSCodeProject/check_codereview0604cc/beforereview/exp12/configs_xgboost.json"
+  ],
+  "dataset_dirs": {
+    "regression": "/Users/ancd/VSCodeProject/check_codereview0604cc/dataset/TabArena_regression",
+    "binary": "/Users/ancd/VSCodeProject/check_codereview0604cc/dataset/TabArena_binary",
+    "multiclass": "/Users/ancd/VSCodeProject/check_codereview0604cc/dataset/TabArena_multiclass"
+  },
+  "selected_datasets": {
+    "regression": [
+      "airfoil_self_noise.csv"
+    ],
+    "binary": [],
+    "multiclass": []
+  },
+  "skip_datasets": [],
+  "skip_task_datasets": {
+    "regression": [],
+    "binary": [],
+    "multiclass": []
+  },
+  "xgboost_python_package": "/Users/ancd/VSCodeProject/check_codereview0604cc/beforereview/xgboost-master/python-package",
+  "results_dir": "/Users/ancd/VSCodeProject/check_codereview0604cc/random200/results/smoke_random200_pipeline",
+  "logs_dir": "/Users/ancd/VSCodeProject/check_codereview0604cc/random200/logs/smoke_random200_pipeline",
+  "summary_rows": 2,
+  "candidate_rows": 20
+}

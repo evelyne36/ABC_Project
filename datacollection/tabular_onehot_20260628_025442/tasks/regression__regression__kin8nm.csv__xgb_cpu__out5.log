@@ -1,0 +1,12 @@
+[2026-06-30 00:55:31] start task_id=regression__regression__kin8nm.csv__xgb_cpu__out5
+[2026-06-30 00:55:31] config task_type=regression dataset=regression__kin8nm.csv model=xgb_cpu outer_fold=5/5 inner_folds=4 candidates=300 objective=reg:squarederror primary_metric=rmse direction=minimize rows=8192 original_rows=8192 max_rows_per_dataset=0 features=8 classes=0
+[2026-06-30 00:55:31] split train_rows=6554 test_rows=1638 inner_splits=4
+[2026-06-30 00:55:38] candidate 1/300 rmse=0.132221 status=ok
+[2026-06-30 01:01:03] candidate 50/300 rmse=0.164316 status=ok
+[2026-06-30 01:05:51] candidate 100/300 rmse=0.160147 status=ok
+[2026-06-30 01:11:19] candidate 150/300 rmse=0.197805 status=ok
+[2026-06-30 01:15:58] candidate 200/300 rmse=0.174164 status=ok
+[2026-06-30 01:20:31] candidate 250/300 rmse=0.145893 status=ok
+[2026-06-30 01:25:05] candidate 300/300 rmse=0.125951 status=ok
+[2026-06-30 01:25:05] selected candidate_index=65 candidate_id=xgb_0065 val_rmse=0.118957 val_std=0.00145811
+[2026-06-30 01:25:08] finish best=65 test_rmse=0.111772 final_train_sec=2.35201 final_predict_sec=0.0300258 elapsed_sec=1776.91 status=ok

@@ -1,0 +1,12 @@
+[2026-06-28 03:03:45] start task_id=binary__binary__banknote-authentication.csv__xgb_cpu__out3
+[2026-06-28 03:03:45] config task_type=binary dataset=binary__banknote-authentication.csv model=xgb_cpu outer_fold=3/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=1372 original_rows=1372 max_rows_per_dataset=0 features=4 classes=2
+[2026-06-28 03:03:45] split train_rows=1098 test_rows=274 inner_splits=4
+[2026-06-28 03:03:46] candidate 1/300 auc=0.999812 status=ok
+[2026-06-28 03:04:19] candidate 50/300 auc=0.999866 status=ok
+[2026-06-28 03:04:52] candidate 100/300 auc=0.999853 status=ok
+[2026-06-28 03:05:25] candidate 150/300 auc=0.998606 status=ok
+[2026-06-28 03:05:57] candidate 200/300 auc=0.999518 status=ok
+[2026-06-28 03:06:28] candidate 250/300 auc=0.999853 status=ok
+[2026-06-28 03:07:02] candidate 300/300 auc=0.999933 status=ok
+[2026-06-28 03:07:02] selected candidate_index=254 candidate_id=xgb_0254 val_auc=0.999973 val_std=4.63959e-05
+[2026-06-28 03:07:02] finish best=254 test_auc=0.999946 final_train_sec=0.096881 final_predict_sec=0.00144662 elapsed_sec=196.823 status=ok

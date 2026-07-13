@@ -1,0 +1,10 @@
+{
+  "run_id": "smoke_blood_drop_metagb30",
+  "total": 1,
+  "completed": 1,
+  "failed": 0,
+  "tasks": {
+    "binary__blood-transfusion-service-center.csv__current_metagb__out1": "ok"
+  },
+  "updated_at": "2026-06-27T19:51:20"
+}

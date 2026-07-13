@@ -1,0 +1,7 @@
+[2026-06-28 01:19:19] start task_id=multiclass__multiclass__mfeat-fourier.csv__current_metagb__out1
+[2026-06-28 01:19:19] config task_type=multiclass dataset=multiclass__mfeat-fourier.csv model=current_metagb outer_fold=1/2 inner_folds=2 candidates=30 objective=multi:softprob primary_metric=logloss direction=minimize rows=160 original_rows=2000 max_rows_per_dataset=160 features=76 classes=10
+[2026-06-28 01:19:19] split train_rows=80 test_rows=80 inner_splits=2
+[2026-06-28 01:19:19] candidate 1/30 logloss=2.26909 status=ok
+[2026-06-28 01:19:32] candidate 30/30 logloss=2.27515 status=ok
+[2026-06-28 01:19:32] selected candidate_index=25 candidate_id=metagb_pf09_sa0_001 val_logloss=1.66425 val_std=0.0312108
+[2026-06-28 01:19:32] finish best=25 test_logloss=1.46304 final_train_sec=0.573032 final_predict_sec=0.000473875 elapsed_sec=12.8519 status=ok

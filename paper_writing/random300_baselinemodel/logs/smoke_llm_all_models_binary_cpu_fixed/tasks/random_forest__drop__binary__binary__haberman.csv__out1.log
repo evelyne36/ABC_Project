@@ -1,0 +1,4 @@
+[2026-07-08 01:08:41] start task_id=random_forest__drop__binary__binary__haberman.csv__out1
+[2026-07-08 01:08:41] config model=random_forest categorical=drop task_type=binary dataset=binary__haberman.csv outer_fold=1/2 inner_folds=2 candidates=1 rows=306 original_rows=306 features=3 classes=2 primary_metric=auc direction=maximize
+[2026-07-08 01:08:41] candidate 1/1 auc=0.620259 status=ok
+[2026-07-08 01:08:41] finish best=1 test_auc=0.678872 status=ok

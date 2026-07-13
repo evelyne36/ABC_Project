@@ -1,0 +1,10 @@
+# Core runtime for linear, random_forest, and extra_trees baselines.
+# Keep compatible with pytabkit's published lower bounds: Python >= 3.9,
+# numpy >= 1.25, pandas >= 2.0, scikit-learn >= 1.3.
+numpy>=1.25
+pandas>=2.0
+scipy>=1.10
+scikit-learn>=1.3
+joblib>=1.3
+threadpoolctl>=3.0
+

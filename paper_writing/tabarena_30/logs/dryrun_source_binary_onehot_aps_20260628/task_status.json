@@ -1,0 +1,9 @@
+{
+  "run_id": "dryrun_source_binary_onehot_aps_20260628",
+  "total": 1,
+  "completed": 0,
+  "failed": 0,
+  "tasks": {
+    "binary__APSFailure.csv__current_metagb__out1": "pending"
+  }
+}

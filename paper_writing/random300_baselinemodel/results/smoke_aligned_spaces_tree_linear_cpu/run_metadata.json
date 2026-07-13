@@ -1,0 +1,35 @@
+{
+  "run_id": "smoke_aligned_spaces_tree_linear_cpu",
+  "created_at": "2026-07-08T01:26:48",
+  "elapsed_sec": 2.068437207955867,
+  "models": [
+    "lightgbm",
+    "catboost",
+    "linear",
+    "extra_trees"
+  ],
+  "categorical_handlings": [
+    "drop"
+  ],
+  "task_types": [
+    "regression"
+  ],
+  "max_candidates": 2,
+  "outer_folds": 2,
+  "inner_folds": 2,
+  "run_all_outer_folds": false,
+  "task_workers": 1,
+  "n_jobs": 1,
+  "selected_datasets": {
+    "regression": [
+      "regression__Moneyball.csv"
+    ],
+    "binary": [],
+    "multiclass": []
+  },
+  "results_dir": "/Users/ancd/VSCodeProject/check_codereview0701/random300_baselinemodel/results/smoke_aligned_spaces_tree_linear_cpu",
+  "logs_dir": "/Users/ancd/VSCodeProject/check_codereview0701/random300_baselinemodel/logs/smoke_aligned_spaces_tree_linear_cpu",
+  "summary_rows": 4,
+  "candidate_rows": 8,
+  "failed_summary_rows": 0
+}

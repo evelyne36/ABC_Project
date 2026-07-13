@@ -1,0 +1,13 @@
+{
+  "run_id": "smoke_aligned_spaces_tree_linear_cpu",
+  "total": 4,
+  "completed": 4,
+  "failed": 0,
+  "tasks": {
+    "lightgbm__drop__regression__regression__Moneyball.csv__out1": "ok",
+    "catboost__drop__regression__regression__Moneyball.csv__out1": "ok",
+    "linear__drop__regression__regression__Moneyball.csv__out1": "ok",
+    "extra_trees__drop__regression__regression__Moneyball.csv__out1": "ok"
+  },
+  "updated_at": "2026-07-08T01:26:48"
+}

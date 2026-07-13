@@ -249,6 +249,13 @@ nohup bash random300_baselinemodel/run_linux_full.sh \
 The all-in-one script runs every model and may take much longer than the grouped
 strategy.
 
+`run_linux_full.sh` uses the currently active environment's `python` by default.
+If needed, override it explicitly:
+
+```bash
+PYTHON_BIN=/path/to/conda/env/bin/python bash random300_baselinemodel/run_linux_full.sh
+```
+
 ## 8. Monitoring
 
 Task status:
@@ -358,4 +365,3 @@ PY
 ```
 
 The current implementation was smoke-tested with pytabkit 1.7.3.
-

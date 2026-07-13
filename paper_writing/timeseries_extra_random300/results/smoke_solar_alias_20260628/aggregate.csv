@@ -1,0 +1,2 @@
+dataset,model,test_rmse_mean,test_rmse_std,test_mae_mean,total_train_time_sec_mean,total_predict_time_sec_mean,folds
+solar,xgb_cpu,7.262964692735997,,6.081579208374023,0.0156840840354561,0.0021553747355937,1

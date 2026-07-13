@@ -1,0 +1,34 @@
+{
+  "run_id": "smoke_ts_all14_pressure_order_mgb_vs_xgb_20260628",
+  "mode": "smoke",
+  "datasets": [
+    "ILI",
+    "exchange_rate",
+    "ETTh1",
+    "ETTh2",
+    "solar",
+    "ETTm1",
+    "ETTm2",
+    "Weather",
+    "PEMS08",
+    "PEMS04",
+    "PEMS03",
+    "electricity",
+    "PEMS07",
+    "traffic"
+  ],
+  "models": [
+    "xgb_cpu",
+    "current_metagb"
+  ],
+  "seq_len": 4,
+  "pred_len": 1,
+  "max_raw_rows": 240,
+  "max_features": 32,
+  "outer_folds": 2,
+  "inner_folds": 2,
+  "max_candidates": 30,
+  "results_dir": "/Users/ancd/VSCodeProject/check_codereview0623-adapter/timeseries_extra_random300/results/smoke_ts_all14_pressure_order_mgb_vs_xgb_20260628",
+  "summary_rows": 28,
+  "candidate_rows": 840
+}

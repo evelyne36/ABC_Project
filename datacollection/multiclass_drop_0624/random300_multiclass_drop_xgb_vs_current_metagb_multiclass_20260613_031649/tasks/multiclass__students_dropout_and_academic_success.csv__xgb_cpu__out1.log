@@ -1,0 +1,12 @@
+[2026-06-13 16:30:19] start task_id=multiclass__students_dropout_and_academic_success.csv__xgb_cpu__out1
+[2026-06-13 16:30:20] config task_type=multiclass dataset=students_dropout_and_academic_success.csv model=xgb_cpu outer_fold=1/5 inner_folds=4 candidates=300 objective=multi:softprob primary_metric=logloss direction=minimize rows=4424 features=19 classes=3
+[2026-06-13 16:30:20] split train_rows=3539 test_rows=885 inner_splits=4
+[2026-06-13 16:30:40] candidate 1/300 logloss=0.640638 status=ok
+[2026-06-13 16:39:48] candidate 50/300 logloss=0.618154 status=ok
+[2026-06-13 16:48:15] candidate 100/300 logloss=0.621602 status=ok
+[2026-06-13 16:57:31] candidate 150/300 logloss=0.680403 status=ok
+[2026-06-13 17:05:38] candidate 200/300 logloss=0.628773 status=ok
+[2026-06-13 17:13:40] candidate 250/300 logloss=0.631895 status=ok
+[2026-06-13 17:23:27] candidate 300/300 logloss=0.82038 status=ok
+[2026-06-13 17:23:27] selected candidate_index=289 candidate_id=xgb_0289 val_logloss=0.617913 val_std=0.0219942
+[2026-06-13 17:23:31] finish best=289 test_logloss=0.555924 final_train_sec=4.27953 final_predict_sec=0.100814 elapsed_sec=3191.45 status=ok

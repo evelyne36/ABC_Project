@@ -65,7 +65,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--max-features",
         type=int,
-        default=32,
+        default=64,
         help="Channel cap passed through to the benchmark runner. Default keeps PEMS feasible.",
     )
     parser.add_argument("--search-space-json", default=str(ADAPTER_ROOT / "configs" / "timeseries_search_space.json"))

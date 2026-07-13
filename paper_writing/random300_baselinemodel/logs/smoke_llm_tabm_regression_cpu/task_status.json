@@ -1,0 +1,10 @@
+{
+  "run_id": "smoke_llm_tabm_regression_cpu",
+  "total": 1,
+  "completed": 1,
+  "failed": 0,
+  "tasks": {
+    "tabm__drop__regression__regression__Moneyball.csv__out1": "no_valid_candidate"
+  },
+  "updated_at": "2026-07-08T01:06:03"
+}

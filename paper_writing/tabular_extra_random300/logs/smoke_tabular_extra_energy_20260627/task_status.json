@@ -1,0 +1,11 @@
+{
+  "run_id": "smoke_tabular_extra_energy_20260627",
+  "total": 2,
+  "completed": 2,
+  "failed": 0,
+  "tasks": {
+    "regression__regression__energy_efficiency.csv__xgb_cpu__out1": "ok",
+    "regression__regression__energy_efficiency.csv__current_metagb__out1": "ok"
+  },
+  "updated_at": "2026-06-27T20:31:25"
+}

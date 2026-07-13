@@ -1,0 +1,20 @@
+{
+  "run_id": "smoke_metagb_probe_weather_ili_exchange_s12s24_p24_c30",
+  "total": 12,
+  "completed": 0,
+  "failed": 0,
+  "tasks": {
+    "Weather__current_metagb__seed0__s12__p24": "pending",
+    "Weather__xgb_cpu__seed0__s12__p24": "pending",
+    "ILI__current_metagb__seed0__s12__p24": "pending",
+    "ILI__xgb_cpu__seed0__s12__p24": "pending",
+    "exchange_rate__current_metagb__seed0__s12__p24": "pending",
+    "exchange_rate__xgb_cpu__seed0__s12__p24": "pending",
+    "Weather__current_metagb__seed0__s24__p24": "pending",
+    "Weather__xgb_cpu__seed0__s24__p24": "pending",
+    "ILI__current_metagb__seed0__s24__p24": "pending",
+    "ILI__xgb_cpu__seed0__s24__p24": "pending",
+    "exchange_rate__current_metagb__seed0__s24__p24": "pending",
+    "exchange_rate__xgb_cpu__seed0__s24__p24": "pending"
+  }
+}

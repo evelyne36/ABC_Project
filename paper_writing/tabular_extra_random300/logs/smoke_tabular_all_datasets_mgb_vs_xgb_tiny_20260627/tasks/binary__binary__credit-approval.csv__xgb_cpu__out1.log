@@ -1,0 +1,7 @@
+[2026-06-27 23:06:25] start task_id=binary__binary__credit-approval.csv__xgb_cpu__out1
+[2026-06-27 23:06:25] config task_type=binary dataset=binary__credit-approval.csv model=xgb_cpu outer_fold=1/2 inner_folds=2 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=240 original_rows=653 max_rows_per_dataset=240 features=15 classes=2
+[2026-06-27 23:06:25] split train_rows=120 test_rows=120 inner_splits=2
+[2026-06-27 23:06:25] candidate 1/30 auc=0.899832 status=ok
+[2026-06-27 23:06:25] candidate 30/30 auc=0.900112 status=ok
+[2026-06-27 23:06:25] selected candidate_index=20 candidate_id=xgb_0020 val_auc=0.919473 val_std=0.0401235
+[2026-06-27 23:06:25] finish best=20 test_auc=0.932308 final_train_sec=0.0011345 final_predict_sec=0.000173958 elapsed_sec=0.132083 status=ok

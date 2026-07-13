@@ -1,0 +1,12 @@
+[2026-06-13 03:33:58] start task_id=binary__Amazon_employee_access.csv__xgb_cpu__out1
+[2026-06-13 03:34:00] config task_type=binary dataset=Amazon_employee_access.csv model=xgb_cpu outer_fold=1/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=32769 features=9 classes=2
+[2026-06-13 03:34:00] split train_rows=26215 test_rows=6554 inner_splits=4
+[2026-06-13 03:34:11] candidate 1/300 auc=0.818602 status=ok
+[2026-06-13 03:41:54] candidate 50/300 auc=0.784149 status=ok
+[2026-06-13 03:49:43] candidate 100/300 auc=0.778802 status=ok
+[2026-06-13 03:58:05] candidate 150/300 auc=0.755911 status=ok
+[2026-06-13 04:05:23] candidate 200/300 auc=0.756155 status=ok
+[2026-06-13 04:12:16] candidate 250/300 auc=0.799354 status=ok
+[2026-06-13 04:20:03] candidate 300/300 auc=0.826628 status=ok
+[2026-06-13 04:20:03] selected candidate_index=89 candidate_id=xgb_0089 val_auc=0.838504 val_std=0.0128457
+[2026-06-13 04:20:09] finish best=89 test_auc=0.877753 final_train_sec=5.56039 final_predict_sec=0.306896 elapsed_sec=2768.32 status=ok

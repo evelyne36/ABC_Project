@@ -1,0 +1,10 @@
+{
+  "run_id": "smoke_llm_linear_binary_no_multiclass_warning",
+  "total": 1,
+  "completed": 1,
+  "failed": 0,
+  "tasks": {
+    "linear__drop__binary__binary__haberman.csv__out1": "ok"
+  },
+  "updated_at": "2026-07-08T01:11:34"
+}

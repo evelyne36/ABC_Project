@@ -1,20 +1,15 @@
 {
-  "description": "Staged execution order for the tree-model time-series benchmark. Tiers are ordered by expected compute cost and MetaGB smoke-test signal.",
+  "description": "Staged execution order for the tree-model time-series benchmark. Run all non-PEMS datasets first, then the PEMS family.",
   "tiers": [
     {
-      "name": "tier1_fast_core",
-      "description": "Low-channel datasets that finish comparatively quickly. Run these first to establish the main MetaGB-vs-tree baseline table early.",
-      "datasets": ["exchange_rate", "ETTm1", "ETTm2", "ETTh2", "ETTh1", "ILI"]
+      "name": "non_pems",
+      "description": "All non-PEMS datasets. Run this stage first to complete the main low/mid-dimensional time-series evidence before PEMS.",
+      "datasets": ["ETTh1", "ETTh2", "ETTm1", "ETTm2", "exchange_rate", "ILI", "Weather"]
     },
     {
-      "name": "tier2_slow_favorable",
-      "description": "Compute-heavy PEMS datasets where smoke tests showed clear MetaGB advantage. Run after tier1 to strengthen the high-dimensional multivariate story.",
-      "datasets": ["PEMS03", "PEMS07"]
-    },
-    {
-      "name": "tier3_slow_unfavorable",
-      "description": "Compute-heavy datasets where smoke tests did not show a clear MetaGB advantage. Keep as robustness/appendix material or run last.",
-      "datasets": ["Weather", "PEMS04", "PEMS08"]
+      "name": "pems",
+      "description": "PEMS traffic datasets. Run after non_pems because these are high-dimensional and compute-heavy.",
+      "datasets": ["PEMS03", "PEMS04", "PEMS07", "PEMS08"]
     }
   ]
 }

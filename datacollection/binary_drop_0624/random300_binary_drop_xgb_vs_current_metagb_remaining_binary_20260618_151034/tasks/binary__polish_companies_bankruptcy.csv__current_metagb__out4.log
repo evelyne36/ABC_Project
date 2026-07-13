@@ -1,0 +1,12 @@
+[2026-06-20 11:17:31] start task_id=binary__polish_companies_bankruptcy.csv__current_metagb__out4
+[2026-06-20 11:17:31] config task_type=binary dataset=polish_companies_bankruptcy.csv model=current_metagb outer_fold=4/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=3031 features=64 classes=2
+[2026-06-20 11:17:31] split train_rows=2425 test_rows=606 inner_splits=4
+[2026-06-20 11:25:17] candidate 1/300 auc=0.896756 status=ok
+[2026-06-20 23:28:33] candidate 50/300 auc=0.732936 status=ok
+[2026-06-21 11:05:29] candidate 100/300 auc=0.898077 status=ok
+[2026-06-22 04:30:19] candidate 150/300 auc=0.877558 status=ok
+[2026-06-22 14:28:08] candidate 200/300 auc=0.842697 status=ok
+[2026-06-23 01:09:06] candidate 250/300 auc=0.899672 status=ok
+[2026-06-23 13:33:24] candidate 300/300 auc=0.67965 status=ok
+[2026-06-23 13:33:24] selected candidate_index=271 candidate_id=metagb_pf01_sa0_010 val_auc=0.920522 val_std=0.0120797
+[2026-06-23 13:33:42] finish best=271 test_auc=0.872782 final_train_sec=17.334 final_predict_sec=0.00773885 elapsed_sec=267370 status=ok

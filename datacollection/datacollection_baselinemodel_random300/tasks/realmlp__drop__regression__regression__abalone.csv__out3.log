@@ -1,0 +1,9 @@
+[2026-07-13 22:52:10] start task_id=realmlp__drop__regression__regression__abalone.csv__out3
+[2026-07-13 22:52:10] config model=realmlp categorical=drop task_type=regression dataset=regression__abalone.csv outer_fold=3/5 inner_folds=4 candidates=300 rows=4177 original_rows=4177 features=7 classes=0 primary_metric=rmse direction=minimize
+[2026-07-13 22:53:13] candidate 1/300 rmse=2.10464 status=ok
+[2026-07-13 22:58:35] candidate 5/300 rmse=2.17468 status=ok
+[2026-07-13 23:04:15] candidate 10/300 rmse=2.09044 status=ok
+[2026-07-13 23:11:34] candidate 15/300 rmse=2.09883 status=ok
+[2026-07-13 23:18:55] candidate 20/300 rmse=2.11183 status=ok
+[2026-07-13 23:24:44] candidate 25/300 rmse=2.14936 status=ok
+[2026-07-13 23:33:44] candidate 30/300 rmse=2.12992 status=ok

@@ -1,0 +1,14 @@
+# Deep-learning optional dependencies for torchmlp, RealMLP, and TabM.
+#
+# pytabkit provides sklearn interfaces for RealMLP and TabM. The runner uses
+# pytabkit-compatible estimator classes for realmlp/tabm, and a local PyTorch
+# estimator for torchmlp.
+#
+# For Linux CPU-only installs used in the fair baseline experiments, prefer:
+#   pip install -r random300_baselinemodel/requirements-linux-cpu.txt
+-r requirements-core.txt
+torch>=2.0
+torchmetrics>=1.2.1
+pytorch-lightning>=2.0
+psutil>=5.0
+pytabkit>=1.7.3

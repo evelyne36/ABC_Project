@@ -1,0 +1,43 @@
+{
+  "splits": [
+    {
+      "dataset": "ETTh1",
+      "model": "current_metagb",
+      "split_protocol": "fixed",
+      "seed": 0,
+      "outer_fold": 1,
+      "fixed_split": {
+        "train_start": 0,
+        "train_end": 33,
+        "val_start": 33,
+        "val_end": 44,
+        "test_start": 44,
+        "test_end": 56
+      },
+      "seq_len": 3,
+      "seq_lens": [
+        3
+      ],
+      "pred_len": 2,
+      "target_mode": "sequence",
+      "output_scope": "all",
+      "output_dim": 4,
+      "train_row_min": 0,
+      "train_row_max": 32,
+      "val_row_min": 33,
+      "val_row_max": 43,
+      "test_row_min": 44,
+      "test_row_max": 55,
+      "scaler_fit_start": 0,
+      "scaler_fit_end": 48,
+      "train_val_target_start": 3,
+      "train_val_target_end": 48,
+      "test_target_start": 47,
+      "test_target_end": 60,
+      "train_val_target_start_time": "2016-07-01 03:00:00",
+      "train_val_target_end_time": "2016-07-02 23:00:00",
+      "test_target_start_time": "2016-07-02 23:00:00",
+      "test_target_end_time": "2016-07-03 11:00:00"
+    }
+  ]
+}

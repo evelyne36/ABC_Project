@@ -1,0 +1,12 @@
+[2026-06-15 15:15:59] start task_id=binary__HR_Analytics_Job_Change_of_Data_Scientists.csv__xgb_cpu__out5
+[2026-06-15 15:15:59] config task_type=binary dataset=HR_Analytics_Job_Change_of_Data_Scientists.csv model=xgb_cpu outer_fold=5/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=19158 features=2 classes=2
+[2026-06-15 15:15:59] split train_rows=15327 test_rows=3831 inner_splits=4
+[2026-06-15 15:16:01] candidate 1/300 auc=0.712651 status=ok
+[2026-06-15 15:17:34] candidate 50/300 auc=0.716895 status=ok
+[2026-06-15 15:19:02] candidate 100/300 auc=0.717951 status=ok
+[2026-06-15 15:20:36] candidate 150/300 auc=0.718778 status=ok
+[2026-06-15 15:22:05] candidate 200/300 auc=0.719606 status=ok
+[2026-06-15 15:23:34] candidate 250/300 auc=0.71492 status=ok
+[2026-06-15 15:25:11] candidate 300/300 auc=0.704786 status=ok
+[2026-06-15 15:25:11] selected candidate_index=235 candidate_id=xgb_0235 val_auc=0.719694 val_std=0.00701649
+[2026-06-15 15:25:11] finish best=235 test_auc=0.733135 final_train_sec=0.181694 final_predict_sec=0.0105981 elapsed_sec=552.414 status=ok

@@ -1,0 +1,12 @@
+[2026-06-28 04:20:38] start task_id=binary__binary__breast-w.csv__xgb_cpu__out1
+[2026-06-28 04:20:38] config task_type=binary dataset=binary__breast-w.csv model=xgb_cpu outer_fold=1/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=683 original_rows=683 max_rows_per_dataset=0 features=9 classes=2
+[2026-06-28 04:20:38] split train_rows=546 test_rows=137 inner_splits=4
+[2026-06-28 04:20:39] candidate 1/300 auc=0.994716 status=ok
+[2026-06-28 04:20:58] candidate 50/300 auc=0.99395 status=ok
+[2026-06-28 04:21:17] candidate 100/300 auc=0.994599 status=ok
+[2026-06-28 04:21:37] candidate 150/300 auc=0.99401 status=ok
+[2026-06-28 04:21:56] candidate 200/300 auc=0.994538 status=ok
+[2026-06-28 04:22:16] candidate 250/300 auc=0.994074 status=ok
+[2026-06-28 04:22:36] candidate 300/300 auc=0.993492 status=ok
+[2026-06-28 04:22:36] selected candidate_index=107 candidate_id=xgb_0107 val_auc=0.995365 val_std=0.0048797
+[2026-06-28 04:22:36] finish best=107 test_auc=0.990871 final_train_sec=0.160685 final_predict_sec=0.00291653 elapsed_sec=117.991 status=ok

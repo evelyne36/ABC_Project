@@ -1,0 +1,7 @@
+[2026-06-28 01:19:01] start task_id=regression__regression__boston.csv__current_metagb__out1
+[2026-06-28 01:19:01] config task_type=regression dataset=regression__boston.csv model=current_metagb outer_fold=1/2 inner_folds=2 candidates=30 objective=reg:squarederror primary_metric=rmse direction=minimize rows=160 original_rows=506 max_rows_per_dataset=160 features=13 classes=0
+[2026-06-28 01:19:01] split train_rows=80 test_rows=80 inner_splits=2
+[2026-06-28 01:19:01] candidate 1/30 rmse=20.6259 status=ok
+[2026-06-28 01:19:01] candidate 30/30 rmse=21.048 status=ok
+[2026-06-28 01:19:01] selected candidate_index=8 candidate_id=metagb_pf03_sa1_001 val_rmse=9.6746 val_std=0.9866
+[2026-06-28 01:19:01] finish best=8 test_rmse=9.96115 final_train_sec=0.00187683 final_predict_sec=0.0001805 elapsed_sec=0.10276 status=ok

@@ -1,0 +1,18 @@
+[2026-06-15 20:51:37] start task_id=regression__Another-Dataset-on-used-Fiat-500.csv__xgb_cpu__out4
+[2026-06-15 20:51:38] config task_type=regression dataset=Another-Dataset-on-used-Fiat-500.csv model=xgb_cpu outer_fold=4/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=1538 features=9 classes=0
+[2026-06-15 20:51:38] split train_rows=1231 test_rows=307 inner_splits=4
+[2026-06-15 20:51:40] candidate 1/600 rmse=785.88 status=ok
+[2026-06-15 20:53:19] candidate 50/600 rmse=777.495 status=ok
+[2026-06-15 20:54:45] candidate 100/600 rmse=779.923 status=ok
+[2026-06-15 20:56:26] candidate 150/600 rmse=888.778 status=ok
+[2026-06-15 20:57:50] candidate 200/600 rmse=779.617 status=ok
+[2026-06-15 20:59:12] candidate 250/600 rmse=784.898 status=ok
+[2026-06-15 21:00:43] candidate 300/600 rmse=817.077 status=ok
+[2026-06-15 21:02:09] candidate 350/600 rmse=779.178 status=ok
+[2026-06-15 21:03:44] candidate 400/600 rmse=786.142 status=ok
+[2026-06-15 21:05:27] candidate 450/600 rmse=1030.37 status=ok
+[2026-06-15 21:06:46] candidate 500/600 rmse=808.581 status=ok
+[2026-06-15 21:08:28] candidate 550/600 rmse=803.549 status=ok
+[2026-06-15 21:10:00] candidate 600/600 rmse=777.904 status=ok
+[2026-06-15 21:10:00] selected candidate_index=593 candidate_id=xgb_0593 val_rmse=768.289 val_std=25.2787
+[2026-06-15 21:10:00] finish best=593 test_rmse=664.744 final_train_sec=0.275052 final_predict_sec=0.00449334 elapsed_sec=1102.78 status=ok

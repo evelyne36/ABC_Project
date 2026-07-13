@@ -1,0 +1,12 @@
+[2026-06-14 07:01:20] start task_id=binary__E-CommereShippingData.csv__current_metagb__out5
+[2026-06-14 07:01:20] config task_type=binary dataset=E-CommereShippingData.csv model=current_metagb outer_fold=5/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=10999 features=6 classes=2
+[2026-06-14 07:01:20] split train_rows=8800 test_rows=2199 inner_splits=4
+[2026-06-14 07:01:42] candidate 1/300 auc=0.74068 status=ok
+[2026-06-14 07:35:15] candidate 50/300 auc=0.738415 status=ok
+[2026-06-14 08:04:03] candidate 100/300 auc=0.740198 status=ok
+[2026-06-14 08:47:11] candidate 150/300 auc=0.744338 status=ok
+[2026-06-14 09:14:13] candidate 200/300 auc=0.741078 status=ok
+[2026-06-14 09:42:17] candidate 250/300 auc=0.740067 status=ok
+[2026-06-14 10:14:47] candidate 300/300 auc=0.73878 status=ok
+[2026-06-14 10:14:47] selected candidate_index=215 candidate_id=metagb_pf02_sa1_008 val_auc=0.745438 val_std=0.00981986
+[2026-06-14 10:14:49] finish best=215 test_auc=0.748574 final_train_sec=1.42493 final_predict_sec=0.0211456 elapsed_sec=11608.4 status=ok

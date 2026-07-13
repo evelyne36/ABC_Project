@@ -1,0 +1,7 @@
+[2026-06-27 23:06:31] start task_id=regression__regression__naval_propulsion_plant.csv__current_metagb__out1
+[2026-06-27 23:06:31] config task_type=regression dataset=regression__naval_propulsion_plant.csv model=current_metagb outer_fold=1/2 inner_folds=2 candidates=30 objective=reg:squarederror primary_metric=rmse direction=minimize rows=240 original_rows=11934 max_rows_per_dataset=240 features=14 classes=0
+[2026-06-27 23:06:31] split train_rows=120 test_rows=120 inner_splits=2
+[2026-06-27 23:06:31] candidate 1/30 rmse=0.774106 status=ok
+[2026-06-27 23:06:32] candidate 30/30 rmse=0.83713 status=ok
+[2026-06-27 23:06:32] selected candidate_index=25 candidate_id=metagb_pf09_sa0_001 val_rmse=0.340946 val_std=0.00343087
+[2026-06-27 23:06:32] finish best=25 test_rmse=0.342521 final_train_sec=0.00338004 final_predict_sec=0.000244542 elapsed_sec=0.116073 status=ok

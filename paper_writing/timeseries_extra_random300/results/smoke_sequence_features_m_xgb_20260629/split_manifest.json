@@ -1,0 +1,43 @@
+{
+  "splits": [
+    {
+      "dataset": "ETTh1",
+      "model": "xgb_cpu",
+      "split_protocol": "fixed",
+      "seed": 0,
+      "outer_fold": 1,
+      "fixed_split": {
+        "train_start": 0,
+        "train_end": 67,
+        "val_start": 67,
+        "val_end": 89,
+        "test_start": 89,
+        "test_end": 112
+      },
+      "seq_len": 6,
+      "seq_lens": [
+        6
+      ],
+      "pred_len": 3,
+      "target_mode": "sequence",
+      "output_scope": "all",
+      "output_dim": 9,
+      "train_row_min": 0,
+      "train_row_max": 66,
+      "val_row_min": 67,
+      "val_row_max": 88,
+      "test_row_min": 89,
+      "test_row_max": 111,
+      "scaler_fit_start": 0,
+      "scaler_fit_end": 97,
+      "train_val_target_start": 6,
+      "train_val_target_end": 97,
+      "test_target_start": 95,
+      "test_target_end": 120,
+      "train_val_target_start_time": "2016-07-01 06:00:00",
+      "train_val_target_end_time": "2016-07-05 00:00:00",
+      "test_target_start_time": "2016-07-04 23:00:00",
+      "test_target_end_time": "2016-07-05 23:00:00"
+    }
+  ]
+}

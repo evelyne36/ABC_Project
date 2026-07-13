@@ -1,0 +1,9 @@
+[2026-06-27 20:45:01] start task_id=multiclass__multiclass__vehicle.csv__current_metagb__out1
+[2026-06-27 20:45:01] config task_type=multiclass dataset=multiclass__vehicle.csv model=current_metagb outer_fold=1/2 inner_folds=2 candidates=30 objective=multi:softprob primary_metric=logloss direction=minimize rows=846 features=18 classes=4
+[2026-06-27 20:45:01] split train_rows=423 test_rows=423 inner_splits=2
+[2026-06-27 20:45:13] candidate 1/30 logloss=0.78648 status=ok
+[2026-06-27 20:47:46] candidate 10/30 logloss=0.714701 status=ok
+[2026-06-27 20:51:33] candidate 20/30 logloss=0.77155 status=ok
+[2026-06-27 20:59:36] candidate 30/30 logloss=1.42331 status=ok
+[2026-06-27 20:59:36] selected candidate_index=17 candidate_id=metagb_pf06_sa1_001 val_logloss=0.619689 val_std=0.0122398
+[2026-06-27 20:59:42] finish best=17 test_logloss=0.583806 final_train_sec=5.95603 final_predict_sec=0.0108992 elapsed_sec=881.01 status=ok

@@ -1,0 +1,26 @@
+{
+  "run_id": "smoke_metagb_probe_lowmid_s12_p1p6p24_c30",
+  "total": 18,
+  "completed": 18,
+  "failed": 0,
+  "tasks": {
+    "ETTh1__current_metagb__seed0__s12__p1": "ok",
+    "ETTh1__xgb_cpu__seed0__s12__p1": "ok",
+    "exchange_rate__current_metagb__seed0__s12__p1": "ok",
+    "exchange_rate__xgb_cpu__seed0__s12__p1": "ok",
+    "ILI__current_metagb__seed0__s12__p1": "ok",
+    "ILI__xgb_cpu__seed0__s12__p1": "ok",
+    "ETTh1__current_metagb__seed0__s12__p6": "ok",
+    "ETTh1__xgb_cpu__seed0__s12__p6": "ok",
+    "exchange_rate__current_metagb__seed0__s12__p6": "ok",
+    "exchange_rate__xgb_cpu__seed0__s12__p6": "ok",
+    "ILI__current_metagb__seed0__s12__p6": "ok",
+    "ILI__xgb_cpu__seed0__s12__p6": "ok",
+    "ETTh1__current_metagb__seed0__s12__p24": "ok",
+    "ETTh1__xgb_cpu__seed0__s12__p24": "ok",
+    "exchange_rate__current_metagb__seed0__s12__p24": "ok",
+    "exchange_rate__xgb_cpu__seed0__s12__p24": "ok",
+    "ILI__current_metagb__seed0__s12__p24": "ok",
+    "ILI__xgb_cpu__seed0__s12__p24": "ok"
+  }
+}

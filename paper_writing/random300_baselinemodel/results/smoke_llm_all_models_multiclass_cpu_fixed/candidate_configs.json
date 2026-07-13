@@ -1,0 +1,88 @@
+{
+  "linear": [
+    {
+      "alpha": 1.0,
+      "C": 1.0,
+      "max_iter": 1000,
+      "candidate_id": "linear_default",
+      "source": "default"
+    }
+  ],
+  "extra_trees": [
+    {
+      "n_estimators": 300,
+      "max_features": "sqrt",
+      "min_samples_leaf": 1,
+      "max_depth": null,
+      "candidate_id": "extra_trees_default",
+      "source": "default"
+    }
+  ],
+  "random_forest": [
+    {
+      "n_estimators": 300,
+      "max_features": "sqrt",
+      "min_samples_leaf": 1,
+      "max_depth": null,
+      "candidate_id": "random_forest_default",
+      "source": "default"
+    }
+  ],
+  "lightgbm": [
+    {
+      "n_estimators": 400,
+      "learning_rate": 0.05,
+      "num_leaves": 31,
+      "subsample": 0.9,
+      "colsample_bytree": 0.9,
+      "reg_lambda": 1.0,
+      "candidate_id": "lightgbm_default",
+      "source": "default"
+    }
+  ],
+  "catboost": [
+    {
+      "iterations": 400,
+      "learning_rate": 0.05,
+      "depth": 6,
+      "l2_leaf_reg": 3.0,
+      "candidate_id": "catboost_default",
+      "source": "default"
+    }
+  ],
+  "torchmlp": [
+    {
+      "hidden_layers": [
+        256,
+        128
+      ],
+      "learning_rate": 0.001,
+      "batch_size": 256,
+      "max_epochs": 100,
+      "weight_decay": 0.0001,
+      "candidate_id": "torchmlp_default",
+      "source": "default"
+    }
+  ],
+  "realmlp": [
+    {
+      "max_epochs": 100,
+      "learning_rate": 0.001,
+      "batch_size": 256,
+      "weight_decay": 0.0001,
+      "candidate_id": "realmlp_default",
+      "source": "default"
+    }
+  ],
+  "tabm": [
+    {
+      "max_epochs": 100,
+      "learning_rate": 0.001,
+      "batch_size": 256,
+      "k": 32,
+      "weight_decay": 0.0001,
+      "candidate_id": "tabm_default",
+      "source": "default"
+    }
+  ]
+}

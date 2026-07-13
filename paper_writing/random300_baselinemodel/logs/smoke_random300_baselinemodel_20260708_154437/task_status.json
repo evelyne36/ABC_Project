@@ -1,0 +1,13 @@
+{
+  "run_id": "smoke_random300_baselinemodel_20260708_154437",
+  "total": 4,
+  "completed": 4,
+  "failed": 0,
+  "tasks": {
+    "linear__drop__regression__regression__Moneyball.csv__out1": "ok",
+    "linear__onehot__regression__regression__Moneyball.csv__out1": "ok",
+    "extra_trees__drop__regression__regression__Moneyball.csv__out1": "ok",
+    "extra_trees__onehot__regression__regression__Moneyball.csv__out1": "ok"
+  },
+  "updated_at": "2026-07-08T15:44:40"
+}

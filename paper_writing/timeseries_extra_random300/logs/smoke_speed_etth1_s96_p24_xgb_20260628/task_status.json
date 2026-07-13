@@ -1,0 +1,9 @@
+{
+  "run_id": "smoke_speed_etth1_s96_p24_xgb_20260628",
+  "total": 1,
+  "completed": 1,
+  "failed": 0,
+  "tasks": {
+    "ETTh1__xgb_cpu__out1": "ok"
+  }
+}

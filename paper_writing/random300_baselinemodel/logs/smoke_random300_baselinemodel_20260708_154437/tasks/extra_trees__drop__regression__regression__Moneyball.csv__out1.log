@@ -1,0 +1,5 @@
+[2026-07-08 15:44:39] start task_id=extra_trees__drop__regression__regression__Moneyball.csv__out1
+[2026-07-08 15:44:39] config model=extra_trees categorical=drop task_type=regression dataset=regression__Moneyball.csv outer_fold=1/2 inner_folds=2 candidates=2 rows=114 original_rows=114 features=12 classes=0 primary_metric=rmse direction=minimize
+[2026-07-08 15:44:39] candidate 1/2 rmse=36.2602 status=ok
+[2026-07-08 15:44:39] candidate 2/2 rmse=39.263 status=ok
+[2026-07-08 15:44:39] finish best=1 test_rmse=21.7978 status=ok

@@ -1,0 +1,2 @@
+model,categorical_handling,task_type,dataset,task_elapsed_sec_mean,task_elapsed_sec_std
+tabm,drop,regression,regression__Moneyball.csv,18.277885167393833,nan

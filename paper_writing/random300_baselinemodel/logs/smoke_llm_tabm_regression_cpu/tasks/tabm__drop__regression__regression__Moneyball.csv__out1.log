@@ -1,0 +1,3 @@
+[2026-07-08 01:05:44] start task_id=tabm__drop__regression__regression__Moneyball.csv__out1
+[2026-07-08 01:05:44] config model=tabm categorical=drop task_type=regression dataset=regression__Moneyball.csv outer_fold=1/2 inner_folds=2 candidates=1 rows=114 original_rows=114 features=12 classes=0 primary_metric=rmse direction=minimize
+[2026-07-08 01:06:03] candidate 1/1 rmse=inf status=failed:ImportError:Could not find a compatible pytabkit estimator class. Install/verify pytabkit and update random300_baselinemodel.utils.model_factory if its API changed.

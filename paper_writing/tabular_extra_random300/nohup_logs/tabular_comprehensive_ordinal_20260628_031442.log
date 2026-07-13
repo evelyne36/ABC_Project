@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/ancd/VSCodeProject/check_codereview0623-adapter/tabular_extra_random300/scripts/exp1_random300_all.py", line 24, in <module>
+    from tabular_extra_random300.utils.runner import run_all, safe_name  # noqa: E402
+  File "/Users/ancd/VSCodeProject/check_codereview0623-adapter/tabular_extra_random300/utils/runner.py", line 16, in <module>
+    import numpy as np
+ModuleNotFoundError: No module named 'numpy'

@@ -212,7 +212,7 @@ PY
 MPLCONFIGDIR=/tmp/mpl_ts_smoke \
 python timeseries_extra_random300/scripts/run_tiered_timeseries_benchmark.py \
   --dry-run \
-  --tiers tier1_fast_core \
+  --tiers non_pems \
   --base-run-id dryrun_ts_tree_server
 ```
 
@@ -221,7 +221,7 @@ python timeseries_extra_random300/scripts/run_tiered_timeseries_benchmark.py \
 ```bash
 MPLCONFIGDIR=/tmp/mpl_ts_smoke \
 python timeseries_extra_random300/scripts/run_tiered_timeseries_benchmark.py \
-  --tiers tier1_fast_core \
+  --tiers non_pems \
   --base-run-id smoke_ts_tree_server \
   --mode smoke \
   --models current_metagb xgb_cpu lgbm_cpu catboost_cpu \
@@ -241,7 +241,7 @@ python timeseries_extra_random300/scripts/run_tiered_timeseries_benchmark.py \
 
 ```bash
 ls timeseries_extra_random300/results/smoke_ts_tree_server
-ls timeseries_extra_random300/results/smoke_ts_tree_server__seed42__tier1_fast_core
+ls timeseries_extra_random300/results/smoke_ts_tree_server__seed42__non_pems
 ```
 
 子目录里应包含：
@@ -269,20 +269,17 @@ seed = 42
 seq_lens = 24 48
 pred_lens = 1 6 12
 max_candidates = 300
-max_features = 32
+max_features = 64
 ```
 
 默认分层顺序：
 
 ```text
-tier1_fast_core:
-  exchange_rate, ETTm1, ETTm2, ETTh2, ETTh1, ILI
+non_pems:
+  ETTh1, ETTh2, ETTm1, ETTm2, exchange_rate, ILI, Weather
 
-tier2_slow_favorable:
-  PEMS03, PEMS07
-
-tier3_slow_unfavorable:
-  Weather, PEMS04, PEMS08
+pems:
+  PEMS03, PEMS04, PEMS07, PEMS08
 ```
 
 启动完整分层实验：
@@ -295,10 +292,10 @@ export PYTHONPATH="$XGBOOST_PYTHON_PACKAGE:${PYTHONPATH:-}"
 bash timeseries_extra_random300/run_linux_tiered_tree.sh
 ```
 
-只跑前两层：
+只跑非 PEMS 阶段：
 
 ```bash
-TIERS="tier1_fast_core tier2_slow_favorable" \
+TIERS="non_pems" \
 bash timeseries_extra_random300/run_linux_tiered_tree.sh
 ```
 
@@ -312,7 +309,7 @@ bash timeseries_extra_random300/run_linux_tiered_tree.sh
 调度顺序为：
 
 ```text
-seed42/tier1 -> seed42/tier2 -> seed42/tier3 -> seed43/tier1 -> ...
+seed42/non_pems -> seed42/pems -> seed43/non_pems -> ...
 ```
 
 脚本启动后会打印：
@@ -341,7 +338,7 @@ ps -fp <pid>
 查看某个 seed/tier 的任务状态：
 
 ```bash
-cat timeseries_extra_random300/logs/<base_run_id>__seed42__tier1_fast_core/task_status.json
+cat timeseries_extra_random300/logs/<base_run_id>__seed42__non_pems/task_status.json
 ```
 
 持续检查父目录合并结果：
@@ -355,7 +352,7 @@ head -20 timeseries_extra_random300/results/<base_run_id>/aggregate.csv
 每个 seed/tier 子目录都会保留完整候选记录：
 
 ```text
-timeseries_extra_random300/results/<base_run_id>__seed42__tier1_fast_core/candidates.csv
+timeseries_extra_random300/results/<base_run_id>__seed42__non_pems/candidates.csv
 ```
 
 ## 9. 结果目录结构
@@ -373,7 +370,7 @@ timeseries_extra_random300/results/<base_run_id>/
 子目录：
 
 ```text
-timeseries_extra_random300/results/<base_run_id>__seed42__tier1_fast_core/
+timeseries_extra_random300/results/<base_run_id>__seed42__non_pems/
   summary.csv
   candidates.csv
   aggregate.csv
@@ -384,7 +381,7 @@ timeseries_extra_random300/results/<base_run_id>__seed42__tier1_fast_core/
   smoke_report.md
 ```
 
-父目录 `summary.csv` 会合并已经完成的 seed/tier；因此即使 tier3 还没跑完，也可以先看 tier1/tier2 的结果。
+父目录 `summary.csv` 会合并已经完成的 seed/tier；因此即使 PEMS 还没跑完，也可以先看 non_pems 的结果。
 
 ## 10. 常见问题
 
@@ -460,16 +457,16 @@ TASK_WORKERS=8 N_JOBS=1 bash timeseries_extra_random300/run_linux_tiered_tree.sh
 
 ### PEMS 太慢
 
-默认 `MAX_FEATURES=32` 会把 PEMS 原始通道截到最多 32 个，保证可计算。如果还慢，可以先跑：
+默认 `MAX_FEATURES=64` 会把 PEMS 原始通道截到最多 64 个，保证可计算。如果还慢，可以先跑：
 
 ```bash
-TIERS="tier1_fast_core" bash timeseries_extra_random300/run_linux_tiered_tree.sh
+TIERS="non_pems" bash timeseries_extra_random300/run_linux_tiered_tree.sh
 ```
 
 确认主结果后再追加：
 
 ```bash
-TIERS="tier2_slow_favorable" bash timeseries_extra_random300/run_linux_tiered_tree.sh
+TIERS="pems" bash timeseries_extra_random300/run_linux_tiered_tree.sh
 ```
 
 ## 11. 最小命令清单
