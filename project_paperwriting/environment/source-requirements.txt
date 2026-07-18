@@ -1,0 +1,18 @@
+# Runtime dependencies for Linux server runs of embedded MetaGB Random300/Random600.
+#
+# Do not install PyPI xgboost for the main experiments. Use the local modified
+# checkout via PYTHONPATH=./beforereview/xgboost-master/python-package after
+# rebuilding ./beforereview/xgboost-master on the target Linux server.
+#
+# Versions below reflect the core package versions in the current working
+# environment and avoid Anaconda/IDE/macOS-only packages from a full pip freeze.
+numpy==2.3.5
+pandas==2.3.3
+scipy==1.16.3
+scikit-learn==1.7.2
+joblib==1.5.2
+threadpoolctl==3.5.0
+cffi==2.0.0
+xarray==2025.10.1
+matplotlib==3.10.6
+pytest==8.4.2

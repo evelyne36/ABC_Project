@@ -1,0 +1,12 @@
+[2026-06-28 03:04:49] start task_id=binary__binary__banknote-authentication.csv__current_metagb__out3
+[2026-06-28 03:04:49] config task_type=binary dataset=binary__banknote-authentication.csv model=current_metagb outer_fold=3/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=1372 original_rows=1372 max_rows_per_dataset=0 features=4 classes=2
+[2026-06-28 03:04:49] split train_rows=1098 test_rows=274 inner_splits=4
+[2026-06-28 03:04:54] candidate 1/300 auc=0.999598 status=ok
+[2026-06-28 03:10:26] candidate 50/300 auc=0.999879 status=ok
+[2026-06-28 03:15:39] candidate 100/300 auc=0.999839 status=ok
+[2026-06-28 03:22:07] candidate 150/300 auc=0.999167 status=ok
+[2026-06-28 03:26:57] candidate 200/300 auc=0.99992 status=ok
+[2026-06-28 03:31:54] candidate 250/300 auc=0.999746 status=ok
+[2026-06-28 03:38:02] candidate 300/300 auc=0.99992 status=ok
+[2026-06-28 03:38:02] selected candidate_index=21 candidate_id=metagb_pf07_sa2_001 val_auc=1 val_std=5.55112e-17
+[2026-06-28 03:38:03] finish best=21 test_auc=1 final_train_sec=0.792154 final_predict_sec=0.00331474 elapsed_sec=1994.5 status=ok

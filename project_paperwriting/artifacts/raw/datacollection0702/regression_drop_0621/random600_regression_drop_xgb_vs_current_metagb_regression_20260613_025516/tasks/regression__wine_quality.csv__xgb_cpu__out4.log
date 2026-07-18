@@ -1,0 +1,18 @@
+[2026-06-14 04:17:40] start task_id=regression__wine_quality.csv__xgb_cpu__out4
+[2026-06-14 04:17:40] config task_type=regression dataset=wine_quality.csv model=xgb_cpu outer_fold=4/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=6497 features=11 classes=0
+[2026-06-14 04:17:40] split train_rows=5198 test_rows=1299 inner_splits=4
+[2026-06-14 04:17:47] candidate 1/600 rmse=0.637573 status=ok
+[2026-06-14 04:23:10] candidate 50/600 rmse=0.670172 status=ok
+[2026-06-14 04:27:40] candidate 100/600 rmse=0.6727 status=ok
+[2026-06-14 04:32:39] candidate 150/600 rmse=0.705587 status=ok
+[2026-06-14 04:36:34] candidate 200/600 rmse=0.684563 status=ok
+[2026-06-14 04:40:27] candidate 250/600 rmse=0.657721 status=ok
+[2026-06-14 04:44:36] candidate 300/600 rmse=0.637289 status=ok
+[2026-06-14 04:48:31] candidate 350/600 rmse=0.661966 status=ok
+[2026-06-14 04:52:49] candidate 400/600 rmse=0.656375 status=ok
+[2026-06-14 04:57:38] candidate 450/600 rmse=0.742339 status=ok
+[2026-06-14 05:01:18] candidate 500/600 rmse=0.685144 status=ok
+[2026-06-14 05:06:26] candidate 550/600 rmse=0.621754 status=ok
+[2026-06-14 05:10:45] candidate 600/600 rmse=0.630482 status=ok
+[2026-06-14 05:10:45] selected candidate_index=403 candidate_id=xgb_0403 val_rmse=0.61309 val_std=0.0253582
+[2026-06-14 05:10:50] finish best=403 test_rmse=0.59385 final_train_sec=4.88583 final_predict_sec=0.0578062 elapsed_sec=3189.16 status=ok

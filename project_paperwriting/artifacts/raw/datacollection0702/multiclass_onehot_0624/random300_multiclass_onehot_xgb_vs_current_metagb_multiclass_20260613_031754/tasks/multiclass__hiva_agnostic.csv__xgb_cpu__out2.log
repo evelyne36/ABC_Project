@@ -1,0 +1,12 @@
+[2026-06-13 07:35:35] start task_id=multiclass__hiva_agnostic.csv__xgb_cpu__out2
+[2026-06-13 07:35:36] config task_type=multiclass dataset=hiva_agnostic.csv model=xgb_cpu outer_fold=2/5 inner_folds=4 candidates=300 objective=multi:softprob primary_metric=logloss direction=minimize rows=3845 features=1617 classes=3
+[2026-06-13 07:35:36] split train_rows=3076 test_rows=769 inner_splits=4
+[2026-06-13 07:37:01] candidate 1/300 logloss=0.206303 status=ok
+[2026-06-13 08:29:36] candidate 50/300 logloss=0.200946 status=ok
+[2026-06-13 09:23:26] candidate 100/300 logloss=0.198218 status=ok
+[2026-06-13 10:15:51] candidate 150/300 logloss=0.178714 status=ok
+[2026-06-13 11:10:54] candidate 200/300 logloss=0.185672 status=ok
+[2026-06-13 12:02:54] candidate 250/300 logloss=0.214922 status=ok
+[2026-06-13 12:59:40] candidate 300/300 logloss=0.31924 status=ok
+[2026-06-13 12:59:40] selected candidate_index=76 candidate_id=xgb_0076 val_logloss=0.175631 val_std=0.00248197
+[2026-06-13 12:59:53] finish best=76 test_logloss=0.177872 final_train_sec=13.514 final_predict_sec=0.0378995 elapsed_sec=19457.5 status=ok

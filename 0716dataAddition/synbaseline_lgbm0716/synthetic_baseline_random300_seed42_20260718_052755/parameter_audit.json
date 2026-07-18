@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "candidate_counts": {
+    "lightgbm": 300,
+    "catboost": 300,
+    "random_forest": 300
+  },
+  "selected_models": [
+    "lightgbm",
+    "catboost",
+    "random_forest"
+  ],
+  "shared_boosting_space_checks": {
+    "learning_rate": true,
+    "tree_count": true,
+    "depth": true,
+    "l2_regularization": true
+  },
+  "search_space_hash": "8ea14bd1ad05df0c757cafc070f50c0805e294a2f057b851fe62fe4b0e56c30f",
+  "candidate_config_hash": "2c22783fc7f6c29874116575c48dd4718445b706d3dfe2c6efb315fdc74d3d06"
+}

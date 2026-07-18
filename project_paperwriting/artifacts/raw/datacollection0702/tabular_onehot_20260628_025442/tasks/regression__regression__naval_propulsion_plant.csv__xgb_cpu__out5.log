@@ -1,0 +1,12 @@
+[2026-06-30 14:19:35] start task_id=regression__regression__naval_propulsion_plant.csv__xgb_cpu__out5
+[2026-06-30 14:19:35] config task_type=regression dataset=regression__naval_propulsion_plant.csv model=xgb_cpu outer_fold=5/5 inner_folds=4 candidates=300 objective=reg:squarederror primary_metric=rmse direction=minimize rows=11934 original_rows=11934 max_rows_per_dataset=0 features=14 classes=0
+[2026-06-30 14:19:35] split train_rows=9548 test_rows=2386 inner_splits=4
+[2026-06-30 14:19:41] candidate 1/300 rmse=0.00172268 status=ok
+[2026-06-30 14:22:34] candidate 50/300 rmse=0.00291054 status=ok
+[2026-06-30 14:25:30] candidate 100/300 rmse=0.00300749 status=ok
+[2026-06-30 14:28:23] candidate 150/300 rmse=0.00831637 status=ok
+[2026-06-30 14:31:06] candidate 200/300 rmse=0.00534614 status=ok
+[2026-06-30 14:33:48] candidate 250/300 rmse=0.00184058 status=ok
+[2026-06-30 14:36:34] candidate 300/300 rmse=0.00106116 status=ok
+[2026-06-30 14:36:34] selected candidate_index=62 candidate_id=xgb_0062 val_rmse=0.00100774 val_std=2.03487e-05
+[2026-06-30 14:36:35] finish best=62 test_rmse=0.000916503 final_train_sec=0.631622 final_predict_sec=0.0257593 elapsed_sec=1019.33 status=ok

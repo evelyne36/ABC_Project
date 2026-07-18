@@ -1,0 +1,12 @@
+[2026-06-28 05:38:10] start task_id=binary__binary__ilpd.csv__current_metagb__out3
+[2026-06-28 05:38:10] config task_type=binary dataset=binary__ilpd.csv model=current_metagb outer_fold=3/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=583 original_rows=583 max_rows_per_dataset=0 features=11 classes=2
+[2026-06-28 05:38:10] split train_rows=466 test_rows=117 inner_splits=4
+[2026-06-28 05:38:26] candidate 1/300 auc=0.742099 status=ok
+[2026-06-28 06:06:08] candidate 50/300 auc=0.732818 status=ok
+[2026-06-28 06:31:48] candidate 100/300 auc=0.733935 status=ok
+[2026-06-28 07:06:52] candidate 150/300 auc=0.722224 status=ok
+[2026-06-28 07:30:04] candidate 200/300 auc=0.729559 status=ok
+[2026-06-28 07:55:27] candidate 250/300 auc=0.724165 status=ok
+[2026-06-28 08:26:21] candidate 300/300 auc=0.735104 status=ok
+[2026-06-28 08:26:21] selected candidate_index=265 candidate_id=metagb_pf09_sa0_009 val_auc=0.762542 val_std=0.0407415
+[2026-06-28 08:27:15] finish best=265 test_auc=0.720057 final_train_sec=54.492 final_predict_sec=0.0124785 elapsed_sec=10145.2 status=ok

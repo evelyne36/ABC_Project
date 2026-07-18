@@ -1,0 +1,12 @@
+[2026-06-28 20:45:47] start task_id=regression__regression__abalone.csv__current_metagb__out3
+[2026-06-28 20:45:47] config task_type=regression dataset=regression__abalone.csv model=current_metagb outer_fold=3/5 inner_folds=4 candidates=300 objective=reg:squarederror primary_metric=rmse direction=minimize rows=4177 original_rows=4177 max_rows_per_dataset=0 features=10 classes=0
+[2026-06-28 20:45:47] split train_rows=3342 test_rows=835 inner_splits=4
+[2026-06-28 20:46:09] candidate 1/300 rmse=2.16022 status=ok
+[2026-06-28 21:21:38] candidate 50/300 rmse=2.1512 status=ok
+[2026-06-28 21:52:18] candidate 100/300 rmse=2.13502 status=ok
+[2026-06-28 22:37:07] candidate 150/300 rmse=2.78149 status=ok
+[2026-06-28 23:04:51] candidate 200/300 rmse=2.14833 status=ok
+[2026-06-28 23:35:34] candidate 250/300 rmse=2.14597 status=ok
+[2026-06-29 00:10:28] candidate 300/300 rmse=2.28697 status=ok
+[2026-06-29 00:10:28] selected candidate_index=175 candidate_id=metagb_pf09_sa0_006 val_rmse=2.11215 val_std=0.0471945
+[2026-06-29 00:10:35] finish best=175 test_rmse=2.24273 final_train_sec=7.03591 final_predict_sec=0.0153003 elapsed_sec=12287.5 status=ok

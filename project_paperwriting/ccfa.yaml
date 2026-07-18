@@ -1,0 +1,40 @@
+version: "0.4.0"
+project:
+  title: ""
+  short_name: "metagb-aaai27"
+  root: "."
+target_venue:
+  name: "AAAI"
+  year: "2027"
+  mode: "review"
+stage:
+  current: "canonicalization_pending"
+  gate: "migration_validated"
+  updated_at: "2026-07-14"
+artifacts:
+  manuscript: "../docs_paperwriting/manuscript/main.tex"
+  bibliography: "../docs_paperwriting/manuscript/references.bib"
+  figures: "analysis/figures/"
+  tables: "analysis/tables/"
+  experiments: "experiments/"
+  reviews: "../docs_paperwriting/reviews/"
+  submission: "submission/"
+claims: []
+experiments:
+  - id: "tabular_drop_primary"
+    status: "raw_migrated"
+  - id: "tabular_onehot_secondary"
+    status: "raw_migrated"
+  - id: "synthetic_dim10_dim20_seed42"
+    status: "raw_migrated"
+  - id: "timeseries_predlen1"
+    status: "raw_migrated_partial_metagb_coverage"
+  - id: "component_ablation"
+    status: "reserved_no_results"
+reviews: []
+revision_ledger:
+  path: "../docs_paperwriting/reviews/revision-ledger.md"
+  status: "not_started"
+submission_checks:
+  path: "submission/checks.md"
+  status: "not_started"

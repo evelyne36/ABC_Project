@@ -1,0 +1,12 @@
+[2026-06-14 22:49:07] start task_id=binary__Fitness_Club.csv__xgb_cpu__out1
+[2026-06-14 22:49:07] config task_type=binary dataset=Fitness_Club.csv model=xgb_cpu outer_fold=1/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=1480 features=18 classes=2
+[2026-06-14 22:49:07] split train_rows=1184 test_rows=296 inner_splits=4
+[2026-06-14 22:49:08] candidate 1/300 auc=0.766693 status=ok
+[2026-06-14 22:50:36] candidate 50/300 auc=0.779678 status=ok
+[2026-06-14 22:51:54] candidate 100/300 auc=0.779926 status=ok
+[2026-06-14 22:53:22] candidate 150/300 auc=0.77938 status=ok
+[2026-06-14 22:54:42] candidate 200/300 auc=0.786056 status=ok
+[2026-06-14 22:56:00] candidate 250/300 auc=0.763737 status=ok
+[2026-06-14 22:57:24] candidate 300/300 auc=0.740485 status=ok
+[2026-06-14 22:57:24] selected candidate_index=85 candidate_id=xgb_0085 val_auc=0.791021 val_std=0.0122137
+[2026-06-14 22:57:24] finish best=85 test_auc=0.862136 final_train_sec=0.145167 final_predict_sec=0.00444125 elapsed_sec=497.536 status=ok

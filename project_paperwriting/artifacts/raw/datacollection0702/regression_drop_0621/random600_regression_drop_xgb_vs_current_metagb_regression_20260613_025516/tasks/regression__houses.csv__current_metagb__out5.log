@@ -1,0 +1,18 @@
+[2026-06-13 13:57:44] start task_id=regression__houses.csv__current_metagb__out5
+[2026-06-13 13:57:44] config task_type=regression dataset=houses.csv model=current_metagb outer_fold=5/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=20640 features=8 classes=0
+[2026-06-13 13:57:44] split train_rows=16512 test_rows=4128 inner_splits=4
+[2026-06-13 13:58:32] candidate 1/600 rmse=0.247829 status=ok
+[2026-06-13 15:04:07] candidate 50/600 rmse=0.282505 status=ok
+[2026-06-13 15:59:02] candidate 100/600 rmse=0.28025 status=ok
+[2026-06-13 17:13:25] candidate 150/600 rmse=2.1223 status=ok
+[2026-06-13 18:03:06] candidate 200/600 rmse=0.389153 status=ok
+[2026-06-13 18:55:24] candidate 250/600 rmse=0.265893 status=ok
+[2026-06-13 19:53:44] candidate 300/600 rmse=0.267296 status=ok
+[2026-06-13 20:40:21] candidate 350/600 rmse=0.502368 status=ok
+[2026-06-13 21:37:33] candidate 400/600 rmse=0.300665 status=ok
+[2026-06-13 22:44:22] candidate 450/600 rmse=4.06297 status=ok
+[2026-06-13 23:34:33] candidate 500/600 rmse=0.955719 status=ok
+[2026-06-14 00:43:48] candidate 550/600 rmse=0.39375 status=ok
+[2026-06-14 01:46:22] candidate 600/600 rmse=0.33403 status=ok
+[2026-06-14 01:46:22] selected candidate_index=447 candidate_id=metagb_pf09_sa2_015 val_rmse=0.238749 val_std=0.00454916
+[2026-06-14 01:46:29] finish best=447 test_rmse=0.235202 final_train_sec=7.36657 final_predict_sec=0.0486501 elapsed_sec=42525.3 status=ok

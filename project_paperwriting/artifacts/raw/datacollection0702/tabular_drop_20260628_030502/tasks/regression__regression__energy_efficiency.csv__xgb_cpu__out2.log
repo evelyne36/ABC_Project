@@ -1,0 +1,12 @@
+[2026-06-28 03:57:59] start task_id=regression__regression__energy_efficiency.csv__xgb_cpu__out2
+[2026-06-28 03:57:59] config task_type=regression dataset=regression__energy_efficiency.csv model=xgb_cpu outer_fold=2/5 inner_folds=4 candidates=300 objective=reg:squarederror primary_metric=rmse direction=minimize rows=768 original_rows=768 max_rows_per_dataset=0 features=8 classes=0
+[2026-06-28 03:57:59] split train_rows=614 test_rows=154 inner_splits=4
+[2026-06-28 03:58:00] candidate 1/300 rmse=0.651735 status=ok
+[2026-06-28 03:58:47] candidate 50/300 rmse=0.513722 status=ok
+[2026-06-28 03:59:31] candidate 100/300 rmse=0.509524 status=ok
+[2026-06-28 04:00:19] candidate 150/300 rmse=2.18293 status=ok
+[2026-06-28 04:01:02] candidate 200/300 rmse=0.69436 status=ok
+[2026-06-28 04:01:45] candidate 250/300 rmse=0.514651 status=ok
+[2026-06-28 04:02:27] candidate 300/300 rmse=0.493044 status=ok
+[2026-06-28 04:02:27] selected candidate_index=75 candidate_id=xgb_0075 val_rmse=0.447921 val_std=0.0811463
+[2026-06-28 04:02:27] finish best=75 test_rmse=0.338101 final_train_sec=0.249429 final_predict_sec=0.00365733 elapsed_sec=268.697 status=ok

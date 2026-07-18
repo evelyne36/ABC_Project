@@ -1,0 +1,11 @@
+[2026-07-17 12:33:43] start task_id=tabm__drop__regression__regression__space_ga.csv__out5
+[2026-07-17 12:33:43] config model=tabm categorical=drop task_type=regression dataset=regression__space_ga.csv outer_fold=5/5 inner_folds=4 candidates=300 rows=3107 original_rows=3107 features=6 classes=0 primary_metric=rmse direction=minimize
+[2026-07-17 13:13:24] candidate 1/300 rmse=0.105202 status=ok
+[2026-07-17 14:42:28] candidate 5/300 rmse=0.111758 status=ok
+[2026-07-17 17:29:26] candidate 10/300 rmse=0.107844 status=ok
+[2026-07-17 19:18:33] candidate 15/300 rmse=0.113514 status=ok
+[2026-07-17 21:46:02] candidate 20/300 rmse=0.106531 status=ok
+[2026-07-17 23:38:18] candidate 25/300 rmse=0.106797 status=ok
+[2026-07-18 02:23:14] candidate 30/300 rmse=0.105757 status=ok
+[2026-07-18 04:52:30] candidate 35/300 rmse=0.105785 status=ok
+[2026-07-18 07:29:22] candidate 40/300 rmse=0.10697 status=ok

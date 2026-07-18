@@ -1,0 +1,12 @@
+[2026-06-28 02:54:50] start task_id=binary__binary__haberman.csv__xgb_cpu__out3
+[2026-06-28 02:54:50] config task_type=binary dataset=binary__haberman.csv model=xgb_cpu outer_fold=3/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=306 original_rows=306 max_rows_per_dataset=0 features=3 classes=2
+[2026-06-28 02:54:50] split train_rows=245 test_rows=61 inner_splits=4
+[2026-06-28 02:54:51] candidate 1/300 auc=0.609937 status=ok
+[2026-06-28 02:55:20] candidate 50/300 auc=0.613899 status=ok
+[2026-06-28 02:55:49] candidate 100/300 auc=0.612612 status=ok
+[2026-06-28 02:56:18] candidate 150/300 auc=0.595313 status=ok
+[2026-06-28 02:56:48] candidate 200/300 auc=0.649826 status=ok
+[2026-06-28 02:57:18] candidate 250/300 auc=0.605382 status=ok
+[2026-06-28 02:57:48] candidate 300/300 auc=0.604136 status=ok
+[2026-06-28 02:57:48] selected candidate_index=76 candidate_id=xgb_0076 val_auc=0.697621 val_std=0.0298529
+[2026-06-28 02:57:48] finish best=76 test_auc=0.722222 final_train_sec=0.128219 final_predict_sec=0.00708678 elapsed_sec=178.201 status=ok

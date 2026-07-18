@@ -1,0 +1,28 @@
+task_type,dataset,file_status,source_hint,rows,features,pressure_proxy,priority,inventory_note
+binary,haberman,available,tabular_extra_random300/data/binary__haberman.csv,306,3,2754,low,tiny and noisy; useful for small-data behavior
+multiclass,balance-scale,available,tabular_extra_random300/data/multiclass__balance-scale.csv,625,4,10000,low,fast but very simple
+binary,banknote-authentication,available,tabular_extra_random300/data/binary__banknote-authentication.csv,1372,4,21952,medium,very fast sanity check; may be too easy
+regression,Moneyball,available,tabular_extra_random300/data/regression__Moneyball.csv,114,14,22344,medium,tiny semantic tabular regression
+regression,energy_efficiency,available,tabular_extra_random300/data/regression__energy_efficiency.csv,768,8,49152,high,small engineering regression; likely local linear structure
+binary,breast-w,available,tabular_extra_random300/data/binary__breast-w.csv,683,9,55323,medium,classic low-dimensional medical binary benchmark
+binary,ilpd,available,tabular_extra_random300/data/binary__ilpd.csv,583,10,58300,medium,small clinical binary dataset
+regression,boston,available,tabular_extra_random300/data/regression__boston.csv,506,13,85514,low,legacy benchmark with dataset concerns; appendix only
+regression,space_ga,available,tabular_extra_random300/data/regression__space_ga.csv,3107,6,111852,medium,low-dimensional regression complement
+multiclass,vowel,available,tabular_extra_random300/data/multiclass__vowel.csv,990,11,119790,medium,small 11-class benchmark
+binary,phoneme,available,tabular_extra_random300/data/binary__phoneme.csv,5404,5,135100,high,binary acoustic benchmark; low-dimensional nonlinear candidate
+binary,credit-approval,available,tabular_extra_random300/data/binary__credit-approval.csv,653,15,146925,high,mixed credit tabular data; good lightweight binary supplement
+regression,friedman1,available,tabular_extra_random300/data/regression__friedman1.csv,2000,10,200000,low,synthetic diagnostic; weaker as real-data evidence
+regression,abalone,available,tabular_extra_random300/data/regression__abalone.csv,4177,8,267328,low,feasible but ordinal-like target; keep as reserve
+multiclass,vehicle,available,tabular_extra_random300/data/multiclass__vehicle.csv,846,18,274104,high,compact 4-class benchmark
+binary,mozilla4,available,tabular_extra_random300/data/binary__mozilla4.csv,15545,5,388625,medium,binary performance dataset if available
+binary,pc1,available,tabular_extra_random300/data/binary__pc1.csv,1109,21,489069,medium,software defect benchmark similar to kc1
+regression,kin8nm,available,tabular_extra_random300/data/regression__kin8nm.csv,8192,8,524288,high,smooth nonlinear low-dimensional regression; existing TabPFN candidate
+multiclass,segment,available,tabular_extra_random300/data/multiclass__segment.csv,2310,19,833910,high,low-dimensional 7-class benchmark
+binary,kc1,available,tabular_extra_random300/data/binary__kc1.csv,2109,21,930069,high,software defect prediction; compact and tree-friendly
+binary,electricity,available,tabular_extra_random300/data/binary__electricity.csv,38474,7,1885226,medium,many rows but very few columns; scalability check
+regression,naval_propulsion_plant,available,tabular_extra_random300/data/regression__naval_propulsion_plant.csv,11934,14,2339064,high,low/mid-dimensional engineering regression; very low noise
+regression,cpu_activity,available,tabular_extra_random300/data/regression__cpu_activity.csv,8192,21,3612672,medium,common OpenML regression benchmark
+multiclass,mfeat-karhunen,available,tabular_extra_random300/data/multiclass__mfeat-karhunen.csv,2000,64,8192000,medium,medium-width check; slower but feasible
+multiclass,satimage,available,tabular_extra_random300/data/multiclass__satimage.csv,6430,36,8333280,medium,larger but still feasible
+multiclass,mfeat-fourier,available,tabular_extra_random300/data/multiclass__mfeat-fourier.csv,2000,76,11552000,medium,medium-width check; slower but feasible
+multiclass,optdigits,available,tabular_extra_random300/data/multiclass__optdigits.csv,5620,64,23019520,low,feasible but slower than top choices

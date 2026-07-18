@@ -1,0 +1,17 @@
+{
+  "models": [
+    "linear",
+    "extra_trees",
+    "random_forest",
+    "lightgbm",
+    "catboost",
+    "torchmlp"
+  ],
+  "categorical_handlings": [
+    "drop",
+    "onehot"
+  ],
+  "max_candidates": 300,
+  "search_space_json": "/home/admin/check_codereview_0701/random300_baselinemodel/configs/default_search_space.json",
+  "notes": "AAAI-27 retained baseline scope; RealMLP and TabM excluded by author decision."
+}

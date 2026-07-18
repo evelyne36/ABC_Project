@@ -1,0 +1,12 @@
+[2026-06-13 04:17:12] start task_id=binary__Amazon_employee_access.csv__current_metagb__out3
+[2026-06-13 04:17:12] config task_type=binary dataset=Amazon_employee_access.csv model=current_metagb outer_fold=3/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=32769 features=9 classes=2
+[2026-06-13 04:17:12] split train_rows=26215 test_rows=6554 inner_splits=4
+[2026-06-13 04:18:30] candidate 1/300 auc=0.823416 status=ok
+[2026-06-13 06:09:45] candidate 50/300 auc=0.794534 status=ok
+[2026-06-13 07:45:11] candidate 100/300 auc=0.789804 status=ok
+[2026-06-13 10:05:22] candidate 150/300 auc=0.762533 status=ok
+[2026-06-13 11:29:13] candidate 200/300 auc=0.765901 status=ok
+[2026-06-13 13:01:32] candidate 250/300 auc=0.811743 status=ok
+[2026-06-13 14:52:15] candidate 300/300 auc=0.819078 status=ok
+[2026-06-13 14:52:15] selected candidate_index=196 candidate_id=metagb_pf06_sa0_007 val_auc=0.835914 val_std=0.0109971
+[2026-06-13 14:54:45] finish best=196 test_auc=0.862296 final_train_sec=148.854 final_predict_sec=1.09295 elapsed_sec=38252.8 status=ok

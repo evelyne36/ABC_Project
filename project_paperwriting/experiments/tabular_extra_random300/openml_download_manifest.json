@@ -1,0 +1,57 @@
+[
+  {
+    "key": "abalone",
+    "openml_name": "abalone",
+    "task_type": "regression",
+    "filename": "regression__abalone.csv",
+    "status": "downloaded",
+    "notes": "Small mixed tabular candidate; verify target semantics before paper use.",
+    "output_path": "/Users/ancd/VSCodeProject/check_codereview0623-adapter/tabular_extra_random300/data/regression__abalone.csv",
+    "rows": 4177,
+    "features": 8
+  },
+  {
+    "key": "boston",
+    "openml_name": "boston",
+    "task_type": "regression",
+    "filename": "regression__boston.csv",
+    "status": "downloaded",
+    "notes": "Legacy housing benchmark; keep for appendix-style diagnostics only.",
+    "output_path": "/Users/ancd/VSCodeProject/check_codereview0623-adapter/tabular_extra_random300/data/regression__boston.csv",
+    "rows": 506,
+    "features": 13
+  },
+  {
+    "key": "mozilla4",
+    "openml_name": "mozilla4",
+    "task_type": "binary",
+    "filename": "binary__mozilla4.csv",
+    "status": "downloaded",
+    "notes": "Binary performance dataset reserve candidate.",
+    "output_path": "/Users/ancd/VSCodeProject/check_codereview0623-adapter/tabular_extra_random300/data/binary__mozilla4.csv",
+    "rows": 15545,
+    "features": 5
+  },
+  {
+    "key": "mfeat-fourier",
+    "openml_name": "mfeat-fourier",
+    "task_type": "multiclass",
+    "filename": "multiclass__mfeat-fourier.csv",
+    "status": "downloaded",
+    "notes": "MFEAT view with moderate feature count.",
+    "output_path": "/Users/ancd/VSCodeProject/check_codereview0623-adapter/tabular_extra_random300/data/multiclass__mfeat-fourier.csv",
+    "rows": 2000,
+    "features": 76
+  },
+  {
+    "key": "mfeat-karhunen",
+    "openml_name": "mfeat-karhunen",
+    "task_type": "multiclass",
+    "filename": "multiclass__mfeat-karhunen.csv",
+    "status": "downloaded",
+    "notes": "MFEAT view with lower feature count than Fourier.",
+    "output_path": "/Users/ancd/VSCodeProject/check_codereview0623-adapter/tabular_extra_random300/data/multiclass__mfeat-karhunen.csv",
+    "rows": 2000,
+    "features": 64
+  }
+]

@@ -130,6 +130,31 @@ def test_metagb_regressor_options_smoke(extra_params: dict[str, object]) -> None
     assert np.isfinite(pred).all()
 
 
+def test_metagb_zero_pred_fraction_is_strictly_bias_only(tmp_path) -> None:
+    X, y = make_regression_data()
+    model = make_metagb_regressor(
+        n_estimators=2,
+        metagb_pred_colsample_bytree=0.0,
+        metagb_leaf_only_use_bias=False,
+    )
+    model.fit(X, y)
+
+    path = tmp_path / "pred_fraction_zero.json"
+    model.save_model(path)
+    trees = json.loads(path.read_text())["learner"]["gradient_booster"]["model"]["trees"]
+    bias_feature = X.shape[1]
+    for tree in trees:
+        leaves = [
+            index
+            for index, left_child in enumerate(tree["left_children"])
+            if left_child == -1
+        ]
+        assert leaves
+        assert {
+            tree["metagb_leaf_features"][index] for index in leaves
+        } == {bias_feature}
+
+
 def test_metagb_min_data_in_leaf_smoke() -> None:
     X, y = make_regression_data()
 

@@ -1,0 +1,12 @@
+[2026-06-28 17:06:31] start task_id=regression__regression__friedman1.csv__current_metagb__out5
+[2026-06-28 17:06:31] config task_type=regression dataset=regression__friedman1.csv model=current_metagb outer_fold=5/5 inner_folds=4 candidates=300 objective=reg:squarederror primary_metric=rmse direction=minimize rows=2000 original_rows=2000 max_rows_per_dataset=0 features=10 classes=0
+[2026-06-28 17:06:31] split train_rows=1600 test_rows=400 inner_splits=4
+[2026-06-28 17:06:59] candidate 1/300 rmse=1.65559 status=ok
+[2026-06-28 17:54:56] candidate 50/300 rmse=1.33741 status=ok
+[2026-06-28 18:35:32] candidate 100/300 rmse=1.41586 status=ok
+[2026-06-28 19:32:46] candidate 150/300 rmse=3.3849 status=ok
+[2026-06-28 20:09:22] candidate 200/300 rmse=1.57814 status=ok
+[2026-06-28 20:48:49] candidate 250/300 rmse=1.54104 status=ok
+[2026-06-28 21:36:43] candidate 300/300 rmse=1.38303 status=ok
+[2026-06-28 21:36:43] selected candidate_index=8 candidate_id=metagb_pf03_sa1_001 val_rmse=1.2879 val_std=0.0409284
+[2026-06-28 21:36:45] finish best=8 test_rmse=1.24284 final_train_sec=2.23372 final_predict_sec=0.00850551 elapsed_sec=16213.6 status=ok

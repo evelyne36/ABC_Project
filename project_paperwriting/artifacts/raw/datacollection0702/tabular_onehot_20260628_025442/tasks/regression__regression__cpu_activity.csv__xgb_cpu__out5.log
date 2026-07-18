@@ -1,0 +1,12 @@
+[2026-06-30 18:06:27] start task_id=regression__regression__cpu_activity.csv__xgb_cpu__out5
+[2026-06-30 18:06:27] config task_type=regression dataset=regression__cpu_activity.csv model=xgb_cpu outer_fold=5/5 inner_folds=4 candidates=300 objective=reg:squarederror primary_metric=rmse direction=minimize rows=8192 original_rows=8192 max_rows_per_dataset=0 features=21 classes=0
+[2026-06-30 18:06:27] split train_rows=6554 test_rows=1638 inner_splits=4
+[2026-06-30 18:06:39] candidate 1/300 rmse=2.37391 status=ok
+[2026-06-30 18:16:02] candidate 50/300 rmse=2.35163 status=ok
+[2026-06-30 18:24:07] candidate 100/300 rmse=2.45452 status=ok
+[2026-06-30 18:34:22] candidate 150/300 rmse=4.41071 status=ok
+[2026-06-30 18:42:41] candidate 200/300 rmse=2.6972 status=ok
+[2026-06-30 18:50:21] candidate 250/300 rmse=2.35836 status=ok
+[2026-06-30 18:58:51] candidate 300/300 rmse=2.32285 status=ok
+[2026-06-30 18:58:51] selected candidate_index=141 candidate_id=xgb_0141 val_rmse=2.2239 val_std=0.0677925
+[2026-06-30 18:58:52] finish best=141 test_rmse=2.14461 final_train_sec=1.07874 final_predict_sec=0.0154147 elapsed_sec=3144.29 status=ok

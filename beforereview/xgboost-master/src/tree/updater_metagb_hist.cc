@@ -200,6 +200,12 @@ bst_bin_t FeatureBin(GHistIndexMatrix const& gmat, std::size_t ridx, bst_feature
 std::vector<bst_feature_t> SampleFeatures(bst_feature_t n_features, float fraction,
                                           bool require_non_empty) {
   std::vector<bst_feature_t> features;
+  if (fraction <= 0.0f) {
+    if (require_non_empty && n_features > 0) {
+      features.push_back(static_cast<bst_feature_t>(OriginalRandIndex(n_features)));
+    }
+    return features;
+  }
   features.reserve(n_features);
   for (bst_feature_t f = 0; f < n_features; ++f) {
     if (OriginalRandUniform() <= static_cast<double>(fraction)) {

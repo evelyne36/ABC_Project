@@ -1,0 +1,12 @@
+[2026-06-30 06:56:55] start task_id=binary__binary__kc1.csv__xgb_cpu__out5
+[2026-06-30 06:56:55] config task_type=binary dataset=binary__kc1.csv model=xgb_cpu outer_fold=5/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=2109 original_rows=2109 max_rows_per_dataset=0 features=21 classes=2
+[2026-06-30 06:56:55] split train_rows=1688 test_rows=421 inner_splits=4
+[2026-06-30 06:56:57] candidate 1/300 auc=0.81675 status=ok
+[2026-06-30 06:58:11] candidate 50/300 auc=0.821746 status=ok
+[2026-06-30 06:59:21] candidate 100/300 auc=0.823522 status=ok
+[2026-06-30 07:00:37] candidate 150/300 auc=0.817641 status=ok
+[2026-06-30 07:01:48] candidate 200/300 auc=0.821982 status=ok
+[2026-06-30 07:02:58] candidate 250/300 auc=0.818011 status=ok
+[2026-06-30 07:04:14] candidate 300/300 auc=0.784923 status=ok
+[2026-06-30 07:04:14] selected candidate_index=64 candidate_id=xgb_0064 val_auc=0.823838 val_std=0.0117649
+[2026-06-30 07:04:14] finish best=64 test_auc=0.777939 final_train_sec=0.157007 final_predict_sec=0.00217154 elapsed_sec=438.42 status=ok

@@ -1,0 +1,15 @@
+__pycache__/
+.pytest_cache/
+.DS_Store
+*.pyc
+*.so
+*.dylib
+*.o
+build/
+artifacts/canonical/*
+!artifacts/canonical/README.md
+analysis/tables/*
+!analysis/tables/README.md
+analysis/figures/*
+!analysis/figures/README.md
+

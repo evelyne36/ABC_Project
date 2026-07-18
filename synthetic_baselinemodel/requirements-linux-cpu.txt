@@ -1,0 +1,15 @@
+# Linux CPU environment for the three synthetic tree baselines.
+# Install from the repository root:
+#   pip install -r synthetic_baselinemodel/requirements-linux-cpu.txt
+
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.15.3
+scikit-learn==1.7.2
+joblib>=1.3
+threadpoolctl>=3.0
+
+lightgbm==4.6.0
+catboost==1.2.10
+
+pytest==9.0.2

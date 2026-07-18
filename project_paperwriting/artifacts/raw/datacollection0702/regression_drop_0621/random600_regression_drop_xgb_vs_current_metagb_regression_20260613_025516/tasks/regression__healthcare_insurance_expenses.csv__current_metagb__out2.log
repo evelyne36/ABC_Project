@@ -1,0 +1,18 @@
+[2026-06-13 08:15:10] start task_id=regression__healthcare_insurance_expenses.csv__current_metagb__out2
+[2026-06-13 08:15:10] config task_type=regression dataset=healthcare_insurance_expenses.csv model=current_metagb outer_fold=2/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=1338 features=3 classes=0
+[2026-06-13 08:15:10] split train_rows=1070 test_rows=268 inner_splits=4
+[2026-06-13 08:15:14] candidate 1/600 rmse=12265.7 status=ok
+[2026-06-13 08:19:38] candidate 50/600 rmse=11942.2 status=ok
+[2026-06-13 08:23:37] candidate 100/600 rmse=11862 status=ok
+[2026-06-13 08:28:54] candidate 150/600 rmse=11615.9 status=ok
+[2026-06-13 08:32:42] candidate 200/600 rmse=11608 status=ok
+[2026-06-13 08:36:41] candidate 250/600 rmse=12414.1 status=ok
+[2026-06-13 08:41:06] candidate 300/600 rmse=13502.7 status=ok
+[2026-06-13 08:44:48] candidate 350/600 rmse=11823.2 status=ok
+[2026-06-13 08:49:12] candidate 400/600 rmse=12467.1 status=ok
+[2026-06-13 08:53:56] candidate 450/600 rmse=12097.3 status=ok
+[2026-06-13 08:57:27] candidate 500/600 rmse=11529.7 status=ok
+[2026-06-13 09:02:10] candidate 550/600 rmse=13090.2 status=ok
+[2026-06-13 09:06:37] candidate 600/600 rmse=12262.2 status=ok
+[2026-06-13 09:06:37] selected candidate_index=222 candidate_id=metagb_pf04_sa2_008 val_rmse=11412.7 val_std=287.602
+[2026-06-13 09:06:38] finish best=222 test_rmse=12536.7 final_train_sec=0.338885 final_predict_sec=0.00484697 elapsed_sec=3088.02 status=ok

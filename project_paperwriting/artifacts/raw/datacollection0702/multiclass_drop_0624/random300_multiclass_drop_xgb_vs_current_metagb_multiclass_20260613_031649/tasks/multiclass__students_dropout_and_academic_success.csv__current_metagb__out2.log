@@ -1,0 +1,12 @@
+[2026-06-13 17:23:31] start task_id=multiclass__students_dropout_and_academic_success.csv__current_metagb__out2
+[2026-06-13 17:23:31] config task_type=multiclass dataset=students_dropout_and_academic_success.csv model=current_metagb outer_fold=2/5 inner_folds=4 candidates=300 objective=multi:softprob primary_metric=logloss direction=minimize rows=4424 features=19 classes=3
+[2026-06-13 17:23:31] split train_rows=3539 test_rows=885 inner_splits=4
+[2026-06-13 17:27:56] candidate 1/300 logloss=0.636304 status=ok
+[2026-06-14 03:57:18] candidate 50/300 logloss=0.605757 status=ok
+[2026-06-14 12:11:00] candidate 100/300 logloss=0.609614 status=ok
+[2026-06-15 01:05:28] candidate 150/300 logloss=0.665057 status=ok
+[2026-06-15 08:29:59] candidate 200/300 logloss=0.612715 status=ok
+[2026-06-15 17:03:48] candidate 250/300 logloss=0.633455 status=ok
+[2026-06-16 03:13:45] candidate 300/300 logloss=0.915342 status=ok
+[2026-06-16 03:13:45] selected candidate_index=131 candidate_id=metagb_pf04_sa1_005 val_logloss=0.604426 val_std=0.0072061
+[2026-06-16 03:14:14] finish best=131 test_logloss=0.628082 final_train_sec=28.8394 final_predict_sec=0.0646555 elapsed_sec=208243 status=ok
