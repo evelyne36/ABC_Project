@@ -8,8 +8,8 @@ import pytest
 from metagb_ablation.io_utils import canonical_hash, canonical_json, write_json
 from metagb_ablation.modeling import metagb_params_from_backbone
 from metagb_ablation.protocols import build_variants
+from metagb_ablation.artifact_audit import build_completeness_audit
 from metagb_ablation.run_ablation import (
-    build_completeness_audit,
     ensure_execution_compatible,
 )
 

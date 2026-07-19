@@ -1,3 +1,0 @@
-[2026-06-30 16:45:20] start task_id=binary__Bioresponse.csv__current_metagb__out4
-[2026-06-30 16:45:20] config task_type=binary dataset=Bioresponse.csv model=current_metagb outer_fold=4/5 inner_folds=4 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=3751 features=1776 classes=2
-[2026-06-30 16:45:20] split train_rows=3001 test_rows=750 inner_splits=4

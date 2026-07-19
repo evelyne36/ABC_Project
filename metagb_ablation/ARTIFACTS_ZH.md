@@ -385,3 +385,34 @@ scoreagg：scoreagg_ablation.csv + scoreagg_effects.csv
 ```
 
 绘图脚本必须保留 metric direction、CI、重复单位数和 protocol hash。
+
+## 9. 训练完成后的离线恢复产物
+
+当训练 shards 已完成而原始汇总失败时，运行：
+
+```bash
+python3 -m metagb_ablation.analyze_existing \
+  --result-dir <历史 run 目录> \
+  --output-dir <独立恢复目录>
+```
+
+恢复目录包含重建后的 raw CSV、完整性审计、`unit_results.csv`、六张统计表、
+`ANALYSIS_EVIDENCE.md` 和 `reanalysis_metadata.json`。
+
+`reanalysis_metadata.json` 明确记录：
+
+```text
+analysis_only = true
+training_executed = false
+current_environment_identity_checked = false
+stored config/execution/variant hashes
+当前 analyzer/statistics 源码 SHA256
+bootstrap seed 与重建行数
+```
+
+这表示恢复分析绑定历史训练 identity，但使用当前恢复器和统计实现。它不会声称
+当前环境等同于训练环境，也不会把当前统计源码伪装成历史统计源码。
+
+若完整性审计失败，恢复器只保留重建 raw CSV、失败 audit 和空的派生统计表，
+不会输出 `ANALYSIS_EVIDENCE.md`。必须先解决缺 shard、identity、backbone 或
+prediction 完整性问题，禁止据部分结果形成论文结论。

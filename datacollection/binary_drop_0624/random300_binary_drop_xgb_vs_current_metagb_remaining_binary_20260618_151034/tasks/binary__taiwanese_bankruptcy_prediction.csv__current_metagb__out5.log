@@ -1,4 +1,0 @@
-[2026-06-20 20:06:11] start task_id=binary__taiwanese_bankruptcy_prediction.csv__current_metagb__out5
-[2026-06-20 20:06:11] config task_type=binary dataset=taiwanese_bankruptcy_prediction.csv model=current_metagb outer_fold=5/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=6819 features=94 classes=2
-[2026-06-20 20:06:11] split train_rows=5456 test_rows=1363 inner_splits=4
-[2026-06-20 20:24:52] candidate 1/300 auc=0.873485 status=ok

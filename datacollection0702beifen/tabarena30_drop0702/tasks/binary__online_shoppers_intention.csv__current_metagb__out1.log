@@ -1,9 +1,0 @@
-[2026-06-29 06:33:48] start task_id=binary__online_shoppers_intention.csv__current_metagb__out1
-[2026-06-29 06:33:48] config task_type=binary dataset=online_shoppers_intention.csv model=current_metagb outer_fold=1/5 inner_folds=4 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=12330 features=14 classes=2
-[2026-06-29 06:33:48] split train_rows=9864 test_rows=2466 inner_splits=4
-[2026-06-29 06:34:09] candidate 1/30 auc=0.912841 status=ok
-[2026-06-29 06:38:48] candidate 10/30 auc=0.912751 status=ok
-[2026-06-29 06:47:30] candidate 20/30 auc=0.911801 status=ok
-[2026-06-29 07:00:05] candidate 30/30 auc=0.910637 status=ok
-[2026-06-29 07:00:05] selected candidate_index=3 candidate_id=xgb_0260_pf01_sa2 val_auc=0.913319 val_std=0.00700139
-[2026-06-29 07:00:13] finish best=3 test_auc=0.915883 final_train_sec=7.29384 final_predict_sec=0.0524025 elapsed_sec=1584.73 status=ok

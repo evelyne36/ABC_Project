@@ -1,0 +1,17 @@
+variant_id,family,leaf_mode,pred_fraction,score_agg,score_agg_label,leaf_only_use_bias,in_main_table,in_pred_sensitivity,in_scoreagg_ablation
+xgb,baseline,constant,,,not_applicable,,True,False,False
+bias_p00_sa0,bias,bias_only,0.0,0.0,greedy,True,True,False,False
+split_p02_sa0,split_only,split_only,0.2,0.0,greedy,True,False,True,False
+full_p02_sa0,full,predictive,0.2,0.0,greedy,False,False,True,False
+split_p04_sa0,split_only,split_only,0.4,0.0,greedy,True,False,True,False
+full_p04_sa0,full,predictive,0.4,0.0,greedy,False,False,True,False
+split_p06_sa0,split_only,split_only,0.6,0.0,greedy,True,False,True,False
+full_p06_sa0,full,predictive,0.6,0.0,greedy,False,False,True,False
+split_p08_sa0,split_only,split_only,0.8,0.0,greedy,True,False,True,False
+full_p08_sa0,full,predictive,0.8,0.0,greedy,False,False,True,False
+split_p10_sa0,split_only,split_only,1.0,0.0,greedy,True,True,True,True
+full_p10_sa0,full,predictive,1.0,0.0,greedy,False,True,True,True
+full_p10_sa1,full,predictive,1.0,1.0,mean,False,False,False,True
+full_p10_sa2,full,predictive,1.0,2.0,median,False,False,False,True
+split_p10_sa1,split_only,split_only,1.0,1.0,mean,True,False,False,True
+split_p10_sa2,split_only,split_only,1.0,2.0,median,True,False,False,True

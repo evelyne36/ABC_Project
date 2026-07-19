@@ -35,6 +35,9 @@ random300/results/
 random600/logs/
 random600/nohup_logs/
 random600/results/
+dataset/
+datasets/
+test/
 
 #generated data for time series experiments, which is too large for normal Git history; 
 # 务必注意末尾的“/”，不然会被误认为是文件而不是目录，仍然会传上去里面的内容

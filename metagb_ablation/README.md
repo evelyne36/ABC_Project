@@ -77,6 +77,36 @@ python3 -m metagb_ablation.run_ablation \
   --resume
 ```
 
+## 已完成训练的离线分析恢复
+
+如果训练已完成且 `tasks/*.json` 仍在，但原 runner 在汇总/分析阶段因 Python
+环境、PyArrow 或 XGBoost identity 变化而报错，不要在新环境直接执行
+`--resume`。`--resume` 会重新校验训练环境和 XGBoost hash，并可能补跑缺失
+task；它不是纯分析入口。
+
+使用离线恢复命令：
+
+```bash
+python3 -m metagb_ablation.analyze_existing \
+  --result-dir /data/metagb_ablation/results/syn_formal_formal_v1 \
+  --output-dir /data/metagb_ablation/reanalysis/syn_formal_formal_v1
+```
+
+该命令：
+
+- 只读取历史 manifests 和 `tasks/*.json`；
+- 不读取当前 XGBoost，不重新计算当前环境 identity，不执行训练；
+- 从 shards 重建 fold、prediction 和 backbone，并重新执行完整性硬审计；
+- 只有审计通过才重算 OOF unit metric 和六张统计表；
+- 写入独立输出目录，不修改原始 run；
+- 生成 `ANALYSIS_EVIDENCE.md`，汇总主效应、剂量响应、scoreagg、
+  mechanism-aligned scenarios 与 negative controls 的证据计数。
+
+默认输出到原 run 的同级 `<run_id>_reanalysis/`。默认不写
+`predictions.parquet`，因此不需要 PyArrow；若需要保存重建后的 Parquet，
+显式添加 `--write-predictions-parquet`，并安装 `pyarrow` 或 `fastparquet`。
+输出目录非空时命令会拒绝覆盖；确认只覆盖恢复产物时可传入 `--overwrite`。
+
 结果默认写入：
 
 ```text

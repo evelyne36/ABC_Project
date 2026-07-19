@@ -1,7 +1,0 @@
-[2026-06-19 12:04:14] start task_id=regression__regression__Moneyball.csv__xgb_cpu__out1
-[2026-06-19 12:04:15] config task_type=regression dataset=regression__Moneyball.csv model=xgb_cpu outer_fold=1/2 inner_folds=2 candidates=30 objective=reg:squarederror primary_metric=rmse direction=minimize rows=114 features=14 classes=0
-[2026-06-19 12:04:15] split train_rows=57 test_rows=57 inner_splits=2
-[2026-06-19 12:04:15] candidate 1/30 rmse=34.6617 status=ok
-[2026-06-19 12:04:17] candidate 30/30 rmse=31.1376 status=ok
-[2026-06-19 12:04:17] selected candidate_index=22 candidate_id=xgb_0022 val_rmse=30.8083 val_std=1.93827
-[2026-06-19 12:04:17] finish best=22 test_rmse=23.9445 final_train_sec=0.0642265 final_predict_sec=0.000976167 elapsed_sec=1.69908 status=ok

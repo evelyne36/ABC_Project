@@ -1,0 +1,107 @@
+[
+  {
+    "path": "protocol.json",
+    "description": "Frozen protocol, CLI filters, paths, and config hash.",
+    "required_for_complete_run": true
+  },
+  {
+    "path": "variant_manifest.csv",
+    "description": "One row per frozen ablation variant.",
+    "required_for_complete_run": true
+  },
+  {
+    "path": "task_plan.csv",
+    "description": "One row per outer evaluation task.",
+    "required_for_complete_run": true
+  },
+  {
+    "path": "split_manifest.json",
+    "description": "Outer/inner split hashes and leakage audit.",
+    "required_for_complete_run": true
+  },
+  {
+    "path": "execution_manifest.json",
+    "description": "Frozen runtime, candidate, and synthetic-backbone identity.",
+    "required_for_complete_run": true
+  },
+  {
+    "path": "synthetic_backbones.json",
+    "description": "Development-seed XGB backbones for synthetic cells.",
+    "required_for_complete_run": false
+  },
+  {
+    "path": "backbone_manifest.csv",
+    "description": "Selected XGB public backbone per evaluation task.",
+    "required_for_complete_run": true
+  },
+  {
+    "path": "tasks/*.json",
+    "description": "Atomic resumable task shards.",
+    "required_for_complete_run": true
+  },
+  {
+    "path": "fold_results.csv",
+    "description": "Outer-test metrics for every task × variant.",
+    "required_for_complete_run": true
+  },
+  {
+    "path": "predictions.parquet",
+    "description": "Per-sample outer-test predictions for paired resampling.",
+    "required_for_complete_run": true
+  },
+  {
+    "path": "unit_results.csv",
+    "description": "Fold-aggregated independent seed/repeat units.",
+    "required_for_complete_run": true
+  },
+  {
+    "path": "main_ablation.csv",
+    "description": "Four-row main ablation summaries.",
+    "required_for_complete_run": true
+  },
+  {
+    "path": "main_effects.csv",
+    "description": "Paired split/leaf/total/full-vs-XGB effects.",
+    "required_for_complete_run": true
+  },
+  {
+    "path": "pred_sensitivity.csv",
+    "description": "Raw SplitOnly/Full dose-response summaries.",
+    "required_for_complete_run": true
+  },
+  {
+    "path": "pred_effects.csv",
+    "description": "Paired split/leaf/total effect curves.",
+    "required_for_complete_run": true
+  },
+  {
+    "path": "scoreagg_ablation.csv",
+    "description": "SplitOnly/Full p=1 greedy/mean/median summaries.",
+    "required_for_complete_run": true
+  },
+  {
+    "path": "scoreagg_effects.csv",
+    "description": "Paired mean/median effects versus greedy.",
+    "required_for_complete_run": true
+  },
+  {
+    "path": "completeness_audit.json",
+    "description": "Expected-versus-actual rows and hard pass flag.",
+    "required_for_complete_run": true
+  },
+  {
+    "path": "run_metadata.json",
+    "description": "Runtime, completion state, and artifact row counts.",
+    "required_for_complete_run": true
+  },
+  {
+    "path": "SYNTHETIC_CONCLUSION.md",
+    "description": "Human-authored Synthetic evidence synthesis required before Real.",
+    "required_for_complete_run": false
+  },
+  {
+    "path": "synthetic_analysis_approval.json",
+    "description": "Hash-bound approval of the completed Synthetic conclusion.",
+    "required_for_complete_run": false
+  }
+]

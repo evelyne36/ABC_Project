@@ -1,8 +1,0 @@
-[2026-06-29 00:10:35] start task_id=multiclass__multiclass__vehicle.csv__current_metagb__out2
-[2026-06-29 00:10:35] config task_type=multiclass dataset=multiclass__vehicle.csv model=current_metagb outer_fold=2/5 inner_folds=4 candidates=300 objective=multi:softprob primary_metric=logloss direction=minimize rows=846 original_rows=846 max_rows_per_dataset=0 features=18 classes=4
-[2026-06-29 00:10:35] split train_rows=677 test_rows=169 inner_splits=4
-[2026-06-29 00:13:16] candidate 1/300 logloss=0.600765 status=ok
-[2026-06-29 05:05:51] candidate 50/300 logloss=0.512996 status=ok
-[2026-06-29 09:49:34] candidate 100/300 logloss=0.531828 status=ok
-[2026-06-29 16:11:05] candidate 150/300 logloss=0.68957 status=ok
-[2026-06-29 20:19:44] candidate 200/300 logloss=0.546186 status=ok

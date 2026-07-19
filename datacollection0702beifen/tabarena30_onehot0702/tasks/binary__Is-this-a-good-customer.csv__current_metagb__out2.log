@@ -1,9 +1,0 @@
-[2026-06-29 10:16:28] start task_id=binary__Is-this-a-good-customer.csv__current_metagb__out2
-[2026-06-29 10:16:28] config task_type=binary dataset=Is-this-a-good-customer.csv model=current_metagb outer_fold=2/5 inner_folds=4 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=1723 features=42 classes=2
-[2026-06-29 10:16:28] split train_rows=1378 test_rows=345 inner_splits=4
-[2026-06-29 10:16:44] candidate 1/30 auc=0.761178 status=ok
-[2026-06-29 10:21:54] candidate 10/30 auc=0.758801 status=ok
-[2026-06-29 10:34:20] candidate 20/30 auc=0.75923 status=ok
-[2026-06-29 10:53:49] candidate 30/30 auc=0.746648 status=ok
-[2026-06-29 10:53:49] selected candidate_index=6 candidate_id=xgb_0215_pf02_sa2 val_auc=0.767146 val_std=0.0265639
-[2026-06-29 10:53:57] finish best=6 test_auc=0.705296 final_train_sec=7.8999 final_predict_sec=0.00386408 elapsed_sec=2249.17 status=ok

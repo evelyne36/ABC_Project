@@ -15,18 +15,9 @@ from random300.utils.runner import (
     import_local_xgboost,
 )
 
+from .contracts import SHARED_BACKBONE_KEYS
 from .io_utils import canonical_hash, file_sha256
 from .protocols import VariantSpec
-
-
-SHARED_BACKBONE_KEYS = (
-    "learning_rate",
-    "max_depth",
-    "subsample",
-    "colsample_bytree",
-    "n_estimators",
-    "max_bin",
-)
 
 
 @dataclass(frozen=True)

@@ -1,9 +1,0 @@
-[2026-06-28 12:13:12] start task_id=binary__binary__credit-approval.csv__current_metagb__out4
-[2026-06-28 12:13:12] config task_type=binary dataset=binary__credit-approval.csv model=current_metagb outer_fold=4/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=653 original_rows=653 max_rows_per_dataset=0 features=46 classes=2
-[2026-06-28 12:13:12] split train_rows=523 test_rows=130 inner_splits=4
-[2026-06-28 12:15:49] candidate 1/300 auc=0.905785 status=ok
-[2026-06-28 17:59:34] candidate 50/300 auc=0.915823 status=ok
-[2026-06-28 23:15:21] candidate 100/300 auc=0.926615 status=ok
-[2026-06-29 06:39:37] candidate 150/300 auc=0.933851 status=ok
-[2026-06-29 11:18:25] candidate 200/300 auc=0.926716 status=ok
-[2026-06-29 16:22:54] candidate 250/300 auc=0.914342 status=ok

@@ -1,0 +1,21 @@
+{
+  "run_id": "syn_formal_formal16_v1",
+  "source_result_dir": "/home/admin/check_codereview_0701/metagb_ablation/results/syn_formal_formal16_v1",
+  "output_dir": "/home/admin/check_codereview_0701/metagb_ablation/reanalysis/syn_formal_analysis",
+  "analysis_only": true,
+  "training_executed": false,
+  "current_environment_identity_checked": false,
+  "stored_config_hash": "aebd1e22a159119cf489ed70329fff84982b847e3ff8c68b0003e53b6586d2e3",
+  "stored_execution_hash": "8ba754ac7c388e916f40e4e53bd7f26fea414ce75dc25521e14187aa3d209b69",
+  "stored_variant_hash": "f3c608994792bec9cba601d6fcbba02de2900fafbf1f6db53e6e16f52fc5475d",
+  "bootstrap_seed": 42,
+  "analyzer_source_sha256": "f15ce600020f7d30a9cc46af2c48c1ab3c4f2b7645b65c8b29f60b0c88337a40",
+  "statistics_source_sha256": "d76b8c0f9b59869ffc8c65bb7b99024bf8673e2f23dc3f805c7b44bce67083b2",
+  "completed": true,
+  "elapsed_sec": 131.19314882298931,
+  "task_shards": 210,
+  "fold_result_rows": 3360,
+  "prediction_rows_in_memory": 2016000,
+  "predictions_parquet_written": false,
+  "unit_result_rows": 672
+}
