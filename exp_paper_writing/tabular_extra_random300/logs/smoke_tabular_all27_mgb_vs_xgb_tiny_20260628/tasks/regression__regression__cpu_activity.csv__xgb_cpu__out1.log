@@ -1,7 +1,0 @@
-[2026-06-28 01:19:06] start task_id=regression__regression__cpu_activity.csv__xgb_cpu__out1
-[2026-06-28 01:19:06] config task_type=regression dataset=regression__cpu_activity.csv model=xgb_cpu outer_fold=1/2 inner_folds=2 candidates=30 objective=reg:squarederror primary_metric=rmse direction=minimize rows=160 original_rows=8192 max_rows_per_dataset=160 features=21 classes=0
-[2026-06-28 01:19:06] split train_rows=80 test_rows=80 inner_splits=2
-[2026-06-28 01:19:06] candidate 1/30 rmse=17.7842 status=ok
-[2026-06-28 01:19:06] candidate 30/30 rmse=17.8509 status=ok
-[2026-06-28 01:19:06] selected candidate_index=25 candidate_id=xgb_0025 val_rmse=13.5023 val_std=4.07443
-[2026-06-28 01:19:06] finish best=25 test_rmse=13.7885 final_train_sec=0.00129121 final_predict_sec=0.00016975 elapsed_sec=0.072813 status=ok

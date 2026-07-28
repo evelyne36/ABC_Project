@@ -1,7 +1,0 @@
-[2026-06-27 22:41:58] start task_id=binary__binary__credit-approval.csv__current_metagb__out1
-[2026-06-27 22:41:58] config task_type=binary dataset=binary__credit-approval.csv model=current_metagb outer_fold=1/2 inner_folds=2 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=240 original_rows=653 max_rows_per_dataset=240 features=15 classes=2
-[2026-06-27 22:41:58] split train_rows=120 test_rows=120 inner_splits=2
-[2026-06-27 22:41:59] candidate 1/30 auc=0.885522 status=ok
-[2026-06-27 22:42:59] candidate 30/30 auc=0.900954 status=ok
-[2026-06-27 22:42:59] selected candidate_index=27 candidate_id=metagb_pf09_sa2_001 val_auc=0.936027 val_std=0.026936
-[2026-06-27 22:43:03] finish best=27 test_auc=0.934825 final_train_sec=3.66576 final_predict_sec=0.00167863 elapsed_sec=65.028 status=ok

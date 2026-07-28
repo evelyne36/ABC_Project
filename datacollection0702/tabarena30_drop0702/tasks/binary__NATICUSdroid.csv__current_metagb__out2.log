@@ -1,9 +1,0 @@
-[2026-06-28 08:45:50] start task_id=binary__NATICUSdroid.csv__current_metagb__out2
-[2026-06-28 08:45:50] config task_type=binary dataset=NATICUSdroid.csv model=current_metagb outer_fold=2/5 inner_folds=4 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=7491 features=86 classes=2
-[2026-06-28 08:45:50] split train_rows=5993 test_rows=1498 inner_splits=4
-[2026-06-28 09:07:42] candidate 1/30 auc=0.984078 status=ok
-[2026-06-28 14:56:03] candidate 10/30 auc=0.983302 status=ok
-[2026-06-29 06:22:21] candidate 20/30 auc=0.983085 status=ok
-[2026-06-30 07:08:05] candidate 30/30 auc=0.983031 status=ok
-[2026-06-30 07:08:05] selected candidate_index=3 candidate_id=xgb_0094_pf01_sa2 val_auc=0.98448 val_std=0.00391463
-[2026-06-30 07:11:57] finish best=3 test_auc=0.98574 final_train_sec=232.265 final_predict_sec=0.0939214 elapsed_sec=167167 status=ok

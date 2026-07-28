@@ -1,9 +1,0 @@
-{
-  "run_id": "dryrun_anneal_onehot_metagb30",
-  "total": 1,
-  "completed": 0,
-  "failed": 0,
-  "tasks": {
-    "multiclass__anneal.csv__current_metagb__out1": "pending"
-  }
-}

@@ -1,3 +1,0 @@
-task_id,task_type,dataset,model,outer_fold,candidate_count
-binary__bank-marketing.csv__xgb_cpu__out1,binary,bank-marketing.csv,xgb_cpu,1,300
-binary__bank-marketing.csv__current_metagb__out1,binary,bank-marketing.csv,current_metagb,1,0

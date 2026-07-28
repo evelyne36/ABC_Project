@@ -1,4 +1,0 @@
-[2026-07-18 06:13:36] start task_id=tabm__drop__regression__regression__friedman1.csv__out1
-[2026-07-18 06:13:36] config model=tabm categorical=drop task_type=regression dataset=regression__friedman1.csv outer_fold=1/5 inner_folds=4 candidates=300 rows=2000 original_rows=2000 features=10 classes=0 primary_metric=rmse direction=minimize
-[2026-07-18 06:33:03] candidate 1/300 rmse=1.14137 status=ok
-[2026-07-18 07:17:12] candidate 5/300 rmse=1.17535 status=ok

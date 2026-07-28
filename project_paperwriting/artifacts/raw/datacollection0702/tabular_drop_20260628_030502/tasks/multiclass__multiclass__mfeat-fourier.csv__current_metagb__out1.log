@@ -1,4 +1,0 @@
-[2026-07-02 09:02:12] start task_id=multiclass__multiclass__mfeat-fourier.csv__current_metagb__out1
-[2026-07-02 09:02:12] config task_type=multiclass dataset=multiclass__mfeat-fourier.csv model=current_metagb outer_fold=1/5 inner_folds=4 candidates=300 objective=multi:softprob primary_metric=logloss direction=minimize rows=2000 original_rows=2000 max_rows_per_dataset=0 features=76 classes=10
-[2026-07-02 09:02:12] split train_rows=1600 test_rows=400 inner_splits=4
-[2026-07-02 10:16:35] candidate 1/300 logloss=0.525972 status=ok

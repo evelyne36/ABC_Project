@@ -1,4 +1,0 @@
-# Developer/test dependencies for framework checks.
--r requirements-all.txt
-pytest>=8.0
-

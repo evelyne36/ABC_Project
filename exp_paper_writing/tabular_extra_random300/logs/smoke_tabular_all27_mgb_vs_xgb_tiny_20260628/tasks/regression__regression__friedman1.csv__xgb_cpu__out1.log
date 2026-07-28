@@ -1,7 +1,0 @@
-[2026-06-28 01:19:02] start task_id=regression__regression__friedman1.csv__xgb_cpu__out1
-[2026-06-28 01:19:02] config task_type=regression dataset=regression__friedman1.csv model=xgb_cpu outer_fold=1/2 inner_folds=2 candidates=30 objective=reg:squarederror primary_metric=rmse direction=minimize rows=160 original_rows=2000 max_rows_per_dataset=160 features=10 classes=0
-[2026-06-28 01:19:02] split train_rows=80 test_rows=80 inner_splits=2
-[2026-06-28 01:19:02] candidate 1/30 rmse=4.6177 status=ok
-[2026-06-28 01:19:03] candidate 30/30 rmse=4.6838 status=ok
-[2026-06-28 01:19:03] selected candidate_index=20 candidate_id=xgb_0020 val_rmse=3.62167 val_std=0.711344
-[2026-06-28 01:19:03] finish best=20 test_rmse=3.62758 final_train_sec=0.00105313 final_predict_sec=0.000157834 elapsed_sec=0.069209 status=ok

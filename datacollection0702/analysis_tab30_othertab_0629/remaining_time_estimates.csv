@@ -1,5 +1,0 @@
-run_dir,run_id,total_tasks,completed,failed,remaining,median_ok_elapsed_hours,remaining_serial_task_hours,updated_at
-mgb_datacollection_by0629/tabarena30_drop/tabarena30_binary_drop_20260628_023950,tabarena30_binary_drop_20260628_023950,110,93,0,17,0.683138888888889,11.613361111111113,2026-06-29T19:38:43
-mgb_datacollection_by0629/tabarena30_onehot,tabarena30_drop_full_20260628_191908,355,236,15,104,0.5561333333333334,57.83786666666667,2026-06-29T20:22:02
-mgb_datacollection_by0629/tabular_otherdata_drop,tabular_comprehensive_drop_20260628_030502,270,185,0,85,0.5591222222222222,47.525388888888884,2026-06-29T15:37:21
-mgb_datacollection_by0629/tabular_otherdata_onehot,tabular_comprehensive_onehot_20260628_025442,270,135,0,135,0.2866694444444444,38.700375,2026-06-29T01:29:50

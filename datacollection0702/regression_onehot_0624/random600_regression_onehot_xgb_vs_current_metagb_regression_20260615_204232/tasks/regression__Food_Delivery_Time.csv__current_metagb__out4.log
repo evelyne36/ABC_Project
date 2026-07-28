@@ -1,3 +1,0 @@
-[2026-06-16 02:40:59] start task_id=regression__Food_Delivery_Time.csv__current_metagb__out4
-[2026-06-16 02:41:02] config task_type=regression dataset=Food_Delivery_Time.csv model=current_metagb outer_fold=4/5 inner_folds=4 candidates=600 objective=reg:squarederror primary_metric=rmse direction=minimize rows=45451 features=1334 classes=0
-[2026-06-16 02:41:03] split train_rows=36361 test_rows=9090 inner_splits=4

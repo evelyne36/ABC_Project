@@ -1,7 +1,0 @@
-[2026-06-27 23:06:27] start task_id=binary__binary__kc1.csv__current_metagb__out1
-[2026-06-27 23:06:27] config task_type=binary dataset=binary__kc1.csv model=current_metagb outer_fold=1/2 inner_folds=2 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=240 original_rows=2109 max_rows_per_dataset=240 features=21 classes=2
-[2026-06-27 23:06:27] split train_rows=120 test_rows=120 inner_splits=2
-[2026-06-27 23:06:27] candidate 1/30 auc=0.501089 status=ok
-[2026-06-27 23:06:28] candidate 30/30 auc=0.550109 status=ok
-[2026-06-27 23:06:28] selected candidate_index=24 candidate_id=metagb_pf08_sa2_001 val_auc=0.562092 val_std=0.141612
-[2026-06-27 23:06:28] finish best=24 test_auc=0.654247 final_train_sec=0.00308492 final_predict_sec=0.000210916 elapsed_sec=0.246364 status=ok

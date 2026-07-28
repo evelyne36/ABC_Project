@@ -1,4 +1,0 @@
-# Full baseline suite: core + tree + deep optional dependencies.
--r requirements-tree.txt
--r requirements-deep.txt
-

@@ -1,9 +1,0 @@
-[2026-06-27 19:53:03] start task_id=binary__blood-transfusion-service-center.csv__current_metagb__out1
-[2026-06-27 19:53:03] config task_type=binary dataset=blood-transfusion-service-center.csv model=current_metagb outer_fold=1/2 inner_folds=2 candidates=30 objective=binary:logistic primary_metric=auc direction=maximize rows=748 features=4 classes=2
-[2026-06-27 19:53:03] split train_rows=374 test_rows=374 inner_splits=2
-[2026-06-27 19:53:03] candidate 1/30 auc=0.692261 status=ok
-[2026-06-27 19:53:05] candidate 10/30 auc=0.665779 status=ok
-[2026-06-27 19:53:08] candidate 20/30 auc=0.661573 status=ok
-[2026-06-27 19:53:12] candidate 30/30 auc=0.668849 status=ok
-[2026-06-27 19:53:12] selected candidate_index=1 candidate_id=xgb_0076_pf01_sa0 val_auc=0.692261 val_std=0.00767557
-[2026-06-27 19:53:12] finish best=1 test_auc=0.74999 final_train_sec=0.0743279 final_predict_sec=0.00294217 elapsed_sec=8.41862 status=ok

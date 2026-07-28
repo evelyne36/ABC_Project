@@ -1,7 +1,0 @@
-[2026-06-28 01:18:59] start task_id=multiclass__multiclass__balance-scale.csv__xgb_cpu__out1
-[2026-06-28 01:18:59] config task_type=multiclass dataset=multiclass__balance-scale.csv model=xgb_cpu outer_fold=1/2 inner_folds=2 candidates=30 objective=multi:softprob primary_metric=logloss direction=minimize rows=160 original_rows=625 max_rows_per_dataset=160 features=4 classes=3
-[2026-06-28 01:18:59] split train_rows=80 test_rows=80 inner_splits=2
-[2026-06-28 01:18:59] candidate 1/30 logloss=0.879516 status=ok
-[2026-06-28 01:19:00] candidate 30/30 logloss=0.889257 status=ok
-[2026-06-28 01:19:00] selected candidate_index=25 candidate_id=xgb_0025 val_logloss=0.670103 val_std=0.0104689
-[2026-06-28 01:19:00] finish best=25 test_logloss=0.677163 final_train_sec=0.00162163 final_predict_sec=0.000175875 elapsed_sec=0.114119 status=ok

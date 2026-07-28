@@ -1,8 +1,0 @@
-metric,value
-datasets,11.0
-metagb_wins,5.0
-metagb_top2,7.0
-metagb_mean_rank,1.9090909090909092
-metagb_median_rank,2.0
-metagb_mean_ratio_to_best,1.0658925880431143
-metagb_mean_ratio_to_xgb,0.9412657802843093

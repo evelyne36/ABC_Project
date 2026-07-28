@@ -1,9 +1,0 @@
-[2026-07-17 16:26:36] start task_id=tabm__drop__binary__binary__phoneme.csv__out1
-[2026-07-17 16:26:36] config model=tabm categorical=drop task_type=binary dataset=binary__phoneme.csv outer_fold=1/5 inner_folds=4 candidates=300 rows=5404 original_rows=5404 features=5 classes=2 primary_metric=auc direction=maximize
-[2026-07-17 17:06:04] candidate 1/300 auc=0.939141 status=ok
-[2026-07-17 18:45:07] candidate 5/300 auc=0.926391 status=ok
-[2026-07-17 21:23:06] candidate 10/300 auc=0.922761 status=ok
-[2026-07-17 23:38:13] candidate 15/300 auc=0.925738 status=ok
-[2026-07-18 02:13:08] candidate 20/300 auc=0.932774 status=ok
-[2026-07-18 04:42:45] candidate 25/300 auc=0.930409 status=ok
-[2026-07-18 06:54:23] candidate 30/300 auc=0.941477 status=ok

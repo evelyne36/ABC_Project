@@ -1,2 +1,0 @@
-run_id,model,categorical_handling,task_type,dataset,outer_fold,outer_folds,inner_folds,primary_metric,primary_metric_direction,rows_original,rows_used,max_rows_per_dataset,features_used,candidate_count,status,task_elapsed_sec
-smoke_llm_tabm_regression_cpu,tabm,drop,regression,regression__Moneyball.csv,1,2,2,rmse,minimize,114,114,0,12,1,no_valid_candidate,18.277885167393833

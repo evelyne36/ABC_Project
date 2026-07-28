@@ -1,9 +1,0 @@
-{
-  "run_id": "smoke_mgb_agg0_filter_check_20260628",
-  "total": 1,
-  "completed": 1,
-  "failed": 0,
-  "tasks": {
-    "ETTh1__current_metagb__seed0__s6__p1": "ok"
-  }
-}

@@ -1,9 +1,0 @@
-scenario,task_type,primary_metric,hypothesis,expected_winner,xgb_cpu,current_metagb_pred0,current_metagb,metagb_signed_advantage_vs_xgb,metagb_signed_advantage_vs_pred0
-curved_control,regression,rmse,A smooth univariate curve is not directly representable by a single feature-scaled leaf.,xgb_cpu_or_tie,0.17830929365133696,0.176169702183957,0.17577330177051173,0.0025359918808252335,0.0003964004134452692
-feature_switch,regression,rmse,A gate selects which feature should make the local prediction.,current_metagb,0.4158043598769828,0.42332429256025356,0.2961761104543929,0.11962824942258987,0.12714818210586065
-global_linear,regression,rmse,"A predictive feature is linear everywhere, so one MetaGB leaf can represent the signal.",current_metagb,0.16903181080177632,0.16757135055953043,0.15920161448098827,0.009830196320788048,0.008369736078542162
-multiplicative,regression,rmse,Tree partitions approximate one factor while leaf slopes model the other factor.,current_metagb,1.2557900149458585,1.1380326960523817,0.24782779055659335,1.0079622243892652,0.8902049054957883
-pure_step_control,regression,rmse,"The target is already piecewise constant, matching ordinary XGBoost leaves.",xgb_cpu_or_tie,0.3286583844082978,0.3504676683467957,0.371279460356182,-0.04262107594788417,-0.020811792009386265
-regime_logit,binary,auc,The sign of a predictive feature's logit effect changes across a gate.,current_metagb,0.8689580440753049,0.8168048449708861,0.9157050856863239,0.04674704161101906,0.09890024071543779
-regime_slope,regression,rmse,One conditional split exposes two opposite linear leaf responses.,current_metagb,2.04051749394006,1.8142442657955726,0.21230050965193328,1.8282169842881266,1.6019437561436394
-xor_classification,binary,auc,A conditional split turns the other feature into a signed leaf-level classifier.,current_metagb,0.9945590265477695,0.9874375155801047,0.9944867202840936,-7.23062636759364e-05,0.007049204703988843

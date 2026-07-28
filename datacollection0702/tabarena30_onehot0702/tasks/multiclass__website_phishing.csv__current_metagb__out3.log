@@ -1,9 +1,0 @@
-[2026-06-29 09:16:06] start task_id=multiclass__website_phishing.csv__current_metagb__out3
-[2026-06-29 09:16:06] config task_type=multiclass dataset=website_phishing.csv model=current_metagb outer_fold=3/5 inner_folds=4 candidates=30 objective=multi:softprob primary_metric=logloss direction=minimize rows=1353 features=25 classes=3
-[2026-06-29 09:16:06] split train_rows=1082 test_rows=271 inner_splits=4
-[2026-06-29 09:16:37] candidate 1/30 logloss=0.235085 status=ok
-[2026-06-29 09:25:39] candidate 10/30 logloss=0.244797 status=ok
-[2026-06-29 09:45:36] candidate 20/30 logloss=0.247988 status=ok
-[2026-06-29 10:16:20] candidate 30/30 logloss=0.248308 status=ok
-[2026-06-29 10:16:20] selected candidate_index=1 candidate_id=xgb_0143_pf01_sa0 val_logloss=0.235085 val_std=0.0360283
-[2026-06-29 10:16:28] finish best=1 test_logloss=0.271943 final_train_sec=7.93856 final_predict_sec=0.0177785 elapsed_sec=3621.3 status=ok

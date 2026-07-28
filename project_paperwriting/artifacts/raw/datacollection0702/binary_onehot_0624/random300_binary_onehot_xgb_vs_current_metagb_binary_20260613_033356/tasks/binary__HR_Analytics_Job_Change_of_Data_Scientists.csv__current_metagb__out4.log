@@ -1,4 +1,0 @@
-[2026-06-17 12:44:42] start task_id=binary__HR_Analytics_Job_Change_of_Data_Scientists.csv__current_metagb__out4
-[2026-06-17 12:44:42] config task_type=binary dataset=HR_Analytics_Job_Change_of_Data_Scientists.csv model=current_metagb outer_fold=4/5 inner_folds=4 candidates=300 objective=binary:logistic primary_metric=auc direction=maximize rows=8955 features=177 classes=2
-[2026-06-17 12:44:42] split train_rows=7164 test_rows=1791 inner_splits=4
-[2026-06-17 13:36:05] candidate 1/300 auc=0.751447 status=ok

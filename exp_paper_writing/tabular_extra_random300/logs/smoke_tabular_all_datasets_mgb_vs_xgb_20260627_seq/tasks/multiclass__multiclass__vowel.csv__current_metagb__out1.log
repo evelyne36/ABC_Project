@@ -1,7 +1,0 @@
-[2026-06-27 22:50:06] start task_id=multiclass__multiclass__vowel.csv__current_metagb__out1
-[2026-06-27 22:50:06] config task_type=multiclass dataset=multiclass__vowel.csv model=current_metagb outer_fold=1/2 inner_folds=2 candidates=30 objective=multi:softprob primary_metric=logloss direction=minimize rows=240 original_rows=990 max_rows_per_dataset=240 features=11 classes=11
-[2026-06-27 22:50:06] split train_rows=120 test_rows=120 inner_splits=2
-[2026-06-27 22:50:11] candidate 1/30 logloss=1.89841 status=ok
-[2026-06-27 22:55:56] candidate 30/30 logloss=2.53408 status=ok
-[2026-06-27 22:55:56] selected candidate_index=12 candidate_id=metagb_pf04_sa2_001 val_logloss=1.56577 val_std=0.0231458
-[2026-06-27 22:56:00] finish best=12 test_logloss=1.209 final_train_sec=4.11665 final_predict_sec=0.00604054 elapsed_sec=354.053 status=ok

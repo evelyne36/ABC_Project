@@ -1,5 +1,0 @@
-# Tree-model optional dependencies for LightGBM and CatBoost baselines.
--r requirements-core.txt
-lightgbm>=4.1
-catboost>=1.2
-

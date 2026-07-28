@@ -1,4 +1,0 @@
-[2026-06-30 23:25:24] start task_id=multiclass__multiclass__mfeat-karhunen.csv__current_metagb__out3
-[2026-06-30 23:25:24] config task_type=multiclass dataset=multiclass__mfeat-karhunen.csv model=current_metagb outer_fold=3/5 inner_folds=4 candidates=300 objective=multi:softprob primary_metric=logloss direction=minimize rows=2000 original_rows=2000 max_rows_per_dataset=0 features=64 classes=10
-[2026-06-30 23:25:24] split train_rows=1600 test_rows=400 inner_splits=4
-[2026-07-01 01:10:40] candidate 1/300 logloss=0.274514 status=ok

@@ -1,6 +1,0 @@
-# Deep-learning optional dependencies for the local TorchMLP baseline.
-#
-# For Linux CPU-only installs used in the fair baseline experiments, prefer:
-#   pip install -r random300_baselinemodel/requirements-linux-cpu.txt
--r requirements-core.txt
-torch>=2.0

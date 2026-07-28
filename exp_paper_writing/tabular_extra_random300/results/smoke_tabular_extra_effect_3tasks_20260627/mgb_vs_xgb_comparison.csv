@@ -1,4 +1,0 @@
-task_type,dataset,metric,direction,xgb_cpu_test_metric,current_metagb_test_metric,winner,relative_gain_vs_xgb,xgb_cpu_elapsed_sec,current_metagb_elapsed_sec,xgb_cpu_selected,current_metagb_selected
-binary,binary__credit-approval.csv,auc,higher_better,0.9310357843877396,0.9237128189642156,xgb_cpu,-0.007865396310561386,1.4793910831212995,132.69194583361968,xgb_0012,metagb_pf10_sa0_001
-multiclass,multiclass__vehicle.csv,logloss,lower_better,0.5873050779678526,0.5838063854697049,current_metagb,0.005957197765518424,7.156265874858946,881.0102340001613,xgb_0012,metagb_pf06_sa1_001
-regression,regression__energy_efficiency.csv,rmse,lower_better,0.4397225634781143,0.4555548925058972,xgb_cpu,-0.03600526864610377,2.668696334119886,64.85782970907167,xgb_0008,metagb_pf03_sa1_001

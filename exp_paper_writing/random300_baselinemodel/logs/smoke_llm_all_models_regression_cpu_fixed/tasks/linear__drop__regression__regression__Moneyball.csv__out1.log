@@ -1,4 +1,0 @@
-[2026-07-08 01:08:13] start task_id=linear__drop__regression__regression__Moneyball.csv__out1
-[2026-07-08 01:08:13] config model=linear categorical=drop task_type=regression dataset=regression__Moneyball.csv outer_fold=1/2 inner_folds=2 candidates=1 rows=114 original_rows=114 features=12 classes=0 primary_metric=rmse direction=minimize
-[2026-07-08 01:08:13] candidate 1/1 rmse=22.7112 status=ok
-[2026-07-08 01:08:13] finish best=1 test_rmse=22.4308 status=ok

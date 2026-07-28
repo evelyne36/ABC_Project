@@ -1,3 +1,0 @@
-dataset,seed,seq_len,pred_len,input_features,output_dim,catboost_cpu,current_metagb,lgbm_cpu,xgb_cpu,winner,metagb_rank,metagb_vs_best_ratio
-exchange_rate,0,12,1,174,1,0.3448497670922993,0.2050636740543062,0.5822080817196003,0.3957715132607861,current_metagb,1.0,1.0
-exchange_rate,0,12,6,174,6,0.483148930439342,0.3792112440412433,0.6029468807021778,0.4975888408717474,current_metagb,1.0,1.0
