@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+
+results/*
+!results/.gitkeep
+
+logs/*
+!logs/.gitkeep
+
+tmp_mplconfig/*
+!tmp_mplconfig/.gitkeep
+

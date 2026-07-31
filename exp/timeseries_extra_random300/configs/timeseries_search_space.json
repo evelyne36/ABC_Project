@@ -1,0 +1,38 @@
+{
+  "description": "Conservative smoke/full search space for time-series tabularized XGBoost vs CrossGB and CPU tree baselines.",
+  "shared": {
+    "learning_rate": {
+      "type": "loguniform",
+      "low": 0.01,
+      "high": 0.2
+    },
+    "max_depth": {
+      "type": "choice",
+      "values": [2, 3, 4, 5, 6]
+    },
+    "subsample": {
+      "type": "uniform",
+      "low": 0.6,
+      "high": 1.0
+    },
+    "colsample_bytree": {
+      "type": "uniform",
+      "low": 0.6,
+      "high": 1.0
+    },
+    "n_estimators": {
+      "type": "choice",
+      "values": [50, 100, 200]
+    },
+    "max_bin": {
+      "type": "choice",
+      "values": [128, 255]
+    },
+    "lambda_l2": {
+      "type": "loguniform",
+      "low": 0.01,
+      "high": 10.0
+    }
+  },
+  "crossgb": {}
+}

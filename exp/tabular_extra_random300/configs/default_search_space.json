@@ -1,0 +1,40 @@
+{
+  "description": "Paired Random300/Random600 shared backbone search space. Random300 is the first 300 candidates of Random600 for a fixed seed; CrossGB evenly searches 10 pred fractions x 3 score aggregations.",
+  "shared": {
+    "learning_rate": {
+      "type": "loguniform",
+      "low": 0.005,
+      "high": 0.1
+    },
+    "max_depth": {
+      "type": "logint",
+      "low": 4,
+      "high": 10
+    },
+    "subsample": {
+      "type": "uniform",
+      "low": 0.6,
+      "high": 1.0
+    },
+    "colsample_bytree": {
+      "type": "uniform",
+      "low": 0.6,
+      "high": 1.0
+    },
+    "n_estimators": {
+      "type": "choice",
+      "values": [200, 400, 600, 800]
+    },
+    "max_bin": {
+      "type": "choice",
+      "values": [255]
+    },
+    "lambda_l2": {
+      "type": "loguniform",
+      "low": 0.0001,
+      "high": 5.0
+    }
+  },
+  "xgb_cpu": {},
+  "crossgb": {}
+}

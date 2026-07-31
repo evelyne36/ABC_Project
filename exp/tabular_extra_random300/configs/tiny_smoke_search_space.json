@@ -1,0 +1,56 @@
+{
+  "description": "Tiny smoke-only search space for fast per-dataset CrossGB vs XGBoost previews. Not intended for final quality claims.",
+  "shared": {
+    "learning_rate": {
+      "type": "choice",
+      "values": [
+        0.05,
+        0.1
+      ]
+    },
+    "max_depth": {
+      "type": "choice",
+      "values": [
+        2,
+        3
+      ]
+    },
+    "subsample": {
+      "type": "choice",
+      "values": [
+        0.8,
+        1.0
+      ]
+    },
+    "colsample_bytree": {
+      "type": "choice",
+      "values": [
+        0.8,
+        1.0
+      ]
+    },
+    "n_estimators": {
+      "type": "choice",
+      "values": [
+        3,
+        5,
+        10
+      ]
+    },
+    "max_bin": {
+      "type": "choice",
+      "values": [
+        64
+      ]
+    },
+    "lambda_l2": {
+      "type": "choice",
+      "values": [
+        0.1,
+        1.0,
+        10.0
+      ]
+    }
+  },
+  "crossgb": {}
+}

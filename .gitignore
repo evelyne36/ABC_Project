@@ -1,0 +1,44 @@
+# macOS and editor-local files
+.DS_Store
+**/.DS_Store
+.vscode/
+dist/
+
+# Local agent/runtime configuration and state
+.claude/
+.codex/
+.omx/
+
+# Python caches and test state
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Native build products
+*.o
+*.so
+*.dylib
+*.dll
+*.a
+**/build/
+**/build_*/
+
+# Local datasets are too large for normal Git history
+# dataset/
+
+# Generated benchmark data, logs, and historical result directories
+exp/*/data/
+exp/*/logs/
+exp/*/nohup_logs/
+exp/*/results/
+dataset/
+datasets/
+
+# Keep test sources visible. Do not add an unanchored test/ rule: it also
+# suppresses vendored upstream trees such as **/src/test/ and **/dmlc-core/test/.
+
+# Temporary files
+*.tmp
+*.swp
+*.swo

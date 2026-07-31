@@ -1,0 +1,8 @@
+{
+  "ETTh1": {"url": "https://raw.githubusercontent.com/zhouhaoyi/ETDataset/main/ETT-small/ETTh1.csv", "target": "exp/timeseries_extra_random300/data/raw/ETTh1.csv", "compression": null},
+  "ETTh2": {"url": "https://raw.githubusercontent.com/zhouhaoyi/ETDataset/main/ETT-small/ETTh2.csv", "target": "exp/timeseries_extra_random300/data/raw/ETTh2.csv", "compression": null},
+  "ETTm1": {"url": "https://raw.githubusercontent.com/zhouhaoyi/ETDataset/main/ETT-small/ETTm1.csv", "target": "exp/timeseries_extra_random300/data/raw/ETTm1.csv", "compression": null},
+  "ETTm2": {"url": "https://raw.githubusercontent.com/zhouhaoyi/ETDataset/main/ETT-small/ETTm2.csv", "target": "exp/timeseries_extra_random300/data/raw/ETTm2.csv", "compression": null},
+  "exchange_rate": {"url": "https://raw.githubusercontent.com/laiguokun/multivariate-time-series-data/master/exchange_rate/exchange_rate.txt.gz", "target": "exp/timeseries_extra_random300/data/raw/exchange_rate.txt", "compression": "gzip"},
+  "electricity": {"url": "https://raw.githubusercontent.com/laiguokun/multivariate-time-series-data/master/electricity/electricity.txt.gz", "target": "exp/timeseries_extra_random300/data/raw/electricity.txt", "compression": "gzip"}
+}

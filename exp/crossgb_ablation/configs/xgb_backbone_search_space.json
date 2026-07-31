@@ -1,0 +1,39 @@
+{
+  "description": "XGBoost-only public-backbone search for the CrossGB fixed-backbone ablation. Feature and row sampling are fixed to one so pred_fraction is the only predictive-candidate sampling variable.",
+  "shared": {
+    "learning_rate": {
+      "type": "loguniform",
+      "low": 0.005,
+      "high": 0.1
+    },
+    "max_depth": {
+      "type": "logint",
+      "low": 4,
+      "high": 10
+    },
+    "subsample": {
+      "type": "choice",
+      "values": [1.0]
+    },
+    "colsample_bytree": {
+      "type": "choice",
+      "values": [1.0]
+    },
+    "n_estimators": {
+      "type": "choice",
+      "values": [200, 400, 600, 800]
+    },
+    "max_bin": {
+      "type": "choice",
+      "values": [255]
+    },
+    "lambda_l2": {
+      "type": "loguniform",
+      "low": 0.0001,
+      "high": 5.0
+    }
+  },
+  "xgb_cpu": {},
+  "crossgb": {}
+}
+

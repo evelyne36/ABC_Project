@@ -1,0 +1,26 @@
+Upstream baseline: 41591eeff5b10caabe82d65fc7164b447eabd249
+
+CrossGB native/public boundary:
+include/xgboost/tree_model.h
+python-package/xgboost/sklearn.py
+src/gbm/gbtree.cc
+src/learner.cc
+src/predictor/cpu_predictor.cc
+src/tree/param.h
+src/tree/tree_model.cc
+src/tree/tree_updater.cc
+src/tree/tree_view.cc
+src/tree/tree_view.h
+src/tree/updater_crossgb_hist.cc
+tests/python/test_crossgb.py
+
+Pre-existing non-CrossGB snapshot difference:
+R-package/src/xgboost_R.h
+
+Canonical outputs:
+enable_crossgb
+crossgb_*
+grow_crossgb_histmaker
+CROSSGB_HIST_BUILD_MODE
+crossgb_leaf_features
+crossgb_leaf_features_vector
