@@ -17,7 +17,7 @@ The bias feature is always `1`, so CrossGB retains a constant-leaf fallback.
 Setting `enable_crossgb=True` selects the CrossGB updater; leaving it disabled
 uses the ordinary XGBoost updater in the same local source tree.
 
-## Reviewer quick start
+## Quick start
 
 Run the following commands from the extracted repository root on a Linux CPU
 server:
