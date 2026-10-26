@@ -1,0 +1,11 @@
+R linxgboost_frozen20 curved_control outer1 success 0.15505461685446845 2
+R linxgboost_frozen20 curved_control outer2 success 0.16696060732151108 2
+R linxgboost_frozen20 curved_control outer3 success 0.15801621317830386 2
+R linxgboost_frozen20 curved_control outer4 success 0.1569940948071703 2
+R linxgboost_frozen20 curved_control outer5 success 0.15908088400232312 2
+R linxgboost_frozen20 kin8nm outer1 success 0.10752762077192143 3
+R linxgboost_frozen20 kin8nm outer2 success 0.10232686617206002 3
+R linxgboost_frozen20 kin8nm outer3 success 0.10100913197649947 3
+R linxgboost_frozen20 kin8nm outer4 success 0.10070524359154676 3
+R linxgboost_frozen20 kin8nm outer5 success 0.10350486173746716 3
+REMOTE_DONE

@@ -1,0 +1,15 @@
+R linxgboost_frozen20 cpu_activity outer1 success 3.69224124703736 12
+R linxgboost_frozen20 cpu_activity outer2 success 3.6746501655098878 12
+R linxgboost_frozen20 cpu_activity outer3 success 3.6399776393240217 12
+R linxgboost_frozen20 cpu_activity outer4 success 4.283899633811641 12
+R linxgboost_frozen20 cpu_activity outer5 success 3.5997568717142285 12
+R linxgboost_frozen20 regime_slope outer1 success 0.1504047220395906 3
+R linxgboost_frozen20 regime_slope outer2 success 0.1488705648269283 3
+R linxgboost_frozen20 regime_slope outer3 success 0.15581340590060336 3
+R linxgboost_frozen20 regime_slope outer4 success 0.15405174813993439 3
+R linxgboost_frozen20 regime_slope outer5 success 0.15391381892127629 3
+R linxgboost_frozen20_t2400 cpu_activity outer1 success 2.5323754636542497 6
+R linxgboost_frozen20_t2400 cpu_activity outer2 success 2.4844956090945356 6
+R linxgboost_frozen20_t2400 cpu_activity outer3 success 2.5566281730935225 6
+R linxgboost_frozen20_t2400 cpu_activity outer4 success 3.0971683395895595 5
+REMOTE_DONE
