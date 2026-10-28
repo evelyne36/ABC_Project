@@ -1,0 +1,140 @@
+{
+  "experiment_id": "E1",
+  "status": "native_flag_and_frozen_backbone_runner_required",
+  "semantic_model": "CrossGB",
+  "internal_parameter_namespace": "metagb",
+  "minimum_cases": [
+    "regime_slope",
+    "feature_switch",
+    "curved_control"
+  ],
+  "recommended_cases": [
+    "regime_slope",
+    "feature_switch",
+    "categorical_regime_slope",
+    "sparse_multiplicative",
+    "regime_logit",
+    "pure_step_control",
+    "curved_control"
+  ],
+  "dimensions": [
+    10
+  ],
+  "n_samples": 3000,
+  "data_seeds": [
+    1001,
+    1002,
+    1003
+  ],
+  "outer_folds": 5,
+  "cv_seed": 314159,
+  "split_seed_rule": "314159 + data_seed",
+  "model_seed": 271828,
+  "regression_noise": 0.15,
+  "classification_noise": 0.05,
+  "backbone_file": "historical/ablation_synthetic_backbones.json",
+  "hpo_permitted": false,
+  "variants": [
+    {
+      "id": "Bias",
+      "score_bias_only": true,
+      "leaf_bias_only": true
+    },
+    {
+      "id": "SplitOnly",
+      "score_bias_only": false,
+      "leaf_bias_only": true
+    },
+    {
+      "id": "LeafOnly",
+      "score_bias_only": true,
+      "leaf_bias_only": false
+    },
+    {
+      "id": "Full",
+      "score_bias_only": false,
+      "leaf_bias_only": false
+    }
+  ],
+  "missing_native_parameter": "metagb_split_only_use_bias",
+  "existing_native_parameter": "metagb_leaf_only_use_bias",
+  "stagewise_leaf_refit_required": true,
+  "protocols": {
+    "historical_compatible": {
+      "enabled_after": "E0 replay with unmodified default paths",
+      "min_gain": -10000000000.0,
+      "bias_pred_fraction": 0.0,
+      "other_pred_fraction": 1.0,
+      "patch_rule": "only add LeafOnly flag; false preserves existing source path"
+    },
+    "new_controlled_fallback": {
+      "enabled_after": "historical replay cannot be authenticated; rerun all four groups",
+      "min_gain_unscaled_crossgb": 1e-12,
+      "xgb_gamma_for_reference": 5e-13,
+      "all_variants_pred_fraction_before_restriction": 1.0,
+      "score_agg": 0,
+      "warning": "new acceptance threshold and p=1 Bias; not historical Table2 reproduction"
+    }
+  },
+  "expected_fits": {
+    "minimum_4_groups": 180,
+    "recommended_4_groups": 420,
+    "optional_vanilla_xgb_reference": 105,
+    "recommended_with_reference": 525
+  },
+  "analysis_unit": "seed-level OOF loss",
+  "contrasts": [
+    "Full-LeafOnly",
+    "Full-SplitOnly",
+    "LeafOnly-Bias",
+    "SplitOnly-Bias",
+    "Full-SplitOnly-LeafOnly+Bias using absolute loss"
+  ],
+  "test_selection_forbidden": true,
+  "native_flags_by_protocol": {
+    "historical_compatible": {
+      "Bias": {
+        "metagb_split_only_use_bias": false,
+        "metagb_leaf_only_use_bias": true,
+        "pred_fraction": 0.0
+      },
+      "SplitOnly": {
+        "metagb_split_only_use_bias": false,
+        "metagb_leaf_only_use_bias": true,
+        "pred_fraction": 1.0
+      },
+      "LeafOnly": {
+        "metagb_split_only_use_bias": true,
+        "metagb_leaf_only_use_bias": false,
+        "pred_fraction": 1.0
+      },
+      "Full": {
+        "metagb_split_only_use_bias": false,
+        "metagb_leaf_only_use_bias": false,
+        "pred_fraction": 1.0
+      }
+    },
+    "new_controlled_fallback": {
+      "Bias": {
+        "metagb_split_only_use_bias": true,
+        "metagb_leaf_only_use_bias": true,
+        "pred_fraction": 1.0
+      },
+      "SplitOnly": {
+        "metagb_split_only_use_bias": false,
+        "metagb_leaf_only_use_bias": true,
+        "pred_fraction": 1.0
+      },
+      "LeafOnly": {
+        "metagb_split_only_use_bias": true,
+        "metagb_leaf_only_use_bias": false,
+        "pred_fraction": 1.0
+      },
+      "Full": {
+        "metagb_split_only_use_bias": false,
+        "metagb_leaf_only_use_bias": false,
+        "pred_fraction": 1.0
+      }
+    }
+  }
+}

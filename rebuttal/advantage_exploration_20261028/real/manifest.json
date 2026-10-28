@@ -1,0 +1,200 @@
+{
+  "version": "advantage-real-dev-v1-20261028",
+  "entries": [
+    {
+      "dataset": "residential_cost__s112001",
+      "case": "residential_cost",
+      "kind": "real",
+      "family": "residential_cost",
+      "phase": "development",
+      "seed": 112001,
+      "task_type": "regression",
+      "npz": "data/residential_cost__s112001.npz",
+      "metadata": "data/residential_cost__s112001.json",
+      "npz_sha256": "923c02ba5165edb4ea935f4f54b9bc053a5631e527dd9d830ece12c9d143aeaa",
+      "source_novelty": "new_source_in_examined_local_runs",
+      "rows": 372,
+      "features": 103,
+      "split_sizes": {
+        "train": 226,
+        "val": 73,
+        "test": 73
+      }
+    },
+    {
+      "dataset": "residential_cost__s112002",
+      "case": "residential_cost",
+      "kind": "real",
+      "family": "residential_cost",
+      "phase": "development",
+      "seed": 112002,
+      "task_type": "regression",
+      "npz": "data/residential_cost__s112002.npz",
+      "metadata": "data/residential_cost__s112002.json",
+      "npz_sha256": "923c02ba5165edb4ea935f4f54b9bc053a5631e527dd9d830ece12c9d143aeaa",
+      "source_novelty": "new_source_in_examined_local_runs",
+      "rows": 372,
+      "features": 103,
+      "split_sizes": {
+        "train": 226,
+        "val": 73,
+        "test": 73
+      }
+    },
+    {
+      "dataset": "communities_crime__s112001",
+      "case": "communities_crime",
+      "kind": "real",
+      "family": "communities_crime",
+      "phase": "development",
+      "seed": 112001,
+      "task_type": "regression",
+      "npz": "data/communities_crime__s112001.npz",
+      "metadata": "data/communities_crime__s112001.json",
+      "npz_sha256": "33836830ed25a0106a39013415774beab509732c7b79c30b3cb8049e213db2e9",
+      "source_novelty": "new_source_in_examined_local_runs",
+      "rows": 1994,
+      "features": 122,
+      "split_sizes": {
+        "train": 600,
+        "val": 805,
+        "test": 307
+      }
+    },
+    {
+      "dataset": "communities_crime__s112002",
+      "case": "communities_crime",
+      "kind": "real",
+      "family": "communities_crime",
+      "phase": "development",
+      "seed": 112002,
+      "task_type": "regression",
+      "npz": "data/communities_crime__s112002.npz",
+      "metadata": "data/communities_crime__s112002.json",
+      "npz_sha256": "d281db3161f4d73f66d5f76b0d1418bf1811350b513896c4d0a97216bd2e0968",
+      "source_novelty": "new_source_in_examined_local_runs",
+      "rows": 1994,
+      "features": 122,
+      "split_sizes": {
+        "train": 600,
+        "val": 386,
+        "test": 307
+      }
+    },
+    {
+      "dataset": "parkinson_motor__s112001",
+      "case": "parkinson_motor",
+      "kind": "real",
+      "family": "parkinson_motor",
+      "phase": "development",
+      "seed": 112001,
+      "task_type": "regression",
+      "npz": "data/parkinson_motor__s112001.npz",
+      "metadata": "data/parkinson_motor__s112001.json",
+      "npz_sha256": "049a396ff75f88e881621ab20e6964bb51bbf6bb9b08281ff4ca1799b0b43858",
+      "source_novelty": "existing_source_new_target",
+      "rows": 5875,
+      "features": 16,
+      "split_sizes": {
+        "train": 600,
+        "val": 1266,
+        "test": 1256
+      }
+    },
+    {
+      "dataset": "parkinson_motor__s112002",
+      "case": "parkinson_motor",
+      "kind": "real",
+      "family": "parkinson_motor",
+      "phase": "development",
+      "seed": 112002,
+      "task_type": "regression",
+      "npz": "data/parkinson_motor__s112002.npz",
+      "metadata": "data/parkinson_motor__s112002.json",
+      "npz_sha256": "f29a97ee48925be1a76de4c8a5739747673ce6789fff64a5e281ed56c9d8fa16",
+      "source_novelty": "existing_source_new_target",
+      "rows": 5875,
+      "features": 16,
+      "split_sizes": {
+        "train": 600,
+        "val": 1219,
+        "test": 1256
+      }
+    },
+    {
+      "dataset": "gas_turbine_nox__s112001",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "family": "gas_turbine_nox",
+      "phase": "development",
+      "seed": 112001,
+      "task_type": "regression",
+      "npz": "data/gas_turbine_nox__s112001.npz",
+      "metadata": "data/gas_turbine_nox__s112001.json",
+      "npz_sha256": "8ec135c3949a505ddd24fef0ccbf250013999e38a40df7ca1b51054d0aa4cabb",
+      "source_novelty": "existing_source_new_target",
+      "rows": 36733,
+      "features": 9,
+      "split_sizes": {
+        "train": 600,
+        "val": 7152,
+        "test": 14542
+      }
+    },
+    {
+      "dataset": "gas_turbine_nox__s112002",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "family": "gas_turbine_nox",
+      "phase": "development",
+      "seed": 112002,
+      "task_type": "regression",
+      "npz": "data/gas_turbine_nox__s112002.npz",
+      "metadata": "data/gas_turbine_nox__s112002.json",
+      "npz_sha256": "b68349fa9d59b9a42b0c6683e32cee77bf26d4905a105d1b029779717d4b40ed",
+      "source_novelty": "existing_source_new_target",
+      "rows": 36733,
+      "features": 9,
+      "split_sizes": {
+        "train": 600,
+        "val": 7152,
+        "test": 14542
+      }
+    }
+  ],
+  "dev_seeds": [
+    112001,
+    112002
+  ],
+  "reserved_confirmation_seeds": [
+    113001,
+    113002,
+    113003,
+    113004,
+    113005
+  ],
+  "confirmation_materialized": false,
+  "model_fits": 0,
+  "test_evaluations": 0,
+  "independent_source_accounting": "2 newly examined local sources + 2 correlated new targets from previously tested sources; not four new independent benchmarks.",
+  "prior_generator_path": "rebuttal/fastlane_20261027/prepare_data.py",
+  "prior_generator_sha256": "98d616ec07c46f00615b2a61d41a2283feea4bb6293349c346233cb5ad9fc4ec",
+  "generator_sha256": "fc9d3df6d2cd7dbf1d6480c06e8bdbec4b3748c2c5470e499dcb5c91d3c1fa79",
+  "seed_collision_check": {
+    "searched": [
+      "rebuttal/preexperiments_20261027",
+      "rebuttal/fastlane_20261027",
+      "rebuttal/fastlane_20261028_bc"
+    ],
+    "seeds": [
+      112001,
+      112002,
+      113001,
+      113002,
+      113003,
+      113004,
+      113005
+    ],
+    "collisions": []
+  }
+}

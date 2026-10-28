@@ -1,0 +1,57 @@
+{
+  "purpose": "exploratory dataset triage only; not formal benchmark or evidence of population superiority",
+  "datasets": {
+    "kin8nm": "check_codereview0701/tabular_extra_random300/data/regression__kin8nm.csv",
+    "energy_efficiency": "check_codereview0701/tabular_extra_random300/data/regression__energy_efficiency.csv",
+    "abalone": "check_codereview0701/tabular_extra_random300/data/regression__abalone.csv",
+    "Moneyball": "check_codereview0701/tabular_extra_random300/data/regression__Moneyball.csv",
+    "naval_propulsion_plant": "check_codereview0701/tabular_extra_random300/data/regression__naval_propulsion_plant.csv",
+    "cpu_activity": "check_codereview0701/tabular_extra_random300/data/regression__cpu_activity.csv",
+    "airfoil_self_noise": "check_codereview0701/dataset/TabArena_regression/airfoil_self_noise.csv",
+    "concrete_compressive_strength": "check_codereview0701/dataset/TabArena_regression/concrete_compressive_strength.csv",
+    "houses": "check_codereview0701/dataset/TabArena_regression/houses.csv",
+    "wine_quality": "check_codereview0701/dataset/TabArena_regression/wine_quality.csv"
+  },
+  "seeds": [
+    20261027,
+    20261028
+  ],
+  "configs": [
+    {
+      "depth": 3,
+      "ridge": 1.0
+    },
+    {
+      "depth": 4,
+      "ridge": 10.0
+    }
+  ],
+  "n_estimators": 60,
+  "max_bin": 63,
+  "outer_test": "KFold(5,shuffle=True,random_state=42), first fold reserved and never scored",
+  "development_only": "Each repeat samples <=1500 rows from outer-training pool, then 75/25 train/validation; preprocessing fit on development-train only",
+  "methods": [
+    "XGB",
+    "CrossGB",
+    "LGB_constant",
+    "LGB_linear"
+  ],
+  "native_scope": "Existing local legacy Darwin build; not the formal controlled Linux library. Critical source difference vs archived vendor is fraction<=0 fast-path; smoke uses positive fraction=1 only. Binary build-source identity not independently attested. Results require confirmation on formal build.",
+  "xgboost_version": "3.3.0-dev",
+  "lightgbm_version": "4.6.0",
+  "native_sha256": "e38a9a10529543bf6427c52d3e64f92194f91e9fff5e23f9003dd735062d15f8",
+  "source_hashes": {
+    "kin8nm": "5edb8f1a1d2b3ab13039857fe31f57afe6251a8be3d66c825df41f87999b16be",
+    "energy_efficiency": "f6174bff6e6eb1b50c43e9040c1bd53958d795efdb116f69ce4a4f53a1431d7c",
+    "abalone": "e9452a7b29760c9259ba1b8a23f75184c4fadb5b94aa339222f26cd7b1d8f002",
+    "Moneyball": "5685a3ffb8905d5910432d9c434f7d39b149f08029e6b099ccc912361d4a9fae",
+    "naval_propulsion_plant": "97a860d3c07c534346ad2c358c3302c5d1e9ede02caffdec0cd998f41f1f9027",
+    "cpu_activity": "1025ce99015d397e0508a23595d9b3936a383179aae6fb367c42cda62c74ab86",
+    "airfoil_self_noise": "338245c6379cc312fbd1432655d605208c7065e4f8c7b3b6bf668d659d91e19a",
+    "concrete_compressive_strength": "f6e72562e81d6da453254c3237e3333963a7bd04e7fa0a544a534289561dc68b",
+    "houses": "7e1f563c6288779da831ad6ebf3e42c732abd3cf3b7c01abb2406f6334ed56d0",
+    "wine_quality": "a0c0d3760d527508aa715f0cd2e924daec10023b70491d2d7e16edc6f7be18bb"
+  },
+  "fit_budget": 160,
+  "formal_test_evaluations": 0
+}

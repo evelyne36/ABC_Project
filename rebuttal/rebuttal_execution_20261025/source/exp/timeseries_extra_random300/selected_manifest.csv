@@ -1,0 +1,9 @@
+dataset,selection_status,file_status,default_seq_len,channels,window_feature_count,pressure_proxy_approx,reason,next_action
+exchange_rate,selected_first_batch,raw_available,24,8,192,279724032,"existing local raw file, low channel count, standard multivariate benchmark","run 30-candidate smoke, then Random300 if stable"
+ETTh1,selected_first_batch,raw_available,24,7,168,491720320,"existing local raw file, standard ETT hourly benchmark","run 30-candidate smoke, then Random300 if stable"
+ILI,reserve_candidate,raw_downloaded,24,7,168,27264384,"small disease benchmark; downloaded from official TSLib Hugging Face mirror","short smoke first because only 966 weekly rows"
+ETTh2,selected_second_batch,raw_downloaded,24,7,168,491720320,"same family as ETTh1; good replication candidate","run after ETTh1/exchange smoke"
+Weather,selected_second_batch,raw_downloaded,24,21,504,13384433664,"standard LSTF benchmark; downloaded from official TSLib Hugging Face mirror","use smoke first and consider shorter seq_len"
+ETTm1,reserve_candidate,raw_downloaded,24,7,168,1966881280,"standard ETT minute data but more rows","run only if hourly ETT result is promising"
+solar,reserve_candidate,raw_downloaded,24,137,3288,568269158400,"registered as solar; raw filename solar_AL.txt","alias solar_AL resolves to solar; consider channel subset or shorter seq_len"
+PEMS08,reserve_candidate,raw_downloaded,12,170,2040,74290176000,"least expensive PEMS candidate listed, still traffic-wide; npz validated","subset or short smoke only; runner supports npz but default full excludes wide PEMS"

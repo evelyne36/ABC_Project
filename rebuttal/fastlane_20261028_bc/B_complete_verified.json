@@ -1,0 +1,19 @@
+{
+  "status": "complete_verified",
+  "verified_utc": "2026-10-28T05:42:27.448212+00:00",
+  "B1_new_ok": 30,
+  "B1_reused": 210,
+  "B2_final_ok": 35,
+  "B2_timing_ok": 21,
+  "B2_accuracy_verification": {
+    "stage": "B2",
+    "expected_fits": 35,
+    "observed_fits": 35,
+    "successful_fits": 35,
+    "rmse_values_recomputed": 105,
+    "max_recomputation_error": 0.0,
+    "errors": [],
+    "scope": "five independent new synthetic seeds; raw timings retained per host, summarize paired ratios only; frozen recipes never changed by this script"
+  },
+  "choice_sha256": "6b269b063da6bc4a686fb81400ff0b34da2ff1a01fa2348ebb08e07dc4fa4323"
+}

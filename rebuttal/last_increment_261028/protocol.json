@@ -1,0 +1,9 @@
+{
+  "frozen_utc": "2026-10-28T10:12:22.344664+00:00",
+  "A": 400,
+  "C": 90,
+  "B": "fixed n/d sensitivity, 80 fits, fresh paired data seeds reserved121001..121005; exact manifest frozen before fitting",
+  "D": "NOX nested training 600->2000, 30 fixed-config fits",
+  "candidate_HPO_not_300": true,
+  "interpretation": "A and C are posthoc sensitivity of previously inspected tasks, not new independent confirmation. B uses fresh draws; D shares the fixed real time holdout. No test selection of p/case/n/d/metric."
+}

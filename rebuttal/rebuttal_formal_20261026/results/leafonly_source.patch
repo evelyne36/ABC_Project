@@ -1,0 +1,118 @@
+--- historical/param.h
++++ controlled/param.h
+@@ -71,6 +71,7 @@
+   float metagb_pred_colsample_bytree;
+   bool metagb_cond_pred_share;
+   bool metagb_leaf_only_use_bias;
++  bool metagb_split_only_use_bias;
+   int metagb_split_sample;
+   int metagb_score_agg;
+   float metagb_lambda_l2;
+@@ -187,6 +188,9 @@
+     DMLC_DECLARE_FIELD(metagb_leaf_only_use_bias)
+         .set_default(false)
+         .describe("Use only the bias predictive feature in MetaGB leaves.");
++    DMLC_DECLARE_FIELD(metagb_split_only_use_bias)
++        .set_default(false)
++        .describe("Score scalar MetaGB splits using only the bias candidate; leaves retain their predictive candidates.");
+     DMLC_DECLARE_FIELD(metagb_split_sample)
+         .set_default(0)
+         .describe("MetaGB row subsample split mode: 0 share rows, 1 random split, 2 ordered split.");
+--- historical/updater_metagb_hist.cc
++++ controlled/updater_metagb_hist.cc
+@@ -556,7 +556,8 @@
+     bst_feature_t best_leaf_feature;
+     float best_leaf_weight;
+     auto const& leaf_cache =
+-        param_->metagb_leaf_only_use_bias ? leaf_train_value_cache_ : pred_train_value_cache_;
++        (param_->metagb_leaf_only_use_bias || param_->metagb_split_only_use_bias)
++            ? leaf_train_value_cache_ : pred_train_value_cache_;
+     BestLeaf(gpair, rows.pred, leaf_pred_features, p_tree->NumFeatures(), leaf_cache,
+              &best_leaf_feature, &best_leaf_weight);
+     (*p_tree)[nidx].SetLeaf(param_->learning_rate * best_leaf_weight);
+@@ -1050,7 +1051,8 @@
+     std::vector<bst_feature_t> pred_features;
+     std::vector<float> weights;
+     auto const& leaf_cache =
+-        param_->metagb_leaf_only_use_bias ? leaf_train_value_cache_ : pred_train_value_cache_;
++        (param_->metagb_leaf_only_use_bias || param_->metagb_split_only_use_bias)
++            ? leaf_train_value_cache_ : pred_train_value_cache_;
+     auto const& rows = NodeRows(RegTree::kRoot).pred;
+     BestMultiLeaf(gpair, rows, leaf_pred_features, p_tree->NumFeatures(), leaf_cache,
+                   &pred_features, &weights);
+@@ -1073,7 +1075,8 @@
+     std::vector<bst_feature_t> best_leaf_features;
+     std::vector<float> best_leaf_weight;
+     auto const& leaf_cache =
+-        param_->metagb_leaf_only_use_bias ? leaf_train_value_cache_ : pred_train_value_cache_;
++        (param_->metagb_leaf_only_use_bias || param_->metagb_split_only_use_bias)
++            ? leaf_train_value_cache_ : pred_train_value_cache_;
+     BestMultiLeaf(gpair, rows.pred, leaf_pred_features, p_tree->NumFeatures(), leaf_cache,
+                   &best_leaf_features, &best_leaf_weight);
+     for (bst_target_t t = 0; t < best_leaf_features.size(); ++t) {
+@@ -1372,7 +1375,8 @@
+       std::vector<bst_feature_t> pred_features;
+       std::vector<float> weights;
+       auto const& leaf_cache =
+-          param_->metagb_leaf_only_use_bias ? leaf_train_value_cache_ : pred_train_value_cache_;
++          (param_->metagb_leaf_only_use_bias || param_->metagb_split_only_use_bias)
++            ? leaf_train_value_cache_ : pred_train_value_cache_;
+       BestMultiLeaf(gpair, NodeRows(nidx).pred, leaf_pred_features, p_tree->NumFeatures(),
+                     leaf_cache, &pred_features, &weights);
+       for (bst_target_t t = 0; t < pred_features.size(); ++t) {
+@@ -1391,7 +1395,8 @@
+   void RefreshLeaves(linalg::MatrixView<GradientPair const> gpair, RegTree* p_tree,
+                      std::vector<bst_feature_t> const& leaf_pred_features) {
+     auto const& leaf_cache =
+-        param_->metagb_leaf_only_use_bias ? leaf_train_value_cache_ : pred_train_value_cache_;
++        (param_->metagb_leaf_only_use_bias || param_->metagb_split_only_use_bias)
++            ? leaf_train_value_cache_ : pred_train_value_cache_;
+     auto tree_view = p_tree->HostScView();
+     tree_view.WalkTree([&](bst_node_t nidx) {
+       if (tree_view.IsLeaf(nidx)) {
+@@ -1484,6 +1489,8 @@
+     CHECK_LE(param->metagb_score_agg, 3) << "MetaGB supports score_agg in [0, 3].";
+     this->param_ = param;
+     auto* p_tree = trees.front();
++    CHECK(!param->metagb_split_only_use_bias || !p_tree->IsMultiTarget())
++        << "The rebuttal LeafOnly control supports scalar-output trees only.";
+     if (p_tree->IsMultiTarget()) {
+       CHECK_GT(in_gpair->Grad()->Shape(1), 1U)
+           << "MetaGB vector branch expects multiple gradient columns.";
+@@ -1595,9 +1602,12 @@
+     std::vector<bst_feature_t> leaf_pred_features =
+         param->metagb_leaf_only_use_bias ? std::vector<bst_feature_t>{p_tree->NumFeatures()}
+                                          : pred_features;
+-    cached_n_pred_ = pred_features.size();  // Set before InitTrainValueCache
+-    InitTrainValueCache(pred_features, &pred_train_value_cache_);
+-    if (param->metagb_leaf_only_use_bias) {
++    auto split_pred_features = param->metagb_split_only_use_bias
++                                   ? std::vector<bst_feature_t>{p_tree->NumFeatures()}
++                                   : pred_features;
++    cached_n_pred_ = split_pred_features.size();
++    InitTrainValueCache(split_pred_features, &pred_train_value_cache_);
++    if (param->metagb_leaf_only_use_bias || param->metagb_split_only_use_bias) {
+       InitTrainValueCache(leaf_pred_features, &leaf_train_value_cache_);
+     } else {
+       leaf_train_value_cache_.clear();
+@@ -1606,7 +1616,7 @@
+     root_rows = std::move(sampled_rows);
+ 
+     auto root =
+-        FindBestSplit(h_gpair, p_tree, RegTree::kRoot, 0, cond_features, pred_features,
++        FindBestSplit(h_gpair, p_tree, RegTree::kRoot, 0, cond_features, split_pred_features,
+                       leaf_pred_features);
+     std::vector<CPUExpandEntry> expand_set;
+     if (HasSplit(root.nid)) {
+@@ -1623,9 +1633,9 @@
+         auto left = p_tree->LeftChild(candidate.nid);
+         auto right = p_tree->RightChild(candidate.nid);
+         auto depth = candidate.depth + 1;
+-        auto l_best = FindBestSplit(h_gpair, p_tree, left, depth, cond_features, pred_features,
++        auto l_best = FindBestSplit(h_gpair, p_tree, left, depth, cond_features, split_pred_features,
+                                     leaf_pred_features);
+-        auto r_best = FindBestSplit(h_gpair, p_tree, right, depth, cond_features, pred_features,
++        auto r_best = FindBestSplit(h_gpair, p_tree, right, depth, cond_features, split_pred_features,
+                                     leaf_pred_features);
+         if (HasSplit(l_best.nid)) {
+           best_splits.push_back(l_best);

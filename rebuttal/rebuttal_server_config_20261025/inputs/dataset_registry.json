@@ -1,0 +1,145 @@
+{
+  "path_base": "project_root",
+  "tabular": [
+    {
+      "dataset": "kin8nm",
+      "project_relative_path": "aaai_FullCodeProject-check_codereview0701/tabular_extra_random300/data/regression__kin8nm.csv",
+      "sha256": "5edb8f1a1d2b3ab13039857fe31f57afe6251a8be3d66c825df41f87999b16be",
+      "task": "regression",
+      "target": "last_column",
+      "target_column": "y",
+      "raw_rows": 8192,
+      "raw_feature_columns": 8,
+      "row_filter": "drop_missing_feature_or_target_then_numeric_target_if_regression",
+      "main_panel": true
+    },
+    {
+      "dataset": "moneyball",
+      "project_relative_path": "aaai_FullCodeProject-check_codereview0701/tabular_extra_random300/data/regression__Moneyball.csv",
+      "sha256": "5685a3ffb8905d5910432d9c434f7d39b149f08029e6b099ccc912361d4a9fae",
+      "task": "regression",
+      "target": "last_column",
+      "target_column": "RS",
+      "raw_rows": 114,
+      "raw_feature_columns": 14,
+      "row_filter": "drop_missing_feature_or_target_then_numeric_target_if_regression",
+      "main_panel": true
+    },
+    {
+      "dataset": "cpu_activity",
+      "project_relative_path": "aaai_FullCodeProject-check_codereview0701/tabular_extra_random300/data/regression__cpu_activity.csv",
+      "sha256": "1025ce99015d397e0508a23595d9b3936a383179aae6fb367c42cda62c74ab86",
+      "task": "regression",
+      "target": "last_column",
+      "target_column": "usr",
+      "raw_rows": 8192,
+      "raw_feature_columns": 21,
+      "row_filter": "drop_missing_feature_or_target_then_numeric_target_if_regression",
+      "main_panel": true
+    },
+    {
+      "dataset": "houses",
+      "project_relative_path": "aaai_FullCodeProject-check_codereview0701/dataset/TabArena_regression/houses.csv",
+      "sha256": "7e1f563c6288779da831ad6ebf3e42c732abd3cf3b7c01abb2406f6334ed56d0",
+      "task": "regression",
+      "target": "last_column",
+      "target_column": "LnMedianHouseValue",
+      "raw_rows": 20640,
+      "raw_feature_columns": 8,
+      "row_filter": "drop_missing_feature_or_target_then_numeric_target_if_regression",
+      "main_panel": true
+    },
+    {
+      "dataset": "energy_efficiency",
+      "project_relative_path": "aaai_FullCodeProject-check_codereview0701/tabular_extra_random300/data/regression__energy_efficiency.csv",
+      "sha256": "f6174bff6e6eb1b50c43e9040c1bd53958d795efdb116f69ce4a4f53a1431d7c",
+      "task": "regression",
+      "target": "last_column",
+      "target_column": "Y1",
+      "raw_rows": 768,
+      "raw_feature_columns": 8,
+      "row_filter": "drop_missing_feature_or_target_then_numeric_target_if_regression",
+      "main_panel": true
+    },
+    {
+      "dataset": "ilpd",
+      "project_relative_path": "aaai_FullCodeProject-check_codereview0701/tabular_extra_random300/data/binary__ilpd.csv",
+      "sha256": "8a3a32776f0341286f16ba78816dc4cf196bb26ed547ec831d10ab43cda92277",
+      "task": "binary",
+      "target": "last_column",
+      "target_column": "Class",
+      "raw_rows": 583,
+      "raw_feature_columns": 10,
+      "row_filter": "drop_missing_feature_or_target_then_numeric_target_if_regression",
+      "main_panel": false
+    },
+    {
+      "dataset": "phoneme",
+      "project_relative_path": "aaai_FullCodeProject-check_codereview0701/tabular_extra_random300/data/binary__phoneme.csv",
+      "sha256": "650f902de961d61bbb7cf640507007d12c4c81b929dd08f050160734bed0ef09",
+      "task": "binary",
+      "target": "last_column",
+      "target_column": "target",
+      "raw_rows": 5404,
+      "raw_feature_columns": 5,
+      "row_filter": "drop_missing_feature_or_target_then_numeric_target_if_regression",
+      "main_panel": false
+    },
+    {
+      "dataset": "credit_approval",
+      "project_relative_path": "aaai_FullCodeProject-check_codereview0701/tabular_extra_random300/data/binary__credit-approval.csv",
+      "sha256": "77b7e7884ea6fdcd08d2e38c23c45420ece5d4f474b8f3b6e342f1540ba74501",
+      "task": "binary",
+      "target": "last_column",
+      "target_column": "class",
+      "raw_rows": 653,
+      "raw_feature_columns": 15,
+      "row_filter": "drop_missing_feature_or_target_then_numeric_target_if_regression",
+      "main_panel": false
+    }
+  ],
+  "time_series": [
+    {
+      "dataset": "ETTh1",
+      "project_relative_path": "aaai_FullCodeProject-check_codereview0701/paper_writing/timeseries_extra_random300/data/raw/ETTh1.csv",
+      "sha256": "f18de3ad269cef59bb07b5438d79bb3042d3be49bdeecf01c1cd6d29695ee066",
+      "target": "OT",
+      "hash_scope": "current_archived_input_snapshot_not_training_time_attestation"
+    },
+    {
+      "dataset": "ETTh2",
+      "project_relative_path": "aaai_FullCodeProject-check_codereview0701/paper_writing/timeseries_extra_random300/data/raw/ETTh2.csv",
+      "sha256": "a3dc2c597b9218c7ce1cd55eb77b283fd459a1d09d753063f944967dd6b9218b",
+      "target": "OT",
+      "hash_scope": "current_archived_input_snapshot_not_training_time_attestation"
+    },
+    {
+      "dataset": "ETTm1",
+      "project_relative_path": "aaai_FullCodeProject-check_codereview0701/paper_writing/timeseries_extra_random300/data/raw/ETTm1.csv",
+      "sha256": "6ce1759b1a18e3328421d5d75fadcb316c449fcd7cec32820c8dafda71986c9e",
+      "target": "OT",
+      "hash_scope": "current_archived_input_snapshot_not_training_time_attestation"
+    },
+    {
+      "dataset": "ETTm2",
+      "project_relative_path": "aaai_FullCodeProject-check_codereview0701/paper_writing/timeseries_extra_random300/data/raw/ETTm2.csv",
+      "sha256": "db973ca252c6410a30d0469b13d696cf919648d0f3fd588c60f03fdbdbadd1fd",
+      "target": "OT",
+      "hash_scope": "current_archived_input_snapshot_not_training_time_attestation"
+    },
+    {
+      "dataset": "exchange_rate",
+      "project_relative_path": "aaai_FullCodeProject-check_codereview0701/paper_writing/timeseries_extra_random300/data/raw/exchange_rate.txt",
+      "sha256": "0127465b51e3cd3c360f8eb2be30cfd294689a2a55903eb8245aafc396626c7f",
+      "target": "last_channel",
+      "hash_scope": "current_archived_input_snapshot_not_training_time_attestation"
+    },
+    {
+      "dataset": "ILI",
+      "project_relative_path": "aaai_FullCodeProject-check_codereview0701/paper_writing/timeseries_extra_random300/data/raw/national_illness.csv",
+      "sha256": "93601f64d2566dc796ca4305adad8b8560c2db1a1ff04543c3bd813a7263570a",
+      "target": "OT",
+      "hash_scope": "current_archived_input_snapshot_not_training_time_attestation"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "capacity",
+  "host": "TabularData_Processor",
+  "batch_budget_seconds": 1800,
+  "frozen_utc": "2026-10-27T19:40:04.673835+00:00",
+  "cases": {
+    "S3_sparse": {
+      "params": {
+        "depth": 2,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "ridge": 1.0,
+        "trees": 1024
+      },
+      "seeds": [
+        98001,
+        98002,
+        98003,
+        98004,
+        98005
+      ],
+      "source": "local_sync/fastlane_results/cpu1_pool.zjuici.com/results/formal24_v1/S3_sparse/final/CrossGB/s98001/result.json"
+    }
+  },
+  "test_selection": false,
+  "scope": "Repeated fixed recipes on existing confirmation splits; diagnostic, not fresh test confirmation; no search",
+  "data_sha256": {
+    "S3_sparse__s98001.npz": "8e7e81a5155046ea477684644a694c60994f9f0e68aee1c1cf45c55dc4aff62b",
+    "S3_sparse__s98002.npz": "081b2c2e03d21ba7cf857a8c6b30a132e6dc83f1d4751bc08c99cc76365d7026",
+    "S3_sparse__s98003.npz": "017b0f5ada9699979325b482e0e6d1f45ffbff9af7374bb379cab9ee87a3b065",
+    "S3_sparse__s98004.npz": "763ca7124979fb46fe8a5501b075cd1b2d2d557264f6ff6a4469aa214c6199c3",
+    "S3_sparse__s98005.npz": "d7f98cb6d9b827236dbcfc3510777521cc3515a7b182787163c5bb4a1dd15432"
+  }
+}

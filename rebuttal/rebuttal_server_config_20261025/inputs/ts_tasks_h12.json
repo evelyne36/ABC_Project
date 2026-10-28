@@ -1,0 +1,9 @@
+{
+  "tasks": [
+    {
+      "dataset": "exchange_rate",
+      "seq_len": 24,
+      "pred_len": 12
+    }
+  ]
+}

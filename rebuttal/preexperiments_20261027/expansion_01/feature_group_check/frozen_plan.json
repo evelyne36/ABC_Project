@@ -1,0 +1,17 @@
+{
+  "datasets": [
+    "maternal_health_risk.csv",
+    "website_phishing.csv"
+  ],
+  "seeds": [
+    90101,
+    90102,
+    90103,
+    90104,
+    90105
+  ],
+  "change": "Group by exact raw model-feature tuple within preserved outer-training pool; same group only on one side. Existing parameter choices unchanged.",
+  "purpose": "Stress-test generalization to unseen feature combinations; a different estimand from IID row splits, not proof that duplicates invalidate IID evaluation.",
+  "formal_outer_test_evaluations": 0,
+  "fit_attempts_expected": 40
+}

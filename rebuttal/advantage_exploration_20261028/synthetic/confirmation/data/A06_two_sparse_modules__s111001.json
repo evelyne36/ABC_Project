@@ -1,0 +1,149 @@
+{
+  "seed": 111001,
+  "phase": "confirmation",
+  "task_type": "regression",
+  "family": "A06_two_sparse_modules",
+  "case": "A06_two_sparse_modules",
+  "control": "modules",
+  "source": "independent standard Normal coordinates; fresh versioned data seeds",
+  "source_version": "cgb-advantage-synthetic-v1-20261028",
+  "formula": "f(X)=sqrt(2) [sign(x0) x2 + sign(x1) x3]; y=f(X)+epsilon",
+  "case_definition": {
+    "case": "A06_two_sparse_modules",
+    "n": 240,
+    "d": 32,
+    "kind": "modules",
+    "formula": "f(X)=sqrt(2) [sign(x0) x2 + sign(x1) x3]",
+    "axis": "two additive gate modules, one predictive variable per module",
+    "pair_group": "n240_d32",
+    "gate_features": [
+      0,
+      1
+    ],
+    "predictive_modules": [
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ]
+  },
+  "noise_sd": 0.3,
+  "feature_names": [
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5",
+    "x6",
+    "x7",
+    "x8",
+    "x9",
+    "x10",
+    "x11",
+    "x12",
+    "x13",
+    "x14",
+    "x15",
+    "x16",
+    "x17",
+    "x18",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29",
+    "x30",
+    "x31"
+  ],
+  "population_signal_L2": 2.0,
+  "population_signal_mean": 0.0,
+  "population_signal_variance": 4.0,
+  "preprocessing": {
+    "X": "none; all coordinates population N(0,1)",
+    "y": "none; analytic population scaling only"
+  },
+  "matching": {
+    "pair_group": "n240_d32",
+    "X_sha256": "eaf82d49b6ffdf9ac01e68b1ccc34d17263aa586006f2087504d092c42d58986",
+    "eps_sha256": "fcf929bee5f11ed76af83a2edd8b3948ea599e5e0411724c7643adac192e4d49",
+    "shared_latent_base": "same seed shares 480x64 master X and independent 480-vector noise; subsets by n,d"
+  },
+  "split_protocol": "seeded row random 60/20/20; source fastlane random_split unchanged",
+  "oracle_support": {
+    "gate_features": [
+      0,
+      1
+    ],
+    "predictive_modules": [
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ]
+  },
+  "oracle_arrays": "diagnostic only; never concatenate oracle_signal/oracle_region/noise to X",
+  "gate_definition": {
+    "threshold": 0.0
+  },
+  "seed_collision_check": {
+    "seeds": [
+      110001,
+      110002,
+      111001,
+      111002,
+      111003,
+      111004,
+      111005
+    ],
+    "collisions": [],
+    "searched_roots": [
+      "rebuttal",
+      "local_sync"
+    ],
+    "excluded": "rebuttal/advantage_exploration_20261028 (current new exploration)",
+    "text_scope": "json/jsonl/py/md/csv/yaml/yml/sh/toml/txt; integer tokens, excluding decimal substrings",
+    "filenames_checked": 19619,
+    "filename_collisions": []
+  },
+  "protocol_version": "cgb-advantage-synthetic-v1-20261028",
+  "dataset": "A06_two_sparse_modules__s111001",
+  "rows": 240,
+  "features": 32,
+  "npz_sha256": "56532b5b0470998ec97e884f30c41c4399ec15f9d9b6f355aa0c29fd7e114b12",
+  "array_sha256": {
+    "X": "28fac96fdc5087051eefe6a54bdfab6d13806141ae1f279b340dae7474506f2f",
+    "y": "29a4df95e5e77e9973566f611621928f52a1b676c9b07c4a21d987ecfa08b20d",
+    "train": "d832176c94c870aabae26818c1fb53e6f3dd1437907950b07ab323db0ea18454",
+    "val": "7f1ab84b2c0492a89a5ef2d1119ffde65a688eefbeb6cdcfa38d8ee2a5371ff7",
+    "test": "2775e4b56e9f875c09a7f2a7dfd3b23dd85b96db9109bbe54771260deaee2e35",
+    "task_type": "b37fe1a8d1db433437be5660a92834770ec3ad508555ba73d85e5897edbe32b8",
+    "oracle_signal": "68332646b38e374c77c8c625630ba4e1bde9785d3fef4136a4cecddf13282e08",
+    "oracle_region": "09398a1f20775699626ed1de938d763df8d556eae28ae28762c38c4388068228",
+    "noise": "fcf929bee5f11ed76af83a2edd8b3948ea599e5e0411724c7643adac192e4d49",
+    "y_train": "5a5cb087c3293897a9c01c5bd7a7e7e2c419d533cc3842a3dba4b4f09358bdf0",
+    "y_val": "1b9586c344aecb3791ec28f4d275c0bf577f6ccbfe55af52902755e35ee08209",
+    "y_test": "97961e1a3013eb120df292c9cd420837969d653e93341fa30102c7ec7846d2d1"
+  },
+  "split_sizes": {
+    "train": 144,
+    "val": 48,
+    "test": 48
+  },
+  "groups_in_X": false,
+  "oracle_support_in_X": false,
+  "confirmation_freeze_file": "rebuttal/advantage_exploration_20261028/confirmation_freeze.json",
+  "confirmation_freeze_sha256": "5ca62804148201ebd1b79e9cf15205ba678a4451e2b842be7d1a0e12d96f7fd9",
+  "frozen_utc": "2026-10-28T08:06:09.706663+00:00",
+  "confirmation_generator_sha256": "52c2fdda1b2e308a32dfad417bf170a2acd42ee29c21171cfb220f01ad39e129"
+}

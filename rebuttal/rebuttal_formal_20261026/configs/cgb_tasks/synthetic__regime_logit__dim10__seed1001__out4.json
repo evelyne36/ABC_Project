@@ -1,0 +1,66 @@
+{
+  "task_id": "synthetic__regime_logit__dim10__seed1001__out4",
+  "scenario": "regime_logit",
+  "dimension": 10,
+  "data_seed": 1001,
+  "outer_fold": 4,
+  "task_type": "binary",
+  "n_classes": 2,
+  "model_seed": 271828,
+  "data_npz": "inputs/cgb_ablation/regime_logit__dim10__seed1001/data.npz",
+  "data_npz_sha256": "5ff851ef1500e2c243130a152a9df25287bc996d90c9bf870b4f5b0d078dc1cb",
+  "backbone": {
+    "learning_rate": 0.04147490727100111,
+    "max_depth": 4,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0,
+    "n_estimators": 600,
+    "max_bin": 255,
+    "backbone_id": "shared_backbone_0220",
+    "reg_lambda": 4.557017996016443,
+    "candidate_id": "xgb_0220",
+    "source": "generated_shared_backbone"
+  },
+  "backbone_hash": "a3e1f287ad181db87d558741bdd9034a4e9d60c00f00e874746abc13796e04ca",
+  "archived_split": {
+    "task_id": "synthetic__regime_logit__dim10__seed1001__out4",
+    "data_hash": "96e6f6b0bac28c2313bfd03448e8055c6897e76138a7f1471bad5673ab904081",
+    "split_seed": 315160,
+    "outer_fold": 4,
+    "outer_train_hash": "8e7e2134aae8d08bf56c6fa872098a6c6a07e1fea813d991fc7e6f6227c99f21",
+    "outer_test_hash": "b0cf20102cd4ed0b5c77ce62db02095718b71f0b2fdabd37b17e8e21dfc84083",
+    "inner": [
+      {
+        "inner_fold": 1,
+        "train_hash": "eafe1c1b1d5e53d2a6a514dfbfb30fc2aede5b9d330f12f9f720b2fdf025fe5f",
+        "validation_hash": "c5d102e18121a331e5ae148b7aa83c6b8ce99803995d2647690f8c92df8d06cd"
+      },
+      {
+        "inner_fold": 2,
+        "train_hash": "c9feba6c96274266c67fbfa691ed9e0f522942747b6d74c667b512ec8b3f97f7",
+        "validation_hash": "3662401e91e2096e6021b6150bc783fff185725eece45e2cdac74d6fe1229eb2"
+      },
+      {
+        "inner_fold": 3,
+        "train_hash": "b4aef1fb592f8853e1ebd0ff6948f47fc63e1441ddb054ce50e650b24362b506",
+        "validation_hash": "0c1e9de596fe7fd54f84313ff85aca7e1511b39f98eb6170a2af6e3b4c45b4f8"
+      },
+      {
+        "inner_fold": 4,
+        "train_hash": "3fd90e0e6a25df1ce8861f1486e6eb8ca1b9e6bc590bfea466b1ceda86703232",
+        "validation_hash": "ef19b6b83742541fb78c9b5e027b9b000c90e02998128fa6a02560d649327755"
+      }
+    ],
+    "inner_manifest_hash": "b2e482bf48ebb82217c6004839eb6ee235ef05ad0392ba866dcdd6ff93724418"
+  },
+  "archive_shard": "aaai_FullCodeProject-check_codereview0701/datacollection0702/0716dataAddition/metagb_ablation_syn/syn_formal_formal16_v1/tasks/synthetic__regime_logit__dim10__seed1001__out4.json",
+  "archive_shard_sha256": "0c53a8621f1bcc84d6b38b1cbe4951130f2a94f776d5ed9eb387bddcef6c7c9c",
+  "historical_metrics": {
+    "xgb": 0.42825364805242133,
+    "bias_p00_sa0": 0.4271718335473802,
+    "split_p10_sa0": 0.3777468233339301,
+    "full_p10_sa0": 0.41657968956243174
+  },
+  "primary_metric": "logloss",
+  "data_hash_scope": "archived data_hash identifies generator arguments; frozen NPZ additionally hashes actual arrays"
+}

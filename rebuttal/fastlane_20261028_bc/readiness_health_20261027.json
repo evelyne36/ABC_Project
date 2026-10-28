@@ -1,0 +1,119 @@
+{
+  "checked_client_time": "2026-10-27T23:26:14.297533-07:00",
+  "known_experiment_processes_total": 0,
+  "scope": "Current low-load snapshot; no new fit launched; does not promise permanent exclusive ownership",
+  "hosts": [
+    {
+      "host": "cpu1_pool.zjuici.com",
+      "checked_utc": "2026-10-28T06:26:14.302393+00:00",
+      "affinity_cpus": 16,
+      "loadavg": [
+        0.02490234375,
+        0.01025390625,
+        0.0
+      ],
+      "cpu_busy_percent_half_second_sample": 0.0,
+      "known_experiment_processes": [],
+      "memory": {
+        "MemTotal_GiB": 31.34,
+        "MemAvailable_GiB": 30.23
+      }
+    },
+    {
+      "host": "cpu2_pool.zjuici.com",
+      "checked_utc": "2026-10-28T06:26:14.555295+00:00",
+      "affinity_cpus": 16,
+      "loadavg": [
+        0.20751953125,
+        0.10009765625,
+        0.04736328125
+      ],
+      "cpu_busy_percent_half_second_sample": 6.24,
+      "known_experiment_processes": [],
+      "memory": {
+        "MemTotal_GiB": 31.34,
+        "MemAvailable_GiB": 30.23
+      }
+    },
+    {
+      "host": "cpu4_pool.zjuici.com",
+      "checked_utc": "2026-10-28T06:26:14.532667+00:00",
+      "affinity_cpus": 16,
+      "loadavg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "cpu_busy_percent_half_second_sample": 0.0,
+      "known_experiment_processes": [],
+      "memory": {
+        "MemTotal_GiB": 31.34,
+        "MemAvailable_GiB": 30.27
+      }
+    },
+    {
+      "host": "cpu5_pool.zjuici.com",
+      "checked_utc": "2026-10-28T06:26:15.448038+00:00",
+      "affinity_cpus": 32,
+      "loadavg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "cpu_busy_percent_half_second_sample": 0.0,
+      "known_experiment_processes": [],
+      "memory": {
+        "MemTotal_GiB": 62.79,
+        "MemAvailable_GiB": 60.81
+      }
+    },
+    {
+      "host": "cpu6_pool.zjuici.com",
+      "checked_utc": "2026-10-28T06:26:14.313449+00:00",
+      "affinity_cpus": 16,
+      "loadavg": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "cpu_busy_percent_half_second_sample": 0.0,
+      "known_experiment_processes": [],
+      "memory": {
+        "MemTotal_GiB": 62.79,
+        "MemAvailable_GiB": 61.45
+      }
+    },
+    {
+      "host": "cpu_Calculator",
+      "checked_utc": "2026-10-28T06:26:14.536830+00:00",
+      "affinity_cpus": 16,
+      "loadavg": [
+        0.0869140625,
+        0.03369140625,
+        0.00537109375
+      ],
+      "cpu_busy_percent_half_second_sample": 0.12,
+      "known_experiment_processes": [],
+      "memory": {
+        "MemTotal_GiB": 31.34,
+        "MemAvailable_GiB": 30.23
+      }
+    },
+    {
+      "host": "TabularData_Processor",
+      "checked_utc": "2026-10-28T06:26:14.297533+00:00",
+      "affinity_cpus": 16,
+      "loadavg": [
+        0.0732421875,
+        0.01611328125,
+        0.0048828125
+      ],
+      "cpu_busy_percent_half_second_sample": 0.0,
+      "known_experiment_processes": [],
+      "memory": {
+        "MemTotal_GiB": 31.34,
+        "MemAvailable_GiB": 30.21
+      }
+    }
+  ]
+}

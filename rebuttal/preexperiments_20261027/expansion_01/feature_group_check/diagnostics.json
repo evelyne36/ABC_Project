@@ -1,0 +1,16 @@
+[
+  {
+    "dataset": "maternal_health_risk.csv",
+    "rows": 1014,
+    "unique_feature_groups": 416,
+    "duplicated_feature_rows": 598,
+    "source_sha256": "080d1ad2765fd170e4a7de35120a72d36264dc17a03740b9cf8ae75008d02eab"
+  },
+  {
+    "dataset": "website_phishing.csv",
+    "rows": 1353,
+    "unique_feature_groups": 676,
+    "duplicated_feature_rows": 677,
+    "source_sha256": "44909155b68bbef3e2486b045206a8a9d1ef8327f21cc4cf732778bef73fb405"
+  }
+]

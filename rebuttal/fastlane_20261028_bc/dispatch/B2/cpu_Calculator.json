@@ -1,0 +1,148 @@
+{
+  "stage": "B2",
+  "host": "cpu_Calculator",
+  "worker_sha256": "d2e2743d38c80b4d82b9bfb5e4a04aa1a88be952603460fad86f0e9fcb747e2a",
+  "wall_budget_seconds": 1200,
+  "jobs": [
+    {
+      "id": "S1_sparse_CrossGB_s99005",
+      "case": "S1_sparse",
+      "method": "CrossGB",
+      "seed": 99005,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 2,
+        "learning_rate": 1.0,
+        "p": 1.0
+      },
+      "data": "bc_inputs/data/S1_sparse__s99005.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S1_sparse__s99005.npz",
+      "relative_output": "S1_sparse/final/CrossGB/s99005",
+      "evaluate_test": true,
+      "save_model": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S1_sparse_XGB_s99005",
+      "case": "S1_sparse",
+      "method": "XGB",
+      "seed": 99005,
+      "params": {
+        "depth": 4,
+        "ridge": 100.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "bc_inputs/data/S1_sparse__s99005.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S1_sparse__s99005.npz",
+      "relative_output": "S1_sparse/final/XGB/s99005",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S1_sparse_LGB_constant_s99005",
+      "case": "S1_sparse",
+      "method": "LGB_constant",
+      "seed": 99005,
+      "params": {
+        "depth": 4,
+        "ridge": 100.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "bc_inputs/data/S1_sparse__s99005.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S1_sparse__s99005.npz",
+      "relative_output": "S1_sparse/final/LGB_constant/s99005",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S1_sparse_LGB_linear_s99005",
+      "case": "S1_sparse",
+      "method": "LGB_linear",
+      "seed": 99005,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "bc_inputs/data/S1_sparse__s99005.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S1_sparse__s99005.npz",
+      "relative_output": "S1_sparse/final/LGB_linear/s99005",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S1_sparse_PL_s99005",
+      "case": "S1_sparse",
+      "method": "PL",
+      "seed": 99005,
+      "params": {
+        "num_trees": 4,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 1.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 1.0
+      },
+      "data": "bc_inputs/data/S1_sparse__s99005.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S1_sparse__s99005.npz",
+      "relative_output": "S1_sparse/final/PL/s99005",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S1_sparse_LinXGBoost_s99005",
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "seed": 99005,
+      "params": {
+        "n_estimators": 4,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data": "bc_inputs/data/S1_sparse__s99005.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S1_sparse__s99005.npz",
+      "relative_output": "S1_sparse/final/LinXGBoost/s99005",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S1_sparse_LeafOnly_s99005",
+      "case": "S1_sparse",
+      "method": "LeafOnly",
+      "seed": 99005,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 2,
+        "learning_rate": 1.0,
+        "p": 1.0
+      },
+      "data": "bc_inputs/data/S1_sparse__s99005.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S1_sparse__s99005.npz",
+      "relative_output": "S1_sparse/final/LeafOnly/s99005",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    }
+  ],
+  "data_sha256": {
+    "bc_inputs/data/S1_sparse__s99005.npz": "6e5689a81d7834f7e40882ba427ee5e4bcae48d85877b9d69c709992870c323c"
+  },
+  "frozen_utc": "2026-10-28T05:37:58.252266+00:00"
+}

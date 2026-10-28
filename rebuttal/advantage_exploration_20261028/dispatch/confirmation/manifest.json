@@ -1,0 +1,42 @@
+{
+  "stage": "confirmation",
+  "lanes": [
+    {
+      "host": "cpu1_pool.zjuici.com",
+      "plan": "cpu1_pool.zjuici.com.json",
+      "jobs": 10
+    },
+    {
+      "host": "cpu2_pool.zjuici.com",
+      "plan": "cpu2_pool.zjuici.com.json",
+      "jobs": 10
+    },
+    {
+      "host": "cpu4_pool.zjuici.com",
+      "plan": "cpu4_pool.zjuici.com.json",
+      "jobs": 10
+    },
+    {
+      "host": "cpu5_pool.zjuici.com",
+      "plan": "cpu5_pool.zjuici.com.json",
+      "jobs": 10
+    },
+    {
+      "host": "cpu6_pool.zjuici.com",
+      "plan": "cpu6_pool.zjuici.com.json",
+      "jobs": 10
+    },
+    {
+      "host": "cpu_Calculator",
+      "plan": "cpu_Calculator.json",
+      "jobs": 10
+    },
+    {
+      "host": "TabularData_Processor",
+      "plan": "TabularData_Processor.json",
+      "jobs": 10
+    }
+  ],
+  "total_jobs": 70,
+  "created_utc": "2026-10-28T08:06:59.366291+00:00"
+}

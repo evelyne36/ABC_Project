@@ -1,0 +1,163 @@
+{
+  "tool": "run_ts_reference_panel.py",
+  "tool_sha256": "35832f0b2ccbb60baa1e502c647196996b3df760413052b306241a02d998caae",
+  "status": "plan_ready",
+  "mode": "plan_only",
+  "synthetic": false,
+  "historical_reproduction_claim": false,
+  "config_provenance": "archived_semantics_reconstructed_new_reference_not_historical_reproduction",
+  "source_root": "/Users/ancd/VSCodeProject/crossgbRebuttalV1-261024/rebuttal_server_config_20261025/source",
+  "series_root": "/Users/ancd/VSCodeProject/crossgbRebuttalV1-261024/aaai_FullCodeProject-check_codereview0701/paper_writing/timeseries_extra_random300",
+  "run_args": {
+    "run_id": "ts_reference_exchange_h12_late_settings",
+    "seed": 42,
+    "split_protocol": "fixed",
+    "feature_mode": "window_summary",
+    "target_mode": "sequence",
+    "output_scope": "target",
+    "include_time_features": true,
+    "max_raw_rows": 0,
+    "max_features": 0,
+    "origin_state_channel_budget": 32
+  },
+  "ridge_alphas": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    3.0,
+    10.0,
+    30.0,
+    100.0,
+    1000.0
+  ],
+  "models": [
+    "persistence",
+    "ridge_cpu"
+  ],
+  "selection_rule": "canonical select_min_rmse: validation RMSE, fit+predict seconds, candidate index",
+  "refit_rule": "fresh estimator on concatenate(train_rows,val_rows), retaining internal row gap",
+  "timing_unit": "recorded fit/predict seconds; excludes preprocessing/I/O/startup; not equal wallclock compute",
+  "source_sha256": {
+    "exp/timeseries_extra_random300/utils/data.py": "14b15cf9f7016abc30d3c3eb64e4f0bb09c9d901ee8f9655eb3e68e70b1b0f85",
+    "exp/timeseries_extra_random300/utils/splits.py": "38759928a9002ae20d7a7cb5f2717f16a0320ba97f3524c91e60f81482b1c6d0",
+    "exp/timeseries_extra_random300/utils/metrics.py": "6e4706ca600a175761ba288387ec6f4cfdefc0f40c903dccce3d3a06e83234bc",
+    "exp/timeseries_extra_random300/scripts/run_timeseries_benchmark.py": "0cb2d5d4356944afabff073e60c15b9e71562af39ab3d8122287dfca886b35b3",
+    "exp/random600/__init__.py": "d8a7da1b54913f6cd9c445e8d4352bd891a183d59e61fa6856428225f5309766",
+    "exp/random600/utils/__init__.py": "5370feb6df63479fdfb6621dd977842fd3deda2c2fe9ec8f6a0b4301d3b2f94a",
+    "exp/random600/utils/runner.py": "f7469016ddcc141ff6f42763d5a4c52da498d11858017eb7dc1412463102e0a1",
+    "exp/random600/utils/candidates.py": "6be66020d81c8f4c102ee86951d2974ae9df16246e940fb366c2ac0bcfaebffd",
+    "exp/random600/utils/metrics.py": "01363935cad2a29d9c65f874e9e71eb8949c9ddde32e17ee5c04589d7261cef2",
+    "exp/random600/utils/parameter_audit.py": "c22708e19c9c3685f3a5abf53513e5515aa23e4ad9f1066f83822dd6ff3f0a33"
+  },
+  "python": "3.13.9",
+  "numpy": "2.3.5",
+  "sklearn": "1.7.2",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "estimator_fit_calls": 0,
+  "planned_columnwise_base_estimator_fits": 0,
+  "tasks": [
+    {
+      "dataset": "exchange_rate",
+      "seq_len": 24,
+      "pred_len": 12,
+      "status": "ready",
+      "errors": [],
+      "raw_rows": 7588,
+      "channels": 8,
+      "target_index": 7,
+      "target_column": "var_7",
+      "horizon_gap": 11,
+      "train_rows": 4531,
+      "val_rows": 1499,
+      "test_rows": 1501,
+      "ridge_candidates": 10,
+      "persistence_candidates": 1,
+      "planned_panel_fits": 13,
+      "split_record": {
+        "dataset": "exchange_rate",
+        "split_protocol": "fixed",
+        "seed": 42,
+        "outer_fold": 1,
+        "fixed_split": {
+          "train_start": 0,
+          "train_end": 4531,
+          "val_start": 4542,
+          "val_end": 6041,
+          "test_start": 6052,
+          "test_end": 7553
+        },
+        "seq_len": 24,
+        "pred_len": 12,
+        "feature_mode": "window_summary",
+        "origin_state_channel_budget": 32,
+        "target_mode": "sequence",
+        "output_scope": "target",
+        "input_features": 270,
+        "output_dim": 12,
+        "train_row_min": 0,
+        "train_row_max": 4530,
+        "val_row_min": 4542,
+        "val_row_max": 6040,
+        "test_row_min": 6052,
+        "test_row_max": 7552,
+        "scaler_fit_start": 0,
+        "scaler_fit_end": 6076,
+        "train_val_target_start": 24,
+        "train_val_target_end": 6076,
+        "test_target_start": 6076,
+        "test_target_end": 7588,
+        "train_val_target_start_time": "24",
+        "train_val_target_end_time": "6075",
+        "test_target_start_time": "6076",
+        "test_target_end_time": "7587"
+      },
+      "original_split_check": {
+        "status": "all_matching_split_records_equal",
+        "records_compared": 4,
+        "data_identity_proven": false
+      },
+      "execution_gate": "Pass --acknowledge-unverified-config to run this as a NEW experiment, or recover original args and record provenance. Plan-only is allowed."
+    }
+  ],
+  "input_files": {
+    "run_args_json": {
+      "path": "/Users/ancd/VSCodeProject/crossgbRebuttalV1-261024/rebuttal_server_config_20261025/inputs/ts_args_h12.json",
+      "sha256": "3916bd7fc88bb60a88385b898d1b50041bf0f386f8cbe451f1b2c8b998223091"
+    },
+    "tasks_json": {
+      "path": "/Users/ancd/VSCodeProject/crossgbRebuttalV1-261024/rebuttal_server_config_20261025/inputs/ts_tasks_h12.json",
+      "sha256": "da78a39950485fecfab935383a82e4d5f8b8fe680926919cd9be0cae84c3f787"
+    },
+    "registry": {
+      "path": "/Users/ancd/VSCodeProject/crossgbRebuttalV1-261024/rebuttal_server_config_20261025/source/exp/timeseries_extra_random300/configs/dataset_registry.json",
+      "sha256": "9d6c8a5e2d55d611066082a0f2e3078490655833a1cd292769189dc819b1d33c"
+    },
+    "original_split_manifest": {
+      "path": "/Users/ancd/VSCodeProject/crossgbRebuttalV1-261024/rebuttal_server_config_20261025/historical/ts_submitted_split_manifest.json",
+      "sha256": "8ba7195755c3984b3ba647b3e1c8e682a7982c871b67f9936f094d011510312c"
+    },
+    "expected_data_hashes": {
+      "path": "/Users/ancd/VSCodeProject/crossgbRebuttalV1-261024/rebuttal_server_config_20261025/inputs/ts_expected_data_hashes.json",
+      "sha256": "3e18c97cb772d7722992e92e7b20196edff3588a64fee2795aa504627cc6d254"
+    },
+    "dataset:exchange_rate": {
+      "path": "/Users/ancd/VSCodeProject/crossgbRebuttalV1-261024/aaai_FullCodeProject-check_codereview0701/paper_writing/timeseries_extra_random300/data/raw/exchange_rate.txt",
+      "sha256": "0127465b51e3cd3c360f8eb2be30cfd294689a2a55903eb8245aafc396626c7f",
+      "expected_hash_verified": true
+    }
+  },
+  "notes": [
+    "New fixed-split target-only reference results; no rolling-origin uncertainty estimate.",
+    "Equal split fields do not establish identical raw values; data hashes must be checked separately.",
+    "Validation and test metrics use different canonical scaler fits; do not compare their magnitudes as a learning curve.",
+    "No tree comparison or compute-match claim is produced."
+  ]
+}

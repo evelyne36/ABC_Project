@@ -1,0 +1,186 @@
+0001 研究论文审稿意见 · 执行留档
+0002 CrossGBAAAI 2027 Rebuttal提分执行规划
+0003 Reviewer 疑点映射  /  证据复用  /  写作与实验任务清单
+0004 核心决策
+0005 将五位人工 Reviewer 的重复意见，整合为 5 项写作澄清（W1–W5）和 6 组实验/分析（E1–E6，其中 E6 含两项可独立开展的验证）。优先完成 E1–E4 与全部 W 项；E5、E6 根据资源安排。
+0006 [TABLE]
+0007 Reviewer | 当前评分 | 策略定位
+0008 qxju | 5 | 争取提高：组件归因、近似方法对比、失败分析
+0009 t7wg | 5 | 争取提高：创新性、等预算成本、适用性
+0010 wWos | 6 | 稳住并争取提高：linear-leaf 对比、性能成本
+0011 VVba | 7 | 巩固认可：具体设计澄清、符号修订
+0012 jSCP | 4 | 尝试扭转：近似方法、真实数据、复杂度及 k 消融
+0013 [/TABLE]
+0014 最小充分行动包   E1 + E2 + E3 + E4 + W1–W5
+0015 行动准则：一组实验同时回应多位 Reviewer；严格控制额外计算成本；不把 CrossGB 包装为通用 GBDT 的全面替代。
+0016 文档性质：基于已上传的 OpenReview 审稿 PDF（2026-10-24 页面截图）及当前研讨方案整理。文中的优先级与补实验设计属于策略建议，不等同于 Reviewer 原话，也不保证最终升分。
+0017 来源页码：qxju（PDF pp.2–3）；wWos（pp.3–4）；t7wg（pp.4–6）；VVba（pp.6–7）；jSCP（pp.7–8）。官方 AI Reviewer 仅用于少数内部复核提示，不计入提分目标。
+0018 阅读顺序  01 审稿诉求  /  02 实验任务  /  03 写作澄清  /  04 分阶段交付  /  05 勾选清单  /  06 风险与建议
+0019 01  提分定位与 Reviewer 诉求矩阵
+0020 建议将资源集中用于争取两位 5 分 Reviewer（qxju、t7wg）的正向更新，同时维持 wWos（6 分）与 VVba（7 分）的认可；jSCP（4 分）需要实质性证据回应，但不宜因此无限扩张实验规模。
+0021 [TABLE]
+0022 Reviewer | 核心疑点 | 期待的证明方式 | 任务映射
+0023 qxju  5 | 与 PL Trees / LinXGBoost 的新增价值；Split Scoring 与 Predictive Leaf 的贡献归因；CPU 数据集退化。 | 相近方法直接对比；Standard Split + Predictive Leaf 消融；失败案例分析。 | E1 E2 E4W1 W5
+0024 wWos  6 | 通用表格表现有限；约随 P 增加的成本；缺少近似线性叶方法比较。 | 模型对比；实际 runtime；明确何时适用。 | E1 E3 E4W1 W5
+0025 t7wg  5 | 创新边界；真实数据适用性；成本收益；每叶仅 1 个预测特征。 | 方法差异；适用性诊断；等计算预算；k=1 的合理性。 | E1 E3 E4 E5W1 W2
+0026 VVba  7 | 斜向分类边界；为何无截距；为何 tree-level 抽样；符号不清；CatBoost 排名更好。 | 数学解释；小型分类验证；抽样机制澄清；符号修订。 | E5 E6bW2 W3 W4
+0027 jSCP  4 | 线性叶系列创新与优势；真实数据成本不符；预测收益过大且统计证据弱；缺少 k=2/3。 | 近似模型对比；效率分析；叶容量消融；forecasting 稳健验证。 | E1 E3 E4 E5 E6aW1 W5
+0028 [/TABLE]
+0029 需要解决的三条主矛盾
+0030 •  创新归因：CrossGB 的特有机制相较于已有 linear-leaf boosting / model trees 带来了什么？
+0031 •  实际价值：真实 tabular 数据集性能有输有赢，额外计算成本何时值得？
+0032 •  设计合理性：单特征叶节点、conditional / predictive role separation 在何种数据结构上有效？
+0033 证据复用原则：优先一组完整证据同时覆盖多个 Reviewer，而不是对每人分别增加独立实验。
+0034 任务优先级总览
+0035 [TABLE]
+0036 优先级 | 任务 | 主要覆盖
+0037 P0 | E1 近似 Linear-Leaf 方法对比 | qxju / wWos / t7wg / jSCP
+0038 P0 | E2 Split Scoring 与 Predictive Leaf 解耦消融 | qxju / t7wg；兼顾 jSCP
+0039 P0 | E3 计算开销与等训练预算比较 | wWos / t7wg / jSCP
+0040 P0 | E4 失效分析与适用性诊断 | qxju / wWos / t7wg / jSCP
+0041 P1 | E5 单特征叶节点的 k 消融与 affine 验证 | t7wg / jSCP / VVba
+0042 P1 / P2 | E6a Forecasting 稳健性；E6b 分类边界验证 | jSCP；VVba
+0043 [/TABLE]
+0044 02  高复用实验与分析任务（E1–E6）
+0045 E1  最接近方法的直接对比
+0046   P0     最高优先级｜覆盖 qxju、wWos、t7wg、jSCP
+0047 核心疑点：现有证据尚不能区分 CrossGB 的收益来自独立 predictive-feature selection，还是既有线性叶模型的通用收益。
+0048 [TABLE]
+0049 对比对象 | 建议定位 | 优先级
+0050 PL Trees | 检验相较于 split-path / 其他 linear-leaf 设计的新增价值 | 优先
+0051 LinXGBoost | 检验与 boosted linear-leaf 方法的区别 | 优先
+0052 LightGBM Linear Trees | 工程代表性的线性叶模型参照 | 建议
+0053 PILOT | 补充 model-tree 相关设计比较 | 可选
+0054 TAO / CLARITree | 确认文献关联，优先机制澄清；若协议适配再跑 | 文献优先
+0055 [/TABLE]
+0056 ☐  核对 PL Trees、LinXGBoost 的代码、复现可行性与适用任务类型。
+0057 ☐  统一已有的数据划分、预处理、评测指标与调参预算；分别标明可比和不可比的任务。
+0058 ☐  覆盖机制合成数据、代表性回归/分类及兼容的 forecasting 任务；同时记录精度与运行时间。
+0059 ☐  区分“整体算法性能比较”与“仅叶模型容量对比”，避免过度归因。
+0060 交付：Table R1（近似方法 baseline comparison）；如果通用性能未全面领先，重点证明特定 conditional–predictive 机制下的可解释优势。
+0061 E2  两项创新机制的解耦消融
+0062   P0     最高优先级｜qxju 明确要求；同时回应 t7wg、jSCP
+0063 核心疑点：缺少 Standard Split Scoring + Predictive Leaves 的关键配置，无法准确归因性能提升。
+0064 [TABLE]
+0065 配置 | Split Scoring | Leaf Prediction | 用途
+0066 A. XGBoost | Standard | Constant | 常规基线
+0067 B. BiasOnly | 现有 Anchor 实现 | Constant | 检查实现差异
+0068 C. LeafOnly（新增） | Standard | Predictive | 测叶模型贡献
+0069 D. Full CrossGB | Predictive-aware | Predictive | 测完整贡献
+0070 E. SplitOnly（已有） | 以代码定义为准 | 以代码定义为准 | 核对既有消融含义
+0071 [/TABLE]
+0072 对于误差越小越好的 M，可报告 Δleaf = M(A) − M(C)，Δscoring = M(C) − M(D)；若采用 Accuracy / AUC，应反转改进方向。上述消融不一定构成严格的 2×2 因子设计，需明确各配置的实现差异。
+0073 ☐  新增 LeafOnly 对照。
+0074 ☐  核对 SplitOnly 与 BiasOnly 的代码定义和候选特征/叶拟合流程。
+0075 ☐  在典型 synthetic 与部分真实数据集上使用一致的划分、随机种子和正则化策略。
+0076 ☐  排查 BiasOnly 对比原始 XGBoost 的异常偏差，防止将框架实现差异误判为创新收益。
+0077 交付：Table R2（组件贡献表）。附加风险：官方 AI Reviewer 曾指出一个 Categorical regime-slope 中 BiasOnly 已解释大部分 Full 相对 XGBoost 的提升，应作为内部复核重点。
+0078 E3  计算开销与等预算性价比
+0079   P0     P0｜覆盖 wWos、t7wg、jSCP
+0080 核心疑点：CrossGB 增加 predictive-feature candidate 搜索后，准确率收益能否抵消额外计算开销？必须区别同模型预算与同训练时间预算的比较。
+0081 ☐  选取明显提升、接近持平、明显退化的代表性数据集。
+0082 ☐  同硬件、线程、实现环境下测量 wall-clock training time。
+0083 ☐  采用相近总时间预算，允许 XGBoost 增加 boosting rounds、调参/搜索预算。
+0084 ☐  分析预测候选比例或个数 P 变化对耗时和性能的影响（建议 3–4 档）。
+0085 ☐  画 performance–runtime Pareto / accuracy–time 曲线。
+0086 交付：Table R3（性能/耗时）+ Figure R1（性能—时间 Pareto）；结论应注明适用条件，而不是声称 CrossGB 全场景最优。
+0087 E4  真实数据输赢解释与适用性诊断
+0088   P0     P0｜覆盖 qxju、wWos、t7wg、jSCP
+0089 核心疑点：扩展回归数据约为 9 胜 / 10 负，二分类约为 8 胜 / 2 平 / 13 负；审稿人想知道如何判断何时适合用 CrossGB，特别是 CPU 的退化。
+0090 建议引入 Role Divergence（角色分离强度）的探索性诊断，例如以叶节点样本量加权统计预测特征不在根到叶 split-path 特征集合中的比例；对常数候选应定义清楚分母。
+0091 D_role = [ Σ_l n_l · 1( j_pred(l) ∉ P_split(l) ) ] / [ Σ_l n_l ]
+0092 注意：Role Divergence 可能受候选采样、重复分裂及模型容量影响。其与效果的关联只能支持机制假设，不能单独证明因果关系。
+0093 ☐  建立逐数据集相对提升/退化表。
+0094 ☐  从既有模型抽取 predictive feature 与 split-path feature 信息。
+0095 ☐  考察 Role Divergence、局部线性强度、叶样本稀疏度等指标与收益的关系。
+0096 ☐  分别选择 CPU 等退化案例及一个提升明显案例作对照分析。
+0097 ☐  陈述可检验的“适用情景”假设，并说明统计局限。
+0098 交付：Figure R2（Role Divergence 与性能关联）+ 数据集诊断汇总表。该分析的价值在于从“是否赢”推进到“为什么赢、何时有用”。
+0099 E5  为什么每叶只选择一个预测特征？
+0100   P0     P1｜覆盖 t7wg、jSCP、VVba
+0101 核心疑点：单预测特征究竟是独特的归纳偏置，还是计算上的工程折中？VVba 还质疑为何没有同时设置截距。
+0102 [TABLE]
+0103 消融对象 | 形式（示意） | 所验证的问题
+0104 k = 1 | β₁x₁ | 原始单特征设计
+0105 k = 2 | β₁x₁ + β₂x₂ | 第二个预测特征的边际收益
+0106 k = 3 | Σ(j=1..3) βⱼxⱼ | 进一步增加容量是否划算
+0107 Affine k = 1 | α + β₁x₁ | 有无截距的差异
+0108 [/TABLE]
+0109 ☐  在同样数据与预算下测试 k=1/2/3。
+0110 ☐  对多特征版本正确处理联合估计与正则化，不能仅简单拼接系数。
+0111 ☐  报告性能、训练成本及潜在过拟合。
+0112 ☐  条件允许时加入 affine leaf 对照。
+0113 ☐  补充 tree-level vs node-level 抽样的文字解释；必要时做小消融。
+0114 交付：Table R4（叶模型容量消融）。无论 k=1 是否绝对最优，都可如实讨论容量、可解释性与成本权衡。
+0115 E6  两类低成本定向稳健性验证
+0116 E6a · Forecasting 结果可信度（P1）
+0117 对应 jSCP：预测任务提升较大，但统计支持与机制解释仍被质疑。优先排查协议，再增加 baseline。
+0118 ☐  复核时间序列切分、滞后特征与归一化，排除时间泄漏。
+0119 ☐  展示逐数据集增益和已有重复实验的离散程度/置信区间。
+0120 ☐  补充合理的 persistence / seasonal naive / autoregressive baseline。
+0121 ☐  如资源允许，采用 rolling-origin 或多个时间截点。
+0122 E6b · Diagonal Classification Boundary（P2）
+0123 对应 VVba：解释标准 CART 轴平行划分与斜向边界逼近、CrossGB 叶线性响应在 boosting 叠加下的表达能力。若纯数学澄清不足，可补一个 y=1(x₁+x₂>0) 的二维分类可视化实验。
+0124 ☐  先完成数学/几何解释，避免将标准 CART 描述为可直接进行任意 oblique split。
+0125 ☐  必要时展示 XGBoost 与 CrossGB 的二维边界、测试精度及树数量。
+0126 03  写作澄清任务（W1–W5）
+0127 写作任务成本较低，原则上全部完成。尤其对 VVba 的具体疑问，明确的符号、模型定义和设计说明可能比大规模新实验更具成本效益。
+0128 [TABLE]
+0129 任务 | 实际修改内容 | 覆盖 Reviewer
+0130 W1 创新边界 | 制作已有 linear/model-tree 方法与 CrossGB 的结构对比表：Routing Features / Leaf Predictors / Predictive Feature Selection / Split Scoring / Leaf Capacity / Boosting Framework。强调贡献是组合机制而非“线性叶”本身。 | qxju、wWos、t7wg、jSCP
+0131 W2 叶模型定义 | 明确 βx、常数 bias candidate、affine α+βx 的关系；解释选择 slope-only 与单特征叶设计的原因和局限。 | VVba、t7wg、jSCP
+0132 W3 特征抽样 | 解释为何按 tree-level 而非 node-level 抽样；条件/预测角色候选集合如何共享，何时独立；核实 sec. 3.3 的实际描述。 | VVba
+0133 W4 符号与分类 | 统一 p / ρ 等符号及 SplitOnly 定义；谨慎解释 diagonal boundary 与 CatBoost 表格结果，避免超出模型机制的声称。 | VVba
+0134 W5 结论收紧 | 承认 tabular 结果有输有赢，说明预测任务异常增益的证据条件；将“特定结构归纳偏置”作为主张，避免“通用全面领先”。 | 全部，尤其 jSCP、t7wg
+0135 [/TABLE]
+0136 04  分阶段推进与最终交付
+0137 [TABLE]
+0138 阶段 | 任务依赖与顺序 | 验收产物
+0139 阶段 1｜协议和实现核对 | 先检查 BiasOnly / SplitOnly 定义、原始特征候选与最终 leaf fitting；确定 baseline 协议及原有 runtime。 | 实验配置清单；风险/异常记录
+0140 阶段 2｜核心机制证据 | 并行推进 E1 近似方法比较和 E2 组件归因，随后撰写 W1。 | Table R1 + Table R2；创新边界对比表
+0141 阶段 3｜实际价值证据 | 推进 E3 等预算效率、E4 适用性诊断；从真实胜负案例提炼机制假说。 | Table R3；Figure R1 + Figure R2
+0142 阶段 4｜设计澄清与逐人回应 | 视剩余资源推进 E5 和 E6；完成 W2–W5；把证据逐条链接回 Reviewer。 | Table R4（如完成）；Rebuttal 分人草稿
+0143 [/TABLE]
+0144 预期的精简交付组合
+0145 •  Table R1｜PL Trees / LinXGBoost 等近似方法比较。
+0146 •  Table R2｜XGBoost / BiasOnly / SplitOnly / LeafOnly / Full 的组件归因。
+0147 •  Table R3｜Runtime、等预算对比与预测候选数量影响。
+0148 •  Table R4｜k=1/2/3 的叶容量消融（资源允许）。
+0149 •  Figure R1｜Performance–Runtime Pareto。
+0150 •  Figure R2｜Role Divergence 与真实数据性能增益关联。
+0151 •  附加验证｜Forecasting 稳健性或 Diagonal Classification Boundary（按优先级）。
+0152 05  可勾选的执行清单与 Reviewer 回应索引
+0153 用于项目管理：执行完成后在方框中打勾，回填论文位置、实验编号、表图编号与 Rebuttal 页码。
+0154 P0 · 必须优先完成
+0155 ☐  W1 相关工作与创新边界对比表
+0156 ☐  W2 Leaf Model 假设空间与截距解释
+0157 ☐  W3 特征抽样机制澄清
+0158 ☐  W4 符号修复与分类几何解释
+0159 ☐  W5 性能结论及适用范围修订
+0160 ☐  E1 PL Trees / LinXGBoost 直接对比
+0161 ☐  E2 Standard Split + Predictive Leaf 关键消融
+0162 ☐  E3 等计算预算与运行时间分析
+0163 ☐  E4 CPU 失败分析与 Role Divergence 诊断
+0164 P1 · 尽量完成
+0165 ☐  E5 k=1/2/3 叶节点容量消融与 affine 叶模型检查
+0166 ☐  E6a Forecasting 评估协议、统计检验与基线验证
+0167 P2 · 资源允许时补充
+0168 ☐  E6b 斜向分类边界的小型实验（先尝试用写作澄清解决）
+0169 分人回复的证据索引
+0170 [TABLE]
+0171 Reviewer | 需要引用的核心交付 | 回复要点
+0172 qxju | R1 + R2 + Figure R2 | 直接回应新增价值、LeafOnly 缺口及 CPU 退化。
+0173 wWos | R1 + R3 + Figure R1 | 展示最近邻方法、实际成本与使用边界。
+0174 t7wg | R1 + R3 + Figures R1/R2 + R4 | 界定 novelty、compute-match、条件适用性与 k=1。
+0175 VVba | W2–W4；必要时 E5 / E6b | 数学定义、截距、采样层级与符号清晰性。
+0176 jSCP | R1 + R3 + R4 + E6a | 回应近似方法、效率、叶容量与 forecasting 可靠性。
+0177 [/TABLE]
+0178 06  风险控制与最终建议
+0179 •  不应为了回应 jSCP 无限扩张 baseline；先保证 E1 的两个最接近方法、E2 的关键消融、E3 的成本公平性。
+0180 •  不应把 CrossGB 表述为普适的更强 GBDT；更稳妥的命题是 conditional–predictive 分离结构的低容量归纳偏置。
+0181 •  若 E4 的 Role Divergence 与性能仅有弱关联，须如实报告，并考虑检验局部线性强度、叶样本数、候选特征采样等混杂因素。
+0182 •  对 VVba 的 7 分审稿，优先给出清晰而直接的文字解释，避免高成本实验挤占争取两位 5 分审稿人的资源。
+0183 •  若出现原实验结果或实现定义上的实质不一致，应优先复核并如实修正，不能只靠修辞覆盖。
+0184 最终执行建议
+0185 推荐最小充分方案：E1 + E2 + E3 + E4，配合 W1–W5 全部写作澄清。这一组合主要解决三个问题：与现有工作有何不同、提出的机制是否真实有效、实际收益是否具有可解释的适用边界。若尚有资源，再完成 E5 和 E6a。
+0186 提醒：Rebuttal 的目标是提供审稿人能够快速核验的证据链，而不只是增加数据量。优先在每条回复中放入“直接结论 → 表/图证据 → 适用边界”，并在正文修改说明中指出对应章节。

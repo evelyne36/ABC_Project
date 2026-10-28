@@ -1,0 +1,174 @@
+{
+  "cpu1_pool.zjuici.com": {
+    "utc": "2026-10-28T10:41:17.292055+00:00",
+    "active": [],
+    "load": [
+      0.0,
+      0.0283203125,
+      0.06103515625
+    ],
+    "states": {
+      "D": {
+        "status": "complete",
+        "completed": 5,
+        "total": 5
+      },
+      "A_search": {
+        "status": "complete",
+        "completed": 5,
+        "total": 5
+      },
+      "A_evaluate": {
+        "status": "complete",
+        "completed": 5,
+        "total": 5
+      }
+    }
+  },
+  "cpu2_pool.zjuici.com": {
+    "utc": "2026-10-28T10:41:18.174694+00:00",
+    "active": [],
+    "load": [
+      0.0166015625,
+      0.0478515625,
+      0.12939453125
+    ],
+    "states": {
+      "D": {
+        "status": "complete",
+        "completed": 5,
+        "total": 5
+      },
+      "A_search": {
+        "status": "complete",
+        "completed": 5,
+        "total": 5
+      },
+      "A_evaluate": {
+        "status": "complete",
+        "completed": 5,
+        "total": 5
+      }
+    }
+  },
+  "cpu4_pool.zjuici.com": {
+    "utc": "2026-10-28T10:41:18.653791+00:00",
+    "active": [],
+    "load": [
+      0.046875,
+      0.013671875,
+      0.00244140625
+    ],
+    "states": {
+      "D": {
+        "status": "complete",
+        "completed": 4,
+        "total": 4
+      },
+      "A_search": {
+        "status": "complete",
+        "completed": 5,
+        "total": 5
+      },
+      "A_evaluate": {
+        "status": "complete",
+        "completed": 5,
+        "total": 5
+      }
+    }
+  },
+  "cpu5_pool.zjuici.com": {
+    "utc": "2026-10-28T10:41:20.891786+00:00",
+    "active": [],
+    "load": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "states": {
+      "D": {
+        "status": "complete",
+        "completed": 4,
+        "total": 4
+      },
+      "A_search": {
+        "status": "complete",
+        "completed": 5,
+        "total": 5
+      },
+      "A_evaluate": {
+        "status": "complete",
+        "completed": 5,
+        "total": 5
+      }
+    }
+  },
+  "cpu6_pool.zjuici.com": {
+    "utc": "2026-10-28T10:41:19.590020+00:00",
+    "active": [],
+    "load": [
+      0.0,
+      0.0,
+      0.005859375
+    ],
+    "states": {
+      "D": {
+        "status": "complete",
+        "completed": 4,
+        "total": 4
+      },
+      "C": {
+        "status": "complete",
+        "completed": 90,
+        "total": 90
+      }
+    }
+  },
+  "cpu_Calculator": {
+    "utc": "2026-10-28T10:41:20.194783+00:00",
+    "active": [],
+    "load": [
+      0.05126953125,
+      0.04443359375,
+      0.08837890625
+    ],
+    "states": {
+      "D": {
+        "status": "complete",
+        "completed": 4,
+        "total": 4
+      },
+      "A_search": {
+        "status": "complete",
+        "completed": 5,
+        "total": 5
+      },
+      "A_evaluate": {
+        "status": "complete",
+        "completed": 5,
+        "total": 5
+      }
+    }
+  },
+  "TabularData_Processor": {
+    "utc": "2026-10-28T10:41:20.635478+00:00",
+    "active": [],
+    "load": [
+      0.0068359375,
+      0.01513671875,
+      0.0361328125
+    ],
+    "states": {
+      "D": {
+        "status": "complete",
+        "completed": 4,
+        "total": 4
+      },
+      "B": {
+        "status": "complete",
+        "completed": 80,
+        "total": 80
+      }
+    }
+  }
+}

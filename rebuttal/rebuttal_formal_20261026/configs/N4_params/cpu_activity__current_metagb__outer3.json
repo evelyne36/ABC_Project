@@ -1,0 +1,14 @@
+{
+  "backbone_id": "shared_backbone_0058",
+  "candidate_id": "metagb_pf10_sa0_002",
+  "colsample_bytree": 0.9722192947922134,
+  "learning_rate": 0.032639807458556234,
+  "max_bin": 255,
+  "max_depth": 8,
+  "metagb_lambda_l2": 0.0020784504737266143,
+  "metagb_score_agg": 0,
+  "n_estimators": 200,
+  "pred_feature_fraction": 1.0,
+  "source": "generated_shared_backbone",
+  "subsample": 0.7377629628145239
+}

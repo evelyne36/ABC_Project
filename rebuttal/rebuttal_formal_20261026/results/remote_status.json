@@ -1,0 +1,16 @@
+[
+  {
+    "host": "cpu_Calculator",
+    "phase": "status",
+    "exit_code": 255,
+    "details": "",
+    "error": "Connection closed by 183.129.217.214 port 31393\n"
+  },
+  {
+    "host": "TabularData_Processor",
+    "phase": "status",
+    "exit_code": 255,
+    "details": "",
+    "error": "Connection closed by 183.129.217.214 port 31364\n"
+  }
+]

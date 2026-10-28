@@ -1,0 +1,173 @@
+{
+  "experiment_id": "E2",
+  "status": "new_rebuttal_panel_runner_required",
+  "regression_datasets": [
+    "kin8nm",
+    "moneyball",
+    "cpu_activity",
+    "houses",
+    "energy_efficiency"
+  ],
+  "optional_binary_datasets": [
+    "ilpd",
+    "phoneme",
+    "credit_approval"
+  ],
+  "sampling_scope": "diagnostic cases selected from already-reported wins/losses; not population win-rate estimate",
+  "default_models": [
+    "xgb",
+    "crossgb",
+    "lgbm_constant",
+    "lgbm_linear"
+  ],
+  "original_neighbor_candidates": [
+    "GBDT-PL",
+    "LinXGBoost"
+  ],
+  "outer_folds": 5,
+  "outer_seed": 42,
+  "inner_folds": 3,
+  "inner_seed_rule": "42 + outer_index_zero_based",
+  "search_seed": 42,
+  "model_seed": 42,
+  "n_candidates_per_model": 30,
+  "fallback_candidates_per_model": 12,
+  "fallback_rule": "only based on runtime pilot; change every compared model before final test evaluation",
+  "shared_candidate_sequence": {
+    "learning_rate": {
+      "distribution": "loguniform",
+      "low": 0.005,
+      "high": 0.1
+    },
+    "max_depth": {
+      "distribution": "log_integer",
+      "low": 4,
+      "high": 10
+    },
+    "subsample": {
+      "distribution": "uniform",
+      "low": 0.6,
+      "high": 1.0
+    },
+    "colsample_bytree": {
+      "distribution": "uniform",
+      "low": 0.6,
+      "high": 1.0
+    },
+    "n_estimators": {
+      "distribution": "choice",
+      "values": [
+        200,
+        400,
+        600,
+        800
+      ]
+    },
+    "max_bin": {
+      "distribution": "choice",
+      "values": [
+        255
+      ]
+    },
+    "lambda_l2": {
+      "distribution": "loguniform",
+      "low": 0.0001,
+      "high": 5.0
+    }
+  },
+  "crossgb_private": {
+    "pred_fraction": {
+      "values": [
+        0.1,
+        0.2,
+        0.4,
+        0.6,
+        1.0
+      ],
+      "balanced_occurrences_per_30": 6
+    },
+    "score_agg": 0,
+    "score_agg_policy": "freeze greedy using submitted AppD.4; this is a new reduced-budget protocol, not the old 300/600 search",
+    "min_gain": "preserve original historical default -1e10 for the submitted-algorithm comparison",
+    "native_new_component_flags": false
+  },
+  "xgb_fixed": {
+    "min_child_weight": 1.0,
+    "reg_alpha": 0.0,
+    "grow_policy": "depthwise",
+    "colsample_bylevel": 1.0,
+    "colsample_bynode": 1.0,
+    "n_jobs": 1
+  },
+  "lgbm_private": {
+    "num_leaves": [
+      15,
+      31,
+      63,
+      127
+    ],
+    "min_child_samples": [
+      1,
+      5,
+      20,
+      50
+    ],
+    "linear_tree_values_by_model": {
+      "lgbm_constant": false,
+      "lgbm_linear": true
+    },
+    "linear_lambda": {
+      "distribution": "loguniform",
+      "low": 0.0001,
+      "high": 100.0
+    },
+    "n_jobs": 1
+  },
+  "preprocessing": {
+    "row_filter": "match original eligible-row order",
+    "encoding": "OneHotEncoder trained separately inside each inner/outer train",
+    "unknown_categories": "ignore",
+    "linear_tree_scaling": "fit StandardScaler only on current training data",
+    "new_lgbm_Dataset_per_linear_tree_setting": true
+  },
+  "selection": {
+    "metric": "RMSE minimize; AUC maximize for optional binary",
+    "tiebreak": "lower validation fit+predict time, then lower candidate index",
+    "early_stopping": false,
+    "outer_test_used_once_after_selection": true
+  },
+  "synthetic": {
+    "cases": [
+      "regime_slope",
+      "feature_switch",
+      "sparse_multiplicative",
+      "curved_control"
+    ],
+    "dimension": 10,
+    "n_samples": 3000,
+    "development_data_seed": 9001,
+    "development_folds": 3,
+    "candidates": 30,
+    "evaluation_data_seeds": [
+      1001,
+      1002,
+      1003
+    ],
+    "evaluation_folds": 5,
+    "fits_per_model": 420,
+    "default_four_models_total_fits": 1680,
+    "protocol": "independent-development tuning; separate from E1 frozen-backbone attribution"
+  },
+  "real_fits_per_model": 2275,
+  "real_default_four_models_total_fits": 9100,
+  "report": [
+    "held-out metric",
+    "fold dispersion",
+    "search CPU time",
+    "final fit time",
+    "predict time",
+    "peak RSS",
+    "leaf family/intercept policy",
+    "all failures and timeouts"
+  ]
+}

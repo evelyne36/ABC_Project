@@ -1,0 +1,422 @@
+[
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1001__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1001__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1001__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1001__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1001__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1002__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1002__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1002__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1002__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1002__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1003__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1003__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1003__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1003__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1003__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1001__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1001__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1001__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1001__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1001__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1002__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1002__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1002__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1002__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1002__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1003__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1003__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1003__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1003__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1003__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1001__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1001__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1001__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1001__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1001__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1002__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1002__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1002__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1002__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1002__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1003__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1003__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1003__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1003__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1003__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1001__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1001__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1001__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1001__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1001__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1002__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1002__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1002__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1002__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1002__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1003__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1003__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1003__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1003__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1003__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1001__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1001__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1001__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1001__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1001__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1002__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1002__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1002__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1002__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1002__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1003__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1003__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1003__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1003__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1003__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1001__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1001__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1001__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1001__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1001__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1002__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1002__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1002__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1002__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1002__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1003__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1003__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1003__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1003__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1003__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1001__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1001__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1001__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1001__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1001__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1002__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1002__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1002__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1002__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1002__out5.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1003__out1.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1003__out2.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1003__out3.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1003__out4.json",
+    "variant": "leafonly"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1003__out5.json",
+    "variant": "leafonly"
+  }
+]

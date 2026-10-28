@@ -1,0 +1,9 @@
+{
+  "fits_seen": 503,
+  "statuses": {
+    "ok": 502,
+    "running": 1
+  },
+  "recomputed_successful_predictions": 502,
+  "test_used": false
+}

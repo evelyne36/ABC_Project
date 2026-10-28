@@ -1,0 +1,4 @@
+#pragma once
+#include <algorithm>
+// Used only by the AUC reporting helper; regression training is unaffected.
+namespace __gnu_parallel { using std::sort; }

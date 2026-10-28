@@ -1,0 +1,121 @@
+{
+  "data": "/home/admin/crossgb_fastlane_20261027/fastlane_data/S1_sparse__s97001.npz",
+  "effective_params": {
+    "gamma": 0.0,
+    "lbda": 1.0,
+    "learning_rate": 1.0,
+    "loss_function": "reg:squarederror",
+    "max_depth": 2,
+    "max_samples_linear_model": 9223372036854775807,
+    "min_samples_leaf": 10,
+    "min_samples_split": 3,
+    "min_split_loss": 0.0,
+    "n_estimators": 1,
+    "nthread": 1,
+    "prune": true,
+    "random_state": 97001,
+    "subsample": 1.0,
+    "verbose": 0
+  },
+  "evaluate_test": false,
+  "lineage": {
+    "adapter_sha256": "767ce78c897f671d7a0105c4f517027d29aadce3046bea53dfed50ea35389857",
+    "author_source": {
+      "archive_bytes": 5365453,
+      "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+      "code_file_count": 13,
+      "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+      "extracted_path": "vendor/linxgboost",
+      "method": "linxgboost",
+      "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+      "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f"
+    },
+    "package_path": "/home/admin/crossgb_fastlane_20261027/rebuttal_baselines_20261025",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:16:10) [GCC 11.2.0]"
+  },
+  "metadata_nonfinite_policy": "metadata-only strings: NaN, +Infinity, -Infinity; metrics remain strict",
+  "method": "LinXGBoost",
+  "metrics": {
+    "train": {
+      "rmse": 0.22586403992962176
+    },
+    "val": {
+      "rmse": 0.39031125745208956
+    }
+  },
+  "model_info": {
+    "author_metadata": {
+      "effective_params": {
+        "gamma": 0.0,
+        "lbda": 1.0,
+        "learning_rate": 1.0,
+        "loss_function": "reg:squarederror",
+        "max_depth": 2,
+        "max_samples_linear_model": 9223372036854775807,
+        "min_samples_leaf": 10,
+        "min_samples_split": 3,
+        "min_split_loss": 0.0,
+        "n_estimators": 1,
+        "nthread": 1,
+        "prune": true,
+        "random_state": 97001,
+        "subsample": 1.0,
+        "verbose": 0
+      },
+      "implementation": "author_python",
+      "leaf_model": "multivariate_affine",
+      "method": "linxgboost",
+      "prediction_semantics": "upstream_final_tree_unshrunk",
+      "standardize_training_only": false,
+      "task": "regression",
+      "test_labels_passed_to_fit": false,
+      "threads_per_fit": 1
+    },
+    "n_estimators": 1,
+    "n_features": 32
+  },
+  "n_features": 32,
+  "n_rows": 240,
+  "preprocessing": "supplied_npz; none_in_worker",
+  "requested_params": {
+    "lbda": 1.0,
+    "learning_rate": 1.0,
+    "max_depth": 2,
+    "min_samples_leaf": 10,
+    "n_estimators": 1
+  },
+  "root": "/home/admin/crossgb_fastlane_20261027",
+  "schema_version": 1,
+  "seed": 97001,
+  "split_counts": {
+    "test": 48,
+    "train": 144,
+    "val": 48
+  },
+  "split_hashes": {
+    "test": "a1c260311356b5ab5b4014e0e35e9659caadb9fd2620cb8d891f32214ac8eb7c",
+    "train": "b59688534a15b0e47604c83c7809ad46807fd51c1388163ebde2fefbb7c457e6",
+    "val": "ab1767c52f3199940824aea78499312d00d739e1ceb7337edfefb5a0f0da45e3"
+  },
+  "status": "ok",
+  "target_hashes": {
+    "train": "7e627e6b152f5f59362a988bb1ecb67eea1abced75777cac4a46091081bcad82",
+    "val": "7970cd7b796f29d9ac2288ffac0048ef157d0829ccfc73853b287f6769d1e85d"
+  },
+  "task_type": "regression",
+  "test_labels_used": false,
+  "threads_per_fit": 1,
+  "timings": {
+    "fit_cpu_sec": 2.136816643,
+    "fit_wall_sec": 2.137259629002074,
+    "predict_train_cpu_sec": 0.00026471399999961065,
+    "predict_train_wall_sec": 0.0002631490060593933,
+    "predict_val_cpu_sec": 0.00010909899999989037,
+    "predict_val_wall_sec": 0.0001083910174202174
+  },
+  "total_wall_sec": 3.039426566014299,
+  "train_rmse": 0.22586403992962176,
+  "val_rmse": 0.39031125745208956,
+  "worker_sha256": "d2e2743d38c80b4d82b9bfb5e4a04aa1a88be952603460fad86f0e9fcb747e2a"
+}

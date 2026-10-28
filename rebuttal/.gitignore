@@ -1,0 +1,86 @@
+# =====================================================================
+# aaai27-rebuttal 仓库口径（2026-10-27 建立，丁博确认）
+#   进仓库：代码 / 脚本 / 配置 / 文档 / 汇总表 / 冻结输入
+#   留本地：数据集、逐任务原始结果、虚拟环境、编译产物、三方源码镜像
+#   原因：GitHub 单文件硬限 100MB；逐任务结果 json 单个数 MB、总量 GB 级，
+#         数据集本地已持有，重复入库只会让 clone/sync 变慢。
+# 需要把某条排除项重新纳入时：删掉对应规则行，再 `git add -f <path>`。
+# =====================================================================
+
+# ---------------- 数据集（本地持有，不进仓库） ----------------
+/dataset/
+/datasets/
+**/dataset/
+**/datasets/
+
+# ---------------- 逐任务原始结果 / 大量中间产物 ----------------
+**/tasks/
+**/candidates.csv
+aaai_FullCodeProject-check_codereview0701/datacollection/
+aaai_FullCodeProject-check_codereview0701/datacollection0624/
+aaai_FullCodeProject-check_codereview0701/datacollection0702/
+aaai_FullCodeProject-check_codereview0701/datacollection0702beifen/
+aaai_FullCodeProject-check_codereview0701/mgb_datacollection_by0629/
+aaai_FullCodeProject-check_codereview0701/synthetic_metagb/results/
+aaai_FullCodeProject-check_codereview0701/timeseries_extra_random300/data/
+aaai_FullCodeProject-check_codereview0701/tabular_extra_random300/data/
+aaai_FullCodeProject-check_codereview0701/paper_writing/timeseries_extra_random300/data/
+aaai_FullCodeProject-check_codereview0701/paper_writing/tabular_extra_random300/data/
+aaai_FullCodeProject-check_codereview0701/beforereview/xgboost-master/
+aaai_FullCodeProject-check_codereview0701/project_paperwriting/datasets/
+aaai_FullCodeProject-check_codereview0701/project_paperwriting/artifacts/
+aaai_FullCodeProject-check_codereview0701/project_paperwriting/experiments/
+aaai_FullCodeProject-check_codereview0701/project_paperwriting/vendor/
+rebuttal_server_config_20261025/historical/
+
+# ---------------- 虚拟环境 / 构建产物 ----------------
+.venv/
+**/.venv/
+**/build/
+**/native/
+**/downloads/
+**/vendor/
+**/__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+**/mpl-cache/
+*.egg-info/
+**/*.egg-info/
+*.py[cod]
+
+# ---------------- 编译产物 / 二进制 ----------------
+*.o
+*.so
+*.dylib
+*.dll
+*.a
+
+# ---------------- 打包件与压缩 ----------------
+*.tar.gz
+*.tgz
+*.zip
+*.npz
+*.npy
+*.pkl
+*.joblib
+*.parquet
+*.h5
+
+# ---------------- 日志 ----------------
+*.log
+nohup.out
+
+# ---------------- 编辑器 / 系统 ----------------
+.DS_Store
+.vscode/
+.idea/
+
+# ---------------- 嵌套仓库历史备份（ABC_Project 本地克隆的 .git） ----------------
+*.git_nested_backup/
+
+# 临时：public 镜像同步用（不入库）
+.public-sync/
+
+# Frozen raw anchor models remain in local/remote experiment archives.
+last_increment_261028/inputs/A/**/model.json

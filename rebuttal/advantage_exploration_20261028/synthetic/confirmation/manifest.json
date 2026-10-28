@@ -1,0 +1,86 @@
+{
+  "version": "cgb-advantage-synthetic-v1-20261028",
+  "source_version": "cgb-advantage-synthetic-v1-20261028",
+  "case": "A06_two_sparse_modules",
+  "confirmation_seeds": [
+    111001,
+    111002,
+    111003,
+    111004,
+    111005
+  ],
+  "dataset_count": 5,
+  "entries": [
+    {
+      "case": "A06_two_sparse_modules",
+      "data_npz": "data/A06_two_sparse_modules__s111001.npz",
+      "sidecar": "data/A06_two_sparse_modules__s111001.json",
+      "seed": 111001,
+      "phase": "confirmation",
+      "n": 240,
+      "d": 32,
+      "formula": "f(X)=sqrt(2) [sign(x0) x2 + sign(x1) x3]",
+      "npz_sha256": "56532b5b0470998ec97e884f30c41c4399ec15f9d9b6f355aa0c29fd7e114b12",
+      "pair_group": "n240_d32"
+    },
+    {
+      "case": "A06_two_sparse_modules",
+      "data_npz": "data/A06_two_sparse_modules__s111002.npz",
+      "sidecar": "data/A06_two_sparse_modules__s111002.json",
+      "seed": 111002,
+      "phase": "confirmation",
+      "n": 240,
+      "d": 32,
+      "formula": "f(X)=sqrt(2) [sign(x0) x2 + sign(x1) x3]",
+      "npz_sha256": "b0beecf29cbbcedbeaa9ae20e3bfb18a5aaccb75762bd2728233e046b7b89d22",
+      "pair_group": "n240_d32"
+    },
+    {
+      "case": "A06_two_sparse_modules",
+      "data_npz": "data/A06_two_sparse_modules__s111003.npz",
+      "sidecar": "data/A06_two_sparse_modules__s111003.json",
+      "seed": 111003,
+      "phase": "confirmation",
+      "n": 240,
+      "d": 32,
+      "formula": "f(X)=sqrt(2) [sign(x0) x2 + sign(x1) x3]",
+      "npz_sha256": "d58239c7aa521db1238588885b39abe9a867fb22e13e1e2ea85ba26699c13e19",
+      "pair_group": "n240_d32"
+    },
+    {
+      "case": "A06_two_sparse_modules",
+      "data_npz": "data/A06_two_sparse_modules__s111004.npz",
+      "sidecar": "data/A06_two_sparse_modules__s111004.json",
+      "seed": 111004,
+      "phase": "confirmation",
+      "n": 240,
+      "d": 32,
+      "formula": "f(X)=sqrt(2) [sign(x0) x2 + sign(x1) x3]",
+      "npz_sha256": "48de9ca151035dee7d6bb2a233562dbe2bd0fd216badb522bccf17eb0f5e696a",
+      "pair_group": "n240_d32"
+    },
+    {
+      "case": "A06_two_sparse_modules",
+      "data_npz": "data/A06_two_sparse_modules__s111005.npz",
+      "sidecar": "data/A06_two_sparse_modules__s111005.json",
+      "seed": 111005,
+      "phase": "confirmation",
+      "n": 240,
+      "d": 32,
+      "formula": "f(X)=sqrt(2) [sign(x0) x2 + sign(x1) x3]",
+      "npz_sha256": "77eafebcf0672390402e5dc394cd5a9337db32be1420e6d691eb8a11b84499fa",
+      "pair_group": "n240_d32"
+    }
+  ],
+  "confirmation_generated": true,
+  "generated_utc": "2026-10-28T08:06:18.872533+00:00",
+  "confirmation_freeze_file": "rebuttal/advantage_exploration_20261028/confirmation_freeze.json",
+  "confirmation_freeze_sha256": "5ca62804148201ebd1b79e9cf15205ba678a4451e2b842be7d1a0e12d96f7fd9",
+  "frozen_utc": "2026-10-28T08:06:09.706663+00:00",
+  "generator": "prepare_confirmation.py",
+  "generator_sha256": "52c2fdda1b2e308a32dfad417bf170a2acd42ee29c21171cfb220f01ad39e129",
+  "development_generator_sha256": "8f56bcda18bac7633821589133c2df82bc69a9ba881b33840040fa14547ed55b",
+  "reused_protocol_sha256": "98d616ec07c46f00615b2a61d41a2283feea4bb6293349c346233cb5ad9fc4ec",
+  "verification": "written X, signal, response and splits checked directly; no held-out summaries",
+  "no_model_results": true
+}

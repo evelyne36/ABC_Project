@@ -1,0 +1,89 @@
+{
+  "stage": "B1",
+  "host": "cpu4_pool.zjuici.com",
+  "worker_sha256": "d2e2743d38c80b4d82b9bfb5e4a04aa1a88be952603460fad86f0e9fcb747e2a",
+  "wall_budget_seconds": 2700,
+  "jobs": [
+    {
+      "id": "Lin_c22_s97001",
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 22,
+      "seed": 97001,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 10.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      "data": "fastlane_data/S1_sparse__s97001.npz",
+      "local_data": "local_sync/fastlane_data/S1_sparse__s97001.npz",
+      "relative_output": "S1_sparse/search/LinXGBoost/c22/s97001",
+      "evaluate_test": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "Lin_c05_s97002",
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 5,
+      "seed": 97002,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data": "fastlane_data/S1_sparse__s97002.npz",
+      "local_data": "local_sync/fastlane_data/S1_sparse__s97002.npz",
+      "relative_output": "S1_sparse/search/LinXGBoost/c05/s97002",
+      "evaluate_test": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "Lin_c09_s97001",
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 9,
+      "seed": 97001,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data": "fastlane_data/S1_sparse__s97001.npz",
+      "local_data": "local_sync/fastlane_data/S1_sparse__s97001.npz",
+      "relative_output": "S1_sparse/search/LinXGBoost/c09/s97001",
+      "evaluate_test": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "Lin_c12_s97002",
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 12,
+      "seed": 97002,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 100.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      "data": "fastlane_data/S1_sparse__s97002.npz",
+      "local_data": "local_sync/fastlane_data/S1_sparse__s97002.npz",
+      "relative_output": "S1_sparse/search/LinXGBoost/c12/s97002",
+      "evaluate_test": false,
+      "timeout_seconds": 300
+    }
+  ],
+  "data_sha256": {
+    "fastlane_data/S1_sparse__s97001.npz": "0fe7ee42b8a6bfcc498e52ee908e7758b40e85f462717b4ad2424994cd93fd37",
+    "fastlane_data/S1_sparse__s97002.npz": "1bd89ab570ef8c921e8c6cd0261d8bc8ac0870ad24508696914b5b84271b76e8"
+  },
+  "frozen_utc": "2026-10-28T05:16:44.966202+00:00"
+}

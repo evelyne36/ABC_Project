@@ -1,0 +1,76 @@
+{
+  "experiment_id": "E4",
+  "status": "process_CPU_budget_runner_required",
+  "datasets": [
+    "kin8nm",
+    "cpu_activity",
+    "energy_efficiency"
+  ],
+  "models": [
+    "xgb",
+    "crossgb"
+  ],
+  "outer_folds": 5,
+  "outer_seed": 42,
+  "inner_folds": 3,
+  "inner_seed_rule": "42 + outer_index",
+  "cpu_seconds_checkpoints": [
+    60,
+    300,
+    900
+  ],
+  "model_threads": 1,
+  "hpo_search_cpu_cap_per_model_outer_fold": 900,
+  "total_search_cap_CPU_hours": 7.5,
+  "final_refit_cost": "record separately",
+  "measure_cpu_with": "process CPU clock; include child CPU if any",
+  "incomplete_candidate_at_checkpoint": "not eligible; its consumed CPU still counts",
+  "test_selection_forbidden": true,
+  "checkpoint_model": "best completed inner-validation candidate within budget",
+  "deduplicate_selected_incumbent_refits": true,
+  "calibration": "one serial timing pass; do not equate busy-host wall time with CPU seconds",
+  "candidate_space_override": {
+    "n_estimators": [
+      200,
+      400,
+      800,
+      1600,
+      3200
+    ],
+    "max_depth": [
+      3,
+      4,
+      6,
+      8,
+      10
+    ],
+    "lambda_l2_loguniform": [
+      0.0001,
+      100
+    ],
+    "xgb_min_child_weight": [
+      1,
+      5,
+      10,
+      20
+    ],
+    "xgb_gamma": [
+      0,
+      0.01,
+      0.1,
+      1
+    ]
+  },
+  "p_sensitivity": {
+    "fractions": [
+      0.1,
+      0.2,
+      0.5,
+      1.0
+    ],
+    "fixed_backbone": true,
+    "metric": "quality/fit_CPU_time/peak_RSS",
+    "not_selected_on_outer_test": true
+  },
+  "historical_trace_limit": "only final selected candidate usually has test; validation trace is not a test budget curve"
+}

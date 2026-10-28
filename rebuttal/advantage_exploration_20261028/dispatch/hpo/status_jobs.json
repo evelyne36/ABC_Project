@@ -1,0 +1,44 @@
+[
+  {
+    "host": "cpu1_pool.zjuici.com",
+    "command": "python3 -c 'import pathlib,json\np=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027/results/advantage_20261028_v1/hpo/status.json'\"'\"')\nprint(p.read_text() if p.exists() else json.dumps(dict(status='\"'\"'missing'\"'\"')))'",
+    "save": "cpu1_pool.zjuici.com_advantage_hpo_status.json",
+    "timeout": 20
+  },
+  {
+    "host": "cpu2_pool.zjuici.com",
+    "command": "python3 -c 'import pathlib,json\np=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027/results/advantage_20261028_v1/hpo/status.json'\"'\"')\nprint(p.read_text() if p.exists() else json.dumps(dict(status='\"'\"'missing'\"'\"')))'",
+    "save": "cpu2_pool.zjuici.com_advantage_hpo_status.json",
+    "timeout": 20
+  },
+  {
+    "host": "cpu4_pool.zjuici.com",
+    "command": "python3 -c 'import pathlib,json\np=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027/results/advantage_20261028_v1/hpo/status.json'\"'\"')\nprint(p.read_text() if p.exists() else json.dumps(dict(status='\"'\"'missing'\"'\"')))'",
+    "save": "cpu4_pool.zjuici.com_advantage_hpo_status.json",
+    "timeout": 20
+  },
+  {
+    "host": "cpu5_pool.zjuici.com",
+    "command": "python3 -c 'import pathlib,json\np=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027/results/advantage_20261028_v1/hpo/status.json'\"'\"')\nprint(p.read_text() if p.exists() else json.dumps(dict(status='\"'\"'missing'\"'\"')))'",
+    "save": "cpu5_pool.zjuici.com_advantage_hpo_status.json",
+    "timeout": 20
+  },
+  {
+    "host": "cpu6_pool.zjuici.com",
+    "command": "python3 -c 'import pathlib,json\np=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027/results/advantage_20261028_v1/hpo/status.json'\"'\"')\nprint(p.read_text() if p.exists() else json.dumps(dict(status='\"'\"'missing'\"'\"')))'",
+    "save": "cpu6_pool.zjuici.com_advantage_hpo_status.json",
+    "timeout": 20
+  },
+  {
+    "host": "cpu_Calculator",
+    "command": "python3 -c 'import pathlib,json\np=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027/results/advantage_20261028_v1/hpo/status.json'\"'\"')\nprint(p.read_text() if p.exists() else json.dumps(dict(status='\"'\"'missing'\"'\"')))'",
+    "save": "cpu_Calculator_advantage_hpo_status.json",
+    "timeout": 20
+  },
+  {
+    "host": "TabularData_Processor",
+    "command": "python3 -c 'import pathlib,json\np=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027/results/advantage_20261028_v1/hpo/status.json'\"'\"')\nprint(p.read_text() if p.exists() else json.dumps(dict(status='\"'\"'missing'\"'\"')))'",
+    "save": "TabularData_Processor_advantage_hpo_status.json",
+    "timeout": 20
+  }
+]

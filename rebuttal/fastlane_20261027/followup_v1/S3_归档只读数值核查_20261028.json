@@ -1,0 +1,70 @@
+{
+  "scope": "Read-only arithmetic replay of archived formal24 S3 models/predictions. No fit, no new experiment, no current remote failed logs. Archived fits may differ from remote followup fits until hashes compared.",
+  "rows": [
+    {
+      "seed": 98001,
+      "archived_float64_replay_difference": {
+        "train": 8.109629641595006e-06,
+        "val": 6.243031085428896e-06,
+        "test": 5.428742921420593e-06
+      },
+      "float32_replay_difference": {
+        "train": 0.0,
+        "val": 0.0,
+        "test": 0.0
+      }
+    },
+    {
+      "seed": 98002,
+      "archived_float64_replay_difference": {
+        "train": 6.020104013515493e-06,
+        "val": 5.317366608803553e-06,
+        "test": 6.908776128966565e-06
+      },
+      "float32_replay_difference": {
+        "train": 0.0,
+        "val": 0.0,
+        "test": 0.0
+      }
+    },
+    {
+      "seed": 98003,
+      "archived_float64_replay_difference": {
+        "train": 7.77810276186841e-06,
+        "val": 3.815719085142888e-06,
+        "test": 7.207390961383453e-06
+      },
+      "float32_replay_difference": {
+        "train": 0.0,
+        "val": 0.0,
+        "test": 0.0
+      }
+    },
+    {
+      "seed": 98004,
+      "archived_float64_replay_difference": {
+        "train": 1.003796386811473e-05,
+        "val": 4.930936357006033e-06,
+        "test": 1.0535789363608217e-05
+      },
+      "float32_replay_difference": {
+        "train": 0.0,
+        "val": 0.0,
+        "test": 0.0
+      }
+    },
+    {
+      "seed": 98005,
+      "archived_float64_replay_difference": {
+        "train": 7.165304335643441e-06,
+        "val": 1.058922388974537e-05,
+        "test": 5.041207213452026e-06
+      },
+      "float32_replay_difference": {
+        "train": 0.0,
+        "val": 0.0,
+        "test": 0.0
+      }
+    }
+  ]
+}

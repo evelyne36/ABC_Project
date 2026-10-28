@@ -1,0 +1,123 @@
+[
+  {
+    "case": "sparse_switch__n240__d32__r2",
+    "choices": [
+      [
+        "XGB",
+        0
+      ],
+      [
+        "CrossGB",
+        0
+      ],
+      [
+        "LGB_linear",
+        3
+      ],
+      [
+        "PL",
+        0
+      ],
+      [
+        "LinXGBoost",
+        1
+      ]
+    ]
+  },
+  {
+    "case": "dense_switch__n240__d32__r2",
+    "choices": [
+      [
+        "XGB",
+        2
+      ],
+      [
+        "CrossGB",
+        3
+      ],
+      [
+        "LGB_linear",
+        5
+      ],
+      [
+        "PL",
+        3
+      ],
+      [
+        "LinXGBoost",
+        1
+      ]
+    ]
+  },
+  {
+    "case": "offset_switch__n240__d32__r2",
+    "choices": [
+      [
+        "XGB",
+        3
+      ],
+      [
+        "CrossGB",
+        1
+      ],
+      [
+        "LGB_linear",
+        1
+      ],
+      [
+        "PL",
+        1
+      ],
+      [
+        "LinXGBoost",
+        1
+      ]
+    ]
+  },
+  {
+    "case": "step_control__n240__d32__r2",
+    "choices": [
+      [
+        "XGB",
+        1
+      ],
+      [
+        "CrossGB",
+        1
+      ],
+      [
+        "LGB_linear",
+        0
+      ],
+      [
+        "PL",
+        0
+      ],
+      [
+        "LinXGBoost",
+        3
+      ]
+    ]
+  },
+  {
+    "case": "sparse_switch__n600__d64__r4",
+    "choices": [
+      [
+        "XGB",
+        0
+      ],
+      [
+        "CrossGB",
+        1
+      ],
+      [
+        "LGB_linear",
+        2
+      ],
+      [
+        "PL",
+        2
+      ]
+    ]
+  }
+]

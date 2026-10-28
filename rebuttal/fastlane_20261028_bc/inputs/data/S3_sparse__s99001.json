@@ -1,0 +1,92 @@
+{
+  "seed": 99001,
+  "phase": "confirmation",
+  "task_type": "regression",
+  "family": "S3",
+  "control": "sparse",
+  "source": "generated independent N(0,1) covariates",
+  "noise_sd": 0.3,
+  "formula": "2/sqrt(2) [sign(x0) x2 + sign(x1) x3] + eps",
+  "oracle_support": {
+    "gate_features": [
+      0,
+      1
+    ],
+    "predictive_modules": [
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ],
+    "per_module_slope_magnitude": 1.414213562373095
+  },
+  "feature_names": [
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5",
+    "x6",
+    "x7",
+    "x8",
+    "x9",
+    "x10",
+    "x11",
+    "x12",
+    "x13",
+    "x14",
+    "x15"
+  ],
+  "preprocessing": {
+    "X": "none",
+    "y": "none"
+  },
+  "matching": {
+    "X_sha256": "a294171e99c527bba2b79007306a5b22a544b48aba7df4ec52b3325f42d4a6cb",
+    "eps_sha256": "adf3cec522756c22aac3793cdf7dd79fe79c0028da1e2d78bd108041523e5312",
+    "population_signal_variance": 4.0
+  },
+  "split_protocol": "seeded row random 60/20/20; shared across controls",
+  "seed_collision_check": {
+    "searched": "rebuttal/preexperiments_20261027",
+    "seeds": [
+      97001,
+      97002,
+      98001,
+      98002,
+      98003,
+      98004,
+      98005
+    ],
+    "collisions": []
+  },
+  "protocol_version": "fastlane-v2-20261027-fixed-real-test",
+  "dataset": "S3_sparse__s99001",
+  "rows": 480,
+  "features": 16,
+  "npz_sha256": "1f0ad0426d461f47e29c0e745d817fc6d89247ee523137e27dca9d3dbd39b031",
+  "array_sha256": {
+    "X": "8f08b0523451b28dc1104070929167bde38b90c9536bbaba9061cb6bfe46f9f0",
+    "y": "f9156205dfe10eacb7ae714626673961b4b9edca8f20d535a1f89c59d263e461",
+    "train": "790ece187d3e888c1fe8422ffeed0d1ab0ac14a44a285c88a2613cf3eae48a45",
+    "val": "b3b1ea5a223b415776e3f6eca930e821bc40028a463a4d580b22920f88af17e2",
+    "test": "1b16cb1855151b1a8c2eed974897ea66b646feca5391f2eba806a574270ceb50",
+    "task_type": "b37fe1a8d1db433437be5660a92834770ec3ad508555ba73d85e5897edbe32b8",
+    "oracle_region": "fb38ec2f8ddab1cfa90cf2153bdc9ce4a75204d1093f83cbf7b7f1061e69b10d",
+    "oracle_signal": "81c5aa1c7a3ef69033446ae5358b0eb35d43360b60750506a00402e7a1766c65",
+    "noise": "adf3cec522756c22aac3793cdf7dd79fe79c0028da1e2d78bd108041523e5312",
+    "y_train": "1c50ef727d42f6473aa0c096bdcbe1affa17c34047f8fdf1c33a03f792d1e049",
+    "y_val": "2e979dba9a82c722705d0eaa4c2e7eee220f821a17799fb4bd188b9864575eb9",
+    "y_test": "00bfd8f459dae6c2aaa4ba4e3df2ef80534f48a780c13ea1a3e2e94233bf80d3"
+  },
+  "split_sizes": {
+    "train": 288,
+    "val": 96,
+    "test": 96
+  },
+  "groups_in_X": false,
+  "oracle_support_in_X": false
+}

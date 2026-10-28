@@ -1,0 +1,6 @@
+case,baseline,paired_n,accuracy_wins,accuracy_and_fit_wins,accuracy_fit_predict_wins,fit_speedup_paired_median,predict_speedup_paired_median
+S1_sparse,XGB,5,5,5,5,15.858817427750157,1.6719139924979793
+S1_sparse,LGB_constant,5,5,5,5,4.669630911465916,2.8744372239441334
+S1_sparse,LGB_linear,5,5,5,5,1.1388717560310877,1.9032531893749012
+S1_sparse,PL,5,5,5,5,2.582963557173827,5.05065661426143
+S1_sparse,LinXGBoost,5,5,5,0,675.9057260185212,0.6044526940646983

@@ -1,0 +1,8 @@
+{
+  "stage": "B2_timing",
+  "jobs": 21,
+  "hosts_used": 1,
+  "plans": {
+    "cpu6_pool.zjuici.com.json": "e2e9de46ed9198cd78d8981b818f972b06abec3c95190be4bba9ad9fd1e3e250"
+  }
+}

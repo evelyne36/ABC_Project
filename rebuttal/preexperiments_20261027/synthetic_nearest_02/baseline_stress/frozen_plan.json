@@ -1,0 +1,180 @@
+{
+  "case": {
+    "family": "sparse_switch",
+    "n": 240,
+    "d": 32,
+    "regions": 2
+  },
+  "discovery_seeds": [
+    91001,
+    91002
+  ],
+  "fresh_validation_seeds": [
+    92001,
+    92002,
+    92003
+  ],
+  "grid": {
+    "LinXGBoost": [
+      {
+        "n_estimators": 1,
+        "max_depth": 1,
+        "lbda": 0.2,
+        "min_samples_leaf": 10,
+        "learning_rate": 1.0
+      },
+      {
+        "n_estimators": 1,
+        "max_depth": 1,
+        "lbda": 2.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 1.0
+      },
+      {
+        "n_estimators": 1,
+        "max_depth": 1,
+        "lbda": 20.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 1.0
+      },
+      {
+        "n_estimators": 1,
+        "max_depth": 2,
+        "lbda": 0.2,
+        "min_samples_leaf": 10,
+        "learning_rate": 1.0
+      },
+      {
+        "n_estimators": 1,
+        "max_depth": 2,
+        "lbda": 2.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 1.0
+      },
+      {
+        "n_estimators": 1,
+        "max_depth": 2,
+        "lbda": 20.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 1.0
+      },
+      {
+        "n_estimators": 4,
+        "max_depth": 1,
+        "lbda": 0.2,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      {
+        "n_estimators": 4,
+        "max_depth": 1,
+        "lbda": 2.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      {
+        "n_estimators": 4,
+        "max_depth": 1,
+        "lbda": 20.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      }
+    ],
+    "PL": [
+      {
+        "num_trees": 1,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 1.0,
+        "max_var": 5,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      {
+        "num_trees": 64,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 1.0,
+        "max_var": 5,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      {
+        "num_trees": 64,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 0.1,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      {
+        "num_trees": 64,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 10.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      {
+        "num_trees": 300,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 0.1,
+        "max_var": 5,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      {
+        "num_trees": 300,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 10.0,
+        "max_var": 5,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      {
+        "num_trees": 100,
+        "max_depth": 5,
+        "num_leaves": 32,
+        "l2_reg": 0.1,
+        "max_var": 5,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      {
+        "num_trees": 100,
+        "max_depth": 5,
+        "num_leaves": 32,
+        "l2_reg": 1.0,
+        "max_var": 5,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      {
+        "num_trees": 100,
+        "max_depth": 5,
+        "num_leaves": 32,
+        "l2_reg": 1.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      }
+    ]
+  },
+  "selection": "lowest two-development-seed mean RMSE per neighbour; choices frozen before follow-up evaluation. Original fresh seed results already observed, so this is adaptive baseline strengthening, not independent confirmation.",
+  "CrossGB": "retain original frozen single-tree configuration and results; no extra tuning for ours",
+  "timeout_sec": 12,
+  "limitations": "follow-up makes baseline choices more favourable; no fresh seeds independent of all study design"
+}

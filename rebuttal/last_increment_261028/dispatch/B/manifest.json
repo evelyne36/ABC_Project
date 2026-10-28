@@ -1,0 +1,12 @@
+{
+  "stage": "B",
+  "lanes": [
+    {
+      "host": "TabularData_Processor",
+      "plan": "TabularData_Processor.json",
+      "jobs": 80
+    }
+  ],
+  "total_jobs": 80,
+  "created_utc": "2026-10-28T10:15:55.932217+00:00"
+}

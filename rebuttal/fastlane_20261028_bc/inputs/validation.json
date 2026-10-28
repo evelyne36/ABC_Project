@@ -1,0 +1,316 @@
+{
+  "status": "passed",
+  "no_model_import_or_fit": true,
+  "no_network": true,
+  "old_inputs_unmodified": true,
+  "historical_seed_audit": {
+    "seeds": [
+      99001,
+      99002,
+      99003,
+      99004,
+      99005
+    ],
+    "searched_roots": [
+      "rebuttal",
+      "local_sync"
+    ],
+    "strict_integer_text_matches": [
+      "rebuttal/\u62a5\u9519\u4fee\u590d\u4e0e\u5b9e\u9a8c\u589e\u91cf\u8ba1\u5212_20261028_\u5f85\u5ba1\u9605.md"
+    ],
+    "filename_matches": [],
+    "planned_mentions_excluded": [
+      "rebuttal/\u62a5\u9519\u4fee\u590d\u4e0e\u5b9e\u9a8c\u589e\u91cf\u8ba1\u5212_20261028_\u5f85\u5ba1\u9605.md"
+    ],
+    "historical_collisions": [],
+    "historical_scope": "all visible historical experiment text and filenames under the searched roots",
+    "additional_root_audit": {
+      "searched": "check_codereview0701",
+      "configuration_json_python_markdown_matches": [],
+      "raw_csv_integer_values_not_seed_uses": {
+        "check_codereview0701/project_paperwriting/datasets/current_snapshot/TabArena_binary/APSFailure.csv": {
+          "contains_seed_column": false,
+          "classification_raw_data": true
+        },
+        "check_codereview0701/project_paperwriting/datasets/current_snapshot/TabArena_binary/credit_card_clients_default.csv": {
+          "contains_seed_column": false,
+          "classification_raw_data": true
+        },
+        "check_codereview0701/dataset/TabArena_binary/APSFailure.csv": {
+          "contains_seed_column": false,
+          "classification_raw_data": true
+        },
+        "check_codereview0701/dataset/TabArena_binary/credit_card_clients_default.csv": {
+          "contains_seed_column": false,
+          "classification_raw_data": true
+        }
+      },
+      "filename_matches": []
+    }
+  },
+  "reused_result_validation": {
+    "count": 210,
+    "all_validation_rmse_recomputed": true,
+    "maximum_abs_error": 0.0,
+    "no_test_metrics_or_target_hashes_in_reused_search": true
+  },
+  "data": [
+    {
+      "dataset": "S1_sparse__s99001",
+      "shape": [
+        240,
+        32
+      ],
+      "split_sizes": {
+        "train": 144,
+        "val": 48,
+        "test": 48
+      },
+      "X_matches_original_substream": true,
+      "noise_matches_original_substream": true,
+      "splits_disjoint_and_exhaustive": true,
+      "oracle_not_in_X": true,
+      "confirmation_test_targets_not_inspected": true
+    },
+    {
+      "dataset": "S1_sparse__s99002",
+      "shape": [
+        240,
+        32
+      ],
+      "split_sizes": {
+        "train": 144,
+        "val": 48,
+        "test": 48
+      },
+      "X_matches_original_substream": true,
+      "noise_matches_original_substream": true,
+      "splits_disjoint_and_exhaustive": true,
+      "oracle_not_in_X": true,
+      "confirmation_test_targets_not_inspected": true
+    },
+    {
+      "dataset": "S1_sparse__s99003",
+      "shape": [
+        240,
+        32
+      ],
+      "split_sizes": {
+        "train": 144,
+        "val": 48,
+        "test": 48
+      },
+      "X_matches_original_substream": true,
+      "noise_matches_original_substream": true,
+      "splits_disjoint_and_exhaustive": true,
+      "oracle_not_in_X": true,
+      "confirmation_test_targets_not_inspected": true
+    },
+    {
+      "dataset": "S1_sparse__s99004",
+      "shape": [
+        240,
+        32
+      ],
+      "split_sizes": {
+        "train": 144,
+        "val": 48,
+        "test": 48
+      },
+      "X_matches_original_substream": true,
+      "noise_matches_original_substream": true,
+      "splits_disjoint_and_exhaustive": true,
+      "oracle_not_in_X": true,
+      "confirmation_test_targets_not_inspected": true
+    },
+    {
+      "dataset": "S1_sparse__s99005",
+      "shape": [
+        240,
+        32
+      ],
+      "split_sizes": {
+        "train": 144,
+        "val": 48,
+        "test": 48
+      },
+      "X_matches_original_substream": true,
+      "noise_matches_original_substream": true,
+      "splits_disjoint_and_exhaustive": true,
+      "oracle_not_in_X": true,
+      "confirmation_test_targets_not_inspected": true
+    },
+    {
+      "dataset": "S2_sparse__s99001",
+      "shape": [
+        480,
+        32
+      ],
+      "split_sizes": {
+        "train": 288,
+        "val": 96,
+        "test": 96
+      },
+      "X_matches_original_substream": true,
+      "noise_matches_original_substream": true,
+      "splits_disjoint_and_exhaustive": true,
+      "oracle_not_in_X": true,
+      "confirmation_test_targets_not_inspected": true
+    },
+    {
+      "dataset": "S2_sparse__s99002",
+      "shape": [
+        480,
+        32
+      ],
+      "split_sizes": {
+        "train": 288,
+        "val": 96,
+        "test": 96
+      },
+      "X_matches_original_substream": true,
+      "noise_matches_original_substream": true,
+      "splits_disjoint_and_exhaustive": true,
+      "oracle_not_in_X": true,
+      "confirmation_test_targets_not_inspected": true
+    },
+    {
+      "dataset": "S2_sparse__s99003",
+      "shape": [
+        480,
+        32
+      ],
+      "split_sizes": {
+        "train": 288,
+        "val": 96,
+        "test": 96
+      },
+      "X_matches_original_substream": true,
+      "noise_matches_original_substream": true,
+      "splits_disjoint_and_exhaustive": true,
+      "oracle_not_in_X": true,
+      "confirmation_test_targets_not_inspected": true
+    },
+    {
+      "dataset": "S2_sparse__s99004",
+      "shape": [
+        480,
+        32
+      ],
+      "split_sizes": {
+        "train": 288,
+        "val": 96,
+        "test": 96
+      },
+      "X_matches_original_substream": true,
+      "noise_matches_original_substream": true,
+      "splits_disjoint_and_exhaustive": true,
+      "oracle_not_in_X": true,
+      "confirmation_test_targets_not_inspected": true
+    },
+    {
+      "dataset": "S2_sparse__s99005",
+      "shape": [
+        480,
+        32
+      ],
+      "split_sizes": {
+        "train": 288,
+        "val": 96,
+        "test": 96
+      },
+      "X_matches_original_substream": true,
+      "noise_matches_original_substream": true,
+      "splits_disjoint_and_exhaustive": true,
+      "oracle_not_in_X": true,
+      "confirmation_test_targets_not_inspected": true
+    },
+    {
+      "dataset": "S3_sparse__s99001",
+      "shape": [
+        480,
+        16
+      ],
+      "split_sizes": {
+        "train": 288,
+        "val": 96,
+        "test": 96
+      },
+      "X_matches_original_substream": true,
+      "noise_matches_original_substream": true,
+      "splits_disjoint_and_exhaustive": true,
+      "oracle_not_in_X": true,
+      "confirmation_test_targets_not_inspected": true
+    },
+    {
+      "dataset": "S3_sparse__s99002",
+      "shape": [
+        480,
+        16
+      ],
+      "split_sizes": {
+        "train": 288,
+        "val": 96,
+        "test": 96
+      },
+      "X_matches_original_substream": true,
+      "noise_matches_original_substream": true,
+      "splits_disjoint_and_exhaustive": true,
+      "oracle_not_in_X": true,
+      "confirmation_test_targets_not_inspected": true
+    },
+    {
+      "dataset": "S3_sparse__s99003",
+      "shape": [
+        480,
+        16
+      ],
+      "split_sizes": {
+        "train": 288,
+        "val": 96,
+        "test": 96
+      },
+      "X_matches_original_substream": true,
+      "noise_matches_original_substream": true,
+      "splits_disjoint_and_exhaustive": true,
+      "oracle_not_in_X": true,
+      "confirmation_test_targets_not_inspected": true
+    },
+    {
+      "dataset": "S3_sparse__s99004",
+      "shape": [
+        480,
+        16
+      ],
+      "split_sizes": {
+        "train": 288,
+        "val": 96,
+        "test": 96
+      },
+      "X_matches_original_substream": true,
+      "noise_matches_original_substream": true,
+      "splits_disjoint_and_exhaustive": true,
+      "oracle_not_in_X": true,
+      "confirmation_test_targets_not_inspected": true
+    },
+    {
+      "dataset": "S3_sparse__s99005",
+      "shape": [
+        480,
+        16
+      ],
+      "split_sizes": {
+        "train": 288,
+        "val": 96,
+        "test": 96
+      },
+      "X_matches_original_substream": true,
+      "noise_matches_original_substream": true,
+      "splits_disjoint_and_exhaustive": true,
+      "oracle_not_in_X": true,
+      "confirmation_test_targets_not_inspected": true
+    }
+  ],
+  "B_recipe_status": "pending B1 completion; deliberately not selected",
+  "C_recipe_status": "original formal24 choices frozen"
+}

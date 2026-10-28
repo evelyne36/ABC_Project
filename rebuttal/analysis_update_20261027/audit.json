@@ -1,0 +1,96 @@
+{
+  "N3": {
+    "groups": 30,
+    "checkpoints": 90,
+    "trace_selection_reconstruction": "all_passed",
+    "live_budget_file_hash_mismatches": [],
+    "candidate_order": "one frozen order, seed42; no order robustness established",
+    "cpu_900_valid_finite_negative_results": [
+      14.734460830688477,
+      45.919837951660156,
+      133.53298950195312,
+      242.07357788085938,
+      216.34231567382812
+    ]
+  },
+  "LGB": {
+    "folds": 50,
+    "all_summaries_standardize_false": true,
+    "cpu_linear_outer4": {
+      "dataset": "cpu_activity",
+      "method": "lgb_linear",
+      "fold": 4,
+      "test_rmse": 873.9413969231966,
+      "inner_rmse": 2.2128515934972683,
+      "selected_candidate": 236,
+      "failed_candidates": 0,
+      "standardize": false,
+      "candidate_count": 300,
+      "source": "local_sync/remote_audit_20261027/cpu4_pool.zjuici.com/rebuttal_formal_20261026/results/N1/lgb_linear/cpu_activity/outer4/summary.json"
+    }
+  },
+  "N2": {
+    "seed_method_cells": 105,
+    "groups": 35,
+    "independent_seed_count": 3,
+    "pooling": "sqrt(sum(n_test*RMSE^2)/sum(n_test)); logloss weighted by n_test",
+    "max_Bias_minus_XGB_pooled_oof": 0.11859324972389823
+  },
+  "restored_historical_TS_files": [
+    {
+      "path": "rebuttal_server_config_20261025/historical/ts_selected_models.json",
+      "sha256": "1d386f9df921f6dda652d45d70c523e124712fb2adde356b2b5133888a107ecb"
+    },
+    {
+      "path": "rebuttal_server_config_20261025/historical/ts_submitted_split_manifest.json",
+      "sha256": "8ba7195755c3984b3ba647b3e1c8e682a7982c871b67f9936f094d011510312c"
+    }
+  ],
+  "N4": {
+    "remote_leaf_files": 20,
+    "aggregation": "pooled over leaves; differs from unweighted mean of per-fold fractions",
+    "rows": [
+      {
+        "group": "cpu_activity__current_metagb",
+        "folds": 5,
+        "leaves": 88303,
+        "predictive_leaves": 66777,
+        "outside_predictive_leaves": 45865,
+        "outside_fraction_among_predictive": 0.6868382826422271,
+        "median_training_rows_per_leaf": 11
+      },
+      {
+        "group": "cpu_activity__xgb_cpu",
+        "folds": 5,
+        "leaves": 91263,
+        "predictive_leaves": 0,
+        "outside_predictive_leaves": 0,
+        "outside_fraction_among_predictive": null,
+        "median_training_rows_per_leaf": 15
+      },
+      {
+        "group": "kin8nm__current_metagb",
+        "folds": 5,
+        "leaves": 455916,
+        "predictive_leaves": 357901,
+        "outside_predictive_leaves": 69202,
+        "outside_fraction_among_predictive": 0.19335514569671503,
+        "median_training_rows_per_leaf": 8
+      },
+      {
+        "group": "kin8nm__xgb_cpu",
+        "folds": 5,
+        "leaves": 262038,
+        "predictive_leaves": 0,
+        "outside_predictive_leaves": 0,
+        "outside_fraction_among_predictive": null,
+        "median_training_rows_per_leaf": 10
+      }
+    ]
+  },
+  "git_head": "5bb0dce8e19148b2fd84d0eb79cb1c4aae37edc2",
+  "raw_source_hashes": {
+    "过程汇报_checkpoint_1027/证据_远端/N3_index/all_budget_results.json": "a9426af76402633d0bc86411f9fc64559503cb3de84b2ff1e725349517590e0d",
+    "aaai_FullCodeProject-check_codereview0701/datacollection0702/0716dataAddition/metagb_ablation_syn/syn_formal_formal16_v1/fold_results.csv": "ac63c2154bc65ddf1edc3f0842584f1a711432f83abd6553e6c76d2b304a64bb"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "method": "tao",
+  "status": "success",
+  "seed": 13,
+  "input_sha256": "7fc1a8cd94fde3daf339f687bcbf09a11327ac843d13a4f20458b2ac5b871cca",
+  "train_rows": 112,
+  "predict_rows": 32,
+  "feature_count": 3,
+  "requested_params": {
+    "depth": 4,
+    "max_iter": 3,
+    "C_dnode": 10
+  },
+  "model_fit_calls": 1,
+  "crossgb_fit_calls": 0,
+  "fit_timing_scope": "includes first-use author import/JIT; do not interpret as warmed kernel timing",
+  "environment": {
+    "python": "3.13.9",
+    "system": "Darwin",
+    "machine": "arm64",
+    "versions": {
+      "numpy": "2.3.5",
+      "scipy": "1.16.3",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "numba": "0.62.1"
+    }
+  },
+  "source": {
+    "method": "tao",
+    "url": "https://faculty.ucmerced.edu/mcarreira-perpinan/research/software/code-TAO-v2026-07-22.tar.gz",
+    "revision": "official-2026-07-22",
+    "archive_sha256": "d006f1d7fafb2e49795f666997cb1800b4d7aeea12d22e4e9bead42fbe430351",
+    "archive_bytes": 22380635,
+    "extracted_path": "vendor/tao"
+  },
+  "fit_wall_sec": 0.3579014580172952,
+  "fit_process_cpu_sec": 0.288057,
+  "predict_wall_sec": 6.162500358186662e-05,
+  "predict_process_cpu_sec": 6.20000000000065e-05,
+  "metadata": {
+    "method": "tao",
+    "task": "regression",
+    "standardize_training_only": false,
+    "threads_per_fit": 1,
+    "test_labels_passed_to_fit": false,
+    "implementation": "official_2026_07_22_python",
+    "leaf_model": "constant",
+    "node_model": "linear",
+    "paper_scope": "TAO family; not NeurIPS2025 linear-leaf implementation",
+    "effective_params": {
+      "depth": 4,
+      "max_iter": 3,
+      "C_dnode": 10
+    }
+  },
+  "rmse": 0.7488400757281228,
+  "evaluation_scope": "evaluate-only labels; never passed to model.fit",
+  "prediction_sha256": "efdc858ffb038080d28cbfe93298fcfe511697d020daecf855d8a7abab2646de"
+}

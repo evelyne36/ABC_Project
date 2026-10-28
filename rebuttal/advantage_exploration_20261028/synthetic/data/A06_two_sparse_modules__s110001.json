@@ -1,0 +1,145 @@
+{
+  "seed": 110001,
+  "phase": "development",
+  "task_type": "regression",
+  "family": "A06_two_sparse_modules",
+  "case": "A06_two_sparse_modules",
+  "control": "modules",
+  "source": "independent standard Normal coordinates; fresh versioned data seeds",
+  "source_version": "cgb-advantage-synthetic-v1-20261028",
+  "formula": "f(X)=sqrt(2) [sign(x0) x2 + sign(x1) x3]; y=f(X)+epsilon",
+  "case_definition": {
+    "case": "A06_two_sparse_modules",
+    "n": 240,
+    "d": 32,
+    "kind": "modules",
+    "formula": "f(X)=sqrt(2) [sign(x0) x2 + sign(x1) x3]",
+    "axis": "two additive gate modules, one predictive variable per module",
+    "pair_group": "n240_d32",
+    "gate_features": [
+      0,
+      1
+    ],
+    "predictive_modules": [
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ]
+  },
+  "noise_sd": 0.3,
+  "feature_names": [
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5",
+    "x6",
+    "x7",
+    "x8",
+    "x9",
+    "x10",
+    "x11",
+    "x12",
+    "x13",
+    "x14",
+    "x15",
+    "x16",
+    "x17",
+    "x18",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29",
+    "x30",
+    "x31"
+  ],
+  "population_signal_L2": 2.0,
+  "population_signal_mean": 0.0,
+  "population_signal_variance": 4.0,
+  "preprocessing": {
+    "X": "none; all coordinates population N(0,1)",
+    "y": "none; analytic population scaling only"
+  },
+  "matching": {
+    "pair_group": "n240_d32",
+    "X_sha256": "fc7ce0b1cfc270d2309f6b204c402186eb9c118896bbd0956229a34669c828af",
+    "eps_sha256": "d4c7d79c9f9b7f117079cbce427a99b2a051cdef38ad7935cbf96fad873c5ec8",
+    "shared_latent_base": "same seed shares 480x64 master X and independent 480-vector noise; subsets by n,d"
+  },
+  "split_protocol": "seeded row random 60/20/20; source fastlane random_split unchanged",
+  "oracle_support": {
+    "gate_features": [
+      0,
+      1
+    ],
+    "predictive_modules": [
+      [
+        2
+      ],
+      [
+        3
+      ]
+    ]
+  },
+  "oracle_arrays": "diagnostic only; never concatenate oracle_signal/oracle_region/noise to X",
+  "gate_definition": {
+    "threshold": 0.0
+  },
+  "seed_collision_check": {
+    "seeds": [
+      110001,
+      110002,
+      111001,
+      111002,
+      111003,
+      111004,
+      111005
+    ],
+    "collisions": [],
+    "searched_roots": [
+      "rebuttal",
+      "local_sync"
+    ],
+    "excluded": "rebuttal/advantage_exploration_20261028 (current new exploration)",
+    "text_scope": "json/jsonl/py/md/csv/yaml/yml/sh/toml/txt; integer tokens, excluding decimal substrings",
+    "filenames_checked": 19619,
+    "filename_collisions": []
+  },
+  "protocol_version": "cgb-advantage-synthetic-v1-20261028",
+  "dataset": "A06_two_sparse_modules__s110001",
+  "rows": 240,
+  "features": 32,
+  "npz_sha256": "2ed637e0dd63b9b870d5b77f221365615246b14527c08b1372e8b7d47506c594",
+  "array_sha256": {
+    "X": "b784f91b1aeecd7bf4b11985ddef6a10096250c8fc8c0a1b9b1556c95bd8e718",
+    "y": "aa26ee10a7debcdef45e48b8949b6e5f3ec10a53af98414cc11c5564bfa444b1",
+    "train": "23169ff425ac894b924af82a5cc0deb98140d3000a104136171be83333559ba8",
+    "val": "b29878a591a6e0e5fc05ec99e89205498c629aa0d20b28743f643022a765243d",
+    "test": "c5d13a90fe97d070a83c9e90d76197082c64918015419dd68137bf8e75300ba9",
+    "task_type": "b37fe1a8d1db433437be5660a92834770ec3ad508555ba73d85e5897edbe32b8",
+    "oracle_signal": "4f0f26e537ee3db0c8d2d321c88d75e66836457ff301ad97b7a324aa1481e648",
+    "oracle_region": "19eab9f8d228013ccecaa891c69b1e384da55dae27f74917930c81c2d1f159f4",
+    "noise": "d4c7d79c9f9b7f117079cbce427a99b2a051cdef38ad7935cbf96fad873c5ec8",
+    "y_train": "7a2a4262ccb47e04f271039a20a6a6feaedff1e69d89d18b34a66179b5b82840",
+    "y_val": "afce14d268e0cedd10a0daf4689fb5a833529be6a8d453e8b8615d58bedfb405",
+    "y_test": "6e18ebb4c4fc689ad65445fca4f1dc014d3c879ca36b8938bc8f96718eabc3ee"
+  },
+  "split_sizes": {
+    "train": 144,
+    "val": 48,
+    "test": 48
+  },
+  "groups_in_X": false,
+  "oracle_support_in_X": false
+}

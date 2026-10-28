@@ -1,0 +1,77 @@
+{
+  "case": "gas_turbine_nox_n2000",
+  "seed": 113003,
+  "kind": "real",
+  "preprocessing": {
+    "fit_rows_sha256": "26790cf245787add28c15a09dfefb740c4919b006cd66a6af4f977cf0d85713e",
+    "X_imputation_median": [
+      17.987499999999997,
+      1013.1,
+      82.51650000000001,
+      4.17675,
+      25.1005,
+      1088.7,
+      549.9,
+      133.79,
+      12.0335
+    ],
+    "X_mean": [
+      17.588246145000006,
+      1013.3391900000009,
+      79.18648849999997,
+      4.196306249999996,
+      25.475504999999966,
+      1083.9500500000004,
+      545.2554350000004,
+      134.4620249999997,
+      12.118897250000003
+    ],
+    "X_scale": [
+      7.521799103983816,
+      6.403540305479451,
+      13.64058295879863,
+      0.7764194544355123,
+      4.2152404908824606,
+      16.559200161768093,
+      7.980090319712879,
+      15.961930310879541,
+      1.1126670676745294
+    ],
+    "y_mean": 68.3099525,
+    "y_scale": 10.544857149352177,
+    "fit_scope": "capped training rows only",
+    "centering_note": "X/y centering can change slope-only leaf model behavior; identical transform is supplied to every method"
+  },
+  "source": {
+    "uci_id": 551,
+    "source_url": "https://archive.ics.uci.edu/dataset/551/gas+turbine+co+and+nox+emission+data+set",
+    "archive_url": "https://archive.ics.uci.edu/static/public/551/gas%2Bturbine%2Bco%2Band%2Bnox%2Bemission%2Bdata%2Bset.zip",
+    "archive_sha256": "55fdb1acc25f05bd9c77aac285c424e9154ffb0dbf1bbadb56b69a1142231295",
+    "doi": "10.24432/C5WC95",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "official_metadata_file": "sources/uci_551_official_metadata.json",
+    "official_metadata_sha256": "55b057fa924c48ed3205ab74c43f94f6a4169a93b9a687d477d4af82baf11cdb",
+    "target": "NOX",
+    "excluded_features": [
+      "CO",
+      "NOX",
+      "year"
+    ],
+    "provenance": "real hourly gas-turbine sensor measurements",
+    "source_novelty": "existing_source_new_target",
+    "historical_evidence": "Same UCI551 source already tested in fastlane/formal with CO. NOX is a correlated new target, not an independent new source; same plant as UCI294 CCPP with another measurement period.",
+    "leakage_audit": "Other flue-gas output CO excluded; all nine ambient/operating sensors retained.",
+    "chronology": "Official UCI description confirms rows are chronological within year; original calendar timestamps are not released.",
+    "duplicate_predictor_rows": 7
+  },
+  "split_sizes": {
+    "train": 2000,
+    "val": 7152,
+    "test": 14542
+  },
+  "nested_old_train600": true,
+  "old_input_sha256": "a5bbd511b70c57a7c6e9b9676216445cdf20b0ca62150ef6d2b0a2850c4e53a8",
+  "protocol": "Preserve established chronological 2011–12 train / 2013 validation / 2014–15 test. Outer test is about40%, deliberately not changed to20% after historical outcomes.",
+  "frozen_parameter_source": "/Users/ancd/PaperFiles/aaai27-rebuttal/rebuttal/advantage_exploration_20261028/confirmation_freeze.json"
+}

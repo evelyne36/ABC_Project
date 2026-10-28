@@ -1,0 +1,168 @@
+{
+  "A06_two_sparse_modules": {
+    "CrossGB": {
+      "candidate": 13,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "params_sha256": "6e9aa72c6fdb7a952ba8ba1337f4c637e7656e4ecfaa9e029491db1270d6dfe9",
+      "mean_development_primary": 0.5923505890528091,
+      "complete_candidates": 20
+    },
+    "XGB": {
+      "candidate": 14,
+      "params": {
+        "depth": 5,
+        "ridge": 1.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "params_sha256": "2d702cfece910de8dcf059b4a66d17d1a9192c5992e04facc4a7224bd4ae63f6",
+      "mean_development_primary": 2.2890189980892712,
+      "complete_candidates": 20
+    },
+    "LGB_constant": {
+      "candidate": 2,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "params_sha256": "bad55302c37561f4461a93d194d12183e2c5eae2dd0c45bba395d8806f51be61",
+      "mean_development_primary": 2.3175623517460853,
+      "complete_candidates": 20
+    },
+    "LGB_linear": {
+      "candidate": 10,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "params_sha256": "17292821413569cb42947fb0bbbd053da250465979f979b36da29be0247d90d8",
+      "mean_development_primary": 2.172198127317773,
+      "complete_candidates": 20
+    },
+    "PL": {
+      "candidate": 8,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "params_sha256": "b28bbf6246ff2aa31f4fc806c96a9bbc4b0fa6e72e5cf114483fdd0bda987b0a",
+      "mean_development_primary": 1.8131380436886246,
+      "complete_candidates": 20
+    },
+    "LinXGBoost": {
+      "candidate": 17,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "params_sha256": "9ad303e5cf210e7c24d1f08a88cc61e65ff7126bb81f2dea3451ba700fcbe1c3",
+      "mean_development_primary": 1.4288276753603926,
+      "complete_candidates": 20
+    }
+  },
+  "gas_turbine_nox": {
+    "CrossGB": {
+      "candidate": 7,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 64,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "params_sha256": "2b463a38cc350ff9929cb3af44364aa528a65d9077fa04482bb98c6a682320cb",
+      "mean_development_primary": 7.602080307415987,
+      "complete_candidates": 20
+    },
+    "XGB": {
+      "candidate": 16,
+      "params": {
+        "depth": 3,
+        "ridge": 0.01,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "params_sha256": "d33e1671660576cb313c31581359331877d3857b80d5a6e2c7a72f5bd981bead",
+      "mean_development_primary": 7.986827305896917,
+      "complete_candidates": 20
+    },
+    "LGB_constant": {
+      "candidate": 8,
+      "params": {
+        "depth": 5,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "params_sha256": "ff5950535aa1b4be7a0043aa8c3c075f22cd9d4158358a0b0ae51e6b616c2703",
+      "mean_development_primary": 7.935155809466349,
+      "complete_candidates": 20
+    },
+    "LGB_linear": {
+      "candidate": 11,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "params_sha256": "eb3d960f77258b2fd44e85bd46dba8a315b862755e37b4b76bce5e17c0ad985c",
+      "mean_development_primary": 7.930059081165307,
+      "complete_candidates": 20
+    },
+    "PL": {
+      "candidate": 5,
+      "params": {
+        "num_trees": 256,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 0.1,
+        "max_var": 3,
+        "leaf_type": "linear",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 0.05
+      },
+      "params_sha256": "6f27b9430cfaa1bb169b6548ec2b03b5231ad6f32ac99aac4df2d688ddf1e85f",
+      "mean_development_primary": 7.760933391567669,
+      "complete_candidates": 20
+    },
+    "LinXGBoost": {
+      "candidate": 13,
+      "params": {
+        "n_estimators": 8,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.2
+      },
+      "params_sha256": "cdea39549ab1091066cbf44a81e0596d5668151414a5cec1c280f0764896ac01",
+      "mean_development_primary": 7.977857210707631,
+      "complete_candidates": 20
+    }
+  }
+}

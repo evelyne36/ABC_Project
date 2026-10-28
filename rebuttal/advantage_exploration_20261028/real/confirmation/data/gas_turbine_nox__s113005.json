@@ -1,0 +1,226 @@
+{
+  "protocol_version": "advantage-real-confirm-v1-20261028",
+  "dataset": "gas_turbine_nox__s113005",
+  "case": "gas_turbine_nox",
+  "family": "gas_turbine_nox",
+  "kind": "real",
+  "phase": "confirmation",
+  "seed": 113005,
+  "task_type": "regression",
+  "source": {
+    "uci_id": 551,
+    "source_url": "https://archive.ics.uci.edu/dataset/551/gas+turbine+co+and+nox+emission+data+set",
+    "archive_url": "https://archive.ics.uci.edu/static/public/551/gas%2Bturbine%2Bco%2Band%2Bnox%2Bemission%2Bdata%2Bset.zip",
+    "archive_sha256": "55fdb1acc25f05bd9c77aac285c424e9154ffb0dbf1bbadb56b69a1142231295",
+    "doi": "10.24432/C5WC95",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "official_metadata_file": "sources/uci_551_official_metadata.json",
+    "official_metadata_sha256": "55b057fa924c48ed3205ab74c43f94f6a4169a93b9a687d477d4af82baf11cdb",
+    "target": "NOX",
+    "excluded_features": [
+      "CO",
+      "NOX",
+      "year"
+    ],
+    "provenance": "real hourly gas-turbine sensor measurements",
+    "source_novelty": "existing_source_new_target",
+    "historical_evidence": "Same UCI551 source already tested in fastlane/formal with CO. NOX is a correlated new target, not an independent new source; same plant as UCI294 CCPP with another measurement period.",
+    "leakage_audit": "Other flue-gas output CO excluded; all nine ambient/operating sensors retained.",
+    "chronology": "Official UCI description confirms rows are chronological within year; original calendar timestamps are not released.",
+    "duplicate_predictor_rows": 7
+  },
+  "feature_names": [
+    "AT",
+    "AP",
+    "AH",
+    "AFDP",
+    "GTEP",
+    "TIT",
+    "TAT",
+    "TEY",
+    "CDP"
+  ],
+  "rows": 36733,
+  "features": 9,
+  "preprocessing": {
+    "fit_rows_sha256": "ee67efa77a55c4b352648f5901197b5f4b467373c5b3dafcf56499d98325f131",
+    "X_imputation_median": [
+      17.9675,
+      1013.1,
+      81.3115,
+      4.2479499999999994,
+      25.258000000000003,
+      1089.35,
+      549.86,
+      133.83,
+      12.0545
+    ],
+    "X_mean": [
+      17.490341383333327,
+      1013.3127999999987,
+      78.37319500000008,
+      4.27241983333333,
+      25.718818333333363,
+      1083.8546666666655,
+      544.3511333333331,
+      135.13245000000006,
+      12.180146666666653
+    ],
+    "X_scale": [
+      7.517557484530615,
+      6.681681187645317,
+      13.990545750147668,
+      0.7734497537375254,
+      4.478559066113102,
+      17.462253908231766,
+      8.599306312074773,
+      17.109113999001625,
+      1.1937037091152705
+    ],
+    "y_mean": 68.21401,
+    "y_scale": 10.329604347048665,
+    "fit_scope": "capped training rows only",
+    "centering_note": "X/y centering can change slope-only leaf model behavior; identical transform is supplied to every method"
+  },
+  "split_protocol": "Preserve established chronological 2011\u201312 train / 2013 validation / 2014\u201315 test. Outer test is about40%, deliberately not changed to20% after historical outcomes.",
+  "split_sizes": {
+    "train": 600,
+    "val": 7152,
+    "test": 14542
+  },
+  "uncapped_split_sizes": {
+    "train": 15039,
+    "val": 7152,
+    "test": 14542
+  },
+  "group_counts": {
+    "train": 2,
+    "val": 1,
+    "test": 2
+  },
+  "training_cap": 600,
+  "training_cap_rule": "Uniform row sample from training groups/period only, without target inspection; full train if <=600.",
+  "groups_in_X": false,
+  "oracle_support_in_X": false,
+  "oracle_support": null,
+  "npz_sha256": "0ab9951e1f940e2050b4a12df58020d9e960561fb1ae3a841d41d93889d3c3f4",
+  "array_sha256": {
+    "X": "205d894153ea2ba7737130ba1bde3762b26bb3b713ef6e8399b23196c95b06cb",
+    "train": "ee67efa77a55c4b352648f5901197b5f4b467373c5b3dafcf56499d98325f131",
+    "val": "2f830d606414386fb1a208d871e74a2eebcea681c681e4fb49fce21ddeb70b34",
+    "test": "ca685ca13c2ed3ba9843a7848919c2d4567dcee402e02d6fe4499cf49af013c7",
+    "task_type": "b37fe1a8d1db433437be5660a92834770ec3ad508555ba73d85e5897edbe32b8",
+    "groups": "a7a7a387712dd581b014317370cedfb3482a08c3d92429c6dd7026dc5c3d3653",
+    "train_uncapped": "9085c826fd7888d426694070d1db5a00df24b0071c6311fbb0f71247823a7bb0",
+    "y_train": "9783631d01ada9e4c0fc802dbf22a635cb3273ba946cb5f910e10d7aa577dc00",
+    "y_val": "735edd0d5cf37f7e234c5a052bc5a2f7f2e7713d0d1db6f37956faf0787ca3af",
+    "y_test": "6f4b5250317ea4a7ec73099d4be71f63821616b10601148199ec3557c9944b13"
+  },
+  "seed_collision_check": {
+    "searched": [
+      "rebuttal/preexperiments_20261027",
+      "rebuttal/fastlane_20261027",
+      "rebuttal/fastlane_20261028_bc"
+    ],
+    "seeds": [
+      112001,
+      112002,
+      113001,
+      113002,
+      113003,
+      113004,
+      113005
+    ],
+    "collisions": []
+  },
+  "repeat_interpretation": "Two DEV seeds and five reserved CONFIRM seeds share fixed source-specific outer tests; neither repeats nor correlated targets are independent datasets.",
+  "identical_data_across_dev_seeds": false,
+  "test_label_policy": "y_test sealed as separate NPZ member; no combined y member. No model fitting, scoring or test target summaries in preparation.",
+  "outcome_selection": "All two-case/six-method parameters and hashes frozen before materializing any reserved confirmation seed. No fit or evaluation performed by this generator.",
+  "confirmation_freeze_sha256": "5ca62804148201ebd1b79e9cf15205ba678a4451e2b842be7d1a0e12d96f7fd9",
+  "confirmation_frozen_utc": "2026-10-28T08:06:09.706663+00:00",
+  "frozen_choices": {
+    "CrossGB": {
+      "candidate": 7,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 64,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "params_sha256": "2b463a38cc350ff9929cb3af44364aa528a65d9077fa04482bb98c6a682320cb",
+      "mean_development_primary": 7.602080307415987,
+      "complete_candidates": 20
+    },
+    "XGB": {
+      "candidate": 16,
+      "params": {
+        "depth": 3,
+        "ridge": 0.01,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "params_sha256": "d33e1671660576cb313c31581359331877d3857b80d5a6e2c7a72f5bd981bead",
+      "mean_development_primary": 7.986827305896917,
+      "complete_candidates": 20
+    },
+    "LGB_constant": {
+      "candidate": 8,
+      "params": {
+        "depth": 5,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "params_sha256": "ff5950535aa1b4be7a0043aa8c3c075f22cd9d4158358a0b0ae51e6b616c2703",
+      "mean_development_primary": 7.935155809466349,
+      "complete_candidates": 20
+    },
+    "LGB_linear": {
+      "candidate": 11,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "params_sha256": "eb3d960f77258b2fd44e85bd46dba8a315b862755e37b4b76bce5e17c0ad985c",
+      "mean_development_primary": 7.930059081165307,
+      "complete_candidates": 20
+    },
+    "PL": {
+      "candidate": 5,
+      "params": {
+        "num_trees": 256,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 0.1,
+        "max_var": 3,
+        "leaf_type": "linear",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 0.05
+      },
+      "params_sha256": "6f27b9430cfaa1bb169b6548ec2b03b5231ad6f32ac99aac4df2d688ddf1e85f",
+      "mean_development_primary": 7.760933391567669,
+      "complete_candidates": 20
+    },
+    "LinXGBoost": {
+      "candidate": 13,
+      "params": {
+        "n_estimators": 8,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.2
+      },
+      "params_sha256": "cdea39549ab1091066cbf44a81e0596d5668151414a5cec1c280f0764896ac01",
+      "mean_development_primary": 7.977857210707631,
+      "complete_candidates": 20
+    }
+  }
+}

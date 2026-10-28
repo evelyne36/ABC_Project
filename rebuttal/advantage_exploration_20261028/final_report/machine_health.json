@@ -1,0 +1,261 @@
+{
+  "cpu1_pool.zjuici.com": {
+    "checked_utc": "2026-10-28T08:19:11.975887+00:00",
+    "experiment_processes": [],
+    "load": [
+      0.0078125,
+      0.046875,
+      0.029296875
+    ],
+    "available_logical_cpus": 16,
+    "cpu_model": "Intel Xeon Processor (Cascadelake)",
+    "states": {
+      "results/advantage_20261028_v1/confirmation/status.json": {
+        "status": "complete",
+        "completed": 10,
+        "total": 10,
+        "updated_utc": "2026-10-28T08:08:32.718097+00:00"
+      },
+      "results/advantage_20261028_v1/exclusive_timing/status.json": {
+        "status": "complete",
+        "completed": 21,
+        "total": 21,
+        "updated_utc": "2026-10-28T08:10:22.922630+00:00"
+      },
+      "results/advantage_20261028_v1/quick/w0/status.json": {
+        "status": "complete",
+        "completed": 48,
+        "total": 48,
+        "updated_utc": "2026-10-28T07:11:55.634139+00:00"
+      },
+      "results/advantage_20261028_v1/quick/w1/status.json": {
+        "status": "complete",
+        "completed": 48,
+        "total": 48,
+        "updated_utc": "2026-10-28T07:11:55.842775+00:00"
+      },
+      "results/advantage_20261028_v1/hpo/status.json": {
+        "status": "complete",
+        "completed": 55,
+        "total": 55,
+        "updated_utc": "2026-10-28T07:30:50.867577+00:00"
+      }
+    }
+  },
+  "cpu2_pool.zjuici.com": {
+    "checked_utc": "2026-10-28T08:19:12.133538+00:00",
+    "experiment_processes": [],
+    "load": [
+      0.0205078125,
+      0.0634765625,
+      0.10791015625
+    ],
+    "available_logical_cpus": 16,
+    "cpu_model": "Intel Xeon Processor (Skylake, IBRS)",
+    "states": {
+      "results/advantage_20261028_v1/confirmation/status.json": {
+        "status": "complete",
+        "completed": 10,
+        "total": 10,
+        "updated_utc": "2026-10-28T08:08:40.923792+00:00"
+      },
+      "results/advantage_20261028_v1/quick/w0/status.json": {
+        "status": "complete",
+        "completed": 48,
+        "total": 48,
+        "updated_utc": "2026-10-28T07:26:22.921671+00:00"
+      },
+      "results/advantage_20261028_v1/quick/w1/status.json": {
+        "status": "complete",
+        "completed": 48,
+        "total": 48,
+        "updated_utc": "2026-10-28T07:28:31.651550+00:00"
+      },
+      "results/advantage_20261028_v1/hpo/status.json": {
+        "status": "complete",
+        "completed": 55,
+        "total": 55,
+        "updated_utc": "2026-10-28T07:31:36.741965+00:00"
+      }
+    }
+  },
+  "cpu4_pool.zjuici.com": {
+    "checked_utc": "2026-10-28T08:19:12.239863+00:00",
+    "experiment_processes": [],
+    "load": [
+      0.21337890625,
+      0.0751953125,
+      0.01904296875
+    ],
+    "available_logical_cpus": 16,
+    "cpu_model": "Intel Xeon Processor (Skylake, IBRS)",
+    "states": {
+      "results/advantage_20261028_v1/confirmation/status.json": {
+        "status": "complete",
+        "completed": 10,
+        "total": 10,
+        "updated_utc": "2026-10-28T08:08:26.648757+00:00"
+      },
+      "results/advantage_20261028_v1/quick/w0/status.json": {
+        "status": "complete",
+        "completed": 48,
+        "total": 48,
+        "updated_utc": "2026-10-28T07:13:55.416004+00:00"
+      },
+      "results/advantage_20261028_v1/quick/w1/status.json": {
+        "status": "complete",
+        "completed": 48,
+        "total": 48,
+        "updated_utc": "2026-10-28T07:18:48.582570+00:00"
+      },
+      "results/advantage_20261028_v1/hpo/status.json": {
+        "status": "complete",
+        "completed": 55,
+        "total": 55,
+        "updated_utc": "2026-10-28T07:31:45.900171+00:00"
+      }
+    }
+  },
+  "cpu5_pool.zjuici.com": {
+    "checked_utc": "2026-10-28T08:19:13.751310+00:00",
+    "experiment_processes": [],
+    "load": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "available_logical_cpus": 32,
+    "cpu_model": "Intel Xeon Processor (Cascadelake)",
+    "states": {
+      "results/advantage_20261028_v1/confirmation/status.json": {
+        "status": "complete",
+        "completed": 10,
+        "total": 10,
+        "updated_utc": "2026-10-28T08:08:25.102169+00:00"
+      },
+      "results/advantage_20261028_v1/quick/w0/status.json": {
+        "status": "complete",
+        "completed": 48,
+        "total": 48,
+        "updated_utc": "2026-10-28T07:12:35.575500+00:00"
+      },
+      "results/advantage_20261028_v1/quick/w1/status.json": {
+        "status": "complete",
+        "completed": 48,
+        "total": 48,
+        "updated_utc": "2026-10-28T07:12:55.447416+00:00"
+      },
+      "results/advantage_20261028_v1/hpo/status.json": {
+        "status": "complete",
+        "completed": 55,
+        "total": 55,
+        "updated_utc": "2026-10-28T07:31:10.076650+00:00"
+      }
+    }
+  },
+  "cpu6_pool.zjuici.com": {
+    "checked_utc": "2026-10-28T08:19:12.452758+00:00",
+    "experiment_processes": [],
+    "load": [
+      0.0,
+      0.03857421875,
+      0.04443359375
+    ],
+    "available_logical_cpus": 16,
+    "cpu_model": "Intel Xeon Processor (Cascadelake)",
+    "states": {
+      "results/advantage_20261028_v1/confirmation/status.json": {
+        "status": "complete",
+        "completed": 10,
+        "total": 10,
+        "updated_utc": "2026-10-28T08:08:39.177114+00:00"
+      },
+      "results/advantage_20261028_v1/exclusive_timing/status.json": {
+        "status": "complete",
+        "completed": 21,
+        "total": 21,
+        "updated_utc": "2026-10-28T08:10:51.364262+00:00"
+      },
+      "results/advantage_20261028_v1/quick/w0/status.json": {
+        "status": "complete",
+        "completed": 48,
+        "total": 48,
+        "updated_utc": "2026-10-28T07:12:27.851367+00:00"
+      },
+      "results/advantage_20261028_v1/quick/w1/status.json": {
+        "status": "complete",
+        "completed": 48,
+        "total": 48,
+        "updated_utc": "2026-10-28T07:12:19.166984+00:00"
+      },
+      "results/advantage_20261028_v1/hpo/status.json": {
+        "status": "complete",
+        "completed": 55,
+        "total": 55,
+        "updated_utc": "2026-10-28T07:31:22.520220+00:00"
+      }
+    }
+  },
+  "cpu_Calculator": {
+    "checked_utc": "2026-10-28T08:19:12.583499+00:00",
+    "experiment_processes": [],
+    "load": [
+      0.05615234375,
+      0.04541015625,
+      0.0390625
+    ],
+    "available_logical_cpus": 16,
+    "cpu_model": "Intel Xeon Processor (Skylake, IBRS)",
+    "states": {
+      "results/advantage_20261028_v1/confirmation/status.json": {
+        "status": "complete",
+        "completed": 10,
+        "total": 10,
+        "updated_utc": "2026-10-28T08:08:42.899148+00:00"
+      },
+      "results/advantage_20261028_v1/quick/w0/status.json": {
+        "status": "complete",
+        "completed": 48,
+        "total": 48,
+        "updated_utc": "2026-10-28T07:12:32.884396+00:00"
+      },
+      "results/advantage_20261028_v1/hpo/status.json": {
+        "status": "complete",
+        "completed": 55,
+        "total": 55,
+        "updated_utc": "2026-10-28T07:31:49.252161+00:00"
+      }
+    }
+  },
+  "TabularData_Processor": {
+    "checked_utc": "2026-10-28T08:19:12.653828+00:00",
+    "experiment_processes": [],
+    "load": [
+      0.0,
+      0.01220703125,
+      0.0
+    ],
+    "available_logical_cpus": 16,
+    "cpu_model": "Intel Xeon Processor (Cascadelake)",
+    "states": {
+      "results/advantage_20261028_v1/confirmation/status.json": {
+        "status": "complete",
+        "completed": 10,
+        "total": 10,
+        "updated_utc": "2026-10-28T08:08:33.725172+00:00"
+      },
+      "results/advantage_20261028_v1/quick/w0/status.json": {
+        "status": "complete",
+        "completed": 48,
+        "total": 48,
+        "updated_utc": "2026-10-28T07:11:56.552965+00:00"
+      },
+      "results/advantage_20261028_v1/hpo/status.json": {
+        "status": "complete",
+        "completed": 54,
+        "total": 54,
+        "updated_utc": "2026-10-28T07:31:00.915827+00:00"
+      }
+    }
+  }
+}

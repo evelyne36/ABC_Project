@@ -1,0 +1,20 @@
+{
+  "model_fit_calls": 0,
+  "inputs": [
+    {
+      "path": "rebuttal_plan_20261025/\u5df2\u6709\u7ed3\u679c\u590d\u7528\u5ba1\u8ba1_\u6570\u636e.json",
+      "sha256": "e811fcf1c5d76e1f17be93a1a2c04411254d5c8f49b605754baba53cb7cfafc3"
+    },
+    {
+      "path": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/default-tabular_comprehensive_onehot_20260628_025442/candidate_configs.json",
+      "sha256": "ac6129bcab57c3ab09692e3e2f36d41d51c469c108ef6cc53e3d1e3aeccffa92"
+    }
+  ],
+  "selected_records": 30,
+  "progress_records": 210,
+  "limitations": [
+    "No causal mechanism inferred from these correlations",
+    "Progress is sparse; no proportion of unstable candidates can be estimated",
+    "Historical elapsed is not CPU time or equal-compute evidence"
+  ]
+}

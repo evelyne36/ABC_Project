@@ -1,0 +1,30 @@
+{
+  "fits": 170,
+  "statuses": {
+    "ok": 170
+  },
+  "workers": {
+    "B:TabularData_Processor": {
+      "status": "complete",
+      "pid": 570268,
+      "core": 0,
+      "stage": "B",
+      "completed": 80,
+      "total": 80,
+      "updated_utc": "2026-10-28T10:20:04.976671+00:00",
+      "current": null,
+      "child_pid": null
+    },
+    "C:cpu6_pool.zjuici.com": {
+      "status": "complete",
+      "pid": 59588,
+      "core": 0,
+      "stage": "C",
+      "completed": 90,
+      "total": 90,
+      "updated_utc": "2026-10-28T10:17:39.450993+00:00",
+      "current": null,
+      "child_pid": null
+    }
+  }
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "host": "cpu6_pool.zjuici.com",
+    "action": "download",
+    "command": "tar -cz --exclude='*/process.log' -C /home/admin/crossgb_fastlane_20261027 results/formal_bc_20261028_v1/C",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/bc_C_cpu6_pool.zjuici.com.tar.gz",
+    "timeout": 90
+  },
+  {
+    "host": "cpu2_pool.zjuici.com",
+    "action": "download",
+    "command": "tar -cz --exclude='*/process.log' -C /home/admin/crossgb_fastlane_20261027 results/formal_bc_20261028_v1/C",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/bc_C_cpu2_pool.zjuici.com.tar.gz",
+    "timeout": 90
+  },
+  {
+    "host": "TabularData_Processor",
+    "action": "download",
+    "command": "tar -cz --exclude='*/process.log' -C /home/admin/crossgb_fastlane_20261027 results/formal_bc_20261028_v1/C",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/bc_C_TabularData_Processor.tar.gz",
+    "timeout": 90
+  },
+  {
+    "host": "cpu4_pool.zjuici.com",
+    "action": "download",
+    "command": "tar -cz --exclude='*/process.log' -C /home/admin/crossgb_fastlane_20261027 results/formal_bc_20261028_v1/C",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/bc_C_cpu4_pool.zjuici.com.tar.gz",
+    "timeout": 90
+  },
+  {
+    "host": "cpu1_pool.zjuici.com",
+    "action": "download",
+    "command": "tar -cz --exclude='*/process.log' -C /home/admin/crossgb_fastlane_20261027 results/formal_bc_20261028_v1/C",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/bc_C_cpu1_pool.zjuici.com.tar.gz",
+    "timeout": 90
+  },
+  {
+    "host": "cpu5_pool.zjuici.com",
+    "action": "download",
+    "command": "tar -cz --exclude='*/process.log' -C /home/admin/crossgb_fastlane_20261027 results/formal_bc_20261028_v1/C",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/bc_C_cpu5_pool.zjuici.com.tar.gz",
+    "timeout": 90
+  },
+  {
+    "host": "cpu_Calculator",
+    "action": "download",
+    "command": "tar -cz --exclude='*/process.log' -C /home/admin/crossgb_fastlane_20261027 results/formal_bc_20261028_v1/C",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/bc_C_cpu_Calculator.tar.gz",
+    "timeout": 90
+  }
+]

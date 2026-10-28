@@ -1,0 +1,32 @@
+{
+  "frozen_utc": "2026-10-28T10:15:57.257615+00:00",
+  "B": {
+    "fits": 80,
+    "seeds": [
+      121001,
+      121002,
+      121003,
+      121004,
+      121005
+    ],
+    "train_counts": [
+      144,
+      288
+    ],
+    "dimensions": [
+      16,
+      32
+    ],
+    "val_count": 96,
+    "test_count": 512,
+    "fixed_params": "A06 existing frozen recipe, no new HPO"
+  },
+  "D": {
+    "fits": 30,
+    "training": 2000,
+    "old_training": 600,
+    "nested_train": true,
+    "shared_time_holdout": true,
+    "fixed_params": "NOX existing frozen recipe, no new HPO"
+  }
+}

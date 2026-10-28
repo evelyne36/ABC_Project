@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "entry_sha256": "7376195ecfbf12141293fef5330e7e35b6b7833fe47d1898028b11c07a16aa76",
+  "schema_positive_check": true,
+  "rejected_invalid_freezes": [
+    "missing_other_case_method",
+    "bad_hash",
+    "missing_time",
+    "missing_params",
+    "nan_metric"
+  ],
+  "dev_generator_matches_frozen_manifest": true,
+  "confirmation_packages_generated": 0,
+  "model_fits": 0,
+  "test_evaluations": 0
+}

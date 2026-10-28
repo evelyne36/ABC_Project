@@ -1,0 +1,223 @@
+{
+  "version": "cgb-advantage-synthetic-v1-20261028",
+  "source_version": "cgb-advantage-synthetic-v1-20261028",
+  "preregistration": "preregistration.json",
+  "generator": "prepare_synthetic.py",
+  "data_protocol": "data_protocol.md",
+  "development_seeds": [
+    110001,
+    110002
+  ],
+  "confirmation_seeds_reserved": [
+    111001,
+    111002,
+    111003,
+    111004,
+    111005
+  ],
+  "confirmation_generated": false,
+  "confirmation_release_condition": "HPO and selection rule frozen before generating/evaluating confirmation data",
+  "case_count": 8,
+  "dataset_count": 16,
+  "entries": [
+    {
+      "case": "A01_s1_n120_d32",
+      "data_npz": "data/A01_s1_n120_d32__s110001.npz",
+      "sidecar": "data/A01_s1_n120_d32__s110001.json",
+      "seed": 110001,
+      "phase": "development",
+      "n": 120,
+      "d": 32,
+      "formula": "f(X)=2 sign(x0) x1",
+      "npz_sha256": "e54a7646d2d468b64b540f3566e7d1a4747b36660a228ed0a7f3491f9e86cdda",
+      "pair_group": "n120_d32"
+    },
+    {
+      "case": "A02_s1_n240_d8",
+      "data_npz": "data/A02_s1_n240_d8__s110001.npz",
+      "sidecar": "data/A02_s1_n240_d8__s110001.json",
+      "seed": 110001,
+      "phase": "development",
+      "n": 240,
+      "d": 8,
+      "formula": "f(X)=2 sign(x0) x1",
+      "npz_sha256": "e2b1519edda0be7c0c35b063075dede115b48648f12ec0cb4c558141c6eab44e",
+      "pair_group": "n240_d8"
+    },
+    {
+      "case": "A03_s1_n240_d64",
+      "data_npz": "data/A03_s1_n240_d64__s110001.npz",
+      "sidecar": "data/A03_s1_n240_d64__s110001.json",
+      "seed": 110001,
+      "phase": "development",
+      "n": 240,
+      "d": 64,
+      "formula": "f(X)=2 sign(x0) x1",
+      "npz_sha256": "6bdb6d5e52815f4de32e1860b56ae158df7fe129a6e17a2397156cc9c9bcc752",
+      "pair_group": "n240_d64"
+    },
+    {
+      "case": "A04_imbalanced_gate",
+      "data_npz": "data/A04_imbalanced_gate__s110001.npz",
+      "sidecar": "data/A04_imbalanced_gate__s110001.json",
+      "seed": 110001,
+      "phase": "development",
+      "n": 240,
+      "d": 32,
+      "formula": "f(X)=2 [(I(x0>=Phi^-1(.8))-.2)/sqrt(.2*.8)] x1",
+      "npz_sha256": "9894f163a539a1dffddfa79add1ec02c19d97bcf1d9d7e290c1a8d9647a697ae",
+      "pair_group": "n240_d32"
+    },
+    {
+      "case": "A05_predictor_switch",
+      "data_npz": "data/A05_predictor_switch__s110001.npz",
+      "sidecar": "data/A05_predictor_switch__s110001.json",
+      "seed": 110001,
+      "phase": "development",
+      "n": 240,
+      "d": 32,
+      "formula": "f(X)=-2 x1 if x0<0, else +2 x2",
+      "npz_sha256": "05ab436fbaaa2749886fcc1a8700604c242ea09674d069905b14e4420e751538",
+      "pair_group": "n240_d32"
+    },
+    {
+      "case": "A06_two_sparse_modules",
+      "data_npz": "data/A06_two_sparse_modules__s110001.npz",
+      "sidecar": "data/A06_two_sparse_modules__s110001.json",
+      "seed": 110001,
+      "phase": "development",
+      "n": 240,
+      "d": 32,
+      "formula": "f(X)=sqrt(2) [sign(x0) x2 + sign(x1) x3]",
+      "npz_sha256": "2ed637e0dd63b9b870d5b77f221365615246b14527c08b1372e8b7d47506c594",
+      "pair_group": "n240_d32"
+    },
+    {
+      "case": "A07_dense_control",
+      "data_npz": "data/A07_dense_control__s110001.npz",
+      "sidecar": "data/A07_dense_control__s110001.json",
+      "seed": 110001,
+      "phase": "development",
+      "n": 120,
+      "d": 32,
+      "formula": "f(X)=2 sign(x0) sum(x1,...,x31)/sqrt(31)",
+      "npz_sha256": "1a4c4e6d8d00cf07342ab959051592356cf7a1e51e86fcd72c8d58480dfa685e",
+      "pair_group": "n120_d32"
+    },
+    {
+      "case": "A08_intercept_control",
+      "data_npz": "data/A08_intercept_control__s110001.npz",
+      "sidecar": "data/A08_intercept_control__s110001.json",
+      "seed": 110001,
+      "phase": "development",
+      "n": 120,
+      "d": 32,
+      "formula": "f(X)=2 sign(x0)",
+      "npz_sha256": "a7f424aa94b779e68cc8b1ef013a681285d8d0588dfbefb03d1ce159e9f13a4b",
+      "pair_group": "n120_d32"
+    },
+    {
+      "case": "A01_s1_n120_d32",
+      "data_npz": "data/A01_s1_n120_d32__s110002.npz",
+      "sidecar": "data/A01_s1_n120_d32__s110002.json",
+      "seed": 110002,
+      "phase": "development",
+      "n": 120,
+      "d": 32,
+      "formula": "f(X)=2 sign(x0) x1",
+      "npz_sha256": "38220bb26b34b8f048805b58a09a2f8ac7db34732c7098f2a7aed9c56a381edc",
+      "pair_group": "n120_d32"
+    },
+    {
+      "case": "A02_s1_n240_d8",
+      "data_npz": "data/A02_s1_n240_d8__s110002.npz",
+      "sidecar": "data/A02_s1_n240_d8__s110002.json",
+      "seed": 110002,
+      "phase": "development",
+      "n": 240,
+      "d": 8,
+      "formula": "f(X)=2 sign(x0) x1",
+      "npz_sha256": "29330938847cca87a7f4a781760b7089ecff3eabaab668370587f1e95661c53d",
+      "pair_group": "n240_d8"
+    },
+    {
+      "case": "A03_s1_n240_d64",
+      "data_npz": "data/A03_s1_n240_d64__s110002.npz",
+      "sidecar": "data/A03_s1_n240_d64__s110002.json",
+      "seed": 110002,
+      "phase": "development",
+      "n": 240,
+      "d": 64,
+      "formula": "f(X)=2 sign(x0) x1",
+      "npz_sha256": "6fcd3ef581f7a9f0b462b62f245ef03a6d2d7ff5521942bfab2a4aae155abe43",
+      "pair_group": "n240_d64"
+    },
+    {
+      "case": "A04_imbalanced_gate",
+      "data_npz": "data/A04_imbalanced_gate__s110002.npz",
+      "sidecar": "data/A04_imbalanced_gate__s110002.json",
+      "seed": 110002,
+      "phase": "development",
+      "n": 240,
+      "d": 32,
+      "formula": "f(X)=2 [(I(x0>=Phi^-1(.8))-.2)/sqrt(.2*.8)] x1",
+      "npz_sha256": "4cc1a8b529f525620def9c060d11856261a20dd539dfd419ec501228af0c1ecc",
+      "pair_group": "n240_d32"
+    },
+    {
+      "case": "A05_predictor_switch",
+      "data_npz": "data/A05_predictor_switch__s110002.npz",
+      "sidecar": "data/A05_predictor_switch__s110002.json",
+      "seed": 110002,
+      "phase": "development",
+      "n": 240,
+      "d": 32,
+      "formula": "f(X)=-2 x1 if x0<0, else +2 x2",
+      "npz_sha256": "2c7670b85e358d6c15080ee5c6d5af70d427bd73cdf4ec42311215e292da0286",
+      "pair_group": "n240_d32"
+    },
+    {
+      "case": "A06_two_sparse_modules",
+      "data_npz": "data/A06_two_sparse_modules__s110002.npz",
+      "sidecar": "data/A06_two_sparse_modules__s110002.json",
+      "seed": 110002,
+      "phase": "development",
+      "n": 240,
+      "d": 32,
+      "formula": "f(X)=sqrt(2) [sign(x0) x2 + sign(x1) x3]",
+      "npz_sha256": "54d7d25d7315fc6ee4ea65ab8afd81d8a7e9cf545204a66676fa1ed12226f49d",
+      "pair_group": "n240_d32"
+    },
+    {
+      "case": "A07_dense_control",
+      "data_npz": "data/A07_dense_control__s110002.npz",
+      "sidecar": "data/A07_dense_control__s110002.json",
+      "seed": 110002,
+      "phase": "development",
+      "n": 120,
+      "d": 32,
+      "formula": "f(X)=2 sign(x0) sum(x1,...,x31)/sqrt(31)",
+      "npz_sha256": "247441a861e8be0c881a585c06b04a593378fd3aeade03bfdbea7d4d5fd6e410",
+      "pair_group": "n120_d32"
+    },
+    {
+      "case": "A08_intercept_control",
+      "data_npz": "data/A08_intercept_control__s110002.npz",
+      "sidecar": "data/A08_intercept_control__s110002.json",
+      "seed": 110002,
+      "phase": "development",
+      "n": 120,
+      "d": 32,
+      "formula": "f(X)=2 sign(x0)",
+      "npz_sha256": "abd275fed4df5ee586b6241e6e626191892f024fb142faa51d43700af06df34b",
+      "pair_group": "n120_d32"
+    }
+  ],
+  "paired_controls": {
+    "A01_s1_n120_d32": [
+      "A07_dense_control",
+      "A08_intercept_control"
+    ]
+  },
+  "no_model_results": true
+}

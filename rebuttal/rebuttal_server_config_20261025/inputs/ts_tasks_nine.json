@@ -1,0 +1,49 @@
+{
+  "tasks": [
+    {
+      "dataset": "ETTh1",
+      "seq_len": 24,
+      "pred_len": 1
+    },
+    {
+      "dataset": "ETTh2",
+      "seq_len": 24,
+      "pred_len": 1
+    },
+    {
+      "dataset": "ETTm1",
+      "seq_len": 24,
+      "pred_len": 1
+    },
+    {
+      "dataset": "ETTm2",
+      "seq_len": 24,
+      "pred_len": 1
+    },
+    {
+      "dataset": "exchange_rate",
+      "seq_len": 24,
+      "pred_len": 1
+    },
+    {
+      "dataset": "exchange_rate",
+      "seq_len": 24,
+      "pred_len": 6
+    },
+    {
+      "dataset": "ILI",
+      "seq_len": 24,
+      "pred_len": 1
+    },
+    {
+      "dataset": "ILI",
+      "seq_len": 24,
+      "pred_len": 6
+    },
+    {
+      "dataset": "ILI",
+      "seq_len": 24,
+      "pred_len": 12
+    }
+  ]
+}

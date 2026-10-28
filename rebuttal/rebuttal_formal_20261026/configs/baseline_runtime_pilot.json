@@ -1,0 +1,433 @@
+{
+  "purpose": "runtime/memory only; no method or hyperparameter selection using test performance",
+  "test_access": false,
+  "fits": 16,
+  "crossgb_fit_calls": 0,
+  "workers": 4,
+  "timeout_per_fit_sec": 120,
+  "adapter_fingerprint": "2eecb279e17d5f762548c6d0fce7926e51bb954d9eeee83a7a4cd24ebbaf2817",
+  "jobs": [
+    {
+      "id": "cpu_activity__gbdt_pl__candidate1",
+      "dataset": "cpu_activity",
+      "method": "gbdt_pl",
+      "candidate_index": 1,
+      "params": {
+        "num_trees": 500,
+        "learning_rate": 0.1,
+        "num_leaves": 255,
+        "max_var": 5,
+        "l2_reg": 0.01,
+        "l1_reg": 0.01,
+        "min_sum_hessians": 100,
+        "num_bins": 63,
+        "leaf_type": "half_additive"
+      },
+      "candidate_file_sha256": "310ddc05ece12efe44bef0e3541079b1ba470356ba07251212ea36d8a2cc06ce",
+      "input_file_sha256": "abdab63eadaa7e629334576cec84988efbfc690b5ef5cbc1358a0366c758ce67",
+      "source": {
+        "method": "gbdt_pl",
+        "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+        "archive_bytes": 16267284,
+        "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+        "code_file_count": 55,
+        "extracted_path": "vendor/gbdt_pl"
+      }
+    },
+    {
+      "id": "cpu_activity__gbdt_pl__candidate101",
+      "dataset": "cpu_activity",
+      "method": "gbdt_pl",
+      "candidate_index": 101,
+      "params": {
+        "num_trees": 50,
+        "learning_rate": 0.010956431694090104,
+        "num_leaves": 8,
+        "max_var": 1,
+        "l2_reg": 36.708171412951344,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 10,
+        "num_bins": 63,
+        "leaf_type": "half_additive"
+      },
+      "candidate_file_sha256": "310ddc05ece12efe44bef0e3541079b1ba470356ba07251212ea36d8a2cc06ce",
+      "input_file_sha256": "abdab63eadaa7e629334576cec84988efbfc690b5ef5cbc1358a0366c758ce67",
+      "source": {
+        "method": "gbdt_pl",
+        "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+        "archive_bytes": 16267284,
+        "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+        "code_file_count": 55,
+        "extracted_path": "vendor/gbdt_pl"
+      }
+    },
+    {
+      "id": "cpu_activity__gbdt_pl__candidate201",
+      "dataset": "cpu_activity",
+      "method": "gbdt_pl",
+      "candidate_index": 201,
+      "params": {
+        "num_trees": 10,
+        "learning_rate": 0.010290647820480099,
+        "num_leaves": 8,
+        "max_var": 1,
+        "l2_reg": 8.68251888981797,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 50,
+        "num_bins": 255,
+        "leaf_type": "half_additive"
+      },
+      "candidate_file_sha256": "310ddc05ece12efe44bef0e3541079b1ba470356ba07251212ea36d8a2cc06ce",
+      "input_file_sha256": "abdab63eadaa7e629334576cec84988efbfc690b5ef5cbc1358a0366c758ce67",
+      "source": {
+        "method": "gbdt_pl",
+        "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+        "archive_bytes": 16267284,
+        "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+        "code_file_count": 55,
+        "extracted_path": "vendor/gbdt_pl"
+      }
+    },
+    {
+      "id": "cpu_activity__linxgboost__candidate1",
+      "dataset": "cpu_activity",
+      "method": "linxgboost",
+      "candidate_index": 1,
+      "params": {
+        "n_estimators": 5,
+        "learning_rate": 0.3,
+        "max_depth": 6,
+        "lbda": 0.0,
+        "min_samples_leaf": 2
+      },
+      "candidate_file_sha256": "c8b29c3c19d662dd26f5cd43515e382f223b4a2ff3e503048c12eb1ac40e0d9c",
+      "input_file_sha256": "abdab63eadaa7e629334576cec84988efbfc690b5ef5cbc1358a0366c758ce67",
+      "source": {
+        "method": "linxgboost",
+        "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+        "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+        "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+        "archive_bytes": 5365453,
+        "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+        "code_file_count": 13,
+        "extracted_path": "vendor/linxgboost"
+      }
+    },
+    {
+      "id": "cpu_activity__linxgboost__candidate101",
+      "dataset": "cpu_activity",
+      "method": "linxgboost",
+      "candidate_index": 101,
+      "params": {
+        "n_estimators": 3,
+        "learning_rate": 0.1770513325469163,
+        "max_depth": 1,
+        "lbda": 1.8173065156810024,
+        "min_samples_leaf": 2
+      },
+      "candidate_file_sha256": "c8b29c3c19d662dd26f5cd43515e382f223b4a2ff3e503048c12eb1ac40e0d9c",
+      "input_file_sha256": "abdab63eadaa7e629334576cec84988efbfc690b5ef5cbc1358a0366c758ce67",
+      "source": {
+        "method": "linxgboost",
+        "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+        "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+        "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+        "archive_bytes": 5365453,
+        "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+        "code_file_count": 13,
+        "extracted_path": "vendor/linxgboost"
+      }
+    },
+    {
+      "id": "cpu_activity__linxgboost__candidate201",
+      "dataset": "cpu_activity",
+      "method": "linxgboost",
+      "candidate_index": 201,
+      "params": {
+        "n_estimators": 50,
+        "learning_rate": 0.38831564602864627,
+        "max_depth": 4,
+        "lbda": 0.01833309957545573,
+        "min_samples_leaf": 10
+      },
+      "candidate_file_sha256": "c8b29c3c19d662dd26f5cd43515e382f223b4a2ff3e503048c12eb1ac40e0d9c",
+      "input_file_sha256": "abdab63eadaa7e629334576cec84988efbfc690b5ef5cbc1358a0366c758ce67",
+      "source": {
+        "method": "linxgboost",
+        "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+        "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+        "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+        "archive_bytes": 5365453,
+        "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+        "code_file_count": 13,
+        "extracted_path": "vendor/linxgboost"
+      }
+    },
+    {
+      "id": "cpu_activity__pilot__candidate1",
+      "dataset": "cpu_activity",
+      "method": "pilot",
+      "candidate_index": 1,
+      "params": {
+        "max_depth": 12,
+        "max_model_depth": 100,
+        "min_sample_leaf": 5,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.0
+      },
+      "candidate_file_sha256": "d4df33b5b1d2aa3d4fa53ae33d48a66227b3cec55af9fba774ca6a77f23b63c1",
+      "input_file_sha256": "abdab63eadaa7e629334576cec84988efbfc690b5ef5cbc1358a0366c758ce67",
+      "source": {
+        "method": "pilot",
+        "url": "https://codeload.github.com/STAN-UAntwerp/PILOT/tar.gz/ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "revision": "ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "archive_sha256": "145602969138d37cfd1eeb9eea496ca91862b54edae0be0e1a8628e37d3a76c4",
+        "archive_bytes": 15953126,
+        "code_fingerprint": "61c05823c75734676cceef2ee4a54c4c65ff3ed046a84b11690e475eb9fdb645",
+        "code_file_count": 14,
+        "extracted_path": "vendor/pilot"
+      }
+    },
+    {
+      "id": "cpu_activity__tao__candidate1",
+      "dataset": "cpu_activity",
+      "method": "tao",
+      "candidate_index": 1,
+      "params": {
+        "depth": 3,
+        "max_iter": 20,
+        "C_dnode": 10.0,
+        "alpha": 0.0
+      },
+      "candidate_file_sha256": "42084fc271184043777e7c99f3220b3433276578e8225b0cf2a3099532e9ed12",
+      "input_file_sha256": "abdab63eadaa7e629334576cec84988efbfc690b5ef5cbc1358a0366c758ce67",
+      "source": {
+        "method": "tao",
+        "url": "https://faculty.ucmerced.edu/mcarreira-perpinan/research/software/code-TAO-v2026-07-22.tar.gz",
+        "revision": "official-2026-07-22",
+        "archive_sha256": "d006f1d7fafb2e49795f666997cb1800b4d7aeea12d22e4e9bead42fbe430351",
+        "archive_bytes": 22380635,
+        "code_fingerprint": "4c2a79326be4e79cfeec3365346adaf01e628b12121275ee0705a07a53952234",
+        "code_file_count": 9,
+        "extracted_path": "vendor/tao"
+      }
+    },
+    {
+      "id": "regime_slope__gbdt_pl__candidate1",
+      "dataset": "regime_slope",
+      "method": "gbdt_pl",
+      "candidate_index": 1,
+      "params": {
+        "num_trees": 500,
+        "learning_rate": 0.1,
+        "num_leaves": 255,
+        "max_var": 5,
+        "l2_reg": 0.01,
+        "l1_reg": 0.01,
+        "min_sum_hessians": 100,
+        "num_bins": 63,
+        "leaf_type": "half_additive"
+      },
+      "candidate_file_sha256": "310ddc05ece12efe44bef0e3541079b1ba470356ba07251212ea36d8a2cc06ce",
+      "input_file_sha256": "d86981ee69cf3ebe26fa3876cf70bdd076c529f3c0904b4861fd5658fe1f2439",
+      "source": {
+        "method": "gbdt_pl",
+        "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+        "archive_bytes": 16267284,
+        "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+        "code_file_count": 55,
+        "extracted_path": "vendor/gbdt_pl"
+      }
+    },
+    {
+      "id": "regime_slope__gbdt_pl__candidate101",
+      "dataset": "regime_slope",
+      "method": "gbdt_pl",
+      "candidate_index": 101,
+      "params": {
+        "num_trees": 50,
+        "learning_rate": 0.010956431694090104,
+        "num_leaves": 8,
+        "max_var": 1,
+        "l2_reg": 36.708171412951344,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 10,
+        "num_bins": 63,
+        "leaf_type": "half_additive"
+      },
+      "candidate_file_sha256": "310ddc05ece12efe44bef0e3541079b1ba470356ba07251212ea36d8a2cc06ce",
+      "input_file_sha256": "d86981ee69cf3ebe26fa3876cf70bdd076c529f3c0904b4861fd5658fe1f2439",
+      "source": {
+        "method": "gbdt_pl",
+        "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+        "archive_bytes": 16267284,
+        "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+        "code_file_count": 55,
+        "extracted_path": "vendor/gbdt_pl"
+      }
+    },
+    {
+      "id": "regime_slope__gbdt_pl__candidate201",
+      "dataset": "regime_slope",
+      "method": "gbdt_pl",
+      "candidate_index": 201,
+      "params": {
+        "num_trees": 10,
+        "learning_rate": 0.010290647820480099,
+        "num_leaves": 8,
+        "max_var": 1,
+        "l2_reg": 8.68251888981797,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 50,
+        "num_bins": 255,
+        "leaf_type": "half_additive"
+      },
+      "candidate_file_sha256": "310ddc05ece12efe44bef0e3541079b1ba470356ba07251212ea36d8a2cc06ce",
+      "input_file_sha256": "d86981ee69cf3ebe26fa3876cf70bdd076c529f3c0904b4861fd5658fe1f2439",
+      "source": {
+        "method": "gbdt_pl",
+        "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+        "archive_bytes": 16267284,
+        "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+        "code_file_count": 55,
+        "extracted_path": "vendor/gbdt_pl"
+      }
+    },
+    {
+      "id": "regime_slope__linxgboost__candidate1",
+      "dataset": "regime_slope",
+      "method": "linxgboost",
+      "candidate_index": 1,
+      "params": {
+        "n_estimators": 5,
+        "learning_rate": 0.3,
+        "max_depth": 6,
+        "lbda": 0.0,
+        "min_samples_leaf": 2
+      },
+      "candidate_file_sha256": "c8b29c3c19d662dd26f5cd43515e382f223b4a2ff3e503048c12eb1ac40e0d9c",
+      "input_file_sha256": "d86981ee69cf3ebe26fa3876cf70bdd076c529f3c0904b4861fd5658fe1f2439",
+      "source": {
+        "method": "linxgboost",
+        "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+        "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+        "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+        "archive_bytes": 5365453,
+        "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+        "code_file_count": 13,
+        "extracted_path": "vendor/linxgboost"
+      }
+    },
+    {
+      "id": "regime_slope__linxgboost__candidate101",
+      "dataset": "regime_slope",
+      "method": "linxgboost",
+      "candidate_index": 101,
+      "params": {
+        "n_estimators": 3,
+        "learning_rate": 0.1770513325469163,
+        "max_depth": 1,
+        "lbda": 1.8173065156810024,
+        "min_samples_leaf": 2
+      },
+      "candidate_file_sha256": "c8b29c3c19d662dd26f5cd43515e382f223b4a2ff3e503048c12eb1ac40e0d9c",
+      "input_file_sha256": "d86981ee69cf3ebe26fa3876cf70bdd076c529f3c0904b4861fd5658fe1f2439",
+      "source": {
+        "method": "linxgboost",
+        "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+        "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+        "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+        "archive_bytes": 5365453,
+        "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+        "code_file_count": 13,
+        "extracted_path": "vendor/linxgboost"
+      }
+    },
+    {
+      "id": "regime_slope__linxgboost__candidate201",
+      "dataset": "regime_slope",
+      "method": "linxgboost",
+      "candidate_index": 201,
+      "params": {
+        "n_estimators": 50,
+        "learning_rate": 0.38831564602864627,
+        "max_depth": 4,
+        "lbda": 0.01833309957545573,
+        "min_samples_leaf": 10
+      },
+      "candidate_file_sha256": "c8b29c3c19d662dd26f5cd43515e382f223b4a2ff3e503048c12eb1ac40e0d9c",
+      "input_file_sha256": "d86981ee69cf3ebe26fa3876cf70bdd076c529f3c0904b4861fd5658fe1f2439",
+      "source": {
+        "method": "linxgboost",
+        "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+        "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+        "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+        "archive_bytes": 5365453,
+        "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+        "code_file_count": 13,
+        "extracted_path": "vendor/linxgboost"
+      }
+    },
+    {
+      "id": "regime_slope__pilot__candidate1",
+      "dataset": "regime_slope",
+      "method": "pilot",
+      "candidate_index": 1,
+      "params": {
+        "max_depth": 12,
+        "max_model_depth": 100,
+        "min_sample_leaf": 5,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.0
+      },
+      "candidate_file_sha256": "d4df33b5b1d2aa3d4fa53ae33d48a66227b3cec55af9fba774ca6a77f23b63c1",
+      "input_file_sha256": "d86981ee69cf3ebe26fa3876cf70bdd076c529f3c0904b4861fd5658fe1f2439",
+      "source": {
+        "method": "pilot",
+        "url": "https://codeload.github.com/STAN-UAntwerp/PILOT/tar.gz/ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "revision": "ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "archive_sha256": "145602969138d37cfd1eeb9eea496ca91862b54edae0be0e1a8628e37d3a76c4",
+        "archive_bytes": 15953126,
+        "code_fingerprint": "61c05823c75734676cceef2ee4a54c4c65ff3ed046a84b11690e475eb9fdb645",
+        "code_file_count": 14,
+        "extracted_path": "vendor/pilot"
+      }
+    },
+    {
+      "id": "regime_slope__tao__candidate1",
+      "dataset": "regime_slope",
+      "method": "tao",
+      "candidate_index": 1,
+      "params": {
+        "depth": 3,
+        "max_iter": 20,
+        "C_dnode": 10.0,
+        "alpha": 0.0
+      },
+      "candidate_file_sha256": "42084fc271184043777e7c99f3220b3433276578e8225b0cf2a3099532e9ed12",
+      "input_file_sha256": "d86981ee69cf3ebe26fa3876cf70bdd076c529f3c0904b4861fd5658fe1f2439",
+      "source": {
+        "method": "tao",
+        "url": "https://faculty.ucmerced.edu/mcarreira-perpinan/research/software/code-TAO-v2026-07-22.tar.gz",
+        "revision": "official-2026-07-22",
+        "archive_sha256": "d006f1d7fafb2e49795f666997cb1800b4d7aeea12d22e4e9bead42fbe430351",
+        "archive_bytes": 22380635,
+        "code_fingerprint": "4c2a79326be4e79cfeec3365346adaf01e628b12121275ee0705a07a53952234",
+        "code_file_count": 9,
+        "extracted_path": "vendor/tao"
+      }
+    }
+  ]
+}

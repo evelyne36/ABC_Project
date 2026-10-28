@@ -1,0 +1,63 @@
+[
+  {
+    "host": "cpu1_pool.zjuici.com",
+    "action": "download",
+    "command": "tar -cz -C /home/admin/crossgb_fastlane_20261027 results/advantage_20261028_v1/confirmation",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/advantage_results/cpu1_pool.zjuici.com_confirmation.tar.gz",
+    "timeout": 90
+  },
+  {
+    "host": "cpu2_pool.zjuici.com",
+    "action": "download",
+    "command": "tar -cz -C /home/admin/crossgb_fastlane_20261027 results/advantage_20261028_v1/confirmation",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/advantage_results/cpu2_pool.zjuici.com_confirmation.tar.gz",
+    "timeout": 90
+  },
+  {
+    "host": "cpu4_pool.zjuici.com",
+    "action": "download",
+    "command": "tar -cz -C /home/admin/crossgb_fastlane_20261027 results/advantage_20261028_v1/confirmation",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/advantage_results/cpu4_pool.zjuici.com_confirmation.tar.gz",
+    "timeout": 90
+  },
+  {
+    "host": "cpu5_pool.zjuici.com",
+    "action": "download",
+    "command": "tar -cz -C /home/admin/crossgb_fastlane_20261027 results/advantage_20261028_v1/confirmation",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/advantage_results/cpu5_pool.zjuici.com_confirmation.tar.gz",
+    "timeout": 90
+  },
+  {
+    "host": "cpu6_pool.zjuici.com",
+    "action": "download",
+    "command": "tar -cz -C /home/admin/crossgb_fastlane_20261027 results/advantage_20261028_v1/confirmation",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/advantage_results/cpu6_pool.zjuici.com_confirmation.tar.gz",
+    "timeout": 90
+  },
+  {
+    "host": "cpu_Calculator",
+    "action": "download",
+    "command": "tar -cz -C /home/admin/crossgb_fastlane_20261027 results/advantage_20261028_v1/confirmation",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/advantage_results/cpu_Calculator_confirmation.tar.gz",
+    "timeout": 90
+  },
+  {
+    "host": "TabularData_Processor",
+    "action": "download",
+    "command": "tar -cz -C /home/admin/crossgb_fastlane_20261027 results/advantage_20261028_v1/confirmation",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/advantage_results/TabularData_Processor_confirmation.tar.gz",
+    "timeout": 90
+  },
+  {
+    "host": "cpu1_pool.zjuici.com",
+    "command": "python3 -c 'import os,pathlib,json,subprocess,datetime\nr=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027'\"'\"')\n\nfor stage in ['\"'\"'hpo'\"'\"','\"'\"'confirmation'\"'\"']:\n p=r/'\"'\"'results/advantage_20261028_v1'\"'\"'/stage/'\"'\"'status.json'\"'\"'\n if not p.exists() or json.loads(p.read_text())['\"'\"'status'\"'\"']!='\"'\"'complete'\"'\"':raise RuntimeError('\"'\"'Timing requires successful completed '\"'\"'+stage)\nfor p in (r/'\"'\"'results/advantage_20261028_v1/quick'\"'\"').glob('\"'\"'w*/status.json'\"'\"'):\n if json.loads(p.read_text())['\"'\"'status'\"'\"']!='\"'\"'complete'\"'\"':raise RuntimeError('\"'\"'Quick worker still active or has failures'\"'\"')\nprint(json.dumps(dict(load_before=os.getloadavg())),flush=True)\nout=r/'\"'\"'results/advantage_20261028_v1/exclusive_timing'\"'\"'\nif out.exists():raise RuntimeError('\"'\"'Immutable output exists'\"'\"')\nenv=os.environ.copy();env['\"'\"'PYTHONPATH'\"'\"']=str(r/'\"'\"'.venv/lib/python3.13/site-packages'\"'\"');env['\"'\"'LD_LIBRARY_PATH'\"'\"']='\"'\"':'\"'\"'.join([str(r/'\"'\"'usr/lib/x86_64-linux-gnu/lapack'\"'\"'),str(r/'\"'\"'usr/lib/x86_64-linux-gnu/blas'\"'\"'),'\"'\"'/home/admin/anaconda3/lib'\"'\"',str(r/'\"'\"'rebuttal_execution_20261025/native/controlled/lib'\"'\"')])\nwith (r/'\"'\"'advantage_exclusive_timing.log'\"'\"').open('\"'\"'w'\"'\"') as log:p=subprocess.Popen([str(r/'\"'\"'.venv/bin/python'\"'\"'),str(r/'\"'\"'advantage_v1/runner.py'\"'\"'),'\"'\"'--root'\"'\"',str(r),'\"'\"'--plan'\"'\"',str(r/'\"'\"'advantage_v1/exclusive_timing_plan.json'\"'\"'),'\"'\"'--output'\"'\"',str(out)],stdin=subprocess.DEVNULL,stdout=log,stderr=subprocess.STDOUT,env=env,start_new_session=True)\nprint(json.dumps(dict(host='\"'\"'cpu1_pool.zjuici.com'\"'\"',pid=p.pid,started_utc=datetime.datetime.now(datetime.timezone.utc).isoformat())))'",
+    "save": "cpu1_pool.zjuici.com_advantage_exclusive_timing_launch.json",
+    "timeout": 25
+  },
+  {
+    "host": "cpu6_pool.zjuici.com",
+    "command": "python3 -c 'import os,pathlib,json,subprocess,datetime\nr=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027'\"'\"')\n\nfor stage in ['\"'\"'hpo'\"'\"','\"'\"'confirmation'\"'\"']:\n p=r/'\"'\"'results/advantage_20261028_v1'\"'\"'/stage/'\"'\"'status.json'\"'\"'\n if not p.exists() or json.loads(p.read_text())['\"'\"'status'\"'\"']!='\"'\"'complete'\"'\"':raise RuntimeError('\"'\"'Timing requires successful completed '\"'\"'+stage)\nfor p in (r/'\"'\"'results/advantage_20261028_v1/quick'\"'\"').glob('\"'\"'w*/status.json'\"'\"'):\n if json.loads(p.read_text())['\"'\"'status'\"'\"']!='\"'\"'complete'\"'\"':raise RuntimeError('\"'\"'Quick worker still active or has failures'\"'\"')\nprint(json.dumps(dict(load_before=os.getloadavg())),flush=True)\nout=r/'\"'\"'results/advantage_20261028_v1/exclusive_timing'\"'\"'\nif out.exists():raise RuntimeError('\"'\"'Immutable output exists'\"'\"')\nenv=os.environ.copy();env['\"'\"'PYTHONPATH'\"'\"']=str(r/'\"'\"'.venv/lib/python3.13/site-packages'\"'\"');env['\"'\"'LD_LIBRARY_PATH'\"'\"']='\"'\"':'\"'\"'.join([str(r/'\"'\"'usr/lib/x86_64-linux-gnu/lapack'\"'\"'),str(r/'\"'\"'usr/lib/x86_64-linux-gnu/blas'\"'\"'),'\"'\"'/home/admin/anaconda3/lib'\"'\"',str(r/'\"'\"'rebuttal_execution_20261025/native/controlled/lib'\"'\"')])\nwith (r/'\"'\"'advantage_exclusive_timing.log'\"'\"').open('\"'\"'w'\"'\"') as log:p=subprocess.Popen([str(r/'\"'\"'.venv/bin/python'\"'\"'),str(r/'\"'\"'advantage_v1/runner.py'\"'\"'),'\"'\"'--root'\"'\"',str(r),'\"'\"'--plan'\"'\"',str(r/'\"'\"'advantage_v1/exclusive_timing_plan.json'\"'\"'),'\"'\"'--output'\"'\"',str(out)],stdin=subprocess.DEVNULL,stdout=log,stderr=subprocess.STDOUT,env=env,start_new_session=True)\nprint(json.dumps(dict(host='\"'\"'cpu6_pool.zjuici.com'\"'\"',pid=p.pid,started_utc=datetime.datetime.now(datetime.timezone.utc).isoformat())))'",
+    "save": "cpu6_pool.zjuici.com_advantage_exclusive_timing_launch.json",
+    "timeout": 25
+  }
+]

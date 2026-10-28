@@ -1,0 +1,151 @@
+{
+  "data": "/home/admin/crossgb_fastlane_20261027/fastlane_data/S1_sparse__s97001.npz",
+  "effective_params": {
+    "boosting_type": "gbdt",
+    "eval_metric": "rmse",
+    "goss_alpha": 0.0,
+    "goss_beta": 0.0,
+    "grow_by": "leaf",
+    "l1_reg": 0.0,
+    "l2_reg": 1.0,
+    "leaf_type": "linear",
+    "learning_rate": 0.1,
+    "max_depth": 4,
+    "max_var": 5,
+    "min_gain": 0.0,
+    "min_sum_hessians": 10.0,
+    "normalization": "no",
+    "num_bins": 63,
+    "num_classes": 1,
+    "num_leaves": 16,
+    "num_threads": 1,
+    "num_trees": 64,
+    "objective": "l2",
+    "sparse_ratio": 0.0,
+    "verbose": 1
+  },
+  "evaluate_test": false,
+  "lineage": {
+    "adapter_sha256": "767ce78c897f671d7a0105c4f517027d29aadce3046bea53dfed50ea35389857",
+    "author_source": {
+      "archive_bytes": 16267284,
+      "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+      "code_file_count": 55,
+      "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+      "extracted_path": "vendor/gbdt_pl",
+      "method": "gbdt_pl",
+      "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+      "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae"
+    },
+    "native_library": "/home/admin/crossgb_fastlane_20261027/rebuttal_baselines_20261025/build/liblineargbm.so",
+    "native_sha256": "5efb4c3f5bc0785e2d56ad6bd664488248e7484ee171fbb1dbfb63835db4a730",
+    "package_path": "/home/admin/crossgb_fastlane_20261027/rebuttal_baselines_20261025",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:16:10) [GCC 11.2.0]"
+  },
+  "metadata_nonfinite_policy": "metadata-only strings: NaN, +Infinity, -Infinity; metrics remain strict",
+  "method": "PL",
+  "metrics": {
+    "train": {
+      "rmse": 0.24933699749292973
+    },
+    "val": {
+      "rmse": 1.511667896961103
+    }
+  },
+  "model_info": {
+    "author_metadata": {
+      "effective_params": {
+        "boosting_type": "gbdt",
+        "eval_metric": "rmse",
+        "goss_alpha": 0.0,
+        "goss_beta": 0.0,
+        "grow_by": "leaf",
+        "l1_reg": 0.0,
+        "l2_reg": 1.0,
+        "leaf_type": "linear",
+        "learning_rate": 0.1,
+        "max_depth": 4,
+        "max_var": 5,
+        "min_gain": 0.0,
+        "min_sum_hessians": 10.0,
+        "normalization": "no",
+        "num_bins": 63,
+        "num_classes": 1,
+        "num_leaves": 16,
+        "num_threads": 1,
+        "num_trees": 64,
+        "objective": "l2",
+        "sparse_ratio": 0.0,
+        "verbose": 1
+      },
+      "implementation": "author_native_with_platform_compatibility",
+      "leaf_model": "linear",
+      "method": "gbdt_pl",
+      "native_compatibility": [
+        "explicit C API success returns",
+        "platform LAPACK DGESV",
+        "ARM scalar equivalents for Intel SIMD/BMI2",
+        "serial AUC sort on macOS",
+        "one OpenMP worker including upstream hardcoded prediction/reader regions"
+      ],
+      "native_library": "/home/admin/crossgb_fastlane_20261027/rebuttal_baselines_20261025/build/liblineargbm.so",
+      "native_library_sha256": "5efb4c3f5bc0785e2d56ad6bd664488248e7484ee171fbb1dbfb63835db4a730",
+      "native_rng_seed": 97001,
+      "prediction_iterations": "all_configured_trees",
+      "resource_policy": "one fit per worker process; upstream has no complete free-model API",
+      "standardize_training_only": false,
+      "task": "regression",
+      "test_labels_passed_to_fit": false,
+      "threads_per_fit": 1,
+      "timing_scope": "ARM scalar timings are not upstream x86/MKL performance; Linux build/runtime requires its own verification"
+    },
+    "n_features": 32
+  },
+  "n_features": 32,
+  "n_rows": 240,
+  "preprocessing": "supplied_npz; none_in_worker",
+  "requested_params": {
+    "l2_reg": 1.0,
+    "leaf_type": "linear",
+    "learning_rate": 0.1,
+    "max_depth": 4,
+    "max_var": 5,
+    "min_sum_hessians": 10.0,
+    "num_leaves": 16,
+    "num_trees": 64
+  },
+  "root": "/home/admin/crossgb_fastlane_20261027",
+  "schema_version": 1,
+  "seed": 97001,
+  "split_counts": {
+    "test": 48,
+    "train": 144,
+    "val": 48
+  },
+  "split_hashes": {
+    "test": "a1c260311356b5ab5b4014e0e35e9659caadb9fd2620cb8d891f32214ac8eb7c",
+    "train": "b59688534a15b0e47604c83c7809ad46807fd51c1388163ebde2fefbb7c457e6",
+    "val": "ab1767c52f3199940824aea78499312d00d739e1ceb7337edfefb5a0f0da45e3"
+  },
+  "status": "ok",
+  "target_hashes": {
+    "train": "7e627e6b152f5f59362a988bb1ecb67eea1abced75777cac4a46091081bcad82",
+    "val": "7970cd7b796f29d9ac2288ffac0048ef157d0829ccfc73853b287f6769d1e85d"
+  },
+  "task_type": "regression",
+  "test_labels_used": false,
+  "threads_per_fit": 1,
+  "timings": {
+    "fit_cpu_sec": 0.48385337799999983,
+    "fit_wall_sec": 0.48389082902576774,
+    "predict_train_cpu_sec": 0.00594038600000002,
+    "predict_train_wall_sec": 0.005937737005297095,
+    "predict_val_cpu_sec": 0.0024719859999999816,
+    "predict_val_wall_sec": 0.002470198000082746
+  },
+  "total_wall_sec": 1.428753896994749,
+  "train_rmse": 0.24933699749292973,
+  "val_rmse": 1.511667896961103,
+  "worker_sha256": "d2e2743d38c80b4d82b9bfb5e4a04aa1a88be952603460fad86f0e9fcb747e2a"
+}

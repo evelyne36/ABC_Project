@@ -1,0 +1,25 @@
+{"seed": 93001, "method": "CrossGB", "status": "success", "fit_wall_sec": 0.0033003750004354515, "fit_cpu_sec": 0.0032849999999999824, "primary": 0.3493591248989105}
+{"seed": 93001, "method": "PL", "status": "success", "primary": 1.3406036063924551, "fit_wall_sec": 0.00755062500047643, "fit_cpu_sec": 0.007530000000000037, "predict_wall_sec": 0.0012865830003647716, "process_wall_including_imports": 0.7873342919992865}
+{"seed": 93001, "method": "LinXGBoost", "status": "success", "primary": 0.35737827158368013, "fit_wall_sec": 0.6988729170006991, "fit_cpu_sec": 0.697989, "predict_wall_sec": 0.00023375000000669388, "process_wall_including_imports": 1.4631364580000081}
+{"seed": 93001, "method": "LGB_linear", "status": "success", "fit_wall_sec": 0.003325915999994322, "fit_cpu_sec": 0.003326999999999858, "primary": 2.2578362378799848}
+{"seed": 93001, "method": "XGB", "status": "success", "fit_wall_sec": 0.001435125000170956, "fit_cpu_sec": 0.001434999999999853, "primary": 2.400404930114746}
+{"seed": 93002, "method": "LinXGBoost", "status": "success", "primary": 0.38028674334601226, "fit_wall_sec": 0.698246625000138, "fit_cpu_sec": 0.6971890000000001, "predict_wall_sec": 0.00021958300021651667, "process_wall_including_imports": 1.5079030000006242}
+{"seed": 93002, "method": "LGB_linear", "status": "success", "fit_wall_sec": 0.003004416000294441, "fit_cpu_sec": 0.0029959999999999987, "primary": 2.665709495067658}
+{"seed": 93002, "method": "CrossGB", "status": "success", "fit_wall_sec": 0.0029425409993564244, "fit_cpu_sec": 0.002942, "primary": 0.33492931723594666}
+{"seed": 93002, "method": "XGB", "status": "success", "fit_wall_sec": 0.0010421249999126303, "fit_cpu_sec": 0.0010429999999999051, "primary": 2.584176540374756}
+{"seed": 93002, "method": "PL", "status": "success", "primary": 2.306604592475204, "fit_wall_sec": 0.007759999999507272, "fit_cpu_sec": 0.00771899999999992, "predict_wall_sec": 0.0012911660005556769, "process_wall_including_imports": 0.8067254590005177}
+{"seed": 93003, "method": "LGB_linear", "status": "success", "fit_wall_sec": 0.00302800000008574, "fit_cpu_sec": 0.003017999999999965, "primary": 1.239522719521027}
+{"seed": 93003, "method": "CrossGB", "status": "success", "fit_wall_sec": 0.002996999999595573, "fit_cpu_sec": 0.002998000000000056, "primary": 0.3569125235080719}
+{"seed": 93003, "method": "XGB", "status": "success", "fit_wall_sec": 0.0010987910000039847, "fit_cpu_sec": 0.0010980000000000434, "primary": 0.8085111379623413}
+{"seed": 93003, "method": "LinXGBoost", "status": "success", "primary": 0.33741069671144264, "fit_wall_sec": 0.7080783330002305, "fit_cpu_sec": 0.70696, "predict_wall_sec": 0.00023870800032455008, "process_wall_including_imports": 1.4915785419998429}
+{"seed": 93003, "method": "PL", "status": "success", "primary": 0.40678537721805275, "fit_wall_sec": 0.007619125000019267, "fit_cpu_sec": 0.007596000000000047, "predict_wall_sec": 0.0013231670000095619, "process_wall_including_imports": 0.7844860420000259}
+{"seed": 93004, "method": "PL", "status": "success", "primary": 1.5083362546529804, "fit_wall_sec": 0.007547416000306839, "fit_cpu_sec": 0.007492999999999972, "predict_wall_sec": 0.001562417000059213, "process_wall_including_imports": 0.8028523749999295}
+{"seed": 93004, "method": "CrossGB", "status": "success", "fit_wall_sec": 0.0033038329993360094, "fit_cpu_sec": 0.003298000000000023, "primary": 0.3855350613594055}
+{"seed": 93004, "method": "XGB", "status": "success", "fit_wall_sec": 0.001171707999674254, "fit_cpu_sec": 0.0011719999999999509, "primary": 2.056854486465454}
+{"seed": 93004, "method": "LinXGBoost", "status": "success", "primary": 0.3880905676822545, "fit_wall_sec": 0.7043124159999934, "fit_cpu_sec": 0.702965, "predict_wall_sec": 0.00024695799947949126, "process_wall_including_imports": 1.501054665999618}
+{"seed": 93004, "method": "LGB_linear", "status": "success", "fit_wall_sec": 0.0028888750002806773, "fit_cpu_sec": 0.0028880000000000017, "primary": 1.662405574011577}
+{"seed": 93005, "method": "CrossGB", "status": "success", "fit_wall_sec": 0.0029428329999063862, "fit_cpu_sec": 0.00294300000000014, "primary": 0.3613496422767639}
+{"seed": 93005, "method": "LinXGBoost", "status": "success", "primary": 0.3792932645273866, "fit_wall_sec": 0.7258385830000407, "fit_cpu_sec": 0.7228100000000001, "predict_wall_sec": 0.00024266699983854778, "process_wall_including_imports": 1.53053004100002}
+{"seed": 93005, "method": "LGB_linear", "status": "success", "fit_wall_sec": 0.0031487910000578267, "fit_cpu_sec": 0.0031490000000000684, "primary": 1.764059826874705}
+{"seed": 93005, "method": "PL", "status": "success", "primary": 0.4213703019461489, "fit_wall_sec": 0.007535958000516985, "fit_cpu_sec": 0.007516999999999996, "predict_wall_sec": 0.0014317079994725646, "process_wall_including_imports": 0.803937833999953}
+{"seed": 93005, "method": "XGB", "status": "success", "fit_wall_sec": 0.0015532919996985584, "fit_cpu_sec": 0.0015540000000000553, "primary": 1.7847685813903809}

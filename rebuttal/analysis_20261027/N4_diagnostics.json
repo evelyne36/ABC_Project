@@ -1,0 +1,57 @@
+{
+  "scope": "Per-model fold summaries. Hardware equivalence and complete trees/predictions are not attested by this aggregate. Outside-path fraction is descriptive, not a causal or prospective suitability test.",
+  "rows": [
+    {
+      "dataset": "cpu_activity",
+      "method": "current_metagb",
+      "folds": 5,
+      "mean_rmse": 3.934442663192749,
+      "mean_fit_wall_sec": 29.459562224999992,
+      "mean_fit_cpu_sec": 29.454528636,
+      "mean_trees": 320,
+      "mean_leaves": 17660.6,
+      "mean_predictive_leaves": 13355.4,
+      "mean_outside_path_fraction_among_predictive_leaves": 0.7126748602908245,
+      "mean_sample_weighted_outside_path_fraction_among_predictive_leaves": 0.66938977149206
+    },
+    {
+      "dataset": "cpu_activity",
+      "method": "xgb_cpu",
+      "folds": 5,
+      "mean_rmse": 2.1868168354034423,
+      "mean_fit_wall_sec": 1.5052084575999287,
+      "mean_fit_cpu_sec": 1.5049617815999998,
+      "mean_trees": 600,
+      "mean_leaves": 18252.6,
+      "mean_predictive_leaves": 0,
+      "mean_outside_path_fraction_among_predictive_leaves": null,
+      "mean_sample_weighted_outside_path_fraction_among_predictive_leaves": null
+    },
+    {
+      "dataset": "kin8nm",
+      "method": "current_metagb",
+      "folds": 5,
+      "mean_rmse": 0.10027311742305756,
+      "mean_fit_wall_sec": 29.48575216800009,
+      "mean_fit_cpu_sec": 29.4818401362,
+      "mean_trees": 800,
+      "mean_leaves": 91183.2,
+      "mean_predictive_leaves": 71580.2,
+      "mean_outside_path_fraction_among_predictive_leaves": 0.25581709356359955,
+      "mean_sample_weighted_outside_path_fraction_among_predictive_leaves": 0.39321529723473103
+    },
+    {
+      "dataset": "kin8nm",
+      "method": "xgb_cpu",
+      "folds": 5,
+      "mean_rmse": 0.11253426671028137,
+      "mean_fit_wall_sec": 1.978214888599996,
+      "mean_fit_cpu_sec": 1.9781198426,
+      "mean_trees": 680,
+      "mean_leaves": 52407.6,
+      "mean_predictive_leaves": 0,
+      "mean_outside_path_fraction_among_predictive_leaves": null,
+      "mean_sample_weighted_outside_path_fraction_among_predictive_leaves": null
+    }
+  ]
+}

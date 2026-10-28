@@ -1,0 +1,56 @@
+{
+  "frozen_utc": "2026-10-27T18:32:59.508792+00:00",
+  "basis": "preexperiments README already reports ILPD20 rounds lr.05 and expanded learning-rate effects; formal24 regression-derived pools lack <64-round classifier points; six additions frozen before reading newly downloaded formal classification test metrics",
+  "total_candidate_ceiling_per_method": 30,
+  "methods": [
+    "CrossGB",
+    "XGB",
+    "LGB_constant",
+    "LGB_linear"
+  ],
+  "new_candidates": [
+    {
+      "depth": 2,
+      "ridge": 0.1,
+      "trees": 20,
+      "learning_rate": 0.05,
+      "p": 1.0
+    },
+    {
+      "depth": 3,
+      "ridge": 1.0,
+      "trees": 20,
+      "learning_rate": 0.05,
+      "p": 1.0
+    },
+    {
+      "depth": 2,
+      "ridge": 10.0,
+      "trees": 60,
+      "learning_rate": 0.05,
+      "p": 0.5
+    },
+    {
+      "depth": 3,
+      "ridge": 0.1,
+      "trees": 60,
+      "learning_rate": 0.2,
+      "p": 0.5
+    },
+    {
+      "depth": 2,
+      "ridge": 1.0,
+      "trees": 180,
+      "learning_rate": 0.05,
+      "p": 0.25
+    },
+    {
+      "depth": 3,
+      "ridge": 10.0,
+      "trees": 180,
+      "learning_rate": 0.2,
+      "p": 0.25
+    }
+  ],
+  "selection": "validation logloss only; formal24 candidate validation records plus six anchors, freeze then final test"
+}

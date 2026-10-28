@@ -1,0 +1,110 @@
+{
+  "seed": 99003,
+  "phase": "confirmation",
+  "task_type": "regression",
+  "family": "S1",
+  "control": "sparse",
+  "source": "generated independent N(0,1) covariates",
+  "noise_sd": 0.3,
+  "formula": "2 sign(x0) x1 + eps",
+  "oracle_support": {
+    "gate_features": [
+      0
+    ],
+    "predictive_by_region": {
+      "0": [
+        1
+      ],
+      "1": [
+        1
+      ]
+    },
+    "slopes": [
+      -2,
+      2
+    ]
+  },
+  "feature_names": [
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5",
+    "x6",
+    "x7",
+    "x8",
+    "x9",
+    "x10",
+    "x11",
+    "x12",
+    "x13",
+    "x14",
+    "x15",
+    "x16",
+    "x17",
+    "x18",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29",
+    "x30",
+    "x31"
+  ],
+  "preprocessing": {
+    "X": "none",
+    "y": "none"
+  },
+  "matching": {
+    "X_sha256": "8bfb445920d49a2ad9ced73e6052df715708dad4dffc9802f165de8b8321fcee",
+    "eps_sha256": "16de1c6af3137d05f4270d9912732dded799189cc86d64176c3645a83699fd57",
+    "population_signal_variance": 4.0
+  },
+  "split_protocol": "seeded row random 60/20/20; shared across controls",
+  "seed_collision_check": {
+    "searched": "rebuttal/preexperiments_20261027",
+    "seeds": [
+      97001,
+      97002,
+      98001,
+      98002,
+      98003,
+      98004,
+      98005
+    ],
+    "collisions": []
+  },
+  "protocol_version": "fastlane-v2-20261027-fixed-real-test",
+  "dataset": "S1_sparse__s99003",
+  "rows": 240,
+  "features": 32,
+  "npz_sha256": "59f825abb94b2061fe05f839f838fd393538729fb64932fea3f442040e1c07ca",
+  "array_sha256": {
+    "X": "cbba4e6a9a7c8d3a453161ff2957bdd38f53f0b6b28d65ba59915b36616b286c",
+    "y": "e2baf9c1e6182a1dbba7cd16836be2a103219f5e68d0d3c261b7475c5f2803c6",
+    "train": "5e6fc5defa3882d99656c6bfac2cce5f78d02adda63c19d421883ffb790c680a",
+    "val": "b2469ceaaacd855c9a6fc2f734c957fff1d2c7c53195d0afab63994ddc3846ec",
+    "test": "0fe266919a8eff7e156257a3e465c964d015438fd051bb408d7f6412f6ea1659",
+    "task_type": "b37fe1a8d1db433437be5660a92834770ec3ad508555ba73d85e5897edbe32b8",
+    "oracle_region": "58b2c5a44cb0edae0987384b60025b480f8107c5ce70168ecd2ab1545410d8c4",
+    "oracle_signal": "3b3af1a2e7a9748ab583044746658d81ad690cf64c5eca6a1d317ec34e19bf44",
+    "noise": "16de1c6af3137d05f4270d9912732dded799189cc86d64176c3645a83699fd57",
+    "y_train": "07e12b01b16ef4f778d73cbc6ac36fceb57551ec2e4f2676ecf34fa7dec2222c",
+    "y_val": "8e0fb9cdb9c629b10866168a587bce6f1b2bc560e5faf7a610918de01e3deeef",
+    "y_test": "10036de734873af39a6983d7a1b811d10d06c9fbb406c41952ec2b7ca85fb415"
+  },
+  "split_sizes": {
+    "train": 144,
+    "val": 48,
+    "test": 48
+  },
+  "groups_in_X": false,
+  "oracle_support_in_X": false
+}

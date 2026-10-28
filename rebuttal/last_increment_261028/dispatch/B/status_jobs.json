@@ -1,0 +1,8 @@
+[
+  {
+    "host": "TabularData_Processor",
+    "command": "python3 -c 'import pathlib,json\np=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027/results/last_increment_261028_v1/B/status.json'\"'\"')\nprint(p.read_text() if p.exists() else json.dumps(dict(status='\"'\"'missing'\"'\"')))'",
+    "save": "TabularData_Processor_advantage_B_status.json",
+    "timeout": 20
+  }
+]

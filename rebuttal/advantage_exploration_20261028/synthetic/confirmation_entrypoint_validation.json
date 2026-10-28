@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "mode": "freeze-validation fixtures only; no data generated",
+  "checks": [
+    "missing freeze rejected",
+    "incomplete method choices rejected",
+    "incomplete cases rejected",
+    "wrong hash rejected",
+    "missing timestamp rejected",
+    "unapproved case rejected",
+    "complete 2x6 hashed choices accepted"
+  ],
+  "confirmation_directory_absent": true,
+  "development_generator_hash_unchanged": true
+}

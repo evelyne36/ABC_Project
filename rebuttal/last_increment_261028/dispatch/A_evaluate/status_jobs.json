@@ -1,0 +1,27 @@
+[
+  {
+    "host": "cpu1_pool.zjuici.com",
+    "command": "python3 -c 'import pathlib\nr=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027'\"'\"')\np=r/'\"'\"'results/last_increment_261028_v1/A_evaluate/status.json'\"'\"'\nprint(p.read_text() if p.exists() else (r/'\"'\"'last_increment_A_evaluate.log'\"'\"').read_text()[-2000:])'",
+    "timeout": 20
+  },
+  {
+    "host": "cpu2_pool.zjuici.com",
+    "command": "python3 -c 'import pathlib\nr=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027'\"'\"')\np=r/'\"'\"'results/last_increment_261028_v1/A_evaluate/status.json'\"'\"'\nprint(p.read_text() if p.exists() else (r/'\"'\"'last_increment_A_evaluate.log'\"'\"').read_text()[-2000:])'",
+    "timeout": 20
+  },
+  {
+    "host": "cpu4_pool.zjuici.com",
+    "command": "python3 -c 'import pathlib\nr=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027'\"'\"')\np=r/'\"'\"'results/last_increment_261028_v1/A_evaluate/status.json'\"'\"'\nprint(p.read_text() if p.exists() else (r/'\"'\"'last_increment_A_evaluate.log'\"'\"').read_text()[-2000:])'",
+    "timeout": 20
+  },
+  {
+    "host": "cpu5_pool.zjuici.com",
+    "command": "python3 -c 'import pathlib\nr=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027'\"'\"')\np=r/'\"'\"'results/last_increment_261028_v1/A_evaluate/status.json'\"'\"'\nprint(p.read_text() if p.exists() else (r/'\"'\"'last_increment_A_evaluate.log'\"'\"').read_text()[-2000:])'",
+    "timeout": 20
+  },
+  {
+    "host": "cpu_Calculator",
+    "command": "python3 -c 'import pathlib\nr=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027'\"'\"')\np=r/'\"'\"'results/last_increment_261028_v1/A_evaluate/status.json'\"'\"'\nprint(p.read_text() if p.exists() else (r/'\"'\"'last_increment_A_evaluate.log'\"'\"').read_text()[-2000:])'",
+    "timeout": 20
+  }
+]

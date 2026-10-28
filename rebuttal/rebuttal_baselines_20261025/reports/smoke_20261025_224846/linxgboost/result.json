@@ -1,0 +1,61 @@
+{
+  "method": "linxgboost",
+  "status": "success",
+  "seed": 13,
+  "input_sha256": "7fc1a8cd94fde3daf339f687bcbf09a11327ac843d13a4f20458b2ac5b871cca",
+  "train_rows": 112,
+  "predict_rows": 32,
+  "feature_count": 3,
+  "requested_params": {
+    "n_estimators": 5,
+    "max_depth": 2,
+    "lbda": 0.1,
+    "min_samples_leaf": 8
+  },
+  "model_fit_calls": 1,
+  "crossgb_fit_calls": 0,
+  "fit_timing_scope": "includes first-use author import/JIT; do not interpret as warmed kernel timing",
+  "environment": {
+    "python": "3.13.9",
+    "system": "Darwin",
+    "machine": "arm64",
+    "versions": {
+      "numpy": "2.3.5",
+      "scipy": "1.16.3",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "numba": "0.62.1"
+    }
+  },
+  "source": {
+    "method": "linxgboost",
+    "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+    "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+    "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+    "archive_bytes": 5365453,
+    "extracted_path": "vendor/linxgboost"
+  },
+  "fit_wall_sec": 0.09376137499930337,
+  "fit_process_cpu_sec": 0.09180600000000005,
+  "predict_wall_sec": 8.654201519675553e-05,
+  "predict_process_cpu_sec": 8.60000000000305e-05,
+  "metadata": {
+    "method": "linxgboost",
+    "task": "regression",
+    "standardize_training_only": false,
+    "threads_per_fit": 1,
+    "test_labels_passed_to_fit": false,
+    "implementation": "author_python",
+    "leaf_model": "multivariate_affine",
+    "prediction_semantics": "upstream_final_tree_unshrunk",
+    "effective_params": {
+      "n_estimators": 5,
+      "max_depth": 2,
+      "lbda": 0.1,
+      "min_samples_leaf": 8
+    }
+  },
+  "rmse": 0.0021780632794202275,
+  "evaluation_scope": "evaluate-only labels; never passed to model.fit",
+  "prediction_sha256": "db63729aa6349059ee4d1e36f8f86e306ee37a2b436fe516ab33c347f15977ad"
+}

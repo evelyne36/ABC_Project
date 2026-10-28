@@ -1,0 +1,243 @@
+0001 CrossGB · AAAI 2027Rebuttal 提分指南 V2
+0002 正文 + Technical Supplement 联合证据审计版
+0003 更新日期：2026-10-25    |    对象：5 位人工 Reviewer（qxju / wWos / t7wg / VVba / jSCP）
+0004 定位：逐条确认现有证据能解决什么、不能解决什么；将重复需求压缩成最少新增实验。此指南基于 8 页正文、18 页 Technical Supplement、OpenReview 5 份人工评审；不将官方 AI Reviewer 作为审稿人评分目标。
+0005 重要提醒  不能假定审稿人全部“只读正文”。例如 jSCP 明确引用 Appendix B.7 的检验结果。Rebuttal 要同时区分“证据被遗漏”和“证据已被看到但仍不充分”。
+0006 执行摘要：与 V1 相比，哪些任务应删除？
+0007 [TABLE]
+0008 任务类型 | V2 结论 | 原因/证据
+0009 无需重复 | 重新做五折显著性检验 | Appendix B.7/E 已给出 19 回归、23 二分类主面板胜负、Wilcoxon p 值和折间离散。
+0010 无需重复 | 从零绘制运行时间—质量散点 | Appendix D.4 Figure 1(b)，B.7/E/F 已给出耗时倍率；缺的是等 wall-clock 预算比较。
+0011 无需重复 | 重跑原有 SplitOnly/Full 的 16 变体 | Appendix D.1–D.3 Tables 10–12 已包含固定 backbone、比例剂量响应与配对效应。
+0012 不宜重复 | 从零设计结构适用性指标 | Appendix G 已有两阶段评分；其独立验证结果并不强，必须承认局限。
+0013 真正新增 | 相近方法、LeafOnly、等计算预算 | 这三项在正文和附录都没有得到直接、严格的实验证据。
+0014 [/TABLE]
+0015 核心提分路线：先排查实现/结果一致性；再优先完成 N1（相近 linear-leaf 方法）、N2（LeafOnly 反事实）、N3（compute-matched）；利用已有记录做 N4（CPU 失败剖析）；资源允许时再考虑 N5–N8。
+0016 0. 审计口径与状态标签
+0017 “正文证据”只指 8 页 main manuscript 中明确表述、公式、表格和实验。
+0018 “附录证据”指 Technical Supplement A–G 中已完成的实验与公式；引用附录不等于它证明了审稿人的主张。
+0019 “可由现有材料主要回应”：问题主要是解释、定位或承认既有事实，无必要新增实验。
+0020 “部分回应”：已有相关实验，但缺乏某个关键反事实或因果归因；应明确证据边界。
+0021 “尚未直接覆盖”：正文/附录均无该对照或验证，若希望实质性消除疑虑，需新增证据。
+0022 所有新增实验均须保持正确的数据划分、统一指标方向、公平调参协议；不能预设结果会支持 CrossGB。
+0023 1. Reviewer 逐条 Weakness 审计
+0024 以下将每项疑点拆成：审稿人真实诉求 → 正文已有内容 → 附录补充内容 → 解决程度 → 仍需补充什么。Source locator 均为原稿中的章节/表号，供 Rebuttal 精准定位。
+0025 1.1 qxju（5 分）｜优先争取上调
+0026 Q1  缺少 PL Trees / LinXGBoost；独立预测特征选择的新增价值不明
+0027 正文：§2 指明：LinXGBoost 使用高维线性叶，PL Trees 利用 split-path 特征；CrossGB 在每个叶独立选择单一 predictive feature，并在 hist boosting 中训练。
+0028 附录：Appendix C/D 的机制合成与消融支持模型在部分结构上有效；没有 PL Trees 或 LinXGBoost 的直接跑分。
+0029 判定：尚未直接覆盖     已有概念区别，却没有证明相对于“线性叶本身”的额外实用价值。
+0030 下一步：N1：在共享划分和可兼容任务上补近似 boosted linear-leaf 基线；W1：用结构对照表界定“独立选择 + predictive-aware score”的组合贡献。
+0031 Q2  Table 2 缺失 Standard Split + Predictive Leaf 反事实
+0032 正文：§4.3 Table 2 有 XGBoost、BiasOnly、SplitOnly、Full；没有标准分裂打分与 predictive leaf 的组合。
+0033 附录：Appendix D.1–D.3 Tables 10–12 给出 16 变体、3 seeds、10/20 维和配对效果；主要比较沿 BiasOnly→SplitOnly→Full 的路径。
+0034 判定：部分回应     已有组件效应不等于证明 full predictive-aware scoring 在 predictive leaf 存在时优于标准 scoring。
+0035 下一步：N2：在同一固定 backbone 上新增 LeafOnly（standard scoring + predictive leaves）；形成更完整的机制比较，并核对各 variant 实际定义。
+0036 Q3  真实 Tabular 有负结果，尤其 CPU activity 退化明显
+0037 正文：§4.4 Table 3 呈现 CPU：XGBoost 2.1868，CrossGB 3.9344 RMSE，附有大多数数据集结果和谨慎定位。
+0038 附录：Appendix E Table 14 给出 CPU 的五折均值±SD、−0.7992 方向归一化差异、耗时（one-hot 为 18.72×）；Appendix G 未直接针对 CPU 做诊断。
+0039 判定：部分回应     目前有“失败现象”和统计描述，没有可检验的失败机制。
+0040 下一步：N4：优先复用已有 CPU 模型/日志，对比特征采样、局部残差、叶模型/梯度和 selected p；与 Kin8nm 等正例对照。
+0041 1.2 wWos（6 分）｜重点稳住
+0042 Ww1  通用 Tabular 收益有限，适用范围偏窄
+0043 正文：§4.4 Tables 3–4 明确披露排名及扩展面板，结论未宣称通用最优。
+0044 附录：Appendix B.7 与 E Tables 14–16 给出全数据集、折间 SD、Wilcoxon、按预处理分组的负结果。
+0045 判定：可由现有材料主要回应     “有限收益”是真实实验结论，不能靠再次统计把它转成普遍优势。
+0046 下一步：W5：将“结构特异 inductive bias”作为核心定位；引用负结果和 G 的适用性局限。若要提出实际筛选规则才需要 N7。
+0047 Ww2  约 P 倍开销是否值得，随维度/候选比例如何变化
+0048 正文：§3.4 给出 O(n_l CP)、O(CPB) 及每棵树额外一乘法的复杂度分析。
+0049 附录：Appendix B.7 提供 13.61×–57.11× 等典型集合中位耗时倍率；D.2、D.4 Figure 1 说明 p 与品质/时间的关系；F 还有预测耗时。
+0050 判定：部分回应     “耗时已量化”≠“相同时间预算下仍具有可取的效能”。
+0051 下一步：N3：选择代表性数据集做等 wall-clock 预算基线；复用 D.4 图做现象解释，不必重复绘图。
+0052 Ww3  缺少最相近 linear-leaf boosting 方法的实证对比
+0053 正文：§2 Related Work 对 PL Trees、LinXGBoost 的机制差异已有叙述。
+0054 附录：Appendix C–F 主要覆盖 XGBoost、LightGBM、CatBoost 等，不包含近似 linear-leaf boosted baseline。
+0055 判定：尚未直接覆盖     方法差异可以文字澄清，竞争力需直接对比。
+0056 下一步：N1 与 Q1 同时处理；避免复制一套实验。
+0057 1.3 t7wg（5 分）｜第二个重点争取对象
+0058 T1  相对 M5 / PILOT / PL Trees / LinXGBoost 的创新似增量
+0059 正文：§2 将创新收敛到 per-leaf 独立 predictive feature、单参数叶、predictive-aware histogram score。
+0060 附录：C/D 提供机制对齐及组件变化，未形成这些方法的直接对照；无法证明相对近邻方法的性能优势。
+0061 判定：部分回应     概念创新有所说明，但强度和实证仍待提升。
+0062 下一步：N1 + W1：明确“并非发明线性叶”，而是新 inductive bias 和算法组合；加入方法对比表。
+0063 T2  何时真实数据集适用，有无部署前诊断指标
+0064 正文：§4.2 机制合成与负控显示条件结构依赖；§5 定位为选择性优势。
+0065 附录：Appendix G 已有 A0、A_suit 两阶段诊断；开发 14 cell 上关联较好，但 4 个独立合成 pilot 的 permutation p=0.4000；真实 3 数据集中 Full/ SplitOnly 仅胜 1 个。
+0066 判定：部分回应     附录 G 当前只衡量 leaf contribution（Full vs SplitOnly），且泛化证据不足，不能当已验证的 CrossGB–XGBoost win predictor。
+0067 下一步：先用 G 诚实回答“已有探索”；若要宣称实用预测准则，须 N7：独立真实数据并以 Full vs XGBoost 为结果变量评估。
+0068 T3  准确率—计算代价是否值得；是否有 compute-matched baseline
+0069 正文：§3.4 的 P 倍复杂度、§4.4 的实际收益格局已报告。
+0070 附录：B.7、D.4、E/F 已披露耗时与品质关系；不同模型共享搜索候选数量，但不是同 wall-clock 预算。
+0071 判定：部分回应     现有耗时图与等训练预算性能不是同一问题。
+0072 下一步：N3：固定硬件线程和时间预算，允许 XGBoost 在相同预算下增加 boosting rounds/调参，比较最佳验证选择后的 held-out 性能。
+0073 T4  每叶恰好 1 个 predictive feature 是否必要
+0074 正文：§3.2 有单特征 closed-form + regularization + bias 的归纳偏置理由。
+0075 附录：Appendix G.1 解释单变量可表示性，D 有 p 的候选数量敏感性；都不是 k=1 对 k=2,3 的容量比较。
+0076 判定：部分回应     “候选特征比例 p”调的是候选数量，不是每叶同时使用的特征数 k。
+0077 下一步：N5：固定 routing 的 k=1/2/3 消融（低成本）或完整多特征叶变体（高成本）；需明确局限。
+0078 1.4 VVba（7 分）｜以写作澄清巩固认可
+0079 V1  斜向分类边界是否仍是阶梯状
+0080 正文：§3.2 描述对分类 margin 的标量 additive updates，但未直接分析几何决策边界。
+0081 附录：Appendix A.1–A.2 已给二分类 logistic、multiclass class-wise 更新公式；无斜向边界专门的二维例子。
+0082 判定：部分回应     分类目标实现已解释，但边界形态问题不等于分类 loss 推导。
+0083 下一步：W4：从 margin 的线性叶叠加解释表达能力；若仍不直观，追加可选 N8 二维斜界可视化。
+0084 V2  为何不是 affine leaf α + βx；x=0 时叶输出为 0
+0085 正文：§3.2 定义 f=ηβφ_j(x)，候选 φ_0=1 为常数叶；它是“常数或斜率”选择，不是同一叶的截距+斜率。
+0086 附录：Appendix A/B 讨论模型训练和归一化，未给 affine 与 slope-only 的严格比较。
+0087 判定：部分回应     现有 bias candidate 不能被错误表述为已有 α+βx。
+0088 下一步：W2：直接承认假设空间，并解释节约单参数、与 boosting 全局残差修正的关系；如需实证，与 N5 共用 affine k=1 对照。
+0089 V3  tree-level 采样而非 node-level，何时独立/共享
+0090 正文：§3.3 已说明 C_t/P_t 在每棵树分别抽样，除显式共享外独立，实验维持角色分离。
+0091 附录：Appendix B.2 给出实际候选搜索、采样固定项；无 node-level 采样对照。
+0092 判定：可由现有材料主要回应     该问题主要是架构设计理由和句意不清， Reviewer 未要求大型性能验证。
+0093 下一步：W3：说明实现动机（计算、缓存和公平性），指出 shared 是可选设计而非实验实现；不必优先新增 node-level ablation。
+0094 V4  CatBoost 平均排名领先，CrossGB 结果不够“spectacular”
+0095 正文：§4.4 Table 3/4 承认 CatBoost 更高排名，CrossGB 未自称普遍领先。
+0096 附录：Appendix E.3 Table 16 补折间 SD 与全套 8-model 对比；不能反向证明 CrossGB 全局排名领先。
+0097 判定：可由现有材料主要回应     属于定位而非缺一项独立的新实验。
+0098 下一步：W5：把归纳偏置收益与传统 CatBoost 优化/系统机制分开，承认基线结果，不再追加重复排行榜。
+0099 V5  p 与 ρp 符号混用、SplitOnly(p=1) 的含义
+0100 正文：§3.3 使用 ρ_p 为预测候选比例，§4.3 使用 p 为比例别名；SplitOnly 指 predictive-aware score 有效而最终叶仍为 bias-only。
+0101 附录：Appendix D.1 / Table 5 清单表明 SplitOnly 与 Full 的配置，但符号层面仍须统一。
+0102 判定：可由现有材料主要回应     纯表达修正，不需要重跑。
+0103 下一步：W4：统一 p/ρ_p 或显式声明缩写；把 SplitOnly 的算法输出说明写到表注和 rebuttal。
+0104 1.5 jSCP（4 分）｜需要额外证据，但不可夸大
+0105 J1  被视为已有多变量 linear model-tree 的特例；缺 PL Trees、LinXGBoost、LightGBM Linear Trees 等对比
+0106 正文：§2 已讨论 M5、PILOT、PL Trees、LinXGBoost，但对于 TAO/CLARITree 等 Reviewer 提到的新工作无完整对比。
+0107 附录：附录 C–F 无近似 boosting linear-leaf 基线结果。
+0108 判定：尚未直接覆盖     “更少叶参数”本身不足以保证比多变量叶更好。
+0109 下一步：N1：至少最接近的 PL Trees / LinXGBoost；LightGBM linear_tree 可作强实现候选。新增文献对比表涵盖被点名的新工作，但不必一律训练所有算法。
+0110 J2  真实 Tabular 结果弱，训练却慢 10–100 倍
+0111 正文：§4.4 已公开 9/10、8/2/13 等结果，§3.4 给出了成本复杂度。
+0112 附录：Reviewer 明确使用 Appendix B.7 的 Wilcoxon；E Tables 14–17 与 D.4 也已反映负结果、耗时与不同协议。
+0113 判定：部分回应     审稿人实际上知道“负结果”和“耗时”，真正缺的是为什么值得使用。
+0114 下一步：N3 的等预算基线与 N4 的机制失败解释；W5 收紧适用边界。不要再做同一 Wilcoxon 检验。
+0115 J3  Forecasting 增益达 35.4% 中位 / 69.6% 最大，但机制与统计支持不足
+0116 正文：§4.5 Table 5 有 10 个 forecasting task 及 horizon/数据来源，8/10 领先的结果。
+0117 附录：Appendix B.4 给出 60/20/20 时序划分、24-step lag、300 candidates、尺度拟合边界；F Table 18 完整 RMSE 与 33–193× 耗时；每任务仍主要是单次固定 chronological test。
+0118 判定：部分回应     已有协议不等于多次时间切分稳健性和 forecasting-specific 强基线。
+0119 下一步：N6：优先在 Exchange rate/ILI 上做 rolling-origin、多时间截点以及 persistence/AR baseline；核查无泄漏、相同 target scaling。
+0120 J4  为何每叶仅使用 1 特征，而不比较 k=2/3/all
+0121 正文：§3.2 说明 one-parameter leaf 的设计目标。
+0122 附录：附录 D 的 p 策略敏感性与 Appendix G 的单变量可表示性，不构成多变量 leaf 的直接消融。
+0123 判定：尚未直接覆盖     这是清晰且可落地的缺失消融。
+0124 下一步：N5：至少 k=1/2/3 容量测试；视方法复杂度注明固定 routing 与 full retraining 的差别。
+0125 2. 现有证据库：直接引用，避免重做
+0126 [TABLE]
+0127 章节/表图 | 现有内容与可复用价值 | 不能用来支持的结论
+0128 Main §2, §3.2–3.4 | 创新结构、单特征叶公式、双角色采样、复杂度 | 不能代替相近方法直接性能比较；bias-only 不是 affine leaf。
+0129 Main §4.2 Table 1 + Supp C | 19 机制、10/20 维、阴性控制、五折离散 | 不能据此宣称普遍真实数据收益。
+0130 Main §4.3 Table 2 + Supp D.1–D.3 Tables 10–12 | 16 冻结变体、3 个独立 seeds、p dose-response、两路径 paired component effects | 没有 StandardSplit + PredictiveLeaf；也不是 k=2/3。
+0131 Supp D.4 Fig.1, Table 13 | mean/median/max scoring 影响与 runtime–quality descriptive scatter | 不是 compute-matched baseline。
+0132 Supp B.7, E Tables 14–17 | 完整真实数据 per-dataset SD / wins / Wilcoxon / runtime / non-equal-budget follow-up | 不能证明平均性能更强或统计等价；不能混用 TabArena30 的不等预算数据。
+0133 Main §4.5, Supp B.4 / F Table 18 | 10 个时序任务、24-step、60/20/20、300 candidates、完整 RMSE 与耗时 | 单时间截点结果不能证明跨时间切分稳定；无 persistence/AR 基线。
+0134 Supp A.1–A.3 | 二分类 logistic / 多分类 scalar tree 导数与更新 | 不直接解决斜向边界的几何机制。
+0135 Supp G Tables 19–20 | 结构筛选 A_suit 与 Full–SplitOnly realized gain，synthetic/real pilot | 独立验证不足；尚未预测完整 CrossGB vs XGBoost 的优势。
+0136 [/TABLE]
+0137 3. 真正缺失的新实验证据：最小充分方案
+0138 分级说明  P0=核心创新与成本收益的直接缺口；P1=有资源时补强可信度；P2=主要是 7 分 Reviewer 的可视化。N4 优先尽量用现有记录分析，未必需要完整重训。
+0139 N1｜最近邻 linear-leaf 方法直接对比     [P0]
+0140 覆盖：Q1 / Ww3 / T1 / J1
+0141 现有证据：可复用 Main §4.2/4.4 及 Supp B/C/E 的划分、预处理和指标；但现有 baseline 不是 linear-leaf 相邻方法。
+0142 最小新实验：优先 PL Trees、LinXGBoost；可行时补 LightGBM linear_tree。至少机制合成数据（regime slope、feature switch + negative control）和真实回归正/负例；同样数据划分、计算资源及清晰的 tuning budget。对仅回归兼容的实现不强求分类。
+0143 交付形式：新增 R1: methods × datasets 的 RMSE/训练时间表；W1: 方法结构对比（split feature、leaf features、split scoring、capacity、boosting）。
+0144 边界：  即使 CrossGB 不是整体赢家，也需要说明其收益集中于何种结构，不能宣称通用胜出。
+0145 N2｜LeafOnly：Standard split + Predictive leaf     [P0]
+0146 覆盖：Q2 / T1 / J4（间接）
+0147 现有证据：已有 BiasOnly、SplitOnly、Full，Supp D.1–D.3 的同一个固定 backbone 可直接扩展。
+0148 最小新实验：新增一条 LeafOnly 路径；保持相同数据种子、backbone、采样、正则化和最后叶 refresh 规则。最小做 6 个正文 synthetic 机制 + 10/20 维；分析 Score-only、Leaf-only、Full 的交互作用。
+0149 交付形式：新增 R2: 四配置主表（XGB anchor / SplitOnly / LeafOnly / Full）+ 组件边际/交互效果；原 Table 12 结果直接复用。
+0150 边界：  对交互非线性不强行解释为简单百分比可加；检查 leaf fitted objective 与 scoring 目标一致性。
+0151 N3｜Compute-matched fair baseline     [P0]
+0152 覆盖：Ww2 / T3 / J2
+0153 现有证据：Supp D.4 已有 runtime–quality 散点，B.7/E/F 有耗时比，但并非公平时间预算实验。
+0154 最小新实验：代表性选择：Regime slope 或 positive real (Kin8nm)、近似持平数据、CPU 负例。固定硬件与线程、相同 wall-clock 预算；XGBoost 用该时间扩大 trees/超参搜索，均通过验证集选择、同 held-out test 评价。
+0155 交付形式：新增 R3: budget–performance 曲线与单位成本收益表；同时标记算法 runtime 与包含搜索的总 budget。
+0156 边界：  如果 CrossGB 的优势在等预算条件下消失，应缩小 cost-effectiveness 的主张。
+0157 N4｜CPU 等大幅退化的失败机制证据     [P0/轻量]
+0158 覆盖：Q3 / T2 / J2
+0159 现有证据：Appendix E Table 14 已给出 CPU：RMSE 2.1868→3.9344，且折间差异和耗时显著；G 未针对 CPU 解释。
+0160 最小新实验：优先后处理模型与候选日志：追踪 p/候选比例、最佳 leaf features、leaf sample size、shrinkage 和不同局部残差形态；必要时最小固定-backbone对照 CPU vs Kin8nm。
+0161 交付形式：新增 R4: 1 张正/负例机制对照表 + 简短诊断，明确哪些是实测相关、哪些只是推测。
+0162 边界：  不要把 Correlation 直接写成 causal diagnosis；负结果必须如实保留。
+0163 N5｜k=1/2/3 / affine leaf 容量消融     [P1]
+0164 覆盖：T4 / J4 / V2
+0165 现有证据：p 的 dose-response 调整候选池，而不是每个叶同时建模 k 个预测特征。
+0166 最小新实验：可采用阶段 I 固定 routing 比 k=1,2,3 (+affine k=1)；若宣称全算法性能，要阶段 II 完整适配 split search。合成机制覆盖单一 slope、多变量交互、负控，并选正/负真实数据。
+0167 交付形式：新增 R5: capacity–RMSE–runtime–overfitting 对比；文本明确 fixed-routing 和 full-model 的差别。
+0168 边界：  k=1 不必处处最好，但应显示参数预算、解释性或运行成本的合理折中。
+0169 N6｜Forecasting 多时间切分稳健性 / 专用基线     [P1]
+0170 覆盖：J3
+0171 现有证据：Appendix B.4/F 已有合法的单次时序划分与完整 RMSE；尚无多 cutoffs、persistence/AR 家族对照。
+0172 最小新实验：优先 Exchange rate h=6/12 与 ILI h=1/6/12；复核 target construction/normalization、绝不使用未来数据。增加滚动起点/多切分与 persistence、季节性 naive、简单 AR；统一 horizon 和 train/test 时间。
+0173 交付形式：新增 R6: 时序 cutoffs 的 mean±dispersion / gain + forecasting-specific references。
+0174 边界：  应报告收益是否仍稳定，不能以单次 69.6% 的提升泛化到所有时间。
+0175 N7｜真实数据适用性诊断的外部验证     [P1]
+0176 覆盖：T2 / Q3 / J2
+0177 现有证据：已有 Supp G 双阶段 A_suit，但独立 pilot n=4、p=0.4，真实 n=3 且 only Full/ SplitOnly 1/3 胜。
+0178 最小新实验：若需要可部署前规则，则锁定 G 评分不再调整，使用独立真实任务、training-only 提取特征，并以 held-out CrossGB vs XGB 真实收益为主要目标；可另报 Full vs SplitOnly 的机制中间量。
+0179 交付形式：新增 R7: dataset-level rank correlation / AUC 与置信区间，并公开失败例。
+0180 边界：  未形成稳定结果前不应声称已有可泛化 suitability predictor。
+0181 N8｜Diagonal boundary 2D 可视化     [P2]
+0182 覆盖：V1
+0183 现有证据：Supp A 有分类训练公式，暂无直接空间几何演示。
+0184 最小新实验：合成 y=1[x1+x2>0]；可视化 XGB / CrossGB 在不同树数下的 margin 和分类界面。先完成理论解释，若版面与计算时间允许再追加图。
+0185 交付形式：新增小图，不建议为已给 7 分的 VVba 投入大规模 benchmark。
+0186 边界：  标准轴平行 CART 不能用单次普通轴平行 split 表示任意 oblique boundary；表述中避免误把其当斜向 CART。
+0187 4. 在新实验前必须处理的实现与叙述一致性
+0188 这些检查不直接来自五位人工 Reviewer 的 Weakness 清单，但会决定新实验与 Rebuttal 是否可信；优先级高于盲目扩增 benchmark。
+0189 [TABLE]
+0190 核查项 | 已有材料中存在的信号 | 建议检查
+0191 A0｜BiasOnly≈XGBoost 一致性 | Main Table 2 的 Categorical regime slope 为 XGB 0.3778、BiasOnly 0.3258、Full 0.3231；尽管 D.1 报告 14 cell 中位差异 0.05%，该单元偏离明显。 | 核对 split、gain threshold、regularization、bin、random seed、leaf refresh 及汇总层级；对单棵树做数值对齐。
+0192 A1｜Figure 1 one-tree / shrinkage | Main Figure 1 声称 η=0.1 且 CrossGB 一棵树达到 noise floor；§3.2 定义树的输出含 η。 | 复现实验、核实初始 margin、绘图所用更新数及 “one tree” 的含义；必要时修正文案。
+0193 A2｜Split score vs final refresh | Main §3.3 Algorithm 1 的 split criterion 在候选 j 上聚合，而最终每叶 independently 选 j；两阶段不必是同一优化目标。 | 严格标注 surrogate scoring 与最终拟合目标的区别；若强调 loss reduction guarantee，先做代数验证/反例排查。
+0194 A3｜Binned statistics vs raw inference | Main §3.2/3.4 与 Supp A.3 均表明训练采用 bin representative z、预测采用 raw x。 | 核查近似误差与优化目标表述是否准确；必要时单独小规模量化。
+0195 [/TABLE]
+0196 5. 合并覆盖矩阵与 Rebuttal 排程
+0197 [TABLE]
+0198 实验/写作包 | 可同时回答谁 | 从旧指南保留/调整
+0199 N1 + W1 | qxju(Q1), wWos(Ww3), t7wg(T1), jSCP(J1) | P0，新实验 + 更严格的近邻方法定位；同一组结果引用四次。
+0200 N2 + D1/D3 | qxju(Q2), t7wg(T1), jSCP(J4，间接) | 只增 LeafOnly，不重做 16 配置。
+0201 N3 + D4/B7 | wWos(Ww2), t7wg(T3), jSCP(J2) | 只增等预算，复用已有耗时与质量图。
+0202 N4 + E/G | qxju(Q3), t7wg(T2), jSCP(J2) | 先重分析，后最小重训。
+0203 N5 + W2 | t7wg(T4), jSCP(J4), VVba(V2) | k 容量比较；可顺便回答 affine 设计。
+0204 N6 + B4/F | jSCP(J3) | 新增跨时间切分，协议与固定切分结果无需复做。
+0205 W3/W4/W5 + A/B/E | VVba(V1/V3/V4/V5) + 全部 | 正文与附录已有内容的解释/修订，无须多余实验。
+0206 [/TABLE]
+0207 6. 执行顺序：可直接勾选
+0208 Phase 0｜可信度审核（先做）
+0209 [ ] 对齐 BiasOnly 与 XGBoost 异常单元；检查 Categorical regime slope
+0210 [ ] 核查 Main Figure 1 的 η=0.1 / one-tree 描述
+0211 [ ] 确认 split-score 与 leaf refresh 目标说明准确
+0212 [ ] 核查 forecasting split、target scaling、时间信息边界
+0213 Phase 1｜最高提分价值实验
+0214 [ ] N1: 两个近邻 boosted linear-leaf 基线结果及公平协议
+0215 [ ] N2: 补 LeafOnly 的固定-backbone组件消融
+0216 [ ] N3: 代表性数据的 equal wall-clock XGBoost baseline
+0217 [ ] N4: CPU 正负例机制诊断（先用旧日志）
+0218 Phase 2｜资源允许的增强项
+0219 [ ] N5: 固定 routing 的 k=1/2/3 和 affine 叶容量实验
+0220 [ ] N6: Exchange/ILI 多 cutoffs 与 naive/AR 基线
+0221 [ ] N7: Appendix G suitability 的独立真实数据验证
+0222 [ ] N8: 对 VVba 的二维分类边界图（可选）
+0223 Phase 3｜写作/审稿回复
+0224 [ ] W1: Related Work 机制对比表（M5/PILOT/PL/LinXGBoost等）
+0225 [ ] W2: 解释 slope-only 与 bias candidate、非 affine leaf
+0226 [ ] W3: 解释 tree-level 和独立/共享采样机制
+0227 [ ] W4: 消除 p/ρp 歧义、说明 SplitOnly、澄清分类几何
+0228 [ ] W5: 将结论限制为 structure-specific，准确引述 B/E/F/G
+0229 [ ] 每位 Reviewer 的每条 Weakness 都给出 Main 与 Supplement 的表号和新结果索引
+0230 7. Rebuttal 回复模板：只表达可被验证的事实
+0231 针对已有证据未被注意：
+0232 “We appreciate the concern. We agree that the evidence should be easier to locate. The submitted Supplement, Appendix X (Table Y), already reports […]. We will make this result more prominent in the main text/rebuttal.”
+0233 针对已有证据但无法支持普遍优势：
+0234 “We agree that CrossGB is not a universal tabular replacement. The held-out results and paired tests in Appendix B.7/E support a selective, mechanism-dependent benefit, and we have revised the scope of our claim accordingly.”
+0235 针对真正缺失的反事实：
+0236 “The existing fixed-backbone ablation (Main Table 2; Supplement D.1–D.3) compares BiasOnly → SplitOnly → Full, but does not contain the standard-split/predictive-leaf combination. We therefore add the missing LeafOnly baseline under the same split and backbone protocol [report actual results here].”
+0237 针对结构适用性诊断：
+0238 “Appendix G explores a two-stage structural suitability screen. Its independent pilots remain limited; we do not regard it as a validated predictor of CrossGB’s overall advantage over XGBoost.”
+0239 8. 原稿证据索引（快速定位）
+0240 Main manuscript（8 页）：§2 Related Work；§3.2 leaf model；§3.3 score & sampling；§3.4 cost；§4.2 Table 1（synthetic）；§4.3 Table 2（ablation）；§4.4 Tables 3–4（tabular）；§4.5 Table 5（forecasting）。
+0241 Technical Supplement（18 页）：A 分类与实现；B.1–B.8 协议/统计/耗时；C Tables 6–9 合成；D Tables 10–13 & Figure 1 消融/敏感性；E Tables 14–17 真实数据；F Table 18 预测；G Tables 19–20 结构诊断。
+0242 Reviewers file（11 页）：qxju pp.2–3；wWos pp.3–4；t7wg pp.4–6；VVba pp.6–7；jSCP pp.7–8。
+0243 本指南的“解决程度”是当前文稿证据的覆盖审计，不代表 Reviewer 实际阅读深度，也不承诺对应评分会上升。

@@ -1,0 +1,149 @@
+{
+  "data": "/home/admin/crossgb_fastlane_20261027/fastlane_data/S1_sparse__s97001.npz",
+  "effective_params": {
+    "deterministic": true,
+    "force_col_wise": true,
+    "learning_rate": 0.3,
+    "linear_lambda": 0.1,
+    "linear_tree": true,
+    "max_bin": 63,
+    "max_depth": 2,
+    "min_child_samples": 10,
+    "n_estimators": 64,
+    "n_jobs": 1,
+    "num_leaves": 4,
+    "num_threads": 1,
+    "random_state": 97001,
+    "reg_lambda": 0.1,
+    "verbosity": -1
+  },
+  "estimator_params": {
+    "boosting_type": "gbdt",
+    "class_weight": null,
+    "colsample_bytree": 1.0,
+    "deterministic": true,
+    "force_col_wise": true,
+    "importance_type": "split",
+    "learning_rate": 0.3,
+    "linear_lambda": 0.1,
+    "linear_tree": true,
+    "max_bin": 63,
+    "max_depth": 2,
+    "min_child_samples": 10,
+    "min_child_weight": 0.001,
+    "min_split_gain": 0.0,
+    "n_estimators": 64,
+    "n_jobs": 1,
+    "num_leaves": 4,
+    "num_threads": 1,
+    "objective": null,
+    "random_state": 97001,
+    "reg_alpha": 0.0,
+    "reg_lambda": 0.1,
+    "subsample": 1.0,
+    "subsample_for_bin": 200000,
+    "subsample_freq": 0,
+    "verbosity": -1
+  },
+  "evaluate_test": false,
+  "lineage": {
+    "native_library": "/home/admin/crossgb_fastlane_20261027/.venv/lib/python3.13/site-packages/lightgbm/lib/lib_lightgbm.so",
+    "native_sha256": "573d57e8a2c6290c2271b99b87afa7a802e796eafc9e8d66aefa0913cbc1616a",
+    "package_path": "/home/admin/crossgb_fastlane_20261027/.venv/lib/python3.13/site-packages/lightgbm/__init__.py",
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:16:10) [GCC 11.2.0]",
+    "version": "4.7.0"
+  },
+  "metadata_nonfinite_policy": "metadata-only strings: NaN, +Infinity, -Infinity; metrics remain strict",
+  "method": "LGB_linear",
+  "metrics": {
+    "train": {
+      "rmse": 0.15699407516226416
+    },
+    "val": {
+      "rmse": 1.6065512930400911
+    }
+  },
+  "model_info": {
+    "feature_importance_split": [
+      9,
+      18,
+      5,
+      2,
+      3,
+      1,
+      2,
+      3,
+      2,
+      4,
+      3,
+      7,
+      5,
+      6,
+      8,
+      1,
+      7,
+      5,
+      4,
+      5,
+      4,
+      11,
+      7,
+      2,
+      4,
+      2,
+      5,
+      4,
+      4,
+      6,
+      9,
+      7
+    ],
+    "leaf_count": 229,
+    "n_features": 32,
+    "tree_count": 64
+  },
+  "n_features": 32,
+  "n_rows": 240,
+  "preprocessing": "supplied_npz; none_in_worker",
+  "requested_params": {
+    "depth": 2,
+    "learning_rate": 0.3,
+    "p": 1.0,
+    "ridge": 0.1,
+    "trees": 64
+  },
+  "root": "/home/admin/crossgb_fastlane_20261027",
+  "schema_version": 1,
+  "seed": 97001,
+  "split_counts": {
+    "test": 48,
+    "train": 144,
+    "val": 48
+  },
+  "split_hashes": {
+    "test": "a1c260311356b5ab5b4014e0e35e9659caadb9fd2620cb8d891f32214ac8eb7c",
+    "train": "b59688534a15b0e47604c83c7809ad46807fd51c1388163ebde2fefbb7c457e6",
+    "val": "ab1767c52f3199940824aea78499312d00d739e1ceb7337edfefb5a0f0da45e3"
+  },
+  "status": "ok",
+  "target_hashes": {
+    "train": "7e627e6b152f5f59362a988bb1ecb67eea1abced75777cac4a46091081bcad82",
+    "val": "7970cd7b796f29d9ac2288ffac0048ef157d0829ccfc73853b287f6769d1e85d"
+  },
+  "task_type": "regression",
+  "test_labels_used": false,
+  "threads_per_fit": 1,
+  "timings": {
+    "fit_cpu_sec": 0.012940289999999965,
+    "fit_wall_sec": 0.01293825899483636,
+    "predict_train_cpu_sec": 0.0009982540000001983,
+    "predict_train_wall_sec": 0.0009973199921660125,
+    "predict_val_cpu_sec": 0.0007841740000000819,
+    "predict_val_wall_sec": 0.0007829279929865152
+  },
+  "total_wall_sec": 1.0690102060034405,
+  "train_rmse": 0.15699407516226416,
+  "val_rmse": 1.6065512930400911,
+  "worker_sha256": "d2e2743d38c80b4d82b9bfb5e4a04aa1a88be952603460fad86f0e9fcb747e2a"
+}

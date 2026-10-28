@@ -1,0 +1,227 @@
+{
+  "stage": "confirmation",
+  "host": "cpu4_pool.zjuici.com",
+  "core_slot": 0,
+  "worker_sha256": "d2e2743d38c80b4d82b9bfb5e4a04aa1a88be952603460fad86f0e9fcb747e2a",
+  "wall_budget_seconds": 1200,
+  "data_sha256": {
+    "advantage_inputs/confirmation/synthetic/A06_two_sparse_modules__s111003.npz": "d58239c7aa521db1238588885b39abe9a867fb22e13e1e2ea85ba26699c13e19",
+    "advantage_inputs/confirmation/synthetic/A06_two_sparse_modules__s111005.npz": "77eafebcf0672390402e5dc394cd5a9337db32be1420e6d691eb8a11b84499fa",
+    "advantage_inputs/confirmation/synthetic/A06_two_sparse_modules__s111002.npz": "b0beecf29cbbcedbeaa9ae20e3bfb18a5aaccb75762bd2728233e046b7b89d22",
+    "advantage_inputs/confirmation/synthetic/A06_two_sparse_modules__s111004.npz": "48de9ca151035dee7d6bb2a233562dbe2bd0fd216badb522bccf17eb0f5e696a",
+    "advantage_inputs/confirmation/synthetic/A06_two_sparse_modules__s111001.npz": "56532b5b0470998ec97e884f30c41c4399ec15f9d9b6f355aa0c29fd7e114b12",
+    "advantage_inputs/confirmation/real/gas_turbine_nox__s113003.npz": "a5bbd511b70c57a7c6e9b9676216445cdf20b0ca62150ef6d2b0a2850c4e53a8",
+    "advantage_inputs/confirmation/real/gas_turbine_nox__s113005.npz": "0ab9951e1f940e2050b4a12df58020d9e960561fb1ae3a841d41d93889d3c3f4",
+    "advantage_inputs/confirmation/real/gas_turbine_nox__s113002.npz": "bf7b32c8e87698879a2bb75d2aa177c306d28c85477ca919ed09739eac161790",
+    "advantage_inputs/confirmation/real/gas_turbine_nox__s113004.npz": "ce045fde44afe60de1e73e52ea3f4146213521d0832d233b980777a8b7db49b6",
+    "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz": "bd32e82fa71677029e2336caba1eb99ed65e5d6dd5060785073ba8770a8fde3e"
+  },
+  "jobs": [
+    {
+      "id": "A06_two_sparse_modules/CrossGB/s111003",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 111003,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/synthetic/A06_two_sparse_modules__s111003.npz",
+      "relative_output": "A06_two_sparse_modules/CrossGB/s111003",
+      "evaluate_test": true,
+      "save_model": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "A06_two_sparse_modules/XGB/s111005",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "XGB",
+      "candidate": 14,
+      "seed": 111005,
+      "params": {
+        "depth": 5,
+        "ridge": 1.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/synthetic/A06_two_sparse_modules__s111005.npz",
+      "relative_output": "A06_two_sparse_modules/XGB/s111005",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_linear/s111002",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 111002,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/synthetic/A06_two_sparse_modules__s111002.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_linear/s111002",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "A06_two_sparse_modules/PL/s111004",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 111004,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "advantage_inputs/confirmation/synthetic/A06_two_sparse_modules__s111004.npz",
+      "relative_output": "A06_two_sparse_modules/PL/s111004",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "A06_two_sparse_modules/LeafOnly/s111001",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "LeafOnly",
+      "candidate": 13,
+      "seed": 111001,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/synthetic/A06_two_sparse_modules__s111001.npz",
+      "relative_output": "A06_two_sparse_modules/LeafOnly/s111001",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/CrossGB/s113003",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "CrossGB",
+      "candidate": 7,
+      "seed": 113003,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 64,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113003.npz",
+      "relative_output": "gas_turbine_nox/CrossGB/s113003",
+      "evaluate_test": true,
+      "save_model": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/XGB/s113005",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "XGB",
+      "candidate": 16,
+      "seed": 113005,
+      "params": {
+        "depth": 3,
+        "ridge": 0.01,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113005.npz",
+      "relative_output": "gas_turbine_nox/XGB/s113005",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/LGB_linear/s113002",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LGB_linear",
+      "candidate": 11,
+      "seed": 113002,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113002.npz",
+      "relative_output": "gas_turbine_nox/LGB_linear/s113002",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/PL/s113004",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "PL",
+      "candidate": 5,
+      "seed": 113004,
+      "params": {
+        "num_trees": 256,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 0.1,
+        "max_var": 3,
+        "leaf_type": "linear",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 0.05
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113004.npz",
+      "relative_output": "gas_turbine_nox/PL/s113004",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/LeafOnly/s113001",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LeafOnly",
+      "candidate": 7,
+      "seed": 113001,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 64,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/LeafOnly/s113001",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "seed": 110002,
+  "phase": "development",
+  "task_type": "regression",
+  "family": "A04_imbalanced_gate",
+  "case": "A04_imbalanced_gate",
+  "control": "imbalanced",
+  "source": "independent standard Normal coordinates; fresh versioned data seeds",
+  "source_version": "cgb-advantage-synthetic-v1-20261028",
+  "formula": "f(X)=2 [(I(x0>=Phi^-1(.8))-.2)/sqrt(.2*.8)] x1; y=f(X)+epsilon",
+  "case_definition": {
+    "case": "A04_imbalanced_gate",
+    "n": 240,
+    "d": 32,
+    "kind": "imbalanced",
+    "formula": "f(X)=2 [(I(x0>=Phi^-1(.8))-.2)/sqrt(.2*.8)] x1",
+    "axis": "20/80 region imbalance with population-centered gate",
+    "pair_group": "n240_d32",
+    "gate_features": [
+      0
+    ],
+    "predictive_by_region": {
+      "0": [
+        1
+      ],
+      "1": [
+        1
+      ]
+    }
+  },
+  "noise_sd": 0.3,
+  "feature_names": [
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5",
+    "x6",
+    "x7",
+    "x8",
+    "x9",
+    "x10",
+    "x11",
+    "x12",
+    "x13",
+    "x14",
+    "x15",
+    "x16",
+    "x17",
+    "x18",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29",
+    "x30",
+    "x31"
+  ],
+  "population_signal_L2": 2.0,
+  "population_signal_mean": 0.0,
+  "population_signal_variance": 4.0,
+  "preprocessing": {
+    "X": "none; all coordinates population N(0,1)",
+    "y": "none; analytic population scaling only"
+  },
+  "matching": {
+    "pair_group": "n240_d32",
+    "X_sha256": "2f890a9743b4366d8030ba58e3e31c859b35cb48ecdb31b4aa7db98fe20d8683",
+    "eps_sha256": "14ddf38344de79acff9adf96e5c066f70c79f3b46993417d28e4d60452e2d0ca",
+    "shared_latent_base": "same seed shares 480x64 master X and independent 480-vector noise; subsets by n,d"
+  },
+  "split_protocol": "seeded row random 60/20/20; source fastlane random_split unchanged",
+  "oracle_support": {
+    "gate_features": [
+      0
+    ],
+    "predictive_by_region": {
+      "0": [
+        1
+      ],
+      "1": [
+        1
+      ]
+    }
+  },
+  "oracle_arrays": "diagnostic only; never concatenate oracle_signal/oracle_region/noise to X",
+  "gate_definition": {
+    "imbalanced_probability": 0.2,
+    "threshold": 0.8416212335729144,
+    "threshold_scope": "fixed analytic population quantile; no sample labels or target use"
+  },
+  "seed_collision_check": {
+    "seeds": [
+      110001,
+      110002,
+      111001,
+      111002,
+      111003,
+      111004,
+      111005
+    ],
+    "collisions": [],
+    "searched_roots": [
+      "rebuttal",
+      "local_sync"
+    ],
+    "excluded": "rebuttal/advantage_exploration_20261028 (current new exploration)",
+    "text_scope": "json/jsonl/py/md/csv/yaml/yml/sh/toml/txt; integer tokens, excluding decimal substrings",
+    "filenames_checked": 19619,
+    "filename_collisions": []
+  },
+  "protocol_version": "cgb-advantage-synthetic-v1-20261028",
+  "dataset": "A04_imbalanced_gate__s110002",
+  "rows": 240,
+  "features": 32,
+  "npz_sha256": "4cc1a8b529f525620def9c060d11856261a20dd539dfd419ec501228af0c1ecc",
+  "array_sha256": {
+    "X": "e46f9e812534ef1f8d40aef4512baade6ec7b54480c8b1b61f5e2f8a2890ef1f",
+    "y": "e297f1f74c02c6f2c8e75c9491db2c71b59524a6a7522369dc045fa949cd096e",
+    "train": "cd48248639a4f8f3df4090443ff178218e95ddb92845b3f000a1ab7277f459e7",
+    "val": "9f7c5eb049a1c22ea8ec476e43cdc1acb7ab06c1b22c386ff32f3f157c7cd8d9",
+    "test": "5e942380a89bb47b370ea14f51388613a5e5acdffc8c8c4751b659f5e7b972ab",
+    "task_type": "b37fe1a8d1db433437be5660a92834770ec3ad508555ba73d85e5897edbe32b8",
+    "oracle_signal": "e0b5802d2ee7547e4d1e2daa1c6434452f05c1bb888c2c1c0835b6d0b524e144",
+    "oracle_region": "17c57b7f6375a741bf01ebe0fda1ebc65c946afbf31e35efcfa6bf66a83c2a2d",
+    "noise": "14ddf38344de79acff9adf96e5c066f70c79f3b46993417d28e4d60452e2d0ca",
+    "y_train": "4845120550399241489bbefeb0290055fa66fd6e59141e576acf7b960c6be376",
+    "y_val": "51888420e547a0f7e63703930e0c5c613adb55f80876936c6062c19891170570",
+    "y_test": "4cca0f7bf27e456d582727ee0672b5f0bd4eb769b0aa69daa99b69b5bdbecd0f"
+  },
+  "split_sizes": {
+    "train": 144,
+    "val": 48,
+    "test": 48
+  },
+  "groups_in_X": false,
+  "oracle_support_in_X": false
+}

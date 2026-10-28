@@ -1,0 +1,193 @@
+{
+  "kind": "timing",
+  "host": "cpu6_pool.zjuici.com",
+  "batch_budget_seconds": 1800,
+  "frozen_utc": "2026-10-27T19:40:04.675133+00:00",
+  "cases": {
+    "protein": {
+      "methods": {
+        "CrossGB": {
+          "depth": 5,
+          "ridge": 10.0,
+          "trees": 512,
+          "learning_rate": 0.05,
+          "p": 1.0
+        },
+        "XGB": {
+          "depth": 5,
+          "ridge": 10.0,
+          "trees": 512,
+          "learning_rate": 0.05,
+          "p": 1.0
+        },
+        "LGB_constant": {
+          "depth": 5,
+          "ridge": 10.0,
+          "trees": 300,
+          "learning_rate": 0.1,
+          "p": 1.0
+        },
+        "LGB_linear": {
+          "depth": 5,
+          "ridge": 10.0,
+          "trees": 512,
+          "learning_rate": 0.05,
+          "p": 1.0
+        },
+        "PL": {
+          "num_trees": 128,
+          "max_depth": 5,
+          "num_leaves": 32,
+          "l2_reg": 1.0,
+          "max_var": 5,
+          "leaf_type": "linear",
+          "min_sum_hessians": 5.0,
+          "learning_rate": 0.1
+        },
+        "LinXGBoost": {
+          "n_estimators": 5,
+          "max_depth": 2,
+          "lbda": 2.0,
+          "min_samples_leaf": 10,
+          "learning_rate": 0.3
+        }
+      },
+      "seeds": [
+        98001
+      ],
+      "source": "local_sync/fastlane_results/cpu_Calculator/results/formal24_v1/protein/choice.json"
+    },
+    "gas_turbine_co": {
+      "methods": {
+        "CrossGB": {
+          "depth": 5,
+          "ridge": 10.0,
+          "trees": 300,
+          "learning_rate": 0.1,
+          "p": 0.25
+        },
+        "XGB": {
+          "depth": 3,
+          "ridge": 1.0,
+          "trees": 64,
+          "learning_rate": 0.1,
+          "p": 1.0
+        },
+        "LGB_constant": {
+          "depth": 3,
+          "ridge": 10.0,
+          "trees": 256,
+          "learning_rate": 0.1,
+          "p": 1.0
+        },
+        "LGB_linear": {
+          "depth": 2,
+          "ridge": 0.1,
+          "trees": 64,
+          "learning_rate": 0.2,
+          "p": 1.0
+        },
+        "PL": {
+          "num_trees": 256,
+          "max_depth": 3,
+          "num_leaves": 8,
+          "l2_reg": 100.0,
+          "max_var": 5,
+          "leaf_type": "linear",
+          "min_sum_hessians": 5.0,
+          "learning_rate": 0.1
+        },
+        "LinXGBoost": {
+          "n_estimators": 5,
+          "max_depth": 2,
+          "lbda": 2.0,
+          "min_samples_leaf": 10,
+          "learning_rate": 0.3
+        }
+      },
+      "seeds": [
+        98001
+      ],
+      "source": "local_sync/fastlane_results/TabularData_Processor/results/formal24_v1/gas_turbine_co/choice.json"
+    },
+    "ilpd_numeric": {
+      "methods": {
+        "CrossGB": {
+          "depth": 2,
+          "ridge": 10.0,
+          "trees": 60,
+          "learning_rate": 0.05,
+          "p": 0.5
+        },
+        "XGB": {
+          "depth": 2,
+          "ridge": 10.0,
+          "trees": 60,
+          "learning_rate": 0.05,
+          "p": 0.5
+        },
+        "LGB_constant": {
+          "depth": 2,
+          "ridge": 10.0,
+          "trees": 60,
+          "learning_rate": 0.05,
+          "p": 0.5
+        },
+        "LGB_linear": {
+          "depth": 2,
+          "ridge": 10.0,
+          "trees": 60,
+          "learning_rate": 0.05,
+          "p": 0.5
+        }
+      },
+      "seeds": [
+        98001
+      ],
+      "source": "local_sync/fastlane_results/cpu5_pool.zjuici.com/results/formal30_class_v1/ilpd_numeric/choice.json"
+    },
+    "website_phishing": {
+      "methods": {
+        "CrossGB": {
+          "depth": 2,
+          "ridge": 0.1,
+          "trees": 64,
+          "learning_rate": 0.2,
+          "p": 1.0
+        },
+        "XGB": {
+          "depth": 5,
+          "ridge": 10.0,
+          "trees": 512,
+          "learning_rate": 0.05,
+          "p": 1.0
+        },
+        "LGB_constant": {
+          "depth": 5,
+          "ridge": 1.0,
+          "trees": 128,
+          "learning_rate": 0.1,
+          "p": 1.0
+        },
+        "LGB_linear": {
+          "depth": 4,
+          "ridge": 1.0,
+          "trees": 128,
+          "learning_rate": 0.1,
+          "p": 1.0
+        }
+      },
+      "seeds": [
+        98001
+      ],
+      "source": "local_sync/fastlane_results/cpu5_pool.zjuici.com/results/formal30_class_v1/website_phishing/choice.json"
+    }
+  },
+  "scope": "Three timing repetitions of frozen recipes; not independent accuracy repetitions; no search",
+  "data_sha256": {
+    "protein__s98001.npz": "586be91a9e38ac2413c0f70f3510d4ccf43f7d4ba8bfc5121313302e2e2320f7",
+    "gas_turbine_co__s98001.npz": "7219212adcbf6b6a2458b7870b284778ddf7627a07df7417df945b458bb7a56b",
+    "ilpd_numeric__s98001.npz": "f14ebc5815cf0b3b12516d35530e2cb4e471d2a03f2e7fdf5b667485a1e1ee5e",
+    "website_phishing__s98001.npz": "a46dab6cbeb116d7dc98e20523135e4cd4c71900bae7b42f83e79560f0c535a3"
+  }
+}

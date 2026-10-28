@@ -1,0 +1,12 @@
+{
+  "stage": "C",
+  "lanes": [
+    {
+      "host": "cpu6_pool.zjuici.com",
+      "plan": "cpu6_pool.zjuici.com.json",
+      "jobs": 90
+    }
+  ],
+  "total_jobs": 90,
+  "created_utc": "2026-10-28T10:12:22.344587+00:00"
+}

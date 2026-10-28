@@ -1,0 +1,32 @@
+{
+  "status": "verified",
+  "new_development_fits": 30,
+  "new_fit_statuses": {
+    "ok": 30
+  },
+  "reused_development_fits": 210,
+  "total_development_fits": 240,
+  "methods": 6,
+  "candidate_slots_per_method": 20,
+  "unique_recipes": {
+    "CrossGB": 20,
+    "XGB": 20,
+    "LGB_constant": 20,
+    "LGB_linear": 20,
+    "PL": 20,
+    "LinXGBoost": 16
+  },
+  "dev_seeds": [
+    97001,
+    97002
+  ],
+  "selected_on": "double-dev mean RMSE only",
+  "test_outputs_detected": 0,
+  "selection_checks": "Each successful source: method/seed/worker/thread/params/split/target/prediction indices and recomputed train/val metrics checked before selection.",
+  "new_fit_cpu_seconds": 3132.690623411,
+  "sum_new_fit_wall_seconds": 3132.9129507979087,
+  "resource_note": "Mixed CPU hosts; sums are resource usage, not an algorithmic speedup. Cached original records are not new fits.",
+  "frozen_choice_sha256": "6b269b063da6bc4a686fb81400ff0b34da2ff1a01fa2348ebb08e07dc4fa4323",
+  "frozen_utc": "2026-10-28T05:37:58.189473+00:00",
+  "B1_last_complete_utc": "2026-10-28T05:35:49.783123+00:00"
+}

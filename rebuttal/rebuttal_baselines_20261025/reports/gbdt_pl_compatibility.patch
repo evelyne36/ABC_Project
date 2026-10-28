@@ -1,0 +1,93 @@
+--- upstream/interface.cpp
++++ compat/interface.cpp
+@@ -122,6 +122,7 @@
+ 
+ int LinearGBMPrintBoosterConfig(LinearGBMBoosterConfig booster_config) {
+     ((BoosterConfig*)booster_config)->PrintAllParams();
++    return 0;
+ }
+ 
+ int LinearGBMPredict(LinearGBM booster, LinearGBMDataMat test_data, double** preds, int *num_data, int iters) {  
+@@ -130,12 +131,15 @@
+     ((Booster*)booster)->Predict(test_dataa, test_dataa.predict_values, iters);
+     *preds = test_dataa.predict_values.data(); 
+     *num_data = test_dataa.num_data;
++    return 0;
+ }
+ 
+ int LinearGBMBestIteration(LinearGBM booster, int* best_iteration, double* best_score) {
+     *best_iteration = ((Booster*)booster)->get_best_iteration(best_score);
++    return 0;
+ }
+ 
+ int LinearGBMGetScoresPerIteration(LinearGBM booster, const char* name, double** scores) {
+     *scores = ((Booster*)booster)->get_per_iteration_scores(string(name)).data();
++    return 0;
+ }
+--- upstream/src/tree/tree_predictors.cpp
++++ compat/src/tree/tree_predictors.cpp
+@@ -67,7 +67,7 @@
+ template <>     
+ void LeafWiseTree<LinearNode>::Predict(DataMat *test_data, double *scores) {
+     const vector<vector<double>> &data = test_data->unbined_data;
+-#pragma omp parallel for schedule(static) num_threads(24)
++#pragma omp parallel for schedule(static) num_threads(1)
+     for(int i = 0; i < data.size(); ++i) {
+         scores[i] += PredictSingle(data[i]);
+     }
+--- upstream/src/booster/booster.cpp
++++ compat/src/booster/booster.cpp
+@@ -371,13 +371,13 @@
+     results.clear();
+     results.resize(booster_config.num_classes * num_data, 0.0);
+     if(booster_config.loss == "l2") {
+-#pragma omp parallel for schedule(static) num_threads(24) 
++#pragma omp parallel for schedule(static) num_threads(1) 
+ 	for(int i = 0; i < num_data; ++i) {
+ 	    results[i] = avg_label;
+ 	}	
+     }
+ 
+-#pragma omp parallel for schedule(static) num_threads(48)
++#pragma omp parallel for schedule(static) num_threads(1)
+     for(int k = 0; k < predict_data.num_data; ++k) {
+     	for(int i = 0; i < iters; ++i) { 
+             for(int j = 0; j < booster_config.num_classes; ++j) {
+--- upstream/src/io/data_reader.cpp
++++ compat/src/io/data_reader.cpp
+@@ -53,7 +53,7 @@
+         ++num_data;
+     }
+     feature_values.resize(num_features);
+-#pragma omp parallel for schedule(static, 1) num_threads(num_threads)
++#pragma omp parallel for schedule(static, 1) num_threads(1)
+     for(int i = 0; i < num_features; ++i) {
+         feature_values[i].resize(num_data, 0.0);
+     }
+@@ -74,7 +74,7 @@
+     size_t cur_total_lines = 0;
+     while(cur_total_lines < num_data) { 
+         size_t chunk_size = (buffer_ptr_1->size() + num_threads - 2) / (num_threads - 1); 
+-#pragma omp parallel for schedule(static, 1) num_threads(num_threads)
++#pragma omp parallel for schedule(static, 1) num_threads(1)
+         for(int tid = 0; tid < num_threads; ++tid) {
+             if(tid == 0) {
+                 for(int i = 0; i < buffer_size && getline(fin, line); ++i) {
+@@ -154,7 +154,7 @@
+         ++num_data;
+     }
+     feature_values.resize(num_data);
+-#pragma omp parallel for schedule(static, 1) num_threads(num_threads)
++#pragma omp parallel for schedule(static, 1) num_threads(1)
+     for(int i = 0; i < num_data; ++i) {
+         feature_values[i].resize(num_features, 0.0);
+     }
+@@ -175,7 +175,7 @@
+     size_t cur_total_lines = 0;
+     while(cur_total_lines < num_data) {
+         size_t chunk_size = (buffer_ptr_1->size() + num_threads - 2) / (num_threads - 1);
+-#pragma omp parallel for schedule(static, 1) num_threads(num_threads)
++#pragma omp parallel for schedule(static, 1) num_threads(1)
+         for(int tid = 0; tid < num_threads; ++tid) {
+             if(tid == 0) {
+                 for(int i = 0; i < buffer_size && getline(fin, line); ++i) {

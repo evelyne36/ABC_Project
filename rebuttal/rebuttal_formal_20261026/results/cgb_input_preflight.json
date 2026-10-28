@@ -1,0 +1,643 @@
+{
+  "status": "inputs_ready_runtime_pending",
+  "model_fit_calls": 0,
+  "tasks": [
+    {
+      "task_id": "synthetic__feature_switch__dim10__seed1001__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__feature_switch__dim10__seed1001__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__feature_switch__dim10__seed1001__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__feature_switch__dim10__seed1001__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__feature_switch__dim10__seed1001__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__feature_switch__dim10__seed1002__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__feature_switch__dim10__seed1002__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__feature_switch__dim10__seed1002__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__feature_switch__dim10__seed1002__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__feature_switch__dim10__seed1002__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__feature_switch__dim10__seed1003__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__feature_switch__dim10__seed1003__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__feature_switch__dim10__seed1003__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__feature_switch__dim10__seed1003__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__feature_switch__dim10__seed1003__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__categorical_regime_slope__dim10__seed1001__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__categorical_regime_slope__dim10__seed1001__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__categorical_regime_slope__dim10__seed1001__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__categorical_regime_slope__dim10__seed1001__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__categorical_regime_slope__dim10__seed1001__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__categorical_regime_slope__dim10__seed1002__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__categorical_regime_slope__dim10__seed1002__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__categorical_regime_slope__dim10__seed1002__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__categorical_regime_slope__dim10__seed1002__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__categorical_regime_slope__dim10__seed1002__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__categorical_regime_slope__dim10__seed1003__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__categorical_regime_slope__dim10__seed1003__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__categorical_regime_slope__dim10__seed1003__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__categorical_regime_slope__dim10__seed1003__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__categorical_regime_slope__dim10__seed1003__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_slope__dim10__seed1001__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_slope__dim10__seed1001__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_slope__dim10__seed1001__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_slope__dim10__seed1001__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_slope__dim10__seed1001__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_slope__dim10__seed1002__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_slope__dim10__seed1002__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_slope__dim10__seed1002__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_slope__dim10__seed1002__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_slope__dim10__seed1002__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_slope__dim10__seed1003__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_slope__dim10__seed1003__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_slope__dim10__seed1003__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_slope__dim10__seed1003__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_slope__dim10__seed1003__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__curved_control__dim10__seed1001__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__curved_control__dim10__seed1001__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__curved_control__dim10__seed1001__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__curved_control__dim10__seed1001__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__curved_control__dim10__seed1001__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__curved_control__dim10__seed1002__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__curved_control__dim10__seed1002__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__curved_control__dim10__seed1002__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__curved_control__dim10__seed1002__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__curved_control__dim10__seed1002__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__curved_control__dim10__seed1003__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__curved_control__dim10__seed1003__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__curved_control__dim10__seed1003__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__curved_control__dim10__seed1003__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__curved_control__dim10__seed1003__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__sparse_multiplicative__dim10__seed1001__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__sparse_multiplicative__dim10__seed1001__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__sparse_multiplicative__dim10__seed1001__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__sparse_multiplicative__dim10__seed1001__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__sparse_multiplicative__dim10__seed1001__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__sparse_multiplicative__dim10__seed1002__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__sparse_multiplicative__dim10__seed1002__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__sparse_multiplicative__dim10__seed1002__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__sparse_multiplicative__dim10__seed1002__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__sparse_multiplicative__dim10__seed1002__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__sparse_multiplicative__dim10__seed1003__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__sparse_multiplicative__dim10__seed1003__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__sparse_multiplicative__dim10__seed1003__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__sparse_multiplicative__dim10__seed1003__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__sparse_multiplicative__dim10__seed1003__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_logit__dim10__seed1001__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_logit__dim10__seed1001__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_logit__dim10__seed1001__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_logit__dim10__seed1001__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_logit__dim10__seed1001__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_logit__dim10__seed1002__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_logit__dim10__seed1002__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_logit__dim10__seed1002__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_logit__dim10__seed1002__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_logit__dim10__seed1002__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_logit__dim10__seed1003__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_logit__dim10__seed1003__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_logit__dim10__seed1003__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_logit__dim10__seed1003__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__regime_logit__dim10__seed1003__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__pure_step_control__dim10__seed1001__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__pure_step_control__dim10__seed1001__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__pure_step_control__dim10__seed1001__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__pure_step_control__dim10__seed1001__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__pure_step_control__dim10__seed1001__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__pure_step_control__dim10__seed1002__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__pure_step_control__dim10__seed1002__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__pure_step_control__dim10__seed1002__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__pure_step_control__dim10__seed1002__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__pure_step_control__dim10__seed1002__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__pure_step_control__dim10__seed1003__out1",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__pure_step_control__dim10__seed1003__out2",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__pure_step_control__dim10__seed1003__out3",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__pure_step_control__dim10__seed1003__out4",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    },
+    {
+      "task_id": "synthetic__pure_step_control__dim10__seed1003__out5",
+      "outer_and_inner_split_hashes_match": true,
+      "backbone_hash_matches": true,
+      "all_test_targets_exactly_match_archive": true
+    }
+  ],
+  "R0_E0_total_fits": 28,
+  "R0_E0_cgb_fits": 21,
+  "R0_E0_xgb_fits": 7,
+  "N2_leafonly_cgb_fits": 105,
+  "actual_arrays_hashed": true,
+  "generator_source_sha256": "aa57aecbe6bad71812ba0a0c6a77d9ffd76ac6326af5c1fa7e6e6032c1dbe813",
+  "limitation": "Exact split/backbone provenance is verified; prediction compatibility requires Linux E0"
+}

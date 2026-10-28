@@ -1,0 +1,109 @@
+{
+  "stage": "D",
+  "host": "cpu2_pool.zjuici.com",
+  "core_slot": 0,
+  "worker_sha256": "d2e2743d38c80b4d82b9bfb5e4a04aa1a88be952603460fad86f0e9fcb747e2a",
+  "wall_budget_seconds": 1200,
+  "data_sha256": {
+    "last_increment_inputs/D/gas_turbine_nox_n2000__s113001.npz": "c7bebced6f3d5b217f25808fb7025a5012e3d0b2666806737bd611a1e8f3c37f",
+    "last_increment_inputs/D/gas_turbine_nox_n2000__s113002.npz": "c75dc655798a0a1647d2bd06449892cac73bd9024011eafe44e960e47c03cfc6",
+    "last_increment_inputs/D/gas_turbine_nox_n2000__s113003.npz": "b370cb10905228551356fe3c01a573df392061268fe630bc1554dd42ca1a63a0",
+    "last_increment_inputs/D/gas_turbine_nox_n2000__s113004.npz": "3db2ca6068040a3add8c6ecfec0257990dec75dca6a10bef8205bcc32d0ca8b3",
+    "last_increment_inputs/D/gas_turbine_nox_n2000__s113005.npz": "74d307141f08fbec8e7f3839e80da5e199e666f2cb8913ad25e92a5b7684f33d"
+  },
+  "jobs": [
+    {
+      "id": "gas_turbine_nox_n2000/XGB/s113001",
+      "case": "gas_turbine_nox_n2000",
+      "method": "XGB",
+      "candidate": 16,
+      "seed": 113001,
+      "params": {
+        "depth": 3,
+        "ridge": 0.01,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/D/gas_turbine_nox_n2000__s113001.npz",
+      "relative_output": "gas_turbine_nox_n2000/XGB/s113001",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox_n2000/LGB_constant/s113002",
+      "case": "gas_turbine_nox_n2000",
+      "method": "LGB_constant",
+      "candidate": 8,
+      "seed": 113002,
+      "params": {
+        "depth": 5,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/D/gas_turbine_nox_n2000__s113002.npz",
+      "relative_output": "gas_turbine_nox_n2000/LGB_constant/s113002",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox_n2000/LGB_linear/s113003",
+      "case": "gas_turbine_nox_n2000",
+      "method": "LGB_linear",
+      "candidate": 11,
+      "seed": 113003,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/D/gas_turbine_nox_n2000__s113003.npz",
+      "relative_output": "gas_turbine_nox_n2000/LGB_linear/s113003",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox_n2000/PL/s113004",
+      "case": "gas_turbine_nox_n2000",
+      "method": "PL",
+      "candidate": 5,
+      "seed": 113004,
+      "params": {
+        "num_trees": 256,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 0.1,
+        "max_var": 3,
+        "leaf_type": "linear",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 0.05
+      },
+      "data": "last_increment_inputs/D/gas_turbine_nox_n2000__s113004.npz",
+      "relative_output": "gas_turbine_nox_n2000/PL/s113004",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox_n2000/LinXGBoost/s113005",
+      "case": "gas_turbine_nox_n2000",
+      "method": "LinXGBoost",
+      "candidate": 13,
+      "seed": 113005,
+      "params": {
+        "n_estimators": 8,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.2
+      },
+      "data": "last_increment_inputs/D/gas_turbine_nox_n2000__s113005.npz",
+      "relative_output": "gas_turbine_nox_n2000/LinXGBoost/s113005",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    }
+  ]
+}

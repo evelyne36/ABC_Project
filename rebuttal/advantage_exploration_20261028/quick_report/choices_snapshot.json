@@ -1,0 +1,562 @@
+[
+  {
+    "case": "A01_s1_n120_d32",
+    "method": "CrossGB",
+    "candidate": 0,
+    "development_rmse": 0.4183293328494224,
+    "fit_wall_diagnostic": 0.009785145986825228,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A01_s1_n120_d32",
+    "method": "XGB",
+    "candidate": 3,
+    "development_rmse": 2.309802346278759,
+    "fit_wall_diagnostic": 0.14755462750326842,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A01_s1_n120_d32",
+    "method": "LGB_constant",
+    "candidate": 3,
+    "development_rmse": 2.385870503616112,
+    "fit_wall_diagnostic": 0.037656923494068906,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A01_s1_n120_d32",
+    "method": "LGB_linear",
+    "candidate": 0,
+    "development_rmse": 2.127629088742779,
+    "fit_wall_diagnostic": 0.00944167299894616,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A01_s1_n120_d32",
+    "method": "PL",
+    "candidate": 2,
+    "development_rmse": 1.066773005421289,
+    "fit_wall_diagnostic": 0.24689646798651665,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A01_s1_n120_d32",
+    "method": "LinXGBoost",
+    "candidate": 3,
+    "development_rmse": 1.6927531572350216,
+    "fit_wall_diagnostic": 1.2021303829969838,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A08_intercept_control",
+    "method": "CrossGB",
+    "candidate": 1,
+    "development_rmse": 0.40261483177876983,
+    "fit_wall_diagnostic": 0.04907551649375819,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A08_intercept_control",
+    "method": "XGB",
+    "candidate": 2,
+    "development_rmse": 0.4932356616569137,
+    "fit_wall_diagnostic": 0.11669250650447793,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A08_intercept_control",
+    "method": "LGB_constant",
+    "candidate": 3,
+    "development_rmse": 0.3183853580583427,
+    "fit_wall_diagnostic": 0.03293109298101626,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A08_intercept_control",
+    "method": "LGB_linear",
+    "candidate": 1,
+    "development_rmse": 0.3153153756012381,
+    "fit_wall_diagnostic": 0.01701564248651266,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A08_intercept_control",
+    "method": "PL",
+    "candidate": 1,
+    "development_rmse": 0.2866811230195787,
+    "fit_wall_diagnostic": 0.03460546050337143,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A08_intercept_control",
+    "method": "LinXGBoost",
+    "candidate": 3,
+    "development_rmse": 0.3185179549623369,
+    "fit_wall_diagnostic": 1.2003270794812124,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A02_s1_n240_d8",
+    "method": "CrossGB",
+    "candidate": 0,
+    "development_rmse": 0.32171385346932435,
+    "fit_wall_diagnostic": 0.004461817006813362,
+    "complete_candidates": 1
+  },
+  {
+    "case": "A02_s1_n240_d8",
+    "method": "XGB",
+    "candidate": 0,
+    "development_rmse": 2.111080450477488,
+    "fit_wall_diagnostic": 0.011132712999824435,
+    "complete_candidates": 1
+  },
+  {
+    "case": "A02_s1_n240_d8",
+    "method": "LGB_constant",
+    "candidate": 0,
+    "development_rmse": 2.1736914319354312,
+    "fit_wall_diagnostic": 0.007139040011679754,
+    "complete_candidates": 1
+  },
+  {
+    "case": "A02_s1_n240_d8",
+    "method": "LGB_linear",
+    "candidate": 0,
+    "development_rmse": 1.4501925620701521,
+    "fit_wall_diagnostic": 0.008992798000690527,
+    "complete_candidates": 1
+  },
+  {
+    "case": "A02_s1_n240_d8",
+    "method": "PL",
+    "candidate": 0,
+    "development_rmse": 1.7308488951125536,
+    "fit_wall_diagnostic": 0.011615888492087834,
+    "complete_candidates": 1
+  },
+  {
+    "case": "residential_cost",
+    "method": "CrossGB",
+    "candidate": 0,
+    "development_rmse": 92.04876546504748,
+    "fit_wall_diagnostic": 0.08108942900435068,
+    "complete_candidates": 1
+  },
+  {
+    "case": "residential_cost",
+    "method": "XGB",
+    "candidate": 0,
+    "development_rmse": 48.95974271898637,
+    "fit_wall_diagnostic": 0.031119828985538334,
+    "complete_candidates": 1
+  },
+  {
+    "case": "residential_cost",
+    "method": "LGB_constant",
+    "candidate": 0,
+    "development_rmse": 49.64908935975809,
+    "fit_wall_diagnostic": 0.0198783695086604,
+    "complete_candidates": 1
+  },
+  {
+    "case": "residential_cost",
+    "method": "LGB_linear",
+    "candidate": 0,
+    "development_rmse": 44.302893513598015,
+    "fit_wall_diagnostic": 0.022348355007125065,
+    "complete_candidates": 1
+  },
+  {
+    "case": "residential_cost",
+    "method": "PL",
+    "candidate": 0,
+    "development_rmse": 45.205651289698366,
+    "fit_wall_diagnostic": 0.06801543600158766,
+    "complete_candidates": 1
+  },
+  {
+    "case": "A03_s1_n240_d64",
+    "method": "CrossGB",
+    "candidate": 0,
+    "development_rmse": 0.38698379938856003,
+    "fit_wall_diagnostic": 0.03480489550565835,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A03_s1_n240_d64",
+    "method": "XGB",
+    "candidate": 3,
+    "development_rmse": 2.304340431677172,
+    "fit_wall_diagnostic": 0.35192287448444404,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A03_s1_n240_d64",
+    "method": "LGB_constant",
+    "candidate": 3,
+    "development_rmse": 2.2661793843445546,
+    "fit_wall_diagnostic": 0.1243068964977283,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A03_s1_n240_d64",
+    "method": "LGB_linear",
+    "candidate": 3,
+    "development_rmse": 2.263088725500002,
+    "fit_wall_diagnostic": 0.15510278301371727,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A03_s1_n240_d64",
+    "method": "PL",
+    "candidate": 2,
+    "development_rmse": 1.6694008143619485,
+    "fit_wall_diagnostic": 1.0511344639962772,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A03_s1_n240_d64",
+    "method": "LinXGBoost",
+    "candidate": 2,
+    "development_rmse": 0.7379968319426279,
+    "fit_wall_diagnostic": 21.09679072900326,
+    "complete_candidates": 4
+  },
+  {
+    "case": "communities_crime",
+    "method": "CrossGB",
+    "candidate": 2,
+    "development_rmse": 0.14074974347776276,
+    "fit_wall_diagnostic": 15.80841791551211,
+    "complete_candidates": 4
+  },
+  {
+    "case": "communities_crime",
+    "method": "XGB",
+    "candidate": 2,
+    "development_rmse": 0.1444242465087138,
+    "fit_wall_diagnostic": 0.5239303409907734,
+    "complete_candidates": 4
+  },
+  {
+    "case": "communities_crime",
+    "method": "LGB_constant",
+    "candidate": 2,
+    "development_rmse": 0.14420179213728085,
+    "fit_wall_diagnostic": 0.22238443000242114,
+    "complete_candidates": 4
+  },
+  {
+    "case": "communities_crime",
+    "method": "LGB_linear",
+    "candidate": 2,
+    "development_rmse": 0.14588936964496807,
+    "fit_wall_diagnostic": 0.2619503885071026,
+    "complete_candidates": 4
+  },
+  {
+    "case": "communities_crime",
+    "method": "PL",
+    "candidate": 3,
+    "development_rmse": 0.13643925992863215,
+    "fit_wall_diagnostic": 1.5020165224996163,
+    "complete_candidates": 4
+  },
+  {
+    "case": "communities_crime",
+    "method": "LinXGBoost",
+    "candidate": 3,
+    "development_rmse": 0.15059606593544822,
+    "fit_wall_diagnostic": 73.00516000199423,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A04_imbalanced_gate",
+    "method": "CrossGB",
+    "candidate": 0,
+    "development_rmse": 0.38553216122596423,
+    "fit_wall_diagnostic": 0.010914786500507034,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A04_imbalanced_gate",
+    "method": "XGB",
+    "candidate": 3,
+    "development_rmse": 2.407956118454429,
+    "fit_wall_diagnostic": 0.19970749899584916,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A04_imbalanced_gate",
+    "method": "LGB_constant",
+    "candidate": 2,
+    "development_rmse": 2.229627474354873,
+    "fit_wall_diagnostic": 0.048839072998816846,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A04_imbalanced_gate",
+    "method": "LGB_linear",
+    "candidate": 2,
+    "development_rmse": 2.1489491945611725,
+    "fit_wall_diagnostic": 0.06726502949823043,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A04_imbalanced_gate",
+    "method": "PL",
+    "candidate": 2,
+    "development_rmse": 1.9102462740593065,
+    "fit_wall_diagnostic": 0.5008074825018412,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A04_imbalanced_gate",
+    "method": "LinXGBoost",
+    "candidate": 3,
+    "development_rmse": 1.4215686566088972,
+    "fit_wall_diagnostic": 8.135304032497515,
+    "complete_candidates": 4
+  },
+  {
+    "case": "parkinson_motor",
+    "method": "CrossGB",
+    "candidate": 3,
+    "development_rmse": 9.264389398763551,
+    "fit_wall_diagnostic": 0.2751792569979443,
+    "complete_candidates": 4
+  },
+  {
+    "case": "parkinson_motor",
+    "method": "XGB",
+    "candidate": 3,
+    "development_rmse": 9.422191263648624,
+    "fit_wall_diagnostic": 0.12505557949771173,
+    "complete_candidates": 4
+  },
+  {
+    "case": "parkinson_motor",
+    "method": "LGB_constant",
+    "candidate": 3,
+    "development_rmse": 9.512327656813707,
+    "fit_wall_diagnostic": 0.07619041099678725,
+    "complete_candidates": 4
+  },
+  {
+    "case": "parkinson_motor",
+    "method": "LGB_linear",
+    "candidate": 0,
+    "development_rmse": 10.040216364782108,
+    "fit_wall_diagnostic": 0.012881905502581503,
+    "complete_candidates": 4
+  },
+  {
+    "case": "parkinson_motor",
+    "method": "PL",
+    "candidate": 3,
+    "development_rmse": 9.206508097732325,
+    "fit_wall_diagnostic": 0.2258065655005339,
+    "complete_candidates": 4
+  },
+  {
+    "case": "parkinson_motor",
+    "method": "LinXGBoost",
+    "candidate": 0,
+    "development_rmse": 8.991943310630308,
+    "fit_wall_diagnostic": 0.005749842996010557,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A05_predictor_switch",
+    "method": "CrossGB",
+    "candidate": 2,
+    "development_rmse": 0.5614326196772583,
+    "fit_wall_diagnostic": 0.8436924474990519,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A05_predictor_switch",
+    "method": "XGB",
+    "candidate": 1,
+    "development_rmse": 0.9878623223773662,
+    "fit_wall_diagnostic": 0.04876977999811061,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A05_predictor_switch",
+    "method": "LGB_constant",
+    "candidate": 2,
+    "development_rmse": 1.0628187994741616,
+    "fit_wall_diagnostic": 0.05026722900220193,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A05_predictor_switch",
+    "method": "LGB_linear",
+    "candidate": 1,
+    "development_rmse": 0.8071091548202782,
+    "fit_wall_diagnostic": 0.028468741500546457,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A05_predictor_switch",
+    "method": "PL",
+    "candidate": 2,
+    "development_rmse": 0.6005637409297577,
+    "fit_wall_diagnostic": 0.48848406600154703,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A05_predictor_switch",
+    "method": "LinXGBoost",
+    "candidate": 1,
+    "development_rmse": 0.45896694331640664,
+    "fit_wall_diagnostic": 2.0262618314991414,
+    "complete_candidates": 4
+  },
+  {
+    "case": "gas_turbine_nox",
+    "method": "CrossGB",
+    "candidate": 2,
+    "development_rmse": 7.780135820012195,
+    "fit_wall_diagnostic": 0.13209897100023227,
+    "complete_candidates": 4
+  },
+  {
+    "case": "gas_turbine_nox",
+    "method": "XGB",
+    "candidate": 1,
+    "development_rmse": 8.053884541802157,
+    "fit_wall_diagnostic": 0.026760104999993928,
+    "complete_candidates": 4
+  },
+  {
+    "case": "gas_turbine_nox",
+    "method": "LGB_constant",
+    "candidate": 2,
+    "development_rmse": 8.000036739157563,
+    "fit_wall_diagnostic": 0.0398879214990302,
+    "complete_candidates": 4
+  },
+  {
+    "case": "gas_turbine_nox",
+    "method": "LGB_linear",
+    "candidate": 2,
+    "development_rmse": 7.992664708823158,
+    "fit_wall_diagnostic": 0.06933851800204138,
+    "complete_candidates": 4
+  },
+  {
+    "case": "gas_turbine_nox",
+    "method": "PL",
+    "candidate": 2,
+    "development_rmse": 7.765496405947263,
+    "fit_wall_diagnostic": 0.1958380974974716,
+    "complete_candidates": 4
+  },
+  {
+    "case": "gas_turbine_nox",
+    "method": "LinXGBoost",
+    "candidate": 1,
+    "development_rmse": 8.247230479904605,
+    "fit_wall_diagnostic": 1.4443339700010256,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A06_two_sparse_modules",
+    "method": "CrossGB",
+    "candidate": 0,
+    "development_rmse": 0.8786751815893354,
+    "fit_wall_diagnostic": 0.010876009007915854,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A06_two_sparse_modules",
+    "method": "XGB",
+    "candidate": 2,
+    "development_rmse": 2.3051625542062073,
+    "fit_wall_diagnostic": 0.16015972249442711,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A06_two_sparse_modules",
+    "method": "LGB_constant",
+    "candidate": 2,
+    "development_rmse": 2.3175623517460853,
+    "fit_wall_diagnostic": 0.052021962008439004,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A06_two_sparse_modules",
+    "method": "LGB_linear",
+    "candidate": 2,
+    "development_rmse": 2.2596327036202304,
+    "fit_wall_diagnostic": 0.07279395750083495,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A06_two_sparse_modules",
+    "method": "PL",
+    "candidate": 1,
+    "development_rmse": 2.0372876792416346,
+    "fit_wall_diagnostic": 0.09093310449679848,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A06_two_sparse_modules",
+    "method": "LinXGBoost",
+    "candidate": 3,
+    "development_rmse": 1.6103339936674168,
+    "fit_wall_diagnostic": 7.489280781490379,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A07_dense_control",
+    "method": "CrossGB",
+    "candidate": 2,
+    "development_rmse": 2.0989016543137393,
+    "fit_wall_diagnostic": 0.6703815145010594,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A07_dense_control",
+    "method": "XGB",
+    "candidate": 2,
+    "development_rmse": 2.442436417951982,
+    "fit_wall_diagnostic": 0.12759510149771813,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A07_dense_control",
+    "method": "LGB_constant",
+    "candidate": 2,
+    "development_rmse": 2.4622297050765014,
+    "fit_wall_diagnostic": 0.024234606011305004,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A07_dense_control",
+    "method": "LGB_linear",
+    "candidate": 2,
+    "development_rmse": 2.4628602864410363,
+    "fit_wall_diagnostic": 0.035396608494920656,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A07_dense_control",
+    "method": "PL",
+    "candidate": 3,
+    "development_rmse": 2.1776592343565504,
+    "fit_wall_diagnostic": 0.0766626440017717,
+    "complete_candidates": 4
+  },
+  {
+    "case": "A07_dense_control",
+    "method": "LinXGBoost",
+    "candidate": 1,
+    "development_rmse": 1.0337386739848493,
+    "fit_wall_diagnostic": 0.425925385512528,
+    "complete_candidates": 4
+  }
+]

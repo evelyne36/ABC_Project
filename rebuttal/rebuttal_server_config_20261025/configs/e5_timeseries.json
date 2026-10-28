@@ -1,0 +1,110 @@
+{
+  "experiment_id": "E5",
+  "reference_runner": "scripts/run_ts_reference_panel.py",
+  "runner_status": "existing_Xia_runner_copied_unchanged_not_executed_this_session",
+  "source_root_project_relative": "rebuttal_server_config_20261025/source",
+  "series_root_project_relative": "aaai_FullCodeProject-check_codereview0701/paper_writing/timeseries_extra_random300",
+  "registry": "inputs/ts_dataset_registry.json",
+  "data_hashes": "inputs/ts_expected_data_hashes.json",
+  "original_split_manifest": "historical/ts_submitted_split_manifest.json",
+  "selected_tree_records": "historical/ts_selected_models.json",
+  "tasks": [
+    {
+      "dataset": "ETTh1",
+      "seq_len": 24,
+      "pred_len": 1
+    },
+    {
+      "dataset": "ETTh2",
+      "seq_len": 24,
+      "pred_len": 1
+    },
+    {
+      "dataset": "ETTm1",
+      "seq_len": 24,
+      "pred_len": 1
+    },
+    {
+      "dataset": "ETTm2",
+      "seq_len": 24,
+      "pred_len": 1
+    },
+    {
+      "dataset": "exchange_rate",
+      "seq_len": 24,
+      "pred_len": 1
+    },
+    {
+      "dataset": "exchange_rate",
+      "seq_len": 24,
+      "pred_len": 6
+    },
+    {
+      "dataset": "exchange_rate",
+      "seq_len": 24,
+      "pred_len": 12
+    },
+    {
+      "dataset": "ILI",
+      "seq_len": 24,
+      "pred_len": 1
+    },
+    {
+      "dataset": "ILI",
+      "seq_len": 24,
+      "pred_len": 6
+    },
+    {
+      "dataset": "ILI",
+      "seq_len": 24,
+      "pred_len": 12
+    }
+  ],
+  "historical_h12_completion_found": true,
+  "common_semantics": {
+    "seed": 42,
+    "split": "chronological 0.6/0.2/0.2",
+    "feature_mode": "window_summary",
+    "target_mode": "sequence",
+    "output_scope": "target",
+    "include_time_features": true,
+    "horizon_gap": "pred_len - 1",
+    "max_raw_rows": 0,
+    "origin_state_channel_budget": 32
+  },
+  "reference_models": [
+    "persistence",
+    "ridge_cpu"
+  ],
+  "ridge_alphas": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1,
+    3,
+    10,
+    30,
+    100,
+    1000
+  ],
+  "persistence": "repeat last observed target across all forecast steps",
+  "ridge_selection": "train->validation; then fresh train+validation refit; test once",
+  "expected_panel_fit_calls": 130,
+  "expected_final_summary_rows": 20,
+  "expected_underlying_columnwise_ridge_fits": 462,
+  "input_boundary_note": "max_features=64 in old nine task runs; later Exchange h12 max_features=0. Same 8 channels in h12 does not mean original CLI identical.",
+  "new_model_replay": "selected configs only; no 300 candidate rerun",
+  "rolling_origins": {
+    "tasks": [
+      "exchange_rate_h1",
+      "ILI_h1",
+      "ETTh2_h1"
+    ],
+    "n_origins": 3,
+    "origin_boundaries": null,
+    "status": "indices_must_be_frozen_before_future_fits",
+    "configuration_source": "per-origin past validation or earliest-origin past validation only",
+    "forbidden": "using late original selected config as independent early-origin selection; treating overlapping windows as independent samples"
+  }
+}

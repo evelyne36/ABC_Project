@@ -1,0 +1,31 @@
+{
+  "approval": "approved",
+  "stage": "portable_execution_handoff_prepared",
+  "source_native": "historical vendor hash-matched",
+  "new_results": 0,
+  "source_materials_untouched": true,
+  "pending_external_input": null,
+  "latest_user_instruction": "作者确认本机也无法SSH；要求写清计划，由另一台电脑AI执行",
+  "local_training_fits": 0,
+  "next_action": "Transfer baseline bundle to Linux, rebuild GBDT-PL, run smoke validation, then freeze/launch approved baseline panels",
+  "latest_reuse_audit": "rebuttal_plan_20261025/已有证据复用审计_E0-E6.md",
+  "local_training_fits_scope": "CrossGB only; baseline integration/testing performed separately",
+  "baseline_adaptation": {
+    "directory": "rebuttal_baselines_20261025",
+    "verified_task": "scalar_regression",
+    "methods": [
+      "linxgboost",
+      "pilot",
+      "gbdt_pl",
+      "tao_official_constant_leaf"
+    ],
+    "formal_benchmark_completed": false,
+    "linux_runtime_verified": false,
+    "crossgb_fit_calls": 0
+  },
+  "current_authoritative_plan": "rebuttal_formal_20261026/正式执行规划_metaDesign.md",
+  "formal_new_training_fits": 0,
+  "remote_servers_environment_verified": 5,
+  "new_cgb_fixed_formal_core_fits": 136,
+  "execution_handoff": "rebuttal_formal_20261026/交给另一台电脑AI_执行交接书.md"
+}

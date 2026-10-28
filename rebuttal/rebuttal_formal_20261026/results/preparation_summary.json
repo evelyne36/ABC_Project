@@ -1,0 +1,48 @@
+{
+  "updated_at": "2026-10-26T02:11:27.041099+08:00",
+  "author_deadline_CST": "2026-10-29",
+  "status": "handoff_to_other_computer_requested_by_author",
+  "formal_new_training_fits": 0,
+  "local_cgb_fit_calls": 0,
+  "checks": {
+    "V1_V2_complete_text_read": true,
+    "ablation_tasks_split_and_backbone_matched": 105,
+    "ablation_test_targets_matched_archive": 63000,
+    "ts_plan_ready_tasks": 10,
+    "legacy_transfer_files_hash_verified": 1721,
+    "boundary_tests_passed": 5,
+    "native_shell_syntax_passed": true,
+    "native_compilation_or_runtime_verified": false
+  },
+  "linux_environment": {
+    "authenticated_initially": 5,
+    "cores_each": 16,
+    "memory_gib_each_approx": 32,
+    "selected_python": "/home/admin/anaconda3/bin/python",
+    "python_version": "3.13.9",
+    "science_versions_match_local": true,
+    "global_environment_modified": false
+  },
+  "remote_workdir": "/home/admin/crossgb_rebuttal_20261026",
+  "network_failure": {
+    "initial": "parallel rsync reset by peer on supplied gateway",
+    "alternative": "single-host resumable transfer also closed",
+    "diagnostic": "CPU4/CPU2 TCP connects but SSH peer closes before banner/key exchange; Calculator/Processor also close",
+    "question_pending": null,
+    "author_confirmed_manual_ssh_failure": true
+  },
+  "remaining": [
+    "restore remote connection and verify deployment",
+    "Linux native build + structural checks + R0",
+    "16-fit baseline runtime pilot and coverage freeze",
+    "execute N1/N2/N3/N4/N6a and collect real results",
+    "bounded N5 only after P0",
+    "replace response placeholders, author review by Oct29"
+  ],
+  "handoff": {
+    "document": "交给另一台电脑AI_执行交接书.md",
+    "first_message": "给执行AI的首条消息.txt",
+    "package": "formal_linux_bundle.tar.gz",
+    "new_ssh_attempts_this_turn": 0
+  }
+}

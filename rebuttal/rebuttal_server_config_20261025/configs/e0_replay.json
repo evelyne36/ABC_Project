@@ -1,0 +1,41 @@
+{
+  "experiment_id": "E0",
+  "status": "replay_driver_required",
+  "native": "historical",
+  "scenario": "feature_switch",
+  "dimension": 10,
+  "n_samples": 3000,
+  "data_seed": 1001,
+  "cv_seed": 314159,
+  "split_seed": 315160,
+  "outer_folds": 5,
+  "outer_index_zero_based": 0,
+  "model_seed": 271828,
+  "regression_noise": 0.15,
+  "backbone_key": "feature_switch::dim10",
+  "backbone_file": "historical/ablation_synthetic_backbones.json",
+  "original_task_file": "historical/synthetic__feature_switch__dim10__seed1001__out1.json",
+  "endpoint_variants": [
+    "xgb",
+    "bias_p00_sa0",
+    "split_p10_sa0",
+    "full_p10_sa0"
+  ],
+  "expected_model_fits": 4,
+  "backbone_hpo_fits": 0,
+  "historical_crossgb_min_gain_to_split": -10000000000.0,
+  "acceptance": {
+    "same_input_hashes_required": true,
+    "record_prediction_max_abs_and_rmse_difference": true,
+    "cross_platform_bitwise_identity_promised": false,
+    "numerical_tolerance_must_be_frozen_before_replay": true,
+    "if_replay_mismatch": "diagnose_library/source/split/RNG; do not splice old Full and new LeafOnly",
+    "engineering_tolerances_predeclared": {
+      "scaled_max_abs_prediction_error": 1e-05,
+      "relative_RMSE_error": 0.0001,
+      "prediction_scale": "1 + max(abs(reference_predictions))",
+      "scope": "engineering compatibility screen; not a statistical equivalence claim; always report actual errors"
+    }
+  },
+  "historical_rng": "C srand(1), not solely sklearn random_state; record libc/compiler"
+}

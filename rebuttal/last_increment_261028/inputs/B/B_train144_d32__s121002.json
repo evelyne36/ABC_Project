@@ -1,0 +1,18 @@
+{
+  "case": "B_train144_d32",
+  "seed": 121002,
+  "kind": "synthetic",
+  "preprocessing": {
+    "y_scale": 1.0
+  },
+  "train_n": 144,
+  "d": 32,
+  "split_sizes": {
+    "train": 144,
+    "val": 96,
+    "test": 512
+  },
+  "signal": "sqrt(2)(sign(x0)x2+sign(x1)x3)",
+  "noise_sd": 0.3,
+  "paired_master": true
+}

@@ -1,0 +1,365 @@
+{
+  "stage": "exploratory_discovery_only",
+  "inventory": [
+    {
+      "task": "binary",
+      "dataset": "banknote-authentication.csv",
+      "path": "tabular_extra_random300/data/binary__banknote-authentication.csv",
+      "sha256": "d5692470d6f74560e54af00cbccbf1089cd569bb65b2cd68e3cb450692dce6ac"
+    },
+    {
+      "task": "binary",
+      "dataset": "breast-w.csv",
+      "path": "tabular_extra_random300/data/binary__breast-w.csv",
+      "sha256": "3a0eb02aee79931ad4c1968780569825a240201ca3b5baf459b776d222535cdd"
+    },
+    {
+      "task": "binary",
+      "dataset": "credit-approval.csv",
+      "path": "tabular_extra_random300/data/binary__credit-approval.csv",
+      "sha256": "77b7e7884ea6fdcd08d2e38c23c45420ece5d4f474b8f3b6e342f1540ba74501"
+    },
+    {
+      "task": "binary",
+      "dataset": "electricity.csv",
+      "path": "tabular_extra_random300/data/binary__electricity.csv",
+      "sha256": "51cbf8d65b284f346412184f51d8e0744a0d06737bd97977eaa81bbdca9ac872"
+    },
+    {
+      "task": "binary",
+      "dataset": "haberman.csv",
+      "path": "tabular_extra_random300/data/binary__haberman.csv",
+      "sha256": "f44d6fc6b481c72e6b30835a567142dd7c036f15b800fb1f7473d10b730930eb"
+    },
+    {
+      "task": "binary",
+      "dataset": "ilpd.csv",
+      "path": "tabular_extra_random300/data/binary__ilpd.csv",
+      "sha256": "8a3a32776f0341286f16ba78816dc4cf196bb26ed547ec831d10ab43cda92277"
+    },
+    {
+      "task": "binary",
+      "dataset": "kc1.csv",
+      "path": "tabular_extra_random300/data/binary__kc1.csv",
+      "sha256": "6b8f8d0aff1455ad589e1aaa4efb56846e1e8f0cc5c51d62b98b8b0509d838a6"
+    },
+    {
+      "task": "binary",
+      "dataset": "mozilla4.csv",
+      "path": "tabular_extra_random300/data/binary__mozilla4.csv",
+      "sha256": "faed35b932649f549f7e26c2150db80ffa5c50bcbd9dacf2cfc84807874e4e84"
+    },
+    {
+      "task": "binary",
+      "dataset": "pc1.csv",
+      "path": "tabular_extra_random300/data/binary__pc1.csv",
+      "sha256": "5bea1a50f49d28b36a032c60eb2f21539be59ad0949f7ff73900bd2577690061"
+    },
+    {
+      "task": "binary",
+      "dataset": "phoneme.csv",
+      "path": "tabular_extra_random300/data/binary__phoneme.csv",
+      "sha256": "650f902de961d61bbb7cf640507007d12c4c81b929dd08f050160734bed0ef09"
+    },
+    {
+      "task": "multiclass",
+      "dataset": "balance-scale.csv",
+      "path": "tabular_extra_random300/data/multiclass__balance-scale.csv",
+      "sha256": "f105199cc001501147fe1a7f9e9cb89fb053608ea3676bd4184e757102e95e1e"
+    },
+    {
+      "task": "multiclass",
+      "dataset": "mfeat-fourier.csv",
+      "path": "tabular_extra_random300/data/multiclass__mfeat-fourier.csv",
+      "sha256": "0f1bab9736709ee1bffdc011738216784c5ae8d7bc855a25ada72ee5be879f33"
+    },
+    {
+      "task": "multiclass",
+      "dataset": "mfeat-karhunen.csv",
+      "path": "tabular_extra_random300/data/multiclass__mfeat-karhunen.csv",
+      "sha256": "820b29997fa359fb9f625dc21dc5e619f32c7bc313b03bc30e87af0859afea4e"
+    },
+    {
+      "task": "multiclass",
+      "dataset": "optdigits.csv",
+      "path": "tabular_extra_random300/data/multiclass__optdigits.csv",
+      "sha256": "b8faefdae7b578bf8ac43c20093c36dc31cdd109fbdff642737f0edfb83bd454"
+    },
+    {
+      "task": "multiclass",
+      "dataset": "satimage.csv",
+      "path": "tabular_extra_random300/data/multiclass__satimage.csv",
+      "sha256": "53986ebd2f8327cdbf8f642fd4d4a755c7ed85d42bb3d4d25102e236f595a712"
+    },
+    {
+      "task": "multiclass",
+      "dataset": "segment.csv",
+      "path": "tabular_extra_random300/data/multiclass__segment.csv",
+      "sha256": "a09b9f78fe4faf899316a0f92feec99870e73945032bd6b9f4b8f2cab85f75f8"
+    },
+    {
+      "task": "multiclass",
+      "dataset": "vehicle.csv",
+      "path": "tabular_extra_random300/data/multiclass__vehicle.csv",
+      "sha256": "017265c5a0676cac429654eda70051520df5590487dbe3b996846b6a58f694a3"
+    },
+    {
+      "task": "multiclass",
+      "dataset": "vowel.csv",
+      "path": "tabular_extra_random300/data/multiclass__vowel.csv",
+      "sha256": "72df94eadd74d1c64c567be10af5046c988b852f015228bb7eff57a178021cfd"
+    },
+    {
+      "task": "regression",
+      "dataset": "Moneyball.csv",
+      "path": "tabular_extra_random300/data/regression__Moneyball.csv",
+      "sha256": "5685a3ffb8905d5910432d9c434f7d39b149f08029e6b099ccc912361d4a9fae"
+    },
+    {
+      "task": "regression",
+      "dataset": "abalone.csv",
+      "path": "tabular_extra_random300/data/regression__abalone.csv",
+      "sha256": "e9452a7b29760c9259ba1b8a23f75184c4fadb5b94aa339222f26cd7b1d8f002"
+    },
+    {
+      "task": "regression",
+      "dataset": "boston.csv",
+      "path": "tabular_extra_random300/data/regression__boston.csv",
+      "sha256": "06ed0ef767901a6f9181727fdd1d82c27ecc748b82553a2b32dc15beb0879719"
+    },
+    {
+      "task": "regression",
+      "dataset": "cpu_activity.csv",
+      "path": "tabular_extra_random300/data/regression__cpu_activity.csv",
+      "sha256": "1025ce99015d397e0508a23595d9b3936a383179aae6fb367c42cda62c74ab86"
+    },
+    {
+      "task": "regression",
+      "dataset": "energy_efficiency.csv",
+      "path": "tabular_extra_random300/data/regression__energy_efficiency.csv",
+      "sha256": "f6174bff6e6eb1b50c43e9040c1bd53958d795efdb116f69ce4a4f53a1431d7c"
+    },
+    {
+      "task": "regression",
+      "dataset": "kin8nm.csv",
+      "path": "tabular_extra_random300/data/regression__kin8nm.csv",
+      "sha256": "5edb8f1a1d2b3ab13039857fe31f57afe6251a8be3d66c825df41f87999b16be"
+    },
+    {
+      "task": "regression",
+      "dataset": "naval_propulsion_plant.csv",
+      "path": "tabular_extra_random300/data/regression__naval_propulsion_plant.csv",
+      "sha256": "97a860d3c07c534346ad2c358c3302c5d1e9ede02caffdec0cd998f41f1f9027"
+    },
+    {
+      "task": "regression",
+      "dataset": "space_ga.csv",
+      "path": "tabular_extra_random300/data/regression__space_ga.csv",
+      "sha256": "389f3ce0c49e069828e3f49b6f75d838c2714396d11c428edca0ce01b12fc9b4"
+    },
+    {
+      "task": "regression",
+      "dataset": "Another-Dataset-on-used-Fiat-500.csv",
+      "path": "dataset/TabArena_regression/Another-Dataset-on-used-Fiat-500.csv",
+      "sha256": "ff9ac29ce9b1dd8122cd34efa666a941d7d29995aa1a4e89cd821fc88150ca27"
+    },
+    {
+      "task": "regression",
+      "dataset": "Food_Delivery_Time.csv",
+      "path": "dataset/TabArena_regression/Food_Delivery_Time.csv",
+      "sha256": "d3c8aaaa56239038a6e90a59b8de2f2b3d861a34d34465df6ad9bc7daf91554a"
+    },
+    {
+      "task": "regression",
+      "dataset": "QSAR-TID-11.csv",
+      "path": "dataset/TabArena_regression/QSAR-TID-11.csv",
+      "sha256": "faa13b3ff38571b2ea96bb7d7bfb7202b85bff7d08d4257fa314c78b816caa8c"
+    },
+    {
+      "task": "regression",
+      "dataset": "QSAR_fish_toxicity.csv",
+      "path": "dataset/TabArena_regression/QSAR_fish_toxicity.csv",
+      "sha256": "5049bfd72b1d37dbfeeb3b44e91e199b1b9b3974735071cc7452a4775f980f7a"
+    },
+    {
+      "task": "regression",
+      "dataset": "airfoil_self_noise.csv",
+      "path": "dataset/TabArena_regression/airfoil_self_noise.csv",
+      "sha256": "338245c6379cc312fbd1432655d605208c7065e4f8c7b3b6bf668d659d91e19a"
+    },
+    {
+      "task": "regression",
+      "dataset": "concrete_compressive_strength.csv",
+      "path": "dataset/TabArena_regression/concrete_compressive_strength.csv",
+      "sha256": "f6e72562e81d6da453254c3237e3333963a7bd04e7fa0a544a534289561dc68b"
+    },
+    {
+      "task": "regression",
+      "dataset": "diamonds.csv",
+      "path": "dataset/TabArena_regression/diamonds.csv",
+      "sha256": "4aee159f92caf285b54bddb5c166274adbaf7f88cbc817b48593047b0e298388"
+    },
+    {
+      "task": "regression",
+      "dataset": "healthcare_insurance_expenses.csv",
+      "path": "dataset/TabArena_regression/healthcare_insurance_expenses.csv",
+      "sha256": "6b867464648d418990462712a029960e34523c8790ab4b6c64944f5ad25f991f"
+    },
+    {
+      "task": "regression",
+      "dataset": "houses.csv",
+      "path": "dataset/TabArena_regression/houses.csv",
+      "sha256": "7e1f563c6288779da831ad6ebf3e42c732abd3cf3b7c01abb2406f6334ed56d0"
+    },
+    {
+      "task": "regression",
+      "dataset": "miami_housing.csv",
+      "path": "dataset/TabArena_regression/miami_housing.csv",
+      "sha256": "f3de88399592ab0ff0ca510d33e9af63e45eef6d6414c21c8aa3191d1a226a74"
+    },
+    {
+      "task": "regression",
+      "dataset": "physiochemical_protein.csv",
+      "path": "dataset/TabArena_regression/physiochemical_protein.csv",
+      "sha256": "abf4216c35c62cdddd7815d4127dc7e27488a3f9ca65f0e6a71fec2125d72246"
+    },
+    {
+      "task": "regression",
+      "dataset": "superconductivity.csv",
+      "path": "dataset/TabArena_regression/superconductivity.csv",
+      "sha256": "ffc3b831df66971fbef13f290d991f49c0c2d5a413e6e338627d9ff7969d5cb3"
+    },
+    {
+      "task": "regression",
+      "dataset": "wine_quality.csv",
+      "path": "dataset/TabArena_regression/wine_quality.csv",
+      "sha256": "a0c0d3760d527508aa715f0cd2e924daec10023b70491d2d7e16edc6f7be18bb"
+    },
+    {
+      "task": "binary",
+      "dataset": "Bank_Customer_Churn.csv",
+      "path": "dataset/TabArena_binary/Bank_Customer_Churn.csv",
+      "sha256": "89dfd78745b909e788ccc57cbb044696a346f372efb6a5e15e0ea27535dc1768"
+    },
+    {
+      "task": "binary",
+      "dataset": "E-CommereShippingData.csv",
+      "path": "dataset/TabArena_binary/E-CommereShippingData.csv",
+      "sha256": "0a9a3cf2cb9e072be565edbfafcf86ee2da1160e439e947688042dcace3f47d7"
+    },
+    {
+      "task": "binary",
+      "dataset": "Fitness_Club.csv",
+      "path": "dataset/TabArena_binary/Fitness_Club.csv",
+      "sha256": "cf96fe1acc28e843e1e7581d5f461db921749ac3cd78f11c8138e6c30903d518"
+    },
+    {
+      "task": "binary",
+      "dataset": "HR_Analytics_Job_Change_of_Data_Scientists.csv",
+      "path": "dataset/TabArena_binary/HR_Analytics_Job_Change_of_Data_Scientists.csv",
+      "sha256": "da963ce519fdd637befb93b1b55a1647b46e65e54822a639ec182b1fb65ab20f"
+    },
+    {
+      "task": "binary",
+      "dataset": "Marketing_Campaign.csv",
+      "path": "dataset/TabArena_binary/Marketing_Campaign.csv",
+      "sha256": "39682b71757e658e2a3286a34ffe2a2ed2f9265180fd8be970bd354608177247"
+    },
+    {
+      "task": "binary",
+      "dataset": "blood-transfusion-service-center.csv",
+      "path": "dataset/TabArena_binary/blood-transfusion-service-center.csv",
+      "sha256": "a7d58eb1485348877e5f6d57f8792f2f214756deddac926adb4a7b7497e6e698"
+    },
+    {
+      "task": "binary",
+      "dataset": "credit-g.csv",
+      "path": "dataset/TabArena_binary/credit-g.csv",
+      "sha256": "7eee0adbfd54f9aed961c9170a764cc4a47ecc9e2cd4f2de1a578f28b0c255bd"
+    },
+    {
+      "task": "binary",
+      "dataset": "hazelnut-spread-contaminant-detection.csv",
+      "path": "dataset/TabArena_binary/hazelnut-spread-contaminant-detection.csv",
+      "sha256": "5e763687d1aad8e843fc364fd985c7cbd3779e873d4cb0adeb6585624abee58f"
+    },
+    {
+      "task": "binary",
+      "dataset": "jm1.csv",
+      "path": "dataset/TabArena_binary/jm1.csv",
+      "sha256": "7bcf40ffc2a2324f7051f91044813bf610bb7d72a52c74b8c20ab9d11e27cddc"
+    },
+    {
+      "task": "binary",
+      "dataset": "qsar-biodeg.csv",
+      "path": "dataset/TabArena_binary/qsar-biodeg.csv",
+      "sha256": "4f93468bf211cee6c223c78c0af3f59d7230754f417f69463475e8e52dcbc4c6"
+    },
+    {
+      "task": "multiclass",
+      "dataset": "anneal.csv",
+      "path": "dataset/TabArena_multiclass/anneal.csv",
+      "sha256": "5a4dd4a36131aa2290111962761d38c172906f2bce02a89614d57ef48ea7e09b"
+    },
+    {
+      "task": "multiclass",
+      "dataset": "maternal_health_risk.csv",
+      "path": "dataset/TabArena_multiclass/maternal_health_risk.csv",
+      "sha256": "080d1ad2765fd170e4a7de35120a72d36264dc17a03740b9cf8ae75008d02eab"
+    },
+    {
+      "task": "multiclass",
+      "dataset": "website_phishing.csv",
+      "path": "dataset/TabArena_multiclass/website_phishing.csv",
+      "sha256": "44909155b68bbef3e2486b045206a8a9d1ef8327f21cc4cf732778bef73fb405"
+    }
+  ],
+  "configs": [
+    {
+      "depth": 3,
+      "ridge": 1.0,
+      "p": 1.0
+    },
+    {
+      "depth": 3,
+      "ridge": 10.0,
+      "p": 0.5
+    },
+    {
+      "depth": 4,
+      "ridge": 1.0,
+      "p": 0.25
+    }
+  ],
+  "discovery_seeds": [
+    78101,
+    78102
+  ],
+  "methods": [
+    "XGB",
+    "CrossGB",
+    "LGB_constant",
+    "LGB_linear"
+  ],
+  "n_estimators": 100,
+  "development_cap": 1800,
+  "encoded_feature_cap": 128,
+  "preprocessing": "train-fitted median imputation/standardization, categorical onehot or numeric-only drop; modes reported separately; remove predefined.set and Unnamed: 0",
+  "split": "Outer seed42 first fold held out and never scored; remaining 80% split into discovery75% and audit25% using seed78000. Audit is untouched until shortlist/config freeze.",
+  "shortlist_rule": "Per task top two cells with CGB better than XGB in both discovery splits, ordered by mean improvement against XGB and LGB_linear; maximum six, fill up to eight with historically-favourable stable cells if available. Modes count as different exploratory cells, not independent datasets.",
+  "primary": {
+    "regression": "RMSE",
+    "binary": "AUC",
+    "multiclass": "logloss"
+  },
+  "native_library_sha256": "e38a9a10529543bf6427c52d3e64f92194f91e9fff5e23f9003dd735062d15f8",
+  "xgboost_version": "3.3.0-dev",
+  "lightgbm_version": "4.6.0",
+  "formal_test_evaluations": 0,
+  "limitations": [
+    "legacy local Darwin CrossGB, not controlled Linux build",
+    "retrospective dataset leads",
+    "no PL/Lin claim from this phase",
+    "candidate count matching is not compute matching"
+  ]
+}

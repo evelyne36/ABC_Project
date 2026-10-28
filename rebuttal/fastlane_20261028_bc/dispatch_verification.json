@@ -1,0 +1,8 @@
+{
+  "B1_job_count": 30,
+  "unique_jobs": true,
+  "hosts": 7,
+  "all_development_test_evaluation_flags_false": true,
+  "input_data_hashes_match": true,
+  "scripts_parse": true
+}

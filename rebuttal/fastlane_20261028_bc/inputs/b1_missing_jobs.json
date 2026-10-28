@@ -1,0 +1,547 @@
+{
+  "jobs": [
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 3,
+      "seed": 97001,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97001.npz",
+      "original_status": "timeout",
+      "original_result_path": "local_sync/fastlane_results/cpu4_pool.zjuici.com/results/formal24_v1/S1_sparse/search/LinXGBoost/c03/s97001/result.json",
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 3,
+      "seed": 97002,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97002.npz",
+      "original_status": "timeout",
+      "original_result_path": "local_sync/fastlane_results/cpu4_pool.zjuici.com/results/formal24_v1/S1_sparse/search/LinXGBoost/c03/s97002/result.json",
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 22,
+      "seed": 97001,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 10.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97001.npz",
+      "original_status": "timeout",
+      "original_result_path": "local_sync/fastlane_results/cpu4_pool.zjuici.com/results/formal24_v1/S1_sparse/search/LinXGBoost/c22/s97001/result.json",
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 22,
+      "seed": 97002,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 10.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97002.npz",
+      "original_status": "timeout",
+      "original_result_path": "local_sync/fastlane_results/cpu4_pool.zjuici.com/results/formal24_v1/S1_sparse/search/LinXGBoost/c22/s97002/result.json",
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 23,
+      "seed": 97001,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 3,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97001.npz",
+      "original_status": "timeout",
+      "original_result_path": "local_sync/fastlane_results/cpu4_pool.zjuici.com/results/formal24_v1/S1_sparse/search/LinXGBoost/c23/s97001/result.json",
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 23,
+      "seed": 97002,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 3,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97002.npz",
+      "original_status": "timeout",
+      "original_result_path": "local_sync/fastlane_results/cpu4_pool.zjuici.com/results/formal24_v1/S1_sparse/search/LinXGBoost/c23/s97002/result.json",
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 4,
+      "seed": 97001,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 0.1,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97001.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 4,
+      "seed": 97002,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 0.1,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97002.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 5,
+      "seed": 97001,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97001.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 5,
+      "seed": 97002,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97002.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 6,
+      "seed": 97001,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 0.1,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97001.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 6,
+      "seed": 97002,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 0.1,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97002.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 7,
+      "seed": 97001,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97001.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 7,
+      "seed": 97002,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97002.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 8,
+      "seed": 97001,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97001.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 8,
+      "seed": 97002,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97002.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 9,
+      "seed": 97001,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97001.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 9,
+      "seed": 97002,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97002.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 10,
+      "seed": 97001,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97001.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 10,
+      "seed": 97002,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97002.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 11,
+      "seed": 97001,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 3,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97001.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 11,
+      "seed": 97002,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 3,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97002.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 12,
+      "seed": 97001,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 100.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97001.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 12,
+      "seed": 97002,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 100.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97002.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 13,
+      "seed": 97001,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 100.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97001.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 13,
+      "seed": 97002,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 100.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97002.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 14,
+      "seed": 97001,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 3,
+        "lbda": 0.01,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97001.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 14,
+      "seed": 97002,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 3,
+        "lbda": 0.01,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97002.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 15,
+      "seed": 97001,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97001.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LinXGBoost",
+      "candidate": 15,
+      "seed": 97002,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data_relative_to_root": "local_sync/fastlane_data/S1_sparse__s97002.npz",
+      "original_status": "missing",
+      "original_result_path": null,
+      "timeout_sec": 300,
+      "evaluate_test": false
+    }
+  ],
+  "count": 30,
+  "max_jobs": 30,
+  "evaluate_test": false
+}

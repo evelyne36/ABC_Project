@@ -1,0 +1,285 @@
+{
+  "stage": "C",
+  "host": "cpu2_pool.zjuici.com",
+  "worker_sha256": "d2e2743d38c80b4d82b9bfb5e4a04aa1a88be952603460fad86f0e9fcb747e2a",
+  "wall_budget_seconds": 1200,
+  "jobs": [
+    {
+      "id": "S2_sparse_CrossGB_s99002",
+      "case": "S2_sparse",
+      "method": "CrossGB",
+      "seed": 99002,
+      "params": {
+        "depth": 2,
+        "ridge": 1.0,
+        "trees": 1024,
+        "learning_rate": 0.03,
+        "p": 1.0
+      },
+      "data": "bc_inputs/data/S2_sparse__s99002.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S2_sparse__s99002.npz",
+      "relative_output": "S2_sparse/final/CrossGB/s99002",
+      "evaluate_test": true,
+      "save_model": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S2_sparse_XGB_s99002",
+      "case": "S2_sparse",
+      "method": "XGB",
+      "seed": 99002,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "bc_inputs/data/S2_sparse__s99002.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S2_sparse__s99002.npz",
+      "relative_output": "S2_sparse/final/XGB/s99002",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S2_sparse_LGB_constant_s99002",
+      "case": "S2_sparse",
+      "method": "LGB_constant",
+      "seed": 99002,
+      "params": {
+        "depth": 5,
+        "ridge": 10.0,
+        "trees": 512,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "bc_inputs/data/S2_sparse__s99002.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S2_sparse__s99002.npz",
+      "relative_output": "S2_sparse/final/LGB_constant/s99002",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S2_sparse_LGB_linear_s99002",
+      "case": "S2_sparse",
+      "method": "LGB_linear",
+      "seed": 99002,
+      "params": {
+        "depth": 4,
+        "ridge": 1.0,
+        "trees": 512,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "bc_inputs/data/S2_sparse__s99002.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S2_sparse__s99002.npz",
+      "relative_output": "S2_sparse/final/LGB_linear/s99002",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S2_sparse_PL_s99002",
+      "case": "S2_sparse",
+      "method": "PL",
+      "seed": 99002,
+      "params": {
+        "num_trees": 64,
+        "max_depth": 4,
+        "num_leaves": 16,
+        "l2_reg": 1.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 0.1
+      },
+      "data": "bc_inputs/data/S2_sparse__s99002.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S2_sparse__s99002.npz",
+      "relative_output": "S2_sparse/final/PL/s99002",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S2_sparse_LinXGBoost_s99002",
+      "case": "S2_sparse",
+      "method": "LinXGBoost",
+      "seed": 99002,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 0.1,
+        "min_samples_leaf": 10,
+        "learning_rate": 0.3
+      },
+      "data": "bc_inputs/data/S2_sparse__s99002.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S2_sparse__s99002.npz",
+      "relative_output": "S2_sparse/final/LinXGBoost/s99002",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S2_sparse_LeafOnly_s99002",
+      "case": "S2_sparse",
+      "method": "LeafOnly",
+      "seed": 99002,
+      "params": {
+        "depth": 2,
+        "ridge": 1.0,
+        "trees": 1024,
+        "learning_rate": 0.03,
+        "p": 1.0
+      },
+      "data": "bc_inputs/data/S2_sparse__s99002.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S2_sparse__s99002.npz",
+      "relative_output": "S2_sparse/final/LeafOnly/s99002",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S3_sparse_CrossGB_s99004",
+      "case": "S3_sparse",
+      "method": "CrossGB",
+      "seed": 99004,
+      "params": {
+        "depth": 2,
+        "ridge": 1.0,
+        "trees": 1024,
+        "learning_rate": 0.03,
+        "p": 1.0
+      },
+      "data": "bc_inputs/data/S3_sparse__s99004.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S3_sparse__s99004.npz",
+      "relative_output": "S3_sparse/final/CrossGB/s99004",
+      "evaluate_test": true,
+      "save_model": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S3_sparse_XGB_s99004",
+      "case": "S3_sparse",
+      "method": "XGB",
+      "seed": 99004,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 1024,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "bc_inputs/data/S3_sparse__s99004.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S3_sparse__s99004.npz",
+      "relative_output": "S3_sparse/final/XGB/s99004",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S3_sparse_LGB_constant_s99004",
+      "case": "S3_sparse",
+      "method": "LGB_constant",
+      "seed": 99004,
+      "params": {
+        "depth": 3,
+        "ridge": 10.0,
+        "trees": 1024,
+        "learning_rate": 0.03,
+        "p": 1.0
+      },
+      "data": "bc_inputs/data/S3_sparse__s99004.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S3_sparse__s99004.npz",
+      "relative_output": "S3_sparse/final/LGB_constant/s99004",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S3_sparse_LGB_linear_s99004",
+      "case": "S3_sparse",
+      "method": "LGB_linear",
+      "seed": 99004,
+      "params": {
+        "depth": 3,
+        "ridge": 100.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "bc_inputs/data/S3_sparse__s99004.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S3_sparse__s99004.npz",
+      "relative_output": "S3_sparse/final/LGB_linear/s99004",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S3_sparse_PL_s99004",
+      "case": "S3_sparse",
+      "method": "PL",
+      "seed": 99004,
+      "params": {
+        "num_trees": 64,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 1.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      "data": "bc_inputs/data/S3_sparse__s99004.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S3_sparse__s99004.npz",
+      "relative_output": "S3_sparse/final/PL/s99004",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S3_sparse_LinXGBoost_s99004",
+      "case": "S3_sparse",
+      "method": "LinXGBoost",
+      "seed": 99004,
+      "params": {
+        "n_estimators": 50,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data": "bc_inputs/data/S3_sparse__s99004.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S3_sparse__s99004.npz",
+      "relative_output": "S3_sparse/final/LinXGBoost/s99004",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "S3_sparse_LeafOnly_s99004",
+      "case": "S3_sparse",
+      "method": "LeafOnly",
+      "seed": 99004,
+      "params": {
+        "depth": 2,
+        "ridge": 1.0,
+        "trees": 1024,
+        "learning_rate": 0.03,
+        "p": 1.0
+      },
+      "data": "bc_inputs/data/S3_sparse__s99004.npz",
+      "local_data": "rebuttal/fastlane_20261028_bc/inputs/data/S3_sparse__s99004.npz",
+      "relative_output": "S3_sparse/final/LeafOnly/s99004",
+      "evaluate_test": true,
+      "save_model": false,
+      "timeout_seconds": 300
+    }
+  ],
+  "data_sha256": {
+    "bc_inputs/data/S2_sparse__s99002.npz": "5a84659dc9ce9cf94410e0db5d7c7c7bfed29281f46f9101d9a943a052860aa6",
+    "bc_inputs/data/S3_sparse__s99004.npz": "4b5a94f189065c24e60d2fef54d38233903dc87c2ab7a6e0f6897410223839fc"
+  },
+  "frozen_utc": "2026-10-28T05:42:27.505108+00:00"
+}

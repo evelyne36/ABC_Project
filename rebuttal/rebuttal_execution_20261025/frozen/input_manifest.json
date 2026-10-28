@@ -1,0 +1,22 @@
+{
+  "approved_at": "2026-10-25",
+  "authorization": "用户确认：同意核心方案＋限时容量诊断（推荐）",
+  "plan_sha256": "7188d355d14d574f6881c3dd3341ce099563d20d4658b1c64e95d8925e4f702b",
+  "scope": "E0–E5，限时E6；不自动提交/外发/付费申请机器",
+  "source_files": {
+    "Reviewers_CrossGB_ Modeling Conditional–Predictive Feature Interactions in Gradient-Boosted Trees _ OpenReview.pdf": "4877e79b5b14d06768988ee4d9fb9a7b78a0851d35cb43541fe27bde3c3f860e",
+    "aaai2027提交原件/24092_CrossGB_Modeling_Conditi_Technical Supplement.pdf": "990c39ecc5d767057c209339de0fa078beadb086858d325971b759a9276a2dfb",
+    "aaai2027提交原件/24092_CrossGB_Modeling_Conditi.pdf": "f32a0868b2f22f61b02cb99748a1aae612790c250a899c8c378950dc3750c602",
+    "aaai_FullCodeProject-check_codereview0701/datacollection0702/0716dataAddition/metagb_ablation_syn/syn_formal_formal16_v1/synthetic_backbones.json": "805e830fe6ef9c17a5166e9cc94faebb8c6a2c8db0e76385bee7ac28ce4d800d",
+    "aaai_FullCodeProject-check_codereview0701/datacollection0702/0716dataAddition/metagb_ablation_syn/syn_formal_formal16_v1/protocol.json": "25c284091d31c43e2a86627d72c40da2604ed5eed0c954a55e408f1829bbdb71",
+    "aaai_FullCodeProject-check_codereview0701/datacollection0702/0716dataAddition/metagb_ablation_syn/syn_formal_formal16_v1/split_manifest.json": "da45a6e0b1f8d24684d362d1ea43c591dd494e0bf64dd19bc2a181073e67b73c",
+    "aaai_FullCodeProject-check_codereview0701/datacollection0702/0716dataAddition/ts0716/未命名/summary.csv": "e0b61b6d2da7eafcfc4c94898f7f1c8072e9317bdc30946557bd82e1c07a1e95",
+    "aaai_FullCodeProject-check_codereview0701/datacollection0702/0716dataAddition/ts0716/未命名/aggregate.csv": "d7981df644fd7a20ddcc31394bc6036b35cd60c2d67e9236fb10bd129bbaad5f",
+    "aaai_FullCodeProject-check_codereview0701/datacollection0702/0716dataAddition/ts0716/未命名/metadata.json": "6a7cd2c7b262cd4ce4908f171d5e9eed603fd1a0d330ce2848e8a3075b5e3e29",
+    "aaai_FullCodeProject-check_codereview0701/datacollection0702/0716dataAddition/ts0716/未命名/candidates.csv": "258a520067d3ca43a97f5db3acc950bdee7d712cfc042f898de515a2fc564256",
+    "aaai_FullCodeProject-check_codereview0701/datacollection0702/0716dataAddition/ts0716/未命名/candidate_configs.json": "f676359751568c21230087b24b30b8469795bb71a4cc6af4946fc4e43d015a34",
+    "aaai_FullCodeProject-check_codereview0701/datacollection0702/0716dataAddition/ts0716/未命名/smoke_report.md": "4f38a1c554d70c8a5c5bdb5317024a31dce2669d5aec187a0471a11e75120271",
+    "aaai_FullCodeProject-check_codereview0701/datacollection0702/0716dataAddition/ts0716/未命名/parameter_audit.json": "8db4d30541e283a1ecb3bc767996e785a85eb42a98ff0af7308804d72bff22ba",
+    "aaai_FullCodeProject-check_codereview0701/datacollection0702/0716dataAddition/ts0716/未命名/split_manifest.json": "6aab7eab3bfd7d8a1842b82bb6fa81aadbecc80737066f0b0746b29929d70eb3"
+  }
+}

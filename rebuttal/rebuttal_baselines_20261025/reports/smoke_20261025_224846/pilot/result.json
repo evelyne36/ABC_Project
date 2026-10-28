@@ -1,0 +1,59 @@
+{
+  "method": "pilot",
+  "status": "success",
+  "seed": 13,
+  "input_sha256": "7fc1a8cd94fde3daf339f687bcbf09a11327ac843d13a4f20458b2ac5b871cca",
+  "train_rows": 112,
+  "predict_rows": 32,
+  "feature_count": 3,
+  "requested_params": {
+    "max_depth": 3,
+    "max_model_depth": 8,
+    "min_sample_leaf": 8
+  },
+  "model_fit_calls": 1,
+  "crossgb_fit_calls": 0,
+  "fit_timing_scope": "includes first-use author import/JIT; do not interpret as warmed kernel timing",
+  "environment": {
+    "python": "3.13.9",
+    "system": "Darwin",
+    "machine": "arm64",
+    "versions": {
+      "numpy": "2.3.5",
+      "scipy": "1.16.3",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "numba": "0.62.1"
+    }
+  },
+  "source": {
+    "method": "pilot",
+    "url": "https://codeload.github.com/STAN-UAntwerp/PILOT/tar.gz/ea769a0d55dd2babf4c57d31094758d7879f29ff",
+    "revision": "ea769a0d55dd2babf4c57d31094758d7879f29ff",
+    "archive_sha256": "145602969138d37cfd1eeb9eea496ca91862b54edae0be0e1a8628e37d3a76c4",
+    "archive_bytes": 15953126,
+    "extracted_path": "vendor/pilot"
+  },
+  "fit_wall_sec": 6.507972458988661,
+  "fit_process_cpu_sec": 6.182348,
+  "predict_wall_sec": 0.0007086670084390789,
+  "predict_process_cpu_sec": 0.0007089999999996266,
+  "metadata": {
+    "method": "pilot",
+    "task": "regression",
+    "standardize_training_only": false,
+    "threads_per_fit": 1,
+    "test_labels_passed_to_fit": false,
+    "implementation": "author_python_numba",
+    "leaf_model": "PILOT_node_model_selection",
+    "import_compatibility": "namespace_load_bypasses_optional_cpilot_import",
+    "effective_params": {
+      "max_depth": 3,
+      "max_model_depth": 8,
+      "min_sample_leaf": 8
+    }
+  },
+  "rmse": 5.923526413743747e-05,
+  "evaluation_scope": "evaluate-only labels; never passed to model.fit",
+  "prediction_sha256": "a4ba9401a46bbdcc9b983fee4154b3001602d1b36d03ccb34b891986783fed28"
+}

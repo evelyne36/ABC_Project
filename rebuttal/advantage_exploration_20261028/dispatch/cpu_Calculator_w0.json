@@ -1,0 +1,903 @@
+{
+  "stage": "quick",
+  "host": "cpu_Calculator",
+  "case": "A06_two_sparse_modules",
+  "kind": "synthetic",
+  "core_slot": 0,
+  "worker_sha256": "d2e2743d38c80b4d82b9bfb5e4a04aa1a88be952603460fad86f0e9fcb747e2a",
+  "wall_budget_seconds": 1800,
+  "data_sha256": {
+    "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz": "2ed637e0dd63b9b870d5b77f221365615246b14527c08b1372e8b7d47506c594",
+    "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz": "54d7d25d7315fc6ee4ea65ab8afd81d8a7e9cf545204a66676fa1ed12226f49d"
+  },
+  "jobs": [
+    {
+      "id": "A06_two_sparse_modules/CrossGB/c00/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "CrossGB",
+      "candidate": 0,
+      "seed": 110001,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 2,
+        "learning_rate": 1.0,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/CrossGB/c00/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/CrossGB/c00/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "CrossGB",
+      "candidate": 0,
+      "seed": 110002,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 2,
+        "learning_rate": 1.0,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/CrossGB/c00/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/XGB/c00/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "XGB",
+      "candidate": 0,
+      "seed": 110001,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/XGB/c00/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/XGB/c00/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "XGB",
+      "candidate": 0,
+      "seed": 110002,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/XGB/c00/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_constant/c00/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "LGB_constant",
+      "candidate": 0,
+      "seed": 110001,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_constant/c00/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_constant/c00/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "LGB_constant",
+      "candidate": 0,
+      "seed": 110002,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_constant/c00/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_linear/c00/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "LGB_linear",
+      "candidate": 0,
+      "seed": 110001,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_linear/c00/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_linear/c00/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "LGB_linear",
+      "candidate": 0,
+      "seed": 110002,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_linear/c00/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/PL/c00/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "PL",
+      "candidate": 0,
+      "seed": 110001,
+      "params": {
+        "num_trees": 4,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 1.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/PL/c00/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/PL/c00/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "PL",
+      "candidate": 0,
+      "seed": 110002,
+      "params": {
+        "num_trees": 4,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 1.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/PL/c00/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LinXGBoost/c00/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "LinXGBoost",
+      "candidate": 0,
+      "seed": 110001,
+      "params": {
+        "n_estimators": 1,
+        "max_depth": 1,
+        "lbda": 10.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LinXGBoost/c00/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LinXGBoost/c00/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "LinXGBoost",
+      "candidate": 0,
+      "seed": 110002,
+      "params": {
+        "n_estimators": 1,
+        "max_depth": 1,
+        "lbda": 10.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LinXGBoost/c00/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/CrossGB/c01/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "CrossGB",
+      "candidate": 1,
+      "seed": 110001,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 8,
+        "learning_rate": 0.5,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/CrossGB/c01/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/CrossGB/c01/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "CrossGB",
+      "candidate": 1,
+      "seed": 110002,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 8,
+        "learning_rate": 0.5,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/CrossGB/c01/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/XGB/c01/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "XGB",
+      "candidate": 1,
+      "seed": 110001,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/XGB/c01/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/XGB/c01/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "XGB",
+      "candidate": 1,
+      "seed": 110002,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/XGB/c01/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_constant/c01/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "LGB_constant",
+      "candidate": 1,
+      "seed": 110001,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_constant/c01/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_constant/c01/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "LGB_constant",
+      "candidate": 1,
+      "seed": 110002,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_constant/c01/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_linear/c01/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "LGB_linear",
+      "candidate": 1,
+      "seed": 110001,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_linear/c01/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_linear/c01/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "LGB_linear",
+      "candidate": 1,
+      "seed": 110002,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_linear/c01/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/PL/c01/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "PL",
+      "candidate": 1,
+      "seed": 110001,
+      "params": {
+        "num_trees": 16,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 10.0,
+        "max_var": 5,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 0.3
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/PL/c01/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/PL/c01/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "PL",
+      "candidate": 1,
+      "seed": 110002,
+      "params": {
+        "num_trees": 16,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 10.0,
+        "max_var": 5,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 0.3
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/PL/c01/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LinXGBoost/c01/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "LinXGBoost",
+      "candidate": 1,
+      "seed": 110001,
+      "params": {
+        "n_estimators": 1,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LinXGBoost/c01/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LinXGBoost/c01/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "LinXGBoost",
+      "candidate": 1,
+      "seed": 110002,
+      "params": {
+        "n_estimators": 1,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LinXGBoost/c01/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/CrossGB/c02/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "CrossGB",
+      "candidate": 2,
+      "seed": 110001,
+      "params": {
+        "depth": 3,
+        "ridge": 10.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/CrossGB/c02/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/CrossGB/c02/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "CrossGB",
+      "candidate": 2,
+      "seed": 110002,
+      "params": {
+        "depth": 3,
+        "ridge": 10.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/CrossGB/c02/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/XGB/c02/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "XGB",
+      "candidate": 2,
+      "seed": 110001,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/XGB/c02/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/XGB/c02/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "XGB",
+      "candidate": 2,
+      "seed": 110002,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/XGB/c02/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_constant/c02/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "LGB_constant",
+      "candidate": 2,
+      "seed": 110001,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_constant/c02/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_constant/c02/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "LGB_constant",
+      "candidate": 2,
+      "seed": 110002,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_constant/c02/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_linear/c02/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "LGB_linear",
+      "candidate": 2,
+      "seed": 110001,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_linear/c02/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_linear/c02/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "LGB_linear",
+      "candidate": 2,
+      "seed": 110002,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_linear/c02/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/PL/c02/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "PL",
+      "candidate": 2,
+      "seed": 110001,
+      "params": {
+        "num_trees": 64,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 1.0,
+        "max_var": 10,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/PL/c02/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/PL/c02/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "PL",
+      "candidate": 2,
+      "seed": 110002,
+      "params": {
+        "num_trees": 64,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 1.0,
+        "max_var": 10,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/PL/c02/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LinXGBoost/c02/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "LinXGBoost",
+      "candidate": 2,
+      "seed": 110001,
+      "params": {
+        "n_estimators": 4,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LinXGBoost/c02/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LinXGBoost/c02/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "LinXGBoost",
+      "candidate": 2,
+      "seed": 110002,
+      "params": {
+        "n_estimators": 4,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LinXGBoost/c02/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/CrossGB/c03/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "CrossGB",
+      "candidate": 3,
+      "seed": 110001,
+      "params": {
+        "depth": 4,
+        "ridge": 100.0,
+        "trees": 64,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/CrossGB/c03/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/CrossGB/c03/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "CrossGB",
+      "candidate": 3,
+      "seed": 110002,
+      "params": {
+        "depth": 4,
+        "ridge": 100.0,
+        "trees": 64,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/CrossGB/c03/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/XGB/c03/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "XGB",
+      "candidate": 3,
+      "seed": 110001,
+      "params": {
+        "depth": 3,
+        "ridge": 100.0,
+        "trees": 512,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/XGB/c03/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/XGB/c03/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "XGB",
+      "candidate": 3,
+      "seed": 110002,
+      "params": {
+        "depth": 3,
+        "ridge": 100.0,
+        "trees": 512,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/XGB/c03/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_constant/c03/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "LGB_constant",
+      "candidate": 3,
+      "seed": 110001,
+      "params": {
+        "depth": 3,
+        "ridge": 100.0,
+        "trees": 512,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_constant/c03/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_constant/c03/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "LGB_constant",
+      "candidate": 3,
+      "seed": 110002,
+      "params": {
+        "depth": 3,
+        "ridge": 100.0,
+        "trees": 512,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_constant/c03/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_linear/c03/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "LGB_linear",
+      "candidate": 3,
+      "seed": 110001,
+      "params": {
+        "depth": 3,
+        "ridge": 100.0,
+        "trees": 512,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_linear/c03/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_linear/c03/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "LGB_linear",
+      "candidate": 3,
+      "seed": 110002,
+      "params": {
+        "depth": 3,
+        "ridge": 100.0,
+        "trees": 512,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_linear/c03/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/PL/c03/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "PL",
+      "candidate": 3,
+      "seed": 110001,
+      "params": {
+        "num_trees": 32,
+        "max_depth": 4,
+        "num_leaves": 16,
+        "l2_reg": 100.0,
+        "max_var": 3,
+        "leaf_type": "linear",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 0.1
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/PL/c03/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/PL/c03/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "PL",
+      "candidate": 3,
+      "seed": 110002,
+      "params": {
+        "num_trees": 32,
+        "max_depth": 4,
+        "num_leaves": 16,
+        "l2_reg": 100.0,
+        "max_var": 3,
+        "leaf_type": "linear",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 0.1
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/PL/c03/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LinXGBoost/c03/s110001",
+      "case": "A06_two_sparse_modules",
+      "method": "LinXGBoost",
+      "candidate": 3,
+      "seed": 110001,
+      "params": {
+        "n_estimators": 4,
+        "max_depth": 2,
+        "lbda": 100.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LinXGBoost/c03/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    },
+    {
+      "id": "A06_two_sparse_modules/LinXGBoost/c03/s110002",
+      "case": "A06_two_sparse_modules",
+      "method": "LinXGBoost",
+      "candidate": 3,
+      "seed": 110002,
+      "params": {
+        "n_estimators": 4,
+        "max_depth": 2,
+        "lbda": 100.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LinXGBoost/c03/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 90
+    }
+  ]
+}

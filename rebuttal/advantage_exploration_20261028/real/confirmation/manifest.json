@@ -1,0 +1,203 @@
+{
+  "version": "advantage-real-confirm-v1-20261028",
+  "entries": [
+    {
+      "dataset": "gas_turbine_nox__s113001",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "family": "gas_turbine_nox",
+      "phase": "confirmation",
+      "seed": 113001,
+      "task_type": "regression",
+      "npz": "data/gas_turbine_nox__s113001.npz",
+      "metadata": "data/gas_turbine_nox__s113001.json",
+      "npz_sha256": "bd32e82fa71677029e2336caba1eb99ed65e5d6dd5060785073ba8770a8fde3e",
+      "source_novelty": "existing_source_new_target",
+      "rows": 36733,
+      "features": 9,
+      "split_sizes": {
+        "train": 600,
+        "val": 7152,
+        "test": 14542
+      }
+    },
+    {
+      "dataset": "gas_turbine_nox__s113002",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "family": "gas_turbine_nox",
+      "phase": "confirmation",
+      "seed": 113002,
+      "task_type": "regression",
+      "npz": "data/gas_turbine_nox__s113002.npz",
+      "metadata": "data/gas_turbine_nox__s113002.json",
+      "npz_sha256": "bf7b32c8e87698879a2bb75d2aa177c306d28c85477ca919ed09739eac161790",
+      "source_novelty": "existing_source_new_target",
+      "rows": 36733,
+      "features": 9,
+      "split_sizes": {
+        "train": 600,
+        "val": 7152,
+        "test": 14542
+      }
+    },
+    {
+      "dataset": "gas_turbine_nox__s113003",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "family": "gas_turbine_nox",
+      "phase": "confirmation",
+      "seed": 113003,
+      "task_type": "regression",
+      "npz": "data/gas_turbine_nox__s113003.npz",
+      "metadata": "data/gas_turbine_nox__s113003.json",
+      "npz_sha256": "a5bbd511b70c57a7c6e9b9676216445cdf20b0ca62150ef6d2b0a2850c4e53a8",
+      "source_novelty": "existing_source_new_target",
+      "rows": 36733,
+      "features": 9,
+      "split_sizes": {
+        "train": 600,
+        "val": 7152,
+        "test": 14542
+      }
+    },
+    {
+      "dataset": "gas_turbine_nox__s113004",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "family": "gas_turbine_nox",
+      "phase": "confirmation",
+      "seed": 113004,
+      "task_type": "regression",
+      "npz": "data/gas_turbine_nox__s113004.npz",
+      "metadata": "data/gas_turbine_nox__s113004.json",
+      "npz_sha256": "ce045fde44afe60de1e73e52ea3f4146213521d0832d233b980777a8b7db49b6",
+      "source_novelty": "existing_source_new_target",
+      "rows": 36733,
+      "features": 9,
+      "split_sizes": {
+        "train": 600,
+        "val": 7152,
+        "test": 14542
+      }
+    },
+    {
+      "dataset": "gas_turbine_nox__s113005",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "family": "gas_turbine_nox",
+      "phase": "confirmation",
+      "seed": 113005,
+      "task_type": "regression",
+      "npz": "data/gas_turbine_nox__s113005.npz",
+      "metadata": "data/gas_turbine_nox__s113005.json",
+      "npz_sha256": "0ab9951e1f940e2050b4a12df58020d9e960561fb1ae3a841d41d93889d3c3f4",
+      "source_novelty": "existing_source_new_target",
+      "rows": 36733,
+      "features": 9,
+      "split_sizes": {
+        "train": 600,
+        "val": 7152,
+        "test": 14542
+      }
+    }
+  ],
+  "confirmation_freeze_sha256": "5ca62804148201ebd1b79e9cf15205ba678a4451e2b842be7d1a0e12d96f7fd9",
+  "confirmation_frozen_utc": "2026-10-28T08:06:09.706663+00:00",
+  "confirmation_seeds": [
+    113001,
+    113002,
+    113003,
+    113004,
+    113005
+  ],
+  "development_manifest_sha256": "245a100b56b4fc3869fafb3c9ab1cf5d189704aa1649e96b02af84f33315ea1a",
+  "development_generator_sha256": "fc9d3df6d2cd7dbf1d6480c06e8bdbec4b3748c2c5470e499dcb5c91d3c1fa79",
+  "generator_sha256": "7376195ecfbf12141293fef5330e7e35b6b7833fe47d1898028b11c07a16aa76",
+  "frozen_choices": {
+    "CrossGB": {
+      "candidate": 7,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 64,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "params_sha256": "2b463a38cc350ff9929cb3af44364aa528a65d9077fa04482bb98c6a682320cb",
+      "mean_development_primary": 7.602080307415987,
+      "complete_candidates": 20
+    },
+    "XGB": {
+      "candidate": 16,
+      "params": {
+        "depth": 3,
+        "ridge": 0.01,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "params_sha256": "d33e1671660576cb313c31581359331877d3857b80d5a6e2c7a72f5bd981bead",
+      "mean_development_primary": 7.986827305896917,
+      "complete_candidates": 20
+    },
+    "LGB_constant": {
+      "candidate": 8,
+      "params": {
+        "depth": 5,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "params_sha256": "ff5950535aa1b4be7a0043aa8c3c075f22cd9d4158358a0b0ae51e6b616c2703",
+      "mean_development_primary": 7.935155809466349,
+      "complete_candidates": 20
+    },
+    "LGB_linear": {
+      "candidate": 11,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "params_sha256": "eb3d960f77258b2fd44e85bd46dba8a315b862755e37b4b76bce5e17c0ad985c",
+      "mean_development_primary": 7.930059081165307,
+      "complete_candidates": 20
+    },
+    "PL": {
+      "candidate": 5,
+      "params": {
+        "num_trees": 256,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 0.1,
+        "max_var": 3,
+        "leaf_type": "linear",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 0.05
+      },
+      "params_sha256": "6f27b9430cfaa1bb169b6548ec2b03b5231ad6f32ac99aac4df2d688ddf1e85f",
+      "mean_development_primary": 7.760933391567669,
+      "complete_candidates": 20
+    },
+    "LinXGBoost": {
+      "candidate": 13,
+      "params": {
+        "n_estimators": 8,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.2
+      },
+      "params_sha256": "cdea39549ab1091066cbf44a81e0596d5668151414a5cec1c280f0764896ac01",
+      "mean_development_primary": 7.977857210707631,
+      "complete_candidates": 20
+    }
+  },
+  "model_fits": 0,
+  "test_evaluations": 0,
+  "interpretation": "Five training subsamples share fixed 2013 validation and 2014\u201315 test. NOX is a correlated target from the previously tested CO source, not five independent datasets."
+}

@@ -1,0 +1,18 @@
+{
+  "match": true,
+  "remote": {
+    "checked_utc": "2026-10-28T05:23:26.594779+00:00",
+    "seeds": {
+      "98004": {
+        "failure_log": "Traceback (most recent call last):\n  File \"/home/admin/crossgb_fastlane_20261027/fastlane_reply_v1/capacity.py\", line 368, in <module>\n    raise SystemExit(main())\n                     ~~~~^^\n  File \"/home/admin/crossgb_fastlane_20261027/fastlane_reply_v1/capacity.py\", line 335, in main\n    raise RuntimeError(f\"Stored anchor replay exceeds absolute tolerance 1e-5: {differences}\")\nRuntimeError: Stored anchor replay exceeds absolute tolerance 1e-5: {'train': 1.003796386811473e-05, 'val': 4.930936357006033e-06, 'test': 1.0535789363608217e-05}\n",
+        "model_sha256": "8f47817f6cced43a9519baba2816c6a548a34279cc8486ffa237e288eb76fb7b",
+        "data_sha256": "763ca7124979fb46fe8a5501b075cd1b2d2d557264f6ff6a4469aa214c6199c3"
+      },
+      "98005": {
+        "failure_log": "Traceback (most recent call last):\n  File \"/home/admin/crossgb_fastlane_20261027/fastlane_reply_v1/capacity.py\", line 368, in <module>\n    raise SystemExit(main())\n                     ~~~~^^\n  File \"/home/admin/crossgb_fastlane_20261027/fastlane_reply_v1/capacity.py\", line 335, in main\n    raise RuntimeError(f\"Stored anchor replay exceeds absolute tolerance 1e-5: {differences}\")\nRuntimeError: Stored anchor replay exceeds absolute tolerance 1e-5: {'train': 7.165304335643441e-06, 'val': 1.058922388974537e-05, 'test': 5.041207213452026e-06}\n",
+        "model_sha256": "3758357c4da63222f9309fa0e76ff539e83d1d3923b58129112743263f178751",
+        "data_sha256": "d7f98cb6d9b827236dbcfc3510777521cc3515a7b182787163c5bb4a1dd15432"
+      }
+    }
+  }
+}

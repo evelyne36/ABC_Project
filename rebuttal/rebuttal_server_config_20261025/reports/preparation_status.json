@@ -1,0 +1,31 @@
+{
+  "mode": "historical_server_bundle_superseded_by_formal_20261026",
+  "local_new_training_fits": 0,
+  "local_native_build_completed": false,
+  "local_dependency_install_succeeded": false,
+  "local_activity_stopped": true,
+  "core_configurations": 8,
+  "E1_planned_rows": 420,
+  "E2_planned_outer_model_jobs": 100,
+  "E2_planned_fits": 9100,
+  "E5_planned_tasks": 10,
+  "implementation_not_claimed": [
+    "N5 capacity probe",
+    "N6b rolling origins"
+  ],
+  "existing_entry_copied": [
+    "Xia TS persistence/Ridge reference runner"
+  ],
+  "validation_scope": "JSON/CSV/source-path/hash/static syntax only, no science runtime/model fit",
+  "current_authoritative_plan": "rebuttal_formal_20261026/正式执行规划_metaDesign.md",
+  "runtime_verified": false,
+  "remote_environment_verified_hosts": 5,
+  "code_prepared_but_linux_runtime_pending": [
+    "R0 replay/gate",
+    "N2 LeafOnly native flag and runner",
+    "N1 four author baseline adapters",
+    "N3 equal wall-clock SEARCH budget runner",
+    "N4 selected structure export",
+    "N6a TS references"
+  ]
+}

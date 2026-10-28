@@ -1,0 +1,82 @@
+{
+  "cases": [
+    {
+      "family": "sparse_switch",
+      "n": 600,
+      "d": 8,
+      "regions": 2
+    },
+    {
+      "family": "sparse_switch",
+      "n": 600,
+      "d": 8,
+      "regions": 4
+    },
+    {
+      "family": "sparse_switch",
+      "n": 600,
+      "d": 32,
+      "regions": 4
+    },
+    {
+      "family": "sparse_switch",
+      "n": 2400,
+      "d": 32,
+      "regions": 4
+    },
+    {
+      "family": "dense_switch",
+      "n": 600,
+      "d": 32,
+      "regions": 4
+    },
+    {
+      "family": "offset_switch",
+      "n": 600,
+      "d": 32,
+      "regions": 4
+    },
+    {
+      "family": "step_control",
+      "n": 600,
+      "d": 32,
+      "regions": 4
+    }
+  ],
+  "data_seeds": [
+    52001,
+    52002,
+    52003
+  ],
+  "learning_rates": [
+    1.0,
+    0.1
+  ],
+  "tree_counts": [
+    1,
+    4,
+    16,
+    64
+  ],
+  "native_methods": [
+    "XGB",
+    "CrossGB",
+    "LGB_constant",
+    "LGB_linear"
+  ],
+  "shared_depth": 3,
+  "shared_ridge": 1.0,
+  "predictor_fraction": 1.0,
+  "noise_sigma": 0.3,
+  "target_rmse_declared_before_fit": 0.45,
+  "split": "75/25 within each generated dataset",
+  "all_methods_receive": "same full X; no gate/active-support oracle roles",
+  "Lin_scope": "pinned author implementation, only two n600 d8 sparse cases, 1/4 trees and learning_rate1; 20s timeout per fit; intercept unpenalized and lbda2 matches squared-loss Hessian scaling relative to native reg_lambda1",
+  "no_expected_winner_certified": true,
+  "limitations": [
+    "local legacy builds",
+    "fixed small hyperparameter grid",
+    "no GBDT-PL run",
+    "finite simulation cases, not general superiority"
+  ]
+}

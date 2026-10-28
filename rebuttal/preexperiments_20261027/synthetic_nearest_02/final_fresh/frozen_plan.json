@@ -1,0 +1,59 @@
+{
+  "case": {
+    "family": "sparse_switch",
+    "n": 240,
+    "d": 32,
+    "regions": 2
+  },
+  "seeds": [
+    93001,
+    93002,
+    93003,
+    93004,
+    93005
+  ],
+  "configs": {
+    "CrossGB": {
+      "depth": 3,
+      "ridge": 1.0,
+      "p": 1.0,
+      "trees": 1,
+      "lr": 1.0
+    },
+    "XGB": {
+      "depth": 3,
+      "ridge": 1.0,
+      "p": 1.0,
+      "trees": 1,
+      "lr": 1.0
+    },
+    "LGB_linear": {
+      "depth": 3,
+      "ridge": 0.1,
+      "p": 1.0,
+      "trees": 16,
+      "lr": 0.3
+    },
+    "PL": {
+      "num_trees": 1,
+      "max_depth": 3,
+      "num_leaves": 8,
+      "l2_reg": 1.0,
+      "max_var": 5,
+      "leaf_type": "half_additive",
+      "min_sum_hessians": 5.0,
+      "learning_rate": 1.0
+    },
+    "LinXGBoost": {
+      "n_estimators": 1,
+      "max_depth": 2,
+      "lbda": 2.0,
+      "min_samples_leaf": 10,
+      "learning_rate": 1.0
+    }
+  },
+  "selection": "freeze after previous adaptive work; Lin uses shallower setting that improved previous validation; ours unchanged; these five seeds not previously used",
+  "target_rmse": 0.75,
+  "primary": "paired RMSE and local fit wall/CPU; 5 independent generated datasets; no broad significance claim",
+  "split": "180 train, 60 validation; random_state equals data seed"
+}

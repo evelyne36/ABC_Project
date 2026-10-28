@@ -1,0 +1,47 @@
+{
+  "discovery_fits": 1488,
+  "discovery_success": 1488,
+  "cells": 62,
+  "datasets": 52,
+  "skipped": [
+    {
+      "cell": "Food_Delivery_Time.csv::onehot",
+      "dataset": "Food_Delivery_Time.csv",
+      "task": "regression",
+      "error": "ValueError: encoded_features_above_128"
+    },
+    {
+      "cell": "QSAR-TID-11.csv::numeric",
+      "dataset": "QSAR-TID-11.csv",
+      "task": "regression",
+      "error": "ValueError: encoded_features_above_128"
+    },
+    {
+      "cell": "HR_Analytics_Job_Change_of_Data_Scientists.csv::onehot",
+      "dataset": "HR_Analytics_Job_Change_of_Data_Scientists.csv",
+      "task": "binary",
+      "error": "ValueError: encoded_features_above_128"
+    },
+    {
+      "cell": "Marketing_Campaign.csv::onehot",
+      "dataset": "Marketing_Campaign.csv",
+      "task": "binary",
+      "error": "ValueError: encoded_features_above_128"
+    },
+    {
+      "dataset": "anneal.csv",
+      "task": "multiclass",
+      "error": "ValueError: minority_class_count_below_10"
+    },
+    {
+      "cell": "website_phishing.csv::drop",
+      "dataset": "website_phishing.csv",
+      "task": "multiclass",
+      "error": "ValueError: no_numeric_features_after_drop"
+    }
+  ],
+  "audit_fits": 96,
+  "audit_success": 96,
+  "formal_test_evaluations": 0,
+  "wall_sec": 380.31691141599913
+}

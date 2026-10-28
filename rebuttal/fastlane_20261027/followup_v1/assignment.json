@@ -1,0 +1,391 @@
+{
+  "cpu1_pool.zjuici.com": {
+    "kind": "capacity",
+    "host": "cpu1_pool.zjuici.com",
+    "batch_budget_seconds": 1800,
+    "frozen_utc": "2026-10-27T19:40:04.671898+00:00",
+    "cases": {
+      "cpu_activity": {
+        "params": {
+          "depth": 3,
+          "learning_rate": 0.05,
+          "p": 1.0,
+          "ridge": 0.1,
+          "trees": 256
+        },
+        "seeds": [
+          98002,
+          98003,
+          98004,
+          98005
+        ],
+        "source": "local_sync/fastlane_results/cpu_Calculator/results/quick_v1/cpu_activity/final/CrossGB/s98001/result.json"
+      }
+    },
+    "test_selection": false,
+    "scope": "Repeated fixed recipes on existing confirmation splits; diagnostic, not fresh test confirmation; no search",
+    "data_sha256": {
+      "cpu_activity__s98002.npz": "39fcd74dafbcbeb615d78f27f93dedede7a97a15d614e770b57f292727fc6262",
+      "cpu_activity__s98003.npz": "b678e25123aaf613eee0c404a6d020bad20066f8241477738d39bd45b82ddc09",
+      "cpu_activity__s98004.npz": "b001df6f48637ea1d6171ac88da11366cf5ac98aeb089358cc517c23230ae6c3",
+      "cpu_activity__s98005.npz": "2411e34efc0859a4c70a05a49bffd54091a5fb60421620e568ca1aa73888e85e"
+    }
+  },
+  "cpu2_pool.zjuici.com": {
+    "kind": "capacity",
+    "host": "cpu2_pool.zjuici.com",
+    "batch_budget_seconds": 1800,
+    "frozen_utc": "2026-10-27T19:40:04.672406+00:00",
+    "cases": {
+      "protein": {
+        "params": {
+          "depth": 5,
+          "learning_rate": 0.05,
+          "p": 1.0,
+          "ridge": 10.0,
+          "trees": 256
+        },
+        "seeds": [
+          98002,
+          98003,
+          98004,
+          98005
+        ],
+        "source": "local_sync/fastlane_results/cpu_Calculator/results/quick_v1/protein/final/CrossGB/s98001/result.json"
+      }
+    },
+    "test_selection": false,
+    "scope": "Repeated fixed recipes on existing confirmation splits; diagnostic, not fresh test confirmation; no search",
+    "data_sha256": {
+      "protein__s98002.npz": "b6c9ea81190bb6ed567c8e9c971ed389254dadbdd1341b13ec9efcfb883b4e2d",
+      "protein__s98003.npz": "48ccf9cb59ea7bb2b535ec5cbf3a960a0f48daee61c925ced800499db8451970",
+      "protein__s98004.npz": "2e6f7d67566004d3849cab8ea402943bed7722df770430ac76dfc2fd02eeaf14",
+      "protein__s98005.npz": "1c056d52dc97dfe4a677b7b85313017d7e97883f2f48769f0ef9af3cee138eff"
+    }
+  },
+  "cpu4_pool.zjuici.com": {
+    "kind": "capacity",
+    "host": "cpu4_pool.zjuici.com",
+    "batch_budget_seconds": 1800,
+    "frozen_utc": "2026-10-27T19:40:04.672690+00:00",
+    "cases": {
+      "S1_sparse": {
+        "params": {
+          "depth": 2,
+          "learning_rate": 1.0,
+          "p": 1.0,
+          "ridge": 2.0,
+          "trees": 1
+        },
+        "seeds": [
+          98002,
+          98003,
+          98004,
+          98005
+        ],
+        "source": "local_sync/fastlane_results/cpu4_pool.zjuici.com/results/quick_v1/S1_sparse/final/CrossGB/s98001/result.json"
+      }
+    },
+    "test_selection": false,
+    "scope": "Repeated fixed recipes on existing confirmation splits; diagnostic, not fresh test confirmation; no search",
+    "data_sha256": {
+      "S1_sparse__s98002.npz": "45b02464f4388442244ab1ffa2f8aa12a9ff6432e94335a75c1a2429846d589b",
+      "S1_sparse__s98003.npz": "9c55e02f2941412cf463c2594f74ceed5d8433ff5f96e91e2c361c12ba888c25",
+      "S1_sparse__s98004.npz": "4d8e8a2e7b3976368ce5e09c403128c0d0bf9126bcbcb3d3baa4c471caceb805",
+      "S1_sparse__s98005.npz": "cc854d6d05a4076b32572ae2d9d12c02dadedce7a88485391ac722e3a731a6ea"
+    }
+  },
+  "cpu5_pool.zjuici.com": {
+    "kind": "capacity",
+    "host": "cpu5_pool.zjuici.com",
+    "batch_budget_seconds": 1800,
+    "frozen_utc": "2026-10-27T19:40:04.672965+00:00",
+    "cases": {
+      "S1_dense": {
+        "params": {
+          "depth": 4,
+          "learning_rate": 0.1,
+          "p": 1.0,
+          "ridge": 1.0,
+          "trees": 64
+        },
+        "seeds": [
+          98002,
+          98003,
+          98004,
+          98005
+        ],
+        "source": "local_sync/fastlane_results/cpu4_pool.zjuici.com/results/quick_v1/S1_dense/final/CrossGB/s98001/result.json"
+      }
+    },
+    "test_selection": false,
+    "scope": "Repeated fixed recipes on existing confirmation splits; diagnostic, not fresh test confirmation; no search",
+    "data_sha256": {
+      "S1_dense__s98002.npz": "a97b67d9fca14bb0919402684979bdb51bcb1bafa19b421a5d9b71e51f29c75f",
+      "S1_dense__s98003.npz": "c442ff601a0d73a6dcbba46cc0edcc2bf8fb54d844b87a55fbac13780e35bb8f",
+      "S1_dense__s98004.npz": "8463d8aed6d5398eb934922c6521f837a887e2b4c70fe60a6747bb5dca0b5e9a",
+      "S1_dense__s98005.npz": "baace82f832d664ab8ed878e94619e127fbd2159fc2a5b7e0825ebfd9cfc7a62"
+    }
+  },
+  "cpu_Calculator": {
+    "kind": "capacity",
+    "host": "cpu_Calculator",
+    "batch_budget_seconds": 1800,
+    "frozen_utc": "2026-10-27T19:40:04.673372+00:00",
+    "cases": {
+      "S2_sparse": {
+        "params": {
+          "depth": 2,
+          "learning_rate": 0.03,
+          "p": 1.0,
+          "ridge": 1.0,
+          "trees": 1024
+        },
+        "seeds": [
+          98001,
+          98002,
+          98003,
+          98004,
+          98005
+        ],
+        "source": "local_sync/fastlane_results/cpu2_pool.zjuici.com/results/formal24_v1/S2_sparse/final/CrossGB/s98001/result.json"
+      }
+    },
+    "test_selection": false,
+    "scope": "Repeated fixed recipes on existing confirmation splits; diagnostic, not fresh test confirmation; no search",
+    "data_sha256": {
+      "S2_sparse__s98001.npz": "38dc96409e271e0a1b1be05213d4e9621f0ae5bbdfd56db912de5ffc4faafe93",
+      "S2_sparse__s98002.npz": "84b0d70a685c812c67575b98731e321baf3fbb2b6dc629a0bd6e1d419ed13b82",
+      "S2_sparse__s98003.npz": "dcf532fa2e84ea0cd1f4813f8633444f14eec0a2c6bb70d7213a4a886bff1a42",
+      "S2_sparse__s98004.npz": "d6a841967d2fc2a49161fad5552e14b1122e2cd5a3f6d1cd253ff8cf7e6b7cb4",
+      "S2_sparse__s98005.npz": "12caaac866dcc1b2d3bb04a0bfa5868077185150016222e216aba67a3c695947"
+    }
+  },
+  "TabularData_Processor": {
+    "kind": "capacity",
+    "host": "TabularData_Processor",
+    "batch_budget_seconds": 1800,
+    "frozen_utc": "2026-10-27T19:40:04.673835+00:00",
+    "cases": {
+      "S3_sparse": {
+        "params": {
+          "depth": 2,
+          "learning_rate": 0.03,
+          "p": 1.0,
+          "ridge": 1.0,
+          "trees": 1024
+        },
+        "seeds": [
+          98001,
+          98002,
+          98003,
+          98004,
+          98005
+        ],
+        "source": "local_sync/fastlane_results/cpu1_pool.zjuici.com/results/formal24_v1/S3_sparse/final/CrossGB/s98001/result.json"
+      }
+    },
+    "test_selection": false,
+    "scope": "Repeated fixed recipes on existing confirmation splits; diagnostic, not fresh test confirmation; no search",
+    "data_sha256": {
+      "S3_sparse__s98001.npz": "8e7e81a5155046ea477684644a694c60994f9f0e68aee1c1cf45c55dc4aff62b",
+      "S3_sparse__s98002.npz": "081b2c2e03d21ba7cf857a8c6b30a132e6dc83f1d4751bc08c99cc76365d7026",
+      "S3_sparse__s98003.npz": "017b0f5ada9699979325b482e0e6d1f45ffbff9af7374bb379cab9ee87a3b065",
+      "S3_sparse__s98004.npz": "763ca7124979fb46fe8a5501b075cd1b2d2d557264f6ff6a4469aa214c6199c3",
+      "S3_sparse__s98005.npz": "d7f98cb6d9b827236dbcfc3510777521cc3515a7b182787163c5bb4a1dd15432"
+    }
+  },
+  "cpu6_pool.zjuici.com": {
+    "kind": "timing",
+    "host": "cpu6_pool.zjuici.com",
+    "batch_budget_seconds": 1800,
+    "frozen_utc": "2026-10-27T19:40:04.675133+00:00",
+    "cases": {
+      "protein": {
+        "methods": {
+          "CrossGB": {
+            "depth": 5,
+            "ridge": 10.0,
+            "trees": 512,
+            "learning_rate": 0.05,
+            "p": 1.0
+          },
+          "XGB": {
+            "depth": 5,
+            "ridge": 10.0,
+            "trees": 512,
+            "learning_rate": 0.05,
+            "p": 1.0
+          },
+          "LGB_constant": {
+            "depth": 5,
+            "ridge": 10.0,
+            "trees": 300,
+            "learning_rate": 0.1,
+            "p": 1.0
+          },
+          "LGB_linear": {
+            "depth": 5,
+            "ridge": 10.0,
+            "trees": 512,
+            "learning_rate": 0.05,
+            "p": 1.0
+          },
+          "PL": {
+            "num_trees": 128,
+            "max_depth": 5,
+            "num_leaves": 32,
+            "l2_reg": 1.0,
+            "max_var": 5,
+            "leaf_type": "linear",
+            "min_sum_hessians": 5.0,
+            "learning_rate": 0.1
+          },
+          "LinXGBoost": {
+            "n_estimators": 5,
+            "max_depth": 2,
+            "lbda": 2.0,
+            "min_samples_leaf": 10,
+            "learning_rate": 0.3
+          }
+        },
+        "seeds": [
+          98001
+        ],
+        "source": "local_sync/fastlane_results/cpu_Calculator/results/formal24_v1/protein/choice.json"
+      },
+      "gas_turbine_co": {
+        "methods": {
+          "CrossGB": {
+            "depth": 5,
+            "ridge": 10.0,
+            "trees": 300,
+            "learning_rate": 0.1,
+            "p": 0.25
+          },
+          "XGB": {
+            "depth": 3,
+            "ridge": 1.0,
+            "trees": 64,
+            "learning_rate": 0.1,
+            "p": 1.0
+          },
+          "LGB_constant": {
+            "depth": 3,
+            "ridge": 10.0,
+            "trees": 256,
+            "learning_rate": 0.1,
+            "p": 1.0
+          },
+          "LGB_linear": {
+            "depth": 2,
+            "ridge": 0.1,
+            "trees": 64,
+            "learning_rate": 0.2,
+            "p": 1.0
+          },
+          "PL": {
+            "num_trees": 256,
+            "max_depth": 3,
+            "num_leaves": 8,
+            "l2_reg": 100.0,
+            "max_var": 5,
+            "leaf_type": "linear",
+            "min_sum_hessians": 5.0,
+            "learning_rate": 0.1
+          },
+          "LinXGBoost": {
+            "n_estimators": 5,
+            "max_depth": 2,
+            "lbda": 2.0,
+            "min_samples_leaf": 10,
+            "learning_rate": 0.3
+          }
+        },
+        "seeds": [
+          98001
+        ],
+        "source": "local_sync/fastlane_results/TabularData_Processor/results/formal24_v1/gas_turbine_co/choice.json"
+      },
+      "ilpd_numeric": {
+        "methods": {
+          "CrossGB": {
+            "depth": 2,
+            "ridge": 10.0,
+            "trees": 60,
+            "learning_rate": 0.05,
+            "p": 0.5
+          },
+          "XGB": {
+            "depth": 2,
+            "ridge": 10.0,
+            "trees": 60,
+            "learning_rate": 0.05,
+            "p": 0.5
+          },
+          "LGB_constant": {
+            "depth": 2,
+            "ridge": 10.0,
+            "trees": 60,
+            "learning_rate": 0.05,
+            "p": 0.5
+          },
+          "LGB_linear": {
+            "depth": 2,
+            "ridge": 10.0,
+            "trees": 60,
+            "learning_rate": 0.05,
+            "p": 0.5
+          }
+        },
+        "seeds": [
+          98001
+        ],
+        "source": "local_sync/fastlane_results/cpu5_pool.zjuici.com/results/formal30_class_v1/ilpd_numeric/choice.json"
+      },
+      "website_phishing": {
+        "methods": {
+          "CrossGB": {
+            "depth": 2,
+            "ridge": 0.1,
+            "trees": 64,
+            "learning_rate": 0.2,
+            "p": 1.0
+          },
+          "XGB": {
+            "depth": 5,
+            "ridge": 10.0,
+            "trees": 512,
+            "learning_rate": 0.05,
+            "p": 1.0
+          },
+          "LGB_constant": {
+            "depth": 5,
+            "ridge": 1.0,
+            "trees": 128,
+            "learning_rate": 0.1,
+            "p": 1.0
+          },
+          "LGB_linear": {
+            "depth": 4,
+            "ridge": 1.0,
+            "trees": 128,
+            "learning_rate": 0.1,
+            "p": 1.0
+          }
+        },
+        "seeds": [
+          98001
+        ],
+        "source": "local_sync/fastlane_results/cpu5_pool.zjuici.com/results/formal30_class_v1/website_phishing/choice.json"
+      }
+    },
+    "scope": "Three timing repetitions of frozen recipes; not independent accuracy repetitions; no search",
+    "data_sha256": {
+      "protein__s98001.npz": "586be91a9e38ac2413c0f70f3510d4ccf43f7d4ba8bfc5121313302e2e2320f7",
+      "gas_turbine_co__s98001.npz": "7219212adcbf6b6a2458b7870b284778ddf7627a07df7417df945b458bb7a56b",
+      "ilpd_numeric__s98001.npz": "f14ebc5815cf0b3b12516d35530e2cb4e471d2a03f2e7fdf5b667485a1e1ee5e",
+      "website_phishing__s98001.npz": "a46dab6cbeb116d7dc98e20523135e4cd4c71900bae7b42f83e79560f0c535a3"
+    }
+  }
+}

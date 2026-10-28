@@ -1,0 +1,141 @@
+{
+  "protocol_version": "advantage-real-dev-v1-20261028",
+  "dataset": "gas_turbine_nox__s112002",
+  "case": "gas_turbine_nox",
+  "family": "gas_turbine_nox",
+  "kind": "real",
+  "phase": "development",
+  "seed": 112002,
+  "task_type": "regression",
+  "source": {
+    "uci_id": 551,
+    "source_url": "https://archive.ics.uci.edu/dataset/551/gas+turbine+co+and+nox+emission+data+set",
+    "archive_url": "https://archive.ics.uci.edu/static/public/551/gas%2Bturbine%2Bco%2Band%2Bnox%2Bemission%2Bdata%2Bset.zip",
+    "archive_sha256": "55fdb1acc25f05bd9c77aac285c424e9154ffb0dbf1bbadb56b69a1142231295",
+    "doi": "10.24432/C5WC95",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "official_metadata_file": "sources/uci_551_official_metadata.json",
+    "official_metadata_sha256": "55b057fa924c48ed3205ab74c43f94f6a4169a93b9a687d477d4af82baf11cdb",
+    "target": "NOX",
+    "excluded_features": [
+      "CO",
+      "NOX",
+      "year"
+    ],
+    "provenance": "real hourly gas-turbine sensor measurements",
+    "source_novelty": "existing_source_new_target",
+    "historical_evidence": "Same UCI551 source already tested in fastlane/formal with CO. NOX is a correlated new target, not an independent new source; same plant as UCI294 CCPP with another measurement period.",
+    "leakage_audit": "Other flue-gas output CO excluded; all nine ambient/operating sensors retained.",
+    "chronology": "Official UCI description confirms rows are chronological within year; original calendar timestamps are not released.",
+    "duplicate_predictor_rows": 7
+  },
+  "feature_names": [
+    "AT",
+    "AP",
+    "AH",
+    "AFDP",
+    "GTEP",
+    "TIT",
+    "TAT",
+    "TEY",
+    "CDP"
+  ],
+  "rows": 36733,
+  "features": 9,
+  "preprocessing": {
+    "fit_rows_sha256": "ef31cacee061ce28b8c8878a3f480e587ccac4351d2fe4d4898ada122d79caa5",
+    "X_imputation_median": [
+      17.255000000000003,
+      1013.2,
+      83.217,
+      4.1458,
+      24.8455,
+      1087.95,
+      549.9,
+      133.775,
+      11.997499999999999
+    ],
+    "X_mean": [
+      17.150354833333356,
+      1013.6133666666673,
+      80.24380333333335,
+      4.170866333333333,
+      25.378206666666646,
+      1084.1919999999993,
+      545.6388000000003,
+      134.48613333333327,
+      12.103034999999997
+    ],
+    "X_scale": [
+      7.588944561929761,
+      6.278284505517591,
+      13.01502425755156,
+      0.7189556535929191,
+      4.039642386477078,
+      15.760071996451462,
+      7.626609178396383,
+      15.405703761341835,
+      1.0697272286779462
+    ],
+    "y_mean": 68.73980666666667,
+    "y_scale": 10.55127984855971,
+    "fit_scope": "capped training rows only",
+    "centering_note": "X/y centering can change slope-only leaf model behavior; identical transform is supplied to every method"
+  },
+  "split_protocol": "Preserve established chronological 2011\u201312 train / 2013 validation / 2014\u201315 test. Outer test is about40%, deliberately not changed to20% after historical outcomes.",
+  "split_sizes": {
+    "train": 600,
+    "val": 7152,
+    "test": 14542
+  },
+  "uncapped_split_sizes": {
+    "train": 15039,
+    "val": 7152,
+    "test": 14542
+  },
+  "group_counts": {
+    "train": 2,
+    "val": 1,
+    "test": 2
+  },
+  "training_cap": 600,
+  "training_cap_rule": "Uniform row sample from training groups/period only, without target inspection; full train if <=600.",
+  "groups_in_X": false,
+  "oracle_support_in_X": false,
+  "oracle_support": null,
+  "npz_sha256": "b68349fa9d59b9a42b0c6683e32cee77bf26d4905a105d1b029779717d4b40ed",
+  "array_sha256": {
+    "X": "d45d53ee76af296b92e9d89b4a9577ebc2da3360db01e4b159835c1b0dc251d1",
+    "train": "ef31cacee061ce28b8c8878a3f480e587ccac4351d2fe4d4898ada122d79caa5",
+    "val": "2f830d606414386fb1a208d871e74a2eebcea681c681e4fb49fce21ddeb70b34",
+    "test": "ca685ca13c2ed3ba9843a7848919c2d4567dcee402e02d6fe4499cf49af013c7",
+    "task_type": "b37fe1a8d1db433437be5660a92834770ec3ad508555ba73d85e5897edbe32b8",
+    "groups": "a7a7a387712dd581b014317370cedfb3482a08c3d92429c6dd7026dc5c3d3653",
+    "train_uncapped": "9085c826fd7888d426694070d1db5a00df24b0071c6311fbb0f71247823a7bb0",
+    "y_train": "c396075fbb20734d3cc66680f37f3c2a8e5238d1d160a3c3ad25da567e0e4d6e",
+    "y_val": "dae92224a3f0d9f67f20a959f61e00318c9841a8f0f6d08aa71b99cf257b3b01",
+    "y_test": "cdedf72836e7d7d2f6990cace0ed93c0066bb03f5182940cc4e2e814a0eaa41e"
+  },
+  "seed_collision_check": {
+    "searched": [
+      "rebuttal/preexperiments_20261027",
+      "rebuttal/fastlane_20261027",
+      "rebuttal/fastlane_20261028_bc"
+    ],
+    "seeds": [
+      112001,
+      112002,
+      113001,
+      113002,
+      113003,
+      113004,
+      113005
+    ],
+    "collisions": []
+  },
+  "repeat_interpretation": "Two DEV seeds and five reserved CONFIRM seeds share fixed source-specific outer tests; neither repeats nor correlated targets are independent datasets.",
+  "identical_data_across_dev_seeds": false,
+  "test_label_policy": "y_test sealed as separate NPZ member; no combined y member. No model fitting, scoring or test target summaries in preparation.",
+  "outcome_selection": "Targets and feature policies fixed before any fit; no target correlation or model-result screening was used."
+}

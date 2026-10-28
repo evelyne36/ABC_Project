@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "anchors": 25,
+  "development_local_refits": 400,
+  "selected_variants": 100,
+  "all_split_metrics_recomputed": 300,
+  "all_split_model_replays": 300,
+  "max_abs_replay_difference": 3.552713678800501e-15,
+  "search_did_not_load_test_labels": true,
+  "global_selection_frozen_before_evaluation": true,
+  "scope": "posthoc historical routes; not independent confirmation or jointly retrained k>1"
+}

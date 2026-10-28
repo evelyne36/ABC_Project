@@ -1,0 +1,119 @@
+{
+  "seed": 99003,
+  "phase": "confirmation",
+  "task_type": "regression",
+  "family": "S2",
+  "control": "sparse",
+  "source": "generated independent N(0,1) covariates",
+  "noise_sd": 0.3,
+  "formula": "[-2,+2,-2,+2][region] * x[2+region] + eps; region=2 I(x0>=0)+I(x1>=0)",
+  "oracle_support": {
+    "gate_features": [
+      0,
+      1
+    ],
+    "predictive_by_region": {
+      "0": [
+        2
+      ],
+      "1": [
+        3
+      ],
+      "2": [
+        4
+      ],
+      "3": [
+        5
+      ]
+    },
+    "slopes": [
+      -2.0,
+      2.0,
+      -2.0,
+      2.0
+    ]
+  },
+  "feature_names": [
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5",
+    "x6",
+    "x7",
+    "x8",
+    "x9",
+    "x10",
+    "x11",
+    "x12",
+    "x13",
+    "x14",
+    "x15",
+    "x16",
+    "x17",
+    "x18",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29",
+    "x30",
+    "x31"
+  ],
+  "preprocessing": {
+    "X": "none",
+    "y": "none"
+  },
+  "matching": {
+    "X_sha256": "e62ef03c0c04919b20f6f30bcaeee3bb52be1f681bdc06409df1ca860df1be48",
+    "eps_sha256": "8d776dca4591a40fb8935fe9e2c8e5f7fcf2f2ce21547ba3bf5a07f4ea8f0657",
+    "population_signal_variance": 4.0
+  },
+  "split_protocol": "seeded row random 60/20/20; shared across controls",
+  "seed_collision_check": {
+    "searched": "rebuttal/preexperiments_20261027",
+    "seeds": [
+      97001,
+      97002,
+      98001,
+      98002,
+      98003,
+      98004,
+      98005
+    ],
+    "collisions": []
+  },
+  "protocol_version": "fastlane-v2-20261027-fixed-real-test",
+  "dataset": "S2_sparse__s99003",
+  "rows": 480,
+  "features": 32,
+  "npz_sha256": "149a46009cbcb219b269203a38196f28174392a08a9cfd700b877cff0f390434",
+  "array_sha256": {
+    "X": "86a4889217d89557acedb44b61f83b95898b208bf8fd7ff03351573049661fbf",
+    "y": "193326b117c7702056b13e3fea609ddc5a8f94d8878e1caaebd759146c1ca0be",
+    "train": "55d4c98657d74226bc418f5c01b8492591228a7446e93e3948da114bb4a83952",
+    "val": "a6e382447af9f39bb3bda7f5fe1da36f129440f903271ab92f1dbc135f79b09b",
+    "test": "27e29227d81fd972c30e2e42945ffd426affc9c101571db89385c939e3c794af",
+    "task_type": "b37fe1a8d1db433437be5660a92834770ec3ad508555ba73d85e5897edbe32b8",
+    "oracle_region": "0525caf68ffc15b3412c422fc88c604728a86f809fc47175d83b530f62e1467a",
+    "oracle_signal": "80bb137efd886fb657b909939072edf724f2e120f9ae749e0bd926c935e38ba2",
+    "noise": "8d776dca4591a40fb8935fe9e2c8e5f7fcf2f2ce21547ba3bf5a07f4ea8f0657",
+    "y_train": "7ba93756e05720086c50c862997c0267e2c0802a47e1e4701143bc85b9cf2d3e",
+    "y_val": "7487b3c3bdc6475d2c246e4376461f9efcd930914c71ec9811331ac863ed8d94",
+    "y_test": "e26b491115b82bcf1428ccfe11fc9415f6da538f7cc78497b942694c9ddd1264"
+  },
+  "split_sizes": {
+    "train": 288,
+    "val": 96,
+    "test": 96
+  },
+  "groups_in_X": false,
+  "oracle_support_in_X": false
+}

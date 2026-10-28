@@ -1,0 +1,235 @@
+{
+  "protocol_version": "fastlane-bc-20261028-inputs-v1",
+  "root_relative_to_inputs": "../../..",
+  "development_seeds": [
+    97001,
+    97002
+  ],
+  "confirmation_seeds": [
+    99001,
+    99002,
+    99003,
+    99004,
+    99005
+  ],
+  "stage_order": [
+    "B1",
+    "freeze_all_B_choices",
+    "B2",
+    "complete_B",
+    "C"
+  ],
+  "b1": {
+    "case": "S1_sparse",
+    "pool": "b1_candidate_pool_20.json",
+    "candidate_order": [
+      0,
+      1,
+      20,
+      21,
+      2,
+      3,
+      22,
+      23,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "reused_results": "b1_reused_results.json",
+    "reused_fit_count": 210,
+    "missing_jobs": "b1_missing_jobs.json",
+    "missing_fit_count": 30,
+    "data": "existing immutable local_sync/fastlane_data/S1_sparse__s97001/97002.npz",
+    "selection_status": "pending",
+    "requires_test_labels": false
+  },
+  "b2": {
+    "case": "S1_sparse",
+    "recipe_status": "must be frozen after B1 before any B2 evaluation",
+    "expected_final_fits": 30,
+    "expected_leafonly_fits": 5
+  },
+  "c": {
+    "choices": "c_frozen_choices.json",
+    "execute_after": "B_complete",
+    "expected_final_fits": 60,
+    "expected_leafonly_fits": 10
+  },
+  "generator": {
+    "path": "rebuttal/fastlane_20261027/prepare_data.py",
+    "sha256": "98d616ec07c46f00615b2a61d41a2283feea4bb6293349c346233cb5ad9fc4ec",
+    "function": "synthetic",
+    "noise_sd": 0.3,
+    "temporary_controls_generated": 45,
+    "retained_sparse_count": 15
+  },
+  "datasets": [
+    {
+      "dataset": "S1_sparse__s99001",
+      "npz": "data/S1_sparse__s99001.npz",
+      "metadata": "data/S1_sparse__s99001.json",
+      "npz_sha256": "7e2de1855cac7ac9bc8fc862df3f5ce119cd334eb3cf5d5fc4c6ceebe9a784ee",
+      "phase": "confirmation",
+      "seed": 99001,
+      "task_type": "regression",
+      "metadata_sha256": "706c899c06207d3cf43e62193dcfb063b114088f74e9aa234a83bde972d954ef"
+    },
+    {
+      "dataset": "S1_sparse__s99002",
+      "npz": "data/S1_sparse__s99002.npz",
+      "metadata": "data/S1_sparse__s99002.json",
+      "npz_sha256": "94a406576e76876dfdec144d0b2b5c6cb93e45e334ddffc0bfda2b264918e7be",
+      "phase": "confirmation",
+      "seed": 99002,
+      "task_type": "regression",
+      "metadata_sha256": "bb682374f6621e489f70e3e5e921334f7a90a5ed2d92e3b659a8816e97e122ed"
+    },
+    {
+      "dataset": "S1_sparse__s99003",
+      "npz": "data/S1_sparse__s99003.npz",
+      "metadata": "data/S1_sparse__s99003.json",
+      "npz_sha256": "59f825abb94b2061fe05f839f838fd393538729fb64932fea3f442040e1c07ca",
+      "phase": "confirmation",
+      "seed": 99003,
+      "task_type": "regression",
+      "metadata_sha256": "38dd5dead5416498c074ae6deebbc75ff6714c03663c7e1d49ec8ddd8144d87d"
+    },
+    {
+      "dataset": "S1_sparse__s99004",
+      "npz": "data/S1_sparse__s99004.npz",
+      "metadata": "data/S1_sparse__s99004.json",
+      "npz_sha256": "2a661507d5ffb5dd32f54df3c407afb5278996c86a6bcbff114fb4aeba6d4b37",
+      "phase": "confirmation",
+      "seed": 99004,
+      "task_type": "regression",
+      "metadata_sha256": "894da7e6141cd5f1043d2d03cf52dfd3f28dda2ef95422272a5007b3daa4e820"
+    },
+    {
+      "dataset": "S1_sparse__s99005",
+      "npz": "data/S1_sparse__s99005.npz",
+      "metadata": "data/S1_sparse__s99005.json",
+      "npz_sha256": "6e5689a81d7834f7e40882ba427ee5e4bcae48d85877b9d69c709992870c323c",
+      "phase": "confirmation",
+      "seed": 99005,
+      "task_type": "regression",
+      "metadata_sha256": "81aa8bd5cd751bdfcf6e50d015616c68b4308729c46ec882e8ca70185a8a414a"
+    },
+    {
+      "dataset": "S2_sparse__s99001",
+      "npz": "data/S2_sparse__s99001.npz",
+      "metadata": "data/S2_sparse__s99001.json",
+      "npz_sha256": "d9d9a00e92ba244e7ae4dcbaad8aa954d6ec8a7caa7ee650fee92448f2b55392",
+      "phase": "confirmation",
+      "seed": 99001,
+      "task_type": "regression",
+      "metadata_sha256": "8583c68db00a107b25e294b1850f199abdd2fc371f9df16b4a7fae8c601a1771"
+    },
+    {
+      "dataset": "S2_sparse__s99002",
+      "npz": "data/S2_sparse__s99002.npz",
+      "metadata": "data/S2_sparse__s99002.json",
+      "npz_sha256": "5a84659dc9ce9cf94410e0db5d7c7c7bfed29281f46f9101d9a943a052860aa6",
+      "phase": "confirmation",
+      "seed": 99002,
+      "task_type": "regression",
+      "metadata_sha256": "a5f393606f5b73ea1c7d07eb989d8ca22818f81638d66869e025ab1a4a1dcea1"
+    },
+    {
+      "dataset": "S2_sparse__s99003",
+      "npz": "data/S2_sparse__s99003.npz",
+      "metadata": "data/S2_sparse__s99003.json",
+      "npz_sha256": "149a46009cbcb219b269203a38196f28174392a08a9cfd700b877cff0f390434",
+      "phase": "confirmation",
+      "seed": 99003,
+      "task_type": "regression",
+      "metadata_sha256": "4472f20c2dcd9fbb78a2bc0945b65a76f9aae6fdf9e391ab55b7d6c50ba75c86"
+    },
+    {
+      "dataset": "S2_sparse__s99004",
+      "npz": "data/S2_sparse__s99004.npz",
+      "metadata": "data/S2_sparse__s99004.json",
+      "npz_sha256": "81118f2b489488575d0a02fe83998e8feea0493cb6f592419521397625ae3cea",
+      "phase": "confirmation",
+      "seed": 99004,
+      "task_type": "regression",
+      "metadata_sha256": "7fcdd88ec44cd750874f20cc2c596c6fa1376d107195c30cffddfb57e48f15f8"
+    },
+    {
+      "dataset": "S2_sparse__s99005",
+      "npz": "data/S2_sparse__s99005.npz",
+      "metadata": "data/S2_sparse__s99005.json",
+      "npz_sha256": "4a3c9bf1d9594e58d55a349b2da2c3646b39e9819ad5265b8c6e3d6989387011",
+      "phase": "confirmation",
+      "seed": 99005,
+      "task_type": "regression",
+      "metadata_sha256": "48a31b9e6719190ba80421008ec0669d98cb23eb115790d382433c4462d1759d"
+    },
+    {
+      "dataset": "S3_sparse__s99001",
+      "npz": "data/S3_sparse__s99001.npz",
+      "metadata": "data/S3_sparse__s99001.json",
+      "npz_sha256": "1f0ad0426d461f47e29c0e745d817fc6d89247ee523137e27dca9d3dbd39b031",
+      "phase": "confirmation",
+      "seed": 99001,
+      "task_type": "regression",
+      "metadata_sha256": "0f07e67fc04cf4006706ca8d73238671084407471c5a5570b7a92c15bbd83ca4"
+    },
+    {
+      "dataset": "S3_sparse__s99002",
+      "npz": "data/S3_sparse__s99002.npz",
+      "metadata": "data/S3_sparse__s99002.json",
+      "npz_sha256": "38b0daf13628fedbf2aebff9bea6ee6691b67680f6007f448b504706fbbb9c49",
+      "phase": "confirmation",
+      "seed": 99002,
+      "task_type": "regression",
+      "metadata_sha256": "dc69a7375104c268a4deb72fe0f3c0907158e3e895486d2b76a339c680028e4d"
+    },
+    {
+      "dataset": "S3_sparse__s99003",
+      "npz": "data/S3_sparse__s99003.npz",
+      "metadata": "data/S3_sparse__s99003.json",
+      "npz_sha256": "932016d5a294f3a6c27aee45d63e2552a8f7633318f2c25ba3c478174df27240",
+      "phase": "confirmation",
+      "seed": 99003,
+      "task_type": "regression",
+      "metadata_sha256": "3cdb197e76652214d053fc23214ce080991a17a34809292b4ffa3965a133c73a"
+    },
+    {
+      "dataset": "S3_sparse__s99004",
+      "npz": "data/S3_sparse__s99004.npz",
+      "metadata": "data/S3_sparse__s99004.json",
+      "npz_sha256": "4b5a94f189065c24e60d2fef54d38233903dc87c2ab7a6e0f6897410223839fc",
+      "phase": "confirmation",
+      "seed": 99004,
+      "task_type": "regression",
+      "metadata_sha256": "b277d1079ff6b0de8c978ceb196221b2dbac987425b597e10c30c38d49a2ab7a"
+    },
+    {
+      "dataset": "S3_sparse__s99005",
+      "npz": "data/S3_sparse__s99005.npz",
+      "metadata": "data/S3_sparse__s99005.json",
+      "npz_sha256": "ef497f2b4a32d7c8ce02f03c736b8a2245eb4a54c2c6faf353891064682195d7",
+      "phase": "confirmation",
+      "seed": 99005,
+      "task_type": "regression",
+      "metadata_sha256": "a0cd5a568f6fe3a6aa5cffc5b9ee7660ca1ff29b815441a92b1aa08a6a46924f"
+    }
+  ],
+  "validation": "validation.json",
+  "safety": {
+    "no_hpo_on_confirmation": true,
+    "test_gate": "freeze all B choices before B2 test; C original frozen choices; no test-based recipe changes",
+    "oracle_arrays_diagnostic_only": true,
+    "no_training_executed": true
+  },
+  "prepared_script_sha256": "402a36cc3aeab8f6b95f8f4ddf83220162187ade34ffd9f0e50512ffc0d606c1"
+}

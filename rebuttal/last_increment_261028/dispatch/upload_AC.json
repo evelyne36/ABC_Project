@@ -1,0 +1,44 @@
+[
+  {
+    "host": "cpu_Calculator",
+    "action": "upload",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/rebuttal/last_increment_261028/dispatch/A/cpu_Calculator.tar.gz",
+    "remote": "/home/admin/crossgb_fastlane_20261027",
+    "timeout": 120
+  },
+  {
+    "host": "cpu1_pool.zjuici.com",
+    "action": "upload",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/rebuttal/last_increment_261028/dispatch/A/cpu1_pool.zjuici.com.tar.gz",
+    "remote": "/home/admin/crossgb_fastlane_20261027",
+    "timeout": 120
+  },
+  {
+    "host": "cpu2_pool.zjuici.com",
+    "action": "upload",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/rebuttal/last_increment_261028/dispatch/A/cpu2_pool.zjuici.com.tar.gz",
+    "remote": "/home/admin/crossgb_fastlane_20261027",
+    "timeout": 120
+  },
+  {
+    "host": "cpu4_pool.zjuici.com",
+    "action": "upload",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/rebuttal/last_increment_261028/dispatch/A/cpu4_pool.zjuici.com.tar.gz",
+    "remote": "/home/admin/crossgb_fastlane_20261027",
+    "timeout": 120
+  },
+  {
+    "host": "cpu5_pool.zjuici.com",
+    "action": "upload",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/rebuttal/last_increment_261028/dispatch/A/cpu5_pool.zjuici.com.tar.gz",
+    "remote": "/home/admin/crossgb_fastlane_20261027",
+    "timeout": 120
+  },
+  {
+    "host": "cpu6_pool.zjuici.com",
+    "action": "upload",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/rebuttal/last_increment_261028/dispatch/C/cpu6_pool.zjuici.com.tar.gz",
+    "remote": "/home/admin/crossgb_fastlane_20261027",
+    "timeout": 120
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "evidence_package/formal_same_host_timing.csv": {
+    "sha256": "5c60bf7b2fe28c05243862cd9af68954de34b7f338ae554b6ab9d7ba9dfe7e78",
+    "bytes": 5223
+  },
+  "evidence_package/formal_train_val_test.csv": {
+    "sha256": "ded59165d3285aa40baa2de38a45b6175c63ee50d724d5ae732c6c02645c2839",
+    "bytes": 61981
+  },
+  "evidence_package/real_error_cost_ratios.csv": {
+    "sha256": "2b5b4ab7a83310d498738dbb03574373bf94ce0624b28523f8fa48030fb96ca8",
+    "bytes": 5205
+  },
+  "evidence_package/search_budget_coverage.csv": {
+    "sha256": "6e97212ebe3f5700f441a7e0bc3563e7a5ba562b111e4679c575c7c176fcbbf2",
+    "bytes": 9222
+  },
+  "evidence_package/synthetic_error_cost_ratios.csv": {
+    "sha256": "a9033700321a9789d8a063bb3c9e636a998e0255723f8ace62136057abde8025",
+    "bytes": 1218
+  },
+  "阶段结果与后续写作建议_20261027.md": {
+    "sha256": "6f05e8fe5f54c911d71a52f1b2366996fe7e07bcd79036805cf43aa384232aa2",
+    "bytes": 10376
+  },
+  "N5结论_20261027.md": {
+    "sha256": "cb47deb6bce98add90055fe706bc897ce70c8d098b8835897001a516527bb1a0",
+    "bytes": 16834
+  },
+  "final_fit_verification.json": {
+    "sha256": "4b6291db2762464f4afc4d34a781369c11e86bc4b4f67b03ea18b7accef5bca2",
+    "bytes": 21442
+  },
+  "class30_verification.json": {
+    "sha256": "9347586f12aef1d452c30c2bb26df0aa29f2f15d8aff81780e25855e929c0cfe",
+    "bytes": 5172
+  },
+  "timing_verification.json": {
+    "sha256": "846706d2f26181bfcac71c0338de5ff0e4ed66e0e1a152e9cffad2026776394f",
+    "bytes": 165
+  }
+}

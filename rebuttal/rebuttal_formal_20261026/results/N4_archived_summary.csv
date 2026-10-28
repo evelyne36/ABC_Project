@@ -1,0 +1,4 @@
+dataset,folds,xgb_mean_test_rmse,cgb_mean_test_rmse,cgb_relative_rmse_increase_pct,cgb_better_fold_count,search_elapsed_ratio_of_means,search_elapsed_median_of_paired_fold_ratios,final_train_elapsed_ratio_of_means,final_train_elapsed_median_of_paired_fold_ratios,timing_scope
+cpu_activity.csv,5,2.186816,3.9344419999999998,79.91646302203752,0,19.22154298396031,18.71676906849103,36.843814783653315,28.135973450507073,archived elapsed; not same-host equal-budget comparison
+kin8nm.csv,5,0.1125342,0.10027316,-10.895390023655027,5,9.609630610155097,9.5608284348261,24.483228927710133,22.501588750020368,archived elapsed; not same-host equal-budget comparison
+energy_efficiency.csv,5,0.346123,0.3574014,3.2584948125377267,2,40.69221288972117,40.57459623048572,51.51200773178511,41.05010919080228,archived elapsed; not same-host equal-budget comparison

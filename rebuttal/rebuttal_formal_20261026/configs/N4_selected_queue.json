@@ -1,0 +1,182 @@
+[
+  {
+    "dataset": "cpu_activity",
+    "method": "xgb_cpu",
+    "outer_fold": 1,
+    "params_file": "configs/N4_params/cpu_activity__xgb_cpu__outer1.json",
+    "archived_test_rmse": 2.21988,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__cpu_activity.csv__xgb_cpu__out1.log",
+    "archive_log_sha256": "f352766e5eafdfcfd2d731f3f3888da2117835a1b786ca2b44a9e951519686cc"
+  },
+  {
+    "dataset": "cpu_activity",
+    "method": "xgb_cpu",
+    "outer_fold": 2,
+    "params_file": "configs/N4_params/cpu_activity__xgb_cpu__outer2.json",
+    "archived_test_rmse": 2.14182,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__cpu_activity.csv__xgb_cpu__out2.log",
+    "archive_log_sha256": "2d86befced39be30b7efc8107a35e19091735e7f58d6cd4a8f27201e69005996"
+  },
+  {
+    "dataset": "cpu_activity",
+    "method": "xgb_cpu",
+    "outer_fold": 3,
+    "params_file": "configs/N4_params/cpu_activity__xgb_cpu__outer3.json",
+    "archived_test_rmse": 2.09186,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__cpu_activity.csv__xgb_cpu__out3.log",
+    "archive_log_sha256": "4ac173cdd66caf4a1d378fff82152cedab15bc2ed4d7edce7c16b21a5652768d"
+  },
+  {
+    "dataset": "cpu_activity",
+    "method": "xgb_cpu",
+    "outer_fold": 4,
+    "params_file": "configs/N4_params/cpu_activity__xgb_cpu__outer4.json",
+    "archived_test_rmse": 2.33591,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__cpu_activity.csv__xgb_cpu__out4.log",
+    "archive_log_sha256": "0f314993d3ddac0d1018ceee5195bb4c625ecc10ff0b127f18775067479c3a2c"
+  },
+  {
+    "dataset": "cpu_activity",
+    "method": "xgb_cpu",
+    "outer_fold": 5,
+    "params_file": "configs/N4_params/cpu_activity__xgb_cpu__outer5.json",
+    "archived_test_rmse": 2.14461,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__cpu_activity.csv__xgb_cpu__out5.log",
+    "archive_log_sha256": "ae62c3158684d79d80a684d7353ab0dda495557ec479562421fb81eaca901450"
+  },
+  {
+    "dataset": "cpu_activity",
+    "method": "current_metagb",
+    "outer_fold": 1,
+    "params_file": "configs/N4_params/cpu_activity__current_metagb__outer1.json",
+    "archived_test_rmse": 3.34586,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__cpu_activity.csv__current_metagb__out1.log",
+    "archive_log_sha256": "dfa262c08464682ce0ab6526f95256b7667cce0b20d986396b7cf6f7e24dd494"
+  },
+  {
+    "dataset": "cpu_activity",
+    "method": "current_metagb",
+    "outer_fold": 2,
+    "params_file": "configs/N4_params/cpu_activity__current_metagb__outer2.json",
+    "archived_test_rmse": 3.56495,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__cpu_activity.csv__current_metagb__out2.log",
+    "archive_log_sha256": "036a894879a7559d53005ac04c620a719abc269d31fb5e7004e1e79e78ca86b2"
+  },
+  {
+    "dataset": "cpu_activity",
+    "method": "current_metagb",
+    "outer_fold": 3,
+    "params_file": "configs/N4_params/cpu_activity__current_metagb__outer3.json",
+    "archived_test_rmse": 3.6084,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__cpu_activity.csv__current_metagb__out3.log",
+    "archive_log_sha256": "05666de50450a922ebdcec132fc0b1b1595189a2a038f6fc92ae0caa70daeb59"
+  },
+  {
+    "dataset": "cpu_activity",
+    "method": "current_metagb",
+    "outer_fold": 4,
+    "params_file": "configs/N4_params/cpu_activity__current_metagb__outer4.json",
+    "archived_test_rmse": 4.09179,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__cpu_activity.csv__current_metagb__out4.log",
+    "archive_log_sha256": "5a8db216ef34409263c4702bbf6e632aea26f1ee1a0b54260b4a609db8c9f79a"
+  },
+  {
+    "dataset": "cpu_activity",
+    "method": "current_metagb",
+    "outer_fold": 5,
+    "params_file": "configs/N4_params/cpu_activity__current_metagb__outer5.json",
+    "archived_test_rmse": 5.06121,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__cpu_activity.csv__current_metagb__out5.log",
+    "archive_log_sha256": "fe5392e35383e346f5ff9ecef2bcd678a053d911963a6420a9f83172f28d38a2"
+  },
+  {
+    "dataset": "kin8nm",
+    "method": "xgb_cpu",
+    "outer_fold": 1,
+    "params_file": "configs/N4_params/kin8nm__xgb_cpu__outer1.json",
+    "archived_test_rmse": 0.115479,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__kin8nm.csv__xgb_cpu__out1.log",
+    "archive_log_sha256": "7ed8d511d4900401d008bf9dee59922ca4136d26526da7a1c2a9aa2bda4ada0f"
+  },
+  {
+    "dataset": "kin8nm",
+    "method": "xgb_cpu",
+    "outer_fold": 2,
+    "params_file": "configs/N4_params/kin8nm__xgb_cpu__outer2.json",
+    "archived_test_rmse": 0.111724,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__kin8nm.csv__xgb_cpu__out2.log",
+    "archive_log_sha256": "e7547c629fbda8a95a2d67292a757e561e777193e0b371fc3c26e066879bdc04"
+  },
+  {
+    "dataset": "kin8nm",
+    "method": "xgb_cpu",
+    "outer_fold": 3,
+    "params_file": "configs/N4_params/kin8nm__xgb_cpu__outer3.json",
+    "archived_test_rmse": 0.115235,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__kin8nm.csv__xgb_cpu__out3.log",
+    "archive_log_sha256": "be89f16174c4f35e0ff12ecd08a25a52b8b51760abd8089eec79ea8968d63620"
+  },
+  {
+    "dataset": "kin8nm",
+    "method": "xgb_cpu",
+    "outer_fold": 4,
+    "params_file": "configs/N4_params/kin8nm__xgb_cpu__outer4.json",
+    "archived_test_rmse": 0.108461,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__kin8nm.csv__xgb_cpu__out4.log",
+    "archive_log_sha256": "9a02ecb4260707429a53a8d4e2ddb0293b60bba6894b6e388dfc3a19d4ab54ac"
+  },
+  {
+    "dataset": "kin8nm",
+    "method": "xgb_cpu",
+    "outer_fold": 5,
+    "params_file": "configs/N4_params/kin8nm__xgb_cpu__outer5.json",
+    "archived_test_rmse": 0.111772,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__kin8nm.csv__xgb_cpu__out5.log",
+    "archive_log_sha256": "887d3e581c6467b72f53f2e88596bc803eca1ff5a3355feddf2a3c36fdf410d8"
+  },
+  {
+    "dataset": "kin8nm",
+    "method": "current_metagb",
+    "outer_fold": 1,
+    "params_file": "configs/N4_params/kin8nm__current_metagb__outer1.json",
+    "archived_test_rmse": 0.103492,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__kin8nm.csv__current_metagb__out1.log",
+    "archive_log_sha256": "e747977faf8882cb729bc0063192157bc84c73417e30ac238bec94f1d40987fb"
+  },
+  {
+    "dataset": "kin8nm",
+    "method": "current_metagb",
+    "outer_fold": 2,
+    "params_file": "configs/N4_params/kin8nm__current_metagb__outer2.json",
+    "archived_test_rmse": 0.097987,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__kin8nm.csv__current_metagb__out2.log",
+    "archive_log_sha256": "a8ce5380b45e746a66348161fb6b7f5664f4e68326f5df9b51f73b9d17b9c7c8"
+  },
+  {
+    "dataset": "kin8nm",
+    "method": "current_metagb",
+    "outer_fold": 3,
+    "params_file": "configs/N4_params/kin8nm__current_metagb__outer3.json",
+    "archived_test_rmse": 0.103075,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__kin8nm.csv__current_metagb__out3.log",
+    "archive_log_sha256": "28435b7022ea95e9d1bb98aa502d7fef8019cc643921a114c89dbba455e32700"
+  },
+  {
+    "dataset": "kin8nm",
+    "method": "current_metagb",
+    "outer_fold": 4,
+    "params_file": "configs/N4_params/kin8nm__current_metagb__outer4.json",
+    "archived_test_rmse": 0.0984546,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__kin8nm.csv__current_metagb__out4.log",
+    "archive_log_sha256": "fc0a3828e477a7f00fcf58b44804399e06c98746f4cac28528dbcc82b52436f0"
+  },
+  {
+    "dataset": "kin8nm",
+    "method": "current_metagb",
+    "outer_fold": 5,
+    "params_file": "configs/N4_params/kin8nm__current_metagb__outer5.json",
+    "archived_test_rmse": 0.0983572,
+    "archive_log": "aaai_FullCodeProject-check_codereview0701/datacollection0702/tabular_onehot_20260628_025442/tasks/regression__regression__kin8nm.csv__current_metagb__out5.log",
+    "archive_log_sha256": "c18fbcf83d1cd88b4891151327f8faec383f4bf890aaa64ec8125257130e4a2c"
+  }
+]

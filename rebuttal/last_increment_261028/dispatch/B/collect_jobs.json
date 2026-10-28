@@ -1,0 +1,9 @@
+[
+  {
+    "host": "TabularData_Processor",
+    "action": "download",
+    "command": "tar -cz -C /home/admin/crossgb_fastlane_20261027 results/last_increment_261028_v1/B",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/last_increment_results/TabularData_Processor_B.tar.gz",
+    "timeout": 90
+  }
+]

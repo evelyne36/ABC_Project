@@ -1,0 +1,58 @@
+{
+  "archive_sha256": "743a2a256bdd783117164dc5ed0728ee51b8f4e2e961f55b8543cd7875388de2",
+  "archive_bytes": 18770481,
+  "verification": {
+    "status": "verified",
+    "outer_manifest_files": 2062,
+    "baseline_extracted_files": 152,
+    "model_fit_calls": 0,
+    "scope": "transfer and extraction integrity only; no Linux build or scientific runtime validation",
+    "errors": []
+  },
+  "roundtrip_directory": "/private/tmp/crossgb_handoff_roundtrip_yk2lb0iv",
+  "command_exit_code": 0,
+  "fresh_directory_cli_checks": [
+    {
+      "entry": "R0",
+      "status": "plan_only_passed",
+      "planned_fits": 28,
+      "planned_cgb_fits": 21,
+      "executed_fits": 0
+    },
+    {
+      "entry": "N2",
+      "status": "plan_only_passed",
+      "planned_fits": 105,
+      "planned_cgb_fits": 105,
+      "executed_fits": 0
+    },
+    {
+      "entry": "N4",
+      "status": "plan_only_passed",
+      "planned_fits": 20,
+      "planned_cgb_fits": 10,
+      "executed_fits": 0
+    },
+    {
+      "entry": "N3",
+      "status": "plan_only_passed",
+      "planned_fits": "dynamic; log all completed/failed/timed-out candidate attempts; each successful candidate has four inner fits",
+      "planned_cgb_fits": null,
+      "executed_fits": 0
+    },
+    {
+      "entry": "N1_pilot",
+      "status": "plan_only_passed",
+      "planned_fits": 16,
+      "planned_cgb_fits": 0,
+      "executed_fits": 0
+    },
+    {
+      "entry": "N1_nested",
+      "status": "plan_only_passed",
+      "planned_fits": 6005,
+      "planned_cgb_fits": 0,
+      "executed_fits": 0
+    }
+  ]
+}

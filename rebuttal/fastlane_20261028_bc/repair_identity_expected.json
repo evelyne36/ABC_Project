@@ -1,0 +1,17 @@
+{
+  "models": [
+    {
+      "seed": 98004,
+      "local_model_sha256": "8f47817f6cced43a9519baba2816c6a548a34279cc8486ffa237e288eb76fb7b",
+      "data_sha256": "763ca7124979fb46fe8a5501b075cd1b2d2d557264f6ff6a4469aa214c6199c3",
+      "remote_model_to_check": "/home/admin/crossgb_fastlane_20261027/results/formal_followup_v1/S3_sparse/final/CrossGB/s98004/model.json"
+    },
+    {
+      "seed": 98005,
+      "local_model_sha256": "3758357c4da63222f9309fa0e76ff539e83d1d3923b58129112743263f178751",
+      "data_sha256": "d7f98cb6d9b827236dbcfc3510777521cc3515a7b182787163c5bb4a1dd15432",
+      "remote_model_to_check": "/home/admin/crossgb_fastlane_20261027/results/formal_followup_v1/S3_sparse/final/CrossGB/s98005/model.json"
+    }
+  ],
+  "must_compare_before_remote_repair": true
+}

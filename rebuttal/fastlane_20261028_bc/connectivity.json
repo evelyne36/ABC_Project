@@ -1,0 +1,51 @@
+{
+  "checked_utc": "2026-10-28T05:14:18.160089+00:00",
+  "dns_addresses": [
+    "183.129.217.214"
+  ],
+  "ports": [
+    {
+      "port": 31496,
+      "connected": false,
+      "error": "timed out",
+      "seconds": 4.0058888330022455
+    },
+    {
+      "port": 31497,
+      "connected": false,
+      "error": "timed out",
+      "seconds": 4.005954500004009
+    },
+    {
+      "port": 31499,
+      "connected": false,
+      "error": "timed out",
+      "seconds": 4.0057858750005835
+    },
+    {
+      "port": 31514,
+      "connected": false,
+      "error": "timed out",
+      "seconds": 4.005219541999395
+    },
+    {
+      "port": 31515,
+      "connected": false,
+      "error": "timed out",
+      "seconds": 4.004333124998084
+    },
+    {
+      "port": 31393,
+      "connected": false,
+      "error": "timed out",
+      "seconds": 4.004509874997893
+    },
+    {
+      "port": 31364,
+      "connected": false,
+      "error": "timed out",
+      "seconds": 4.003063458003453
+    }
+  ],
+  "scope": "Connectivity only, no authentication, no remote changes"
+}

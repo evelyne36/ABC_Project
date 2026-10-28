@@ -1,0 +1,14 @@
+[
+  {
+    "host": "cpu4_pool.zjuici.com",
+    "phase": "connectivity",
+    "exit_code": 255,
+    "diagnostic_tail": "debug1: OpenSSH_10.3p1, LibreSSL 3.3.6\ndebug1: Reading configuration data /Users/ancd/.ssh/config\ndebug1: /Users/ancd/.ssh/config line 32: Applying options for cpu4_pool.zjuici.com\ndebug1: Reading configuration data /etc/ssh/ssh_config\ndebug1: Reading configuration data /etc/ssh/ssh_config.d/100-macos.conf\ndebug1: /etc/ssh/ssh_config.d/100-macos.conf line 1: Applying options for *\ndebug1: Reading configuration data /etc/ssh/crypto.conf\ndebug1: Authenticator provider $SSH_SK_PROVIDER did not resolve; disabling\ndebug2: resolving \"pool.zjuici.com\" port 31499\ndebug1: Connecting to pool.zjuici.com [183.129.217.214] port 31499.\ndebug2: fd 5 setting O_NONBLOCK\ndebug1: fd 5 clearing O_NONBLOCK\ndebug1: Connection established.\ndebug1: loaded pubkey from /Users/ancd/.ssh/id_ed25519_ancdmac: ED25519 SHA256:mJEt7q3WGdu7rnH6DqtMHXyWWIKLN32/21sS5ZyecPI\ndebug1: identity file /Users/ancd/.ssh/id_ed25519_ancdmac type 2\ndebug1: no identity pubkey loaded from /Users/ancd/.ssh/id_ed25519_ancdmac\ndebug1: Local version string SSH-2.0-OpenSSH_10.3\nkex_exchange_identification: Connection closed by remote host\nConnection closed by 183.129.217.214 port 31499\n"
+  },
+  {
+    "host": "cpu2_pool.zjuici.com",
+    "phase": "connectivity",
+    "exit_code": 255,
+    "diagnostic_tail": "debug1: OpenSSH_10.3p1, LibreSSL 3.3.6\ndebug1: Reading configuration data /Users/ancd/.ssh/config\ndebug1: /Users/ancd/.ssh/config line 43: Applying options for cpu2_pool.zjuici.com\ndebug1: Reading configuration data /etc/ssh/ssh_config\ndebug1: Reading configuration data /etc/ssh/ssh_config.d/100-macos.conf\ndebug1: /etc/ssh/ssh_config.d/100-macos.conf line 1: Applying options for *\ndebug1: Reading configuration data /etc/ssh/crypto.conf\ndebug1: Authenticator provider $SSH_SK_PROVIDER did not resolve; disabling\ndebug2: resolving \"pool.zjuici.com\" port 31497\ndebug1: Connecting to pool.zjuici.com [183.129.217.214] port 31497.\ndebug2: fd 5 setting O_NONBLOCK\ndebug1: fd 5 clearing O_NONBLOCK\ndebug1: Connection established.\ndebug1: loaded pubkey from /Users/ancd/.ssh/id_ed25519_ancdmac: ED25519 SHA256:mJEt7q3WGdu7rnH6DqtMHXyWWIKLN32/21sS5ZyecPI\ndebug1: identity file /Users/ancd/.ssh/id_ed25519_ancdmac type 2\ndebug1: no identity pubkey loaded from /Users/ancd/.ssh/id_ed25519_ancdmac\ndebug1: Local version string SSH-2.0-OpenSSH_10.3\nkex_exchange_identification: Connection closed by remote host\nConnection closed by 183.129.217.214 port 31497\n"
+  }
+]

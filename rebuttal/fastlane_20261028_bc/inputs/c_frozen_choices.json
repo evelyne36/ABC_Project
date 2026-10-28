@@ -1,0 +1,189 @@
+{
+  "stage": "C",
+  "execute_after": "B_complete",
+  "cases": {
+    "S2_sparse": {
+      "source_choice": "local_sync/fastlane_results/cpu2_pool.zjuici.com/results/formal24_v1/S2_sparse/choice.json",
+      "source_choice_sha256": "d14d4b885aba12e47c547c43bc258ea4cbeebf2d89954a5b1a4cc4ecb79cbabf",
+      "source_candidate_pool": "local_sync/fastlane_results/cpu2_pool.zjuici.com/results/formal24_v1/S2_sparse/candidate_pool.json",
+      "source_candidate_pool_sha256": "cf2867fc1ea0f5999ab2e56d98403a689ed250aaad40b01d7ebb47e3e98d9f36",
+      "choices": {
+        "CrossGB": {
+          "candidate": 16,
+          "mean_development_primary": 0.6050756386518132,
+          "selection_metric": "rmse_source_units",
+          "params": {
+            "depth": 2,
+            "ridge": 1.0,
+            "trees": 1024,
+            "learning_rate": 0.03,
+            "p": 1.0
+          }
+        },
+        "XGB": {
+          "candidate": 9,
+          "mean_development_primary": 1.5680980318393494,
+          "selection_metric": "rmse_source_units",
+          "params": {
+            "depth": 4,
+            "ridge": 10.0,
+            "trees": 128,
+            "learning_rate": 0.1,
+            "p": 1.0
+          }
+        },
+        "LGB_constant": {
+          "candidate": 15,
+          "mean_development_primary": 1.520814424156604,
+          "selection_metric": "rmse_source_units",
+          "params": {
+            "depth": 5,
+            "ridge": 10.0,
+            "trees": 512,
+            "learning_rate": 0.05,
+            "p": 1.0
+          }
+        },
+        "LGB_linear": {
+          "candidate": 18,
+          "mean_development_primary": 1.382898039773349,
+          "selection_metric": "rmse_source_units",
+          "params": {
+            "depth": 4,
+            "ridge": 1.0,
+            "trees": 512,
+            "learning_rate": 0.05,
+            "p": 1.0
+          }
+        },
+        "PL": {
+          "candidate": 3,
+          "mean_development_primary": 1.1249594134644454,
+          "selection_metric": "rmse_source_units",
+          "params": {
+            "num_trees": 64,
+            "max_depth": 4,
+            "num_leaves": 16,
+            "l2_reg": 1.0,
+            "max_var": 5,
+            "leaf_type": "linear",
+            "min_sum_hessians": 10.0,
+            "learning_rate": 0.1
+          }
+        },
+        "LinXGBoost": {
+          "candidate": 20,
+          "mean_development_primary": 0.4633370549406622,
+          "selection_metric": "rmse_source_units",
+          "params": {
+            "n_estimators": 2,
+            "max_depth": 3,
+            "lbda": 0.1,
+            "min_samples_leaf": 10,
+            "learning_rate": 0.3
+          }
+        }
+      }
+    },
+    "S3_sparse": {
+      "source_choice": "local_sync/fastlane_results/cpu1_pool.zjuici.com/results/formal24_v1/S3_sparse/choice.json",
+      "source_choice_sha256": "182a56566377b89fb607bed9729ed39a1dcda531291c93abd9491593a0b49ba8",
+      "source_candidate_pool": "local_sync/fastlane_results/cpu1_pool.zjuici.com/results/formal24_v1/S3_sparse/candidate_pool.json",
+      "source_candidate_pool_sha256": "cf2867fc1ea0f5999ab2e56d98403a689ed250aaad40b01d7ebb47e3e98d9f36",
+      "choices": {
+        "CrossGB": {
+          "candidate": 16,
+          "mean_development_primary": 0.42440187063502577,
+          "selection_metric": "rmse_source_units",
+          "params": {
+            "depth": 2,
+            "ridge": 1.0,
+            "trees": 1024,
+            "learning_rate": 0.03,
+            "p": 1.0
+          }
+        },
+        "XGB": {
+          "candidate": 5,
+          "mean_development_primary": 1.314520833497422,
+          "selection_metric": "rmse_source_units",
+          "params": {
+            "depth": 4,
+            "ridge": 10.0,
+            "trees": 1024,
+            "learning_rate": 0.05,
+            "p": 1.0
+          }
+        },
+        "LGB_constant": {
+          "candidate": 17,
+          "mean_development_primary": 1.4048310632315242,
+          "selection_metric": "rmse_source_units",
+          "params": {
+            "depth": 3,
+            "ridge": 10.0,
+            "trees": 1024,
+            "learning_rate": 0.03,
+            "p": 1.0
+          }
+        },
+        "LGB_linear": {
+          "candidate": 19,
+          "mean_development_primary": 1.243412599553051,
+          "selection_metric": "rmse_source_units",
+          "params": {
+            "depth": 3,
+            "ridge": 100.0,
+            "trees": 256,
+            "learning_rate": 0.1,
+            "p": 1.0
+          }
+        },
+        "PL": {
+          "candidate": 23,
+          "mean_development_primary": 0.7284166925249147,
+          "selection_metric": "rmse_source_units",
+          "params": {
+            "num_trees": 64,
+            "max_depth": 3,
+            "num_leaves": 8,
+            "l2_reg": 1.0,
+            "max_var": 5,
+            "leaf_type": "linear",
+            "min_sum_hessians": 5.0,
+            "learning_rate": 0.1
+          }
+        },
+        "LinXGBoost": {
+          "candidate": 3,
+          "mean_development_primary": 0.4927629137312961,
+          "selection_metric": "rmse_source_units",
+          "params": {
+            "n_estimators": 50,
+            "max_depth": 2,
+            "lbda": 1.0,
+            "min_samples_leaf": 20,
+            "learning_rate": 0.3
+          }
+        }
+      }
+    }
+  },
+  "confirmation_seeds": [
+    99001,
+    99002,
+    99003,
+    99004,
+    99005
+  ],
+  "methods": [
+    "CrossGB",
+    "XGB",
+    "LGB_constant",
+    "LGB_linear",
+    "PL",
+    "LinXGBoost"
+  ],
+  "leafonly": "same CrossGB params; conditional control; no HPO",
+  "selection": "original formal24 frozen choices only; no new selection on C data"
+}

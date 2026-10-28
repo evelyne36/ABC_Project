@@ -1,0 +1,189 @@
+{
+  "checked_interval_utc": [
+    "2026-10-28T04:49:38.589691+00:00",
+    "2026-10-28T04:49:39.541870+00:00"
+  ],
+  "running_hosts_at_check": 0,
+  "complete_hosts": 6,
+  "complete_with_failures_hosts": 1,
+  "anchor_fits_completed": 26,
+  "capacity_probes_completed": 24,
+  "capacity_probes_planned": 26,
+  "timing_fits_completed": 60,
+  "timing_fits_planned": 60,
+  "failure_count": 2,
+  "remote_reported_complete": true,
+  "raw_files_download_status": "Seven full-archive downloads failed with SSH transport timeouts; subsequent compact log query also timed out on connection. No failure cause inferred.",
+  "hosts": [
+    {
+      "status": "complete",
+      "pid": 237614,
+      "kind": "capacity",
+      "host": "cpu1_pool.zjuici.com",
+      "completed_tasks": 8,
+      "updated_utc": "2026-10-27T19:42:49.530085+00:00",
+      "current": null,
+      "child_pid": null,
+      "core": 0,
+      "checked_utc": "2026-10-28T04:49:38.619776+00:00",
+      "pid_alive": false,
+      "child_pid_alive": false,
+      "complete_file_exists": true,
+      "executed": 8,
+      "nonzero_exit": [],
+      "capacity_files": 4,
+      "result_files": 4,
+      "result_status_counts": {
+        "ok": 4
+      }
+    },
+    {
+      "status": "complete",
+      "pid": 456288,
+      "kind": "capacity",
+      "host": "cpu2_pool.zjuici.com",
+      "completed_tasks": 8,
+      "updated_utc": "2026-10-27T19:44:27.422708+00:00",
+      "current": null,
+      "child_pid": null,
+      "core": 0,
+      "checked_utc": "2026-10-28T04:49:39.121076+00:00",
+      "pid_alive": false,
+      "child_pid_alive": false,
+      "complete_file_exists": true,
+      "executed": 8,
+      "nonzero_exit": [],
+      "capacity_files": 4,
+      "result_files": 4,
+      "result_status_counts": {
+        "ok": 4
+      }
+    },
+    {
+      "status": "complete",
+      "pid": 332987,
+      "kind": "capacity",
+      "host": "cpu4_pool.zjuici.com",
+      "completed_tasks": 8,
+      "updated_utc": "2026-10-27T19:41:48.704719+00:00",
+      "current": null,
+      "child_pid": null,
+      "core": 0,
+      "checked_utc": "2026-10-28T04:49:38.748228+00:00",
+      "pid_alive": false,
+      "child_pid_alive": false,
+      "complete_file_exists": true,
+      "executed": 8,
+      "nonzero_exit": [],
+      "capacity_files": 4,
+      "result_files": 4,
+      "result_status_counts": {
+        "ok": 4
+      }
+    },
+    {
+      "status": "complete",
+      "pid": 7738,
+      "kind": "capacity",
+      "host": "cpu5_pool.zjuici.com",
+      "completed_tasks": 8,
+      "updated_utc": "2026-10-27T19:42:23.061385+00:00",
+      "current": null,
+      "child_pid": null,
+      "core": 0,
+      "checked_utc": "2026-10-28T04:49:39.541870+00:00",
+      "pid_alive": false,
+      "child_pid_alive": false,
+      "complete_file_exists": true,
+      "executed": 8,
+      "nonzero_exit": [],
+      "capacity_files": 4,
+      "result_files": 4,
+      "result_status_counts": {
+        "ok": 4
+      }
+    },
+    {
+      "status": "complete",
+      "pid": 324700,
+      "kind": "capacity",
+      "host": "cpu_Calculator",
+      "completed_tasks": 10,
+      "updated_utc": "2026-10-27T19:46:04.624551+00:00",
+      "current": null,
+      "child_pid": null,
+      "core": 0,
+      "checked_utc": "2026-10-28T04:49:38.840257+00:00",
+      "pid_alive": false,
+      "child_pid_alive": false,
+      "complete_file_exists": true,
+      "executed": 10,
+      "nonzero_exit": [],
+      "capacity_files": 5,
+      "result_files": 5,
+      "result_status_counts": {
+        "ok": 5
+      }
+    },
+    {
+      "status": "complete_with_failures",
+      "pid": 546164,
+      "kind": "capacity",
+      "host": "TabularData_Processor",
+      "completed_tasks": 10,
+      "updated_utc": "2026-10-27T19:42:43.387723+00:00",
+      "current": null,
+      "child_pid": null,
+      "core": 0,
+      "checked_utc": "2026-10-28T04:49:38.597989+00:00",
+      "pid_alive": false,
+      "child_pid_alive": false,
+      "complete_file_exists": true,
+      "executed": 10,
+      "nonzero_exit": [
+        {
+          "case": "S3_sparse",
+          "seed": 98004,
+          "phase": "capacity",
+          "exit_code": 1,
+          "wall_seconds": 1.619109118997585
+        },
+        {
+          "case": "S3_sparse",
+          "seed": 98005,
+          "phase": "capacity",
+          "exit_code": 1,
+          "wall_seconds": 1.6191126240009908
+        }
+      ],
+      "capacity_files": 3,
+      "result_files": 5,
+      "result_status_counts": {
+        "ok": 5
+      },
+      "log_tail": ""
+    },
+    {
+      "status": "complete",
+      "pid": 5322,
+      "kind": "timing",
+      "host": "cpu6_pool.zjuici.com",
+      "completed_tasks": 60,
+      "updated_utc": "2026-10-27T19:46:30.375727+00:00",
+      "current": null,
+      "child_pid": null,
+      "core": 0,
+      "checked_utc": "2026-10-28T04:49:38.589691+00:00",
+      "pid_alive": false,
+      "child_pid_alive": false,
+      "complete_file_exists": true,
+      "executed": 60,
+      "nonzero_exit": [],
+      "capacity_files": 0,
+      "result_files": 60,
+      "result_status_counts": {
+        "ok": 60
+      }
+    }
+  ]
+}

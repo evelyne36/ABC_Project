@@ -1,0 +1,58 @@
+{
+  "B后C结果与回复更新_20261028.md": {
+    "sha256": "b1fbbf00f50ced35ecc919c7fb2f8d211239d086b9dbcbad6b0c3a064e0cdef6",
+    "bytes": 8034
+  },
+  "BC收口核查.json": {
+    "sha256": "81c8c2156d04ce50b85bd3de58cd9557da1844db36f154d648512fa97d63ed2f",
+    "bytes": 2153
+  },
+  "B1_verification.json": {
+    "sha256": "c093e85fa896d49fe7bd22c7420fe80b35383d89b8f2855d5e4232cb6fd60b3d",
+    "bytes": 1085
+  },
+  "B2_choice.json": {
+    "sha256": "6b269b063da6bc4a686fb81400ff0b34da2ff1a01fa2348ebb08e07dc4fa4323",
+    "bytes": 2346
+  },
+  "B_complete_verified.json": {
+    "sha256": "3b53218e6439465d682a12aa29e6f20125eae52768c43026467a9920be2e8b1c",
+    "bytes": 639
+  },
+  "B2_report/verification.json": {
+    "sha256": "6373d9b18eb8f8b10232a138642fc975d260ec489cd80ec648b4b7b4cb65269b",
+    "bytes": 331
+  },
+  "B2_report/summary.csv": {
+    "sha256": "7d007157afb8e2926d2fd25c27261e482b3756335bbc4f7765b533fc19e46ed7",
+    "bytes": 762
+  },
+  "B2_report/exclusive_timing.csv": {
+    "sha256": "19b996816e54a403e6114509bcbcd3290db63a4690e9321202988e25f2e34591",
+    "bytes": 2193
+  },
+  "C_report/verification.json": {
+    "sha256": "b83d586a5bfe5b357afac82451f78223d909c80ce73a272f713e019d56cdd573",
+    "bytes": 330
+  },
+  "C_report/summary.csv": {
+    "sha256": "b3e72be21ca92767ae21dca48bff01b3c9ffd037b32730875a45285a13acfd0f",
+    "bytes": 1452
+  },
+  "combined_CGB_Lin_10seeds.csv": {
+    "sha256": "e9b0ade57f7e62a328efae8c1620f8855e07926c9c9855040a547c5b38d56a78",
+    "bytes": 467
+  },
+  "N5完整结果_20261028.md": {
+    "sha256": "9dbb340d02ec19243b3ce4a47ef127c0a85fa70b0b6cf95722e577338aff3d9c",
+    "bytes": 21334
+  },
+  "followup_capacity_verification.json": {
+    "sha256": "86a6a00a7d4c06e5e4ef62061ff1a0856a21c86e1008862ef6f4d2d0e265eb72",
+    "bytes": 136271
+  },
+  "real_timing_verification.json": {
+    "sha256": "9f4acc28ea5397a6a35ff08422a8180b85a5dea0dd29bebbad6d8296a0a8b83c",
+    "bytes": 208617
+  }
+}

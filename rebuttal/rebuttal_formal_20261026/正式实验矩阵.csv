@@ -1,0 +1,20 @@
+id,priority,V1,V2,old_E,reviewers,existing_evidence,actual_gap,new_cgb_formal_fits,new_other_fits,panel,gate,deadline_CST,status,deliverable
+R0,P0_gate,integrity,A0-A3,E0,all,210原消融任务/3360指标/完整预测,当前Linux库可否与档案兼容；bias等价/图/代理目标边界,21,7 XGB；另4 tiny CGB集成检查不计正式量,7机制dim10/seed1001/outer1,Linux构建+结构检查,10/26,105输入划分/骨干预检查通过；源码与执行器准备；Linux待验证,results/cgb_input_preflight.json;results/leafonly_source.patch
+N1-main,P0,E1,N1,E2,qxju;t7wg;jSCP;wWos,原CGB/XGB/LGB主调参结果,缺原始近邻直接比较,0,30025/方法；两个主近邻60050,CPU/Kin/Regime/Feature/Curved；5外4内/300候选,16-fit Linux训练验证测速；测试前冻结覆盖,10/28 18:00,本机适配已过；正式搜索未运行,configs/N1_outer_jobs.csv
+N1-supp,P1,E1,N1,E2,qxju;jSCP,同上,补PILOT单树/TAO官方常数叶,0,全核心30025/方法；按测速冻结覆盖,同核心；允许完整五折的小覆盖,主近邻核心优先,10/28 18:00,适配已过；正式未运行,PILOT/TAO补充表与真实版本说明
+N2-core,P0_main,E2,N2,E1,qxju;t7wg,原Bias/SplitOnly/Full+XGB，16变体,缺bias-score + predictive-leaf四格反事实,105,0,7机制dim10×3seed×5外折,R0兼容；先三机制45再七机制105,10/28 18:00,输入已冻结/源码与驱动准备；Linux尚未编译训练,configs/N2_leafonly_queue.json
+N2-dim20,P2,E2,N2,E1,qxju;t7wg,原dim20三个端点,可选维度复制,105 optional,0,同七机制dim20,核心完成；不默认扩展,defer,暂不启动,独立扩展四格
+N3,P0,E3,N3,E4,wWos;t7wg;jSCP,旧成本/p敏感性与验证轨迹,同机相同搜索时间上限的test证据；终拟合成本另报,dynamic separate,XGB dynamic separate,CPU/Kin/Energy；5外折；60/300/900s,冻结搜索/终拟合计时与超时规则；Linux隔离资源,10/28 18:00,执行器已准备/静态检查通过；Linux运行待网关恢复,scripts/run_equal_search_budget.py;configs/N3_equal_search_plan.json
+N4a,P0_done,E4,N4,E3,qxju;wWos,30 selected日志和原参数,先回答现象与成本，无因果结论,0,0,CPU/Kin/Energy五折,源日志hash,done,本轮重分析完成,results/N4_archived_summary.csv;results/N4_selected_folds.csv
+N4b,P0,E4,N4,E3,qxju;t7wg,selected配置；未找回已训练树,缺叶结构和正负例机制统计,10,10 XGB,CPU/Kin各5外折,selected refit保存模型/预测并核对旧误差,10/28 18:00,20任务selected队列及结构导出执行器已准备；Linux运行待验证,configs/N4_selected_queue.json;scripts/run_selected_real.py
+N5,P1_timebox,E5,N5,E6,t7wg;jSCP,原backbone及R0/N4共用路由,k/affine容量,42 additional,165 stagewise系数模型；affine可选55,Regime/Sparse/Curved45路由+CPU/Kin10,P0优先；开发8h/运行4h；不调outer路由正则,10/28 18:00,设计完成；容量执行器待实现,固定路由k1/2/3+raw-k1控制
+N6a,P0_cheap,E6a,N6,E5,jSCP,十任务旧selected结果/原始序列/splits,缺persistence和Ridge参考,0,130 wrapper调用；Ridge约462标量,原十任务；fixed cutoff；seq24；h-1 gap,原数据/split逐项预检查,10/27,10/10 plan_ready；零拟合；Linux待跑,results/ts_preflight_nine_ready/manifest.json;results/ts_preflight_h12_ready/manifest.json
+N6b,P1,E6a,N6,E5,jSCP,原fixed cutoff不证明跨起点稳定,多时间起点,at least 9 + validation,参考方法按起点重训,Exchange/ILI/ETTh2 h1各3起点,起点冻结；不得未来选参,10/28 18:00,可选，未启动,独立rolling表，不混成seed重复
+N6-replay,P1_optional,E6a,N6,E5,jSCP,原CGB十任务与42标量配置,需要逐样本预测时才重放,42 optional,0,原十任务selected,不重搜300候选,10/28 18:00,移出必做；未启动,selected预测/模型
+N7,P2,suitability,N7,optional,t7wg;wWos,Supp G探索性诊断,独立真实预测效度不足,not scheduled,not scheduled,新独立真实面板,不扩任务至本轮核心以外,defer,如实写局限,G定位澄清
+N8,P2,E6b,N8,optional,VVba,分类表达能力推导,可选示意,not scheduled,not scheduled,二维结构例,不阻塞P0,defer,用数学澄清先回应,分类几何说明
+W1,P0_parallel,W1,W1,writing,qxju;t7wg;jSCP,正文§2与方法定义,近邻结构/贡献边界,0,0,实际作者代码版本,不把所有线性叶列作新颖点,10/27,回复骨架已备,逐审稿人回复骨架_待填新结果.md
+W2,P0_parallel,W2,W2,writing,VVba,正文§3.2,slope/bias与affine区分,0,0,公式澄清,不把ensemble非零写成单叶有截距,10/27,回复骨架已备,逐审稿人回复骨架_待填新结果.md
+W3,P0_parallel,W3,W3,writing,VVba,按树抽样/缓存实现,独立不等于不重叠,0,0,采样语义,工程动机不当比较实证,10/27,回复骨架已备,逐审稿人回复骨架_待填新结果.md
+W4,P0_parallel,W4,W4,writing,VVba;t7wg,Main§3/附录A/D,p!=k/代理score/分类margin,0,0,数学与实现对应,表达能力不等于优化保证,10/27,回复骨架已备,results/R0_claim_boundaries.md
+W5,P0_parallel,W5,W5,writing,all,B.7/E/F/G完整证据,选择性收益与结论范围,0,0,每位评审,不许虚构已完成修订/新实验,10/29 AM,工作稿已备，未提交,逐审稿人回复骨架_待填新结果.md

@@ -1,0 +1,264 @@
+{
+  "cases": [
+    {
+      "family": "sparse_switch",
+      "n": 240,
+      "d": 32,
+      "regions": 2
+    },
+    {
+      "family": "dense_switch",
+      "n": 240,
+      "d": 32,
+      "regions": 2
+    },
+    {
+      "family": "offset_switch",
+      "n": 240,
+      "d": 32,
+      "regions": 2
+    },
+    {
+      "family": "step_control",
+      "n": 240,
+      "d": 32,
+      "regions": 2
+    },
+    {
+      "family": "sparse_switch",
+      "n": 600,
+      "d": 64,
+      "regions": 4
+    }
+  ],
+  "grids": {
+    "XGB": [
+      {
+        "depth": 3,
+        "ridge": 1.0,
+        "p": 1.0,
+        "trees": 1,
+        "lr": 1.0
+      },
+      {
+        "depth": 3,
+        "ridge": 1.0,
+        "p": 1.0,
+        "trees": 64,
+        "lr": 0.1
+      },
+      {
+        "depth": 3,
+        "ridge": 10.0,
+        "p": 1.0,
+        "trees": 64,
+        "lr": 0.1
+      },
+      {
+        "depth": 3,
+        "ridge": 0.1,
+        "p": 1.0,
+        "trees": 16,
+        "lr": 0.3
+      },
+      {
+        "depth": 3,
+        "ridge": 1.0,
+        "p": 1.0,
+        "trees": 1024,
+        "lr": 0.1
+      },
+      {
+        "depth": 3,
+        "ridge": 10.0,
+        "p": 1.0,
+        "trees": 1024,
+        "lr": 0.1
+      }
+    ],
+    "CrossGB": [
+      {
+        "depth": 3,
+        "ridge": 1.0,
+        "p": 1.0,
+        "trees": 1,
+        "lr": 1.0
+      },
+      {
+        "depth": 3,
+        "ridge": 1.0,
+        "p": 1.0,
+        "trees": 64,
+        "lr": 0.1
+      },
+      {
+        "depth": 3,
+        "ridge": 10.0,
+        "p": 1.0,
+        "trees": 64,
+        "lr": 0.1
+      },
+      {
+        "depth": 3,
+        "ridge": 0.1,
+        "p": 1.0,
+        "trees": 16,
+        "lr": 0.3
+      }
+    ],
+    "LGB_linear": [
+      {
+        "depth": 3,
+        "ridge": 1.0,
+        "p": 1.0,
+        "trees": 1,
+        "lr": 1.0
+      },
+      {
+        "depth": 3,
+        "ridge": 1.0,
+        "p": 1.0,
+        "trees": 64,
+        "lr": 0.1
+      },
+      {
+        "depth": 3,
+        "ridge": 10.0,
+        "p": 1.0,
+        "trees": 64,
+        "lr": 0.1
+      },
+      {
+        "depth": 3,
+        "ridge": 0.1,
+        "p": 1.0,
+        "trees": 16,
+        "lr": 0.3
+      },
+      {
+        "depth": 3,
+        "ridge": 1.0,
+        "p": 1.0,
+        "trees": 1024,
+        "lr": 0.1
+      },
+      {
+        "depth": 3,
+        "ridge": 10.0,
+        "p": 1.0,
+        "trees": 1024,
+        "lr": 0.1
+      }
+    ],
+    "PL": [
+      {
+        "num_trees": 1,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 1.0,
+        "max_var": 5,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      {
+        "num_trees": 64,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 1.0,
+        "max_var": 5,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      {
+        "num_trees": 64,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 0.1,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      {
+        "num_trees": 64,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 10.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      {
+        "num_trees": 300,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 0.1,
+        "max_var": 5,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      {
+        "num_trees": 300,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 10.0,
+        "max_var": 5,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      }
+    ],
+    "LinXGBoost": [
+      {
+        "n_estimators": 1,
+        "max_depth": 3,
+        "lbda": 2.0,
+        "min_samples_leaf": 5,
+        "learning_rate": 1.0
+      },
+      {
+        "n_estimators": 4,
+        "max_depth": 3,
+        "lbda": 2.0,
+        "min_samples_leaf": 5,
+        "learning_rate": 0.3
+      },
+      {
+        "n_estimators": 4,
+        "max_depth": 3,
+        "lbda": 20.0,
+        "min_samples_leaf": 5,
+        "learning_rate": 0.3
+      },
+      {
+        "n_estimators": 4,
+        "max_depth": 3,
+        "lbda": 200.0,
+        "min_samples_leaf": 5,
+        "learning_rate": 0.3
+      }
+    ]
+  },
+  "discovery_seeds": [
+    91001,
+    91002
+  ],
+  "fresh_data_validation_seeds": [
+    92001,
+    92002,
+    92003
+  ],
+  "noise_sigma": 0.3,
+  "split": "75/25 within each independently generated dataset; same X, noise, train/validation indices across matched families",
+  "selection": "per case and method minimum average development RMSE; require success on both development seeds; all failures and controls retained",
+  "timeout_per_author_fit_sec": 12,
+  "primary": "RMSE, lower better; no universal success threshold or expected winner guaranteed",
+  "hypothesis": "many irrelevant predictors and small local samples favour sparse scalar leaves; path-only linear features may miss off-path slopes; affine neighbours can recover true signal and may outperform",
+  "limitation": "local ARM PL scalar compatibility and Lin author Python; compare local error/time points, not implementation-independent speed",
+  "predeclared_sparse_target_rmse": 0.75,
+  "target_success_rule": "RMSE <= .75 on every one of the three fresh data seeds, sparse cases only; no threshold relaxation"
+}

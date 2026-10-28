@@ -1,0 +1,111 @@
+{
+  "N5": {
+    "raw_reports": 36,
+    "effective_reports": 35,
+    "cases_seeds": {
+      "S3_sparse": [
+        98001,
+        98002,
+        98003,
+        98004,
+        98005
+      ],
+      "cpu_activity": [
+        98001,
+        98002,
+        98003,
+        98004,
+        98005
+      ],
+      "protein": [
+        98001,
+        98002,
+        98003,
+        98004,
+        98005
+      ],
+      "S1_sparse": [
+        98001,
+        98002,
+        98003,
+        98004,
+        98005
+      ],
+      "S1_dense": [
+        98001,
+        98002,
+        98003,
+        98004,
+        98005
+      ],
+      "S2_sparse": [
+        98001,
+        98002,
+        98003,
+        98004,
+        98005
+      ],
+      "S1_affine": [
+        98001,
+        98002,
+        98003,
+        98004,
+        98005
+      ],
+      "S1_offset": [
+        98001
+      ]
+    },
+    "hash_mismatches": [],
+    "regularization_policies": [
+      "saved metagb_lambda_l2 from recorded parameter_sources; no default or retuning"
+    ],
+    "accepted_recomputed_rmse_count": 756
+  },
+  "N6": {
+    "reference_wrapper_fit_calls": 130,
+    "task_count": 10,
+    "reference_test_rows": 20,
+    "historical_split_records_rechecked": 40,
+    "historical_split_fields_rechecked": 1160,
+    "split_field_mismatches": [],
+    "unique_source_files_hash_verified": 10,
+    "unique_raw_files_hash_verified": 6,
+    "historical_selected_model_count": 40,
+    "historical_models_new_replay_completed": false,
+    "note": "Split/target/scaler-field and supplied raw-file provenance alignment is completed; historical native-model bitwise replay is a separate stronger claim."
+  },
+  "N3": {
+    "groups": 30,
+    "checkpoints": 90,
+    "successful_selected_refits": 75,
+    "no_candidate_checkpoints": 15,
+    "end_to_end_cost_recorded": true,
+    "scope": "Equal 60/300/900-second SEARCH caps; selected refit and total cost recorded, not constrained to equal full-pipeline caps. This is deliberate and sufficient for the original equal-search comparison."
+  },
+  "checked_utc": "2026-10-28T09:08:26.588492+00:00",
+  "new_estimator_fits": 0,
+  "current_remote_matches": [
+    {
+      "host": "cpu_Calculator",
+      "remote": "rebuttal_formal_20261026/results/TS_nine_linux_20261026/manifest.json",
+      "local": "rebuttal/过程汇报_checkpoint_1027/证据_远端/TS_reference/TS_nine_linux_20261026/manifest.json",
+      "sha256": "1a08a00ecc5dbc69b7ffec72328ca0078a35ca3cd9e9b84f3568fbc3d506a896",
+      "matched": true
+    },
+    {
+      "host": "cpu_Calculator",
+      "remote": "rebuttal_formal_20261026/results/TS_h12_linux_20261026/manifest.json",
+      "local": "rebuttal/过程汇报_checkpoint_1027/证据_远端/TS_reference/TS_h12_linux_20261026/manifest.json",
+      "sha256": "dcf1311f95d52a876bb450d64138049881335d1b33f38533c51a106863dd9525",
+      "matched": true
+    },
+    {
+      "host": "TabularData_Processor",
+      "remote": "rebuttal_formal_20261026/results/N3_equal_search/all_budget_results.json",
+      "local": "local_sync/remote_audit_20261027/TabularData_Processor/rebuttal_formal_20261026/results/N3_equal_search/all_budget_results.json",
+      "sha256": "a9426af76402633d0bc86411f9fc64559503cb3de84b2ff1e725349517590e0d",
+      "matched": true
+    }
+  ]
+}

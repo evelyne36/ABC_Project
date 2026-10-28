@@ -1,0 +1,84 @@
+{
+  "status": "local_regression_adapters_verified",
+  "date": "2026-10-25",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "python": "3.13.9",
+  "methods": {
+    "linxgboost": "author_python_upstream_predict_preserved",
+    "pilot": "author_python_numba",
+    "gbdt_pl": "author_cpp_platform_compatibility_build",
+    "tao": "official_oblique_tree_constant_regression_leaf"
+  },
+  "user_confirmed_tao_policy": "Respect official source; run constant leaves; do not add a linear-leaf reimplementation",
+  "tests": {
+    "passed": 16,
+    "known_warnings": "7 upstream TAO NumPy scalar-conversion deprecation warnings",
+    "log": "reports/tests_final.log"
+  },
+  "real_smoke": {
+    "scope": "local integration smoke only; not a rebuttal benchmark result",
+    "models": [
+      {
+        "method": "linxgboost",
+        "status": "success",
+        "rmse": 32.14672645917682,
+        "fit_wall_sec": 0.2712750000064261,
+        "predict_wall_sec": 8.075000368990004e-05
+      },
+      {
+        "method": "pilot",
+        "status": "success",
+        "rmse": 24.30673978437502,
+        "fit_wall_sec": 8.36115195901948,
+        "predict_wall_sec": 0.0006056250131223351
+      },
+      {
+        "method": "tao",
+        "status": "success",
+        "rmse": 41.536350104869314,
+        "fit_wall_sec": 1.2206925420032348,
+        "predict_wall_sec": 7.687500328756869e-05
+      },
+      {
+        "method": "gbdt_pl",
+        "status": "success",
+        "rmse": 21.528958948517843,
+        "fit_wall_sec": 0.04599579199566506,
+        "predict_wall_sec": 0.0026590839843265712
+      }
+    ],
+    "fixture": "moneyball_historical_outer1",
+    "output_directory": "reports/smoke_20261025_231635",
+    "crossgb_fit_calls": 0
+  },
+  "synthetic_smoke": "four author methods previously verified on tiny piecewise-linear fixture; integration only",
+  "native_compatibility_checks": "passed SIMD/PEXT/POPCNT/aligned allocation/LAPACK hand-checked fixture",
+  "frozen_inputs": {
+    "real": 5,
+    "synthetic": 4,
+    "outer_folds": 5,
+    "inner_folds": 4,
+    "synthetic_archived_outer_entries_matched": 20
+  },
+  "configs": {
+    "methods": 4,
+    "candidate_counts": [
+      300,
+      600
+    ],
+    "search_seed": 42,
+    "prefixes_verified": true,
+    "formal_search_executed": false
+  },
+  "crossgb_training_fits": 0,
+  "formal_benchmark_results": 0,
+  "linux_build_and_runtime_verified": false,
+  "limitations": [
+    "Regression adapters only",
+    "TAO is official constant-leaf, not NeurIPS2025 linear-leaf",
+    "ARM scalar GBDT-PL timing is not original x86/MKL performance",
+    "Fit timing includes first import/JIT",
+    "Two source-regeneration tests require the original project; minimal Linux bundle uses the other 14 runtime checks",
+    "Source fidelity and local integration checks do not certify original-paper benchmark reproduction"
+  ]
+}

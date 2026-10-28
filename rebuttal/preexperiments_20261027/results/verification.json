@@ -1,0 +1,16 @@
+{
+  "fit_attempts": {
+    "discovery_real": 1488,
+    "locked_audit_real": 156,
+    "real_frontier": 444,
+    "synthetic_discovery": 1062,
+    "synthetic_frozen_check": 90
+  },
+  "total": 3240,
+  "failed": 0,
+  "formal_real_outer_test_evaluations": 0,
+  "audit_cases": 13,
+  "real_discovery_cells": 62,
+  "synthetic_cases": 7,
+  "warning": "Real shortlist is exploratory selection from local data; audit uses one reserved split, with timing/subsampling repeats, not 3 independent outer splits. Synthetic frozen check uses new data seeds. Training timings exclude preprocessing/imports and HPO."
+}

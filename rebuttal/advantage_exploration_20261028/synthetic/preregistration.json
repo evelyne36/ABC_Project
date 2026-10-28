@@ -1,0 +1,263 @@
+{
+  "version": "cgb-advantage-synthetic-v1-20261028",
+  "created_utc": "2026-10-28T06:55:44.240536+00:00",
+  "status": "frozen before generation; no model scores read",
+  "cases": [
+    {
+      "case": "A01_s1_n120_d32",
+      "n": 120,
+      "d": 32,
+      "kind": "sparse",
+      "formula": "f(X)=2 sign(x0) x1",
+      "axis": "small sample size",
+      "pair_group": "n120_d32",
+      "gate_features": [
+        0
+      ],
+      "predictive_by_region": {
+        "0": [
+          1
+        ],
+        "1": [
+          1
+        ]
+      }
+    },
+    {
+      "case": "A02_s1_n240_d8",
+      "n": 240,
+      "d": 8,
+      "kind": "sparse",
+      "formula": "f(X)=2 sign(x0) x1",
+      "axis": "few irrelevant coordinates",
+      "pair_group": "n240_d8",
+      "gate_features": [
+        0
+      ],
+      "predictive_by_region": {
+        "0": [
+          1
+        ],
+        "1": [
+          1
+        ]
+      }
+    },
+    {
+      "case": "A03_s1_n240_d64",
+      "n": 240,
+      "d": 64,
+      "kind": "sparse",
+      "formula": "f(X)=2 sign(x0) x1",
+      "axis": "many irrelevant coordinates",
+      "pair_group": "n240_d64",
+      "gate_features": [
+        0
+      ],
+      "predictive_by_region": {
+        "0": [
+          1
+        ],
+        "1": [
+          1
+        ]
+      }
+    },
+    {
+      "case": "A04_imbalanced_gate",
+      "n": 240,
+      "d": 32,
+      "kind": "imbalanced",
+      "formula": "f(X)=2 [(I(x0>=Phi^-1(.8))-.2)/sqrt(.2*.8)] x1",
+      "axis": "20/80 region imbalance with population-centered gate",
+      "pair_group": "n240_d32",
+      "gate_features": [
+        0
+      ],
+      "predictive_by_region": {
+        "0": [
+          1
+        ],
+        "1": [
+          1
+        ]
+      }
+    },
+    {
+      "case": "A05_predictor_switch",
+      "n": 240,
+      "d": 32,
+      "kind": "switch",
+      "formula": "f(X)=-2 x1 if x0<0, else +2 x2",
+      "axis": "one-level gate switches the independent predictive coordinate",
+      "pair_group": "n240_d32",
+      "gate_features": [
+        0
+      ],
+      "predictive_by_region": {
+        "0": [
+          1
+        ],
+        "1": [
+          2
+        ]
+      }
+    },
+    {
+      "case": "A06_two_sparse_modules",
+      "n": 240,
+      "d": 32,
+      "kind": "modules",
+      "formula": "f(X)=sqrt(2) [sign(x0) x2 + sign(x1) x3]",
+      "axis": "two additive gate modules, one predictive variable per module",
+      "pair_group": "n240_d32",
+      "gate_features": [
+        0,
+        1
+      ],
+      "predictive_modules": [
+        [
+          2
+        ],
+        [
+          3
+        ]
+      ]
+    },
+    {
+      "case": "A07_dense_control",
+      "n": 120,
+      "d": 32,
+      "kind": "dense",
+      "formula": "f(X)=2 sign(x0) sum(x1,...,x31)/sqrt(31)",
+      "axis": "matched dense-slope control for A01",
+      "pair_group": "n120_d32",
+      "gate_features": [
+        0
+      ],
+      "predictive_by_region": {
+        "0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        "1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ]
+      }
+    },
+    {
+      "case": "A08_intercept_control",
+      "n": 120,
+      "d": 32,
+      "kind": "intercept",
+      "formula": "f(X)=2 sign(x0)",
+      "axis": "matched region-intercept control for A01",
+      "pair_group": "n120_d32",
+      "gate_features": [
+        0
+      ],
+      "predictive_by_region": {
+        "0": [],
+        "1": []
+      }
+    }
+  ],
+  "development_seeds": [
+    110001,
+    110002
+  ],
+  "reserved_confirmation_seeds": [
+    111001,
+    111002,
+    111003,
+    111004,
+    111005
+  ],
+  "confirmation_status": "registered only; not generated; generate/evaluate only after HPO freeze",
+  "generator_namespace": 2026102801,
+  "noise_sd": 0.3,
+  "population_signal_L2": 2.0,
+  "population_signal_second_moment": 4.0,
+  "seed_audit": {
+    "seeds": [
+      110001,
+      110002,
+      111001,
+      111002,
+      111003,
+      111004,
+      111005
+    ],
+    "collisions": [],
+    "searched_roots": [
+      "rebuttal",
+      "local_sync"
+    ],
+    "excluded": "rebuttal/advantage_exploration_20261028 (current new exploration)",
+    "text_scope": "json/jsonl/py/md/csv/yaml/yml/sh/toml/txt; integer tokens, excluding decimal substrings",
+    "filenames_checked": 19619,
+    "filename_collisions": []
+  },
+  "generator_sha256": "8f56bcda18bac7633821589133c2df82bc69a9ba881b33840040fa14547ed55b",
+  "reused_protocol_source": "rebuttal/fastlane_20261027/prepare_data.py",
+  "reused_protocol_sha256": "98d616ec07c46f00615b2a61d41a2283feea4bb6293349c346233cb5ad9fc4ec"
+}

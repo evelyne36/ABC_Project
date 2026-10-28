@@ -1,0 +1,10 @@
+{
+  "stage": "B2",
+  "expected_fits": 35,
+  "observed_fits": 35,
+  "successful_fits": 35,
+  "rmse_values_recomputed": 105,
+  "max_recomputation_error": 0.0,
+  "errors": [],
+  "scope": "five independent new synthetic seeds; raw timings retained per host, summarize paired ratios only; frozen recipes never changed by this script"
+}

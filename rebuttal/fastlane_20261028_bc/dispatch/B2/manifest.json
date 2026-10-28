@@ -1,0 +1,12 @@
+{
+  "stage": "B2",
+  "jobs": 35,
+  "hosts_used": 5,
+  "plans": {
+    "cpu1_pool.zjuici.com.json": "b6eecaf7905bf078d68d2af5449be7603fcc50e5e2072b50cc061ca6f42ce1d0",
+    "cpu2_pool.zjuici.com.json": "aed0ca966c8a6c815aa8887d8ab267112e235ec502fa122b04e778bf66261080",
+    "cpu4_pool.zjuici.com.json": "a372931029759fea50804677c110e45002eb816b3a52c988d99834b791411dc1",
+    "cpu5_pool.zjuici.com.json": "e89c97d9da1c97c863388535372d55abc65b4f875c8bf556e798c19964c07f20",
+    "cpu_Calculator.json": "e57be6750e2cb27fe25787bf3726899c9326f8d299ae84cb08976f62c0949c70"
+  }
+}

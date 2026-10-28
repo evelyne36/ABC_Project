@@ -1,0 +1,16 @@
+{
+  "status": "all_passed",
+  "A_development_refits": 400,
+  "A_selected_variants_evaluated": 100,
+  "B_native_fits": 80,
+  "C_native_fits_including_repetitions": 90,
+  "D_native_fits": 30,
+  "total_new_fits": 600,
+  "C_unique_dataset_seed_parameter_workpoints": 30,
+  "no_failed_or_timed_out_fits": true,
+  "test_selection": false,
+  "A_scope": "posthoc fixed routes, per-capacity validation selection, inherited constants/eta",
+  "B_scope": "five fresh paired draws, fixed A06 recipes, shared within-draw val/test across cells",
+  "C_scope": "posthoc all-p sensitivity; three timing repetitions are not new data draws",
+  "D_scope": "same fixed real time test, nested train600->2000, no new independent data source"
+}

@@ -1,0 +1,78 @@
+{
+  "reason": "Initial real LR0.1 curves can conflate per-tree cost with convergence rate; vary LR equally for all models. Initial synthetic baseline64-tree cap can underfit; expand cheap baselines instead of declaring unreachable error.",
+  "real_cells": [
+    "ilpd.csv::drop",
+    "vowel.csv::numeric"
+  ],
+  "real_learning_rates": [
+    0.05,
+    0.2,
+    0.5
+  ],
+  "real_trees": [
+    20,
+    60,
+    180
+  ],
+  "real_repetitions": 2,
+  "synthetic_baseline_methods": [
+    "XGB",
+    "LGB_constant",
+    "LGB_linear"
+  ],
+  "synthetic_extra_trees": [
+    128,
+    256,
+    1024
+  ],
+  "synthetic_learning_rates": [
+    0.1,
+    1.0
+  ],
+  "synthetic_cases": [
+    {
+      "family": "sparse_switch",
+      "n": 600,
+      "d": 8,
+      "regions": 2
+    },
+    {
+      "family": "sparse_switch",
+      "n": 600,
+      "d": 8,
+      "regions": 4
+    },
+    {
+      "family": "sparse_switch",
+      "n": 600,
+      "d": 32,
+      "regions": 4
+    },
+    {
+      "family": "sparse_switch",
+      "n": 2400,
+      "d": 32,
+      "regions": 4
+    },
+    {
+      "family": "dense_switch",
+      "n": 600,
+      "d": 32,
+      "regions": 4
+    },
+    {
+      "family": "offset_switch",
+      "n": 600,
+      "d": 32,
+      "regions": 4
+    },
+    {
+      "family": "step_control",
+      "n": 600,
+      "d": 32,
+      "regions": 4
+    }
+  ],
+  "audit_labels_not_used": true,
+  "further_expansion_after_this_batch": false
+}

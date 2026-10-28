@@ -1,0 +1,36 @@
+{
+  "cause": "original TS helper imports random600; deployment source contained random300 only",
+  "changes": "copy unmodified original Python helpers; no algorithm changes",
+  "files": [
+    {
+      "original": "aaai_FullCodeProject-check_codereview0701/random600/__init__.py",
+      "copy": "rebuttal_server_config_20261025/source/exp/random600/__init__.py",
+      "sha256": "d8a7da1b54913f6cd9c445e8d4352bd891a183d59e61fa6856428225f5309766"
+    },
+    {
+      "original": "aaai_FullCodeProject-check_codereview0701/random600/utils/metrics.py",
+      "copy": "rebuttal_server_config_20261025/source/exp/random600/utils/metrics.py",
+      "sha256": "01363935cad2a29d9c65f874e9e71eb8949c9ddde32e17ee5c04589d7261cef2"
+    },
+    {
+      "original": "aaai_FullCodeProject-check_codereview0701/random600/utils/runner.py",
+      "copy": "rebuttal_server_config_20261025/source/exp/random600/utils/runner.py",
+      "sha256": "f7469016ddcc141ff6f42763d5a4c52da498d11858017eb7dc1412463102e0a1"
+    },
+    {
+      "original": "aaai_FullCodeProject-check_codereview0701/random600/utils/parameter_audit.py",
+      "copy": "rebuttal_server_config_20261025/source/exp/random600/utils/parameter_audit.py",
+      "sha256": "c22708e19c9c3685f3a5abf53513e5515aa23e4ad9f1066f83822dd6ff3f0a33"
+    },
+    {
+      "original": "aaai_FullCodeProject-check_codereview0701/random600/utils/__init__.py",
+      "copy": "rebuttal_server_config_20261025/source/exp/random600/utils/__init__.py",
+      "sha256": "5370feb6df63479fdfb6621dd977842fd3deda2c2fe9ec8f6a0b4301d3b2f94a"
+    },
+    {
+      "original": "aaai_FullCodeProject-check_codereview0701/random600/utils/candidates.py",
+      "copy": "rebuttal_server_config_20261025/source/exp/random600/utils/candidates.py",
+      "sha256": "6be66020d81c8f4c102ee86951d2974ae9df16246e940fb366c2ac0bcfaebffd"
+    }
+  ]
+}

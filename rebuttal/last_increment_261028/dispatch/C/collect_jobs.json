@@ -1,0 +1,9 @@
+[
+  {
+    "host": "cpu6_pool.zjuici.com",
+    "action": "download",
+    "command": "tar -cz -C /home/admin/crossgb_fastlane_20261027 results/last_increment_261028_v1/C",
+    "local": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/last_increment_results/cpu6_pool.zjuici.com_C.tar.gz",
+    "timeout": 90
+  }
+]

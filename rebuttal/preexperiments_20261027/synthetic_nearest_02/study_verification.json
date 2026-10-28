@@ -1,0 +1,30 @@
+{
+  "total_new_attempts": 993,
+  "total_new_success": 985,
+  "retained_timeouts": 8,
+  "formal_real_outer_test_evaluations": 0,
+  "final_seed_wins": {
+    "XGB": 5,
+    "LGB_linear": 5,
+    "PL": 5,
+    "LinXGBoost": 4
+  },
+  "final_target_hits": {
+    "CrossGB": 5,
+    "XGB": 0,
+    "LGB_linear": 0,
+    "PL": 2,
+    "LinXGBoost": 5
+  },
+  "source_hashes": {
+    "preexperiments_20261027/fetch_uci_candidates.py": "a53416d9c51f114c9d33db9163db29d029fef72b0ec464d868d069572273bd18",
+    "preexperiments_20261027/nearest_candidates.py": "1977189dfaf731e46ab9c0de30669064630c54f91e05d0fe2e1ffb1dd6029dbe",
+    "preexperiments_20261027/nearest_synthetic.py": "d28e26430c23faebf2ebf596963603d8edba42365028fb156cfbfe7cffcc8db3",
+    "preexperiments_20261027/stress_sparse_neighbours.py": "a8e383b4bf3804e03ea460c53743941ad62fce8cc4315bfd8bf1b0a4996fe307",
+    "preexperiments_20261027/confirm_sparse_final.py": "4f4b12be7399e091033b8a3517cd9eabaa9be66960be801facabf6d50e939f76",
+    "preexperiments_20261027/model_runtime.py": "0907e41c28498741b6520de9e3ff74f697cb3644afac257964bc2796b48ba461",
+    "analysis_20261027/synthetic_mechanism_suite.py": "a745ce844c6aeb67786a4dff052bf9687a6a0c138fab0ae55018cb8065e83377"
+  },
+  "runtime_provenance_file": "../expansion_02/runtime_provenance.json",
+  "completed": true
+}

@@ -1,0 +1,252 @@
+{
+  "status": "passed",
+  "version": "cgb-advantage-synthetic-v1-20261028",
+  "datasets_checked": 16,
+  "checked": [
+    {
+      "case": "A01_s1_n120_d32",
+      "seed": 110001,
+      "shape": [
+        120,
+        32
+      ],
+      "split_sizes": {
+        "train": 72,
+        "val": 24,
+        "test": 24
+      },
+      "hashes_verified": true,
+      "formula_verified": true
+    },
+    {
+      "case": "A02_s1_n240_d8",
+      "seed": 110001,
+      "shape": [
+        240,
+        8
+      ],
+      "split_sizes": {
+        "train": 144,
+        "val": 48,
+        "test": 48
+      },
+      "hashes_verified": true,
+      "formula_verified": true
+    },
+    {
+      "case": "A03_s1_n240_d64",
+      "seed": 110001,
+      "shape": [
+        240,
+        64
+      ],
+      "split_sizes": {
+        "train": 144,
+        "val": 48,
+        "test": 48
+      },
+      "hashes_verified": true,
+      "formula_verified": true
+    },
+    {
+      "case": "A04_imbalanced_gate",
+      "seed": 110001,
+      "shape": [
+        240,
+        32
+      ],
+      "split_sizes": {
+        "train": 144,
+        "val": 48,
+        "test": 48
+      },
+      "hashes_verified": true,
+      "formula_verified": true
+    },
+    {
+      "case": "A05_predictor_switch",
+      "seed": 110001,
+      "shape": [
+        240,
+        32
+      ],
+      "split_sizes": {
+        "train": 144,
+        "val": 48,
+        "test": 48
+      },
+      "hashes_verified": true,
+      "formula_verified": true
+    },
+    {
+      "case": "A06_two_sparse_modules",
+      "seed": 110001,
+      "shape": [
+        240,
+        32
+      ],
+      "split_sizes": {
+        "train": 144,
+        "val": 48,
+        "test": 48
+      },
+      "hashes_verified": true,
+      "formula_verified": true
+    },
+    {
+      "case": "A07_dense_control",
+      "seed": 110001,
+      "shape": [
+        120,
+        32
+      ],
+      "split_sizes": {
+        "train": 72,
+        "val": 24,
+        "test": 24
+      },
+      "hashes_verified": true,
+      "formula_verified": true
+    },
+    {
+      "case": "A08_intercept_control",
+      "seed": 110001,
+      "shape": [
+        120,
+        32
+      ],
+      "split_sizes": {
+        "train": 72,
+        "val": 24,
+        "test": 24
+      },
+      "hashes_verified": true,
+      "formula_verified": true
+    },
+    {
+      "case": "A01_s1_n120_d32",
+      "seed": 110002,
+      "shape": [
+        120,
+        32
+      ],
+      "split_sizes": {
+        "train": 72,
+        "val": 24,
+        "test": 24
+      },
+      "hashes_verified": true,
+      "formula_verified": true
+    },
+    {
+      "case": "A02_s1_n240_d8",
+      "seed": 110002,
+      "shape": [
+        240,
+        8
+      ],
+      "split_sizes": {
+        "train": 144,
+        "val": 48,
+        "test": 48
+      },
+      "hashes_verified": true,
+      "formula_verified": true
+    },
+    {
+      "case": "A03_s1_n240_d64",
+      "seed": 110002,
+      "shape": [
+        240,
+        64
+      ],
+      "split_sizes": {
+        "train": 144,
+        "val": 48,
+        "test": 48
+      },
+      "hashes_verified": true,
+      "formula_verified": true
+    },
+    {
+      "case": "A04_imbalanced_gate",
+      "seed": 110002,
+      "shape": [
+        240,
+        32
+      ],
+      "split_sizes": {
+        "train": 144,
+        "val": 48,
+        "test": 48
+      },
+      "hashes_verified": true,
+      "formula_verified": true
+    },
+    {
+      "case": "A05_predictor_switch",
+      "seed": 110002,
+      "shape": [
+        240,
+        32
+      ],
+      "split_sizes": {
+        "train": 144,
+        "val": 48,
+        "test": 48
+      },
+      "hashes_verified": true,
+      "formula_verified": true
+    },
+    {
+      "case": "A06_two_sparse_modules",
+      "seed": 110002,
+      "shape": [
+        240,
+        32
+      ],
+      "split_sizes": {
+        "train": 144,
+        "val": 48,
+        "test": 48
+      },
+      "hashes_verified": true,
+      "formula_verified": true
+    },
+    {
+      "case": "A07_dense_control",
+      "seed": 110002,
+      "shape": [
+        120,
+        32
+      ],
+      "split_sizes": {
+        "train": 72,
+        "val": 24,
+        "test": 24
+      },
+      "hashes_verified": true,
+      "formula_verified": true
+    },
+    {
+      "case": "A08_intercept_control",
+      "seed": 110002,
+      "shape": [
+        120,
+        32
+      ],
+      "split_sizes": {
+        "train": 72,
+        "val": 24,
+        "test": 24
+      },
+      "hashes_verified": true,
+      "formula_verified": true
+    }
+  ],
+  "paired_controls_verified": true,
+  "nested_dimension_axis_verified": true,
+  "reserved_confirmation_absent": true,
+  "model_fits": 0,
+  "held_out_label_summaries_emitted": false
+}

@@ -1,0 +1,32 @@
+{
+  "kind": "capacity",
+  "host": "cpu4_pool.zjuici.com",
+  "batch_budget_seconds": 1800,
+  "frozen_utc": "2026-10-27T19:40:04.672690+00:00",
+  "cases": {
+    "S1_sparse": {
+      "params": {
+        "depth": 2,
+        "learning_rate": 1.0,
+        "p": 1.0,
+        "ridge": 2.0,
+        "trees": 1
+      },
+      "seeds": [
+        98002,
+        98003,
+        98004,
+        98005
+      ],
+      "source": "local_sync/fastlane_results/cpu4_pool.zjuici.com/results/quick_v1/S1_sparse/final/CrossGB/s98001/result.json"
+    }
+  },
+  "test_selection": false,
+  "scope": "Repeated fixed recipes on existing confirmation splits; diagnostic, not fresh test confirmation; no search",
+  "data_sha256": {
+    "S1_sparse__s98002.npz": "45b02464f4388442244ab1ffa2f8aa12a9ff6432e94335a75c1a2429846d589b",
+    "S1_sparse__s98003.npz": "9c55e02f2941412cf463c2594f74ceed5d8433ff5f96e91e2c361c12ba888c25",
+    "S1_sparse__s98004.npz": "4d8e8a2e7b3976368ce5e09c403128c0d0bf9126bcbcb3d3baa4c471caceb805",
+    "S1_sparse__s98005.npz": "cc854d6d05a4076b32572ae2d9d12c02dadedce7a88485391ac722e3a731a6ea"
+  }
+}

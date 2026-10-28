@@ -1,0 +1,42 @@
+[
+  {
+    "case": "gas_turbine_nox_n2000",
+    "seed": 113001,
+    "data": "inputs/D/gas_turbine_nox_n2000__s113001.npz",
+    "metadata": "inputs/D/gas_turbine_nox_n2000__s113001.json",
+    "sha256": "c7bebced6f3d5b217f25808fb7025a5012e3d0b2666806737bd611a1e8f3c37f",
+    "kind": "real"
+  },
+  {
+    "case": "gas_turbine_nox_n2000",
+    "seed": 113002,
+    "data": "inputs/D/gas_turbine_nox_n2000__s113002.npz",
+    "metadata": "inputs/D/gas_turbine_nox_n2000__s113002.json",
+    "sha256": "c75dc655798a0a1647d2bd06449892cac73bd9024011eafe44e960e47c03cfc6",
+    "kind": "real"
+  },
+  {
+    "case": "gas_turbine_nox_n2000",
+    "seed": 113003,
+    "data": "inputs/D/gas_turbine_nox_n2000__s113003.npz",
+    "metadata": "inputs/D/gas_turbine_nox_n2000__s113003.json",
+    "sha256": "b370cb10905228551356fe3c01a573df392061268fe630bc1554dd42ca1a63a0",
+    "kind": "real"
+  },
+  {
+    "case": "gas_turbine_nox_n2000",
+    "seed": 113004,
+    "data": "inputs/D/gas_turbine_nox_n2000__s113004.npz",
+    "metadata": "inputs/D/gas_turbine_nox_n2000__s113004.json",
+    "sha256": "3db2ca6068040a3add8c6ecfec0257990dec75dca6a10bef8205bcc32d0ca8b3",
+    "kind": "real"
+  },
+  {
+    "case": "gas_turbine_nox_n2000",
+    "seed": 113005,
+    "data": "inputs/D/gas_turbine_nox_n2000__s113005.npz",
+    "metadata": "inputs/D/gas_turbine_nox_n2000__s113005.json",
+    "sha256": "74d307141f08fbec8e7f3839e80da5e199e666f2cb8913ad25e92a5b7684f33d",
+    "kind": "real"
+  }
+]

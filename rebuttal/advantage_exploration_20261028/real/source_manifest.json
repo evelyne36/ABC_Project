@@ -1,0 +1,62 @@
+{
+  "acquired_at_utc": "2026-10-28T07:01:39.604763+00:00",
+  "origin": "official archive.ics.uci.edu HTTPS archive and dataset metadata API",
+  "license": "Selected four datasets: CC BY 4.0, confirmed on official landing pages",
+  "files": [
+    {
+      "file": "sources/uci_183.zip",
+      "sha256": "f0dcda420cdecc4dcf58939f6e6e637969d14ac8f95da1abde495088714c5038",
+      "bytes": 271040,
+      "used": true
+    },
+    {
+      "file": "sources/uci_183_official_metadata.json",
+      "sha256": "1bdb484e17f38af829a7c0d71a4246f4c97094398321d2f08d24ca031853fc6b",
+      "bytes": 46337,
+      "used": true
+    },
+    {
+      "file": "sources/uci_189.zip",
+      "sha256": "2f82bb0ef96fa7d8d7edf4d97b89173e07c2cca7723440a64bc38918a83345df",
+      "bytes": 292221,
+      "used": true
+    },
+    {
+      "file": "sources/uci_189_official_metadata.json",
+      "sha256": "f729e3a13f60e64fc00ff0af32bd258dee8a3156885d48fde8f606d65fe7d449",
+      "bytes": 7905,
+      "used": true
+    },
+    {
+      "file": "sources/uci_315.zip",
+      "sha256": "37bd14730ef7e4786e094421982ad32536298a9d84d875cd35d27423f14b409a",
+      "bytes": 618424,
+      "used": false
+    },
+    {
+      "file": "sources/uci_437.zip",
+      "sha256": "f1821f937bf988ee236bf750ba3f07c4826182e8f6a433f74d73733ed2054fb9",
+      "bytes": 311263,
+      "used": true
+    },
+    {
+      "file": "sources/uci_437_official_metadata.json",
+      "sha256": "70efac42311ffd0be9f7390c5336258b059e3157617fba8d73ff5ddff7c2d3a6",
+      "bytes": 12960,
+      "used": true
+    },
+    {
+      "file": "sources/uci_551.zip",
+      "sha256": "55fdb1acc25f05bd9c77aac285c424e9154ffb0dbf1bbadb56b69a1142231295",
+      "bytes": 1090294,
+      "used": true
+    },
+    {
+      "file": "sources/uci_551_official_metadata.json",
+      "sha256": "55b057fa924c48ed3205ab74c43f94f6a4169a93b9a687d477d4af82baf11cdb",
+      "bytes": 4440,
+      "used": true
+    }
+  ],
+  "unused_candidate": "UCI315 Geographical Origin Music was downloaded but not used because artist/album group IDs are unavailable and features were globally normalized upstream."
+}

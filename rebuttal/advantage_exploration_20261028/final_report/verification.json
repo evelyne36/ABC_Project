@@ -1,0 +1,12 @@
+{
+  "completed_utc": "2026-10-28T08:17:51.982437+00:00",
+  "development_fits": 960,
+  "confirmation_fits": 70,
+  "timing_fits": 42,
+  "total_fits": 1072,
+  "status": "all_ok",
+  "test_predictions_recomputed": 112,
+  "timing_replays_match_confirmation": true,
+  "confirmation_freeze_sha256": "5ca62804148201ebd1b79e9cf15205ba678a4451e2b842be7d1a0e12d96f7fd9",
+  "no_additional_hpo_after_test": true
+}

@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "attempts": 594,
+  "success": 594,
+  "failed": 0,
+  "formal_test_evaluations": 0,
+  "audit_caveat": "three repeated fits on one fixed audit; not three independent splits"
+}

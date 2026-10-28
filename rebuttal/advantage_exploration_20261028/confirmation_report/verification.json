@@ -1,0 +1,10 @@
+{
+  "fits_seen": 70,
+  "statuses": {
+    "ok": 70
+  },
+  "successful_predictions_recomputed": 70,
+  "stages": [
+    "confirmation"
+  ]
+}

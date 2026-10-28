@@ -1,0 +1,14 @@
+{
+  "model_fit_calls": 0,
+  "purpose": "expanded frozen pool avoids capping XGB at original 300 before the wall-clock budget is spent",
+  "candidates_per_method": 3000,
+  "archived_prefix_exactly_preserved": 300,
+  "prefix_generation_check": "non-float keys exact; regenerated floating keys within rtol 1e-13/atol1e-15; archived prefix copied exactly after verification",
+  "prefix_tiny_float_differences": 436,
+  "generation_seed": 42,
+  "search_space": "rebuttal_execution_20261025/source/exp/random300/configs/default_search_space.json",
+  "search_space_sha256": "8b7d8edb3024718cf1e9d21bd145c71f272f0c4874db1d83ac15193e713adc08",
+  "generator_sha256": "6de63c3afb049852f26a9951703f6a142c136ce5d1ebd641f05f7c4a51df404e",
+  "archived_pool_sha256": "ac6129bcab57c3ab09692e3e2f36d41d51c469c108ef6cc53e3d1e3aeccffa92",
+  "expanded_pool_sha256": "1296065048ef5935982f6bb32d6407cccaa1239bf37328233892091cf59fc24b"
+}

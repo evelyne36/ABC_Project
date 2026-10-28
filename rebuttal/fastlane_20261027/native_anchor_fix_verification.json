@@ -1,0 +1,374 @@
+{
+  "schema_version": 1,
+  "status": "local_archived_replay_verified",
+  "scope": "Read-only replay against local archived models and predictions; no training, no remote connection, and no current remote failure identity verified.",
+  "implementation": {
+    "capacity_file": "rebuttal/fastlane_20261027/capacity.py",
+    "capacity_sha256": "f7d073f2ade7d9cada70fd8a930de35c6d5583f811b81b1aea4c788a752a3f95",
+    "test_file": "rebuttal/fastlane_20261027/test_capacity.py",
+    "test_sha256": "72464ec82c973675f2fc48eb5b0bd9b361a8df906ef944f4bb0efbe67dc73550",
+    "native_source_file": "rebuttal/aaai2027提交原件/SupplementaryCode_CrossGBv1_github_openreview/CrossGB/xgboost-master/src/predictor/cpu_predictor.cc",
+    "native_source_sha256": "56ded7bb08de289186429bf68993403a22887cff9cf70f3275510d64bfaa8d7a",
+    "source_evidence": {
+      "lines_77_99": "Scalar tree predictor returns float, with a float leaf product; missing predictive input is 0.0f.",
+      "lines_110_131": "Output is MatrixView<float>; each tree contribution is added in model order."
+    }
+  },
+  "semantics": {
+    "stored_anchor_metrics": "Native float32 stored replay is the RMSE and delta baseline.",
+    "float64_probe": "All refit regressions, selection, residual updates and probe predictions remain float64. Original float64 stored replay remains a diagnostic.",
+    "gate_absolute_tolerance": 1e-05,
+    "gate_comparison": "Only native float32 stored replay versus native prediction; the threshold is unchanged."
+  },
+  "tests": {
+    "command": "/Users/ancd/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m unittest rebuttal/fastlane_20261027/test_capacity.py",
+    "tests_run": 11,
+    "passed": true,
+    "new_coverage": [
+      "1024 predictive trees require native float32 products and per-tree accumulation; final cast of a float64 sum differs",
+      "missing predictive input and stored constant semantics",
+      "main accepts exact native replay when float64 diagnostic exceeds 1e-5, retains diagnostic and uses native stored RMSE",
+      "main still rejects native replay errors above unchanged 1e-5"
+    ]
+  },
+  "archived_checks": [
+    {
+      "dataset": "S3_sparse",
+      "seed": 98001,
+      "model_dir": "local_sync/fastlane_results/cpu1_pool.zjuici.com/results/formal24_v1/S3_sparse/final/CrossGB/s98001",
+      "data": "local_sync/fastlane_data/S3_sparse__s98001.npz",
+      "model_sha256": "9b36d054f37b2d831fae31407a3969468886839721ab630edfa2572723c3307f",
+      "prediction_archive_sha256": "f00a1272b1c8d2c0bfce3a84499824b69aafa0fc3da1c0ea6329fad60cb79130",
+      "data_sha256": "8e7e81a5155046ea477684644a694c60994f9f0e68aee1c1cf45c55dc4aff62b",
+      "tree_count": 1024,
+      "split_sizes": {
+        "train": 288,
+        "val": 96,
+        "test": 96
+      },
+      "split_indices_match": true,
+      "native_float32_max_abs_difference_vs_archived_predictions": {
+        "train": 0.0,
+        "val": 0.0,
+        "test": 0.0
+      },
+      "native_float32_exact_array_equality": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "float64_stored_diagnostic_max_abs_difference_vs_archived_predictions": {
+        "train": 8.109629641595006e-06,
+        "val": 6.243031085428896e-06,
+        "test": 5.428742921420593e-06
+      },
+      "native_stored_anchor_rmse": {
+        "train": 0.07794060182924456,
+        "val": 0.3776900862620406,
+        "test": 0.41182905065943093
+      },
+      "gate_passed": true
+    },
+    {
+      "dataset": "S3_sparse",
+      "seed": 98002,
+      "model_dir": "local_sync/fastlane_results/cpu1_pool.zjuici.com/results/formal24_v1/S3_sparse/final/CrossGB/s98002",
+      "data": "local_sync/fastlane_data/S3_sparse__s98002.npz",
+      "model_sha256": "5b403dcc4e00dc0cba681590ca9d4635ea818cc5ccbc826a6eb17c2ee4748ef8",
+      "prediction_archive_sha256": "b91b78ec85abc319fa5fa42635a7cd869742628cf4b9c9d90bedefacadbad63e",
+      "data_sha256": "081b2c2e03d21ba7cf857a8c6b30a132e6dc83f1d4751bc08c99cc76365d7026",
+      "tree_count": 1024,
+      "split_sizes": {
+        "train": 288,
+        "val": 96,
+        "test": 96
+      },
+      "split_indices_match": true,
+      "native_float32_max_abs_difference_vs_archived_predictions": {
+        "train": 0.0,
+        "val": 0.0,
+        "test": 0.0
+      },
+      "native_float32_exact_array_equality": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "float64_stored_diagnostic_max_abs_difference_vs_archived_predictions": {
+        "train": 6.020104013515493e-06,
+        "val": 5.317366608803553e-06,
+        "test": 6.908776128966565e-06
+      },
+      "native_stored_anchor_rmse": {
+        "train": 0.06489665951171016,
+        "val": 0.5054501002513114,
+        "test": 0.3123423561515843
+      },
+      "gate_passed": true
+    },
+    {
+      "dataset": "S3_sparse",
+      "seed": 98003,
+      "model_dir": "local_sync/fastlane_results/cpu1_pool.zjuici.com/results/formal24_v1/S3_sparse/final/CrossGB/s98003",
+      "data": "local_sync/fastlane_data/S3_sparse__s98003.npz",
+      "model_sha256": "ce498ed8e231d11dd4b37fc55677c49e0fcd635c09532372603b8dff0eba9a1a",
+      "prediction_archive_sha256": "e3c239cc758925bfd95b488529a28e38cdc735ccc295cbb5af829b8320cafc3f",
+      "data_sha256": "017b0f5ada9699979325b482e0e6d1f45ffbff9af7374bb379cab9ee87a3b065",
+      "tree_count": 1024,
+      "split_sizes": {
+        "train": 288,
+        "val": 96,
+        "test": 96
+      },
+      "split_indices_match": true,
+      "native_float32_max_abs_difference_vs_archived_predictions": {
+        "train": 0.0,
+        "val": 0.0,
+        "test": 0.0
+      },
+      "native_float32_exact_array_equality": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "float64_stored_diagnostic_max_abs_difference_vs_archived_predictions": {
+        "train": 7.77810276186841e-06,
+        "val": 3.815719085142888e-06,
+        "test": 7.207390961383453e-06
+      },
+      "native_stored_anchor_rmse": {
+        "train": 0.0804447626560429,
+        "val": 0.5046429046300185,
+        "test": 0.46309160415604844
+      },
+      "gate_passed": true
+    },
+    {
+      "dataset": "S3_sparse",
+      "seed": 98004,
+      "model_dir": "local_sync/fastlane_results/cpu1_pool.zjuici.com/results/formal24_v1/S3_sparse/final/CrossGB/s98004",
+      "data": "local_sync/fastlane_data/S3_sparse__s98004.npz",
+      "model_sha256": "8f47817f6cced43a9519baba2816c6a548a34279cc8486ffa237e288eb76fb7b",
+      "prediction_archive_sha256": "028ff989a1e33aadf77fec6e91d76207488d116090d092b7f3a6aed30f754ffd",
+      "data_sha256": "763ca7124979fb46fe8a5501b075cd1b2d2d557264f6ff6a4469aa214c6199c3",
+      "tree_count": 1024,
+      "split_sizes": {
+        "train": 288,
+        "val": 96,
+        "test": 96
+      },
+      "split_indices_match": true,
+      "native_float32_max_abs_difference_vs_archived_predictions": {
+        "train": 0.0,
+        "val": 0.0,
+        "test": 0.0
+      },
+      "native_float32_exact_array_equality": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "float64_stored_diagnostic_max_abs_difference_vs_archived_predictions": {
+        "train": 1.003796386811473e-05,
+        "val": 4.930936357006033e-06,
+        "test": 1.0535789363608217e-05
+      },
+      "native_stored_anchor_rmse": {
+        "train": 0.08487053623740574,
+        "val": 0.4138455636507658,
+        "test": 0.8243413191659971
+      },
+      "gate_passed": true
+    },
+    {
+      "dataset": "S3_sparse",
+      "seed": 98005,
+      "model_dir": "local_sync/fastlane_results/cpu1_pool.zjuici.com/results/formal24_v1/S3_sparse/final/CrossGB/s98005",
+      "data": "local_sync/fastlane_data/S3_sparse__s98005.npz",
+      "model_sha256": "3758357c4da63222f9309fa0e76ff539e83d1d3923b58129112743263f178751",
+      "prediction_archive_sha256": "eba485087a3eeda35803c98f65556fdb47fcffe70e3fe14bfab4df34697c28e5",
+      "data_sha256": "d7f98cb6d9b827236dbcfc3510777521cc3515a7b182787163c5bb4a1dd15432",
+      "tree_count": 1024,
+      "split_sizes": {
+        "train": 288,
+        "val": 96,
+        "test": 96
+      },
+      "split_indices_match": true,
+      "native_float32_max_abs_difference_vs_archived_predictions": {
+        "train": 0.0,
+        "val": 0.0,
+        "test": 0.0
+      },
+      "native_float32_exact_array_equality": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "float64_stored_diagnostic_max_abs_difference_vs_archived_predictions": {
+        "train": 7.165304335643441e-06,
+        "val": 1.058922388974537e-05,
+        "test": 5.041207213452026e-06
+      },
+      "native_stored_anchor_rmse": {
+        "train": 0.07765287864882964,
+        "val": 0.4321993752346929,
+        "test": 0.8660848068582798
+      },
+      "gate_passed": true
+    },
+    {
+      "dataset": "cpu_activity",
+      "seed": 98001,
+      "model_dir": "local_sync/fastlane_results/cpu_Calculator/results/quick_v1/cpu_activity/final/CrossGB/s98001",
+      "data": "local_sync/fastlane_data/cpu_activity__s98001.npz",
+      "model_sha256": "4ee6acebd3bfa9cef4c63f43ec50ca7910c82802805472a23b39ce5aed69b84a",
+      "prediction_archive_sha256": "0dd08b870c8a9b0bb23b6e5802b38a6df321718e654d09b0b01bebc2ea9cf9c7",
+      "data_sha256": "e65d8566055c6a16db6bf26f3ec46e16b3e066724b508b2320815a0c9783a76d",
+      "tree_count": 256,
+      "split_sizes": {
+        "train": 1800,
+        "val": 1639,
+        "test": 1639
+      },
+      "split_indices_match": true,
+      "native_float32_max_abs_difference_vs_archived_predictions": {
+        "train": 0.0,
+        "val": 0.0,
+        "test": 0.0
+      },
+      "native_float32_exact_array_equality": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "float64_stored_diagnostic_max_abs_difference_vs_archived_predictions": {
+        "train": 5.780781225261933e-06,
+        "val": 5.576479936486578e-06,
+        "test": 6.32329550320776e-06
+      },
+      "native_stored_anchor_rmse": {
+        "train": 0.12339684800303342,
+        "val": 0.22080505417498641,
+        "test": 0.17525324841404571
+      },
+      "gate_passed": true
+    },
+    {
+      "dataset": "protein",
+      "seed": 98001,
+      "model_dir": "local_sync/fastlane_results/cpu_Calculator/results/quick_v1/protein/final/CrossGB/s98001",
+      "data": "local_sync/fastlane_data/protein__s98001.npz",
+      "model_sha256": "7c20393e65a987d3e22ce3742179f007b4ae5bb9287bad7084c1a3a0845afcf5",
+      "prediction_archive_sha256": "d1a84e2582ed033d377ebf6bf0a3038d13e31a7e723abad62c303dc8dae062c8",
+      "data_sha256": "586be91a9e38ac2413c0f70f3510d4ccf43f7d4ba8bfc5121313302e2e2320f7",
+      "tree_count": 256,
+      "split_sizes": {
+        "train": 1800,
+        "val": 9146,
+        "test": 9146
+      },
+      "split_indices_match": true,
+      "native_float32_max_abs_difference_vs_archived_predictions": {
+        "train": 0.0,
+        "val": 0.0,
+        "test": 0.0
+      },
+      "native_float32_exact_array_equality": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "float64_stored_diagnostic_max_abs_difference_vs_archived_predictions": {
+        "train": 1.5861578663844966e-06,
+        "val": 1.3275247965349735e-06,
+        "test": 1.8229404439296104e-06
+      },
+      "native_stored_anchor_rmse": {
+        "train": 0.47746574919406326,
+        "val": 0.7440792990115183,
+        "test": 0.7357222018657243
+      },
+      "gate_passed": true
+    },
+    {
+      "dataset": "S1_sparse",
+      "seed": 98001,
+      "model_dir": "local_sync/fastlane_results/cpu4_pool.zjuici.com/results/formal24_v1/S1_sparse/final/CrossGB/s98001",
+      "data": "local_sync/fastlane_data/S1_sparse__s98001.npz",
+      "model_sha256": "a6f4214519c71f94da976c4316de6225e24ec8628f22e5f2ee1d54b46f486359",
+      "prediction_archive_sha256": "ab9fb1bcbde2b73865cdb71da09b4cd103173092c1df66feba44fa4e0da872eb",
+      "data_sha256": "017c9f00ee43bc169cbc30cd4ec1df980b778c66f3e9ba068ca1295a68ee7a29",
+      "tree_count": 2,
+      "split_sizes": {
+        "train": 144,
+        "val": 48,
+        "test": 48
+      },
+      "split_indices_match": true,
+      "native_float32_max_abs_difference_vs_archived_predictions": {
+        "train": 0.0,
+        "val": 0.0,
+        "test": 0.0
+      },
+      "native_float32_exact_array_equality": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "float64_stored_diagnostic_max_abs_difference_vs_archived_predictions": {
+        "train": 3.273214641552613e-07,
+        "val": 2.1665824956329516e-07,
+        "test": 2.42340528977536e-07
+      },
+      "native_stored_anchor_rmse": {
+        "train": 0.2715639546743925,
+        "val": 0.3867315821977515,
+        "test": 0.33754375955151444
+      },
+      "gate_passed": true
+    },
+    {
+      "dataset": "S2_sparse",
+      "seed": 98001,
+      "model_dir": "local_sync/fastlane_results/cpu2_pool.zjuici.com/results/formal24_v1/S2_sparse/final/CrossGB/s98001",
+      "data": "local_sync/fastlane_data/S2_sparse__s98001.npz",
+      "model_sha256": "4ca3ab90fcaabf0490469bc42ec1f07d6b44e988f90e9f6993e4f91f90cb9a4b",
+      "prediction_archive_sha256": "b654bf97fe1093813624931e35a847e331d78d373557d9ece3b0f6c5d39f813e",
+      "data_sha256": "38dc96409e271e0a1b1be05213d4e9621f0ae5bbdfd56db912de5ffc4faafe93",
+      "tree_count": 1024,
+      "split_sizes": {
+        "train": 288,
+        "val": 96,
+        "test": 96
+      },
+      "split_indices_match": true,
+      "native_float32_max_abs_difference_vs_archived_predictions": {
+        "train": 0.0,
+        "val": 0.0,
+        "test": 0.0
+      },
+      "native_float32_exact_array_equality": {
+        "train": true,
+        "val": true,
+        "test": true
+      },
+      "float64_stored_diagnostic_max_abs_difference_vs_archived_predictions": {
+        "train": 8.07498676635987e-06,
+        "val": 7.149198674838431e-06,
+        "test": 3.959755230376061e-06
+      },
+      "native_stored_anchor_rmse": {
+        "train": 0.04424446112505803,
+        "val": 0.6166888233209712,
+        "test": 0.5748313949626197
+      },
+      "gate_passed": true
+    }
+  ],
+  "limitations": [
+    "Archived S3 seeds 98004/98005 demonstrate the former arithmetic false rejection, but are not identified with current remote failed followup runs.",
+    "No native library loaded locally; archive comparisons establish exact replay of saved native predictions.",
+    "No capacity refits were rerun on archived datasets; existing deterministic capacity tests cover unchanged refit behavior."
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "status": "complete_verified",
+  "recorded_utc": "2026-10-28T05:53:01.851430+00:00",
+  "recorded_client_time": "2026-10-27T22:53:01.851430-07:00",
+  "S3_repaired_probes": 2,
+  "B1_new_development_fits": 30,
+  "B1_reused_development_fits": 210,
+  "B2_new_confirmation_fits": 35,
+  "C_new_confirmation_fits": 70,
+  "new_timing_fits": 21,
+  "new_model_fit_total": 156,
+  "all_new_model_fits_ok": true,
+  "new_confirmation_RMSE_values_recomputed": 315,
+  "new_confirmation_max_recompute_error": 0.0,
+  "N5_effective_reports": 35,
+  "N5_original_reports_including_degenerate_step": 36,
+  "N5_recomputed_RMSE_values": 756,
+  "real_timing_fits_verified": 60,
+  "C_completed_utc": "2026-10-28T05:45:09.996682+00:00",
+  "active_BC_jobs_on_seven_hosts": 0,
+  "hosts": [
+    {
+      "host": "cpu1_pool.zjuici.com",
+      "checked_utc": "2026-10-28T05:51:52.664669+00:00",
+      "active_BC_processes": []
+    },
+    {
+      "host": "cpu2_pool.zjuici.com",
+      "checked_utc": "2026-10-28T05:51:53.064704+00:00",
+      "active_BC_processes": []
+    },
+    {
+      "host": "cpu4_pool.zjuici.com",
+      "checked_utc": "2026-10-28T05:51:52.852811+00:00",
+      "active_BC_processes": []
+    },
+    {
+      "host": "cpu5_pool.zjuici.com",
+      "checked_utc": "2026-10-28T05:51:53.810556+00:00",
+      "active_BC_processes": []
+    },
+    {
+      "host": "cpu6_pool.zjuici.com",
+      "checked_utc": "2026-10-28T05:51:52.683651+00:00",
+      "active_BC_processes": []
+    },
+    {
+      "host": "cpu_Calculator",
+      "checked_utc": "2026-10-28T05:51:52.823866+00:00",
+      "active_BC_processes": []
+    },
+    {
+      "host": "TabularData_Processor",
+      "checked_utc": "2026-10-28T05:51:52.664876+00:00",
+      "active_BC_processes": []
+    }
+  ],
+  "limitations": [
+    "Lin matched20 slots contain16 unique recipes",
+    "S1 comparison is a narrow synthetic mechanism, native-vs-author-Python implementation time comparison",
+    "S1/S2 Lin inference faster",
+    "S2/S3 not stable accuracy wins over Lin",
+    "N5 fixed routes, not full native k>1 retraining",
+    "3–5 real datasets with full accuracy and train/inference advantage not achieved"
+  ]
+}

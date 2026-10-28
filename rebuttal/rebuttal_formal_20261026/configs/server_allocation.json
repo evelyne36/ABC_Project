@@ -1,0 +1,35 @@
+{
+  "workdir": "/home/admin/crossgb_rebuttal_20261026",
+  "resources_each": {
+    "cpu_affinity": 16,
+    "ram_gib_approx": 32
+  },
+  "status": "planned_assignment_environment_verified_gateway_recovery_pending",
+  "hosts": {
+    "cpu4_pool.zjuici.com": {
+      "primary": "CGB build + tiny checks + R0/E0 + LeafOnly + CPU/Kin selected diagnostics",
+      "initial_fit_workers": 4,
+      "expand_workers_after_memory_pilot": 8
+    },
+    "cpu2_pool.zjuici.com": {
+      "primary": "GBDT-PL build + four-method runtime pilot + GBDT-PL core panel",
+      "initial_fit_workers": 4,
+      "expand_workers_after_memory_pilot": 12
+    },
+    "cpu1_pool.zjuici.com": {
+      "primary": "LinXGBoost core panel after source/runtime validation",
+      "initial_fit_workers": 4,
+      "expand_workers_after_memory_pilot": 8
+    },
+    "cpu_Calculator": {
+      "primary": "TS persistence/Ridge first; PILOT/TAO supplementary coverage after P0 feasibility",
+      "initial_fit_workers": 1,
+      "expand_workers_after_memory_pilot": 8
+    },
+    "TabularData_Processor": {
+      "primary": "N3 equal wall-clock SEARCH budgets, exact native library/gate reused and checked",
+      "reserved_exclusive_cores": 4,
+      "other_training_during_N3": false
+    }
+  }
+}

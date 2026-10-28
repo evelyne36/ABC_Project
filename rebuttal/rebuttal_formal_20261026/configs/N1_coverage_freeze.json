@@ -1,0 +1,92 @@
+{
+  "artifact": "N1_coverage_freeze",
+  "generated_at": "2026-10-26T03:05+08:00",
+  "generated_by": "ds (DSH session), Linux execution",
+  "authority": "交接书「依据时间/内存/超时冻结可完成覆盖，写 configs/N1_coverage_freeze.json」；「候选减少或缺折必须披露，不能声称与旧 CGB 300 候选等预算」",
+  "principle": "每个方法/数据必须五折齐全才报五折均值；不允许把剩余候选冒称已搜索；不允许放宽容差或改 metagb_min_gain_to_split",
+  "methods": {
+    "gbdt_pl": {
+      "coverage": "full_frozen_pool",
+      "candidate_pool": "rebuttal_baselines_20261025/configs/gbdt_pl_300.json",
+      "candidate_count": 300,
+      "datasets": ["kin8nm", "regime_slope", "feature_switch", "curved_control", "cpu_activity"],
+      "outer_folds": 5,
+      "inner_folds": 4,
+      "fits_per_dataset": 6005,
+      "host": "cpu2_pool.zjuici.com",
+      "workers": 8,
+      "fit_timeout_sec": 600,
+      "output": "rebuttal_formal_20261026/results/N1/gbdt_pl/<dataset>",
+      "status": "running",
+      "measured_throughput": "1200 inner-fold fits (kin8nm outer1) in ~17 min at 8 workers",
+      "projected_wall": "~7 h for 5 datasets",
+      "disclosure": "完整 300 候选 × 5 数据 × 5 外折，与旧 CGB 300 候选等预算（候选数口径一致）"
+    },
+    "tao": {
+      "coverage": "full_frozen_pool",
+      "candidate_pool": "rebuttal_baselines_20261025/configs/tao_300.json",
+      "candidate_count": 300,
+      "datasets": ["kin8nm", "regime_slope", "feature_switch", "curved_control", "cpu_activity"],
+      "outer_folds": 5,
+      "inner_folds": 4,
+      "host": "cpu_Calculator",
+      "workers": 6,
+      "fit_timeout_sec": 600,
+      "output": "rebuttal_formal_20261026/results/N1/tao/<dataset>",
+      "status": "running",
+      "measured_throughput": "660 fits in ~4.5 min at 6 workers",
+      "disclosure": "完整 300 候选 × 5 数据 × 5 外折；TAO 按作者官方常数回归叶斜分裂版本，不补 2025 线性叶"
+    },
+    "linxgboost": {
+      "coverage": "frozen_reduced_pool_20_of_300",
+      "candidate_pool": "rebuttal_baselines_20261025/configs/linxgboost_frozen20.json",
+      "candidate_pool_source": "rebuttal_baselines_20261025/configs/linxgboost_300.json",
+      "subset_rule": "every 15th candidate of the frozen 300 order (0-based indices 0,15,...,285 => candidate ids 1,16,...,286)",
+      "candidate_count": 20,
+      "datasets": ["cpu_activity", "regime_slope", "kin8nm", "curved_control", "feature_switch"],
+      "outer_folds": 5,
+      "inner_folds": 4,
+      "hosts": {
+        "cpu1_pool.zjuici.com": ["cpu_activity", "regime_slope"],
+        "cpu4_pool.zjuici.com": ["kin8nm", "curved_control"],
+        "pending_assignment": ["feature_switch"]
+      },
+      "workers_per_host": 12,
+      "fit_timeout_sec": 600,
+      "output": "rebuttal_formal_20261026/results/N1/linxgboost_frozen20/<dataset>",
+      "status": "running",
+      "evidence_for_reduction": {
+        "measured_single_fit": {
+          "candidate_id": 1,
+          "params": {"n_estimators": 5, "learning_rate": 0.3, "max_depth": 6, "lbda": 0.0, "min_samples_leaf": 2},
+          "dataset": "kin8nm",
+          "outer_fold": 1,
+          "inner_fold": 1,
+          "train_rows": 4914,
+          "feature_count": 8,
+          "fit_wall_sec": 389.59678319298837,
+          "artifact": "rebuttal_formal_20261026/results/N1/linxgboost_300abort_evidence/kin8nm/outer1/candidate0001_inner1/"
+        },
+        "measured_throughput": "8 workers -> 12 completed inner fits in ~10 min (cpu1)",
+        "projected_full_protocol": "30025 fits x 389.6 s ~ 903 core-hours ~ 56 h on 16 cores for a single average-cost estimate; the real pool contains configs up to 100 trees x depth 6 (6300 node-visits vs 315 for candidate 1), so the full 300-candidate x 5 dataset x 5 fold protocol is several months of this box",
+        "root_cause": "author implementation vendor/linxgboost/.../node.py find_best_split enumerates every distinct value of every feature as a split candidate (var = np.unique(X[:,f]); mid_var) and calls get_weight -> np.linalg.cond + cholesky + two solves per candidate, i.e. thousands of SVDs per node; cost ~ n_unique * n_features * nodes(depth) * n_estimators",
+        "aborted_run": "results/N1/linxgboost_300abort_evidence (300-candidate attempt, stopped after 12 fits; kept as evidence, NOT used for any reported number)"
+      },
+      "disclosure": "LinXGBoost 的搜索预算为 CGB 的 1/15（20 vs 300 候选），因此其精度只作指示性参考，不作等预算结论；本方法真正可报道的结论是单 fit 成本（同 600 s 超时下的完成率与耗时），而非其最优精度。任何表格必须同时标注候选预算差异。",
+      "expected_censoring": "20 候选中 n_estimators=100 x max_depth=6（6300 node-visits）与 20 x depth 6（1260）在 600 s 超时下可能被截断；截断按 fold 记录，不填充、不外推"
+    },
+    "pilot": {
+      "coverage": "pending_measurement",
+      "candidate_pool": "rebuttal_baselines_20261025/configs/pilot_300.json",
+      "candidate_count": 300,
+      "note": "16-fit 测速显示 pilot 单 fit 20.9-27.5 s（candidate 1）；300 候选 x 5 数据 x 5 折 = 30025 fits 在 12 workers 下约 12-14 h，需在 TAO 结束后于 cpu_Calculator 串行安排；若时间不足则按同一冻结规则降采样并在此文件记录",
+      "status": "pending"
+    }
+  },
+  "rules_honored": [
+    "不改变 metagb_min_gain_to_split 默认 -1e10",
+    "不限宽容差；R0 gate 已 28/28 通过（max abs diff 2.94e-08）后才允许拼新旧表",
+    "三个 seed 不构成强显著性；15 个相关外折不当作 15 次独立重复",
+    "缺折或缺候选必须在结果表与回复正文中显式披露"
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "status": "pass",
+  "packages": 8,
+  "checks": [
+    {
+      "dataset": "residential_cost__s112001",
+      "status": "pass",
+      "worker_search_load": true,
+      "groups_disjoint": true,
+      "train_only_standardization": true,
+      "shared_outer_test_hash": "45c26dd230cd2e8c18026f99abff9052c27282a7ae37f8aedacdfbc6a8edd849",
+      "cross_split_duplicate_predictor_keys": 0,
+      "split_sizes": {
+        "train": 226,
+        "val": 73,
+        "test": 73
+      }
+    },
+    {
+      "dataset": "residential_cost__s112002",
+      "status": "pass",
+      "worker_search_load": true,
+      "groups_disjoint": true,
+      "train_only_standardization": true,
+      "shared_outer_test_hash": "45c26dd230cd2e8c18026f99abff9052c27282a7ae37f8aedacdfbc6a8edd849",
+      "cross_split_duplicate_predictor_keys": 0,
+      "split_sizes": {
+        "train": 226,
+        "val": 73,
+        "test": 73
+      }
+    },
+    {
+      "dataset": "communities_crime__s112001",
+      "status": "pass",
+      "worker_search_load": true,
+      "groups_disjoint": true,
+      "train_only_standardization": true,
+      "shared_outer_test_hash": "49329f24e2caec76ebfad41181e72a0b027f69cea217d849bec5aefbfaa2d3b2",
+      "cross_split_duplicate_predictor_keys": 0,
+      "split_sizes": {
+        "train": 600,
+        "val": 805,
+        "test": 307
+      }
+    },
+    {
+      "dataset": "communities_crime__s112002",
+      "status": "pass",
+      "worker_search_load": true,
+      "groups_disjoint": true,
+      "train_only_standardization": true,
+      "shared_outer_test_hash": "49329f24e2caec76ebfad41181e72a0b027f69cea217d849bec5aefbfaa2d3b2",
+      "cross_split_duplicate_predictor_keys": 0,
+      "split_sizes": {
+        "train": 600,
+        "val": 386,
+        "test": 307
+      }
+    },
+    {
+      "dataset": "parkinson_motor__s112001",
+      "status": "pass",
+      "worker_search_load": true,
+      "groups_disjoint": true,
+      "train_only_standardization": true,
+      "shared_outer_test_hash": "16545d34d93ef155309766a43fda90a145c97001d96d971033d2748998e786f1",
+      "cross_split_duplicate_predictor_keys": 0,
+      "split_sizes": {
+        "train": 600,
+        "val": 1266,
+        "test": 1256
+      }
+    },
+    {
+      "dataset": "parkinson_motor__s112002",
+      "status": "pass",
+      "worker_search_load": true,
+      "groups_disjoint": true,
+      "train_only_standardization": true,
+      "shared_outer_test_hash": "16545d34d93ef155309766a43fda90a145c97001d96d971033d2748998e786f1",
+      "cross_split_duplicate_predictor_keys": 0,
+      "split_sizes": {
+        "train": 600,
+        "val": 1219,
+        "test": 1256
+      }
+    },
+    {
+      "dataset": "gas_turbine_nox__s112001",
+      "status": "pass",
+      "worker_search_load": true,
+      "groups_disjoint": true,
+      "train_only_standardization": true,
+      "shared_outer_test_hash": "585c47f6c9d4ada0ca0bab85cceacde63d08d2187454b5861fe8e38637bdab1f",
+      "cross_split_duplicate_predictor_keys": 0,
+      "split_sizes": {
+        "train": 600,
+        "val": 7152,
+        "test": 14542
+      }
+    },
+    {
+      "dataset": "gas_turbine_nox__s112002",
+      "status": "pass",
+      "worker_search_load": true,
+      "groups_disjoint": true,
+      "train_only_standardization": true,
+      "shared_outer_test_hash": "585c47f6c9d4ada0ca0bab85cceacde63d08d2187454b5861fe8e38637bdab1f",
+      "cross_split_duplicate_predictor_keys": 0,
+      "split_sizes": {
+        "train": 600,
+        "val": 7152,
+        "test": 14542
+      }
+    }
+  ],
+  "test_target_member_reads": 0,
+  "combined_y_member_exists": false,
+  "model_fits": 0,
+  "test_evaluations": 0,
+  "reserved_confirm_not_materialized": true,
+  "worker_sha256": "d2e2743d38c80b4d82b9bfb5e4a04aa1a88be952603460fad86f0e9fcb747e2a",
+  "read_member_names": [
+    "X",
+    "groups",
+    "task_type",
+    "test",
+    "train",
+    "train_uncapped",
+    "val",
+    "y_train",
+    "y_val"
+  ]
+}

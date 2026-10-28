@@ -1,0 +1,32 @@
+{
+  "kind": "capacity",
+  "host": "cpu2_pool.zjuici.com",
+  "batch_budget_seconds": 1800,
+  "frozen_utc": "2026-10-27T19:40:04.672406+00:00",
+  "cases": {
+    "protein": {
+      "params": {
+        "depth": 5,
+        "learning_rate": 0.05,
+        "p": 1.0,
+        "ridge": 10.0,
+        "trees": 256
+      },
+      "seeds": [
+        98002,
+        98003,
+        98004,
+        98005
+      ],
+      "source": "local_sync/fastlane_results/cpu_Calculator/results/quick_v1/protein/final/CrossGB/s98001/result.json"
+    }
+  },
+  "test_selection": false,
+  "scope": "Repeated fixed recipes on existing confirmation splits; diagnostic, not fresh test confirmation; no search",
+  "data_sha256": {
+    "protein__s98002.npz": "b6c9ea81190bb6ed567c8e9c971ed389254dadbdd1341b13ec9efcfb883b4e2d",
+    "protein__s98003.npz": "48ccf9cb59ea7bb2b535ec5cbf3a960a0f48daee61c925ced800499db8451970",
+    "protein__s98004.npz": "2e6f7d67566004d3849cab8ea402943bed7722df770430ac76dfc2fd02eeaf14",
+    "protein__s98005.npz": "1c056d52dc97dfe4a677b7b85313017d7e97883f2f48769f0ef9af3cee138eff"
+  }
+}

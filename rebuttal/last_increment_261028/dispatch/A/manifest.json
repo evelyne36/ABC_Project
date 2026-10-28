@@ -1,0 +1,26 @@
+{
+  "hosts": {
+    "cpu_activity": "cpu1_pool.zjuici.com",
+    "protein": "cpu2_pool.zjuici.com",
+    "S1_sparse": "cpu4_pool.zjuici.com",
+    "S1_dense": "cpu5_pool.zjuici.com",
+    "S3_sparse": "cpu_Calculator"
+  },
+  "anchor_count": 25,
+  "capacities": [
+    1,
+    2,
+    3,
+    "all"
+  ],
+  "multipliers": [
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "refit_count": 400,
+  "test_sealed_until_global_choices_freeze": true,
+  "scope": "posthoc ridge sensitivity on historical routes/repeats",
+  "frozen_utc": "2026-10-28T10:12:22.234294+00:00"
+}

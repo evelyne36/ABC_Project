@@ -1,0 +1,1090 @@
+{
+  "stage": "hpo",
+  "host": "cpu4_pool.zjuici.com",
+  "core_slot": 2,
+  "worker_sha256": "d2e2743d38c80b4d82b9bfb5e4a04aa1a88be952603460fad86f0e9fcb747e2a",
+  "wall_budget_seconds": 1800,
+  "data_sha256": {
+    "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz": "2ed637e0dd63b9b870d5b77f221365615246b14527c08b1372e8b7d47506c594",
+    "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz": "54d7d25d7315fc6ee4ea65ab8afd81d8a7e9cf545204a66676fa1ed12226f49d",
+    "advantage_inputs/real/gas_turbine_nox__s112001.npz": "8ec135c3949a505ddd24fef0ccbf250013999e38a40df7ca1b51054d0aa4cabb",
+    "advantage_inputs/real/gas_turbine_nox__s112002.npz": "b68349fa9d59b9a42b0c6683e32cee77bf26d4905a105d1b029779717d4b40ed"
+  },
+  "jobs": [
+    {
+      "id": "A06_two_sparse_modules/XGB/c04/s110001",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "XGB",
+      "candidate": 4,
+      "seed": 110001,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 1,
+        "learning_rate": 1.0,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/XGB/c04/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/PL/c04/s110002",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "PL",
+      "candidate": 4,
+      "seed": 110002,
+      "params": {
+        "num_trees": 16,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 10.0,
+        "max_var": 1,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.3
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/PL/c04/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_constant/c05/s110001",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "LGB_constant",
+      "candidate": 5,
+      "seed": 110001,
+      "params": {
+        "depth": 2,
+        "ridge": 2.0,
+        "trees": 1,
+        "learning_rate": 1.0,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_constant/c05/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/LinXGBoost/c05/s110002",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "LinXGBoost",
+      "candidate": 5,
+      "seed": 110002,
+      "params": {
+        "n_estimators": 1,
+        "max_depth": 2,
+        "lbda": 10.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LinXGBoost/c05/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_linear/c06/s110001",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "LGB_linear",
+      "candidate": 6,
+      "seed": 110001,
+      "params": {
+        "depth": 3,
+        "ridge": 10.0,
+        "trees": 16,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_linear/c06/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/CrossGB/c07/s110002",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "CrossGB",
+      "candidate": 7,
+      "seed": 110002,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 1,
+        "learning_rate": 1.0,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/CrossGB/c07/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/PL/c07/s110001",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "PL",
+      "candidate": 7,
+      "seed": 110001,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 1.0,
+        "max_var": 5,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/PL/c07/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/XGB/c08/s110002",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "XGB",
+      "candidate": 8,
+      "seed": 110002,
+      "params": {
+        "depth": 3,
+        "ridge": 0.1,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/XGB/c08/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/LinXGBoost/c08/s110001",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "LinXGBoost",
+      "candidate": 8,
+      "seed": 110001,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LinXGBoost/c08/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_constant/c09/s110002",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "LGB_constant",
+      "candidate": 9,
+      "seed": 110002,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 1024,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_constant/c09/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/CrossGB/c10/s110001",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "CrossGB",
+      "candidate": 10,
+      "seed": 110001,
+      "params": {
+        "depth": 4,
+        "ridge": 1.0,
+        "trees": 64,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/CrossGB/c10/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_linear/c10/s110002",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 110002,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_linear/c10/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/XGB/c11/s110001",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "XGB",
+      "candidate": 11,
+      "seed": 110001,
+      "params": {
+        "depth": 3,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/XGB/c11/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/PL/c11/s110002",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "PL",
+      "candidate": 11,
+      "seed": 110002,
+      "params": {
+        "num_trees": 256,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 0.1,
+        "max_var": 5,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.05
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/PL/c11/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_constant/c12/s110001",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "LGB_constant",
+      "candidate": 12,
+      "seed": 110001,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_constant/c12/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/LinXGBoost/c12/s110002",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "LinXGBoost",
+      "candidate": 12,
+      "seed": 110002,
+      "params": {
+        "n_estimators": 4,
+        "max_depth": 2,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LinXGBoost/c12/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_linear/c13/s110001",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "LGB_linear",
+      "candidate": 13,
+      "seed": 110001,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 512,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_linear/c13/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/CrossGB/c14/s110002",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "CrossGB",
+      "candidate": 14,
+      "seed": 110002,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/CrossGB/c14/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/PL/c14/s110001",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "PL",
+      "candidate": 14,
+      "seed": 110001,
+      "params": {
+        "num_trees": 256,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 10.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/PL/c14/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/XGB/c15/s110002",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "XGB",
+      "candidate": 15,
+      "seed": 110002,
+      "params": {
+        "depth": 2,
+        "ridge": 100.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/XGB/c15/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/LinXGBoost/c15/s110001",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "LinXGBoost",
+      "candidate": 15,
+      "seed": 110001,
+      "params": {
+        "n_estimators": 8,
+        "max_depth": 2,
+        "lbda": 100.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.2
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LinXGBoost/c15/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_constant/c16/s110002",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "LGB_constant",
+      "candidate": 16,
+      "seed": 110002,
+      "params": {
+        "depth": 4,
+        "ridge": 100.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_constant/c16/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/CrossGB/c17/s110001",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "CrossGB",
+      "candidate": 17,
+      "seed": 110001,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 512,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/CrossGB/c17/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_linear/c17/s110002",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "LGB_linear",
+      "candidate": 17,
+      "seed": 110002,
+      "params": {
+        "depth": 3,
+        "ridge": 0.01,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_linear/c17/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/XGB/c18/s110001",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "XGB",
+      "candidate": 18,
+      "seed": 110001,
+      "params": {
+        "depth": 5,
+        "ridge": 10.0,
+        "trees": 512,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/XGB/c18/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/PL/c18/s110002",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "PL",
+      "candidate": 18,
+      "seed": 110002,
+      "params": {
+        "num_trees": 128,
+        "max_depth": 5,
+        "num_leaves": 32,
+        "l2_reg": 1.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/PL/c18/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/LGB_constant/c19/s110001",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "LGB_constant",
+      "candidate": 19,
+      "seed": 110001,
+      "params": {
+        "depth": 2,
+        "ridge": 1.0,
+        "trees": 1024,
+        "learning_rate": 0.03,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110001.npz",
+      "relative_output": "A06_two_sparse_modules/LGB_constant/c19/s110001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "A06_two_sparse_modules/LinXGBoost/c19/s110002",
+      "case": "A06_two_sparse_modules",
+      "kind": "synthetic",
+      "method": "LinXGBoost",
+      "candidate": 19,
+      "seed": 110002,
+      "params": {
+        "n_estimators": 16,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.2
+      },
+      "data": "advantage_inputs/synthetic/A06_two_sparse_modules__s110002.npz",
+      "relative_output": "A06_two_sparse_modules/LinXGBoost/c19/s110002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/LGB_linear/c04/s112001",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LGB_linear",
+      "candidate": 4,
+      "seed": 112001,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 64,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112001.npz",
+      "relative_output": "gas_turbine_nox/LGB_linear/c04/s112001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/CrossGB/c05/s112002",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "CrossGB",
+      "candidate": 5,
+      "seed": 112002,
+      "params": {
+        "depth": 3,
+        "ridge": 10.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 0.5
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112002.npz",
+      "relative_output": "gas_turbine_nox/CrossGB/c05/s112002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/PL/c05/s112001",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "PL",
+      "candidate": 5,
+      "seed": 112001,
+      "params": {
+        "num_trees": 256,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 0.1,
+        "max_var": 3,
+        "leaf_type": "linear",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 0.05
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112001.npz",
+      "relative_output": "gas_turbine_nox/PL/c05/s112001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/XGB/c06/s112002",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "XGB",
+      "candidate": 6,
+      "seed": 112002,
+      "params": {
+        "depth": 4,
+        "ridge": 1.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112002.npz",
+      "relative_output": "gas_turbine_nox/XGB/c06/s112002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/LinXGBoost/c06/s112001",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LinXGBoost",
+      "candidate": 6,
+      "seed": 112001,
+      "params": {
+        "n_estimators": 1,
+        "max_depth": 2,
+        "lbda": 100.0,
+        "min_samples_leaf": 10,
+        "learning_rate": 1.0
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112001.npz",
+      "relative_output": "gas_turbine_nox/LinXGBoost/c06/s112001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/LGB_constant/c07/s112002",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LGB_constant",
+      "candidate": 7,
+      "seed": 112002,
+      "params": {
+        "depth": 3,
+        "ridge": 0.1,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112002.npz",
+      "relative_output": "gas_turbine_nox/LGB_constant/c07/s112002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/CrossGB/c08/s112001",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "CrossGB",
+      "candidate": 8,
+      "seed": 112001,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112001.npz",
+      "relative_output": "gas_turbine_nox/CrossGB/c08/s112001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/LGB_linear/c08/s112002",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LGB_linear",
+      "candidate": 8,
+      "seed": 112002,
+      "params": {
+        "depth": 5,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112002.npz",
+      "relative_output": "gas_turbine_nox/LGB_linear/c08/s112002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/XGB/c09/s112001",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "XGB",
+      "candidate": 9,
+      "seed": 112001,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112001.npz",
+      "relative_output": "gas_turbine_nox/XGB/c09/s112001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/PL/c09/s112002",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "PL",
+      "candidate": 9,
+      "seed": 112002,
+      "params": {
+        "num_trees": 128,
+        "max_depth": 4,
+        "num_leaves": 16,
+        "l2_reg": 1.0,
+        "max_var": 5,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112002.npz",
+      "relative_output": "gas_turbine_nox/PL/c09/s112002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/LGB_constant/c10/s112001",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LGB_constant",
+      "candidate": 10,
+      "seed": 112001,
+      "params": {
+        "depth": 3,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112001.npz",
+      "relative_output": "gas_turbine_nox/LGB_constant/c10/s112001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/LinXGBoost/c10/s112002",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LinXGBoost",
+      "candidate": 10,
+      "seed": 112002,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 2,
+        "lbda": 100.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112002.npz",
+      "relative_output": "gas_turbine_nox/LinXGBoost/c10/s112002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/LGB_linear/c11/s112001",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LGB_linear",
+      "candidate": 11,
+      "seed": 112001,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112001.npz",
+      "relative_output": "gas_turbine_nox/LGB_linear/c11/s112001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/CrossGB/c12/s112002",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "CrossGB",
+      "candidate": 12,
+      "seed": 112002,
+      "params": {
+        "depth": 3,
+        "ridge": 100.0,
+        "trees": 512,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112002.npz",
+      "relative_output": "gas_turbine_nox/CrossGB/c12/s112002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/PL/c12/s112001",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "PL",
+      "candidate": 12,
+      "seed": 112001,
+      "params": {
+        "num_trees": 512,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 100.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.05
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112001.npz",
+      "relative_output": "gas_turbine_nox/PL/c12/s112001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/XGB/c13/s112002",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "XGB",
+      "candidate": 13,
+      "seed": 112002,
+      "params": {
+        "depth": 5,
+        "ridge": 1.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112002.npz",
+      "relative_output": "gas_turbine_nox/XGB/c13/s112002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/LinXGBoost/c13/s112001",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LinXGBoost",
+      "candidate": 13,
+      "seed": 112001,
+      "params": {
+        "n_estimators": 8,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.2
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112001.npz",
+      "relative_output": "gas_turbine_nox/LinXGBoost/c13/s112001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/LGB_constant/c14/s112002",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LGB_constant",
+      "candidate": 14,
+      "seed": 112002,
+      "params": {
+        "depth": 2,
+        "ridge": 100.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112002.npz",
+      "relative_output": "gas_turbine_nox/LGB_constant/c14/s112002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/CrossGB/c15/s112001",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "CrossGB",
+      "candidate": 15,
+      "seed": 112001,
+      "params": {
+        "depth": 3,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112001.npz",
+      "relative_output": "gas_turbine_nox/CrossGB/c15/s112001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/LGB_linear/c15/s112002",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LGB_linear",
+      "candidate": 15,
+      "seed": 112002,
+      "params": {
+        "depth": 4,
+        "ridge": 100.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112002.npz",
+      "relative_output": "gas_turbine_nox/LGB_linear/c15/s112002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/XGB/c16/s112001",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "XGB",
+      "candidate": 16,
+      "seed": 112001,
+      "params": {
+        "depth": 3,
+        "ridge": 0.01,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112001.npz",
+      "relative_output": "gas_turbine_nox/XGB/c16/s112001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/PL/c16/s112002",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "PL",
+      "candidate": 16,
+      "seed": 112002,
+      "params": {
+        "num_trees": 128,
+        "max_depth": 4,
+        "num_leaves": 16,
+        "l2_reg": 10.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 0.1
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112002.npz",
+      "relative_output": "gas_turbine_nox/PL/c16/s112002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/LGB_constant/c17/s112001",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LGB_constant",
+      "candidate": 17,
+      "seed": 112001,
+      "params": {
+        "depth": 5,
+        "ridge": 10.0,
+        "trees": 512,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112001.npz",
+      "relative_output": "gas_turbine_nox/LGB_constant/c17/s112001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/LinXGBoost/c17/s112002",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 112002,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112002.npz",
+      "relative_output": "gas_turbine_nox/LinXGBoost/c17/s112002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/LGB_linear/c18/s112001",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LGB_linear",
+      "candidate": 18,
+      "seed": 112001,
+      "params": {
+        "depth": 2,
+        "ridge": 1.0,
+        "trees": 1024,
+        "learning_rate": 0.03,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112001.npz",
+      "relative_output": "gas_turbine_nox/LGB_linear/c18/s112001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/CrossGB/c19/s112002",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "CrossGB",
+      "candidate": 19,
+      "seed": 112002,
+      "params": {
+        "depth": 2,
+        "ridge": 100.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112002.npz",
+      "relative_output": "gas_turbine_nox/CrossGB/c19/s112002",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "gas_turbine_nox/PL/c19/s112001",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "PL",
+      "candidate": 19,
+      "seed": 112001,
+      "params": {
+        "num_trees": 128,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 100.0,
+        "max_var": 5,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 0.1
+      },
+      "data": "advantage_inputs/real/gas_turbine_nox__s112001.npz",
+      "relative_output": "gas_turbine_nox/PL/c19/s112001",
+      "evaluate_test": false,
+      "timeout_seconds": 180
+    }
+  ]
+}

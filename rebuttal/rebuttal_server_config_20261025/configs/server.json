@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "status": "configuration_only_not_server_tested",
+  "execution_location": "Linux server only; no local fit/build/install",
+  "project_root": ".",
+  "output_root": "rebuttal_server_runs",
+  "requested_resources": {
+    "cpu_cores": 32,
+    "ram_gb": 64,
+    "gpu": 0,
+    "free_disk_gb_recommended": 50,
+    "architecture_preferred": "x86_64"
+  },
+  "scheduling": {
+    "initial_workers": 4,
+    "normal_workers": 16,
+    "max_workers": 24,
+    "model_threads": 1,
+    "rss_soft_limit_gb": 48,
+    "memory_rule": "reduce_workers_if_sum_peak_RSS_exceeds_48GB",
+    "cv_parallelism": 1,
+    "timing_calibration": "separate_serial_reference_queue"
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "python": {
+    "preferred": "3.13.x",
+    "historical": "3.13.14",
+    "fallback": "3.12.x_record_as_cross_environment",
+    "install_pypi_xgboost": false
+  },
+  "native": {
+    "source_project_relative": "aaai_FullCodeProject-check_codereview0701/project_paperwriting/vendor/xgboost-metagb",
+    "expected_historical_updater_sha256": "30081ac7e9e61e741add7a32f207f712ad16168b46b5dc3d91abb0b9d2589442",
+    "historical_runtime_root": "rebuttal_server_runs/native/historical",
+    "controlled_runtime_root": "rebuttal_server_runs/native/controlled",
+    "build_options": {
+      "CMAKE_BUILD_TYPE": "Release",
+      "USE_CUDA": "OFF",
+      "USE_OPENMP": "ON",
+      "GOOGLE_TEST": "OFF"
+    },
+    "same_code_modified_tree": "never edit archival source in place"
+  },
+  "external_baselines": [
+    {
+      "name": "GBDT-PL",
+      "repository": "https://github.com/GBDT-PL/GBDT-PL.git",
+      "commit": null,
+      "status": "download_and_record_commit_on_server",
+      "integration_time_limit_hours": 4
+    },
+    {
+      "name": "LinXGBoost",
+      "repository": "https://github.com/ldv1/LinXGBoost.git",
+      "commit": null,
+      "status": "download_and_record_commit_on_server",
+      "integration_time_limit_hours": 4
+    }
+  ]
+}

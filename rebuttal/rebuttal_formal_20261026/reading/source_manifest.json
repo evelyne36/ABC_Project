@@ -1,0 +1,18 @@
+[
+  {
+    "version": "v1",
+    "source": "myself-reviewer原生-CrossGB_AAAI2027_Rebuttal_提分执行规划.docx",
+    "sha256": "91034a829b336d8bc94a8369a14e82e41a91e4051e8f72b96ae60110bc76cd5b",
+    "extracted": "rebuttal_formal_20261026/reading/myself_v1.txt",
+    "lines": 186,
+    "characters": 8255
+  },
+  {
+    "version": "v2",
+    "source": "myself-CrossGB_AAAI2027_Rebuttal_提分指南_V2_正文附录联合审计.docx",
+    "sha256": "22c02b6a26781a55faaee21e54c95bc7e74a6231cd54f9d9098bb368f4d48d0d",
+    "extracted": "rebuttal_formal_20261026/reading/myself_v2.txt",
+    "lines": 243,
+    "characters": 14663
+  }
+]

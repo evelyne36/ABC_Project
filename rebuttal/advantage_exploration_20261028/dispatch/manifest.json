@@ -1,0 +1,103 @@
+{
+  "lanes": [
+    {
+      "host": "cpu1_pool.zjuici.com",
+      "lane": 0,
+      "kind": "synthetic",
+      "case": "A01_s1_n120_d32",
+      "plan": "cpu1_pool.zjuici.com_w0.json",
+      "jobs": 48
+    },
+    {
+      "host": "cpu1_pool.zjuici.com",
+      "lane": 1,
+      "kind": "synthetic",
+      "case": "A08_intercept_control",
+      "plan": "cpu1_pool.zjuici.com_w1.json",
+      "jobs": 48
+    },
+    {
+      "host": "cpu2_pool.zjuici.com",
+      "lane": 0,
+      "kind": "synthetic",
+      "case": "A02_s1_n240_d8",
+      "plan": "cpu2_pool.zjuici.com_w0.json",
+      "jobs": 48
+    },
+    {
+      "host": "cpu2_pool.zjuici.com",
+      "lane": 1,
+      "kind": "real",
+      "case": "residential_cost",
+      "plan": "cpu2_pool.zjuici.com_w1.json",
+      "jobs": 48
+    },
+    {
+      "host": "cpu4_pool.zjuici.com",
+      "lane": 0,
+      "kind": "synthetic",
+      "case": "A03_s1_n240_d64",
+      "plan": "cpu4_pool.zjuici.com_w0.json",
+      "jobs": 48
+    },
+    {
+      "host": "cpu4_pool.zjuici.com",
+      "lane": 1,
+      "kind": "real",
+      "case": "communities_crime",
+      "plan": "cpu4_pool.zjuici.com_w1.json",
+      "jobs": 48
+    },
+    {
+      "host": "cpu5_pool.zjuici.com",
+      "lane": 0,
+      "kind": "synthetic",
+      "case": "A04_imbalanced_gate",
+      "plan": "cpu5_pool.zjuici.com_w0.json",
+      "jobs": 48
+    },
+    {
+      "host": "cpu5_pool.zjuici.com",
+      "lane": 1,
+      "kind": "real",
+      "case": "parkinson_motor",
+      "plan": "cpu5_pool.zjuici.com_w1.json",
+      "jobs": 48
+    },
+    {
+      "host": "cpu6_pool.zjuici.com",
+      "lane": 0,
+      "kind": "synthetic",
+      "case": "A05_predictor_switch",
+      "plan": "cpu6_pool.zjuici.com_w0.json",
+      "jobs": 48
+    },
+    {
+      "host": "cpu6_pool.zjuici.com",
+      "lane": 1,
+      "kind": "real",
+      "case": "gas_turbine_nox",
+      "plan": "cpu6_pool.zjuici.com_w1.json",
+      "jobs": 48
+    },
+    {
+      "host": "cpu_Calculator",
+      "lane": 0,
+      "kind": "synthetic",
+      "case": "A06_two_sparse_modules",
+      "plan": "cpu_Calculator_w0.json",
+      "jobs": 48
+    },
+    {
+      "host": "TabularData_Processor",
+      "lane": 0,
+      "kind": "synthetic",
+      "case": "A07_dense_control",
+      "plan": "TabularData_Processor_w0.json",
+      "jobs": 48
+    }
+  ],
+  "total_jobs": 576,
+  "host_count": 7,
+  "candidate_pool_sha256": "903fe344ee8d8b80286322b691f893b4a5a9ff2b604caa3f8105dc2e984c593e"
+}

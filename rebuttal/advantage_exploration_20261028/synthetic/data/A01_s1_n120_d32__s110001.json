@@ -1,0 +1,143 @@
+{
+  "seed": 110001,
+  "phase": "development",
+  "task_type": "regression",
+  "family": "A01_s1_n120_d32",
+  "case": "A01_s1_n120_d32",
+  "control": "sparse",
+  "source": "independent standard Normal coordinates; fresh versioned data seeds",
+  "source_version": "cgb-advantage-synthetic-v1-20261028",
+  "formula": "f(X)=2 sign(x0) x1; y=f(X)+epsilon",
+  "case_definition": {
+    "case": "A01_s1_n120_d32",
+    "n": 120,
+    "d": 32,
+    "kind": "sparse",
+    "formula": "f(X)=2 sign(x0) x1",
+    "axis": "small sample size",
+    "pair_group": "n120_d32",
+    "gate_features": [
+      0
+    ],
+    "predictive_by_region": {
+      "0": [
+        1
+      ],
+      "1": [
+        1
+      ]
+    }
+  },
+  "noise_sd": 0.3,
+  "feature_names": [
+    "x0",
+    "x1",
+    "x2",
+    "x3",
+    "x4",
+    "x5",
+    "x6",
+    "x7",
+    "x8",
+    "x9",
+    "x10",
+    "x11",
+    "x12",
+    "x13",
+    "x14",
+    "x15",
+    "x16",
+    "x17",
+    "x18",
+    "x19",
+    "x20",
+    "x21",
+    "x22",
+    "x23",
+    "x24",
+    "x25",
+    "x26",
+    "x27",
+    "x28",
+    "x29",
+    "x30",
+    "x31"
+  ],
+  "population_signal_L2": 2.0,
+  "population_signal_mean": 0.0,
+  "population_signal_variance": 4.0,
+  "preprocessing": {
+    "X": "none; all coordinates population N(0,1)",
+    "y": "none; analytic population scaling only"
+  },
+  "matching": {
+    "pair_group": "n120_d32",
+    "X_sha256": "7fe74b53ae4137c65894a516e1c5ecfa6e3e24d74e4f55eaddf52b6e9d2484f5",
+    "eps_sha256": "2543af45bbd7c08ec3ffebb6ad6b12362080ae49f17e46383884696aec7cdd26",
+    "shared_latent_base": "same seed shares 480x64 master X and independent 480-vector noise; subsets by n,d"
+  },
+  "split_protocol": "seeded row random 60/20/20; source fastlane random_split unchanged",
+  "oracle_support": {
+    "gate_features": [
+      0
+    ],
+    "predictive_by_region": {
+      "0": [
+        1
+      ],
+      "1": [
+        1
+      ]
+    }
+  },
+  "oracle_arrays": "diagnostic only; never concatenate oracle_signal/oracle_region/noise to X",
+  "gate_definition": {
+    "threshold": 0.0
+  },
+  "seed_collision_check": {
+    "seeds": [
+      110001,
+      110002,
+      111001,
+      111002,
+      111003,
+      111004,
+      111005
+    ],
+    "collisions": [],
+    "searched_roots": [
+      "rebuttal",
+      "local_sync"
+    ],
+    "excluded": "rebuttal/advantage_exploration_20261028 (current new exploration)",
+    "text_scope": "json/jsonl/py/md/csv/yaml/yml/sh/toml/txt; integer tokens, excluding decimal substrings",
+    "filenames_checked": 19619,
+    "filename_collisions": []
+  },
+  "protocol_version": "cgb-advantage-synthetic-v1-20261028",
+  "dataset": "A01_s1_n120_d32__s110001",
+  "rows": 120,
+  "features": 32,
+  "npz_sha256": "e54a7646d2d468b64b540f3566e7d1a4747b36660a228ed0a7f3491f9e86cdda",
+  "array_sha256": {
+    "X": "299e61c80441ca84f9e004ec1319a7205132aa4bca488317c033d97ad6035601",
+    "y": "63f1a9fef6bf2c2584cc5c1e9309ee44214cdf4d69ffe430a816b02705996f61",
+    "train": "2ed1fdf4c04aeb3a98c310f75bc6bda1876cb48af39e36e126a8e1c02b62a4de",
+    "val": "d667901ec7ed304b7a81b22597e15f51dde2f447289d93cd64884bb94c49ffca",
+    "test": "11007a8e3ff057dd355cc1bc5f23887c17bbbb06444600a4c55c194216e75455",
+    "task_type": "b37fe1a8d1db433437be5660a92834770ec3ad508555ba73d85e5897edbe32b8",
+    "oracle_signal": "11c9c391f8d66a6fcd32e8cdf706fbe31bcc217c9898f163bbd9ecbeb1dc1848",
+    "oracle_region": "9f9d0a3705b9b76c512a70cd325e058ae51e22b16756e93fbae9b1863943135e",
+    "noise": "2543af45bbd7c08ec3ffebb6ad6b12362080ae49f17e46383884696aec7cdd26",
+    "y_train": "d98493b520f8373d951cce7a88842bc4c05062b0ce494eda252b257670be5688",
+    "y_val": "412e7f3a69af2bd2f32728de3a26952c8cb0c76c42a9f6bd6d8eb6c28f558430",
+    "y_test": "a6c87a03130212cbfdb79386cc237b29faa6fe3e975b22b0fed01b5a6dbb0a85"
+  },
+  "split_sizes": {
+    "train": 72,
+    "val": 24,
+    "test": 24
+  },
+  "groups_in_X": false,
+  "oracle_support_in_X": false
+}

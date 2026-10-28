@@ -1,0 +1,755 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-27T18:47:44.144168+00:00",
+  "scope": "local formal24_v1 mirrors only; no remote fits or model changes",
+  "status": "passed_record_and_prediction_checks",
+  "run_count": 6,
+  "case_count": 8,
+  "expected_final_records": 235,
+  "final_records": 235,
+  "final_status_counts": {
+    "ok": 235
+  },
+  "regression_final_prediction_files_recomputed": 195,
+  "regression_rmse_values_recomputed": 585,
+  "max_absolute_rmse_difference": 0.0,
+  "classification_formal24_final_records_structurally_checked_only": 40,
+  "search_records_checked": 1910,
+  "search_status_counts": {
+    "ok": 1871,
+    "timeout": 36,
+    "budget_exhausted": 3
+  },
+  "search_prediction_files_checked_for_test_arrays": 1871,
+  "search_test_exposure_count": 0,
+  "local_data_npz_sha256_checked": 56,
+  "worker_sha256_counts": {
+    "d2e2743d38c80b4d82b9bfb5e4a04aa1a88be952603460fad86f0e9fcb747e2a": 235
+  },
+  "cases": [
+    {
+      "case": "gas_turbine_co",
+      "host": "TabularData_Processor",
+      "methods": {
+        "CrossGB": {
+          "selected_candidate": 23,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 1.3747555908237703,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "XGB": {
+          "selected_candidate": 0,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 1.3173281605394347,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LGB_constant": {
+          "selected_candidate": 8,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 1.3690321230381548,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LGB_linear": {
+          "selected_candidate": 20,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 1.3484139769703427,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "PL": {
+          "selected_candidate": 19,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 1.3619659106831996,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LinXGBoost": {
+          "selected_candidate": 0,
+          "selection_verified": true,
+          "complete_candidates": 2,
+          "mean_development_primary_recomputed": 1.3903848675606227,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        }
+      },
+      "frozen_utc": "2026-10-27T16:41:22.194384+00:00"
+    },
+    {
+      "case": "S3_sparse",
+      "host": "cpu1_pool.zjuici.com",
+      "methods": {
+        "CrossGB": {
+          "selected_candidate": 16,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 0.42440187063502577,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "XGB": {
+          "selected_candidate": 5,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 1.314520833497422,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LGB_constant": {
+          "selected_candidate": 17,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 1.4048310632315242,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LGB_linear": {
+          "selected_candidate": 19,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 1.243412599553051,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "PL": {
+          "selected_candidate": 23,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 0.7284166925249147,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LinXGBoost": {
+          "selected_candidate": 3,
+          "selection_verified": true,
+          "complete_candidates": 6,
+          "mean_development_primary_recomputed": 0.4927629137312961,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        }
+      },
+      "frozen_utc": "2026-10-27T16:41:03.060653+00:00"
+    },
+    {
+      "case": "S2_sparse",
+      "host": "cpu2_pool.zjuici.com",
+      "methods": {
+        "CrossGB": {
+          "selected_candidate": 16,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 0.6050756386518132,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "XGB": {
+          "selected_candidate": 9,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 1.5680980318393494,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LGB_constant": {
+          "selected_candidate": 15,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 1.520814424156604,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LGB_linear": {
+          "selected_candidate": 18,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 1.382898039773349,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "PL": {
+          "selected_candidate": 3,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 1.1249594134644454,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LinXGBoost": {
+          "selected_candidate": 20,
+          "selection_verified": true,
+          "complete_candidates": 4,
+          "mean_development_primary_recomputed": 0.4633370549406622,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        }
+      },
+      "frozen_utc": "2026-10-27T16:44:25.818441+00:00"
+    },
+    {
+      "case": "S1_sparse",
+      "host": "cpu4_pool.zjuici.com",
+      "methods": {
+        "CrossGB": {
+          "selected_candidate": 20,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 0.6350679041162746,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "XGB": {
+          "selected_candidate": 13,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 1.8437771791503095,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LGB_constant": {
+          "selected_candidate": 19,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 1.7846655891882088,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LGB_linear": {
+          "selected_candidate": 6,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 1.8297009185303303,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "PL": {
+          "selected_candidate": 21,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 0.8856374751433331,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LinXGBoost": {
+          "selected_candidate": 21,
+          "selection_verified": true,
+          "complete_candidates": 5,
+          "mean_development_primary_recomputed": 0.4433885185768456,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        }
+      },
+      "frozen_utc": "2026-10-27T16:44:05.696870+00:00"
+    },
+    {
+      "case": "S1_affine",
+      "host": "cpu4_pool.zjuici.com",
+      "methods": {
+        "CrossGB": {
+          "selected_candidate": 16,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 0.7830612117233009,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "XGB": {
+          "selected_candidate": 14,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 0.7629025477112327,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LGB_constant": {
+          "selected_candidate": 14,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 0.6048803638072928,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LGB_linear": {
+          "selected_candidate": 4,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 0.4197605942406005,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "PL": {
+          "selected_candidate": 1,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 0.37991005038293646,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LinXGBoost": {
+          "selected_candidate": 0,
+          "selection_verified": true,
+          "complete_candidates": 5,
+          "mean_development_primary_recomputed": 0.4425869214556374,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        }
+      },
+      "frozen_utc": "2026-10-27T16:43:49.661664+00:00"
+    },
+    {
+      "case": "ilpd_numeric",
+      "host": "cpu5_pool.zjuici.com",
+      "methods": {
+        "CrossGB": {
+          "selected_candidate": 12,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 0.5231785854005038,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "XGB": {
+          "selected_candidate": 0,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 0.5232349855504586,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LGB_constant": {
+          "selected_candidate": 12,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 0.5221211186692467,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LGB_linear": {
+          "selected_candidate": 0,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 0.5388628035421144,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        }
+      },
+      "frozen_utc": "2026-10-27T16:31:07.237991+00:00"
+    },
+    {
+      "case": "website_phishing",
+      "host": "cpu5_pool.zjuici.com",
+      "methods": {
+        "CrossGB": {
+          "selected_candidate": 20,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 0.25387493544505607,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "XGB": {
+          "selected_candidate": 15,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 0.28158205458840635,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LGB_constant": {
+          "selected_candidate": 11,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 0.27567952008503066,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LGB_linear": {
+          "selected_candidate": 2,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 0.28647729374704967,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        }
+      },
+      "frozen_utc": "2026-10-27T16:36:38.006493+00:00"
+    },
+    {
+      "case": "protein",
+      "host": "cpu_Calculator",
+      "methods": {
+        "CrossGB": {
+          "selected_candidate": 15,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 4.566320601309387,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "XGB": {
+          "selected_candidate": 15,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 4.577343884899397,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LGB_constant": {
+          "selected_candidate": 23,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 4.59726971196597,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LGB_linear": {
+          "selected_candidate": 15,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 4.579541127410202,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "PL": {
+          "selected_candidate": 11,
+          "selection_verified": true,
+          "complete_candidates": 24,
+          "mean_development_primary_recomputed": 4.534982399486161,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        },
+        "LinXGBoost": {
+          "selected_candidate": 0,
+          "selection_verified": true,
+          "complete_candidates": 1,
+          "mean_development_primary_recomputed": 5.194326228506324,
+          "confirmation_seeds": [
+            98001,
+            98002,
+            98003,
+            98004,
+            98005
+          ],
+          "five_seed_coverage": true
+        }
+      },
+      "frozen_utc": "2026-10-27T16:42:43.853769+00:00"
+    }
+  ],
+  "issues": [],
+  "verified": [
+    "Selected candidate and mean source-unit RMSE / classification logloss recomputed from both development result records; lexicographic score/candidate tie-break checked.",
+    "Final requested params match frozen choice; all planned methods have five confirmation seeds.",
+    "All local search result JSON checked for test evaluation/metrics/target hashes; every available search prediction archive checked for test arrays.",
+    "All regression final train/val/test predictions independently recomputed against locally mirrored targets; row indices and recorded split/target hashes checked.",
+    "Local data files match plan SHA256; successful final fits have separate wall/CPU fit and prediction timings."
+  ],
+  "not_verified": [
+    "Runtime access to sealed test labels cannot be proven from stored artifacts alone; checks establish recorded outputs and flags, supported by inspected worker protocol.",
+    "Choice timestamps alone do not independently prove causal execution order; no new claim of timestamp attestation.",
+    "Classification formal24 prediction metrics not numerically recomputed here; formal30 classification extension is outside this audit and pending parent collection.",
+    "No native model rerun, timing repeatability, or claim of independent real-data test repeats; real repeats share the fixed held-out set."
+  ],
+  "leafonly_coverage": [
+    {
+      "case": "S3_sparse",
+      "method": "LeafOnly",
+      "confirmation_seeds": [
+        98001,
+        98002,
+        98003,
+        98004,
+        98005
+      ],
+      "five_seed_coverage": true
+    },
+    {
+      "case": "S2_sparse",
+      "method": "LeafOnly",
+      "confirmation_seeds": [
+        98001,
+        98002,
+        98003,
+        98004,
+        98005
+      ],
+      "five_seed_coverage": true
+    },
+    {
+      "case": "S1_sparse",
+      "method": "LeafOnly",
+      "confirmation_seeds": [
+        98001,
+        98002,
+        98003,
+        98004,
+        98005
+      ],
+      "five_seed_coverage": true
+    }
+  ]
+}

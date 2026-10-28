@@ -1,0 +1,441 @@
+{
+  "stage": "exclusive_timing",
+  "host": "cpu6_pool.zjuici.com",
+  "core_slot": 0,
+  "worker_sha256": "d2e2743d38c80b4d82b9bfb5e4a04aa1a88be952603460fad86f0e9fcb747e2a",
+  "wall_budget_seconds": 1200,
+  "data_sha256": {
+    "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz": "bd32e82fa71677029e2336caba1eb99ed65e5d6dd5060785073ba8770a8fde3e"
+  },
+  "jobs": [
+    {
+      "id": "gas_turbine_nox/CrossGB/s113001/r00",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "CrossGB",
+      "candidate": 7,
+      "seed": 113001,
+      "repeat": 0,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 64,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/CrossGB/s113001/r00",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/XGB/s113001/r00",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "XGB",
+      "candidate": 16,
+      "seed": 113001,
+      "repeat": 0,
+      "params": {
+        "depth": 3,
+        "ridge": 0.01,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/XGB/s113001/r00",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/LGB_constant/s113001/r00",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LGB_constant",
+      "candidate": 8,
+      "seed": 113001,
+      "repeat": 0,
+      "params": {
+        "depth": 5,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/LGB_constant/s113001/r00",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/LGB_linear/s113001/r00",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LGB_linear",
+      "candidate": 11,
+      "seed": 113001,
+      "repeat": 0,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/LGB_linear/s113001/r00",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/PL/s113001/r00",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "PL",
+      "candidate": 5,
+      "seed": 113001,
+      "repeat": 0,
+      "params": {
+        "num_trees": 256,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 0.1,
+        "max_var": 3,
+        "leaf_type": "linear",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 0.05
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/PL/s113001/r00",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/LinXGBoost/s113001/r00",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LinXGBoost",
+      "candidate": 13,
+      "seed": 113001,
+      "repeat": 0,
+      "params": {
+        "n_estimators": 8,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.2
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/LinXGBoost/s113001/r00",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/LeafOnly/s113001/r00",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LeafOnly",
+      "candidate": 7,
+      "seed": 113001,
+      "repeat": 0,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 64,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/LeafOnly/s113001/r00",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/XGB/s113001/r01",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "XGB",
+      "candidate": 16,
+      "seed": 113001,
+      "repeat": 1,
+      "params": {
+        "depth": 3,
+        "ridge": 0.01,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/XGB/s113001/r01",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/LGB_constant/s113001/r01",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LGB_constant",
+      "candidate": 8,
+      "seed": 113001,
+      "repeat": 1,
+      "params": {
+        "depth": 5,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/LGB_constant/s113001/r01",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/LGB_linear/s113001/r01",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LGB_linear",
+      "candidate": 11,
+      "seed": 113001,
+      "repeat": 1,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/LGB_linear/s113001/r01",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/PL/s113001/r01",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "PL",
+      "candidate": 5,
+      "seed": 113001,
+      "repeat": 1,
+      "params": {
+        "num_trees": 256,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 0.1,
+        "max_var": 3,
+        "leaf_type": "linear",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 0.05
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/PL/s113001/r01",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/LinXGBoost/s113001/r01",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LinXGBoost",
+      "candidate": 13,
+      "seed": 113001,
+      "repeat": 1,
+      "params": {
+        "n_estimators": 8,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.2
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/LinXGBoost/s113001/r01",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/LeafOnly/s113001/r01",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LeafOnly",
+      "candidate": 7,
+      "seed": 113001,
+      "repeat": 1,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 64,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/LeafOnly/s113001/r01",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/CrossGB/s113001/r01",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "CrossGB",
+      "candidate": 7,
+      "seed": 113001,
+      "repeat": 1,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 64,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/CrossGB/s113001/r01",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/LGB_constant/s113001/r02",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LGB_constant",
+      "candidate": 8,
+      "seed": 113001,
+      "repeat": 2,
+      "params": {
+        "depth": 5,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/LGB_constant/s113001/r02",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/LGB_linear/s113001/r02",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LGB_linear",
+      "candidate": 11,
+      "seed": 113001,
+      "repeat": 2,
+      "params": {
+        "depth": 4,
+        "ridge": 10.0,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/LGB_linear/s113001/r02",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/PL/s113001/r02",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "PL",
+      "candidate": 5,
+      "seed": 113001,
+      "repeat": 2,
+      "params": {
+        "num_trees": 256,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 0.1,
+        "max_var": 3,
+        "leaf_type": "linear",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 0.05
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/PL/s113001/r02",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/LinXGBoost/s113001/r02",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LinXGBoost",
+      "candidate": 13,
+      "seed": 113001,
+      "repeat": 2,
+      "params": {
+        "n_estimators": 8,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.2
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/LinXGBoost/s113001/r02",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/LeafOnly/s113001/r02",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "LeafOnly",
+      "candidate": 7,
+      "seed": 113001,
+      "repeat": 2,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 64,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/LeafOnly/s113001/r02",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/CrossGB/s113001/r02",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "CrossGB",
+      "candidate": 7,
+      "seed": 113001,
+      "repeat": 2,
+      "params": {
+        "depth": 3,
+        "ridge": 1.0,
+        "trees": 64,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/CrossGB/s113001/r02",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    },
+    {
+      "id": "gas_turbine_nox/XGB/s113001/r02",
+      "case": "gas_turbine_nox",
+      "kind": "real",
+      "method": "XGB",
+      "candidate": 16,
+      "seed": 113001,
+      "repeat": 2,
+      "params": {
+        "depth": 3,
+        "ridge": 0.01,
+        "trees": 128,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "advantage_inputs/confirmation/real/gas_turbine_nox__s113001.npz",
+      "relative_output": "gas_turbine_nox/XGB/s113001/r02",
+      "evaluate_test": true,
+      "timeout_seconds": 300
+    }
+  ]
+}

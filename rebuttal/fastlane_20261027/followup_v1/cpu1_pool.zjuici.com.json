@@ -1,0 +1,32 @@
+{
+  "kind": "capacity",
+  "host": "cpu1_pool.zjuici.com",
+  "batch_budget_seconds": 1800,
+  "frozen_utc": "2026-10-27T19:40:04.671898+00:00",
+  "cases": {
+    "cpu_activity": {
+      "params": {
+        "depth": 3,
+        "learning_rate": 0.05,
+        "p": 1.0,
+        "ridge": 0.1,
+        "trees": 256
+      },
+      "seeds": [
+        98002,
+        98003,
+        98004,
+        98005
+      ],
+      "source": "local_sync/fastlane_results/cpu_Calculator/results/quick_v1/cpu_activity/final/CrossGB/s98001/result.json"
+    }
+  },
+  "test_selection": false,
+  "scope": "Repeated fixed recipes on existing confirmation splits; diagnostic, not fresh test confirmation; no search",
+  "data_sha256": {
+    "cpu_activity__s98002.npz": "39fcd74dafbcbeb615d78f27f93dedede7a97a15d614e770b57f292727fc6262",
+    "cpu_activity__s98003.npz": "b678e25123aaf613eee0c404a6d020bad20066f8241477738d39bd45b82ddc09",
+    "cpu_activity__s98004.npz": "b001df6f48637ea1d6171ac88da11366cf5ac98aeb089358cc517c23230ae6c3",
+    "cpu_activity__s98005.npz": "2411e34efc0859a4c70a05a49bffd54091a5fb60421620e568ca1aa73888e85e"
+  }
+}

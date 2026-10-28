@@ -1,0 +1,16 @@
+{
+  "updated_known_paths": [
+    "rebuttal_server_config_20261025/reports/preparation_status.json",
+    "rebuttal_server_config_20261025/scripts/run_ts_reference_panel.py"
+  ],
+  "appended_original_dependencies": [
+    "rebuttal_server_config_20261025/source/exp/random600/__init__.py",
+    "rebuttal_server_config_20261025/source/exp/random600/utils/metrics.py",
+    "rebuttal_server_config_20261025/source/exp/random600/utils/runner.py",
+    "rebuttal_server_config_20261025/source/exp/random600/utils/parameter_audit.py",
+    "rebuttal_server_config_20261025/source/exp/random600/utils/__init__.py",
+    "rebuttal_server_config_20261025/source/exp/random600/utils/candidates.py"
+  ],
+  "unexpected_drift": [],
+  "files": 1721
+}

@@ -1,0 +1,17 @@
+{
+  "selected_utc": "2026-10-28T07:27:50.483213+00:00",
+  "finalists": [
+    [
+      "synthetic",
+      "A06_two_sparse_modules"
+    ],
+    [
+      "real",
+      "gas_turbine_nox"
+    ]
+  ],
+  "basis": "Development-only: A06 distinct additive sparse mechanism, positive precision/cost screen. Gas is near-tie to PL and potential real accuracy-cost tradeoff, not a declared winner. A04 and n/d variants retained as screening; all other real tasks retained.",
+  "quick_report_sha256": "2b70a05b5e66bcf5a7c7aeef8d373e4a7d21ca7afde1d1416bf908162ec9279f",
+  "test_seen": false,
+  "candidate_pool_sha256": "903fe344ee8d8b80286322b691f893b4a5a9ff2b604caa3f8105dc2e984c593e"
+}

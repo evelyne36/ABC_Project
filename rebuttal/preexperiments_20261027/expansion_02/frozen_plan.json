@@ -1,0 +1,350 @@
+{
+  "datasets": [
+    {
+      "dataset": "yacht",
+      "path": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/new_tabular_data/yacht.csv",
+      "uci_id": 243,
+      "source": "https://archive.ics.uci.edu/dataset/243/yacht+hydrodynamics",
+      "archive_url": "https://archive.ics.uci.edu/static/public/243/yacht%2Bhydrodynamics.zip",
+      "archive_sha256": "aa52b68f88c4bb552187a53ef4c5753fa178f6a36035a3771c5bc04e078487ac",
+      "sha256": "30aca93490d89f3b49b1973f4a1fa2014506465b512c50e4435184aab6466219",
+      "rows": 308,
+      "features": 6,
+      "provenance": "measured",
+      "preparation": "six geometry/velocity inputs",
+      "duplicate_X": 0,
+      "duplicate_rows": 0
+    },
+    {
+      "dataset": "ccpp",
+      "path": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/new_tabular_data/ccpp.csv",
+      "uci_id": 294,
+      "source": "https://archive.ics.uci.edu/dataset/294/combined+cycle+power+plant",
+      "archive_url": "https://archive.ics.uci.edu/static/public/294/combined%2Bcycle%2Bpower%2Bplant.zip",
+      "archive_sha256": "cc7b2a4977c0a44e8221c91d9a7e5746b3c68186cff7e5c61c70af6432b98c7a",
+      "sha256": "51848da3c8b8c29f709f159fad95443eaa8ff2e95c721a00bba582048cd207e4",
+      "rows": 9568,
+      "features": 4,
+      "provenance": "measured",
+      "preparation": "first sheet only; other sheets are shuffled copies",
+      "duplicate_X": 41,
+      "duplicate_rows": 41
+    },
+    {
+      "dataset": "real_estate",
+      "path": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/new_tabular_data/real_estate.csv",
+      "uci_id": 477,
+      "source": "https://archive.ics.uci.edu/dataset/477/real+estate+valuation+data+set",
+      "archive_url": "https://archive.ics.uci.edu/static/public/477/real%2Bestate%2Bvaluation%2Bdata%2Bset.zip",
+      "archive_sha256": "aa437bdac3ca23200258a0a58d251c0af90651aeaf7c7a07aaa714f0f9f25e2c",
+      "sha256": "d004bb5b86b26effa08a30fafa2eea881b248bf2fa91f1e48a1d227d8ae76426",
+      "rows": 414,
+      "features": 6,
+      "provenance": "observational",
+      "preparation": "exclude No ID",
+      "duplicate_X": 20,
+      "duplicate_rows": 0
+    },
+    {
+      "dataset": "concrete_slump",
+      "path": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/new_tabular_data/concrete_slump.csv",
+      "uci_id": 182,
+      "source": "https://archive.ics.uci.edu/dataset/182/concrete+slump+test",
+      "archive_url": "https://archive.ics.uci.edu/static/public/182/concrete%2Bslump%2Btest.zip",
+      "archive_sha256": "68d6a6813261bf8ecf79d8d7cc82b665bd5e9e6800c7705a16e671688c78e491",
+      "sha256": "84a474a60c0cc149a09022ada70bb48185a96d93255435e9c94a1c2839c27a7f",
+      "rows": 103,
+      "features": 7,
+      "provenance": "measured",
+      "preparation": "seven ingredients only; exclude ID and both other outputs",
+      "duplicate_X": 0,
+      "duplicate_rows": 0
+    },
+    {
+      "dataset": "concrete_flow",
+      "path": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/new_tabular_data/concrete_flow.csv",
+      "uci_id": 182,
+      "source": "https://archive.ics.uci.edu/dataset/182/concrete+slump+test",
+      "archive_url": "https://archive.ics.uci.edu/static/public/182/concrete%2Bslump%2Btest.zip",
+      "archive_sha256": "68d6a6813261bf8ecf79d8d7cc82b665bd5e9e6800c7705a16e671688c78e491",
+      "sha256": "57f4a23c74c6f3c522da34f9355a394d20fc6e133cb2a5ae0c0bcc736c8710b0",
+      "rows": 103,
+      "features": 7,
+      "provenance": "measured",
+      "preparation": "seven ingredients only; exclude ID and both other outputs",
+      "duplicate_X": 0,
+      "duplicate_rows": 0
+    },
+    {
+      "dataset": "concrete_strength",
+      "path": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/new_tabular_data/concrete_strength.csv",
+      "uci_id": 182,
+      "source": "https://archive.ics.uci.edu/dataset/182/concrete+slump+test",
+      "archive_url": "https://archive.ics.uci.edu/static/public/182/concrete%2Bslump%2Btest.zip",
+      "archive_sha256": "68d6a6813261bf8ecf79d8d7cc82b665bd5e9e6800c7705a16e671688c78e491",
+      "sha256": "c18d97844284df7dfbd5bbf8b00596aad296f25c780711e16b822a4c8b41e701",
+      "rows": 103,
+      "features": 7,
+      "provenance": "measured",
+      "preparation": "seven ingredients only; exclude ID and both other outputs",
+      "duplicate_X": 0,
+      "duplicate_rows": 0
+    },
+    {
+      "dataset": "servo",
+      "path": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/new_tabular_data/servo.csv",
+      "uci_id": 87,
+      "source": "https://archive.ics.uci.edu/dataset/87/servo",
+      "archive_url": "https://archive.ics.uci.edu/static/public/87/servo.zip",
+      "archive_sha256": "02822bd9f00d8af7394163649e6398711da0a0b02170e380fd4d15b14e8a5659",
+      "sha256": "c84cabb67b95c96fb1cecaf6de3ca64b312db3acc00eac9cbcb9901a7ff9e8eb",
+      "rows": 167,
+      "features": 4,
+      "provenance": "simulation",
+      "preparation": "motor/screw onehot; gains numeric",
+      "duplicate_X": 0,
+      "duplicate_rows": 0
+    },
+    {
+      "dataset": "auto_mpg",
+      "path": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/new_tabular_data/auto_mpg.csv",
+      "uci_id": 9,
+      "source": "https://archive.ics.uci.edu/dataset/9/auto+mpg",
+      "archive_url": "https://archive.ics.uci.edu/static/public/9/auto%2Bmpg.zip",
+      "archive_sha256": "5fc1507522b73b8050d3aa45df51eefe1b666ae5f428a5f1347b6483339f1003",
+      "sha256": "ffa917df883c785820b06044926e920c670a80bc748a2088a501d070f17fb572",
+      "rows": 398,
+      "features": 7,
+      "provenance": "observational",
+      "preparation": "drop car_name ID; seven original numeric inputs; missing horsepower train-imputed",
+      "duplicate_X": 0,
+      "duplicate_rows": 0
+    },
+    {
+      "dataset": "computer_hardware",
+      "path": "/Users/ancd/PaperFiles/aaai27-rebuttal/local_sync/new_tabular_data/computer_hardware.csv",
+      "uci_id": 29,
+      "source": "https://archive.ics.uci.edu/dataset/29/computer+hardware",
+      "archive_url": "https://archive.ics.uci.edu/static/public/29/computer%2Bhardware.zip",
+      "archive_sha256": "5043f19d06e6dbfd4b9640596c92eb26d6fdecabeefab98437fb07a27d748b70",
+      "sha256": "51172e5b53b1b89adfd9416bc269256996aac46a469353b045d8304418b524d4",
+      "rows": 209,
+      "features": 6,
+      "provenance": "measured",
+      "preparation": "exclude target-derived ERP, model ID and vendor; six numeric hardware predictors",
+      "duplicate_X": 19,
+      "duplicate_rows": 0
+    }
+  ],
+  "grid": {
+    "XGB": [
+      {
+        "depth": 3,
+        "ridge": 1.0,
+        "p": 1.0,
+        "trees": 100,
+        "lr": 0.1
+      },
+      {
+        "depth": 3,
+        "ridge": 10.0,
+        "p": 0.5,
+        "trees": 100,
+        "lr": 0.1
+      },
+      {
+        "depth": 2,
+        "ridge": 1.0,
+        "p": 1.0,
+        "trees": 300,
+        "lr": 0.05
+      },
+      {
+        "depth": 4,
+        "ridge": 1.0,
+        "p": 0.25,
+        "trees": 100,
+        "lr": 0.1
+      }
+    ],
+    "CrossGB": [
+      {
+        "depth": 3,
+        "ridge": 1.0,
+        "p": 1.0,
+        "trees": 100,
+        "lr": 0.1
+      },
+      {
+        "depth": 3,
+        "ridge": 10.0,
+        "p": 0.5,
+        "trees": 100,
+        "lr": 0.1
+      },
+      {
+        "depth": 2,
+        "ridge": 1.0,
+        "p": 1.0,
+        "trees": 300,
+        "lr": 0.05
+      },
+      {
+        "depth": 4,
+        "ridge": 1.0,
+        "p": 0.25,
+        "trees": 100,
+        "lr": 0.1
+      }
+    ],
+    "LGB_constant": [
+      {
+        "depth": 3,
+        "ridge": 1.0,
+        "p": 1.0,
+        "trees": 100,
+        "lr": 0.1
+      },
+      {
+        "depth": 3,
+        "ridge": 10.0,
+        "p": 0.5,
+        "trees": 100,
+        "lr": 0.1
+      },
+      {
+        "depth": 2,
+        "ridge": 1.0,
+        "p": 1.0,
+        "trees": 300,
+        "lr": 0.05
+      },
+      {
+        "depth": 4,
+        "ridge": 1.0,
+        "p": 0.25,
+        "trees": 100,
+        "lr": 0.1
+      }
+    ],
+    "LGB_linear": [
+      {
+        "depth": 3,
+        "ridge": 1.0,
+        "p": 1.0,
+        "trees": 100,
+        "lr": 0.1
+      },
+      {
+        "depth": 3,
+        "ridge": 10.0,
+        "p": 0.5,
+        "trees": 100,
+        "lr": 0.1
+      },
+      {
+        "depth": 2,
+        "ridge": 1.0,
+        "p": 1.0,
+        "trees": 300,
+        "lr": 0.05
+      },
+      {
+        "depth": 4,
+        "ridge": 1.0,
+        "p": 0.25,
+        "trees": 100,
+        "lr": 0.1
+      }
+    ],
+    "PL": [
+      {
+        "num_trees": 100,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 0.1,
+        "max_var": 3,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      {
+        "num_trees": 100,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 1.0,
+        "max_var": 5,
+        "leaf_type": "half_additive",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      {
+        "num_trees": 100,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 0.1,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      },
+      {
+        "num_trees": 100,
+        "max_depth": 3,
+        "num_leaves": 8,
+        "l2_reg": 10.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 0.1
+      }
+    ],
+    "LinXGBoost": [
+      {
+        "n_estimators": 5,
+        "max_depth": 3,
+        "lbda": 2.0,
+        "min_samples_leaf": 5,
+        "learning_rate": 0.3
+      },
+      {
+        "n_estimators": 5,
+        "max_depth": 3,
+        "lbda": 20.0,
+        "min_samples_leaf": 5,
+        "learning_rate": 0.3
+      },
+      {
+        "n_estimators": 15,
+        "max_depth": 3,
+        "lbda": 2.0,
+        "min_samples_leaf": 5,
+        "learning_rate": 0.3
+      },
+      {
+        "n_estimators": 15,
+        "max_depth": 3,
+        "lbda": 20.0,
+        "min_samples_leaf": 5,
+        "learning_rate": 0.3
+      }
+    ]
+  },
+  "discovery_seeds": [
+    90101,
+    90102
+  ],
+  "validation_seeds": [
+    90201,
+    90202,
+    90203
+  ],
+  "train_cap": 1200,
+  "split": "seed42 first 5-fold test reserved; discovery 75% of remaining pool; a fixed 25% audit (seed78000) excluded from discovery. Two overlapping 75/25 discovery splits; three audit training subsamples/shuffles reuse one fixed audit.",
+  "selection": "minimum mean discovery RMSE per method; failures remain; candidate must succeed on both discovery splits; no selection using audit labels",
+  "timeout_sec_per_author_fit": 15,
+  "all_results_reported": true,
+  "formal_test_evaluations": 0,
+  "provenance_note": "Servo is simulation; three concrete targets are dependent tasks, not three independent datasets",
+  "timing_note": "local ARM exploratory; PL uses scalar compatibility and API fit includes CSV I/O; Lin is author Python; no universal implementation-independent speed claims"
+}

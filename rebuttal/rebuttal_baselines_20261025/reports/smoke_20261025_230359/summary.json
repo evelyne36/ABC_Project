@@ -1,0 +1,36 @@
+{
+  "scope": "local integration smoke only; not a rebuttal benchmark result",
+  "models": [
+    {
+      "method": "linxgboost",
+      "status": "success",
+      "rmse": 32.14672645917682,
+      "fit_wall_sec": 0.1473913329828065,
+      "predict_wall_sec": 5.483400309458375e-05
+    },
+    {
+      "method": "pilot",
+      "status": "success",
+      "rmse": 24.30673978437502,
+      "fit_wall_sec": 6.555990749999182,
+      "predict_wall_sec": 0.00048287498066201806
+    },
+    {
+      "method": "tao",
+      "status": "success",
+      "rmse": 41.536350104869314,
+      "fit_wall_sec": 1.0371120829950087,
+      "predict_wall_sec": 0.0012236250040587038
+    },
+    {
+      "method": "gbdt_pl",
+      "status": "success",
+      "rmse": 21.528958948517843,
+      "fit_wall_sec": 0.024713124992558733,
+      "predict_wall_sec": 0.0009167920215986669
+    }
+  ],
+  "fixture": "moneyball_historical_outer1",
+  "output_directory": "reports/smoke_20261025_230359",
+  "crossgb_fit_calls": 0
+}

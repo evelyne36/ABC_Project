@@ -1,0 +1,311 @@
+[
+  {
+    "host": "cpu4_pool.zjuici.com",
+    "exit_code": 0,
+    "details": {
+      "system": "Linux",
+      "machine": "x86_64",
+      "hostname": "n1",
+      "home": "/home/admin",
+      "python": "3.10.12",
+      "affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "meminfo": [
+        "MemTotal:       32863816 kB",
+        "MemFree:        22254252 kB",
+        "MemAvailable:   31736248 kB"
+      ],
+      "loadavg": "0.00 0.05 0.09 1/576 160311",
+      "versions": {
+        "numpy": null,
+        "scipy": null,
+        "pandas": null,
+        "scikit-learn": null,
+        "numba": null,
+        "networkx": null,
+        "threadpoolctl": null,
+        "pytest": null,
+        "cmake": null
+      },
+      "python_candidates": [
+        "/home/admin/anaconda3/bin/python",
+        "/home/admin/anaconda3/envs/mgb/bin/python"
+      ],
+      "tools": {
+        "cmake": "/usr/bin/cmake",
+        "g++": "/usr/bin/g++",
+        "rsync": "/usr/bin/rsync",
+        "taskset": "/usr/bin/taskset",
+        "pip3": null,
+        "conda": null,
+        "uv": null
+      },
+      "workdir_exists": false
+    },
+    "error": ""
+  },
+  {
+    "host": "cpu2_pool.zjuici.com",
+    "exit_code": 0,
+    "details": {
+      "system": "Linux",
+      "machine": "x86_64",
+      "hostname": "n1",
+      "home": "/home/admin",
+      "python": "3.10.12",
+      "affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "meminfo": [
+        "MemTotal:       32863820 kB",
+        "MemFree:        28738308 kB",
+        "MemAvailable:   31822356 kB"
+      ],
+      "loadavg": "0.00 0.18 0.23 1/565 4362",
+      "versions": {
+        "numpy": null,
+        "scipy": null,
+        "pandas": null,
+        "scikit-learn": null,
+        "numba": null,
+        "networkx": null,
+        "threadpoolctl": null,
+        "pytest": null,
+        "cmake": null
+      },
+      "python_candidates": [
+        "/home/admin/anaconda3/bin/python",
+        "/home/admin/anaconda3/envs/mgb/bin/python"
+      ],
+      "tools": {
+        "cmake": "/usr/bin/cmake",
+        "g++": "/usr/bin/g++",
+        "rsync": "/usr/bin/rsync",
+        "taskset": "/usr/bin/taskset",
+        "pip3": null,
+        "conda": null,
+        "uv": null
+      },
+      "workdir_exists": false
+    },
+    "error": ""
+  },
+  {
+    "host": "cpu1_pool.zjuici.com",
+    "exit_code": 0,
+    "details": {
+      "system": "Linux",
+      "machine": "x86_64",
+      "hostname": "n1",
+      "home": "/home/admin",
+      "python": "3.10.12",
+      "affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "meminfo": [
+        "MemTotal:       32863708 kB",
+        "MemFree:        28947112 kB",
+        "MemAvailable:   31820504 kB"
+      ],
+      "loadavg": "0.00 0.03 0.07 1/574 4846",
+      "versions": {
+        "numpy": null,
+        "scipy": null,
+        "pandas": null,
+        "scikit-learn": null,
+        "numba": null,
+        "networkx": null,
+        "threadpoolctl": null,
+        "pytest": null,
+        "cmake": null
+      },
+      "python_candidates": [
+        "/home/admin/anaconda3/bin/python",
+        "/home/admin/anaconda3/envs/mgb/bin/python"
+      ],
+      "tools": {
+        "cmake": "/usr/bin/cmake",
+        "g++": "/usr/bin/g++",
+        "rsync": "/usr/bin/rsync",
+        "taskset": "/usr/bin/taskset",
+        "pip3": null,
+        "conda": null,
+        "uv": null
+      },
+      "workdir_exists": false
+    },
+    "error": ""
+  },
+  {
+    "host": "cpu_Calculator",
+    "exit_code": 0,
+    "details": {
+      "system": "Linux",
+      "machine": "x86_64",
+      "hostname": "n1",
+      "home": "/home/admin",
+      "python": "3.10.12",
+      "affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "meminfo": [
+        "MemTotal:       32863808 kB",
+        "MemFree:        27244580 kB",
+        "MemAvailable:   29829760 kB"
+      ],
+      "loadavg": "0.11 0.14 0.43 1/752 3507",
+      "versions": {
+        "numpy": null,
+        "scipy": null,
+        "pandas": null,
+        "scikit-learn": null,
+        "numba": null,
+        "networkx": null,
+        "threadpoolctl": null,
+        "pytest": null,
+        "cmake": null
+      },
+      "python_candidates": [
+        "/home/admin/anaconda3/bin/python",
+        "/home/admin/anaconda3/envs/tree/bin/python",
+        "/home/admin/anaconda3/envs/cpu/bin/python",
+        "/home/admin/anaconda3/envs/mgb/bin/python"
+      ],
+      "tools": {
+        "cmake": null,
+        "g++": "/usr/bin/g++",
+        "rsync": "/usr/bin/rsync",
+        "taskset": "/usr/bin/taskset",
+        "pip3": null,
+        "conda": null,
+        "uv": null
+      },
+      "workdir_exists": false
+    },
+    "error": ""
+  },
+  {
+    "host": "TabularData_Processor",
+    "exit_code": 0,
+    "details": {
+      "system": "Linux",
+      "machine": "x86_64",
+      "hostname": "n1",
+      "home": "/home/admin",
+      "python": "3.10.12",
+      "affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "meminfo": [
+        "MemTotal:       32863712 kB",
+        "MemFree:        29484280 kB",
+        "MemAvailable:   31814920 kB"
+      ],
+      "loadavg": "0.00 0.00 0.06 1/574 2682",
+      "versions": {
+        "numpy": null,
+        "scipy": null,
+        "pandas": null,
+        "scikit-learn": null,
+        "numba": null,
+        "networkx": null,
+        "threadpoolctl": null,
+        "pytest": null,
+        "cmake": null
+      },
+      "python_candidates": [
+        "/home/admin/anaconda3/bin/python",
+        "/home/admin/anaconda3/envs/llm/bin/python",
+        "/home/admin/anaconda3/envs/benchmark/bin/python",
+        "/home/admin/anaconda3/envs/mgb/bin/python"
+      ],
+      "tools": {
+        "cmake": "/usr/bin/cmake",
+        "g++": "/usr/bin/g++",
+        "rsync": "/usr/bin/rsync",
+        "taskset": "/usr/bin/taskset",
+        "pip3": null,
+        "conda": null,
+        "uv": null
+      },
+      "workdir_exists": false
+    },
+    "error": ""
+  }
+]

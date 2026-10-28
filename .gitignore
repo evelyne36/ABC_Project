@@ -1,0 +1,24 @@
+# Sharing scope: verified experimental evidence, reproduction code/config, response drafts.
+# Other source files remain locally; original reviews, internal attachments, and source archives are ignored.
+/rebuttal/*
+!/rebuttal/advantage_exploration_20261028/
+!/rebuttal/analysis_20261027/
+!/rebuttal/analysis_update_20261027/
+!/rebuttal/fastlane_20261027/
+!/rebuttal/fastlane_20261028_bc/
+!/rebuttal/last_increment_261028/
+!/rebuttal/preexperiments_20261027/
+!/rebuttal/rebuttal_baselines_20261025/
+!/rebuttal/rebuttal_execution_20261025/
+!/rebuttal/rebuttal_formal_20261026/
+!/rebuttal/rebuttal_server_config_20261025/
+!/rebuttal/reply_261028/
+!/rebuttal/.gitignore
+!/rebuttal/261028v1_同步入口与复原说明.md
+!/rebuttal/RESTORE_MATERIALS.md
+!/rebuttal/handoff_verification_20261026.json
+!/rebuttal/实验计划261028_证据梳理与候选实验.md
+
+**/__pycache__/
+*.pyc
+.DS_Store

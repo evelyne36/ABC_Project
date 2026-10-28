@@ -1,0 +1,27 @@
+{
+  "queue_id": "N5_capacity_routes_42",
+  "purpose": "N5 capacity probe: 42 synthetic Full routes not covered by R0 (55 routes = 45 synthetic + 10 real from N4)",
+  "variant": "full_p10_sa0",
+  "mechanisms": [
+    "regime_slope",
+    "sparse_multiplicative",
+    "curved_control"
+  ],
+  "seeds": [
+    "seed1001",
+    "seed1002",
+    "seed1003"
+  ],
+  "outer_folds": [
+    "out1",
+    "out2",
+    "out3",
+    "out4",
+    "out5"
+  ],
+  "excluded_reused_from_R0": [
+    "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1001__out1.json",
+    "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1001__out1.json",
+    "configs/cgb_tasks/synthetic__curved_control__dim10__seed1001__out1.json"
+  ]
+}

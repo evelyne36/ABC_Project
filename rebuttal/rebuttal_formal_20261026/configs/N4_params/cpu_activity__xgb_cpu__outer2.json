@@ -1,0 +1,12 @@
+{
+  "backbone_id": "shared_backbone_0084",
+  "candidate_id": "xgb_0084",
+  "colsample_bytree": 0.671329321417432,
+  "learning_rate": 0.03925952150813314,
+  "max_bin": 255,
+  "max_depth": 6,
+  "n_estimators": 600,
+  "reg_lambda": 0.0014029133295716438,
+  "source": "generated_shared_backbone",
+  "subsample": 0.8917185948105815
+}

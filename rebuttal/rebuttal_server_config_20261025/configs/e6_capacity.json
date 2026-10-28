@@ -1,0 +1,45 @@
+{
+  "experiment_id": "E6",
+  "status": "capacity_probe_implementation_required",
+  "maximum_development_hours": 8,
+  "maximum_run_hours": 4,
+  "datasets": {
+    "synthetic": [
+      "regime_slope",
+      "sparse_multiplicative",
+      "curved_control"
+    ],
+    "real": [
+      "cpu_activity",
+      "kin8nm"
+    ]
+  },
+  "synthetic_data_seeds": [
+    1001,
+    1002,
+    1003
+  ],
+  "real_split_seeds": [
+    1001,
+    1002,
+    1003
+  ],
+  "outer_folds": 3,
+  "k_values": [
+    1,
+    2,
+    3
+  ],
+  "scope": "stagewise coefficient refit under frozen training-derived routes; not a fully reoptimized k>1 CrossGB",
+  "coefficient_update": "-(Z.T H Z + Lambda)^(-1) Z.T g; solve numerically without explicit inverse",
+  "feature_subset_selection": "training-only greedy forward selection; record order and actual k",
+  "regularization_selection": "inner training/validation only",
+  "intercept_policy": {
+    "main_k_comparison": "same policy for k1,k2,k3",
+    "affine_k1": "separate contrast; do not confound extra feature and intercept"
+  },
+  "raw_bin_control": "raw-refit k1/k2/k3 family separate from original binned k1; add binned k1 anchor",
+  "serialization_warning": "leaf_features_vector stores per-output variable, not k variables in one scalar leaf",
+  "stop_if_core_tasks_unfinished": true,
+  "inference_claim": "k1 is sparse architecture; empirical optimum not presupposed"
+}

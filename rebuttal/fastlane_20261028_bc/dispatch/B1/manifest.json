@@ -1,0 +1,14 @@
+{
+  "stage": "B1",
+  "jobs": 30,
+  "hosts_used": 7,
+  "plans": {
+    "cpu1_pool.zjuici.com.json": "47ec3cf74f9ca98e66c394d90fce07c18db63e92fe88f14632ee3a7a31576390",
+    "cpu2_pool.zjuici.com.json": "23dda78aa0dcf81b45dc28cc03aaf70d08c91dde7f1959e0a38fe7d0659ba268",
+    "cpu4_pool.zjuici.com.json": "1a5e4d5eda450e6646122aebd21a698b1539f3da562b34a294addd049c94fb6d",
+    "cpu5_pool.zjuici.com.json": "82d6c41186266507f64547c9b58b45bf7dd7e198210c1f463a6113a9ba7991a7",
+    "cpu6_pool.zjuici.com.json": "f692c1dbdbfe0921f304b1e9cd6627ab64358bb64d914c8ef88c8e299344b5e8",
+    "cpu_Calculator.json": "3d8a335534f14aebef0675a7baa083a39b65f03a01ea7c4c9fae4e519054e884",
+    "TabularData_Processor.json": "95a46ef2117b7cb74a77de8f83a698c45e0a91ff37f87259469d1758469a60d7"
+  }
+}

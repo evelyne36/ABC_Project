@@ -1,0 +1,20 @@
+{
+  "status": "source_prepared_not_compiled_or_runtime_verified",
+  "files": [
+    {
+      "file": "param.h",
+      "historical_sha256": "0ae7d688b1341f2727c0685ec7a4fb072b471d6663de7b1df11596f116aaf295",
+      "controlled_sha256": "c5817e586ada89d02a72e3f9375cb4b5605d9d00e5a54ec1b93ec134a2c7c26f"
+    },
+    {
+      "file": "updater_metagb_hist.cc",
+      "historical_sha256": "30081ac7e9e61e741add7a32f207f712ad16168b46b5dc3d91abb0b9d2589442",
+      "controlled_sha256": "89f5bfedc8d229025978fd6a556b478f525ad707b22e4f3f87ce01e353041f79"
+    }
+  ],
+  "semantics": "bias-only split score with original full predictive leaf pool, each boosting iteration",
+  "default_flag": false,
+  "multi_target": "rejected; scalar regression and binary only",
+  "retained": "historical gain threshold, binning, independent sampling, RNG calls, shrinkage, leaf refresh",
+  "required_before_use": "Linux build, tiny structural tests and E0 archive prediction gate"
+}

@@ -1,0 +1,17 @@
+请接续CrossGB的AAAI2027 rebuttal实验，不从头规划。用户已批准核心方案、四baseline适配、限时容量诊断，并授权使用交接书中五台Linux服务器。硬截止：北京时间2026-10-29交出可提交的作者审阅稿，主要实验争取10-28 18:00收口；不自动提交OpenReview。
+
+附件为formal_linux_bundle.tar.gz及同名.sha256。它已包含四baseline的内层归档、冻结数据/候选/划分、controlled CGB源码、执行器、原论文/附录/评审/myself V1/V2/会议纪要/Xia建议和核心旧结果，不需要先索要完整FullCodeProject。
+
+请先校验外包、在新任务目录解包外层和内层baseline归档，运行rebuttal_formal_20261026/scripts/verify_handoff_inputs.py；然后读：
+1. rebuttal_formal_20261026/交给另一台电脑AI_执行交接书.md
+2. rebuttal_formal_20261026/正式执行规划_metaDesign.md
+3. rebuttal_formal_20261026/正式实验矩阵.csv
+4. rebuttal_formal_20261026/Linux接续说明.md
+
+关键状态：新增正式训练结果为0。105个消融任务split/backbone、63,000个test target以及10个时序任务输入已核对；四baseline仅在Mac完成兼容和集成检查；CGB/N3/N4均未在Linux编译/运行验证。N5容量及多起点执行器尚未实现。五台服务器初次均成功登录，随后网关在SSH握手前关闭连接，作者本机也不能登录；换电脑后先单台探测，若仍不可用就准确报告阻塞，不反复并行重连、不虚报开跑。
+
+连接可用后并行推进：cpu4构建→tiny→28-fit R0 gate→105次LeafOnly→CPU/Kin selected诊断；cpu2做四方法16-fit训练/验证测速后冻结覆盖并跑GBDT-PL；cpu1跑LinXGBoost；cpu_Calculator跑十任务persistence/Ridge后补PILOT/官方常数叶TAO；TabularData_Processor预留4核做等wall-clock搜索预算，复用并核对完全相同的已验证native库/gate。每台16核/32GB、模型单线程，先小并发按内存调整。
+
+核心固定新增CGB136次（21核验+105LeafOnly+10诊断）；近邻与时序参考不跑CGB；N3动态拟合另计。一个近邻方法的五数据完整300候选/4内折/5外折需30,025 fits；先保证两个主近邻与负对照，勿直接启动四方法全九数据。PILOT是单树，TAO尊重官方常数叶源码，不能冒充2025线性叶版本。原16变体/显著性/耗时统计不重跑；无需默认42次时序CGB重放。N5仅在P0收口后限时实现和运行。
+
+不要把源码存在或预检查通过写成实验完成；R0不过不能拼新旧四格；不根据新test结果删方法/换指标/重抽候选；N3是等搜索预算，final refit成本必须另报，不能宣称总训练成本相等。维护可追踪的执行日志、实际覆盖、失败/超时与结果备份。运行成功后请继续汇总真实对照表、填逐位回复骨架并交作者审阅，不只启动作业就停止。范围内兼容修复、构建、训练、结果汇总已授权，清晰可逆步骤不用再次请求批准。

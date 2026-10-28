@@ -1,0 +1,71 @@
+{
+  "method": "tao",
+  "status": "success",
+  "seed": 13,
+  "input_sha256": "157894c9c96c9a0f3f1b4c794087b7f5b96c19700fe0cf267e547906bad4c08f",
+  "train_rows": 91,
+  "predict_rows": 23,
+  "feature_count": 42,
+  "requested_params": {
+    "depth": 4,
+    "max_iter": 3,
+    "C_dnode": 10
+  },
+  "model_fit_calls": 1,
+  "crossgb_fit_calls": 0,
+  "fit_timing_scope": "includes first-use author import/JIT; do not interpret as warmed kernel timing",
+  "environment": {
+    "python": "3.13.9",
+    "system": "Darwin",
+    "machine": "arm64",
+    "versions": {
+      "numpy": "2.3.5",
+      "scipy": "1.16.3",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.7.2",
+      "numba": "0.62.1"
+    }
+  },
+  "source": {
+    "method": "tao",
+    "url": "https://faculty.ucmerced.edu/mcarreira-perpinan/research/software/code-TAO-v2026-07-22.tar.gz",
+    "revision": "official-2026-07-22",
+    "archive_sha256": "d006f1d7fafb2e49795f666997cb1800b4d7aeea12d22e4e9bead42fbe430351",
+    "archive_bytes": 22380635,
+    "code_fingerprint": "4c2a79326be4e79cfeec3365346adaf01e628b12121275ee0705a07a53952234",
+    "code_file_count": 9,
+    "extracted_path": "vendor/tao"
+  },
+  "adapter_fingerprint": "27480823395265f2bd0f0fa91bcc026eeb4aee2aa99751ca7d28069a25ac2904",
+  "fit_wall_sec": 1.06593025001348,
+  "fit_process_cpu_sec": 1.021897,
+  "predict_wall_sec": 7.85409938544035e-05,
+  "predict_process_cpu_sec": 7.80000000000225e-05,
+  "metadata": {
+    "method": "tao",
+    "task": "regression",
+    "standardize_training_only": false,
+    "threads_per_fit": 1,
+    "test_labels_passed_to_fit": false,
+    "implementation": "official_2026_07_22_python",
+    "leaf_model": "constant",
+    "node_model": "linear",
+    "paper_scope": "TAO family; not NeurIPS2025 linear-leaf implementation",
+    "effective_params": {
+      "depth": 4,
+      "max_iter": 3,
+      "C_dnode": 10,
+      "alpha": 0.0,
+      "node_max_iter": 300,
+      "tol": 1e-05,
+      "strict_update": true,
+      "postprocess": true,
+      "node_type": "linear",
+      "leaf_type": "majority_regression",
+      "init_type": "median_split"
+    }
+  },
+  "rmse": 41.536350104869314,
+  "evaluation_scope": "evaluate-only labels; never passed to model.fit",
+  "prediction_sha256": "17aae80a82ff6201599d64ab74138f05529637252c2194ae79b374ef012224f3"
+}

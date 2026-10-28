@@ -1,0 +1,1531 @@
+{
+  "stage": "B",
+  "host": "TabularData_Processor",
+  "core_slot": 0,
+  "worker_sha256": "d2e2743d38c80b4d82b9bfb5e4a04aa1a88be952603460fad86f0e9fcb747e2a",
+  "wall_budget_seconds": 1500,
+  "data_sha256": {
+    "last_increment_inputs/B/B_train144_d16__s121001.npz": "350bced590460625b322c75b0ebf99c351bc29e4ee15b4bd86587479de08c212",
+    "last_increment_inputs/B/B_train144_d32__s121001.npz": "78991c59446eebe0b1c33278f02bd9eb1f22db73911f267c576def4f2408694b",
+    "last_increment_inputs/B/B_train288_d16__s121001.npz": "437413049e4eca50435d374037e5d0c349b461122a8f576bcb6733867cfb31e8",
+    "last_increment_inputs/B/B_train288_d32__s121001.npz": "5e5b7b36a74bf26259ec622ec838e4ee18a587f33584b420409c876e2d820879",
+    "last_increment_inputs/B/B_train144_d16__s121002.npz": "fc66a9c534841441bf47237d316dfe4f634e57b7d55480525f7f7b523ed11ac2",
+    "last_increment_inputs/B/B_train144_d32__s121002.npz": "4989d2521b2d5922e91226276328a609a739bda58572bc91f634e080608707ef",
+    "last_increment_inputs/B/B_train288_d16__s121002.npz": "4ca7e2c002e7c74c360abb00a8a46592e35fbddd01fe7cd5489a83720ac15116",
+    "last_increment_inputs/B/B_train288_d32__s121002.npz": "06051ab24e62665ddcd2504a5db00769e1d78f54aade5156b787632faecfb7fd",
+    "last_increment_inputs/B/B_train144_d16__s121003.npz": "66f1469da5142e7a651dbc4c9a756c9436fad85285518538949addc07b17c3e5",
+    "last_increment_inputs/B/B_train144_d32__s121003.npz": "d00bb6f446e29dd09a7ab09bc8431af0b3eea428c0237a7c5b9e3356568d5678",
+    "last_increment_inputs/B/B_train288_d16__s121003.npz": "6db945a9acfcd23ef81052d4b125c4663dbc526e5e5e64cd5b7ae7bdbf7644cd",
+    "last_increment_inputs/B/B_train288_d32__s121003.npz": "a391f543c0e6dd079e7629cfb52eb04cc8b7e3f43bbd91380bf21fe2f7759818",
+    "last_increment_inputs/B/B_train144_d16__s121004.npz": "1582423a4fcfe93efad206b2ebf46636303407ef07930b356701422ec4fb23d7",
+    "last_increment_inputs/B/B_train144_d32__s121004.npz": "6304c7980577f07e8acd741fd85f6a049b7a0294f9a8f19e9eb480ffde340575",
+    "last_increment_inputs/B/B_train288_d16__s121004.npz": "29ceb4753264fb8191fb7323731555122f90d7110747d2c1d03beb90b5e3caaf",
+    "last_increment_inputs/B/B_train288_d32__s121004.npz": "815ab99b4f7f8f22256b9850689e3a340efce320d6e6131466211975ddf24d18",
+    "last_increment_inputs/B/B_train144_d16__s121005.npz": "17c6b09f03aa46a3d7a6983475e05e1adc37dd13a38b325ac05b143c8874dae8",
+    "last_increment_inputs/B/B_train144_d32__s121005.npz": "b45e0ed8a2fc62dfca7fa44d127adc9889de288e11b62c1c994c427d4e782c15",
+    "last_increment_inputs/B/B_train288_d16__s121005.npz": "7a7d6eee25169a80c05e4f7625e50520f6ce0a1977e26f8b155140a6d6254d9f",
+    "last_increment_inputs/B/B_train288_d32__s121005.npz": "598d0e7981a1621c797b53f69c71a04cf3a2772c71f6dfbd043f1ece793a1f3e"
+  },
+  "jobs": [
+    {
+      "id": "B_train144_d16/CrossGB/s121001",
+      "case": "B_train144_d16",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121001,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121001.npz",
+      "relative_output": "B_train144_d16/CrossGB/s121001",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/LinXGBoost/s121001",
+      "case": "B_train144_d16",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121001,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121001.npz",
+      "relative_output": "B_train144_d16/LinXGBoost/s121001",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/PL/s121001",
+      "case": "B_train144_d16",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121001,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121001.npz",
+      "relative_output": "B_train144_d16/PL/s121001",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/LGB_linear/s121001",
+      "case": "B_train144_d16",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121001,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121001.npz",
+      "relative_output": "B_train144_d16/LGB_linear/s121001",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/CrossGB/s121001",
+      "case": "B_train144_d32",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121001,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121001.npz",
+      "relative_output": "B_train144_d32/CrossGB/s121001",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/LinXGBoost/s121001",
+      "case": "B_train144_d32",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121001,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121001.npz",
+      "relative_output": "B_train144_d32/LinXGBoost/s121001",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/PL/s121001",
+      "case": "B_train144_d32",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121001,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121001.npz",
+      "relative_output": "B_train144_d32/PL/s121001",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/LGB_linear/s121001",
+      "case": "B_train144_d32",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121001,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121001.npz",
+      "relative_output": "B_train144_d32/LGB_linear/s121001",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/CrossGB/s121001",
+      "case": "B_train288_d16",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121001,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121001.npz",
+      "relative_output": "B_train288_d16/CrossGB/s121001",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/LinXGBoost/s121001",
+      "case": "B_train288_d16",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121001,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121001.npz",
+      "relative_output": "B_train288_d16/LinXGBoost/s121001",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/PL/s121001",
+      "case": "B_train288_d16",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121001,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121001.npz",
+      "relative_output": "B_train288_d16/PL/s121001",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/LGB_linear/s121001",
+      "case": "B_train288_d16",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121001,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121001.npz",
+      "relative_output": "B_train288_d16/LGB_linear/s121001",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/CrossGB/s121001",
+      "case": "B_train288_d32",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121001,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121001.npz",
+      "relative_output": "B_train288_d32/CrossGB/s121001",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/LinXGBoost/s121001",
+      "case": "B_train288_d32",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121001,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121001.npz",
+      "relative_output": "B_train288_d32/LinXGBoost/s121001",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/PL/s121001",
+      "case": "B_train288_d32",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121001,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121001.npz",
+      "relative_output": "B_train288_d32/PL/s121001",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/LGB_linear/s121001",
+      "case": "B_train288_d32",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121001,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121001.npz",
+      "relative_output": "B_train288_d32/LGB_linear/s121001",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/CrossGB/s121002",
+      "case": "B_train144_d16",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121002,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121002.npz",
+      "relative_output": "B_train144_d16/CrossGB/s121002",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/LinXGBoost/s121002",
+      "case": "B_train144_d16",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121002,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121002.npz",
+      "relative_output": "B_train144_d16/LinXGBoost/s121002",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/PL/s121002",
+      "case": "B_train144_d16",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121002,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121002.npz",
+      "relative_output": "B_train144_d16/PL/s121002",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/LGB_linear/s121002",
+      "case": "B_train144_d16",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121002,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121002.npz",
+      "relative_output": "B_train144_d16/LGB_linear/s121002",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/CrossGB/s121002",
+      "case": "B_train144_d32",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121002,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121002.npz",
+      "relative_output": "B_train144_d32/CrossGB/s121002",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/LinXGBoost/s121002",
+      "case": "B_train144_d32",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121002,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121002.npz",
+      "relative_output": "B_train144_d32/LinXGBoost/s121002",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/PL/s121002",
+      "case": "B_train144_d32",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121002,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121002.npz",
+      "relative_output": "B_train144_d32/PL/s121002",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/LGB_linear/s121002",
+      "case": "B_train144_d32",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121002,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121002.npz",
+      "relative_output": "B_train144_d32/LGB_linear/s121002",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/CrossGB/s121002",
+      "case": "B_train288_d16",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121002,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121002.npz",
+      "relative_output": "B_train288_d16/CrossGB/s121002",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/LinXGBoost/s121002",
+      "case": "B_train288_d16",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121002,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121002.npz",
+      "relative_output": "B_train288_d16/LinXGBoost/s121002",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/PL/s121002",
+      "case": "B_train288_d16",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121002,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121002.npz",
+      "relative_output": "B_train288_d16/PL/s121002",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/LGB_linear/s121002",
+      "case": "B_train288_d16",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121002,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121002.npz",
+      "relative_output": "B_train288_d16/LGB_linear/s121002",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/CrossGB/s121002",
+      "case": "B_train288_d32",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121002,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121002.npz",
+      "relative_output": "B_train288_d32/CrossGB/s121002",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/LinXGBoost/s121002",
+      "case": "B_train288_d32",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121002,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121002.npz",
+      "relative_output": "B_train288_d32/LinXGBoost/s121002",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/PL/s121002",
+      "case": "B_train288_d32",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121002,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121002.npz",
+      "relative_output": "B_train288_d32/PL/s121002",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/LGB_linear/s121002",
+      "case": "B_train288_d32",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121002,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121002.npz",
+      "relative_output": "B_train288_d32/LGB_linear/s121002",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/CrossGB/s121003",
+      "case": "B_train144_d16",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121003,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121003.npz",
+      "relative_output": "B_train144_d16/CrossGB/s121003",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/LinXGBoost/s121003",
+      "case": "B_train144_d16",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121003,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121003.npz",
+      "relative_output": "B_train144_d16/LinXGBoost/s121003",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/PL/s121003",
+      "case": "B_train144_d16",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121003,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121003.npz",
+      "relative_output": "B_train144_d16/PL/s121003",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/LGB_linear/s121003",
+      "case": "B_train144_d16",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121003,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121003.npz",
+      "relative_output": "B_train144_d16/LGB_linear/s121003",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/CrossGB/s121003",
+      "case": "B_train144_d32",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121003,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121003.npz",
+      "relative_output": "B_train144_d32/CrossGB/s121003",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/LinXGBoost/s121003",
+      "case": "B_train144_d32",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121003,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121003.npz",
+      "relative_output": "B_train144_d32/LinXGBoost/s121003",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/PL/s121003",
+      "case": "B_train144_d32",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121003,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121003.npz",
+      "relative_output": "B_train144_d32/PL/s121003",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/LGB_linear/s121003",
+      "case": "B_train144_d32",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121003,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121003.npz",
+      "relative_output": "B_train144_d32/LGB_linear/s121003",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/CrossGB/s121003",
+      "case": "B_train288_d16",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121003,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121003.npz",
+      "relative_output": "B_train288_d16/CrossGB/s121003",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/LinXGBoost/s121003",
+      "case": "B_train288_d16",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121003,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121003.npz",
+      "relative_output": "B_train288_d16/LinXGBoost/s121003",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/PL/s121003",
+      "case": "B_train288_d16",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121003,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121003.npz",
+      "relative_output": "B_train288_d16/PL/s121003",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/LGB_linear/s121003",
+      "case": "B_train288_d16",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121003,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121003.npz",
+      "relative_output": "B_train288_d16/LGB_linear/s121003",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/CrossGB/s121003",
+      "case": "B_train288_d32",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121003,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121003.npz",
+      "relative_output": "B_train288_d32/CrossGB/s121003",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/LinXGBoost/s121003",
+      "case": "B_train288_d32",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121003,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121003.npz",
+      "relative_output": "B_train288_d32/LinXGBoost/s121003",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/PL/s121003",
+      "case": "B_train288_d32",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121003,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121003.npz",
+      "relative_output": "B_train288_d32/PL/s121003",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/LGB_linear/s121003",
+      "case": "B_train288_d32",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121003,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121003.npz",
+      "relative_output": "B_train288_d32/LGB_linear/s121003",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/CrossGB/s121004",
+      "case": "B_train144_d16",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121004,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121004.npz",
+      "relative_output": "B_train144_d16/CrossGB/s121004",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/LinXGBoost/s121004",
+      "case": "B_train144_d16",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121004,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121004.npz",
+      "relative_output": "B_train144_d16/LinXGBoost/s121004",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/PL/s121004",
+      "case": "B_train144_d16",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121004,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121004.npz",
+      "relative_output": "B_train144_d16/PL/s121004",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/LGB_linear/s121004",
+      "case": "B_train144_d16",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121004,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121004.npz",
+      "relative_output": "B_train144_d16/LGB_linear/s121004",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/CrossGB/s121004",
+      "case": "B_train144_d32",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121004,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121004.npz",
+      "relative_output": "B_train144_d32/CrossGB/s121004",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/LinXGBoost/s121004",
+      "case": "B_train144_d32",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121004,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121004.npz",
+      "relative_output": "B_train144_d32/LinXGBoost/s121004",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/PL/s121004",
+      "case": "B_train144_d32",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121004,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121004.npz",
+      "relative_output": "B_train144_d32/PL/s121004",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/LGB_linear/s121004",
+      "case": "B_train144_d32",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121004,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121004.npz",
+      "relative_output": "B_train144_d32/LGB_linear/s121004",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/CrossGB/s121004",
+      "case": "B_train288_d16",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121004,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121004.npz",
+      "relative_output": "B_train288_d16/CrossGB/s121004",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/LinXGBoost/s121004",
+      "case": "B_train288_d16",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121004,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121004.npz",
+      "relative_output": "B_train288_d16/LinXGBoost/s121004",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/PL/s121004",
+      "case": "B_train288_d16",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121004,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121004.npz",
+      "relative_output": "B_train288_d16/PL/s121004",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/LGB_linear/s121004",
+      "case": "B_train288_d16",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121004,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121004.npz",
+      "relative_output": "B_train288_d16/LGB_linear/s121004",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/CrossGB/s121004",
+      "case": "B_train288_d32",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121004,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121004.npz",
+      "relative_output": "B_train288_d32/CrossGB/s121004",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/LinXGBoost/s121004",
+      "case": "B_train288_d32",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121004,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121004.npz",
+      "relative_output": "B_train288_d32/LinXGBoost/s121004",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/PL/s121004",
+      "case": "B_train288_d32",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121004,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121004.npz",
+      "relative_output": "B_train288_d32/PL/s121004",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/LGB_linear/s121004",
+      "case": "B_train288_d32",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121004,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121004.npz",
+      "relative_output": "B_train288_d32/LGB_linear/s121004",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/CrossGB/s121005",
+      "case": "B_train144_d16",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121005,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121005.npz",
+      "relative_output": "B_train144_d16/CrossGB/s121005",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/LinXGBoost/s121005",
+      "case": "B_train144_d16",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121005,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121005.npz",
+      "relative_output": "B_train144_d16/LinXGBoost/s121005",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/PL/s121005",
+      "case": "B_train144_d16",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121005,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121005.npz",
+      "relative_output": "B_train144_d16/PL/s121005",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d16/LGB_linear/s121005",
+      "case": "B_train144_d16",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121005,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d16__s121005.npz",
+      "relative_output": "B_train144_d16/LGB_linear/s121005",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/CrossGB/s121005",
+      "case": "B_train144_d32",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121005,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121005.npz",
+      "relative_output": "B_train144_d32/CrossGB/s121005",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/LinXGBoost/s121005",
+      "case": "B_train144_d32",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121005,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121005.npz",
+      "relative_output": "B_train144_d32/LinXGBoost/s121005",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/PL/s121005",
+      "case": "B_train144_d32",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121005,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121005.npz",
+      "relative_output": "B_train144_d32/PL/s121005",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train144_d32/LGB_linear/s121005",
+      "case": "B_train144_d32",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121005,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train144_d32__s121005.npz",
+      "relative_output": "B_train144_d32/LGB_linear/s121005",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/CrossGB/s121005",
+      "case": "B_train288_d16",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121005,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121005.npz",
+      "relative_output": "B_train288_d16/CrossGB/s121005",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/LinXGBoost/s121005",
+      "case": "B_train288_d16",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121005,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121005.npz",
+      "relative_output": "B_train288_d16/LinXGBoost/s121005",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/PL/s121005",
+      "case": "B_train288_d16",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121005,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121005.npz",
+      "relative_output": "B_train288_d16/PL/s121005",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d16/LGB_linear/s121005",
+      "case": "B_train288_d16",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121005,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d16__s121005.npz",
+      "relative_output": "B_train288_d16/LGB_linear/s121005",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/CrossGB/s121005",
+      "case": "B_train288_d32",
+      "method": "CrossGB",
+      "candidate": 13,
+      "seed": 121005,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121005.npz",
+      "relative_output": "B_train288_d32/CrossGB/s121005",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/LinXGBoost/s121005",
+      "case": "B_train288_d32",
+      "method": "LinXGBoost",
+      "candidate": 17,
+      "seed": 121005,
+      "params": {
+        "n_estimators": 2,
+        "max_depth": 3,
+        "lbda": 10.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.5
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121005.npz",
+      "relative_output": "B_train288_d32/LinXGBoost/s121005",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/PL/s121005",
+      "case": "B_train288_d32",
+      "method": "PL",
+      "candidate": 8,
+      "seed": 121005,
+      "params": {
+        "num_trees": 1,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 2.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 5.0,
+        "learning_rate": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121005.npz",
+      "relative_output": "B_train288_d32/PL/s121005",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    },
+    {
+      "id": "B_train288_d32/LGB_linear/s121005",
+      "case": "B_train288_d32",
+      "method": "LGB_linear",
+      "candidate": 10,
+      "seed": 121005,
+      "params": {
+        "depth": 2,
+        "ridge": 10.0,
+        "trees": 256,
+        "learning_rate": 0.1,
+        "p": 1.0
+      },
+      "data": "last_increment_inputs/B/B_train288_d32__s121005.npz",
+      "relative_output": "B_train288_d32/LGB_linear/s121005",
+      "evaluate_test": true,
+      "timeout_seconds": 180
+    }
+  ]
+}

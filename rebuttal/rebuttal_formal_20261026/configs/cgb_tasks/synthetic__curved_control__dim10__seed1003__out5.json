@@ -1,0 +1,66 @@
+{
+  "task_id": "synthetic__curved_control__dim10__seed1003__out5",
+  "scenario": "curved_control",
+  "dimension": 10,
+  "data_seed": 1003,
+  "outer_fold": 5,
+  "task_type": "regression",
+  "n_classes": 0,
+  "model_seed": 271828,
+  "data_npz": "inputs/cgb_ablation/curved_control__dim10__seed1003/data.npz",
+  "data_npz_sha256": "31836ed6293be789ce5b0437f34ad40b209fb88e8708139b0d923b0abbf62e5c",
+  "backbone": {
+    "learning_rate": 0.03438644055170314,
+    "max_depth": 4,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0,
+    "n_estimators": 200,
+    "max_bin": 255,
+    "backbone_id": "shared_backbone_0131",
+    "reg_lambda": 0.004604666392386983,
+    "candidate_id": "xgb_0131",
+    "source": "generated_shared_backbone"
+  },
+  "backbone_hash": "8232000ea411c037955ff75892c2d305c8ee1df01228b32eaacf3b5f4589ec43",
+  "archived_split": {
+    "task_id": "synthetic__curved_control__dim10__seed1003__out5",
+    "data_hash": "fd53cf9c545d8b023d6c88be86c265384c3df16e37a0c80b3eb7b5d918d2cdd7",
+    "split_seed": 315162,
+    "outer_fold": 5,
+    "outer_train_hash": "91044db78f65d2418c90b4322817fd4a8432d864279393027a3465796030c1fa",
+    "outer_test_hash": "79639f454117ba32c5f5a86a7b61d81344a3a77bf9774694fed3835522574329",
+    "inner": [
+      {
+        "inner_fold": 1,
+        "train_hash": "1838053f9820b27e35c42bc643525583593ae13d3564f950b3b1572df410b833",
+        "validation_hash": "e40dda3f1532c4dbbc5eb7bd97896d31345df081f8e883ab1f024429f05d9091"
+      },
+      {
+        "inner_fold": 2,
+        "train_hash": "854dc7ae651d93cb3e442afa0d79b08c9602cab710e8e0708b640651781878e2",
+        "validation_hash": "b03f5532b66b5b42895450fe2d4b4546bb72131bd36df595af4b742a2b1e4eda"
+      },
+      {
+        "inner_fold": 3,
+        "train_hash": "4728d4d88244b3c2d75d3a5312b91f3c2a616e85d925983d099823b8f65a33d3",
+        "validation_hash": "791e328ba607d70bc9a6697d5ce080c32b2f39c4c32292723415a911a05ba986"
+      },
+      {
+        "inner_fold": 4,
+        "train_hash": "3bb0e4e32f9576684bd0b5c12b1262e4fc97b0be85bf0d4dee27525cb1a4df76",
+        "validation_hash": "03ab0f3f3aa3e81d0f6c88b47c1ef0720d54620055f06ddb0db598bf7963079f"
+      }
+    ],
+    "inner_manifest_hash": "7a67d7067f3088f3ecf9b68c108cedba773f3f5996bf6c340cd5cd0218dd8062"
+  },
+  "archive_shard": "aaai_FullCodeProject-check_codereview0701/datacollection0702/0716dataAddition/metagb_ablation_syn/syn_formal_formal16_v1/tasks/synthetic__curved_control__dim10__seed1003__out5.json",
+  "archive_shard_sha256": "7fb78331d822115553db58c4abe4544dbe418a094069abdfd1171e4d91d5c48a",
+  "historical_metrics": {
+    "xgb": 0.15471290081203715,
+    "bias_p00_sa0": 0.15392317969257466,
+    "split_p10_sa0": 0.16278121942456508,
+    "full_p10_sa0": 0.1574257128415712
+  },
+  "primary_metric": "rmse",
+  "data_hash_scope": "archived data_hash identifies generator arguments; frozen NPZ additionally hashes actual arrays"
+}

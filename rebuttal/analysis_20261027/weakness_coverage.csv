@@ -1,0 +1,27 @@
+id,reviewer,weakness,status,experiments,available_evidence,claim_boundary,next_action
+qxju-1,qxju,独立预测变量相对旧线性叶的实际增量,partially_covered,N1/W1,A PL/Lin逐折；B LGB均值,直接比较已补；未支持精度领先；变量选择并非独有,补预算/原始summary；精确结构对照
+qxju-2,qxju,标准评分+预测叶缺失,direct_experiment_available,N2,A 105 LeafOnly及四格配对,固定backbone四格已补；3 seed，不是15独立重复,填表及配对解释；不跨N1/N2拼排行
+qxju-3,qxju,CPU为何大幅退化,partially_covered,N4,A 20 selected结果与部分结构,CPU根因未确证；outside-path使用率不是因果证据,诊断支持量/系数/缩放/异常预测；必要时训练内受控干预
+t7wg-1,t7wg,真实数据有哪些可观察适用特征,evidence_gap,N7/N4,附录G探索性；本次结构与smoke,没有已验证的前瞻适用性选模器,披露探索；正负案例按训练内规则确认
+t7wg-2,t7wg,额外成本何时值得,partially_covered,N3,A部分budget；B服务器完成记录,完整30组不在快照；且缺近邻等预算,补完整N3；追加PL/LGB同机等搜索预算
+t7wg-3,t7wg,主要新意是哪个组件/组合,partially_covered,N1/N2/W1,源码/原论文与N2,组合贡献可检验；线性叶/单变量/leaf-aware已有先例,精确定位；必要时预声明path-only候选消融
+t7wg-4,t7wg,k=1是偏置还是工程折中,evidence_gap,N5,执行器/预测重放；无容量表,k1最优性未证；hist不构成k1硬约束,先核验梯度更新与raw/bin口径，再比同规则k1/2/3
+jSCP-1,jSCP,PL Trees/LinXGBoost/LGB linear及新近文献缺失,partially_covered,N1,A PL/Lin等；B LGB,近邻覆盖已有但预算和异常待审计,收齐LGB逐折/plan与耗时；更新相关工作
+jSCP-2,jSCP,通用tabular弱且成本高,partially_covered,N1/N3/W,已有真实负结果与成本,通用竞争力弱已确认；何时值得未确认,限缩总体主张，保留负例，补近邻等预算
+jSCP-3,jSCP,时序高收益与统计支撑薄弱,reference_covered_robustness_open,N6,A 10任务20参照行,CGB对最强简单参照0/10；切分重建；多起点未覆盖,核对target/split/scale；收紧fixed-cutoff主张
+jSCP-4,jSCP,为何恰好一个变量,evidence_gap,N5,slope/bias源码；无k容量结果,p不是k；ensemble offset不是每叶截距,同规则k容量比较；affine另列
+wWos-1,wWos,真实收益范围窄,bounded_response_ready,N1/W,原真实结果与新近邻,范围窄是事实；不能用筛选案例改写总体胜率,呈现选择性收益与失败边界
+wWos-2,wWos,P及维度带来成本,partially_covered,N3,成本日志/源码复杂度,当前显式C×P因子；task elapsed不等于单fit,补wall/CPU/内存与预算曲线
+wWos-3,wWos,缺最近邻boosted线性叶,partially_covered,N1,A PL/Lin；B LGB,已经有最近邻直接对照，未得普遍优势,准确披露方法特定搜索空间/覆盖
+VVba-1,VVba,对角分类边界是否仍阶梯,analytic_response_ready,W/N8,公式/预测器,轴对齐路由不等于集成margin只能轴对齐,解析示例；不承诺训练一定恢复
+VVba-2,VVba,为何不同时拟合截距,analytic_response_ready,W/N5,叶函数源码,每叶slope或constant；非局部affine,准确说明取舍；量化offset负对照
+VVba-3,VVba,为何树级而非节点级抽样,implementation_response_ready,W,树级采样源码,树级与节点级并未实证优劣,按实际实现解释，不称节点采样比较完成
+VVba-4,VVba,shared/independent及p符号,definition_response_ready,W,候选池源码,independent不等于disjoint；p为候选比例,统一符号及采样语义
+VVba-5,VVba,CatBoost更简单为何更强,bounded_response_ready,W,真实强基线表,树形简单不等于算法应更弱,承认实测排名，不作无证根因判断
+AI-1,AI,score与独立叶目标不等价,definition_response_ready,W/N2,评分聚合代码,称predictive-aware surrogate，不泛称精确子叶联合最优,限制优化等价性表述
+AI-2,AI,bin拟合/raw应用不一致,partially_covered,N5/W,TrainValue与predictor源码,bin训练/raw应用已确认；误差量化不充分,同规则raw/bin控制；不把规则残差算k容量
+AI-3,AI,Categorical改善主要来自anchor,descriptive_response_possible,N2/W,原分类端点记录,归因比例是描述性而非因果,保留seed配对及指标方向
+AI-4,AI,图1 eta=.1与单树到noise floor矛盾,evidence_gap,W,冻结图；原脚本未找到,不能无证据说是typo,寻找原生成链；否则明示局限，不依赖该图
+AI-5,AI,独立选单变量已有先例,literature_positioning_needed,W/N1,PILOT/近邻原论文,单变量选择不是首次；不以缺搜索证明新颖,精准引用先例，限制组合层贡献
+AI-6,AI,角色分歧建议及forecasting参考,partially_covered,N4/N6,outside-path结构与简单时序参照,结构诊断不证明部署适用性；时序是fixed cut,准确呈现已补证据和未覆盖范围
+AI-7,AI,1/2、Hessian条件、符号和runtime指路,analytic_response_ready,W,公式/源参数与成本材料,明确分母/Hessian条件与阈值单位,核对公式并给出原附录位置

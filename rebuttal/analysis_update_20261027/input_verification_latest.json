@@ -1,0 +1,22 @@
+{
+  "status": "inputs_and_configs_valid",
+  "model_fit_calls": 0,
+  "native_build_performed": false,
+  "project_root": "/Users/ancd/PaperFiles/aaai27-rebuttal/rebuttal",
+  "manifest_files_verified": 1721,
+  "planned_e1_rows": 420,
+  "planned_e2_outer_model_jobs": 100,
+  "planned_e5_tasks": 10,
+  "host": {
+    "system": "Darwin",
+    "architecture": "arm64",
+    "python": "3.9.6",
+    "available_cpus": 12
+  },
+  "packages": {},
+  "errors": [],
+  "warnings": [
+    "Static audit only: this host is not the target Linux server"
+  ],
+  "readiness_boundary": "configuration/input audit only; E0/E1/E2/E3/E4/E6 implementations and server runtime verification remain"
+}

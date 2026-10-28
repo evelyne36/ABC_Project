@@ -1,0 +1,35 @@
+{
+  "experiment_id": "E3",
+  "status": "analysis_and_export_adapter_required",
+  "minimum_datasets": [
+    "cpu_activity",
+    "kin8nm"
+  ],
+  "extension_datasets": [
+    "energy_efficiency",
+    "houses"
+  ],
+  "reuse_models_from": [
+    "E1",
+    "E2"
+  ],
+  "diagnostics": [
+    "paired_fold_validation_and_test",
+    "selected_p_aggregation_and_backbone",
+    "fraction_of_extreme_or_failed_candidates",
+    "sample_weighted_nonbias_coverage",
+    "sample_weighted_predictive_feature_outside_leaf_path_rate",
+    "coefficient_and_contribution_ranges",
+    "inside_vs_outside_training_feature_support_error",
+    "local_univariate_vs_top3_residual_signal"
+  ],
+  "controlled_interventions": [
+    "bias_vs_predictive_response",
+    "fixed_path_and_predictor_raw_coefficient_refit",
+    "finite_inner_validation_leaf_regularization_or_min_leaf_settings",
+    "separate_training_only_scaling_probe"
+  ],
+  "change_one_factor_at_a_time": true,
+  "causal_conclusion_requires_controlled_intervention": true,
+  "do_not_fit_suitability_weights_on_same_benchmark_outcomes": true
+}

@@ -1,0 +1,53 @@
+suite,case,method,candidate_ceiling,complete_candidates,unstarted_candidates,development_elapsed_sec,selected_candidate,search_status_counts,note
+formal24_v1,gas_turbine_co,CrossGB,24,24,0,94.36975845499546,23,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,gas_turbine_co,XGB,24,24,0,68.45007941601216,0,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,gas_turbine_co,LGB_constant,24,24,0,65.49515791499289,8,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,gas_turbine_co,LGB_linear,24,24,0,72.66158292500768,20,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,gas_turbine_co,PL,24,24,0,109.59309928899165,19,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,gas_turbine_co,LinXGBoost,24,2,19,480.0140934900264,0,"{""ok"": 4, ""timeout"": 6}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S3_sparse,CrossGB,24,24,0,99.69433108900557,16,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S3_sparse,XGB,24,24,0,72.01078746499843,5,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S3_sparse,LGB_constant,24,24,0,63.719967134995386,17,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S3_sparse,LGB_linear,24,24,0,65.94725358299911,19,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S3_sparse,PL,24,24,0,90.09450606699102,23,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S3_sparse,LinXGBoost,24,6,15,480.0171653580037,3,"{""ok"": 13, ""timeout"": 4, ""budget_exhausted"": 1}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S2_sparse,CrossGB,24,24,0,212.84873843600508,16,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S2_sparse,XGB,24,24,0,80.65569348901045,9,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S2_sparse,LGB_constant,24,24,0,71.52725380801712,15,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S2_sparse,LGB_linear,24,24,0,72.92856448399834,18,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S2_sparse,PL,24,24,0,155.80648601599387,3,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S2_sparse,LinXGBoost,24,4,16,480.0193842869776,20,"{""ok"": 8, ""timeout"": 7, ""budget_exhausted"": 1}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S1_affine,CrossGB,24,24,0,208.20123705102014,16,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S1_affine,XGB,24,24,0,84.92562660199474,14,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S1_affine,LGB_constant,24,24,0,74.5500594789919,14,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S1_affine,LGB_linear,24,24,0,75.34787670499645,4,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S1_affine,PL,24,24,0,114.83764907397563,1,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S1_affine,LinXGBoost,24,5,16,480.0186460480036,0,"{""ok"": 10, ""timeout"": 6}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S1_sparse,CrossGB,24,24,0,208.3054912959924,20,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S1_sparse,XGB,24,24,0,86.58286798000336,13,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S1_sparse,LGB_constant,24,24,0,75.60591091300012,19,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S1_sparse,LGB_linear,24,24,0,75.69411671900889,6,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S1_sparse,PL,24,24,0,127.70996996900067,21,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,S1_sparse,LinXGBoost,24,5,16,480.01959982400876,21,"{""ok"": 10, ""timeout"": 6}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,ilpd_numeric,CrossGB,24,24,0,81.16008369699921,12,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,ilpd_numeric,XGB,24,24,0,66.99319790899972,0,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,ilpd_numeric,LGB_constant,24,24,0,62.28592173200013,12,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,ilpd_numeric,LGB_linear,24,24,0,65.18842147200121,0,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,website_phishing,CrossGB,24,24,0,380.2140794579991,20,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,website_phishing,XGB,24,24,0,72.30926826199902,15,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,website_phishing,LGB_constant,24,24,0,73.05633868400037,11,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,website_phishing,LGB_linear,24,24,0,80.8162703779999,2,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,protein,CrossGB,24,24,0,114.28584709798452,15,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,protein,XGB,24,24,0,78.08565475099022,15,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,protein,LGB_constant,24,24,0,77.83301026199479,23,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,protein,LGB_linear,24,24,0,86.76263683999423,15,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,protein,PL,24,24,0,134.98970359601662,11,"{""ok"": 48}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal24_v1,protein,LinXGBoost,24,1,19,480.01780315401265,0,"{""timeout"": 7, ""ok"": 2, ""budget_exhausted"": 1}",480s elapsed method/case cap; two dev seeds/candidate;60s fit cap; actual candidates may differ
+formal30_class_v1,ilpd_numeric,CrossGB,30,30,0,,26,"parent24 plus6 new, all complete",6 small-round anchors frozen before extension; selection val logloss only
+formal30_class_v1,ilpd_numeric,XGB,30,30,0,,26,"parent24 plus6 new, all complete",6 small-round anchors frozen before extension; selection val logloss only
+formal30_class_v1,ilpd_numeric,LGB_constant,30,30,0,,26,"parent24 plus6 new, all complete",6 small-round anchors frozen before extension; selection val logloss only
+formal30_class_v1,ilpd_numeric,LGB_linear,30,30,0,,26,"parent24 plus6 new, all complete",6 small-round anchors frozen before extension; selection val logloss only
+formal30_class_v1,website_phishing,CrossGB,30,30,0,,20,"parent24 plus6 new, all complete",6 small-round anchors frozen before extension; selection val logloss only
+formal30_class_v1,website_phishing,XGB,30,30,0,,15,"parent24 plus6 new, all complete",6 small-round anchors frozen before extension; selection val logloss only
+formal30_class_v1,website_phishing,LGB_constant,30,30,0,,11,"parent24 plus6 new, all complete",6 small-round anchors frozen before extension; selection val logloss only
+formal30_class_v1,website_phishing,LGB_linear,30,30,0,,2,"parent24 plus6 new, all complete",6 small-round anchors frozen before extension; selection val logloss only

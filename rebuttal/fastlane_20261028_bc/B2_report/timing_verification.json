@@ -1,0 +1,7 @@
+{
+  "fits": 21,
+  "three_repeats_each_of_seven_methods": true,
+  "max_prediction_difference_vs_B2_seed99001": 0.0,
+  "recipe_identity": true,
+  "scope": "single seed three exclusive timing repetitions, not independent precision samples"
+}

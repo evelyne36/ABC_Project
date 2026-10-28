@@ -1,0 +1,16 @@
+{
+  "provenance": "archived_semantics_reconstructed_new_reference_not_historical_reproduction",
+  "warning": "Current archive hashes and splits are verified inputs, not original training-time hash/CLI authentication. No fitting has been performed.",
+  "args": {
+    "run_id": "ts_reference_nine_original_settings",
+    "seed": 42,
+    "split_protocol": "fixed",
+    "feature_mode": "window_summary",
+    "target_mode": "sequence",
+    "output_scope": "target",
+    "include_time_features": true,
+    "max_raw_rows": 0,
+    "max_features": 64,
+    "origin_state_channel_budget": 32
+  }
+}

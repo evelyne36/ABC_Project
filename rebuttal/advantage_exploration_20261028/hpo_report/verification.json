@@ -1,0 +1,11 @@
+{
+  "fits_seen": 960,
+  "statuses": {
+    "ok": 960
+  },
+  "successful_predictions_recomputed": 960,
+  "stages": [
+    "quick",
+    "hpo"
+  ]
+}

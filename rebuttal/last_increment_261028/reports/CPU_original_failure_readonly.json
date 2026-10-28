@@ -1,0 +1,146 @@
+{
+  "scope": "readonly original N3 CPU outer4 selected900s model; not N5 anchor",
+  "model_fit_calls": 0,
+  "candidate": 366,
+  "archived_prediction_max_abs_difference": 0.0,
+  "rmse": {
+    "train": 3.041692018508911,
+    "test": 216.34231567382812
+  },
+  "target_test_min": 0.0,
+  "target_test_max": 99.0,
+  "absolute_leaf_coefficient_max": 0.93480253,
+  "absolute_leaf_coefficient_p99": 0.7829291316,
+  "worst": [
+    {
+      "test_row": 3725,
+      "truth": 90.0,
+      "prediction": -8006.02197265625,
+      "top_contributions": [
+        {
+          "tree": 223,
+          "leaf": 40,
+          "feature": 20,
+          "coefficient": -0.00845644,
+          "contribution": -8118.537570480001,
+          "train_leaf_support": 7,
+          "test_feature": 960042.0,
+          "train_leaf_feature_min": 5.0,
+          "train_leaf_feature_max": 10.0,
+          "outside_leaf_train_range": true
+        },
+        {
+          "tree": 61,
+          "leaf": 32,
+          "feature": 8,
+          "coefficient": 3.3594366e-05,
+          "contribution": 25.257017029217998,
+          "train_leaf_support": 6,
+          "test_feature": 751823.0,
+          "train_leaf_feature_min": 15686.0,
+          "train_leaf_feature_max": 794374.0,
+          "outside_leaf_train_range": false
+        },
+        {
+          "tree": 64,
+          "leaf": 32,
+          "feature": 8,
+          "coefficient": 3.2630796e-05,
+          "contribution": 24.532582941108,
+          "train_leaf_support": 8,
+          "test_feature": 751823.0,
+          "train_leaf_feature_min": 15686.0,
+          "train_leaf_feature_max": 794374.0,
+          "outside_leaf_train_range": false
+        }
+      ]
+    },
+    {
+      "test_row": 4675,
+      "truth": 85.0,
+      "prediction": -2563.255126953125,
+      "top_contributions": [
+        {
+          "tree": 280,
+          "leaf": 43,
+          "feature": 20,
+          "coefficient": -0.0025855226,
+          "contribution": -2640.2865541906,
+          "train_leaf_support": 55,
+          "test_feature": 1021181.0,
+          "train_leaf_feature_min": 7.0,
+          "train_leaf_feature_max": 18.0,
+          "outside_leaf_train_range": true
+        },
+        {
+          "tree": 5,
+          "leaf": 47,
+          "feature": 21,
+          "coefficient": 0.8548598,
+          "contribution": 0.8548598,
+          "train_leaf_support": 1131,
+          "test_feature": 1.0,
+          "train_leaf_feature_min": 1.0,
+          "train_leaf_feature_max": 1.0,
+          "outside_leaf_train_range": false
+        },
+        {
+          "tree": 2,
+          "leaf": 39,
+          "feature": 21,
+          "coefficient": 0.84510076,
+          "contribution": 0.84510076,
+          "train_leaf_support": 924,
+          "test_feature": 1.0,
+          "train_leaf_feature_min": 1.0,
+          "train_leaf_feature_max": 1.0,
+          "outside_leaf_train_range": false
+        }
+      ]
+    },
+    {
+      "test_row": 4283,
+      "truth": 89.0,
+      "prediction": -1932.8856201171875,
+      "top_contributions": [
+        {
+          "tree": 395,
+          "leaf": 32,
+          "feature": 20,
+          "coefficient": -0.0018985417,
+          "contribution": -2012.7313890881999,
+          "train_leaf_support": 27,
+          "test_feature": 1060146.0,
+          "train_leaf_feature_min": 4.0,
+          "train_leaf_feature_max": 18.0,
+          "outside_leaf_train_range": true
+        },
+        {
+          "tree": 9,
+          "leaf": 29,
+          "feature": 21,
+          "coefficient": 0.8692354,
+          "contribution": 0.8692354,
+          "train_leaf_support": 1672,
+          "test_feature": 1.0,
+          "train_leaf_feature_min": 1.0,
+          "train_leaf_feature_max": 1.0,
+          "outside_leaf_train_range": false
+        },
+        {
+          "tree": 7,
+          "leaf": 37,
+          "feature": 21,
+          "coefficient": 0.8574549,
+          "contribution": 0.8574549,
+          "train_leaf_support": 2361,
+          "test_feature": 1.0,
+          "train_leaf_feature_min": 1.0,
+          "train_leaf_feature_max": 1.0,
+          "outside_leaf_train_range": false
+        }
+      ]
+    }
+  ],
+  "interpretation": "Descriptive failure localization only; no causal intervention or shared-root-cause claim."
+}

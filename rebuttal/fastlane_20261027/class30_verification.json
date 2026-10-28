@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-27T18:49:27.372866+00:00",
+  "scope": "local formal30_class_v1 classification finals plus formal24 parent development search; no fits",
+  "status": "passed_record_and_prediction_checks",
+  "runtime": {
+    "numpy": "2.3.5",
+    "sklearn": "1.7.2"
+  },
+  "formal30_runs": 1,
+  "final_records": 40,
+  "final_status_counts": {
+    "ok": 40
+  },
+  "final_prediction_files_recomputed": 40,
+  "classification_metric_values_recomputed": {
+    "logloss": 120,
+    "accuracy": 120,
+    "auc": 60
+  },
+  "max_absolute_metric_difference": {
+    "logloss": 0,
+    "accuracy": 0,
+    "auc": 0
+  },
+  "data_npz_used": 10,
+  "five_seed_coverage": {
+    "ilpd_numeric/CrossGB": [
+      98001,
+      98002,
+      98003,
+      98004,
+      98005
+    ],
+    "ilpd_numeric/XGB": [
+      98001,
+      98002,
+      98003,
+      98004,
+      98005
+    ],
+    "ilpd_numeric/LGB_constant": [
+      98001,
+      98002,
+      98003,
+      98004,
+      98005
+    ],
+    "ilpd_numeric/LGB_linear": [
+      98001,
+      98002,
+      98003,
+      98004,
+      98005
+    ],
+    "website_phishing/CrossGB": [
+      98001,
+      98002,
+      98003,
+      98004,
+      98005
+    ],
+    "website_phishing/XGB": [
+      98001,
+      98002,
+      98003,
+      98004,
+      98005
+    ],
+    "website_phishing/LGB_constant": [
+      98001,
+      98002,
+      98003,
+      98004,
+      98005
+    ],
+    "website_phishing/LGB_linear": [
+      98001,
+      98002,
+      98003,
+      98004,
+      98005
+    ]
+  },
+  "choices": [
+    {
+      "case": "ilpd_numeric",
+      "method": "CrossGB",
+      "selected_candidate": 26,
+      "mean_development_logloss_recomputed": 0.5204518842569692,
+      "complete_candidates": 30,
+      "selection_verified": true
+    },
+    {
+      "case": "ilpd_numeric",
+      "method": "XGB",
+      "selected_candidate": 26,
+      "mean_development_logloss_recomputed": 0.5199021241910824,
+      "complete_candidates": 30,
+      "selection_verified": true
+    },
+    {
+      "case": "ilpd_numeric",
+      "method": "LGB_constant",
+      "selected_candidate": 26,
+      "mean_development_logloss_recomputed": 0.5207967402143563,
+      "complete_candidates": 30,
+      "selection_verified": true
+    },
+    {
+      "case": "ilpd_numeric",
+      "method": "LGB_linear",
+      "selected_candidate": 26,
+      "mean_development_logloss_recomputed": 0.5189803220122362,
+      "complete_candidates": 30,
+      "selection_verified": true
+    },
+    {
+      "case": "website_phishing",
+      "method": "CrossGB",
+      "selected_candidate": 20,
+      "mean_development_logloss_recomputed": 0.25387493544505607,
+      "complete_candidates": 30,
+      "selection_verified": true
+    },
+    {
+      "case": "website_phishing",
+      "method": "XGB",
+      "selected_candidate": 15,
+      "mean_development_logloss_recomputed": 0.28158205458840635,
+      "complete_candidates": 30,
+      "selection_verified": true
+    },
+    {
+      "case": "website_phishing",
+      "method": "LGB_constant",
+      "selected_candidate": 11,
+      "mean_development_logloss_recomputed": 0.27567952008503066,
+      "complete_candidates": 30,
+      "selection_verified": true
+    },
+    {
+      "case": "website_phishing",
+      "method": "LGB_linear",
+      "selected_candidate": 2,
+      "mean_development_logloss_recomputed": 0.28647729374704967,
+      "complete_candidates": 30,
+      "selection_verified": true
+    }
+  ],
+  "parent_and_new_search_records_checked": {
+    "formal24_parent": 384,
+    "formal30_added": 96
+  },
+  "search_status_counts": {
+    "ok": 480
+  },
+  "search_test_exposure_count": 0,
+  "reused_final_records": 20,
+  "newly_fit_final_records": 20,
+  "reused_prediction_archives_byte_identical": 20,
+  "previous_audit_sha256_unchanged": "4b6291db2762464f4afc4d34a781369c11e86bc4b4f67b03ea18b7accef5bca2",
+  "issues": [],
+  "verified": [
+    "All 40 final archives independently reproduce train/val/test logloss and argmax accuracy; binary ILPD additionally reproduces AUC. Website phishing is recorded as three-class classification and has no binary AUC. Row indices and recorded split/target hashes match local targets.",
+    "Eight choices independently minimize two-development-seed mean logloss over 24 parent candidates plus six frozen additions; requested params and candidate identities match.",
+    "All eight case/method combinations cover seeds98001..98005.",
+    "Reused fits have the expected source marker, byte-identical prediction archives, and result JSON equal to parent except that marker.",
+    "Combined parent/new search records and available prediction archives contain no test metrics, labels-used flags, target hashes or test prediction arrays."
+  ],
+  "not_verified": [
+    "Stored records cannot independently prove runtime label access isolation or causally attest anchor-freeze/download ordering.",
+    "Metrics are recomputed from saved predictions; no new native-model inference, model refit, or timing-repeatability claim.",
+    "Real-data five-seed repeats share the fixed held-out test set and are not independent test samples."
+  ],
+  "task_type_final_counts": {
+    "binary": 20,
+    "multiclass": 20
+  }
+}

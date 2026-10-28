@@ -1,0 +1,34 @@
+{
+  "kind": "capacity",
+  "host": "cpu_Calculator",
+  "batch_budget_seconds": 1800,
+  "frozen_utc": "2026-10-27T19:40:04.673372+00:00",
+  "cases": {
+    "S2_sparse": {
+      "params": {
+        "depth": 2,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "ridge": 1.0,
+        "trees": 1024
+      },
+      "seeds": [
+        98001,
+        98002,
+        98003,
+        98004,
+        98005
+      ],
+      "source": "local_sync/fastlane_results/cpu2_pool.zjuici.com/results/formal24_v1/S2_sparse/final/CrossGB/s98001/result.json"
+    }
+  },
+  "test_selection": false,
+  "scope": "Repeated fixed recipes on existing confirmation splits; diagnostic, not fresh test confirmation; no search",
+  "data_sha256": {
+    "S2_sparse__s98001.npz": "38dc96409e271e0a1b1be05213d4e9621f0ae5bbdfd56db912de5ffc4faafe93",
+    "S2_sparse__s98002.npz": "84b0d70a685c812c67575b98731e321baf3fbb2b6dc629a0bd6e1d419ed13b82",
+    "S2_sparse__s98003.npz": "dcf532fa2e84ea0cd1f4813f8633444f14eec0a2c6bb70d7213a4a886bff1a42",
+    "S2_sparse__s98004.npz": "d6a841967d2fc2a49161fad5552e14b1122e2cd5a3f6d1cd253ff8cf7e6b7cb4",
+    "S2_sparse__s98005.npz": "12caaac866dcc1b2d3bb04a0bfa5868077185150016222e216aba67a3c695947"
+  }
+}

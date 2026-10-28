@@ -1,0 +1,10 @@
+{
+  "fits_seen": 42,
+  "statuses": {
+    "ok": 42
+  },
+  "successful_predictions_recomputed": 42,
+  "stages": [
+    "exclusive_timing"
+  ]
+}

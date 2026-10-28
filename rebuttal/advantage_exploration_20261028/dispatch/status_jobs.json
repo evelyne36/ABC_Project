@@ -1,0 +1,44 @@
+[
+  {
+    "host": "cpu1_pool.zjuici.com",
+    "command": "python3 -c 'import pathlib,json,os,subprocess\nr=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027'\"'\"')\nrows=[]\nfor p in sorted((r/'\"'\"'results/advantage_20261028_v1/quick'\"'\"').glob('\"'\"'w*/status.json'\"'\"')):\n d=json.loads(p.read_text());d['\"'\"'output'\"'\"']=str(p.parent);rows.append(d)\nprint(json.dumps(dict(host='\"'\"'cpu1_pool.zjuici.com'\"'\"',load=os.getloadavg(),workers=rows)))'",
+    "save": "cpu1_pool.zjuici.com_advantage_status.json",
+    "timeout": 20
+  },
+  {
+    "host": "cpu2_pool.zjuici.com",
+    "command": "python3 -c 'import pathlib,json,os,subprocess\nr=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027'\"'\"')\nrows=[]\nfor p in sorted((r/'\"'\"'results/advantage_20261028_v1/quick'\"'\"').glob('\"'\"'w*/status.json'\"'\"')):\n d=json.loads(p.read_text());d['\"'\"'output'\"'\"']=str(p.parent);rows.append(d)\nprint(json.dumps(dict(host='\"'\"'cpu2_pool.zjuici.com'\"'\"',load=os.getloadavg(),workers=rows)))'",
+    "save": "cpu2_pool.zjuici.com_advantage_status.json",
+    "timeout": 20
+  },
+  {
+    "host": "cpu4_pool.zjuici.com",
+    "command": "python3 -c 'import pathlib,json,os,subprocess\nr=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027'\"'\"')\nrows=[]\nfor p in sorted((r/'\"'\"'results/advantage_20261028_v1/quick'\"'\"').glob('\"'\"'w*/status.json'\"'\"')):\n d=json.loads(p.read_text());d['\"'\"'output'\"'\"']=str(p.parent);rows.append(d)\nprint(json.dumps(dict(host='\"'\"'cpu4_pool.zjuici.com'\"'\"',load=os.getloadavg(),workers=rows)))'",
+    "save": "cpu4_pool.zjuici.com_advantage_status.json",
+    "timeout": 20
+  },
+  {
+    "host": "cpu5_pool.zjuici.com",
+    "command": "python3 -c 'import pathlib,json,os,subprocess\nr=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027'\"'\"')\nrows=[]\nfor p in sorted((r/'\"'\"'results/advantage_20261028_v1/quick'\"'\"').glob('\"'\"'w*/status.json'\"'\"')):\n d=json.loads(p.read_text());d['\"'\"'output'\"'\"']=str(p.parent);rows.append(d)\nprint(json.dumps(dict(host='\"'\"'cpu5_pool.zjuici.com'\"'\"',load=os.getloadavg(),workers=rows)))'",
+    "save": "cpu5_pool.zjuici.com_advantage_status.json",
+    "timeout": 20
+  },
+  {
+    "host": "cpu6_pool.zjuici.com",
+    "command": "python3 -c 'import pathlib,json,os,subprocess\nr=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027'\"'\"')\nrows=[]\nfor p in sorted((r/'\"'\"'results/advantage_20261028_v1/quick'\"'\"').glob('\"'\"'w*/status.json'\"'\"')):\n d=json.loads(p.read_text());d['\"'\"'output'\"'\"']=str(p.parent);rows.append(d)\nprint(json.dumps(dict(host='\"'\"'cpu6_pool.zjuici.com'\"'\"',load=os.getloadavg(),workers=rows)))'",
+    "save": "cpu6_pool.zjuici.com_advantage_status.json",
+    "timeout": 20
+  },
+  {
+    "host": "cpu_Calculator",
+    "command": "python3 -c 'import pathlib,json,os,subprocess\nr=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027'\"'\"')\nrows=[]\nfor p in sorted((r/'\"'\"'results/advantage_20261028_v1/quick'\"'\"').glob('\"'\"'w*/status.json'\"'\"')):\n d=json.loads(p.read_text());d['\"'\"'output'\"'\"']=str(p.parent);rows.append(d)\nprint(json.dumps(dict(host='\"'\"'cpu_Calculator'\"'\"',load=os.getloadavg(),workers=rows)))'",
+    "save": "cpu_Calculator_advantage_status.json",
+    "timeout": 20
+  },
+  {
+    "host": "TabularData_Processor",
+    "command": "python3 -c 'import pathlib,json,os,subprocess\nr=pathlib.Path('\"'\"'/home/admin/crossgb_fastlane_20261027'\"'\"')\nrows=[]\nfor p in sorted((r/'\"'\"'results/advantage_20261028_v1/quick'\"'\"').glob('\"'\"'w*/status.json'\"'\"')):\n d=json.loads(p.read_text());d['\"'\"'output'\"'\"']=str(p.parent);rows.append(d)\nprint(json.dumps(dict(host='\"'\"'TabularData_Processor'\"'\"',load=os.getloadavg(),workers=rows)))'",
+    "save": "TabularData_Processor_advantage_status.json",
+    "timeout": 20
+  }
+]

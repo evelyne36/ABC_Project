@@ -1,0 +1,8 @@
+[
+  {
+    "host": "cpu4_pool.zjuici.com",
+    "phase": "create",
+    "exit_code": 255,
+    "error": "Connection closed by 183.129.217.214 port 31499\n"
+  }
+]

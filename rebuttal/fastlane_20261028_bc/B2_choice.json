@@ -1,0 +1,97 @@
+{
+  "case": "S1_sparse",
+  "choices": {
+    "CrossGB": {
+      "candidate": 20,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 2,
+        "learning_rate": 1.0,
+        "p": 1.0
+      },
+      "mean_development_val_rmse": 0.6350679041162746,
+      "complete_candidates": 20,
+      "unique_parameter_configs": 20
+    },
+    "XGB": {
+      "candidate": 13,
+      "params": {
+        "depth": 4,
+        "ridge": 100.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "mean_development_val_rmse": 1.8437771791503095,
+      "complete_candidates": 20,
+      "unique_parameter_configs": 20
+    },
+    "LGB_constant": {
+      "candidate": 13,
+      "params": {
+        "depth": 4,
+        "ridge": 100.0,
+        "trees": 256,
+        "learning_rate": 0.05,
+        "p": 1.0
+      },
+      "mean_development_val_rmse": 1.8667827696351411,
+      "complete_candidates": 20,
+      "unique_parameter_configs": 20
+    },
+    "LGB_linear": {
+      "candidate": 6,
+      "params": {
+        "depth": 2,
+        "ridge": 0.1,
+        "trees": 64,
+        "learning_rate": 0.3,
+        "p": 1.0
+      },
+      "mean_development_val_rmse": 1.8297009185303303,
+      "complete_candidates": 20,
+      "unique_parameter_configs": 20
+    },
+    "PL": {
+      "candidate": 21,
+      "params": {
+        "num_trees": 4,
+        "max_depth": 2,
+        "num_leaves": 4,
+        "l2_reg": 1.0,
+        "max_var": 5,
+        "leaf_type": "linear",
+        "min_sum_hessians": 10.0,
+        "learning_rate": 1.0
+      },
+      "mean_development_val_rmse": 0.8856374751433331,
+      "complete_candidates": 20,
+      "unique_parameter_configs": 20
+    },
+    "LinXGBoost": {
+      "candidate": 21,
+      "params": {
+        "n_estimators": 4,
+        "max_depth": 2,
+        "lbda": 1.0,
+        "min_samples_leaf": 20,
+        "learning_rate": 0.3
+      },
+      "mean_development_val_rmse": 0.4433885185768456,
+      "complete_candidates": 20,
+      "unique_parameter_configs": 16
+    }
+  },
+  "frozen_utc": "2026-10-28T05:37:58.189473+00:00",
+  "selection": "Mean validation RMSE across two development seeds only",
+  "missing_candidates": [],
+  "new_seeds": [
+    99001,
+    99002,
+    99003,
+    99004,
+    99005
+  ],
+  "pool_sha256": "bda281cd5022a452cba5ccba4fa12e0fd3d38807adc05c358a26227e12393dcd"
+}

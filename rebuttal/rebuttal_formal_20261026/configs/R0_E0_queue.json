@@ -1,0 +1,114 @@
+[
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1001__out1.json",
+    "variant": "xgb"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1001__out1.json",
+    "variant": "bias_p00_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1001__out1.json",
+    "variant": "split_p10_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__feature_switch__dim10__seed1001__out1.json",
+    "variant": "full_p10_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1001__out1.json",
+    "variant": "xgb"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1001__out1.json",
+    "variant": "bias_p00_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1001__out1.json",
+    "variant": "split_p10_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__categorical_regime_slope__dim10__seed1001__out1.json",
+    "variant": "full_p10_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1001__out1.json",
+    "variant": "xgb"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1001__out1.json",
+    "variant": "bias_p00_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1001__out1.json",
+    "variant": "split_p10_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_slope__dim10__seed1001__out1.json",
+    "variant": "full_p10_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1001__out1.json",
+    "variant": "xgb"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1001__out1.json",
+    "variant": "bias_p00_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1001__out1.json",
+    "variant": "split_p10_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__curved_control__dim10__seed1001__out1.json",
+    "variant": "full_p10_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1001__out1.json",
+    "variant": "xgb"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1001__out1.json",
+    "variant": "bias_p00_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1001__out1.json",
+    "variant": "split_p10_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__sparse_multiplicative__dim10__seed1001__out1.json",
+    "variant": "full_p10_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1001__out1.json",
+    "variant": "xgb"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1001__out1.json",
+    "variant": "bias_p00_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1001__out1.json",
+    "variant": "split_p10_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__regime_logit__dim10__seed1001__out1.json",
+    "variant": "full_p10_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1001__out1.json",
+    "variant": "xgb"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1001__out1.json",
+    "variant": "bias_p00_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1001__out1.json",
+    "variant": "split_p10_sa0"
+  },
+  {
+    "task": "configs/cgb_tasks/synthetic__pure_step_control__dim10__seed1001__out1.json",
+    "variant": "full_p10_sa0"
+  }
+]

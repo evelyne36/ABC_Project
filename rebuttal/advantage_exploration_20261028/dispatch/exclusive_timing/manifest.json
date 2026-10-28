@@ -1,0 +1,17 @@
+{
+  "stage": "exclusive_timing",
+  "lanes": [
+    {
+      "host": "cpu1_pool.zjuici.com",
+      "plan": "cpu1_pool.zjuici.com.json",
+      "jobs": 21
+    },
+    {
+      "host": "cpu6_pool.zjuici.com",
+      "plan": "cpu6_pool.zjuici.com.json",
+      "jobs": 21
+    }
+  ],
+  "total_jobs": 42,
+  "created_utc": "2026-10-28T08:07:48.932889+00:00"
+}

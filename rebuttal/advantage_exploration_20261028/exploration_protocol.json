@@ -1,0 +1,38 @@
+{
+  "frozen_utc": "2026-10-28T07:10:12.836131+00:00",
+  "methods": [
+    "CrossGB",
+    "XGB",
+    "LGB_constant",
+    "LGB_linear",
+    "PL",
+    "LinXGBoost"
+  ],
+  "quick_candidates": 4,
+  "formal_unique_candidates": 20,
+  "development_only": true,
+  "test_labels_accessed": false,
+  "quick_fit_timeout_seconds": 90,
+  "worker_wall_budget_seconds": 1800,
+  "max_finalists": 2,
+  "confirmation_seeds": {
+    "synthetic": [
+      111001,
+      111002,
+      111003,
+      111004,
+      111005
+    ],
+    "real": [
+      113001,
+      113002,
+      113003,
+      113004,
+      113005
+    ]
+  },
+  "selection": "For each candidate: mean source-unit val RMSE over both dev seeds; missing/timeout is ineligible. Rank cases by CGB relative to best completed original-native linear neighbor (PL/LGB_linear) and Lin, preserve every failure/control. At most 2 finalists; prefer a real task with directional improvement and a distinct synthetic mechanism. Full 20 unique configs/method before confirmation; no claims from quick-screen timings.",
+  "timing": "Concurrent discovery times diagnostic only; final timing exclusive same-host single-thread repetitions.",
+  "max_followup_wall_seconds": 5400,
+  "disclosure": "Exploratory case selection, two new real sources plus two same-source new targets; real repetitions may share held-out test. No benchmark-population win-rate claim."
+}
