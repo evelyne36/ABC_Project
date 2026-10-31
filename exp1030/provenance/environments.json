@@ -1,0 +1,290 @@
+[
+  {
+    "archive": "pool01.tar.gz",
+    "cpu_model": "Intel Xeon Processor (Cascadelake)",
+    "visible_cores": 16,
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+    "author_sources": [
+      {
+        "method": "linxgboost",
+        "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+        "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+        "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+        "archive_bytes": 5365453,
+        "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+        "code_file_count": 13,
+        "extracted_path": "vendor/linxgboost"
+      },
+      {
+        "method": "gbdt_pl",
+        "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+        "archive_bytes": 16267284,
+        "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+        "code_file_count": 55,
+        "extracted_path": "vendor/gbdt_pl"
+      },
+      {
+        "method": "pilot",
+        "url": "https://codeload.github.com/STAN-UAntwerp/PILOT/tar.gz/ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "revision": "ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "archive_sha256": "145602969138d37cfd1eeb9eea496ca91862b54edae0be0e1a8628e37d3a76c4",
+        "archive_bytes": 15953126,
+        "code_fingerprint": "61c05823c75734676cceef2ee4a54c4c65ff3ed046a84b11690e475eb9fdb645",
+        "code_file_count": 14,
+        "extracted_path": "vendor/pilot"
+      },
+      {
+        "method": "tao",
+        "url": "https://faculty.ucmerced.edu/mcarreira-perpinan/research/software/code-TAO-v2026-07-22.tar.gz",
+        "revision": "official-2026-07-22",
+        "archive_sha256": "d006f1d7fafb2e49795f666997cb1800b4d7aeea12d22e4e9bead42fbe430351",
+        "archive_bytes": 22380635,
+        "code_fingerprint": "4c2a79326be4e79cfeec3365346adaf01e628b12121275ee0705a07a53952234",
+        "code_file_count": 9,
+        "extracted_path": "vendor/tao"
+      }
+    ]
+  },
+  {
+    "archive": "pool02.tar.gz",
+    "cpu_model": "Intel Xeon Processor (Skylake, IBRS)",
+    "visible_cores": 16,
+    "platform": "Linux-6.8.0-124-generic-x86_64-with-glibc2.35",
+    "author_sources": [
+      {
+        "method": "linxgboost",
+        "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+        "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+        "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+        "archive_bytes": 5365453,
+        "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+        "code_file_count": 13,
+        "extracted_path": "vendor/linxgboost"
+      },
+      {
+        "method": "gbdt_pl",
+        "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+        "archive_bytes": 16267284,
+        "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+        "code_file_count": 55,
+        "extracted_path": "vendor/gbdt_pl"
+      },
+      {
+        "method": "pilot",
+        "url": "https://codeload.github.com/STAN-UAntwerp/PILOT/tar.gz/ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "revision": "ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "archive_sha256": "145602969138d37cfd1eeb9eea496ca91862b54edae0be0e1a8628e37d3a76c4",
+        "archive_bytes": 15953126,
+        "code_fingerprint": "61c05823c75734676cceef2ee4a54c4c65ff3ed046a84b11690e475eb9fdb645",
+        "code_file_count": 14,
+        "extracted_path": "vendor/pilot"
+      },
+      {
+        "method": "tao",
+        "url": "https://faculty.ucmerced.edu/mcarreira-perpinan/research/software/code-TAO-v2026-07-22.tar.gz",
+        "revision": "official-2026-07-22",
+        "archive_sha256": "d006f1d7fafb2e49795f666997cb1800b4d7aeea12d22e4e9bead42fbe430351",
+        "archive_bytes": 22380635,
+        "code_fingerprint": "4c2a79326be4e79cfeec3365346adaf01e628b12121275ee0705a07a53952234",
+        "code_file_count": 9,
+        "extracted_path": "vendor/tao"
+      }
+    ]
+  },
+  {
+    "archive": "pool03.tar.gz",
+    "cpu_model": "Intel Xeon Processor (Skylake, IBRS)",
+    "visible_cores": 16,
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "author_sources": [
+      {
+        "method": "linxgboost",
+        "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+        "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+        "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+        "archive_bytes": 5365453,
+        "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+        "code_file_count": 13,
+        "extracted_path": "vendor/linxgboost"
+      },
+      {
+        "method": "gbdt_pl",
+        "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+        "archive_bytes": 16267284,
+        "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+        "code_file_count": 55,
+        "extracted_path": "vendor/gbdt_pl"
+      },
+      {
+        "method": "pilot",
+        "url": "https://codeload.github.com/STAN-UAntwerp/PILOT/tar.gz/ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "revision": "ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "archive_sha256": "145602969138d37cfd1eeb9eea496ca91862b54edae0be0e1a8628e37d3a76c4",
+        "archive_bytes": 15953126,
+        "code_fingerprint": "61c05823c75734676cceef2ee4a54c4c65ff3ed046a84b11690e475eb9fdb645",
+        "code_file_count": 14,
+        "extracted_path": "vendor/pilot"
+      },
+      {
+        "method": "tao",
+        "url": "https://faculty.ucmerced.edu/mcarreira-perpinan/research/software/code-TAO-v2026-07-22.tar.gz",
+        "revision": "official-2026-07-22",
+        "archive_sha256": "d006f1d7fafb2e49795f666997cb1800b4d7aeea12d22e4e9bead42fbe430351",
+        "archive_bytes": 22380635,
+        "code_fingerprint": "4c2a79326be4e79cfeec3365346adaf01e628b12121275ee0705a07a53952234",
+        "code_file_count": 9,
+        "extracted_path": "vendor/tao"
+      }
+    ]
+  },
+  {
+    "archive": "pool04.tar.gz",
+    "cpu_model": "Intel Xeon Processor (Skylake, IBRS)",
+    "visible_cores": 16,
+    "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+    "author_sources": [
+      {
+        "method": "linxgboost",
+        "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+        "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+        "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+        "archive_bytes": 5365453,
+        "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+        "code_file_count": 13,
+        "extracted_path": "vendor/linxgboost"
+      },
+      {
+        "method": "gbdt_pl",
+        "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+        "archive_bytes": 16267284,
+        "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+        "code_file_count": 55,
+        "extracted_path": "vendor/gbdt_pl"
+      },
+      {
+        "method": "pilot",
+        "url": "https://codeload.github.com/STAN-UAntwerp/PILOT/tar.gz/ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "revision": "ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "archive_sha256": "145602969138d37cfd1eeb9eea496ca91862b54edae0be0e1a8628e37d3a76c4",
+        "archive_bytes": 15953126,
+        "code_fingerprint": "61c05823c75734676cceef2ee4a54c4c65ff3ed046a84b11690e475eb9fdb645",
+        "code_file_count": 14,
+        "extracted_path": "vendor/pilot"
+      },
+      {
+        "method": "tao",
+        "url": "https://faculty.ucmerced.edu/mcarreira-perpinan/research/software/code-TAO-v2026-07-22.tar.gz",
+        "revision": "official-2026-07-22",
+        "archive_sha256": "d006f1d7fafb2e49795f666997cb1800b4d7aeea12d22e4e9bead42fbe430351",
+        "archive_bytes": 22380635,
+        "code_fingerprint": "4c2a79326be4e79cfeec3365346adaf01e628b12121275ee0705a07a53952234",
+        "code_file_count": 9,
+        "extracted_path": "vendor/tao"
+      }
+    ]
+  },
+  {
+    "archive": "pool05.tar.gz",
+    "cpu_model": "Intel Xeon Processor (Cascadelake)",
+    "visible_cores": 16,
+    "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.35",
+    "author_sources": [
+      {
+        "method": "linxgboost",
+        "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+        "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+        "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+        "archive_bytes": 5365453,
+        "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+        "code_file_count": 13,
+        "extracted_path": "vendor/linxgboost"
+      },
+      {
+        "method": "gbdt_pl",
+        "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+        "archive_bytes": 16267284,
+        "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+        "code_file_count": 55,
+        "extracted_path": "vendor/gbdt_pl"
+      },
+      {
+        "method": "pilot",
+        "url": "https://codeload.github.com/STAN-UAntwerp/PILOT/tar.gz/ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "revision": "ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "archive_sha256": "145602969138d37cfd1eeb9eea496ca91862b54edae0be0e1a8628e37d3a76c4",
+        "archive_bytes": 15953126,
+        "code_fingerprint": "61c05823c75734676cceef2ee4a54c4c65ff3ed046a84b11690e475eb9fdb645",
+        "code_file_count": 14,
+        "extracted_path": "vendor/pilot"
+      },
+      {
+        "method": "tao",
+        "url": "https://faculty.ucmerced.edu/mcarreira-perpinan/research/software/code-TAO-v2026-07-22.tar.gz",
+        "revision": "official-2026-07-22",
+        "archive_sha256": "d006f1d7fafb2e49795f666997cb1800b4d7aeea12d22e4e9bead42fbe430351",
+        "archive_bytes": 22380635,
+        "code_fingerprint": "4c2a79326be4e79cfeec3365346adaf01e628b12121275ee0705a07a53952234",
+        "code_file_count": 9,
+        "extracted_path": "vendor/tao"
+      }
+    ]
+  },
+  {
+    "archive": "pool06.tar.gz",
+    "cpu_model": "Intel Xeon Processor (Cascadelake)",
+    "visible_cores": 16,
+    "platform": "Linux-6.8.0-136-generic-x86_64-with-glibc2.35",
+    "author_sources": [
+      {
+        "method": "linxgboost",
+        "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+        "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+        "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+        "archive_bytes": 5365453,
+        "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+        "code_file_count": 13,
+        "extracted_path": "vendor/linxgboost"
+      },
+      {
+        "method": "gbdt_pl",
+        "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+        "archive_bytes": 16267284,
+        "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+        "code_file_count": 55,
+        "extracted_path": "vendor/gbdt_pl"
+      },
+      {
+        "method": "pilot",
+        "url": "https://codeload.github.com/STAN-UAntwerp/PILOT/tar.gz/ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "revision": "ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "archive_sha256": "145602969138d37cfd1eeb9eea496ca91862b54edae0be0e1a8628e37d3a76c4",
+        "archive_bytes": 15953126,
+        "code_fingerprint": "61c05823c75734676cceef2ee4a54c4c65ff3ed046a84b11690e475eb9fdb645",
+        "code_file_count": 14,
+        "extracted_path": "vendor/pilot"
+      },
+      {
+        "method": "tao",
+        "url": "https://faculty.ucmerced.edu/mcarreira-perpinan/research/software/code-TAO-v2026-07-22.tar.gz",
+        "revision": "official-2026-07-22",
+        "archive_sha256": "d006f1d7fafb2e49795f666997cb1800b4d7aeea12d22e4e9bead42fbe430351",
+        "archive_bytes": 22380635,
+        "code_fingerprint": "4c2a79326be4e79cfeec3365346adaf01e628b12121275ee0705a07a53952234",
+        "code_file_count": 9,
+        "extracted_path": "vendor/tao"
+      }
+    ]
+  }
+]

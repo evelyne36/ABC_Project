@@ -1,0 +1,59 @@
+[
+  {
+    "host": "cpu4_pool.zjuici.com",
+    "record": "results/uci477_real_estate_valuation/hpo/261029142/TAO/10/result.json",
+    "method": "TAO",
+    "case": "uci477_real_estate_valuation",
+    "stage": "hpo",
+    "seed": 261029142,
+    "candidate": "10",
+    "error_type": "AssertionError",
+    "error": "param[0] should be weight of shape (1, D), param[1] should be bias of shape (1,1)",
+    "failure_stage": "fit",
+    "params": {
+      "C_dnode": 2.8964934633846795,
+      "alpha": 1.0,
+      "depth": 6,
+      "max_iter": 30
+    },
+    "traceback": "py\", line 301, in run\n    timed(record[\"timings\"], \"fit\", lambda: model.fit(X[indices[\"train\"]], targets[\"train\"]))\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/crossgb_expnew_26102914/scripts/worker.py\", line 199, in timed\n    return action()\n  File \"/home/admin/crossgb_expnew_26102914/scripts/worker.py\", line 301, in <lambda>\n    timed(record[\"timings\"], \"fit\", lambda: model.fit(X[indices[\"train\"]], targets[\"train\"]))\n                                            ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/crossgb_expnew_26102914/runtime/rebuttal_baselines_20261025/baselines/estimators.py\", line 92, in fit\n    self._fit_tao(X, y)\n    ~~~~~~~~~~~~~^^^^^^\n  File \"/home/admin/crossgb_expnew_26102914/runtime/rebuttal_baselines_20261025/baselines/estimators.py\", line 149, in _fit_tao\n    self.training_metrics_ = tao.tao_main(X, y, X, y, dtree=self.model_, loss=utils.mse_loss,\n                             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        n_cpus=1, sequential=tuple(range(1, int(params[\"depth\"])+1)),\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<3 lines>...\n        leaf_args={}, postprocess=bool(params[\"postprocess\"]), tree_logg_folder=None,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        logg_progress=False, strict_update=bool(params[\"strict_update\"]))\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/crossgb_expnew_26102914/runtime/rebuttal_baselines_20261025/vendor/tao/tao-python-current/tao.py\", line 167, in tao_main\n    time_reduced_set, time_model_train = train_decision_node(tree_node = tree_node,\n                                         ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n                        X_train = X_train,\n                        ^^^^^^^^^^^^^^^^^^\n    ...<4 lines>...\n                        strict_update = strict_update,\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                        tao_iter = tao_iter)\n                        ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/crossgb_expnew_26102914/runtime/rebuttal_baselines_20261025/vendor/tao/tao-python-current/tao.py\", line 453, in train_decision_node\n    tree_node.get_model.set_params(old_params)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\n  File \"/home/admin/crossgb_expnew_26102914/runtime/rebuttal_baselines_20261025/vendor/tao/tao-python-current/models/decision_node.py\", line 76, in set_params\n    assert param_tuple[0].ndim == 2 and param_tuple[1].ndim == 1 and isinstance(param_tuple[0], (np.ndarray, csr_matrix)), f\"param[0] should be weight of shape (1, D), param[1] should be bias of shape (1,1)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: param[0] should be weight of shape (1, D), param[1] should be bias of shape (1,1)\n"
+  },
+  {
+    "host": "TabularData_Processor",
+    "record": "results/kin8nm/hpo/261029142/TAO/11/result.json",
+    "method": "TAO",
+    "case": "kin8nm",
+    "stage": "hpo",
+    "seed": 261029142,
+    "candidate": "11",
+    "error_type": "AssertionError",
+    "error": "param[0] should be weight of shape (1, D), param[1] should be bias of shape (1,1)",
+    "failure_stage": "fit",
+    "params": {
+      "C_dnode": 2.590226232911113,
+      "alpha": 0.5,
+      "depth": 7,
+      "max_iter": 30
+    },
+    "traceback": "py\", line 301, in run\n    timed(record[\"timings\"], \"fit\", lambda: model.fit(X[indices[\"train\"]], targets[\"train\"]))\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/crossgb_expnew_26102914/scripts/worker.py\", line 199, in timed\n    return action()\n  File \"/home/admin/crossgb_expnew_26102914/scripts/worker.py\", line 301, in <lambda>\n    timed(record[\"timings\"], \"fit\", lambda: model.fit(X[indices[\"train\"]], targets[\"train\"]))\n                                            ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/crossgb_expnew_26102914/runtime/rebuttal_baselines_20261025/baselines/estimators.py\", line 92, in fit\n    self._fit_tao(X, y)\n    ~~~~~~~~~~~~~^^^^^^\n  File \"/home/admin/crossgb_expnew_26102914/runtime/rebuttal_baselines_20261025/baselines/estimators.py\", line 149, in _fit_tao\n    self.training_metrics_ = tao.tao_main(X, y, X, y, dtree=self.model_, loss=utils.mse_loss,\n                             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        n_cpus=1, sequential=tuple(range(1, int(params[\"depth\"])+1)),\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<3 lines>...\n        leaf_args={}, postprocess=bool(params[\"postprocess\"]), tree_logg_folder=None,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        logg_progress=False, strict_update=bool(params[\"strict_update\"]))\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/crossgb_expnew_26102914/runtime/rebuttal_baselines_20261025/vendor/tao/tao-python-current/tao.py\", line 167, in tao_main\n    time_reduced_set, time_model_train = train_decision_node(tree_node = tree_node,\n                                         ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n                        X_train = X_train,\n                        ^^^^^^^^^^^^^^^^^^\n    ...<4 lines>...\n                        strict_update = strict_update,\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                        tao_iter = tao_iter)\n                        ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/crossgb_expnew_26102914/runtime/rebuttal_baselines_20261025/vendor/tao/tao-python-current/tao.py\", line 453, in train_decision_node\n    tree_node.get_model.set_params(old_params)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\n  File \"/home/admin/crossgb_expnew_26102914/runtime/rebuttal_baselines_20261025/vendor/tao/tao-python-current/models/decision_node.py\", line 76, in set_params\n    assert param_tuple[0].ndim == 2 and param_tuple[1].ndim == 1 and isinstance(param_tuple[0], (np.ndarray, csr_matrix)), f\"param[0] should be weight of shape (1, D), param[1] should be bias of shape (1,1)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: param[0] should be weight of shape (1, D), param[1] should be bias of shape (1,1)\n"
+  },
+  {
+    "host": "cpu2_pool.zjuici.com",
+    "record": "results/saturating_v5/hpo/261029142/TAO/11/result.json",
+    "method": "TAO",
+    "case": "saturating_v5",
+    "stage": "hpo",
+    "seed": 261029142,
+    "candidate": "11",
+    "error_type": "AssertionError",
+    "error": "param[0] should be weight of shape (1, D), param[1] should be bias of shape (1,1)",
+    "failure_stage": "fit",
+    "params": {
+      "C_dnode": 2.590226232911113,
+      "alpha": 0.5,
+      "depth": 7,
+      "max_iter": 30
+    },
+    "traceback": "py\", line 301, in run\n    timed(record[\"timings\"], \"fit\", lambda: model.fit(X[indices[\"train\"]], targets[\"train\"]))\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/crossgb_expnew_26102914/scripts/worker.py\", line 199, in timed\n    return action()\n  File \"/home/admin/crossgb_expnew_26102914/scripts/worker.py\", line 301, in <lambda>\n    timed(record[\"timings\"], \"fit\", lambda: model.fit(X[indices[\"train\"]], targets[\"train\"]))\n                                            ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/crossgb_expnew_26102914/runtime/rebuttal_baselines_20261025/baselines/estimators.py\", line 92, in fit\n    self._fit_tao(X, y)\n    ~~~~~~~~~~~~~^^^^^^\n  File \"/home/admin/crossgb_expnew_26102914/runtime/rebuttal_baselines_20261025/baselines/estimators.py\", line 149, in _fit_tao\n    self.training_metrics_ = tao.tao_main(X, y, X, y, dtree=self.model_, loss=utils.mse_loss,\n                             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        n_cpus=1, sequential=tuple(range(1, int(params[\"depth\"])+1)),\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ...<3 lines>...\n        leaf_args={}, postprocess=bool(params[\"postprocess\"]), tree_logg_folder=None,\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        logg_progress=False, strict_update=bool(params[\"strict_update\"]))\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/crossgb_expnew_26102914/runtime/rebuttal_baselines_20261025/vendor/tao/tao-python-current/tao.py\", line 167, in tao_main\n    time_reduced_set, time_model_train = train_decision_node(tree_node = tree_node,\n                                         ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n                        X_train = X_train,\n                        ^^^^^^^^^^^^^^^^^^\n    ...<4 lines>...\n                        strict_update = strict_update,\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                        tao_iter = tao_iter)\n                        ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/admin/crossgb_expnew_26102914/runtime/rebuttal_baselines_20261025/vendor/tao/tao-python-current/tao.py\", line 453, in train_decision_node\n    tree_node.get_model.set_params(old_params)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\n  File \"/home/admin/crossgb_expnew_26102914/runtime/rebuttal_baselines_20261025/vendor/tao/tao-python-current/models/decision_node.py\", line 76, in set_params\n    assert param_tuple[0].ndim == 2 and param_tuple[1].ndim == 1 and isinstance(param_tuple[0], (np.ndarray, csr_matrix)), f\"param[0] should be weight of shape (1, D), param[1] should be bias of shape (1,1)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: param[0] should be weight of shape (1, D), param[1] should be bias of shape (1,1)\n"
+  }
+]

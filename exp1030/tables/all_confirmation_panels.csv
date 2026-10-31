@@ -1,0 +1,341 @@
+﻿case,dataset_name,report_part,method,successful_final_seeds,five_method_three_seed_panel_complete,rmse_original_mean,rank_by_available_method_mean,hpo_ok,hpo_timeout,hpo_failed
+Another-Dataset-on-used-Fiat-500,Used Fiat 500,第一部分：论文已有数据集,CrossGB,3,True,810.9985742858981,1,24,0,0
+Another-Dataset-on-used-Fiat-500,Used Fiat 500,第一部分：论文已有数据集,LinXGBoost,3,True,812.5793092912733,2,24,0,0
+Another-Dataset-on-used-Fiat-500,Used Fiat 500,第一部分：论文已有数据集,PILOT,3,True,827.3579164086732,4,24,0,0
+Another-Dataset-on-used-Fiat-500,Used Fiat 500,第一部分：论文已有数据集,PL,3,True,817.5606615731999,3,24,0,0
+Another-Dataset-on-used-Fiat-500,Used Fiat 500,第一部分：论文已有数据集,TAO,3,True,915.7965628940711,5,24,0,0
+Food_Delivery_Time,Food delivery time,第一部分：论文已有数据集,CrossGB,3,False,7.4943974418902295,2,24,0,0
+Food_Delivery_Time,Food delivery time,第一部分：论文已有数据集,LinXGBoost,3,False,7.51301428171922,3,10,14,0
+Food_Delivery_Time,Food delivery time,第一部分：论文已有数据集,PILOT,3,False,7.795050160242134,4,24,0,0
+Food_Delivery_Time,Food delivery time,第一部分：论文已有数据集,PL,3,False,7.399065371829611,1,24,0,0
+Food_Delivery_Time,Food delivery time,第一部分：论文已有数据集,TAO,2,False,7.819640443781848,5,21,3,0
+QSAR-TID-11,QSAR-TID-11,第二部分：本轮新增数据集,CrossGB,3,True,0.9988601109066114,2,13,11,0
+QSAR-TID-11,QSAR-TID-11,第二部分：本轮新增数据集,LinXGBoost,3,True,1.0431748697446634,4,4,20,0
+QSAR-TID-11,QSAR-TID-11,第二部分：本轮新增数据集,PILOT,3,True,1.1464095799601315,5,24,0,0
+QSAR-TID-11,QSAR-TID-11,第二部分：本轮新增数据集,PL,3,True,0.7790210853270634,1,24,0,0
+QSAR-TID-11,QSAR-TID-11,第二部分：本轮新增数据集,TAO,3,True,1.0277181340605586,3,23,1,0
+QSAR_fish_toxicity,QSAR fish toxicity,第一部分：论文已有数据集,CrossGB,3,True,0.8794829622232477,2,24,0,0
+QSAR_fish_toxicity,QSAR fish toxicity,第一部分：论文已有数据集,LinXGBoost,3,True,3.5052653789721298,5,24,0,0
+QSAR_fish_toxicity,QSAR fish toxicity,第一部分：论文已有数据集,PILOT,3,True,0.915159015643093,3,24,0,0
+QSAR_fish_toxicity,QSAR fish toxicity,第一部分：论文已有数据集,PL,3,True,0.8774280450981227,1,24,0,0
+QSAR_fish_toxicity,QSAR fish toxicity,第一部分：论文已有数据集,TAO,3,True,0.9509768508836833,4,24,0,0
+airfoil_self_noise,Airfoil self noise,第一部分：论文已有数据集,CrossGB,3,True,1.7694367272501585,2,24,0,0
+airfoil_self_noise,Airfoil self noise,第一部分：论文已有数据集,LinXGBoost,3,True,1.8309841858279352,3,24,0,0
+airfoil_self_noise,Airfoil self noise,第一部分：论文已有数据集,PILOT,3,True,4.364105391873479,5,24,0,0
+airfoil_self_noise,Airfoil self noise,第一部分：论文已有数据集,PL,3,True,1.654709209438563,1,24,0,0
+airfoil_self_noise,Airfoil self noise,第一部分：论文已有数据集,TAO,3,True,3.73390327349016,4,24,0,0
+concrete_compressive_strength,Concrete compressive strength,第一部分：论文已有数据集,CrossGB,3,True,5.104023463656392,1,24,0,0
+concrete_compressive_strength,Concrete compressive strength,第一部分：论文已有数据集,LinXGBoost,3,True,5.16421450132107,2,24,0,0
+concrete_compressive_strength,Concrete compressive strength,第一部分：论文已有数据集,PILOT,3,True,6.6510403737877715,4,24,0,0
+concrete_compressive_strength,Concrete compressive strength,第一部分：论文已有数据集,PL,3,True,5.320518944935324,3,24,0,0
+concrete_compressive_strength,Concrete compressive strength,第一部分：论文已有数据集,TAO,3,True,7.741539201562806,5,24,0,0
+correlated_gate_v0,correlated_gate_v0,第二部分：本轮新构造合成数据,CrossGB,3,True,0.25351065294343317,2,24,0,0
+correlated_gate_v0,correlated_gate_v0,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.17716660075100507,1,17,7,0
+correlated_gate_v0,correlated_gate_v0,第二部分：本轮新构造合成数据,PILOT,3,True,2.0256030124640474,5,24,0,0
+correlated_gate_v0,correlated_gate_v0,第二部分：本轮新构造合成数据,PL,3,True,0.5873119418137503,3,24,0,0
+correlated_gate_v0,correlated_gate_v0,第二部分：本轮新构造合成数据,TAO,3,True,1.3955454713285949,4,24,0,0
+correlated_gate_v1,correlated_gate_v1,第二部分：本轮新构造合成数据,CrossGB,3,True,0.356739200046384,1,24,0,0
+correlated_gate_v1,correlated_gate_v1,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.38343358130973915,2,13,11,0
+correlated_gate_v1,correlated_gate_v1,第二部分：本轮新构造合成数据,PILOT,3,True,2.0418583088551236,5,24,0,0
+correlated_gate_v1,correlated_gate_v1,第二部分：本轮新构造合成数据,PL,3,True,0.6507934645655896,3,24,0,0
+correlated_gate_v1,correlated_gate_v1,第二部分：本轮新构造合成数据,TAO,3,True,1.685596816010973,4,24,0,0
+correlated_gate_v2,correlated_gate_v2,第二部分：本轮新构造合成数据,CrossGB,3,True,0.2489847900225588,1,24,0,0
+correlated_gate_v2,correlated_gate_v2,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.2906821775552459,2,11,13,0
+correlated_gate_v2,correlated_gate_v2,第二部分：本轮新构造合成数据,PILOT,3,True,1.9644342551451655,5,24,0,0
+correlated_gate_v2,correlated_gate_v2,第二部分：本轮新构造合成数据,PL,3,True,0.8516076414718711,3,24,0,0
+correlated_gate_v2,correlated_gate_v2,第二部分：本轮新构造合成数据,TAO,3,True,1.7368136296631125,4,24,0,0
+correlated_gate_v3,correlated_gate_v3,第二部分：本轮新构造合成数据,CrossGB,3,True,0.32892225354018706,1,24,0,0
+correlated_gate_v3,correlated_gate_v3,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.34322607401447464,2,8,16,0
+correlated_gate_v3,correlated_gate_v3,第二部分：本轮新构造合成数据,PILOT,3,True,2.065049233592639,5,24,0,0
+correlated_gate_v3,correlated_gate_v3,第二部分：本轮新构造合成数据,PL,3,True,0.6867659184354719,3,24,0,0
+correlated_gate_v3,correlated_gate_v3,第二部分：本轮新构造合成数据,TAO,3,True,1.5960412453743966,4,24,0,0
+correlated_gate_v4,correlated_gate_v4,第二部分：本轮新构造合成数据,CrossGB,3,True,0.22807638505270633,2,24,0,0
+correlated_gate_v4,correlated_gate_v4,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.16422298901715862,1,11,13,0
+correlated_gate_v4,correlated_gate_v4,第二部分：本轮新构造合成数据,PILOT,3,True,1.992997171442683,5,24,0,0
+correlated_gate_v4,correlated_gate_v4,第二部分：本轮新构造合成数据,PL,3,True,0.28062129904267274,3,24,0,0
+correlated_gate_v4,correlated_gate_v4,第二部分：本轮新构造合成数据,TAO,3,True,1.4781792000811802,4,24,0,0
+correlated_gate_v5,correlated_gate_v5,第二部分：本轮新构造合成数据,CrossGB,3,True,0.34521302608680954,2,24,0,0
+correlated_gate_v5,correlated_gate_v5,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.3350621530479276,1,10,14,0
+correlated_gate_v5,correlated_gate_v5,第二部分：本轮新构造合成数据,PILOT,3,True,1.9992507652788998,5,24,0,0
+correlated_gate_v5,correlated_gate_v5,第二部分：本轮新构造合成数据,PL,3,True,0.7412471547679406,3,24,0,0
+correlated_gate_v5,correlated_gate_v5,第二部分：本轮新构造合成数据,TAO,3,True,1.7312564324614916,4,24,0,0
+correlated_gate_v6,correlated_gate_v6,第二部分：本轮新构造合成数据,CrossGB,3,True,0.24302966999314582,2,24,0,0
+correlated_gate_v6,correlated_gate_v6,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.15408903658651726,1,7,17,0
+correlated_gate_v6,correlated_gate_v6,第二部分：本轮新构造合成数据,PILOT,3,True,2.004257520516996,5,24,0,0
+correlated_gate_v6,correlated_gate_v6,第二部分：本轮新构造合成数据,PL,3,True,0.30926016237368414,3,24,0,0
+correlated_gate_v6,correlated_gate_v6,第二部分：本轮新构造合成数据,TAO,3,True,1.1601837432244801,4,24,0,0
+correlated_gate_v7,correlated_gate_v7,第二部分：本轮新构造合成数据,CrossGB,3,True,0.3500116802916124,1,24,0,0
+correlated_gate_v7,correlated_gate_v7,第二部分：本轮新构造合成数据,LinXGBoost,3,True,2.0438094990792663,5,4,20,0
+correlated_gate_v7,correlated_gate_v7,第二部分：本轮新构造合成数据,PILOT,3,True,2.037845116216141,4,24,0,0
+correlated_gate_v7,correlated_gate_v7,第二部分：本轮新构造合成数据,PL,3,True,0.7156958149248683,2,24,0,0
+correlated_gate_v7,correlated_gate_v7,第二部分：本轮新构造合成数据,TAO,3,True,1.4859722881300736,3,24,0,0
+diamonds,Diamonds,第一部分：论文已有数据集,CrossGB,3,True,560.999950788192,1,24,0,0
+diamonds,Diamonds,第一部分：论文已有数据集,LinXGBoost,3,True,682.0780354963883,3,15,9,0
+diamonds,Diamonds,第一部分：论文已有数据集,PILOT,3,True,629.9274077779004,2,24,0,0
+diamonds,Diamonds,第一部分：论文已有数据集,PL,3,True,745.7405546265212,5,24,0,0
+diamonds,Diamonds,第一部分：论文已有数据集,TAO,3,True,695.1822731066683,4,24,0,0
+energy_efficiency,Energy efficiency,第一部分：论文已有数据集,CrossGB,3,True,0.6002824603178705,3,24,0,0
+energy_efficiency,Energy efficiency,第一部分：论文已有数据集,LinXGBoost,3,True,0.4750294723473551,1,24,0,0
+energy_efficiency,Energy efficiency,第一部分：论文已有数据集,PILOT,3,True,1.7550641615472655,5,24,0,0
+energy_efficiency,Energy efficiency,第一部分：论文已有数据集,PL,3,True,0.50921607017947,2,24,0,0
+energy_efficiency,Energy efficiency,第一部分：论文已有数据集,TAO,3,True,1.304697405283104,4,24,0,0
+gate_sum_v0,gate_sum_v0,第二部分：本轮新构造合成数据,CrossGB,3,True,0.20716062164181304,2,24,0,0
+gate_sum_v0,gate_sum_v0,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.16914996598449458,1,17,7,0
+gate_sum_v0,gate_sum_v0,第二部分：本轮新构造合成数据,PILOT,3,True,2.0010899789260566,5,24,0,0
+gate_sum_v0,gate_sum_v0,第二部分：本轮新构造合成数据,PL,3,True,0.39934927023779926,3,24,0,0
+gate_sum_v0,gate_sum_v0,第二部分：本轮新构造合成数据,TAO,3,True,1.3458691481932876,4,24,0,0
+gate_sum_v1,gate_sum_v1,第二部分：本轮新构造合成数据,CrossGB,3,True,0.35821361697120874,1,24,0,0
+gate_sum_v1,gate_sum_v1,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.3743867643640641,2,13,11,0
+gate_sum_v1,gate_sum_v1,第二部分：本轮新构造合成数据,PILOT,3,True,2.044701059722202,5,24,0,0
+gate_sum_v1,gate_sum_v1,第二部分：本轮新构造合成数据,PL,3,True,0.8018022420901966,3,24,0,0
+gate_sum_v1,gate_sum_v1,第二部分：本轮新构造合成数据,TAO,3,True,1.6801249260365088,4,24,0,0
+gate_sum_v2,gate_sum_v2,第二部分：本轮新构造合成数据,CrossGB,3,True,0.22268424653133967,1,24,0,0
+gate_sum_v2,gate_sum_v2,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.2653451471374293,2,11,13,0
+gate_sum_v2,gate_sum_v2,第二部分：本轮新构造合成数据,PILOT,3,True,1.9416785718473883,5,24,0,0
+gate_sum_v2,gate_sum_v2,第二部分：本轮新构造合成数据,PL,3,True,0.7334236392027901,3,24,0,0
+gate_sum_v2,gate_sum_v2,第二部分：本轮新构造合成数据,TAO,3,True,1.6454966631726036,4,24,0,0
+gate_sum_v3,gate_sum_v3,第二部分：本轮新构造合成数据,CrossGB,3,True,0.4092689319167781,2,24,0,0
+gate_sum_v3,gate_sum_v3,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.39468374171074405,1,7,17,0
+gate_sum_v3,gate_sum_v3,第二部分：本轮新构造合成数据,PILOT,3,True,2.060163692101574,5,24,0,0
+gate_sum_v3,gate_sum_v3,第二部分：本轮新构造合成数据,PL,3,True,1.0103504000121095,3,24,0,0
+gate_sum_v3,gate_sum_v3,第二部分：本轮新构造合成数据,TAO,3,True,1.4694459032855474,4,24,0,0
+gate_sum_v4,gate_sum_v4,第二部分：本轮新构造合成数据,CrossGB,3,True,0.20107294952157015,2,24,0,0
+gate_sum_v4,gate_sum_v4,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.18047386852923505,1,11,13,0
+gate_sum_v4,gate_sum_v4,第二部分：本轮新构造合成数据,PILOT,3,True,1.9628431948314156,5,24,0,0
+gate_sum_v4,gate_sum_v4,第二部分：本轮新构造合成数据,PL,3,True,0.40375385829252847,3,24,0,0
+gate_sum_v4,gate_sum_v4,第二部分：本轮新构造合成数据,TAO,3,True,1.551695890839836,4,24,0,0
+gate_sum_v5,gate_sum_v5,第二部分：本轮新构造合成数据,CrossGB,3,True,0.34893082709193474,2,24,0,0
+gate_sum_v5,gate_sum_v5,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.34449585620463424,1,11,13,0
+gate_sum_v5,gate_sum_v5,第二部分：本轮新构造合成数据,PILOT,3,True,2.0131879891431432,5,24,0,0
+gate_sum_v5,gate_sum_v5,第二部分：本轮新构造合成数据,PL,3,True,0.5972190569857737,3,24,0,0
+gate_sum_v5,gate_sum_v5,第二部分：本轮新构造合成数据,TAO,3,True,1.7620152375509288,4,24,0,0
+gate_sum_v6,gate_sum_v6,第二部分：本轮新构造合成数据,CrossGB,3,True,0.22215503748443458,2,24,0,0
+gate_sum_v6,gate_sum_v6,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.16168692777198457,1,7,17,0
+gate_sum_v6,gate_sum_v6,第二部分：本轮新构造合成数据,PILOT,3,True,2.022583057024909,5,24,0,0
+gate_sum_v6,gate_sum_v6,第二部分：本轮新构造合成数据,PL,3,True,0.7055615605852138,3,24,0,0
+gate_sum_v6,gate_sum_v6,第二部分：本轮新构造合成数据,TAO,3,True,1.1778760863415656,4,24,0,0
+gate_sum_v7,gate_sum_v7,第二部分：本轮新构造合成数据,CrossGB,3,True,0.4702518159991394,1,24,0,0
+gate_sum_v7,gate_sum_v7,第二部分：本轮新构造合成数据,LinXGBoost,3,True,2.027399816927708,5,4,20,0
+gate_sum_v7,gate_sum_v7,第二部分：本轮新构造合成数据,PILOT,3,True,2.0116381037774347,4,24,0,0
+gate_sum_v7,gate_sum_v7,第二部分：本轮新构造合成数据,PL,3,True,0.8712040284403212,2,24,0,0
+gate_sum_v7,gate_sum_v7,第二部分：本轮新构造合成数据,TAO,3,True,1.5506085055339103,3,24,0,0
+healthcare_insurance_expenses,Healthcare insurance expenses,第一部分：论文已有数据集,CrossGB,3,True,4531.738419583594,3,24,0,0
+healthcare_insurance_expenses,Healthcare insurance expenses,第一部分：论文已有数据集,LinXGBoost,3,True,4446.292801038774,1,24,0,0
+healthcare_insurance_expenses,Healthcare insurance expenses,第一部分：论文已有数据集,PILOT,3,True,4492.901098075895,2,24,0,0
+healthcare_insurance_expenses,Healthcare insurance expenses,第一部分：论文已有数据集,PL,3,True,4657.4066635058525,4,24,0,0
+healthcare_insurance_expenses,Healthcare insurance expenses,第一部分：论文已有数据集,TAO,3,True,5286.507795290806,5,24,0,0
+hetero_gate_v0,hetero_gate_v0,第二部分：本轮新构造合成数据,CrossGB,3,True,0.2611002354349893,1,24,0,0
+hetero_gate_v0,hetero_gate_v0,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.27464560880685224,2,18,6,0
+hetero_gate_v0,hetero_gate_v0,第二部分：本轮新构造合成数据,PILOT,3,True,2.0088781492768537,5,24,0,0
+hetero_gate_v0,hetero_gate_v0,第二部分：本轮新构造合成数据,PL,3,True,0.4419470094046125,3,24,0,0
+hetero_gate_v0,hetero_gate_v0,第二部分：本轮新构造合成数据,TAO,3,True,1.3717497671233216,4,24,0,0
+hetero_gate_v1,hetero_gate_v1,第二部分：本轮新构造合成数据,CrossGB,3,True,0.4873274165105219,1,24,0,0
+hetero_gate_v1,hetero_gate_v1,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.5564470561712241,2,13,11,0
+hetero_gate_v1,hetero_gate_v1,第二部分：本轮新构造合成数据,PILOT,3,True,2.0705991556443735,5,24,0,0
+hetero_gate_v1,hetero_gate_v1,第二部分：本轮新构造合成数据,PL,3,True,0.8807614154657141,3,24,0,0
+hetero_gate_v1,hetero_gate_v1,第二部分：本轮新构造合成数据,TAO,3,True,1.6755561683629896,4,24,0,0
+hetero_gate_v2,hetero_gate_v2,第二部分：本轮新构造合成数据,CrossGB,3,True,0.28330250736951573,1,24,0,0
+hetero_gate_v2,hetero_gate_v2,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.3813483478356778,2,11,13,0
+hetero_gate_v2,hetero_gate_v2,第二部分：本轮新构造合成数据,PILOT,3,True,1.9477203276816362,5,24,0,0
+hetero_gate_v2,hetero_gate_v2,第二部分：本轮新构造合成数据,PL,3,True,0.7899389803019217,3,24,0,0
+hetero_gate_v2,hetero_gate_v2,第二部分：本轮新构造合成数据,TAO,3,True,1.7878626699375648,4,24,0,0
+hetero_gate_v3,hetero_gate_v3,第二部分：本轮新构造合成数据,CrossGB,3,True,0.47513721602611686,1,24,0,0
+hetero_gate_v3,hetero_gate_v3,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.5144847265553928,2,7,17,0
+hetero_gate_v3,hetero_gate_v3,第二部分：本轮新构造合成数据,PILOT,3,True,2.0740622241616147,5,24,0,0
+hetero_gate_v3,hetero_gate_v3,第二部分：本轮新构造合成数据,PL,3,True,1.3855934798842389,3,24,0,0
+hetero_gate_v3,hetero_gate_v3,第二部分：本轮新构造合成数据,TAO,3,True,1.4207859876635485,4,24,0,0
+hetero_gate_v4,hetero_gate_v4,第二部分：本轮新构造合成数据,CrossGB,3,True,0.26188429081992154,2,24,0,0
+hetero_gate_v4,hetero_gate_v4,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.24627567365356143,1,13,11,0
+hetero_gate_v4,hetero_gate_v4,第二部分：本轮新构造合成数据,PILOT,3,True,1.9678966426697535,5,24,0,0
+hetero_gate_v4,hetero_gate_v4,第二部分：本轮新构造合成数据,PL,3,True,0.44936483408658184,3,24,0,0
+hetero_gate_v4,hetero_gate_v4,第二部分：本轮新构造合成数据,TAO,3,True,1.5057127712479013,4,24,0,0
+hetero_gate_v5,hetero_gate_v5,第二部分：本轮新构造合成数据,CrossGB,3,True,0.5013654745982631,2,24,0,0
+hetero_gate_v5,hetero_gate_v5,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.47484572040433454,1,10,14,0
+hetero_gate_v5,hetero_gate_v5,第二部分：本轮新构造合成数据,PILOT,3,True,2.0312223513055003,5,24,0,0
+hetero_gate_v5,hetero_gate_v5,第二部分：本轮新构造合成数据,PL,3,True,1.048645546463719,3,24,0,0
+hetero_gate_v5,hetero_gate_v5,第二部分：本轮新构造合成数据,TAO,3,True,1.738447468043818,4,24,0,0
+hetero_gate_v6,hetero_gate_v6,第二部分：本轮新构造合成数据,CrossGB,3,True,0.2776028306580951,2,24,0,0
+hetero_gate_v6,hetero_gate_v6,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.242541142580202,1,7,17,0
+hetero_gate_v6,hetero_gate_v6,第二部分：本轮新构造合成数据,PILOT,3,True,2.0351587575071584,5,24,0,0
+hetero_gate_v6,hetero_gate_v6,第二部分：本轮新构造合成数据,PL,3,True,0.40865715348500814,3,24,0,0
+hetero_gate_v6,hetero_gate_v6,第二部分：本轮新构造合成数据,TAO,3,True,1.254698157266987,4,24,0,0
+hetero_gate_v7,hetero_gate_v7,第二部分：本轮新构造合成数据,CrossGB,3,True,0.5752343267066061,1,24,0,0
+hetero_gate_v7,hetero_gate_v7,第二部分：本轮新构造合成数据,LinXGBoost,3,True,2.052436435685252,5,4,20,0
+hetero_gate_v7,hetero_gate_v7,第二部分：本轮新构造合成数据,PILOT,3,True,2.037095553445698,4,24,0,0
+hetero_gate_v7,hetero_gate_v7,第二部分：本轮新构造合成数据,PL,3,True,1.1468952466351814,2,24,0,0
+hetero_gate_v7,hetero_gate_v7,第二部分：本轮新构造合成数据,TAO,3,True,1.6594761288865783,3,24,0,0
+houses,Houses,第一部分：论文已有数据集,CrossGB,3,True,0.22984875422672071,2,24,0,0
+houses,Houses,第一部分：论文已有数据集,LinXGBoost,3,True,0.2637429546500314,4,13,11,0
+houses,Houses,第一部分：论文已有数据集,PILOT,3,True,0.2605661554250389,3,24,0,0
+houses,Houses,第一部分：论文已有数据集,PL,3,True,0.22548652035873615,1,24,0,0
+houses,Houses,第一部分：论文已有数据集,TAO,3,True,0.30358796116065306,5,24,0,0
+kin8nm,Kin8nm,第一部分：论文已有数据集,CrossGB,3,True,0.10419388717542329,2,24,0,0
+kin8nm,Kin8nm,第一部分：论文已有数据集,LinXGBoost,3,True,0.1413058779962665,4,15,9,0
+kin8nm,Kin8nm,第一部分：论文已有数据集,PILOT,3,True,0.17955729023378844,5,24,0,0
+kin8nm,Kin8nm,第一部分：论文已有数据集,PL,3,True,0.10206492584529976,1,24,0,0
+kin8nm,Kin8nm,第一部分：论文已有数据集,TAO,3,True,0.1360617799955001,3,23,0,1
+miami_housing,Miami housing,第一部分：论文已有数据集,CrossGB,3,True,93940.8554467534,2,24,0,0
+miami_housing,Miami housing,第一部分：论文已有数据集,LinXGBoost,3,True,110883.2218751692,3,7,17,0
+miami_housing,Miami housing,第一部分：论文已有数据集,PILOT,3,True,116828.8398309877,4,24,0,0
+miami_housing,Miami housing,第一部分：论文已有数据集,PL,3,True,90055.682905398,1,24,0,0
+miami_housing,Miami housing,第一部分：论文已有数据集,TAO,3,True,135370.0166004362,5,24,0,0
+naval_propulsion_plant,Naval propulsion plant,第一部分：论文已有数据集,CrossGB,3,True,0.0012929117351025182,3,24,0,0
+naval_propulsion_plant,Naval propulsion plant,第一部分：论文已有数据集,LinXGBoost,3,True,0.00045742523867811933,1,11,13,0
+naval_propulsion_plant,Naval propulsion plant,第一部分：论文已有数据集,PILOT,3,True,0.0033425078727902717,5,24,0,0
+naval_propulsion_plant,Naval propulsion plant,第一部分：论文已有数据集,PL,3,True,0.0012867382145966002,2,24,0,0
+naval_propulsion_plant,Naval propulsion plant,第一部分：论文已有数据集,TAO,3,True,0.0028055215539502746,4,24,0,0
+physiochemical_protein,Physiochemical protein,第一部分：论文已有数据集,CrossGB,3,True,3.8719585461892208,2,24,0,0
+physiochemical_protein,Physiochemical protein,第一部分：论文已有数据集,LinXGBoost,3,True,5.255331765930497,5,4,20,0
+physiochemical_protein,Physiochemical protein,第一部分：论文已有数据集,PILOT,3,True,4.594774120130371,3,24,0,0
+physiochemical_protein,Physiochemical protein,第一部分：论文已有数据集,PL,3,True,3.723684108138824,1,24,0,0
+physiochemical_protein,Physiochemical protein,第一部分：论文已有数据集,TAO,3,True,4.798025723233948,4,24,0,0
+saturating_v0,saturating_v0,第二部分：本轮新构造合成数据,CrossGB,3,True,0.2008535156666165,1,24,0,0
+saturating_v0,saturating_v0,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.21163841091429558,2,17,7,0
+saturating_v0,saturating_v0,第二部分：本轮新构造合成数据,PILOT,3,True,1.5300832536373548,5,24,0,0
+saturating_v0,saturating_v0,第二部分：本轮新构造合成数据,PL,3,True,0.33337923079347603,3,24,0,0
+saturating_v0,saturating_v0,第二部分：本轮新构造合成数据,TAO,3,True,0.9910063129016938,4,24,0,0
+saturating_v1,saturating_v1,第二部分：本轮新构造合成数据,CrossGB,3,True,0.33247219244783305,1,24,0,0
+saturating_v1,saturating_v1,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.4234675702925024,2,13,11,0
+saturating_v1,saturating_v1,第二部分：本轮新构造合成数据,PILOT,3,True,1.5950045651755314,5,24,0,0
+saturating_v1,saturating_v1,第二部分：本轮新构造合成数据,PL,3,True,0.47196939599829085,3,24,0,0
+saturating_v1,saturating_v1,第二部分：本轮新构造合成数据,TAO,3,True,1.1592944802579375,4,24,0,0
+saturating_v2,saturating_v2,第二部分：本轮新构造合成数据,CrossGB,3,True,0.19460116732017715,1,24,0,0
+saturating_v2,saturating_v2,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.3367518998985588,2,11,13,0
+saturating_v2,saturating_v2,第二部分：本轮新构造合成数据,PILOT,3,True,1.5871453992792672,5,24,0,0
+saturating_v2,saturating_v2,第二部分：本轮新构造合成数据,PL,3,True,0.3940058486085869,3,24,0,0
+saturating_v2,saturating_v2,第二部分：本轮新构造合成数据,TAO,3,True,1.216820201498586,4,24,0,0
+saturating_v3,saturating_v3,第二部分：本轮新构造合成数据,CrossGB,3,True,0.33187569233831643,1,24,0,0
+saturating_v3,saturating_v3,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.5668128034030425,2,8,16,0
+saturating_v3,saturating_v3,第二部分：本轮新构造合成数据,PILOT,3,True,1.5818892330866967,5,24,0,0
+saturating_v3,saturating_v3,第二部分：本轮新构造合成数据,PL,3,True,0.611761919494266,3,24,0,0
+saturating_v3,saturating_v3,第二部分：本轮新构造合成数据,TAO,3,True,1.1855440826758579,4,24,0,0
+saturating_v4,saturating_v4,第二部分：本轮新构造合成数据,CrossGB,3,True,0.18842011903129233,1,24,0,0
+saturating_v4,saturating_v4,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.2341452137902643,2,13,11,0
+saturating_v4,saturating_v4,第二部分：本轮新构造合成数据,PILOT,3,True,1.519595516023604,5,24,0,0
+saturating_v4,saturating_v4,第二部分：本轮新构造合成数据,PL,3,True,0.33244495859031853,3,24,0,0
+saturating_v4,saturating_v4,第二部分：本轮新构造合成数据,TAO,3,True,0.8508705934849985,4,24,0,0
+saturating_v5,saturating_v5,第二部分：本轮新构造合成数据,CrossGB,3,True,0.3237435386831902,1,24,0,0
+saturating_v5,saturating_v5,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.4127913835848907,2,9,15,0
+saturating_v5,saturating_v5,第二部分：本轮新构造合成数据,PILOT,3,True,1.591259633683796,5,24,0,0
+saturating_v5,saturating_v5,第二部分：本轮新构造合成数据,PL,3,True,0.4505349699600502,3,24,0,0
+saturating_v5,saturating_v5,第二部分：本轮新构造合成数据,TAO,3,True,1.1271468283049952,4,23,0,1
+saturating_v6,saturating_v6,第二部分：本轮新构造合成数据,CrossGB,3,True,0.2018160869135028,1,24,0,0
+saturating_v6,saturating_v6,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.6291707195123405,3,6,18,0
+saturating_v6,saturating_v6,第二部分：本轮新构造合成数据,PILOT,3,True,1.5512509599581639,5,24,0,0
+saturating_v6,saturating_v6,第二部分：本轮新构造合成数据,PL,3,True,0.34420701338213155,2,24,0,0
+saturating_v6,saturating_v6,第二部分：本轮新构造合成数据,TAO,3,True,0.9296844216199095,4,24,0,0
+saturating_v7,saturating_v7,第二部分：本轮新构造合成数据,CrossGB,3,True,0.3298880174155849,1,24,0,0
+saturating_v7,saturating_v7,第二部分：本轮新构造合成数据,LinXGBoost,3,True,1.5607918156952103,5,4,20,0
+saturating_v7,saturating_v7,第二部分：本轮新构造合成数据,PILOT,3,True,1.5456062551091374,4,24,0,0
+saturating_v7,saturating_v7,第二部分：本轮新构造合成数据,PL,3,True,0.5251730441958532,2,24,0,0
+saturating_v7,saturating_v7,第二部分：本轮新构造合成数据,TAO,3,True,1.0208653354129362,3,24,0,0
+space_ga,Space GA,第一部分：论文已有数据集,CrossGB,3,True,0.11827689078928223,3,24,0,0
+space_ga,Space GA,第一部分：论文已有数据集,LinXGBoost,3,True,0.1007183088997533,1,22,2,0
+space_ga,Space GA,第一部分：论文已有数据集,PILOT,3,True,0.13035567817185065,5,24,0,0
+space_ga,Space GA,第一部分：论文已有数据集,PL,3,True,0.1055996720617542,2,24,0,0
+space_ga,Space GA,第一部分：论文已有数据集,TAO,3,True,0.12743283333499508,4,24,0,0
+stair_slope_v0,stair_slope_v0,第二部分：本轮新构造合成数据,CrossGB,3,True,0.18784711128916895,2,24,0,0
+stair_slope_v0,stair_slope_v0,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.15719435633934184,1,17,7,0
+stair_slope_v0,stair_slope_v0,第二部分：本轮新构造合成数据,PILOT,3,True,1.7225714554522271,5,24,0,0
+stair_slope_v0,stair_slope_v0,第二部分：本轮新构造合成数据,PL,3,True,0.2459880527860573,3,24,0,0
+stair_slope_v0,stair_slope_v0,第二部分：本轮新构造合成数据,TAO,3,True,0.8445940862865763,4,24,0,0
+stair_slope_v1,stair_slope_v1,第二部分：本轮新构造合成数据,CrossGB,3,True,0.3605435950005258,3,24,0,0
+stair_slope_v1,stair_slope_v1,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.32622076798280203,1,13,11,0
+stair_slope_v1,stair_slope_v1,第二部分：本轮新构造合成数据,PILOT,3,True,1.7388984466329047,5,24,0,0
+stair_slope_v1,stair_slope_v1,第二部分：本轮新构造合成数据,PL,3,True,0.34899245628527326,2,24,0,0
+stair_slope_v1,stair_slope_v1,第二部分：本轮新构造合成数据,TAO,3,True,0.9151254598336008,4,24,0,0
+stair_slope_v2,stair_slope_v2,第二部分：本轮新构造合成数据,CrossGB,3,True,0.20276242676547054,2,24,0,0
+stair_slope_v2,stair_slope_v2,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.17128939406565857,1,11,13,0
+stair_slope_v2,stair_slope_v2,第二部分：本轮新构造合成数据,PILOT,3,True,1.715021087682367,5,24,0,0
+stair_slope_v2,stair_slope_v2,第二部分：本轮新构造合成数据,PL,3,True,0.22522883116226133,3,24,0,0
+stair_slope_v2,stair_slope_v2,第二部分：本轮新构造合成数据,TAO,3,True,0.9823521275717084,4,24,0,0
+stair_slope_v3,stair_slope_v3,第二部分：本轮新构造合成数据,CrossGB,3,True,0.32921910079050015,1,24,0,0
+stair_slope_v3,stair_slope_v3,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.3329634555409935,2,7,17,0
+stair_slope_v3,stair_slope_v3,第二部分：本轮新构造合成数据,PILOT,3,True,1.6017246881089389,5,24,0,0
+stair_slope_v3,stair_slope_v3,第二部分：本轮新构造合成数据,PL,3,True,0.42582338282729393,3,24,0,0
+stair_slope_v3,stair_slope_v3,第二部分：本轮新构造合成数据,TAO,3,True,1.3064733978801926,4,24,0,0
+stair_slope_v4,stair_slope_v4,第二部分：本轮新构造合成数据,CrossGB,3,True,0.18757450676829282,2,24,0,0
+stair_slope_v4,stair_slope_v4,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.15046020411042352,1,13,11,0
+stair_slope_v4,stair_slope_v4,第二部分：本轮新构造合成数据,PILOT,3,True,1.7254639653011115,5,24,0,0
+stair_slope_v4,stair_slope_v4,第二部分：本轮新构造合成数据,PL,3,True,0.2098657985311483,3,24,0,0
+stair_slope_v4,stair_slope_v4,第二部分：本轮新构造合成数据,TAO,3,True,0.7707590612818289,4,24,0,0
+stair_slope_v5,stair_slope_v5,第二部分：本轮新构造合成数据,CrossGB,3,True,0.3280735827157806,3,24,0,0
+stair_slope_v5,stair_slope_v5,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.30498067204504126,1,10,14,0
+stair_slope_v5,stair_slope_v5,第二部分：本轮新构造合成数据,PILOT,3,True,1.7849477593221994,5,24,0,0
+stair_slope_v5,stair_slope_v5,第二部分：本轮新构造合成数据,PL,3,True,0.3243610467750482,2,24,0,0
+stair_slope_v5,stair_slope_v5,第二部分：本轮新构造合成数据,TAO,3,True,0.8338392260215491,4,24,0,0
+stair_slope_v6,stair_slope_v6,第二部分：本轮新构造合成数据,CrossGB,3,True,0.2173006243710952,2,24,0,0
+stair_slope_v6,stair_slope_v6,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.18023704783233174,1,7,17,0
+stair_slope_v6,stair_slope_v6,第二部分：本轮新构造合成数据,PILOT,3,True,1.7189768728023804,5,24,0,0
+stair_slope_v6,stair_slope_v6,第二部分：本轮新构造合成数据,PL,3,True,0.22914114791606613,3,24,0,0
+stair_slope_v6,stair_slope_v6,第二部分：本轮新构造合成数据,TAO,3,True,0.851788911457329,4,24,0,0
+stair_slope_v7,stair_slope_v7,第二部分：本轮新构造合成数据,CrossGB,3,True,0.34618162472781,1,24,0,0
+stair_slope_v7,stair_slope_v7,第二部分：本轮新构造合成数据,LinXGBoost,3,True,1.7936257444822523,5,4,20,0
+stair_slope_v7,stair_slope_v7,第二部分：本轮新构造合成数据,PILOT,3,True,1.7865036688652973,4,24,0,0
+stair_slope_v7,stair_slope_v7,第二部分：本轮新构造合成数据,PL,3,True,0.35367923069617535,2,24,0,0
+stair_slope_v7,stair_slope_v7,第二部分：本轮新构造合成数据,TAO,3,True,0.9596213624241648,3,24,0,0
+superconductivity,Superconductivity,第二部分：本轮新增数据集,CrossGB,3,True,9.619702273417818,1,24,0,0
+superconductivity,Superconductivity,第二部分：本轮新增数据集,LinXGBoost,3,True,17.567460419902158,5,4,20,0
+superconductivity,Superconductivity,第二部分：本轮新增数据集,PILOT,3,True,12.670394102004773,3,24,0,0
+superconductivity,Superconductivity,第二部分：本轮新增数据集,PL,3,True,9.687102376613746,2,24,0,0
+superconductivity,Superconductivity,第二部分：本轮新增数据集,TAO,3,True,14.389727616681094,4,21,3,0
+switch4_v0,switch4_v0,第二部分：本轮新构造合成数据,CrossGB,3,True,0.33413512760268443,2,24,0,0
+switch4_v0,switch4_v0,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.15025751835622406,1,16,8,0
+switch4_v0,switch4_v0,第二部分：本轮新构造合成数据,PILOT,3,True,1.7254020874118643,4,24,0,0
+switch4_v0,switch4_v0,第二部分：本轮新构造合成数据,PL,3,True,0.49273925997041673,3,24,0,0
+switch4_v0,switch4_v0,第二部分：本轮新构造合成数据,TAO,3,True,1.729265564600717,5,24,0,0
+switch4_v1,switch4_v1,第二部分：本轮新构造合成数据,CrossGB,3,True,0.35929033887296097,1,24,0,0
+switch4_v1,switch4_v1,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.3767953747802914,2,13,11,0
+switch4_v1,switch4_v1,第二部分：本轮新构造合成数据,PILOT,3,True,1.7617758979399465,5,24,0,0
+switch4_v1,switch4_v1,第二部分：本轮新构造合成数据,PL,3,True,0.5243290020545541,3,24,0,0
+switch4_v1,switch4_v1,第二部分：本轮新构造合成数据,TAO,3,True,1.7615655677098996,4,24,0,0
+switch4_v2,switch4_v2,第二部分：本轮新构造合成数据,CrossGB,3,True,0.29549091051661086,2,24,0,0
+switch4_v2,switch4_v2,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.18856616584333027,1,11,13,0
+switch4_v2,switch4_v2,第二部分：本轮新构造合成数据,PILOT,3,True,1.7831364311830677,5,24,0,0
+switch4_v2,switch4_v2,第二部分：本轮新构造合成数据,PL,3,True,0.4231324261640945,3,24,0,0
+switch4_v2,switch4_v2,第二部分：本轮新构造合成数据,TAO,3,True,1.5137638793798105,4,24,0,0
+switch4_v3,switch4_v3,第二部分：本轮新构造合成数据,CrossGB,3,True,0.3925524932465701,2,24,0,0
+switch4_v3,switch4_v3,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.35183000554289007,1,8,16,0
+switch4_v3,switch4_v3,第二部分：本轮新构造合成数据,PILOT,3,True,1.766555554619884,5,24,0,0
+switch4_v3,switch4_v3,第二部分：本轮新构造合成数据,PL,3,True,0.5769925689999195,3,24,0,0
+switch4_v3,switch4_v3,第二部分：本轮新构造合成数据,TAO,3,True,1.6250909146293244,4,24,0,0
+switch4_v4,switch4_v4,第二部分：本轮新构造合成数据,CrossGB,3,True,0.19274662595106865,2,24,0,0
+switch4_v4,switch4_v4,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.1642651461931651,1,11,13,0
+switch4_v4,switch4_v4,第二部分：本轮新构造合成数据,PILOT,3,True,1.7291042518024702,5,24,0,0
+switch4_v4,switch4_v4,第二部分：本轮新构造合成数据,PL,3,True,0.3396679923825395,3,24,0,0
+switch4_v4,switch4_v4,第二部分：本轮新构造合成数据,TAO,3,True,1.0527071070452727,4,24,0,0
+switch4_v5,switch4_v5,第二部分：本轮新构造合成数据,CrossGB,3,True,0.36080986109055285,2,24,0,0
+switch4_v5,switch4_v5,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.3101640923090203,1,10,14,0
+switch4_v5,switch4_v5,第二部分：本轮新构造合成数据,PILOT,3,True,1.7464012281564045,5,24,0,0
+switch4_v5,switch4_v5,第二部分：本轮新构造合成数据,PL,3,True,0.42947934371065494,3,24,0,0
+switch4_v5,switch4_v5,第二部分：本轮新构造合成数据,TAO,3,True,1.0491850159307736,4,24,0,0
+switch4_v6,switch4_v6,第二部分：本轮新构造合成数据,CrossGB,3,True,0.2501284034468826,2,24,0,0
+switch4_v6,switch4_v6,第二部分：本轮新构造合成数据,LinXGBoost,3,True,0.17760077642894823,1,7,17,0
+switch4_v6,switch4_v6,第二部分：本轮新构造合成数据,PILOT,3,True,1.7424756330365165,5,24,0,0
+switch4_v6,switch4_v6,第二部分：本轮新构造合成数据,PL,3,True,0.31177015044168077,3,24,0,0
+switch4_v6,switch4_v6,第二部分：本轮新构造合成数据,TAO,3,True,1.3880725170586696,4,24,0,0
+switch4_v7,switch4_v7,第二部分：本轮新构造合成数据,CrossGB,3,True,0.3800089339241108,1,24,0,0
+switch4_v7,switch4_v7,第二部分：本轮新构造合成数据,LinXGBoost,3,True,1.7513361094056774,5,4,20,0
+switch4_v7,switch4_v7,第二部分：本轮新构造合成数据,PILOT,3,True,1.7053868397650362,4,24,0,0
+switch4_v7,switch4_v7,第二部分：本轮新构造合成数据,PL,3,True,0.4663854020462804,2,24,0,0
+switch4_v7,switch4_v7,第二部分：本轮新构造合成数据,TAO,3,True,1.3614716419277044,3,24,0,0
+uci294_combined_cycle_power_plant,Combined Cycle Power Plant,第二部分：本轮新增数据集,CrossGB,3,True,3.2882481135823816,2,24,0,0
+uci294_combined_cycle_power_plant,Combined Cycle Power Plant,第二部分：本轮新增数据集,LinXGBoost,3,True,3.52037847210431,3,19,5,0
+uci294_combined_cycle_power_plant,Combined Cycle Power Plant,第二部分：本轮新增数据集,PILOT,3,True,4.022040738711927,4,24,0,0
+uci294_combined_cycle_power_plant,Combined Cycle Power Plant,第二部分：本轮新增数据集,PL,3,True,3.2184424257290583,1,24,0,0
+uci294_combined_cycle_power_plant,Combined Cycle Power Plant,第二部分：本轮新增数据集,TAO,3,True,4.356723783308072,5,24,0,0
+uci477_real_estate_valuation,Real Estate Valuation,第二部分：本轮新增数据集,CrossGB,3,True,6.605854696009877,3,24,0,0
+uci477_real_estate_valuation,Real Estate Valuation,第二部分：本轮新增数据集,LinXGBoost,3,True,6.5007676508739705,2,24,0,0
+uci477_real_estate_valuation,Real Estate Valuation,第二部分：本轮新增数据集,PILOT,3,True,7.3301991323150775,4,24,0,0
+uci477_real_estate_valuation,Real Estate Valuation,第二部分：本轮新增数据集,PL,3,True,6.456062727397747,1,24,0,0
+uci477_real_estate_valuation,Real Estate Valuation,第二部分：本轮新增数据集,TAO,3,True,8.478795476602778,5,23,0,1
+uci9_auto_mpg,Auto MPG,第二部分：本轮新增数据集,CrossGB,3,True,3.281344715498981,1,24,0,0
+uci9_auto_mpg,Auto MPG,第二部分：本轮新增数据集,LinXGBoost,3,True,3.7425689659354577,5,24,0,0
+uci9_auto_mpg,Auto MPG,第二部分：本轮新增数据集,PILOT,3,True,3.445695964561585,3,24,0,0
+uci9_auto_mpg,Auto MPG,第二部分：本轮新增数据集,PL,3,True,3.3975898078728712,2,24,0,0
+uci9_auto_mpg,Auto MPG,第二部分：本轮新增数据集,TAO,3,True,3.7322811507316658,4,24,0,0
+wine_quality,Wine quality,第一部分：论文已有数据集,CrossGB,3,True,0.6397047306296327,2,24,0,0
+wine_quality,Wine quality,第一部分：论文已有数据集,LinXGBoost,3,True,0.6625955082025073,3,24,0,0
+wine_quality,Wine quality,第一部分：论文已有数据集,PILOT,3,True,0.7142830114283698,4,24,0,0
+wine_quality,Wine quality,第一部分：论文已有数据集,PL,3,True,0.633038240511589,1,24,0,0
+wine_quality,Wine quality,第一部分：论文已有数据集,TAO,3,True,0.726341887797305,5,24,0,0

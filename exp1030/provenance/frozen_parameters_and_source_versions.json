@@ -1,0 +1,3111 @@
+{
+  "selection": "validation-only frozen HPO choices; not chosen using test",
+  "selected": {
+    "Another-Dataset-on-used-Fiat-500": {
+      "CrossGB": {
+        "depth": 2,
+        "trees": 8,
+        "ridge": 0.01,
+        "learning_rate": 0.5,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 10,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 150,
+        "learning_rate": 0.1,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 100.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 10,
+        "num_bins": 127,
+        "leaf_type": "half_additive"
+      },
+      "LinXGBoost": {
+        "n_estimators": 20,
+        "learning_rate": 0.1,
+        "max_depth": 3,
+        "lbda": 100.0,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 10,
+        "C_dnode": 2.9183513321217682,
+        "alpha": 0.0
+      }
+    },
+    "QSAR-TID-11": {
+      "CrossGB": {
+        "depth": 5,
+        "trees": 8,
+        "ridge": 10.0,
+        "learning_rate": 0.5,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 10,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 1,
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "lbda": 0.001,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 16,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 20,
+        "rel_tolerance": 0.0001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 20,
+        "C_dnode": 0.06041655957897744,
+        "alpha": 0.0
+      }
+    },
+    "QSAR_fish_toxicity": {
+      "CrossGB": {
+        "depth": 3,
+        "trees": 150,
+        "ridge": 0.1,
+        "learning_rate": 0.03,
+        "p": 0.75,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 150,
+        "learning_rate": 0.03,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 50,
+        "learning_rate": 0.3,
+        "max_depth": 2,
+        "lbda": 0.01,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 6,
+        "max_model_depth": 30,
+        "min_sample_leaf": 5,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.0001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 10,
+        "C_dnode": 12.541113197189595,
+        "alpha": 0.0
+      }
+    },
+    "airfoil_self_noise": {
+      "CrossGB": {
+        "depth": 5,
+        "trees": 500,
+        "ridge": 10.0,
+        "learning_rate": 0.1,
+        "p": 0.5,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 500,
+        "learning_rate": 0.3,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 100,
+        "learning_rate": 0.3,
+        "max_depth": 4,
+        "lbda": 1.0,
+        "min_samples_leaf": 20
+      },
+      "PILOT": {
+        "max_depth": 8,
+        "max_model_depth": 60,
+        "min_sample_leaf": 40,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 6,
+        "max_iter": 20,
+        "C_dnode": 90.19042856196103,
+        "alpha": 0.0
+      }
+    },
+    "concrete_compressive_strength": {
+      "CrossGB": {
+        "depth": 5,
+        "trees": 500,
+        "ridge": 10.0,
+        "learning_rate": 0.1,
+        "p": 0.5,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 50,
+        "learning_rate": 0.5,
+        "max_depth": 3,
+        "lbda": 100.0,
+        "min_samples_leaf": 20
+      },
+      "PILOT": {
+        "max_depth": 8,
+        "max_model_depth": 30,
+        "min_sample_leaf": 5,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.0001
+      },
+      "TAO": {
+        "depth": 6,
+        "max_iter": 20,
+        "C_dnode": 90.19042856196103,
+        "alpha": 0.0
+      }
+    },
+    "correlated_gate_v0": {
+      "CrossGB": {
+        "depth": 3,
+        "trees": 150,
+        "ridge": 100.0,
+        "learning_rate": 0.1,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 2,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 1.0,
+        "num_leaves": 2,
+        "max_var": 1,
+        "l2_reg": 0.001,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 20,
+        "C_dnode": 0.06041655957897744,
+        "alpha": 0.0
+      }
+    },
+    "correlated_gate_v1": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 1.0,
+        "num_leaves": 2,
+        "max_var": 1,
+        "l2_reg": 0.001,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 5,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 4,
+        "max_iter": 10,
+        "C_dnode": 0.03763863941684976,
+        "alpha": 0.0
+      }
+    },
+    "correlated_gate_v2": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.3,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 1.0,
+        "num_leaves": 2,
+        "max_var": 1,
+        "l2_reg": 0.001,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 4,
+        "max_iter": 20,
+        "C_dnode": 0.05020959066064109,
+        "alpha": 0.0
+      }
+    },
+    "correlated_gate_v3": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 8,
+        "learning_rate": 1.0,
+        "num_leaves": 4,
+        "max_var": 2,
+        "l2_reg": 0.01,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "half_additive"
+      },
+      "LinXGBoost": {
+        "n_estimators": 5,
+        "learning_rate": 0.3,
+        "max_depth": 3,
+        "lbda": 0.1,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 2,
+        "max_model_depth": 60,
+        "min_sample_leaf": 10,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 4,
+        "max_iter": 10,
+        "C_dnode": 0.03763863941684976,
+        "alpha": 0.0
+      }
+    },
+    "correlated_gate_v4": {
+      "CrossGB": {
+        "depth": 3,
+        "trees": 150,
+        "ridge": 100.0,
+        "learning_rate": 0.1,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 2,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 1.0,
+        "num_leaves": 2,
+        "max_var": 1,
+        "l2_reg": 0.001,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 5,
+        "learning_rate": 0.5,
+        "max_depth": 4,
+        "lbda": 1.0,
+        "min_samples_leaf": 10
+      },
+      "PILOT": {
+        "max_depth": 2,
+        "max_model_depth": 60,
+        "min_sample_leaf": 10,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 2.590226232911113,
+        "alpha": 0.5
+      }
+    },
+    "correlated_gate_v5": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.3,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 8,
+        "learning_rate": 1.0,
+        "num_leaves": 4,
+        "max_var": 2,
+        "l2_reg": 0.01,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "half_additive"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 20,
+        "C_dnode": 0.06041655957897744,
+        "alpha": 0.0
+      }
+    },
+    "correlated_gate_v6": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 8,
+        "learning_rate": 1.0,
+        "num_leaves": 4,
+        "max_var": 2,
+        "l2_reg": 0.01,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "half_additive"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 8,
+        "max_model_depth": 30,
+        "min_sample_leaf": 20,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.0001
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 2.590226232911113,
+        "alpha": 0.5
+      }
+    },
+    "correlated_gate_v7": {
+      "CrossGB": {
+        "depth": 3,
+        "trees": 150,
+        "ridge": 100.0,
+        "learning_rate": 0.1,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 2,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 8,
+        "learning_rate": 1.0,
+        "num_leaves": 4,
+        "max_var": 2,
+        "l2_reg": 0.01,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "half_additive"
+      },
+      "LinXGBoost": {
+        "n_estimators": 1,
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "lbda": 0.001,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 20,
+        "C_dnode": 0.06041655957897744,
+        "alpha": 0.0
+      }
+    },
+    "diamonds": {
+      "CrossGB": {
+        "depth": 5,
+        "trees": 500,
+        "ridge": 10.0,
+        "learning_rate": 0.1,
+        "p": 0.5,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 1.0,
+        "num_leaves": 2,
+        "max_var": 1,
+        "l2_reg": 0.001,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 5,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 20,
+        "learning_rate": 0.1,
+        "max_depth": 3,
+        "lbda": 100.0,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 16,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 20,
+        "rel_tolerance": 0.0001
+      },
+      "TAO": {
+        "depth": 6,
+        "max_iter": 20,
+        "C_dnode": 90.19042856196103,
+        "alpha": 0.0
+      }
+    },
+    "energy_efficiency": {
+      "CrossGB": {
+        "depth": 5,
+        "trees": 500,
+        "ridge": 10.0,
+        "learning_rate": 0.1,
+        "p": 0.5,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 1.0,
+        "num_leaves": 2,
+        "max_var": 1,
+        "l2_reg": 0.001,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 50,
+        "learning_rate": 0.5,
+        "max_depth": 3,
+        "lbda": 100.0,
+        "min_samples_leaf": 20
+      },
+      "PILOT": {
+        "max_depth": 8,
+        "max_model_depth": 30,
+        "min_sample_leaf": 5,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.0001
+      },
+      "TAO": {
+        "depth": 6,
+        "max_iter": 20,
+        "C_dnode": 90.19042856196103,
+        "alpha": 0.0
+      }
+    },
+    "gate_sum_v0": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 150,
+        "learning_rate": 0.03,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 50,
+        "learning_rate": 0.3,
+        "max_depth": 2,
+        "lbda": 0.01,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 2.590226232911113,
+        "alpha": 0.5
+      }
+    },
+    "gate_sum_v1": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 1.0,
+        "num_leaves": 2,
+        "max_var": 1,
+        "l2_reg": 0.001,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 5,
+        "learning_rate": 0.5,
+        "max_depth": 4,
+        "lbda": 1.0,
+        "min_samples_leaf": 10
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 4,
+        "max_iter": 20,
+        "C_dnode": 0.05020959066064109,
+        "alpha": 0.0
+      }
+    },
+    "gate_sum_v2": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.3,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 32,
+        "learning_rate": 0.2,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 6,
+        "max_model_depth": 30,
+        "min_sample_leaf": 5,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.0001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 20,
+        "C_dnode": 0.06041655957897744,
+        "alpha": 0.0
+      }
+    },
+    "gate_sum_v3": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 4,
+        "ridge": 0.001,
+        "learning_rate": 1.0,
+        "p": 0.5,
+        "metagb_min_data_in_leaf": 10,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 8,
+        "learning_rate": 1.0,
+        "num_leaves": 4,
+        "max_var": 2,
+        "l2_reg": 0.01,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "half_additive"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.5,
+        "max_depth": 3,
+        "lbda": 100.0,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 4,
+        "max_iter": 10,
+        "C_dnode": 0.03763863941684976,
+        "alpha": 0.0
+      }
+    },
+    "gate_sum_v4": {
+      "CrossGB": {
+        "depth": 3,
+        "trees": 150,
+        "ridge": 100.0,
+        "learning_rate": 0.1,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 2,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 8,
+        "learning_rate": 1.0,
+        "num_leaves": 4,
+        "max_var": 2,
+        "l2_reg": 0.01,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "half_additive"
+      },
+      "LinXGBoost": {
+        "n_estimators": 5,
+        "learning_rate": 0.5,
+        "max_depth": 4,
+        "lbda": 1.0,
+        "min_samples_leaf": 10
+      },
+      "PILOT": {
+        "max_depth": 2,
+        "max_model_depth": 60,
+        "min_sample_leaf": 10,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 2.590226232911113,
+        "alpha": 0.5
+      }
+    },
+    "gate_sum_v5": {
+      "CrossGB": {
+        "depth": 3,
+        "trees": 150,
+        "ridge": 100.0,
+        "learning_rate": 0.1,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 2,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 8,
+        "learning_rate": 1.0,
+        "num_leaves": 4,
+        "max_var": 2,
+        "l2_reg": 0.01,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "half_additive"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 20,
+        "C_dnode": 0.06041655957897744,
+        "alpha": 0.0
+      }
+    },
+    "gate_sum_v6": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 8,
+        "learning_rate": 1.0,
+        "num_leaves": 4,
+        "max_var": 2,
+        "l2_reg": 0.01,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "half_additive"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 2.590226232911113,
+        "alpha": 0.5
+      }
+    },
+    "gate_sum_v7": {
+      "CrossGB": {
+        "depth": 2,
+        "trees": 8,
+        "ridge": 0.01,
+        "learning_rate": 1.0,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 5,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 8,
+        "learning_rate": 1.0,
+        "num_leaves": 4,
+        "max_var": 2,
+        "l2_reg": 0.01,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "half_additive"
+      },
+      "LinXGBoost": {
+        "n_estimators": 1,
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "lbda": 0.001,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 2,
+        "max_model_depth": 60,
+        "min_sample_leaf": 10,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 20,
+        "C_dnode": 0.06041655957897744,
+        "alpha": 0.0
+      }
+    },
+    "healthcare_insurance_expenses": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 8,
+        "learning_rate": 0.3,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 5,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 20,
+        "learning_rate": 0.1,
+        "max_depth": 3,
+        "lbda": 100.0,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 2,
+        "max_model_depth": 60,
+        "min_sample_leaf": 10,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 4.459726269332938,
+        "alpha": 1.0
+      }
+    },
+    "hetero_gate_v0": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 32,
+        "learning_rate": 0.2,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 2.590226232911113,
+        "alpha": 0.5
+      }
+    },
+    "hetero_gate_v1": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 1.0,
+        "num_leaves": 2,
+        "max_var": 1,
+        "l2_reg": 0.001,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 5,
+        "learning_rate": 0.5,
+        "max_depth": 4,
+        "lbda": 1.0,
+        "min_samples_leaf": 10
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 20,
+        "C_dnode": 0.06041655957897744,
+        "alpha": 0.0
+      }
+    },
+    "hetero_gate_v2": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.3,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 32,
+        "learning_rate": 0.5,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 5,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 5,
+        "learning_rate": 0.5,
+        "max_depth": 4,
+        "lbda": 1.0,
+        "min_samples_leaf": 10
+      },
+      "PILOT": {
+        "max_depth": 2,
+        "max_model_depth": 60,
+        "min_sample_leaf": 10,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 4,
+        "max_iter": 20,
+        "C_dnode": 0.05020959066064109,
+        "alpha": 0.0
+      }
+    },
+    "hetero_gate_v3": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 8,
+        "learning_rate": 1.0,
+        "num_leaves": 4,
+        "max_var": 2,
+        "l2_reg": 0.01,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "half_additive"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.5,
+        "max_depth": 3,
+        "lbda": 100.0,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 4,
+        "max_iter": 10,
+        "C_dnode": 0.03763863941684976,
+        "alpha": 0.0
+      }
+    },
+    "hetero_gate_v4": {
+      "CrossGB": {
+        "depth": 2,
+        "trees": 8,
+        "ridge": 0.01,
+        "learning_rate": 1.0,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 5,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 32,
+        "learning_rate": 0.2,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 5,
+        "learning_rate": 0.5,
+        "max_depth": 4,
+        "lbda": 1.0,
+        "min_samples_leaf": 10
+      },
+      "PILOT": {
+        "max_depth": 2,
+        "max_model_depth": 60,
+        "min_sample_leaf": 10,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 2.590226232911113,
+        "alpha": 0.5
+      }
+    },
+    "hetero_gate_v5": {
+      "CrossGB": {
+        "depth": 2,
+        "trees": 8,
+        "ridge": 0.01,
+        "learning_rate": 1.0,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 5,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 8,
+        "learning_rate": 1.0,
+        "num_leaves": 4,
+        "max_var": 2,
+        "l2_reg": 0.01,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "half_additive"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 6,
+        "max_model_depth": 30,
+        "min_sample_leaf": 5,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.0001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 20,
+        "C_dnode": 0.06041655957897744,
+        "alpha": 0.0
+      }
+    },
+    "hetero_gate_v6": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 8,
+        "learning_rate": 1.0,
+        "num_leaves": 4,
+        "max_var": 2,
+        "l2_reg": 0.01,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "half_additive"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.5,
+        "max_depth": 3,
+        "lbda": 100.0,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 2.590226232911113,
+        "alpha": 0.5
+      }
+    },
+    "hetero_gate_v7": {
+      "CrossGB": {
+        "depth": 2,
+        "trees": 8,
+        "ridge": 0.01,
+        "learning_rate": 1.0,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 5,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 8,
+        "learning_rate": 1.0,
+        "num_leaves": 4,
+        "max_var": 2,
+        "l2_reg": 0.01,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "half_additive"
+      },
+      "LinXGBoost": {
+        "n_estimators": 1,
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "lbda": 0.001,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 20,
+        "C_dnode": 0.06041655957897744,
+        "alpha": 0.0
+      }
+    },
+    "houses": {
+      "CrossGB": {
+        "depth": 5,
+        "trees": 500,
+        "ridge": 10.0,
+        "learning_rate": 0.1,
+        "p": 0.5,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 5,
+        "learning_rate": 1.0,
+        "max_depth": 4,
+        "lbda": 1.0,
+        "min_samples_leaf": 20
+      },
+      "PILOT": {
+        "max_depth": 12,
+        "max_model_depth": 60,
+        "min_sample_leaf": 40,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.0001
+      },
+      "TAO": {
+        "depth": 6,
+        "max_iter": 20,
+        "C_dnode": 90.19042856196103,
+        "alpha": 0.0
+      }
+    },
+    "kin8nm": {
+      "CrossGB": {
+        "depth": 5,
+        "trees": 500,
+        "ridge": 10.0,
+        "learning_rate": 0.1,
+        "p": 0.5,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 5,
+        "learning_rate": 0.5,
+        "max_depth": 4,
+        "lbda": 1.0,
+        "min_samples_leaf": 10
+      },
+      "PILOT": {
+        "max_depth": 16,
+        "max_model_depth": 10,
+        "min_sample_leaf": 10,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.0
+      },
+      "TAO": {
+        "depth": 6,
+        "max_iter": 20,
+        "C_dnode": 90.19042856196103,
+        "alpha": 0.0
+      }
+    },
+    "miami_housing": {
+      "CrossGB": {
+        "depth": 4,
+        "trees": 500,
+        "ridge": 1.0,
+        "learning_rate": 0.03,
+        "p": 0.5,
+        "metagb_min_data_in_leaf": 10,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 12,
+        "max_model_depth": 60,
+        "min_sample_leaf": 10,
+        "min_sample_split": 20,
+        "rel_tolerance": 0.01
+      },
+      "TAO": {
+        "depth": 6,
+        "max_iter": 20,
+        "C_dnode": 90.19042856196103,
+        "alpha": 0.0
+      }
+    },
+    "naval_propulsion_plant": {
+      "CrossGB": {
+        "depth": 4,
+        "trees": 300,
+        "ridge": 1.0,
+        "learning_rate": 0.3,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 2,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 500,
+        "learning_rate": 0.3,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 5,
+        "learning_rate": 0.3,
+        "max_depth": 3,
+        "lbda": 0.1,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 16,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 20,
+        "rel_tolerance": 0.0001
+      },
+      "TAO": {
+        "depth": 6,
+        "max_iter": 20,
+        "C_dnode": 90.19042856196103,
+        "alpha": 0.0
+      }
+    },
+    "physiochemical_protein": {
+      "CrossGB": {
+        "depth": 5,
+        "trees": 500,
+        "ridge": 10.0,
+        "learning_rate": 0.1,
+        "p": 0.5,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 500,
+        "learning_rate": 0.3,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 10,
+        "learning_rate": 1.0,
+        "max_depth": 1,
+        "lbda": 0.001,
+        "min_samples_leaf": 20
+      },
+      "PILOT": {
+        "max_depth": 16,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.0001
+      },
+      "TAO": {
+        "depth": 6,
+        "max_iter": 20,
+        "C_dnode": 90.19042856196103,
+        "alpha": 0.0
+      }
+    },
+    "saturating_v0": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.3,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 32,
+        "learning_rate": 0.2,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 20,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 20
+      },
+      "PILOT": {
+        "max_depth": 2,
+        "max_model_depth": 60,
+        "min_sample_leaf": 10,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 2.590226232911113,
+        "alpha": 0.5
+      }
+    },
+    "saturating_v1": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 32,
+        "learning_rate": 0.2,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 10,
+        "learning_rate": 0.1,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 2.590226232911113,
+        "alpha": 0.5
+      }
+    },
+    "saturating_v2": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 32,
+        "learning_rate": 0.2,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 5,
+        "learning_rate": 0.5,
+        "max_depth": 4,
+        "lbda": 1.0,
+        "min_samples_leaf": 10
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 4,
+        "max_iter": 20,
+        "C_dnode": 0.05020959066064109,
+        "alpha": 0.0
+      }
+    },
+    "saturating_v3": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 32,
+        "learning_rate": 0.2,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 20,
+        "C_dnode": 0.06041655957897744,
+        "alpha": 0.0
+      }
+    },
+    "saturating_v4": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.3,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 500,
+        "learning_rate": 0.5,
+        "num_leaves": 16,
+        "max_var": 1,
+        "l2_reg": 1.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "half_additive"
+      },
+      "LinXGBoost": {
+        "n_estimators": 10,
+        "learning_rate": 0.1,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 2.590226232911113,
+        "alpha": 0.5
+      }
+    },
+    "saturating_v5": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 32,
+        "learning_rate": 0.2,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 30,
+        "C_dnode": 29.648123274366675,
+        "alpha": 0.0
+      }
+    },
+    "saturating_v6": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.5,
+        "max_depth": 3,
+        "lbda": 100.0,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 2.590226232911113,
+        "alpha": 0.5
+      }
+    },
+    "saturating_v7": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 32,
+        "learning_rate": 0.5,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 5,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 1,
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "lbda": 0.001,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 2.590226232911113,
+        "alpha": 0.5
+      }
+    },
+    "space_ga": {
+      "CrossGB": {
+        "depth": 4,
+        "trees": 100,
+        "ridge": 1.0,
+        "learning_rate": 0.1,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 5,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 32,
+        "learning_rate": 0.5,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 5,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 100,
+        "learning_rate": 0.1,
+        "max_depth": 3,
+        "lbda": 0.1,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 8,
+        "max_model_depth": 60,
+        "min_sample_leaf": 40,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 10,
+        "C_dnode": 12.541113197189595,
+        "alpha": 0.0
+      }
+    },
+    "stair_slope_v0": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 150,
+        "learning_rate": 0.03,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 20,
+        "learning_rate": 0.1,
+        "max_depth": 3,
+        "lbda": 100.0,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 2,
+        "max_model_depth": 60,
+        "min_sample_leaf": 10,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 10,
+        "C_dnode": 2.9183513321217682,
+        "alpha": 0.0
+      }
+    },
+    "stair_slope_v1": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 150,
+        "learning_rate": 0.03,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 10,
+        "learning_rate": 0.3,
+        "max_depth": 2,
+        "lbda": 0.01,
+        "min_samples_leaf": 10
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 20,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.0
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 2.590226232911113,
+        "alpha": 0.5
+      }
+    },
+    "stair_slope_v2": {
+      "CrossGB": {
+        "depth": 3,
+        "trees": 32,
+        "ridge": 0.1,
+        "learning_rate": 0.2,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 2,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 150,
+        "learning_rate": 0.03,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 5,
+        "learning_rate": 0.3,
+        "max_depth": 3,
+        "lbda": 0.1,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 20,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.0
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 10,
+        "C_dnode": 12.541113197189595,
+        "alpha": 0.0
+      }
+    },
+    "stair_slope_v3": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 150,
+        "learning_rate": 0.03,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.5,
+        "max_depth": 3,
+        "lbda": 100.0,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 8,
+        "max_model_depth": 60,
+        "min_sample_leaf": 40,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 10,
+        "C_dnode": 2.9183513321217682,
+        "alpha": 0.0
+      }
+    },
+    "stair_slope_v4": {
+      "CrossGB": {
+        "depth": 3,
+        "trees": 150,
+        "ridge": 100.0,
+        "learning_rate": 0.1,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 2,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 32,
+        "learning_rate": 0.2,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 12,
+        "max_model_depth": 60,
+        "min_sample_leaf": 10,
+        "min_sample_split": 20,
+        "rel_tolerance": 0.01
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 30,
+        "C_dnode": 29.648123274366675,
+        "alpha": 0.0
+      }
+    },
+    "stair_slope_v5": {
+      "CrossGB": {
+        "depth": 3,
+        "trees": 32,
+        "ridge": 0.1,
+        "learning_rate": 0.2,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 2,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 150,
+        "learning_rate": 0.03,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.5,
+        "max_depth": 3,
+        "lbda": 100.0,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 6,
+        "max_model_depth": 100,
+        "min_sample_leaf": 5,
+        "min_sample_split": 20,
+        "rel_tolerance": 0.0001
+      },
+      "TAO": {
+        "depth": 6,
+        "max_iter": 20,
+        "C_dnode": 90.19042856196103,
+        "alpha": 0.0
+      }
+    },
+    "stair_slope_v6": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 32,
+        "learning_rate": 0.2,
+        "num_leaves": 8,
+        "max_var": 5,
+        "l2_reg": 0.1,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.5,
+        "max_depth": 3,
+        "lbda": 100.0,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 10,
+        "min_sample_leaf": 5,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.0
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 2.590226232911113,
+        "alpha": 0.5
+      }
+    },
+    "stair_slope_v7": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.03,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 100,
+        "learning_rate": 0.1,
+        "num_leaves": 16,
+        "max_var": 1,
+        "l2_reg": 1.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "half_additive"
+      },
+      "LinXGBoost": {
+        "n_estimators": 1,
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "lbda": 0.001,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 20,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.0
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 10,
+        "C_dnode": 12.541113197189595,
+        "alpha": 0.0
+      }
+    },
+    "superconductivity": {
+      "CrossGB": {
+        "depth": 5,
+        "trees": 500,
+        "ridge": 10.0,
+        "learning_rate": 0.1,
+        "p": 0.5,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 500,
+        "learning_rate": 0.3,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 10,
+        "learning_rate": 1.0,
+        "max_depth": 1,
+        "lbda": 0.001,
+        "min_samples_leaf": 20
+      },
+      "PILOT": {
+        "max_depth": 12,
+        "max_model_depth": 30,
+        "min_sample_leaf": 20,
+        "min_sample_split": 20,
+        "rel_tolerance": 0.01
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 10,
+        "C_dnode": 2.9183513321217682,
+        "alpha": 0.0
+      }
+    },
+    "switch4_v0": {
+      "CrossGB": {
+        "depth": 3,
+        "trees": 150,
+        "ridge": 100.0,
+        "learning_rate": 0.1,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 2,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 500,
+        "learning_rate": 0.3,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 5,
+        "learning_rate": 0.3,
+        "max_depth": 3,
+        "lbda": 0.1,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 4,
+        "max_iter": 10,
+        "C_dnode": 0.011604154181976177,
+        "alpha": 0.0
+      }
+    },
+    "switch4_v1": {
+      "CrossGB": {
+        "depth": 2,
+        "trees": 8,
+        "ridge": 0.01,
+        "learning_rate": 0.5,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 10,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 4.459726269332938,
+        "alpha": 1.0
+      }
+    },
+    "switch4_v2": {
+      "CrossGB": {
+        "depth": 2,
+        "trees": 8,
+        "ridge": 0.01,
+        "learning_rate": 0.5,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 10,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 5,
+        "learning_rate": 0.3,
+        "max_depth": 3,
+        "lbda": 0.1,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 20,
+        "C_dnode": 0.06041655957897744,
+        "alpha": 0.0
+      }
+    },
+    "switch4_v3": {
+      "CrossGB": {
+        "depth": 4,
+        "trees": 100,
+        "ridge": 1.0,
+        "learning_rate": 0.1,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 5,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 5,
+        "learning_rate": 0.3,
+        "max_depth": 3,
+        "lbda": 0.1,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 2,
+        "max_model_depth": 60,
+        "min_sample_leaf": 10,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 20,
+        "C_dnode": 0.06041655957897744,
+        "alpha": 0.0
+      }
+    },
+    "switch4_v4": {
+      "CrossGB": {
+        "depth": 3,
+        "trees": 150,
+        "ridge": 100.0,
+        "learning_rate": 0.1,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 2,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 2.590226232911113,
+        "alpha": 0.5
+      }
+    },
+    "switch4_v5": {
+      "CrossGB": {
+        "depth": 3,
+        "trees": 150,
+        "ridge": 100.0,
+        "learning_rate": 0.1,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 2,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 5,
+        "learning_rate": 0.3,
+        "max_depth": 3,
+        "lbda": 0.1,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 3,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 7,
+        "max_iter": 30,
+        "C_dnode": 2.590226232911113,
+        "alpha": 0.5
+      }
+    },
+    "switch4_v6": {
+      "CrossGB": {
+        "depth": 5,
+        "trees": 300,
+        "ridge": 10.0,
+        "learning_rate": 0.05,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 5,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 2,
+        "max_model_depth": 60,
+        "min_sample_leaf": 10,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 20,
+        "C_dnode": 0.06041655957897744,
+        "alpha": 0.0
+      }
+    },
+    "switch4_v7": {
+      "CrossGB": {
+        "depth": 3,
+        "trees": 150,
+        "ridge": 100.0,
+        "learning_rate": 0.1,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 2,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 100,
+        "learning_rate": 0.1,
+        "num_leaves": 16,
+        "max_var": 1,
+        "l2_reg": 1.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "half_additive"
+      },
+      "LinXGBoost": {
+        "n_estimators": 1,
+        "learning_rate": 0.1,
+        "max_depth": 1,
+        "lbda": 0.001,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 2,
+        "max_model_depth": 60,
+        "min_sample_leaf": 10,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.001
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 20,
+        "C_dnode": 0.06041655957897744,
+        "alpha": 0.0
+      }
+    },
+    "uci294_combined_cycle_power_plant": {
+      "CrossGB": {
+        "depth": 5,
+        "trees": 500,
+        "ridge": 10.0,
+        "learning_rate": 0.1,
+        "p": 0.5,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 500,
+        "learning_rate": 0.3,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 2,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 20,
+        "learning_rate": 0.3,
+        "max_depth": 5,
+        "lbda": 10.0,
+        "min_samples_leaf": 20
+      },
+      "PILOT": {
+        "max_depth": 16,
+        "max_model_depth": 10,
+        "min_sample_leaf": 10,
+        "min_sample_split": 80,
+        "rel_tolerance": 0.0
+      },
+      "TAO": {
+        "depth": 6,
+        "max_iter": 20,
+        "C_dnode": 90.19042856196103,
+        "alpha": 0.0
+      }
+    },
+    "uci477_real_estate_valuation": {
+      "CrossGB": {
+        "depth": 3,
+        "trees": 32,
+        "ridge": 0.1,
+        "learning_rate": 0.2,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 2,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 8,
+        "learning_rate": 0.3,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 5,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 2,
+        "learning_rate": 0.5,
+        "max_depth": 3,
+        "lbda": 100.0,
+        "min_samples_leaf": 2
+      },
+      "PILOT": {
+        "max_depth": 4,
+        "max_model_depth": 100,
+        "min_sample_leaf": 20,
+        "min_sample_split": 10,
+        "rel_tolerance": 0.0
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 30,
+        "C_dnode": 29.648123274366675,
+        "alpha": 0.0
+      }
+    },
+    "uci9_auto_mpg": {
+      "CrossGB": {
+        "depth": 1,
+        "trees": 300,
+        "ridge": 0.001,
+        "learning_rate": 0.3,
+        "p": 1.0,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 0.5,
+        "num_leaves": 16,
+        "max_var": 1,
+        "l2_reg": 1.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 10,
+        "num_bins": 127,
+        "leaf_type": "half_additive"
+      },
+      "LinXGBoost": {
+        "n_estimators": 5,
+        "learning_rate": 0.3,
+        "max_depth": 3,
+        "lbda": 0.1,
+        "min_samples_leaf": 5
+      },
+      "PILOT": {
+        "max_depth": 12,
+        "max_model_depth": 30,
+        "min_sample_leaf": 20,
+        "min_sample_split": 20,
+        "rel_tolerance": 0.01
+      },
+      "TAO": {
+        "depth": 5,
+        "max_iter": 10,
+        "C_dnode": 12.541113197189595,
+        "alpha": 0.0
+      }
+    },
+    "wine_quality": {
+      "CrossGB": {
+        "depth": 5,
+        "trees": 500,
+        "ridge": 10.0,
+        "learning_rate": 0.1,
+        "p": 0.5,
+        "metagb_min_data_in_leaf": 20,
+        "max_bin": 127
+      },
+      "PL": {
+        "num_trees": 300,
+        "learning_rate": 0.05,
+        "num_leaves": 32,
+        "max_var": 2,
+        "l2_reg": 10.0,
+        "l1_reg": 0.0,
+        "min_sum_hessians": 20,
+        "num_bins": 127,
+        "leaf_type": "linear"
+      },
+      "LinXGBoost": {
+        "n_estimators": 50,
+        "learning_rate": 0.3,
+        "max_depth": 3,
+        "lbda": 100.0,
+        "min_samples_leaf": 20
+      },
+      "PILOT": {
+        "max_depth": 12,
+        "max_model_depth": 60,
+        "min_sample_leaf": 10,
+        "min_sample_split": 20,
+        "rel_tolerance": 0.01
+      },
+      "TAO": {
+        "depth": 6,
+        "max_iter": 20,
+        "C_dnode": 90.19042856196103,
+        "alpha": 0.0
+      }
+    }
+  },
+  "author_sources": {
+    "cpu1_pool.zjuici.com": [
+      {
+        "method": "linxgboost",
+        "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+        "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+        "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+        "archive_bytes": 5365453,
+        "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+        "code_file_count": 13,
+        "extracted_path": "vendor/linxgboost"
+      },
+      {
+        "method": "gbdt_pl",
+        "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+        "archive_bytes": 16267284,
+        "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+        "code_file_count": 55,
+        "extracted_path": "vendor/gbdt_pl"
+      },
+      {
+        "method": "pilot",
+        "url": "https://codeload.github.com/STAN-UAntwerp/PILOT/tar.gz/ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "revision": "ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "archive_sha256": "145602969138d37cfd1eeb9eea496ca91862b54edae0be0e1a8628e37d3a76c4",
+        "archive_bytes": 15953126,
+        "code_fingerprint": "61c05823c75734676cceef2ee4a54c4c65ff3ed046a84b11690e475eb9fdb645",
+        "code_file_count": 14,
+        "extracted_path": "vendor/pilot"
+      },
+      {
+        "method": "tao",
+        "url": "https://faculty.ucmerced.edu/mcarreira-perpinan/research/software/code-TAO-v2026-07-22.tar.gz",
+        "revision": "official-2026-07-22",
+        "archive_sha256": "d006f1d7fafb2e49795f666997cb1800b4d7aeea12d22e4e9bead42fbe430351",
+        "archive_bytes": 22380635,
+        "code_fingerprint": "4c2a79326be4e79cfeec3365346adaf01e628b12121275ee0705a07a53952234",
+        "code_file_count": 9,
+        "extracted_path": "vendor/tao"
+      }
+    ],
+    "cpu2_pool.zjuici.com": [
+      {
+        "method": "linxgboost",
+        "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+        "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+        "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+        "archive_bytes": 5365453,
+        "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+        "code_file_count": 13,
+        "extracted_path": "vendor/linxgboost"
+      },
+      {
+        "method": "gbdt_pl",
+        "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+        "archive_bytes": 16267284,
+        "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+        "code_file_count": 55,
+        "extracted_path": "vendor/gbdt_pl"
+      },
+      {
+        "method": "pilot",
+        "url": "https://codeload.github.com/STAN-UAntwerp/PILOT/tar.gz/ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "revision": "ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "archive_sha256": "145602969138d37cfd1eeb9eea496ca91862b54edae0be0e1a8628e37d3a76c4",
+        "archive_bytes": 15953126,
+        "code_fingerprint": "61c05823c75734676cceef2ee4a54c4c65ff3ed046a84b11690e475eb9fdb645",
+        "code_file_count": 14,
+        "extracted_path": "vendor/pilot"
+      },
+      {
+        "method": "tao",
+        "url": "https://faculty.ucmerced.edu/mcarreira-perpinan/research/software/code-TAO-v2026-07-22.tar.gz",
+        "revision": "official-2026-07-22",
+        "archive_sha256": "d006f1d7fafb2e49795f666997cb1800b4d7aeea12d22e4e9bead42fbe430351",
+        "archive_bytes": 22380635,
+        "code_fingerprint": "4c2a79326be4e79cfeec3365346adaf01e628b12121275ee0705a07a53952234",
+        "code_file_count": 9,
+        "extracted_path": "vendor/tao"
+      }
+    ],
+    "cpu4_pool.zjuici.com": [
+      {
+        "method": "linxgboost",
+        "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+        "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+        "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+        "archive_bytes": 5365453,
+        "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+        "code_file_count": 13,
+        "extracted_path": "vendor/linxgboost"
+      },
+      {
+        "method": "gbdt_pl",
+        "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+        "archive_bytes": 16267284,
+        "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+        "code_file_count": 55,
+        "extracted_path": "vendor/gbdt_pl"
+      },
+      {
+        "method": "pilot",
+        "url": "https://codeload.github.com/STAN-UAntwerp/PILOT/tar.gz/ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "revision": "ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "archive_sha256": "145602969138d37cfd1eeb9eea496ca91862b54edae0be0e1a8628e37d3a76c4",
+        "archive_bytes": 15953126,
+        "code_fingerprint": "61c05823c75734676cceef2ee4a54c4c65ff3ed046a84b11690e475eb9fdb645",
+        "code_file_count": 14,
+        "extracted_path": "vendor/pilot"
+      },
+      {
+        "method": "tao",
+        "url": "https://faculty.ucmerced.edu/mcarreira-perpinan/research/software/code-TAO-v2026-07-22.tar.gz",
+        "revision": "official-2026-07-22",
+        "archive_sha256": "d006f1d7fafb2e49795f666997cb1800b4d7aeea12d22e4e9bead42fbe430351",
+        "archive_bytes": 22380635,
+        "code_fingerprint": "4c2a79326be4e79cfeec3365346adaf01e628b12121275ee0705a07a53952234",
+        "code_file_count": 9,
+        "extracted_path": "vendor/tao"
+      }
+    ],
+    "cpu_Calculator": [
+      {
+        "method": "linxgboost",
+        "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+        "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+        "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+        "archive_bytes": 5365453,
+        "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+        "code_file_count": 13,
+        "extracted_path": "vendor/linxgboost"
+      },
+      {
+        "method": "gbdt_pl",
+        "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+        "archive_bytes": 16267284,
+        "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+        "code_file_count": 55,
+        "extracted_path": "vendor/gbdt_pl"
+      },
+      {
+        "method": "pilot",
+        "url": "https://codeload.github.com/STAN-UAntwerp/PILOT/tar.gz/ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "revision": "ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "archive_sha256": "145602969138d37cfd1eeb9eea496ca91862b54edae0be0e1a8628e37d3a76c4",
+        "archive_bytes": 15953126,
+        "code_fingerprint": "61c05823c75734676cceef2ee4a54c4c65ff3ed046a84b11690e475eb9fdb645",
+        "code_file_count": 14,
+        "extracted_path": "vendor/pilot"
+      },
+      {
+        "method": "tao",
+        "url": "https://faculty.ucmerced.edu/mcarreira-perpinan/research/software/code-TAO-v2026-07-22.tar.gz",
+        "revision": "official-2026-07-22",
+        "archive_sha256": "d006f1d7fafb2e49795f666997cb1800b4d7aeea12d22e4e9bead42fbe430351",
+        "archive_bytes": 22380635,
+        "code_fingerprint": "4c2a79326be4e79cfeec3365346adaf01e628b12121275ee0705a07a53952234",
+        "code_file_count": 9,
+        "extracted_path": "vendor/tao"
+      }
+    ],
+    "TabularData_Processor": [
+      {
+        "method": "linxgboost",
+        "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+        "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+        "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+        "archive_bytes": 5365453,
+        "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+        "code_file_count": 13,
+        "extracted_path": "vendor/linxgboost"
+      },
+      {
+        "method": "gbdt_pl",
+        "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+        "archive_bytes": 16267284,
+        "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+        "code_file_count": 55,
+        "extracted_path": "vendor/gbdt_pl"
+      },
+      {
+        "method": "pilot",
+        "url": "https://codeload.github.com/STAN-UAntwerp/PILOT/tar.gz/ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "revision": "ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "archive_sha256": "145602969138d37cfd1eeb9eea496ca91862b54edae0be0e1a8628e37d3a76c4",
+        "archive_bytes": 15953126,
+        "code_fingerprint": "61c05823c75734676cceef2ee4a54c4c65ff3ed046a84b11690e475eb9fdb645",
+        "code_file_count": 14,
+        "extracted_path": "vendor/pilot"
+      },
+      {
+        "method": "tao",
+        "url": "https://faculty.ucmerced.edu/mcarreira-perpinan/research/software/code-TAO-v2026-07-22.tar.gz",
+        "revision": "official-2026-07-22",
+        "archive_sha256": "d006f1d7fafb2e49795f666997cb1800b4d7aeea12d22e4e9bead42fbe430351",
+        "archive_bytes": 22380635,
+        "code_fingerprint": "4c2a79326be4e79cfeec3365346adaf01e628b12121275ee0705a07a53952234",
+        "code_file_count": 9,
+        "extracted_path": "vendor/tao"
+      }
+    ],
+    "cpu6_pool.zjuici.com": [
+      {
+        "method": "linxgboost",
+        "url": "https://codeload.github.com/ldv1/LinXGBoost/tar.gz/0166fb3682a0e534c54aea0559186fee26192d6f",
+        "revision": "0166fb3682a0e534c54aea0559186fee26192d6f",
+        "archive_sha256": "ec91b45d9608cb212f50dba297897af52d240a125c998bc133068a752a0ec7cf",
+        "archive_bytes": 5365453,
+        "code_fingerprint": "bf8a7518bf59aaa430b037e90483fedf49e3106f3274bb2b9de30fac796f9aa5",
+        "code_file_count": 13,
+        "extracted_path": "vendor/linxgboost"
+      },
+      {
+        "method": "gbdt_pl",
+        "url": "https://codeload.github.com/GBDT-PL/GBDT-PL/tar.gz/8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "revision": "8942ed2fc881bed8211854f4995cbe6eb14e5cae",
+        "archive_sha256": "ad9632c3922dd853a43b010c05a7127665df9a1f10cb3f89f3296b1c9d25f1ac",
+        "archive_bytes": 16267284,
+        "code_fingerprint": "c4b56fd5ec1f584a4c4df04f51091295cfd4c9dbe997fd3bccfdecc008c538c8",
+        "code_file_count": 55,
+        "extracted_path": "vendor/gbdt_pl"
+      },
+      {
+        "method": "pilot",
+        "url": "https://codeload.github.com/STAN-UAntwerp/PILOT/tar.gz/ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "revision": "ea769a0d55dd2babf4c57d31094758d7879f29ff",
+        "archive_sha256": "145602969138d37cfd1eeb9eea496ca91862b54edae0be0e1a8628e37d3a76c4",
+        "archive_bytes": 15953126,
+        "code_fingerprint": "61c05823c75734676cceef2ee4a54c4c65ff3ed046a84b11690e475eb9fdb645",
+        "code_file_count": 14,
+        "extracted_path": "vendor/pilot"
+      },
+      {
+        "method": "tao",
+        "url": "https://faculty.ucmerced.edu/mcarreira-perpinan/research/software/code-TAO-v2026-07-22.tar.gz",
+        "revision": "official-2026-07-22",
+        "archive_sha256": "d006f1d7fafb2e49795f666997cb1800b4d7aeea12d22e4e9bead42fbe430351",
+        "archive_bytes": 22380635,
+        "code_fingerprint": "4c2a79326be4e79cfeec3365346adaf01e628b12121275ee0705a07a53952234",
+        "code_file_count": 9,
+        "extracted_path": "vendor/tao"
+      }
+    ]
+  },
+  "runtime_hashes": {
+    "cpu1_pool.zjuici.com": {
+      "scripts/search.py": "c073ead4dd9cc3e3edb06ea3a9d95e9cbdc3155c0a6f15ddd29a726a658cfdb2",
+      "scripts/worker.py": "527b258c09f01019f08520d7818860e047ca13bd5eff0c963d7ee4fa0bf33627",
+      "runtime/rebuttal_execution_20261025/native/controlled/lib/libxgboost.so": "19ba13edd5acd2beaaa5ea115319f61eed158a757c26c9bb0194c64a7ac0268d",
+      "runtime/rebuttal_baselines_20261025/build/liblineargbm.so": "5efb4c3f5bc0785e2d56ad6bd664488248e7484ee171fbb1dbfb63835db4a730"
+    },
+    "cpu2_pool.zjuici.com": {
+      "scripts/search.py": "c073ead4dd9cc3e3edb06ea3a9d95e9cbdc3155c0a6f15ddd29a726a658cfdb2",
+      "scripts/worker.py": "527b258c09f01019f08520d7818860e047ca13bd5eff0c963d7ee4fa0bf33627",
+      "runtime/rebuttal_execution_20261025/native/controlled/lib/libxgboost.so": "19ba13edd5acd2beaaa5ea115319f61eed158a757c26c9bb0194c64a7ac0268d",
+      "runtime/rebuttal_baselines_20261025/build/liblineargbm.so": "5efb4c3f5bc0785e2d56ad6bd664488248e7484ee171fbb1dbfb63835db4a730"
+    },
+    "cpu4_pool.zjuici.com": {
+      "scripts/search.py": "c073ead4dd9cc3e3edb06ea3a9d95e9cbdc3155c0a6f15ddd29a726a658cfdb2",
+      "scripts/worker.py": "527b258c09f01019f08520d7818860e047ca13bd5eff0c963d7ee4fa0bf33627",
+      "runtime/rebuttal_execution_20261025/native/controlled/lib/libxgboost.so": "19ba13edd5acd2beaaa5ea115319f61eed158a757c26c9bb0194c64a7ac0268d",
+      "runtime/rebuttal_baselines_20261025/build/liblineargbm.so": "5efb4c3f5bc0785e2d56ad6bd664488248e7484ee171fbb1dbfb63835db4a730"
+    },
+    "cpu_Calculator": {
+      "scripts/search.py": "c073ead4dd9cc3e3edb06ea3a9d95e9cbdc3155c0a6f15ddd29a726a658cfdb2",
+      "scripts/worker.py": "527b258c09f01019f08520d7818860e047ca13bd5eff0c963d7ee4fa0bf33627",
+      "runtime/rebuttal_execution_20261025/native/controlled/lib/libxgboost.so": "19ba13edd5acd2beaaa5ea115319f61eed158a757c26c9bb0194c64a7ac0268d",
+      "runtime/rebuttal_baselines_20261025/build/liblineargbm.so": "5efb4c3f5bc0785e2d56ad6bd664488248e7484ee171fbb1dbfb63835db4a730"
+    },
+    "TabularData_Processor": {
+      "scripts/search.py": "c073ead4dd9cc3e3edb06ea3a9d95e9cbdc3155c0a6f15ddd29a726a658cfdb2",
+      "scripts/worker.py": "527b258c09f01019f08520d7818860e047ca13bd5eff0c963d7ee4fa0bf33627",
+      "runtime/rebuttal_execution_20261025/native/controlled/lib/libxgboost.so": "19ba13edd5acd2beaaa5ea115319f61eed158a757c26c9bb0194c64a7ac0268d",
+      "runtime/rebuttal_baselines_20261025/build/liblineargbm.so": "5efb4c3f5bc0785e2d56ad6bd664488248e7484ee171fbb1dbfb63835db4a730"
+    },
+    "cpu6_pool.zjuici.com": {
+      "scripts/search.py": "c073ead4dd9cc3e3edb06ea3a9d95e9cbdc3155c0a6f15ddd29a726a658cfdb2",
+      "scripts/worker.py": "527b258c09f01019f08520d7818860e047ca13bd5eff0c963d7ee4fa0bf33627",
+      "runtime/rebuttal_execution_20261025/native/controlled/lib/libxgboost.so": "19ba13edd5acd2beaaa5ea115319f61eed158a757c26c9bb0194c64a7ac0268d",
+      "runtime/rebuttal_baselines_20261025/build/liblineargbm.so": "5efb4c3f5bc0785e2d56ad6bd664488248e7484ee171fbb1dbfb63835db4a730"
+    }
+  }
+}

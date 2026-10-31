@@ -1,0 +1,6 @@
+*.tar.gz binary
+*.npz binary
+*.md text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.csv -text

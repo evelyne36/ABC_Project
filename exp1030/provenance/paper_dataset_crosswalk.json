@@ -1,0 +1,62 @@
+{
+  "grouped_at": "2026-10-31",
+  "basis": "submitted main and technical-supplement PDFs",
+  "source_sha256": {
+    "aaai2027提交原件/24092_CrossGB_Modeling_Conditi.pdf": "f32a0868b2f22f61b02cb99748a1aae612790c250a899c8c378950dc3750c602",
+    "aaai2027提交原件/24092_CrossGB_Modeling_Conditi_Technical Supplement.pdf": "990c39ecc5d767057c209339de0fa078beadb086858d325971b759a9276a2dfb"
+  },
+  "existing_public_registered": 18,
+  "existing_public_complete": 14,
+  "new_public_prepared": 6,
+  "new_public_executed": 5,
+  "new_public_complete": 5,
+  "original_synthetic_generators": 19,
+  "new_synthetic_groups": 6,
+  "new_synthetic_parameter_cases": 48,
+  "source_rows": 72,
+  "existing_public_rank_counts": {
+    "1": 3,
+    "2": 7,
+    "3": 4
+  },
+  "new_public_rank_counts": {
+    "2": 2,
+    "1": 2,
+    "3": 1
+  },
+  "new_public_cases": [
+    "QSAR-TID-11",
+    "superconductivity",
+    "uci243_yacht_hydrodynamics",
+    "uci294_combined_cycle_power_plant",
+    "uci477_real_estate_valuation",
+    "uci9_auto_mpg"
+  ],
+  "existing_main": [
+    "Moneyball",
+    "QSAR_fish_toxicity",
+    "abalone",
+    "cpu_activity",
+    "energy_efficiency",
+    "kin8nm",
+    "naval_propulsion_plant",
+    "space_ga"
+  ],
+  "existing_appendix_only": [
+    "Another-Dataset-on-used-Fiat-500",
+    "Food_Delivery_Time",
+    "airfoil_self_noise",
+    "concrete_compressive_strength",
+    "diamonds",
+    "healthcare_insurance_expenses",
+    "houses",
+    "miami_housing",
+    "physiochemical_protein",
+    "wine_quality"
+  ],
+  "original_not_rerun": [
+    "Boston",
+    "Friedman1"
+  ],
+  "no_new_training": true
+}

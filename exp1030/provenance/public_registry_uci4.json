@@ -1,0 +1,85 @@
+[
+  {
+    "name": "uci477_real_estate_valuation",
+    "file": "uci477_real_estate_valuation.csv",
+    "source": "https://archive.ics.uci.edu/dataset/477/real+estate+valuation+data+set",
+    "source_url": "https://archive.ics.uci.edu/api/dataset?id=477",
+    "data_url": "https://archive.ics.uci.edu/static/public/477/data.csv",
+    "official_name": "Real Estate Valuation",
+    "official_features": [
+      "X1 transaction date",
+      "X2 house age",
+      "X3 distance to the nearest MRT station",
+      "X4 number of convenience stores",
+      "X5 latitude",
+      "X6 longitude"
+    ],
+    "official_target": "Y house price of unit area",
+    "sha256": "e6219d5c91330916cac57533bbe6c812394ef0b43fb6288a5cca365ff11fa6de",
+    "download_sha256": "0730a5687ec285a3c2f9921a808855bd1bde21fc53e6377561cbdce2dda9cbb1",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "uci294_combined_cycle_power_plant",
+    "file": "uci294_combined_cycle_power_plant.csv",
+    "source": "https://archive.ics.uci.edu/dataset/294/combined+cycle+power+plant",
+    "source_url": "https://archive.ics.uci.edu/api/dataset?id=294",
+    "data_url": "https://archive.ics.uci.edu/static/public/294/data.csv",
+    "official_name": "Combined Cycle Power Plant",
+    "official_features": [
+      "AT",
+      "V",
+      "AP",
+      "RH"
+    ],
+    "official_target": "PE",
+    "sha256": "51848da3c8b8c29f709f159fad95443eaa8ff2e95c721a00bba582048cd207e4",
+    "download_sha256": "3c1fc11025f8424f8d95802d8b7086dffd3f73a552c6dcab3d973620986194b2",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "uci9_auto_mpg",
+    "file": "uci9_auto_mpg.csv",
+    "source": "https://archive.ics.uci.edu/dataset/9/auto+mpg",
+    "source_url": "https://archive.ics.uci.edu/api/dataset?id=9",
+    "data_url": "https://archive.ics.uci.edu/static/public/9/data.csv",
+    "official_name": "Auto MPG",
+    "official_features": [
+      "displacement",
+      "cylinders",
+      "horsepower",
+      "weight",
+      "acceleration",
+      "model_year",
+      "origin"
+    ],
+    "official_target": "mpg",
+    "sha256": "af1e4c4f9d8794c9c5dc6cecf83e1159a70a55906a2127540cfe2d353c1b37ea",
+    "download_sha256": "240f4657d747fe105f3c992251daba65f926ef54c4dec3cde34e398e8cf5da9c",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "uci243_yacht_hydrodynamics",
+    "file": "uci243_yacht_hydrodynamics.csv",
+    "source": "https://archive.ics.uci.edu/dataset/243/yacht+hydrodynamics",
+    "source_url": "https://archive.ics.uci.edu/api/dataset?id=243",
+    "data_url": "https://archive.ics.uci.edu/static/public/243/yacht%2Bhydrodynamics.zip",
+    "official_name": "Yacht Hydrodynamics",
+    "official_features": [
+      "longitudinal_center_buoyancy",
+      "prismatic_coefficient",
+      "length_displacement_ratio",
+      "beam_draught_ratio",
+      "length_beam_ratio",
+      "froude_number"
+    ],
+    "official_target": "residuary_resistance",
+    "sha256": "f5473b997b4fd7445c024632f8344313550096c3072937248e2736eacdedf230",
+    "download_sha256": "aa52b68f88c4bb552187a53ef4c5753fa178f6a36035a3771c5bc04e078487ac",
+    "target": "last_column",
+    "drop": []
+  }
+]

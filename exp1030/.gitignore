@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+*.partial
+.DS_Store
+unpacked/

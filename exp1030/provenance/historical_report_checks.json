@@ -1,0 +1,93 @@
+{
+  "paper_scope": {
+    "grouped_at": "2026-10-31",
+    "basis": "submitted main and technical-supplement PDFs",
+    "source_sha256": {
+      "aaai2027提交原件/24092_CrossGB_Modeling_Conditi.pdf": "f32a0868b2f22f61b02cb99748a1aae612790c250a899c8c378950dc3750c602",
+      "aaai2027提交原件/24092_CrossGB_Modeling_Conditi_Technical Supplement.pdf": "990c39ecc5d767057c209339de0fa078beadb086858d325971b759a9276a2dfb"
+    },
+    "existing_public_registered": 18,
+    "existing_public_complete": 14,
+    "new_public_prepared": 6,
+    "new_public_executed": 5,
+    "new_public_complete": 5,
+    "original_synthetic_generators": 19,
+    "new_synthetic_groups": 6,
+    "new_synthetic_parameter_cases": 48,
+    "source_rows": 72,
+    "existing_public_rank_counts": {
+      "1": 3,
+      "2": 7,
+      "3": 4
+    },
+    "new_public_rank_counts": {
+      "2": 2,
+      "1": 2,
+      "3": 1
+    },
+    "new_public_cases": [
+      "QSAR-TID-11",
+      "superconductivity",
+      "uci243_yacht_hydrodynamics",
+      "uci294_combined_cycle_power_plant",
+      "uci477_real_estate_valuation",
+      "uci9_auto_mpg"
+    ],
+    "existing_main": [
+      "Moneyball",
+      "QSAR_fish_toxicity",
+      "abalone",
+      "cpu_activity",
+      "energy_efficiency",
+      "kin8nm",
+      "naval_propulsion_plant",
+      "space_ga"
+    ],
+    "existing_appendix_only": [
+      "Another-Dataset-on-used-Fiat-500",
+      "Food_Delivery_Time",
+      "airfoil_self_noise",
+      "concrete_compressive_strength",
+      "diamonds",
+      "healthcare_insurance_expenses",
+      "houses",
+      "miami_housing",
+      "physiochemical_protein",
+      "wine_quality"
+    ],
+    "original_not_rerun": [
+      "Boston",
+      "Friedman1"
+    ],
+    "no_new_training": true
+  },
+  "result_snapshot": "2026-10-30T07:41:22.999362+08:00",
+  "report_date": "2026-10-31",
+  "complete_application_cases": 16,
+  "complete_simulation_cases": 3,
+  "synthetic_parameter_cases": 48,
+  "qualified_cases": 10,
+  "synthetic_rmse_better_than_PL": 46,
+  "synthetic_better_rmse_and_sample_fit_cpu_than_PL": 18,
+  "public_registry_entries": 24,
+  "seed_metric_rows": 1019,
+  "runtime_source_sets_per_component": {
+    "scripts/search.py": 1,
+    "scripts/worker.py": 1,
+    "runtime/rebuttal_execution_20261025/native/controlled/lib/libxgboost.so": 1,
+    "runtime/rebuttal_baselines_20261025/build/liblineargbm.so": 1
+  },
+  "no_new_training": true,
+  "isolated_timing_complete": false,
+  "max_reported_mean_vs_saved_prediction_mean_error": 0.0,
+  "generated_file_sha256": {
+    "数据口径勘误.md": "8e7e8640377cb2148556ca8734d130b38ae754b584d0000c9995d1799aa6297f",
+    "按新旧来源_写作索引.md": "544c838b0f2083b4478f51ac8ffc4d58ca109e9569cc6a96f1d45d839c39495f",
+    "逐seed确认结果.csv": "720ef12aa74dc4cce81f28462748547fc388441a31a3560ad5fcac9b0b74e8d2",
+    "讨论提纲_15分钟.md": "8d0881602f0c7872120f8983cc91187d36325cd4df8f3adc45655aea6064529a",
+    "数据集来源分组.csv": "f079834ebb7029697f200f913bfd891391fd97f0ce06d1e33e3579e693d7ce10",
+    "合成48场景_完整结果.csv": "e6f2d4f70964288e7f4ea80609a122b92ac896de707d5c7eaa24c9696fdbe9d3",
+    "公开基准_描述与完整结果.csv": "146d5e71392c615f8793f25b20c2012215a037fe000258af864b2c7c9479eba6",
+    "CrossGB_新场景实验_研究员讨论汇报_20261031.md": "622368c6c058d6c4e172324d9d2715f32c836fc84f9c421e9aa7e3df0116bb64"
+  }
+}

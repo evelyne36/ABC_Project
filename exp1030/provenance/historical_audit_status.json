@@ -1,0 +1,54 @@
+{
+  "metadata_documentation_findings": 2,
+  "at": "2026-10-30T07:41:22.999362+08:00",
+  "source": "pool-only live read-only audit",
+  "reachable": 6,
+  "expected_hosts": 6,
+  "counts": {
+    "ok": 10562,
+    "timeout": 1015,
+    "failed": 3
+  },
+  "timeouts_by_method": {
+    "CrossGB": 15,
+    "PL": 0,
+    "LinXGBoost": 992,
+    "PILOT": 0,
+    "TAO": 8
+  },
+  "failed_by_method": {
+    "CrossGB": 0,
+    "PL": 0,
+    "LinXGBoost": 0,
+    "PILOT": 0,
+    "TAO": 3
+  },
+  "checked_test_fits": 1019,
+  "checked_inputs": 204,
+  "verification_errors": 0,
+  "max_rmse_recompute_error": 0.0,
+  "tested_top3": 67,
+  "qualified_top3": 10,
+  "qualified_real": 9,
+  "all24_success_top3": 8,
+  "test_top3_search_incomplete": 57,
+  "incomplete_confirmation_panels": 1,
+  "source_hash_groups": {
+    "scripts/search.py": 1,
+    "scripts/worker.py": 1,
+    "runtime/rebuttal_execution_20261025/native/controlled/lib/libxgboost.so": 1,
+    "runtime/rebuttal_baselines_20261025/build/liblineargbm.so": 1
+  },
+  "qualified_cases": [
+    "Another-Dataset-on-used-Fiat-500",
+    "QSAR_fish_toxicity",
+    "airfoil_self_noise",
+    "concrete_compressive_strength",
+    "energy_efficiency",
+    "healthcare_insurance_expenses",
+    "space_ga",
+    "uci477_real_estate_valuation",
+    "uci9_auto_mpg",
+    "wine_quality"
+  ]
+}

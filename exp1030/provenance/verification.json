@@ -1,0 +1,41 @@
+{
+  "archives": 6,
+  "result_records": 11580,
+  "trial_status_counts": {
+    "ok": 10562,
+    "timeout": 1015,
+    "failed": 3
+  },
+  "verified_final_predictions": 1019,
+  "max_rmse_recompute_error": 0.0,
+  "all_hashes_verified": true,
+  "per_archive": {
+    "pool01.tar.gz": {
+      "ok": 1751,
+      "timeout": 124
+    },
+    "pool02.tar.gz": {
+      "ok": 1754,
+      "timeout": 225,
+      "failed": 1
+    },
+    "pool03.tar.gz": {
+      "ok": 1857,
+      "timeout": 107,
+      "failed": 1
+    },
+    "pool04.tar.gz": {
+      "ok": 1778,
+      "timeout": 202
+    },
+    "pool05.tar.gz": {
+      "ok": 1800,
+      "timeout": 164,
+      "failed": 1
+    },
+    "pool06.tar.gz": {
+      "ok": 1622,
+      "timeout": 193
+    }
+  }
+}

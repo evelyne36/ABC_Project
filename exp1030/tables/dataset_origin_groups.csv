@@ -1,0 +1,73 @@
+﻿case,name,report_part,paper_inclusion,paper_location,evidence_kind,current_stage,identity_note
+Another-Dataset-on-used-Fiat-500,Used Fiat 500,第一部分：论文已有数据集,附录,附录 E.1 Table 14（PDF第12页）；正文仅有扩展集合的整体描述,本轮在已有数据上的补充近邻实验,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+Food_Delivery_Time,Food delivery time,第一部分：论文已有数据集,附录,附录 E.1 Table 14（PDF第12页）；正文仅有扩展集合的整体描述,本轮在已有数据上的补充近邻实验,确认不完整,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+QSAR-TID-11,QSAR-TID-11,第二部分：本轮新增数据集,未列入,投稿正文/附录结果与生成式未列入,本轮新增公开任务,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+QSAR_fish_toxicity,QSAR fish toxicity,第一部分：论文已有数据集,正文及附录,正文 Table 3（PDF第7页）；附录 E.1 Table 14（PDF第12页）,本轮在已有数据上的补充近邻实验,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+airfoil_self_noise,Airfoil self noise,第一部分：论文已有数据集,附录,附录 E.1 Table 14（PDF第12页）；正文仅有扩展集合的整体描述,本轮在已有数据上的补充近邻实验,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+concrete_compressive_strength,Concrete compressive strength,第一部分：论文已有数据集,附录,附录 E.1 Table 14（PDF第12页）；正文仅有扩展集合的整体描述,本轮在已有数据上的补充近邻实验,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+diamonds,Diamonds,第一部分：论文已有数据集,附录,附录 E.1 Table 14（PDF第12页）；正文仅有扩展集合的整体描述,本轮在已有数据上的补充近邻实验,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+healthcare_insurance_expenses,Healthcare insurance expenses,第一部分：论文已有数据集,附录,附录 E.1 Table 14（PDF第12页）；正文仅有扩展集合的整体描述,本轮在已有数据上的补充近邻实验,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+houses,Houses,第一部分：论文已有数据集,附录,附录 E.1 Table 14（PDF第12页）；正文仅有扩展集合的整体描述,本轮在已有数据上的补充近邻实验,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+miami_housing,Miami housing,第一部分：论文已有数据集,附录,附录 E.1 Table 14（PDF第12页）；正文仅有扩展集合的整体描述,本轮在已有数据上的补充近邻实验,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+physiochemical_protein,Physiochemical protein,第一部分：论文已有数据集,附录,附录 E.1 Table 14（PDF第12页）；正文仅有扩展集合的整体描述,本轮在已有数据上的补充近邻实验,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+superconductivity,Superconductivity,第二部分：本轮新增数据集,未列入,投稿正文/附录结果与生成式未列入,本轮新增公开任务,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+wine_quality,Wine quality,第一部分：论文已有数据集,附录,附录 E.1 Table 14（PDF第12页）；正文仅有扩展集合的整体描述,本轮在已有数据上的补充近邻实验,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+Moneyball,Moneyball,第一部分：论文已有数据集,正文及附录,正文 Table 3（PDF第7页）；附录 E.1 Table 14（PDF第12页）,本轮在已有数据上的补充近邻实验,HPO后未确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+abalone,Abalone,第一部分：论文已有数据集,正文及附录,正文 Table 3（PDF第7页）；附录 E.1 Table 14（PDF第12页）,本轮在已有数据上的补充近邻实验,HPO后未确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+cpu_activity,CPU activity,第一部分：论文已有数据集,正文及附录,正文 Table 3（PDF第7页）；附录 E.1 Table 14（PDF第12页）,本轮在已有数据上的补充近邻实验,预筛后未确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+energy_efficiency,Energy efficiency,第一部分：论文已有数据集,正文及附录,正文 Table 3（PDF第7页）；附录 E.1 Table 14（PDF第12页）,本轮在已有数据上的补充近邻实验,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+kin8nm,Kin8nm,第一部分：论文已有数据集,正文及附录,正文 Table 3（PDF第7页）；附录 E.1 Table 14（PDF第12页）,本轮在已有数据上的补充近邻实验,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+naval_propulsion_plant,Naval propulsion plant,第一部分：论文已有数据集,正文及附录,正文 Table 3（PDF第7页）；附录 E.1 Table 14（PDF第12页）,本轮在已有数据上的补充近邻实验,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+space_ga,Space GA,第一部分：论文已有数据集,正文及附录,正文 Table 3（PDF第7页）；附录 E.1 Table 14（PDF第12页）,本轮在已有数据上的补充近邻实验,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+uci477_real_estate_valuation,Real Estate Valuation,第二部分：本轮新增数据集,未列入,投稿正文/附录结果与生成式未列入,本轮新增公开任务,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+uci294_combined_cycle_power_plant,Combined Cycle Power Plant,第二部分：本轮新增数据集,未列入,投稿正文/附录结果与生成式未列入,本轮新增公开任务,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+uci9_auto_mpg,Auto MPG,第二部分：本轮新增数据集,未列入,投稿正文/附录结果与生成式未列入,本轮新增公开任务,完整确认,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+uci243_yacht_hydrodynamics,Yacht Hydrodynamics,第二部分：本轮新增数据集,未列入,投稿正文/附录结果与生成式未列入,本轮新增公开任务,仅准备，未执行,按任务身份分组；不保证与投稿实验具有相同数据版本、预处理、划分或HPO
+correlated_gate_v0,correlated_gate_v0,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,新 gate_sum 的相关无关变量干预；不是独立核心信号机制
+correlated_gate_v1,correlated_gate_v1,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,新 gate_sum 的相关无关变量干预；不是独立核心信号机制
+correlated_gate_v2,correlated_gate_v2,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,新 gate_sum 的相关无关变量干预；不是独立核心信号机制
+correlated_gate_v3,correlated_gate_v3,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,新 gate_sum 的相关无关变量干预；不是独立核心信号机制
+correlated_gate_v4,correlated_gate_v4,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,新 gate_sum 的相关无关变量干预；不是独立核心信号机制
+correlated_gate_v5,correlated_gate_v5,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,新 gate_sum 的相关无关变量干预；不是独立核心信号机制
+correlated_gate_v6,correlated_gate_v6,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,新 gate_sum 的相关无关变量干预；不是独立核心信号机制
+correlated_gate_v7,correlated_gate_v7,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,新 gate_sum 的相关无关变量干预；不是独立核心信号机制
+gate_sum_v0,gate_sum_v0,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,由原 Regime slope 扩展为多个门控模块之和
+gate_sum_v1,gate_sum_v1,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,由原 Regime slope 扩展为多个门控模块之和
+gate_sum_v2,gate_sum_v2,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,由原 Regime slope 扩展为多个门控模块之和
+gate_sum_v3,gate_sum_v3,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,由原 Regime slope 扩展为多个门控模块之和
+gate_sum_v4,gate_sum_v4,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,由原 Regime slope 扩展为多个门控模块之和
+gate_sum_v5,gate_sum_v5,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,由原 Regime slope 扩展为多个门控模块之和
+gate_sum_v6,gate_sum_v6,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,由原 Regime slope 扩展为多个门控模块之和
+gate_sum_v7,gate_sum_v7,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,由原 Regime slope 扩展为多个门控模块之和
+hetero_gate_v0,hetero_gate_v0,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,新 gate_sum 的异方差干预；不同于原 Noisy regime slope 的同方差噪声加大
+hetero_gate_v1,hetero_gate_v1,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,新 gate_sum 的异方差干预；不同于原 Noisy regime slope 的同方差噪声加大
+hetero_gate_v2,hetero_gate_v2,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,新 gate_sum 的异方差干预；不同于原 Noisy regime slope 的同方差噪声加大
+hetero_gate_v3,hetero_gate_v3,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,新 gate_sum 的异方差干预；不同于原 Noisy regime slope 的同方差噪声加大
+hetero_gate_v4,hetero_gate_v4,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,新 gate_sum 的异方差干预；不同于原 Noisy regime slope 的同方差噪声加大
+hetero_gate_v5,hetero_gate_v5,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,新 gate_sum 的异方差干预；不同于原 Noisy regime slope 的同方差噪声加大
+hetero_gate_v6,hetero_gate_v6,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,新 gate_sum 的异方差干预；不同于原 Noisy regime slope 的同方差噪声加大
+hetero_gate_v7,hetero_gate_v7,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,新 gate_sum 的异方差干预；不同于原 Noisy regime slope 的同方差噪声加大
+saturating_v0,saturating_v0,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,与原 Multiplicative 同属系数-预测交互；新增饱和系数函数
+saturating_v1,saturating_v1,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,与原 Multiplicative 同属系数-预测交互；新增饱和系数函数
+saturating_v2,saturating_v2,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,与原 Multiplicative 同属系数-预测交互；新增饱和系数函数
+saturating_v3,saturating_v3,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,与原 Multiplicative 同属系数-预测交互；新增饱和系数函数
+saturating_v4,saturating_v4,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,与原 Multiplicative 同属系数-预测交互；新增饱和系数函数
+saturating_v5,saturating_v5,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,与原 Multiplicative 同属系数-预测交互；新增饱和系数函数
+saturating_v6,saturating_v6,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,与原 Multiplicative 同属系数-预测交互；新增饱和系数函数
+saturating_v7,saturating_v7,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,与原 Multiplicative 同属系数-预测交互；新增饱和系数函数
+stair_slope_v0,stair_slope_v0,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,与原 Multi-regime slope / Sparse regime slope 同类；新系数与附加项
+stair_slope_v1,stair_slope_v1,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,与原 Multi-regime slope / Sparse regime slope 同类；新系数与附加项
+stair_slope_v2,stair_slope_v2,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,与原 Multi-regime slope / Sparse regime slope 同类；新系数与附加项
+stair_slope_v3,stair_slope_v3,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,与原 Multi-regime slope / Sparse regime slope 同类；新系数与附加项
+stair_slope_v4,stair_slope_v4,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,与原 Multi-regime slope / Sparse regime slope 同类；新系数与附加项
+stair_slope_v5,stair_slope_v5,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,与原 Multi-regime slope / Sparse regime slope 同类；新系数与附加项
+stair_slope_v6,stair_slope_v6,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,与原 Multi-regime slope / Sparse regime slope 同类；新系数与附加项
+stair_slope_v7,stair_slope_v7,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,与原 Multi-regime slope / Sparse regime slope 同类；新系数与附加项
+switch4_v0,switch4_v0,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,由原 Feature switch 扩展为两个门控、四区变量选择
+switch4_v1,switch4_v1,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,由原 Feature switch 扩展为两个门控、四区变量选择
+switch4_v2,switch4_v2,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,由原 Feature switch 扩展为两个门控、四区变量选择
+switch4_v3,switch4_v3,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,由原 Feature switch 扩展为两个门控、四区变量选择
+switch4_v4,switch4_v4,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,由原 Feature switch 扩展为两个门控、四区变量选择
+switch4_v5,switch4_v5,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,由原 Feature switch 扩展为两个门控、四区变量选择
+switch4_v6,switch4_v6,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,由原 Feature switch 扩展为两个门控、四区变量选择
+switch4_v7,switch4_v7,第二部分：本轮新构造合成数据,新生成式/参数场景未列入,与原附录C生成式有继承关系，非原数据重跑,本轮新构造机制场景,完整确认,由原 Feature switch 扩展为两个门控、四区变量选择

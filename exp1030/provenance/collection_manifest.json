@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "packaged_date": "2026-10-31",
+  "result_snapshot": "2026-10-30T07:41:22.999362+08:00",
+  "source": "pool original experiment only; no 210 results",
+  "trial_status_counts": {
+    "ok": 10562,
+    "timeout": 1015,
+    "failed": 3
+  },
+  "result_records": 11580,
+  "successful_final_fits": 1019,
+  "successful_final_input_sets": 204,
+  "executed_cases": 71,
+  "final_cases": 68,
+  "max_rmse_recompute_error": 0.0,
+  "source_worker_sha256": [
+    "527b258c09f01019f08520d7818860e047ca13bd5eff0c963d7ee4fa0bf33627"
+  ],
+  "source_search_sha256": [
+    "c073ead4dd9cc3e3edb06ea3a9d95e9cbdc3155c0a6f15ddd29a726a658cfdb2"
+  ],
+  "archives": [
+    {
+      "file": "raw_archives/pool01.tar.gz",
+      "bytes": 11782109,
+      "sha256": "d68adbe4c2e2a2b6b6003ee45b8a0df09fb4d84d688b3973e8134c386ba44ae9",
+      "source_files": 4070,
+      "derived_target_files": 33,
+      "statuses": {
+        "ok": 1751,
+        "timeout": 124
+      }
+    },
+    {
+      "file": "raw_archives/pool02.tar.gz",
+      "bytes": 6161575,
+      "sha256": "9f18352862528be650eb92b9a4a29d712bdc84da55aa5564b5851cb53dcf3a00",
+      "source_files": 4302,
+      "derived_target_files": 36,
+      "statuses": {
+        "ok": 1754,
+        "timeout": 225,
+        "failed": 1
+      }
+    },
+    {
+      "file": "raw_archives/pool03.tar.gz",
+      "bytes": 11769656,
+      "sha256": "6475dd06260b63b5b288e38c71ba5c787f8f7cda9f0119dc4ad24c877d685581",
+      "source_files": 4249,
+      "derived_target_files": 33,
+      "statuses": {
+        "ok": 1857,
+        "timeout": 107,
+        "failed": 1
+      }
+    },
+    {
+      "file": "raw_archives/pool04.tar.gz",
+      "bytes": 6381365,
+      "sha256": "b3befc35c9fe473270601d9b7b7387428881b6611e6b30ed44ae870219cdc92b",
+      "source_files": 4302,
+      "derived_target_files": 36,
+      "statuses": {
+        "ok": 1778,
+        "timeout": 202
+      }
+    },
+    {
+      "file": "raw_archives/pool05.tar.gz",
+      "bytes": 8591397,
+      "sha256": "2259696e05c59913ca6e84078758faf2118c234955a3d3c33257fa21403131e7",
+      "source_files": 4250,
+      "derived_target_files": 33,
+      "statuses": {
+        "ok": 1800,
+        "timeout": 164,
+        "failed": 1
+      }
+    },
+    {
+      "file": "raw_archives/pool06.tar.gz",
+      "bytes": 5510561,
+      "sha256": "d4fa40177c940f72cc3ff600e5cb58217428728bbf6667f40a875d9a4ee851d9",
+      "source_files": 3944,
+      "derived_target_files": 33,
+      "statuses": {
+        "ok": 1622,
+        "timeout": 193
+      }
+    }
+  ],
+  "no_new_training": true,
+  "raw_file_bytes_preserved": true,
+  "target_export_note": "evaluation_targets is derived from saved final input NPZ: normalized y_test + test_indices. Original feature matrices excluded.",
+  "raw_archives_contain_historical_paths": true,
+  "excluded": [
+    "SSH credentials and connectivity scripts",
+    "deployment and polling logs",
+    "fitted pickle models",
+    "native binaries",
+    "raw feature tables",
+    "210 experiment results",
+    "submitted manuscript PDFs",
+    "original N1/N2/N5 result suites"
+  ]
+}

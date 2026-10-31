@@ -1,0 +1,12 @@
+{
+  "credential_pattern_hits": 0,
+  "scanned_text_artifacts": 24130,
+  "broken_local_links": 0,
+  "verified_local_links": 21,
+  "all_files_below_25_MiB": true,
+  "largest_file_bytes": 11782109,
+  "remote_mutations": false,
+  "new_training": false,
+  "git_commit_or_push_performed": false,
+  "note": "Pattern scan is a targeted release check; historical source paths remain in original result records."
+}

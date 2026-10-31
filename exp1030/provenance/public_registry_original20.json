@@ -1,0 +1,164 @@
+[
+  {
+    "name": "Another-Dataset-on-used-Fiat-500",
+    "file": "Another-Dataset-on-used-Fiat-500.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/dataset/TabArena_regression/Another-Dataset-on-used-Fiat-500.csv",
+    "sha256": "ff9ac29ce9b1dd8122cd34efa666a941d7d29995aa1a4e89cd821fc88150ca27",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "Food_Delivery_Time",
+    "file": "Food_Delivery_Time.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/dataset/TabArena_regression/Food_Delivery_Time.csv",
+    "sha256": "d3c8aaaa56239038a6e90a59b8de2f2b3d861a34d34465df6ad9bc7daf91554a",
+    "target": "last_column",
+    "drop": [
+      "Delivery_person_ID"
+    ]
+  },
+  {
+    "name": "QSAR-TID-11",
+    "file": "QSAR-TID-11.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/dataset/TabArena_regression/QSAR-TID-11.csv",
+    "sha256": "faa13b3ff38571b2ea96bb7d7bfb7202b85bff7d08d4257fa314c78b816caa8c",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "QSAR_fish_toxicity",
+    "file": "QSAR_fish_toxicity.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/dataset/TabArena_regression/QSAR_fish_toxicity.csv",
+    "sha256": "5049bfd72b1d37dbfeeb3b44e91e199b1b9b3974735071cc7452a4775f980f7a",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "airfoil_self_noise",
+    "file": "airfoil_self_noise.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/dataset/TabArena_regression/airfoil_self_noise.csv",
+    "sha256": "338245c6379cc312fbd1432655d605208c7065e4f8c7b3b6bf668d659d91e19a",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "concrete_compressive_strength",
+    "file": "concrete_compressive_strength.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/dataset/TabArena_regression/concrete_compressive_strength.csv",
+    "sha256": "f6e72562e81d6da453254c3237e3333963a7bd04e7fa0a544a534289561dc68b",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "diamonds",
+    "file": "diamonds.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/dataset/TabArena_regression/diamonds.csv",
+    "sha256": "4aee159f92caf285b54bddb5c166274adbaf7f88cbc817b48593047b0e298388",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "healthcare_insurance_expenses",
+    "file": "healthcare_insurance_expenses.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/dataset/TabArena_regression/healthcare_insurance_expenses.csv",
+    "sha256": "6b867464648d418990462712a029960e34523c8790ab4b6c64944f5ad25f991f",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "houses",
+    "file": "houses.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/dataset/TabArena_regression/houses.csv",
+    "sha256": "7e1f563c6288779da831ad6ebf3e42c732abd3cf3b7c01abb2406f6334ed56d0",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "miami_housing",
+    "file": "miami_housing.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/dataset/TabArena_regression/miami_housing.csv",
+    "sha256": "f3de88399592ab0ff0ca510d33e9af63e45eef6d6414c21c8aa3191d1a226a74",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "physiochemical_protein",
+    "file": "physiochemical_protein.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/dataset/TabArena_regression/physiochemical_protein.csv",
+    "sha256": "abf4216c35c62cdddd7815d4127dc7e27488a3f9ca65f0e6a71fec2125d72246",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "superconductivity",
+    "file": "superconductivity.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/dataset/TabArena_regression/superconductivity.csv",
+    "sha256": "ffc3b831df66971fbef13f290d991f49c0c2d5a413e6e338627d9ff7969d5cb3",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "wine_quality",
+    "file": "wine_quality.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/dataset/TabArena_regression/wine_quality.csv",
+    "sha256": "a0c0d3760d527508aa715f0cd2e924daec10023b70491d2d7e16edc6f7be18bb",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "Moneyball",
+    "file": "Moneyball.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/tabular_extra_random300/data/regression__Moneyball.csv",
+    "sha256": "5685a3ffb8905d5910432d9c434f7d39b149f08029e6b099ccc912361d4a9fae",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "abalone",
+    "file": "abalone.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/tabular_extra_random300/data/regression__abalone.csv",
+    "sha256": "e9452a7b29760c9259ba1b8a23f75184c4fadb5b94aa339222f26cd7b1d8f002",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "cpu_activity",
+    "file": "cpu_activity.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/tabular_extra_random300/data/regression__cpu_activity.csv",
+    "sha256": "1025ce99015d397e0508a23595d9b3936a383179aae6fb367c42cda62c74ab86",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "energy_efficiency",
+    "file": "energy_efficiency.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/tabular_extra_random300/data/regression__energy_efficiency.csv",
+    "sha256": "f6174bff6e6eb1b50c43e9040c1bd53958d795efdb116f69ce4a4f53a1431d7c",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "kin8nm",
+    "file": "kin8nm.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/tabular_extra_random300/data/regression__kin8nm.csv",
+    "sha256": "5edb8f1a1d2b3ab13039857fe31f57afe6251a8be3d66c825df41f87999b16be",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "naval_propulsion_plant",
+    "file": "naval_propulsion_plant.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/tabular_extra_random300/data/regression__naval_propulsion_plant.csv",
+    "sha256": "97a860d3c07c534346ad2c358c3302c5d1e9ede02caffdec0cd998f41f1f9027",
+    "target": "last_column",
+    "drop": []
+  },
+  {
+    "name": "space_ga",
+    "file": "space_ga.csv",
+    "source": "aaai_FullCodeProject-check_codereview0701/tabular_extra_random300/data/regression__space_ga.csv",
+    "sha256": "389f3ce0c49e069828e3f49b6f75d838c2714396d11c428edca0ce01b12fc9b4",
+    "target": "last_column",
+    "drop": []
+  }
+]
